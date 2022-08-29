@@ -5,7 +5,7 @@ public class Movements {
     Position position = new Position();
 
     public void moveWhite(){
-
+        
     }
     public void moveBlack(){
 
