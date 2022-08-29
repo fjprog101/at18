@@ -12,5 +12,5 @@ The Langnton's Ant consists of a group of squares on a plane (grid) colored vari
 - Given a grid black and/or white squares and an initial "ant" square, show grid status after N steps taken by the "ant"
 - Bonus: For the first goal, display the status of the grid after each step that the "ant" takes
 
-## Exmaple
- ![](../../../../../../resources/langtons-ant-animated.gif)
+## Example
+ ![](../../../../../resources/langtons-ant-animated.gif)
