@@ -13,4 +13,4 @@ The Langnton's Ant consists of a group of squares on a plane (grid) colored vari
 - Bonus: For the first goal, display the status of the grid after each step that the "ant" takes
 
 ## Exmaple
- ![](../../../../../../resources/langtons-ant-animated.gif)
+ ![](../../../../../resources/langtons-ant-animated.gif)
