@@ -2,7 +2,7 @@ package jalau.at18.katas.langtonant.Team1;
 
 public class Position {
     private int posX;
-
+    private int posY;
     
 
     public Position(int posX, int posY) {
@@ -26,5 +26,5 @@ public class Position {
     public void setPosY(int posY) {
         this.posY = posY;
     }
-    private int posY;
+    
 }
