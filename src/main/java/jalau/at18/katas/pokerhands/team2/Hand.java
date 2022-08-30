@@ -8,7 +8,20 @@ public class Hand {
     public Hand(String color, Card[] hand) {
         this.color = color;
         this.hand = hand;
+        this.rank = 0;
+    }
+    public String getColor() {
+        return color;
+    }
+    public int getRank() {
+        return rank;
+    }
+    public Card[] getHand() {
+        return hand;
+    }
+    public void calculateRank() {
+        
     }
 
-    
+
 }

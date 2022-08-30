@@ -1,10 +1,15 @@
 package jalau.at18.katas.pokerhands.team2;
 
 public class Game {
-    public String[] hands;
-
-    public Game(String input){
+    public Hand[] hands;
+    public String input;
+    public Game(String input) {
         hands = new String[2];
+        this.input = input;
+    }
+    public void initGame() {
+        splitChainInHalf(input);
+
     }
     public String[] splitChainInHalf(String input) {
         String[] entrys = new String[2];
@@ -27,4 +32,5 @@ public class Game {
     private void fillHand(String entry, int position) {
         hands[position] = entry;
     }
+
 }
