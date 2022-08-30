@@ -9,6 +9,15 @@ public class Game {
         separateHands(input);
     }
     public void separateHands(String handsToSeparate) {
-        if()
+        if (handsToSeparate.charAt(0) == 'B') {
+            blackHand = new Hand(handsToSeparate.substring(0, 4));
+        }
+    }
+
+    public String getGameResults() {
+        return "";
+    }
+    public Hand getBlackHand() {
+        return this.blackHand;
     }
 }

@@ -5,9 +5,8 @@ public class Hand {
     private Card[] cards;
     private int rank;
 
-    public Hand(String color, Card[] card) {
+    public Hand(String color) {
         this.color = color;
-        this.cards = card;
         this.rank = 0;
     }
 
