@@ -1,22 +1,29 @@
 package jalau.at18.katas.langtonant.Team1;
-
 public class Board {
     private String[][] board = new String[15][15];
-    
-    public void showBoard() {
-      board[7][7] = "%";
+    String showBoard = "";
+    public void intializeBoard() {
         for (int row = 0; row < board.length; row++) {
-            showBoard2(row);
+            intializeBoardSecondPart(row);
         }
     }
-
-    public void showBoard2(int row){
+    public void intializeBoardSecondPart(int row){
         for (int column = 0; column < board.length; column++) {
-            System.out.print(board[row][column] + " ");
+            board[row][column] = " ";
         }
-        System.out.println("");
     }
-
- 
-
+    public String toString(){
+        showBoard += "----------------------------------------------" + "\n";
+        for (int row = 0; row < board.length; row++) {
+            showBoard += "|";
+            for (int col = 0; col < board.length; col++) {
+                showBoard += board[row][col] + " |";
+            }
+            showBoard += "\n";
+            showBoard += "----------------------------------------------" + "\n";
+        }
+        return showBoard;
+    }
+    public void toStringSecondPart(String showBoard, int row){         
+    }
 }
