@@ -7,9 +7,13 @@ public class Main {
     public static void main(String[] args) {
         Board board = new Board();
         Movements movements = new Movements();
-        Position pos = new Position();
+        // Position pos = new Position();
         board.intializeBoard();
-        movements.moveWhite();
+
+        board.setBoard(movements.moveWhite(board.getBoard()));
+        board.setBoard(movements.moveWhite(board.getBoard()));
+        board.setBoard(movements.moveBlack(board.getBoard()));
+
         System.out.println(board.toString());
        /*  pos.upPosition();
         pos.upPosition();

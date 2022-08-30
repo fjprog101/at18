@@ -12,18 +12,18 @@ public class Position {
     }
     
     public void upPosition() {
-        posY -= 1;
+        posX -= 1;
     }
     
     public void downPosition() {
-        posY += 1;
-    }
-
-    public void rightPosition() {
         posX += 1;
     }
 
+    public void rightPosition() {
+        posY += 1;
+    }
+
     public void leftPosition() {
-        posX -=1;
+        posY -=1;
     }
 }
