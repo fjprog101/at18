@@ -4,6 +4,8 @@ public class Movements {
     
     Ant position = new Ant();
     Board board= new Board();
+    int row;
+    int column;
     public void moveWhite(){
 
         
@@ -17,9 +19,22 @@ public class Movements {
             
         }
     }
-    public void Right(String [][] board, int row, int colum){
-        if(board[row][colum] == " "){
+    public void moveRight(String [][] board, int row, int colum){
+        removeAnt();
+        column +=1;
+    }
 
-        }
+    public void moveLeft(){
+        column -=1;
+    }
+
+    public void moveUp(){
+        row-=1;
+    }
+    public void moveDown(){
+        row+=1;
+    }
+    public void removeAnt(){
+        
     }
 }
