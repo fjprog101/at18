@@ -1,9 +1,9 @@
 package jalau.at18.katas.pokerhands.team2;
 
-public class Input {
+public class Game {
     public String[] hands;
 
-    public Input(){
+    public Game(String input){
         hands = new String[2];
     }
     public String[] splitChainInHalf(String input) {

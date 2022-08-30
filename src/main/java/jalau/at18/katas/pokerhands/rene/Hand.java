@@ -1,14 +1,13 @@
-package jalau.at18.katas.pokerhands.team2;
+package jalau.at18.katas.pokerhands.rene;
 
 public class Hand {
     private String color;
-    private Card[] hand;
+    private String hand;
     private int rank;
 
-    public Hand(String color, Card[] hand) {
+    public Hand(String color, String Hand) {
         this.color = color;
         this.hand = hand;
     }
-
     
 }
