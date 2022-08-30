@@ -4,17 +4,25 @@ public class Card {
     private char suit;
     private int number;
 
+    public Card(char suit, int number) {
+        this.suit = suit;
+        this.number = number;
+    }
+
     public void setSuit(char suit) {
         this.suit = suit;
     }
-    public char getSuit( ) {
+
+    public char getSuit() {
         return this.suit;
     }
-     public void setNumber(int number) {
+
+    public void setNumber(int number) {
         this.number = number;
     }
+
     public int getNumber() {
-        return this.suit;
+        return this.number;
     }
-    
+
 }

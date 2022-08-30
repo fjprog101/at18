@@ -1,12 +1,9 @@
 package jalau.at18.katas.pokerhands.team2;
 
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-        public static final String INPUT = "";
-        Game game = new Game(INPUT);
-        
+        String input = "Black: 2H 3D 5S 9C KD  White: 2C 3H 4S 8C AH";
+        Game game = new Game(input);
     }
 
 }
