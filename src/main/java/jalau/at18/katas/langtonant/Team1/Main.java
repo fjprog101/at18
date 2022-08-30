@@ -6,8 +6,15 @@ public class Main {
 
     public static void main(String[] args) {
         Board board = new Board();
-        //board.showBoard();
-        System.out.println("Hi ANt");
+        Movements movements = new Movements();
+        Position pos = new Position();
+        board.intializeBoard();
+        movements.moveWhite();
+        System.out.println(board.toString());
+       /*  pos.upPosition();
+        pos.upPosition();
+        pos.upPosition();*/
+        //System.out.println("Hi ANt");
     }
 
 }

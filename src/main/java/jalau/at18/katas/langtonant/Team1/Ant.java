@@ -1,8 +1,8 @@
 package jalau.at18.katas.langtonant.Team1;
 
 public class Ant {
-    private int posX = 7;
-    private int posY = 7;
+    private int posX;
+    private int posY;
 
     public Ant(int posX, int posY) {
         this.posX = posX;
@@ -10,6 +10,8 @@ public class Ant {
     }
 
     public Ant() {
+        posX = 7;
+        posY = 7;
     }
 
     public int getPosX() {

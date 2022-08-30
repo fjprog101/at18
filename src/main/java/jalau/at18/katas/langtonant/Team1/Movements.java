@@ -2,12 +2,18 @@ package jalau.at18.katas.langtonant.Team1;
 
 public class Movements {
     
-    Ant position = new Ant();
-    //Board board= new Board();
+    //Ant position = new Ant();
+    Board board;
     //int row;
     //int column;
+    Position position = new Position();
+    public Movements(){
+        board = new Board();
+    }
     public void moveWhite(){
-
+        position.rightPosition();
+        System.out.println(position.posX + " " + position.posY);
+        board.setElementBoard(position.posX, position.posY, '8');
         
     }
     public void moveBlack(){

@@ -1,6 +1,6 @@
 package jalau.at18.katas.langtonant.Team1;
 public class Board {
-    private String[][] board = new String[15][15];
+    private char[][] board = new char[15][15];
     String showBoard = "";
     public void intializeBoard() {
         for (int row = 0; row < board.length; row++) {
@@ -9,8 +9,16 @@ public class Board {
     }
     public void intializeBoardSecondPart(int row){
         for (int column = 0; column < board.length; column++) {
-            board[row][column] = " ";
+            board[row][column] = ' ';
         }
+    }
+
+    public void setElementBoard(int posX, int posY, char antContent){
+        board[posX][posY] = antContent;
+    } 
+
+    public int getElement(int posX, int posY){
+        return board[posX][posY];
     }
     public String toString(){
         showBoard += "----------------------------------------------" + "\n";
@@ -23,7 +31,5 @@ public class Board {
             showBoard += "----------------------------------------------" + "\n";
         }
         return showBoard;
-    }
-    public void toStringSecondPart(String showBoard, int row){         
     }
 }
