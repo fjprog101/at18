@@ -1,30 +1,21 @@
 package jalau.at18.katas.langtonant.Team1;
 
 public class Position {
-    private int posX;
-    private int posY;
-    
 
-    public Position(int posX, int posY) {
-        this.posX = posX;
-        this.posY = posY;
+    Ant ant = new Ant();
+    public void upPosition(){
+        
     }
 
-    public Position() {
+    public void downPosition(){
+
     }
 
+    public void rightPosition(){
 
-    public int getPosX() {
-        return posX;
     }
-    public void setPosX(int posX) {
-        this.posX = posX;
+
+    public void leftPosition(){
+
     }
-    public int getPosY() {
-        return posY;
-    }
-    public void setPosY(int posY) {
-        this.posY = posY;
-    }
-    
 }
