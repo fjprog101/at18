@@ -3,6 +3,7 @@ package jalau.at18.katas.langtonant.Team1;
 public class Ant {
     private int posX;
     private int posY;
+    // private String direction;
 
     public Ant(int posX, int posY) {
         this.posX = posX;
@@ -29,5 +30,10 @@ public class Ant {
     public void setPosY(int posY) {
         this.posY = posY;
     }
+
+    public void direction(){
+
+    }
+
 
 }

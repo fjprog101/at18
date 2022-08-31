@@ -10,7 +10,9 @@ public class Main {
         // Position pos = new Position();
         board.intializeBoard();
 
+        
         board.setBoard(movements.moveWhite(board.getBoard()));
+
         board.setBoard(movements.moveWhite(board.getBoard()));
         board.setBoard(movements.moveBlack(board.getBoard()));
 
