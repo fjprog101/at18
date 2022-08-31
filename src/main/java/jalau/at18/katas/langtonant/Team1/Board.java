@@ -1,7 +1,7 @@
 package jalau.at18.katas.langtonant.Team1;
 
 public class Board {
-    public static final int SIZE = 5;
+    public static final int SIZE = 10;
     private char[][] board = new char[SIZE][SIZE];
 
     private String showBoard = "";
@@ -34,16 +34,19 @@ public class Board {
         return board[posX][posY];
     }
 
-    public String toString() {
+    public void toStrings() {
         showBoard += "------------------------------" + "\n";
         for (int row = 0; row < board.length; row++) {
-            showBoard += "|";
+            // showBoard += "|";
+            System.out.print("|");
             for (int col = 0; col < board.length; col++) {
-                showBoard += board[row][col] + "|";
+                // showBoard += board[row][col] + "|";
+                System.out.print(board[row][col] + "|");
             }
-            showBoard += "\n";
-            showBoard += "------------------------------" + "\n";
+            System.out.println();
+            // showBoard += "\n";
+            // showBoard += "------------------------------" + "\n";
         }
-        return showBoard;
+        // return showBoard;ç
     }
 }

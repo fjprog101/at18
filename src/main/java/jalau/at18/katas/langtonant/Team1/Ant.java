@@ -1,7 +1,7 @@
 package jalau.at18.katas.langtonant.Team1;
 
 public class Ant {
-    public static final int SEVEN = 2;
+    public static final int SEVEN = 5;
     private int posX;
     private int posY;
     private String direction;

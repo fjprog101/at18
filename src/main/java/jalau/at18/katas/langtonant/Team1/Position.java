@@ -26,28 +26,28 @@ public class Position {
         if (pos) {tabs[posX][posY] = ' ';} else {tabs[posX][posY] = '█';}
         tabs[posX][posY] = ' ';
         posX -= 1;
-        tabs[posX][posY] = '8';
+        tabs[posX][posY] = '¥';
     }
 
     public void downPosition(char[][] tabs, String direction, Boolean pos) {
         this.setDirect(direction);
         if (pos) {tabs[posX][posY] = ' ';} else {tabs[posX][posY] = '█';}
         posX += 1;
-        tabs[posX][posY] = '8';
+        tabs[posX][posY] = '¥';
     }
 
     public void rightPosition(char[][] tabs, String direction, Boolean pos) {
         this.setDirect(direction);
         if (pos) {tabs[posX][posY] = ' ';} else {tabs[posX][posY] = '█';}
         posY += 1;
-        tabs[posX][posY] = '8';
+        tabs[posX][posY] = '¥';
     }
 
     public void leftPosition(char[][] tabs, String direction, Boolean pos) {
         this.setDirect(direction);
         if (pos) {tabs[posX][posY] = ' ';} else {tabs[posX][posY] = '█';}
         posY -= 1;
-        tabs[posX][posY] = '8';
+        tabs[posX][posY] = '¥';
     }
     
 }
