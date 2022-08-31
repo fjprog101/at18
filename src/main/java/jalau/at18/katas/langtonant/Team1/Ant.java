@@ -1,6 +1,7 @@
 package jalau.at18.katas.langtonant.Team1;
 
 public class Ant {
+    public static final int SEVEN = 2;
     private int posX;
     private int posY;
     private String direction;
@@ -12,9 +13,9 @@ public class Ant {
     }
 
     public Ant() {
-        posX = 7;
-        posY = 7;
-        direction = "Right";
+        posX = SEVEN;
+        posY = SEVEN;
+        direction = "Up";
     }
 
     public int getPosX() {
@@ -33,10 +34,12 @@ public class Ant {
         this.posY = posY;
     }
 
-    public void setDirection(String direction){
+    public void setDirection(String direction) {
         this.direction = direction;
     }
+
     public String getDirection() {
         return direction;
     }
+
 }

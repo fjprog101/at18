@@ -1,44 +1,65 @@
 package jalau.at18.katas.langtonant.Team1;
 
-import java.util.List;
-
 public class Main {
+
     public static void main(String[] args) {
-        Ant positionAnt = new Ant();
+        Position positionAnt = new Position();
         Board board = new Board();
         Movements movements = new Movements();
-        Direction direction = new Direction();
-        List<Object> arr;
-        List<Object> arr2;
         // Position pos = new Position();
         board.intializeBoard();
+        System.out.println(positionAnt.posX + " " + positionAnt.posY);
+        System.out.println(positionAnt.direct);
 
-        /* 
-        positionAnt = movements.getAnt();
-        positionAnt.getPosY();
-        positionAnt.getPosX();
-       */
-        arr = direction.confDirection(board.getBoard(), positionAnt.getDirection());
-        board.setBoard((char[][]) arr.get(0));
-        arr2 = direction.confDirection(board.getBoard(), (String) arr.get(1));
-        board.setBoard((char[][]) arr2.get(0));
-        // board.setBoard(movements.moveWhite(board.getBoard()));
-        //System.out.println(positionAnt.getPosX() +" "+ positionAnt.getPosY());
-         /* 
-        if(){
+        positionAnt = movements.moveWhite(board.getBoard(), true);
+        System.out.println(positionAnt.posX + " " + positionAnt.posY);
+        System.out.println(positionAnt.direct);
+        // board.setBoard(setElementBoard(int posX, int posY, char antContent) );
+        positionAnt = movements.moveWhite(board.getBoard(), true);
+        System.out.println(positionAnt.posX + " " + positionAnt.posY);
+        System.out.println(positionAnt.direct);
 
-        }else{
-            
-        }
-        */
-        // board.setBoard(movements.moveWhite(board.getBoard()));
-        // board.setBoard(movements.moveWhite(board.getBoard()));
-        // board.setBoard(movements.moveWhite(board.getBoard()));
-        //System.out.println("mi posicion"+ board.getBoard()[positionAnt.getPosX()][positionAnt.getPosY()]+" esta es");
+        positionAnt = movements.moveWhite(board.getBoard(), true);
+        System.out.println(positionAnt.posX + " " + positionAnt.posY);
+        System.out.println(positionAnt.direct);
 
-        System.out.println("mi posicion"+ board.getBoard()[positionAnt.getPosX()][positionAnt.getPosY()]+" esta es");
+        positionAnt = movements.moveWhite(board.getBoard(), true);
+        System.out.println(positionAnt.posX + " " + positionAnt.posY);
+        System.out.println(positionAnt.direct);
+
+        positionAnt = movements.moveBlack(board.getBoard(), false);
+        System.out.println(positionAnt.posX + " " + positionAnt.posY);
+        System.out.println(positionAnt.direct);
+
+        positionAnt = movements.moveBlack(board.getBoard(), false);
+        System.out.println(positionAnt.posX + " " + positionAnt.posY);
+        System.out.println(positionAnt.direct);
+        // System.out.println(positionAnt.posX + " " + positionAnt.posY);
+        // positionAnt = movements.moveWhite(board.getBoard());
+        // System.out.println(positionAnt.posX + " " + positionAnt.posY);
+        // positionAnt = movements.moveWhite(board.getBoard());
+        // System.out.println(positionAnt.posX + " " + positionAnt.posY);
+
+        // System.out.println(positionAnt.posX + " " + positionAnt.posY);
+        // board.setBoard(board.getBoard()[][]);
+        // System.out.println(positionAnt.posX);
+        // System.out.println(board.toString());
+        // board.setBoard(movements.moveWhite(board.getBoard()));
+        // System.out.println(board.toString());
+        // board.setBoard(movements.moveWhite(board.getBoard()));
+        // System.out.println(board.toString());
+        // board.setBoard(movements.moveWhite(board.getBoard()));
+        // board.setBoard(movements.moveWhite(board.getBoard()));
+        // board.setBoard(movements.moveBlack(board.getBoard()));
+
+        // System.out.println("mi posicion"+ board.getBoard()[positionAnt.getPosX()][positionAnt.getPosY()]+" esta es");
         System.out.println(board.toString());
-        
+        /*
+         * pos.upPosition();
+         * pos.upPosition();
+         * pos.upPosition();
+         */
+        // System.out.println("Hi ANt");
     }
 
 }
