@@ -5,9 +5,10 @@ public class Ant {
     private int posY;
     private String direction;
 
-    public Ant(int posX, int posY) {
+    public Ant(int posX, int posY, String direction) {
         this.posX = posX;
         this.posY = posY;
+        this.direction = direction;
     }
 
     public Ant() {
@@ -32,7 +33,7 @@ public class Ant {
         this.posY = posY;
     }
 
-    public void setDirection(){
+    public void setDirection(String direction){
         this.direction = direction;
 
     }

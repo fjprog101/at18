@@ -1,8 +1,5 @@
 package jalau.at18.katas.langtonant.Team1;
 
-import java.util.Arrays;
-import java.util.List;
-
 public class Movements {
     
     Ant ant = new Ant();

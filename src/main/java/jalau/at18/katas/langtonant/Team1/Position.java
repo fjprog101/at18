@@ -12,7 +12,7 @@ public class Position {
     }
     
     public void upPosition(char[][] tabs) {
-        ant.setDirection();
+        // ant.setDirection("Right");
         tabs[posX][posY]=' ';
         posX -= 1;
         System.out.println(posX + " " + posY);
@@ -20,7 +20,7 @@ public class Position {
     }
     
     public void downPosition(char[][] tabs) {
-        ant.setDirection();
+        // ant.setDirection("Left");
         tabs[posX][posY]=' ';
         posX += 1;
         System.out.println(posX + " " + posY);
@@ -28,7 +28,7 @@ public class Position {
     }
 
     public void rightPosition(char[][] tabs) {
-        ant.setDirection();
+        // ant.setDirection("Down");
         tabs[posX][posY]=' ';
         posY += 1;
         System.out.println(posX + " " + posY);
@@ -36,7 +36,7 @@ public class Position {
     }
 
     public void leftPosition(char[][] tabs) {
-        ant.setDirection();
+        // ant.setDirection("Up");
         tabs[posX][posY]=' ';
         posY -=1;
         System.out.println(posX + " " + posY);
