@@ -1,5 +1,12 @@
-package jalau.at18.katas.bankocr;
+package jalau.at18.katas.bankocr.mauricio;
 
-public class CharValue {
-
+public enum CharValue {
+    TWO,
+    THREE,
+    FOUR,
+    FIVE,
+    SIX,
+    SEVEN,
+    EIGHT,
+    NINE
 }
