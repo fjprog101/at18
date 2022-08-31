@@ -11,27 +11,31 @@ public class Main {
         System.out.println(positionAnt.posX + " " + positionAnt.posY);
         System.out.println(positionAnt.direct);
 
-        positionAnt = movements.moveWhite(board.getBoard(), true);
+        positionAnt = movements.moveWhite(board.getBoard());
         System.out.println(positionAnt.posX + " " + positionAnt.posY);
         System.out.println(positionAnt.direct);
         // board.setBoard(setElementBoard(int posX, int posY, char antContent) );
-        positionAnt = movements.moveWhite(board.getBoard(), true);
+        positionAnt = movements.moveWhite(board.getBoard());
         System.out.println(positionAnt.posX + " " + positionAnt.posY);
         System.out.println(positionAnt.direct);
 
-        positionAnt = movements.moveWhite(board.getBoard(), true);
+        positionAnt = movements.moveWhite(board.getBoard());
         System.out.println(positionAnt.posX + " " + positionAnt.posY);
         System.out.println(positionAnt.direct);
 
-        positionAnt = movements.moveWhite(board.getBoard(), true);
+        positionAnt = movements.moveWhite(board.getBoard());
         System.out.println(positionAnt.posX + " " + positionAnt.posY);
         System.out.println(positionAnt.direct);
 
-        positionAnt = movements.moveBlack(board.getBoard(), false);
+        positionAnt = movements.moveBlack(board.getBoard());
         System.out.println(positionAnt.posX + " " + positionAnt.posY);
         System.out.println(positionAnt.direct);
 
-        positionAnt = movements.moveBlack(board.getBoard(), false);
+        positionAnt = movements.moveBlack(board.getBoard());
+        System.out.println(positionAnt.posX + " " + positionAnt.posY);
+        System.out.println(positionAnt.direct);
+
+        positionAnt = movements.moveBlack(board.getBoard());
         System.out.println(positionAnt.posX + " " + positionAnt.posY);
         System.out.println(positionAnt.direct);
         // System.out.println(positionAnt.posX + " " + positionAnt.posY);

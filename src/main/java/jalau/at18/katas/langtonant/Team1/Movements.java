@@ -7,24 +7,26 @@ public class Movements {
     // int row;
     // int column;
     private Position position = new Position();
+    private char emptySpace = ' ';
+    private char fullSpace = '█';
 
     // public Movements() {
     //     board = new Board();
     // }
 
-    public Position moveWhite(char[][] tabs, Boolean pos) {
+    public Position moveWhite(char[][] tabs) {
         switch (position.getDirect()) {
             case "Up":
-                position.rightPosition(tabs, "Right", pos);
+                position.rightPosition(tabs, "Right", emptySpace);
                 break;
             case "Right":
-                position.downPosition(tabs, "Down", pos);
+                position.downPosition(tabs, "Down", emptySpace);
                 break;
             case "Down":
-                position.leftPosition(tabs, "Left", pos);
+                position.leftPosition(tabs, "Left", emptySpace);
                 break;
             case "Left":
-                position.upPosition(tabs, "Up", pos);
+                position.upPosition(tabs, "Up", emptySpace);
                 break;
             default:
                 break;
@@ -33,19 +35,19 @@ public class Movements {
 
     }
 
-    public Position moveBlack(char[][] tabs, Boolean pos) {
+    public Position moveBlack(char[][] tabs) {
         switch (position.getDirect()) {
             case "Up":
-                position.leftPosition(tabs, "Left", pos);
+                position.leftPosition(tabs, "Left", fullSpace);
                 break;
             case "Right":
-                position.upPosition(tabs, "Up", pos);
+                position.upPosition(tabs, "Up", fullSpace);
                 break;
             case "Down":
-                position.rightPosition(tabs, "Right", pos);
+                position.rightPosition(tabs, "Right", fullSpace);
                 break;
             case "Left":
-                position.downPosition(tabs, "Down", pos);
+                position.downPosition(tabs, "Down", fullSpace);
                 break;
             default:
                 break;
