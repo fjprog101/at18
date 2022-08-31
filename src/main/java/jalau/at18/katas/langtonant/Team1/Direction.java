@@ -1,24 +1,33 @@
 package jalau.at18.katas.langtonant.Team1;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Direction {
     private char[][] newTab;
+    Ant ant;
+    String direction;
 
-    public char[][] confDirection(char[][] tabs){
-        Ant ant = new Ant();
+    public Direction() {
+        ant = new Ant();
+        direction = ant.getDirection();
+    }
+
+    public List<Object> confDirection(char[][] tabs, String direction){
         Movements movements = new Movements();
-        if(ant.getDirection() == "Right"){
+        if(direction == "Right"){
             tabs = movements.moveWhite(tabs);
-            ant.setDirection("Down");
-        } else if (ant.getDirection() == "Left"){
+            direction = "Down";
+        } else if (direction == "Left"){
             tabs = movements.moveWhite(tabs);
-            ant.setDirection("Up");
-        } else if (ant.getDirection() == "Up"){
+            direction = "Up";
+        } else if (direction == "Up"){
             tabs = movements.moveWhite(tabs);
-            ant.setDirection("Right");
-        } else if (ant.getDirection() == "Down"){
+            direction = "Right";
+        } else if (direction == "Down"){
             tabs = movements.moveWhite(tabs);
-            ant.setDirection("Left");
+            direction = "Left";
         }
-        return tabs;
+        return Arrays.asList(tabs, direction);
     }
 }

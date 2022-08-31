@@ -35,11 +35,8 @@ public class Ant {
 
     public void setDirection(String direction){
         this.direction = direction;
-
     }
-    public String getDirection(){
+    public String getDirection() {
         return direction;
     }
-
-
 }
