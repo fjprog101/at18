@@ -1,6 +1,6 @@
 package jalau.at18.katas.bankocr.adriana;
 
-public enum NumberType {
+public enum DigitType {
     ZERO(new String[][]{{" ", "_", " "}, {"|", " ", "|"}, {"|", "_", "|"}}),
     ONE(new String[][]{{" ", " ", " "}, {" ", " ", "|"}, {" ", " ", "|"}}),
     TWO(new String[][]{{" ", "_", " "}, {" ", "_", "|"}, {"|", "_", " "}}),
@@ -12,7 +12,7 @@ public enum NumberType {
     EIGHT(new String[][]{{" ", "_", " "}, {"|", "_", "|"}, {"|", "_", "|"}}),
     NINE(new String[][]{{" ", "_", " "}, {"|", "_", "|"}, {" ", "_", "|"}});
     private String[][] arrayCharacters;
-    NumberType(String[][] arrayCharacters) {
+    DigitType(String[][] arrayCharacters) {
         this.arrayCharacters = arrayCharacters;
     }
     public String[][] getArrayCharacters() {
