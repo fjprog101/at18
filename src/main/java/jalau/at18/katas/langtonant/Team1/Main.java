@@ -44,6 +44,7 @@ public class Main {
         // board.setBoard(movements.moveWhite(board.getBoard()));
         // board.setBoard(movements.moveBlack(board.getBoard()));
 
+        System.out.println("mi posicion"+ board.getBoard()[positionAnt.getPosX()][positionAnt.getPosY()]+" esta es");
         System.out.println(board.toString());
         /*
          * pos.upPosition();

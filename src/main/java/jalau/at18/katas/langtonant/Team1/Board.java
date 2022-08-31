@@ -26,11 +26,11 @@ public class Board {
         }
     }
 
-    public void setElementBoard(int posX, int posY, char antContent) {
+    public void setElementBoard(int posX, int posY, char antContent)  {
         board[posX][posY] = antContent;
     }
 
-    public int getElement(int posX, int posY) {
+    public int getElement(int posX, int posY)  {
         return board[posX][posY];
     }
 
