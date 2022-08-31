@@ -32,13 +32,10 @@ public class Ant {
         this.posY = posY;
     }
 
-    public void setDirection(){
+    public void setDirection() {
         this.direction = direction;
-
     }
-    public String getDirection(){
+    public String getDirection() {
         return direction;
     }
-
-
 }
