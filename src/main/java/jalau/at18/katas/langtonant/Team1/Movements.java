@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Movements {
     
-    //Ant position = new Ant();
+    Ant ant = new Ant();
     Board board= new Board();
     //int row;
     //int column;
@@ -15,17 +15,38 @@ public class Movements {
     }
 
     public char[][] moveWhite(char[][] tabs){
-        tabs[position.posX][position.posY]=' ';
-        position.rightPosition();
-        System.out.println(position.posX + " " + position.posY);
-        tabs[position.posX][position.posY]='8';
+        switch(ant.getDirection()) {
+            case "Up":
+            position.rightPosition(tabs);
+            break;
+            case "Right":
+            position.downPosition(tabs);
+            break;
+            case "Down":
+            position.leftPosition(tabs);
+            break;
+            case "Left":
+            position.upPosition(tabs);
+            break;
+        }  
         return tabs;
+
     }
     public char[][] moveBlack(char[][] tabs){
-        position.upPosition();
-        System.out.println(position.posX + " " + position.posY);
-        tabs[position.posX][position.posY]='8';
-        // board.setElementBoard(position.posX, position.posY, '8');
+        switch(ant.getDirection()) {
+            case "Up":
+            position.leftPosition(tabs);
+            break;
+            case "Right":
+            position.upPosition(tabs);
+            break;
+            case "Down":
+            position.rightPosition(tabs);
+            break;
+            case "Left":
+            position.downPosition(tabs);
+            break;
+        }  
         return tabs;
     }
 

@@ -11,19 +11,35 @@ public class Position {
         posX = ant.getPosX();
     }
     
-    public void upPosition() {
+    public void upPosition(char[][] tabs) {
+        ant.setDirection();
+        tabs[posX][posY]=' ';
         posX -= 1;
+        System.out.println(posX + " " + posY);
+        tabs[posX][posY]='8';
     }
     
-    public void downPosition() {
+    public void downPosition(char[][] tabs) {
+        ant.setDirection();
+        tabs[posX][posY]=' ';
         posX += 1;
+        System.out.println(posX + " " + posY);
+        tabs[posX][posY]='8';
     }
 
-    public void rightPosition() {
+    public void rightPosition(char[][] tabs) {
+        ant.setDirection();
+        tabs[posX][posY]=' ';
         posY += 1;
+        System.out.println(posX + " " + posY);
+        tabs[posX][posY]='8';
     }
 
-    public void leftPosition() {
+    public void leftPosition(char[][] tabs) {
+        ant.setDirection();
+        tabs[posX][posY]=' ';
         posY -=1;
+        System.out.println(posX + " " + posY);
+        tabs[posX][posY]='8';
     }
 }
