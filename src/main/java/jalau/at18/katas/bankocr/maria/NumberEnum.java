@@ -3,7 +3,14 @@ package jalau.at18.katas.bankocr.maria;
 public enum NumberEnum {
     ZERO(" _ ", "| |", "|_|"),
     ONE("   ", "  |", "  |"),
-    TWO(" _ ", " _|", "|_ ");
+    TWO(" _ ", " _|", "|_ "),
+    THREE(" _ ", " _|", " _|"),
+    FOUR("   ", "|_|", "  |"),
+    FIVE(" _ ", "|_ ", " _|"),
+    SIX(" _ ", "|_ ", "|_|"),
+    SEVEN(" _ ", "  |", "  |"),
+    EIGHT(" _ ", "|_|", "|_|"),
+    NINE(" _ ", "|_|", " _|");
 
     private final String firstColumn;
     private final String secondColumn;

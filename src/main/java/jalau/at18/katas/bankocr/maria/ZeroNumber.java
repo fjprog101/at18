@@ -7,9 +7,9 @@ public class ZeroNumber extends TypeNumber {
 
     @Override
     public boolean isThisNumber(String firstColumn, String secondColumn, String thirdColumn) {
-        boolean result = NumberEnum.ZERO.getFirstColumn().equals(firstColumn) &&
-                NumberEnum.ZERO.getSecondColumn().equals(secondColumn) &&
-                NumberEnum.ZERO.getThirdColumn().equals(thirdColumn);
+        boolean result = NumberEnum.ZERO.getFirstColumn().equals(firstColumn)
+                && NumberEnum.ZERO.getSecondColumn().equals(secondColumn)
+                && NumberEnum.ZERO.getThirdColumn().equals(thirdColumn);
         return result;
     }
 }

@@ -7,10 +7,9 @@ public class TwoNumber extends TypeNumber {
 
     @Override
     public boolean isThisNumber(String firstColumn, String secondColumn, String thirdColumn) {
-        boolean result = NumberEnum.TWO.getFirstColumn().equals(firstColumn) &&
-                            NumberEnum.TWO.getSecondColumn().equals(secondColumn) &&
-                                NumberEnum.TWO.getThirdColumn().equals(thirdColumn);
-
+        boolean result = NumberEnum.TWO.getFirstColumn().equals(firstColumn)
+                && NumberEnum.TWO.getSecondColumn().equals(secondColumn)
+                && NumberEnum.TWO.getThirdColumn().equals(thirdColumn);
         return result;
     }
 }
