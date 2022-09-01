@@ -15,10 +15,11 @@ public class Bankocr {
         System.out.println(getAccountNumber());
         System.out.println("Is a valid account number: " + new AccountVerifier(account).isValidAccountNumber());
     }
-    public int getAccountNumber() {
-        int number = 0;
-        for (int index = account.getAccountNumber().length - 1; index >= 0; index--) {
-            number += account.getAccountNumber()[index] * Math.pow(NUMBER_TEN, account.getAccountNumber().length - index - 1);
+    public String getAccountNumber() {
+        String number = "";
+        for (int index = 0; index < account.getAccountNumber().length; index++) {
+            //number += account.getAccountNumber()[index] * Math.pow(NUMBER_TEN, account.getAccountNumber().length - index - 1);
+            number += account.getAccountNumber()[index];
         }
         return number;
     }

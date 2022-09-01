@@ -14,7 +14,7 @@ public class AccountVerifier {
     public int getCheckSum() {
         checkSum = 0;
         for (int index = 0; index < account.getAccountNumber().length; index++) {
-            checkSum += account.getAccountNumber()[index] * (account.getAccountNumber().length - index);
+            checkSum += Integer.parseInt(account.getAccountNumber()[index])  * (account.getAccountNumber().length - index);
         }
         return checkSum;
     }
@@ -24,5 +24,4 @@ public class AccountVerifier {
         }
         return isValidAccountNumber;
     }
-
 }

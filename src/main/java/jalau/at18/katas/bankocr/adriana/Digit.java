@@ -4,20 +4,20 @@ import java.util.Arrays;
 
 public class Digit {
     private String[][] digit;
-    private int value;
+    private String value;
 
     public Digit(String[][] digit) {
         this.digit = digit;
-        value = -1;
+        value = "?";
         setValue();
     }
-    public int getValue() {
+    public String getValue() {
         return value;
     }
     public void setValue() {
         for (DigitType number : DigitType.values()) {
             if (Arrays.deepEquals(digit, number.getArrayCharacters())) {
-                value = number.ordinal();
+                value = "" + number.ordinal();
             }
         }
     }

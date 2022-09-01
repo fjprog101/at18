@@ -9,27 +9,27 @@ public class DigitTest {
     public void shouldReturnValue() {
         String[][] imageNumber = {{" ", "_", " "}, {"|", " ", "|"}, {"|", "_", "|"}};
         Digit digit = new Digit(imageNumber);
-        assertEquals(0, digit.getValue());
+        assertEquals("0", digit.getValue());
         String[][] imageNumber1 = {{" ", " ", " "}, {" ", " ", "|"}, {" ", " ", "|"}};
         Digit digit1 = new Digit(imageNumber1);
-        assertEquals(1, digit1.getValue());
+        assertEquals("1", digit1.getValue());
         String[][] imageNumber2 = {{" ", "_", " "}, {" ", "_", "|"}, {"|", "_", " "}};
         Digit digit2 = new Digit(imageNumber2);
-        assertEquals(2, digit2.getValue());
+        assertEquals("2", digit2.getValue());
         String[][] imageNumber3 = {{" ", "_", " "}, {" ", "_", "|"}, {" ", "_", "|"}};
         Digit digit3 = new Digit(imageNumber3);
-        assertEquals(3, digit3.getValue());
+        assertEquals("3", digit3.getValue());
         String[][] imageNumber4 = {{" ", " ", " "}, {"|", "_", "|"}, {" ", " ", "|"}};
         Digit digit4 = new Digit(imageNumber4);
-        assertEquals(4, digit4.getValue());
+        assertEquals("4", digit4.getValue());
         String[][] imageNumber5 = {{" ", "_", " "}, {"|", "_", " "}, {" ", "_", "|"}};
         Digit digit5 = new Digit(imageNumber5);
-        assertEquals(5, digit5.getValue());
+        assertEquals("5", digit5.getValue());
         String[][] imageNumber6 = {{" ", "_", " "}, {"|", "_", " "}, {"|", "_", "|"}};
         Digit digit6 = new Digit(imageNumber6);
-        assertEquals(6, digit6.getValue());
+        assertEquals("6", digit6.getValue());
         String[][] imageNumber7 = {{" ", " ", " "}, {" ", " ", " "}, {" ", " ", "|"}};
         Digit digit7 = new Digit(imageNumber7);
-        assertEquals(-1, digit7.getValue());
+        assertEquals("?", digit7.getValue());
     }
 }

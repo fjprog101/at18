@@ -13,7 +13,7 @@ public class BanckocrTest {
     public void shouldGiveAccountNumber() {
         String[] entry = {ENTRY_LINE_ONE, ENTRY_LINE_TWO, ENTRY_LINE_THR};
         Bankocr bankocr = new Bankocr(entry);
-        assertEquals(312086704, bankocr.getAccountNumber());
+        assertEquals("312086704", bankocr.getAccountNumber());
     }
     @Test
     public void shouldGetInputMessageForPrint() {

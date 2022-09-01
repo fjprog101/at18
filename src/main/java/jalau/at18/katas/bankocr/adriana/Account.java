@@ -1,17 +1,16 @@
 package jalau.at18.katas.bankocr.adriana;
 
 public class Account {
-    private static final int NUMBER_TEN = 10;
     private Digit[] accountDigits;
-    private int[] acountNumber;
+    private String[] acountNumber;
 
     public Account(Digit[] accountDigits) {
         this.accountDigits = accountDigits;
-        acountNumber = new int[accountDigits.length];
+        acountNumber = new String[accountDigits.length];
         setAccountNumber();
     }
 
-    public int[] getAccountNumber() {
+    public String[] getAccountNumber() {
         return acountNumber;
     }
 
@@ -19,12 +18,11 @@ public class Account {
         acountNumber = getDigitsValues();
     }
 
-    public int[] getDigitsValues() {
-        int[] digitsValues = new int[accountDigits.length];
+    public String[] getDigitsValues() {
+        String[] digitsValues = new String[accountDigits.length];
         for (int index = 0; index < accountDigits.length; index++) {
             digitsValues[index] = accountDigits[index].getValue();
         }
         return digitsValues;
     }
-
 }

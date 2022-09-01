@@ -16,11 +16,11 @@ public class AccountTest {
     public void shouldReturnAccount() {
         Digit[] accountDigits = {TWO, TWO, TWO, TWO, TWO, TWO, TWO, TWO, TWO};
         Account account = new Account(accountDigits);
-        int[] expected = {2, 2, 2, 2, 2, 2, 2, 2, 2};
+        String[] expected = {"2", "2", "2", "2", "2", "2", "2", "2", "2"};
         assertArrayEquals(expected, account.getAccountNumber());
         Digit[] accountDigits1 = {TWO, ONE, TWO, ONE, TWO, ZERO, TWO, ZERO, ONE};
         Account account1 = new Account(accountDigits1);
-        int[] expected1 = {2, 1, 2, 1, 2, 0, 2, 0, 1};
+        String[] expected1 = {"2", "1", "2", "1", "2", "0", "2", "0", "1"};
         assertArrayEquals(expected1, account1.getAccountNumber());
     }
 
@@ -28,7 +28,7 @@ public class AccountTest {
     public void shouldGetDigitsValues() {
         Digit[] accountDigits = {TWO, TWO, TWO, TWO, TWO, TWO, TWO, TWO, TWO};
         Account account = new Account(accountDigits);
-        int[] expected = {2, 2, 2, 2, 2, 2, 2, 2, 2};
+        String[] expected = {"2", "2", "2", "2", "2", "2", "2", "2", "2"};
         assertArrayEquals(expected, account.getDigitsValues());
     }
 }
