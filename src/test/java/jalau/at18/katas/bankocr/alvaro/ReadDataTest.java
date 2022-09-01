@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 public class ReadDataTest {
     @Test
-    public void itShouldReturnMatrix() {
+    public void itShouldReturnData() {
         String[] data = {"                           ",
                          "|  |  |  |  |  |  |  |  |  ",
                          "|  |  |  |  |  |  |  |  |  ",
