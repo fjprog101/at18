@@ -1,6 +1,6 @@
 package jalau.at18.katas.bankocr.mauricio;
 
-public class main {
+public class Main {
     public static void main(String[] arg) {
         final int one = 1;
         final int two = 2;
