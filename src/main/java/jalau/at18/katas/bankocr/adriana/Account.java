@@ -27,12 +27,4 @@ public class Account {
         return digitsValues;
     }
 
-    public int makeInteger(int[] digitsValues) {
-        int number = 0;
-        for (int index = accountDigits.length - 1; index >= 0; index--) {
-            number += digitsValues[index] * Math.pow(NUMBER_TEN, accountDigits.length - index - 1);
-        }
-        return number;
-    }
-
 }

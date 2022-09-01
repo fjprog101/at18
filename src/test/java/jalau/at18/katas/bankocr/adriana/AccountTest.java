@@ -31,18 +31,4 @@ public class AccountTest {
         int[] expected = {2, 2, 2, 2, 2, 2, 2, 2, 2};
         assertArrayEquals(expected, account.getDigitsValues());
     }
-
-    @Test
-    public void shouldMakeInteger() {
-        Digit[] accountDigits = {TWO, TWO, TWO, TWO, TWO, TWO, TWO, TWO, TWO};
-        Account account = new Account(accountDigits);
-        int[] digits = {2, 2, 2, 2, 2, 2, 2, 2, 2};
-        int expected = 222222222;
-        assertEquals(expected, account.makeInteger(digits));
-    }
-
-    
-
-
-
 }

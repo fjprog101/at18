@@ -28,5 +28,8 @@ public class DigitTest {
         String[][] imageNumber6 = {{" ", "_", " "}, {"|", "_", " "}, {"|", "_", "|"}};
         Digit digit6 = new Digit(imageNumber6);
         assertEquals(6, digit6.getValue());
+        String[][] imageNumber7 = {{" ", " ", " "}, {" ", " ", " "}, {" ", " ", "|"}};
+        Digit digit7 = new Digit(imageNumber7);
+        assertEquals(-1, digit7.getValue());
     }
 }
