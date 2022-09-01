@@ -1,17 +1,17 @@
 package jalau.at18.katas.bankocr.sarai;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
 
-public class Userstory1Test {
+import static org.junit.Assert.assertEquals;
+
+public class DigitReaderTest {
     @Test
     public void acrossNumbersEnumZerro() {
         String[][] numzero = {
             {" ","_"," "},
             {"|"," ","|"},
             {"|","_","|"} };
-            Userstory1 storyzero = new Userstory1(numzero); // envio numzero
+            DigitReader storyzero = new DigitReader(numzero); // envio numzero
         assertEquals(0, storyzero.getrecorrer());
     }
     @Test
@@ -20,7 +20,7 @@ public class Userstory1Test {
             {" ","_"," "},
             {" ","_","|"},
             {" ","_","|"} };
-            Userstory1 storythree = new Userstory1(numthree); // envio numthree
+            DigitReader storythree = new DigitReader(numthree); // envio numthree
         assertEquals(3,storythree.getrecorrer());
     }
 }

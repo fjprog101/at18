@@ -1,12 +1,13 @@
 package jalau.at18.katas.bankocr.sarai;
+
 import java.util.Arrays;
 
-public class Userstory1 {
+public class DigitReader {
     private final int tamArraythree = 3;
     private String[][] tam = new String[tamArraythree][tamArraythree];
     private int naturalNumbers;
 
-    public Userstory1(String[][] tam) {
+    public DigitReader(String[][] tam) {
         this.tam = tam;
         recorrer();
     }
