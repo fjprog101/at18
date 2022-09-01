@@ -12,20 +12,14 @@ public class Userstory1 {
     }
 
     public void recorrer() {
-        // Llamando a values()
-        NumbersCharacters[] arr = NumbersCharacters.values();
-
-        // enum con bucle
-        for (NumbersCharacters col : arr) {
+        NumbersCharacters[] arr = NumbersCharacters.values();// Llamando a values()
+        for (NumbersCharacters col : arr) {// enum con bucle
             if (Arrays.deepEquals(tam, col.getcharacternumbers())) {
-                //recorrer el enum
-                naturalNumbers = col.ordinal();
+                naturalNumbers = col.ordinal();//recorrer el enum
             }
         }
-        //return naturalNumbers;
     }
     public int getrecorrer() {
         return naturalNumbers;
     }
-
 }

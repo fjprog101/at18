@@ -1,12 +1,10 @@
-package jalau.at18.katas.sarai.banck;
+package jalau.at18.katas.bankocr.sarai;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
-import jalau.at18.katas.bankocr.sarai.Userstory1;
 
-public class userstoryTest {
-
+public class Userstory1Test {
     @Test
     public void acrossNumbersEnumZerro() {
         String[][] numzero = {
