@@ -13,6 +13,7 @@ public class Bankocr {
     public void run() {
         System.out.println(printEntry());
         System.out.println(getAccountNumber());
+        System.out.println("Is a valid account number: " + new AccountVerifier(account).isValidAccountNumber());
     }
     public int getAccountNumber() {
         int number = 0;
