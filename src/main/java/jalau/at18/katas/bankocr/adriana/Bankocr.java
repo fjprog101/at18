@@ -1,6 +1,7 @@
 package jalau.at18.katas.bankocr.adriana;
 
 public class Bankocr {
+    private static final int NUMBER_TEN = 10;
     private String[] entry;
     private Input input;
     private Account account;
@@ -11,10 +12,14 @@ public class Bankocr {
     }
     public void run() {
         System.out.println(printEntry());
-        System.out.println(account.getAccountNumber());
+        System.out.println(getAccountNumber());
     }
     public int getAccountNumber() {
-        return account.getAccountNumber();
+        int number = 0;
+        for (int index = account.getAccountNumber().length - 1; index >= 0; index--) {
+            number += account.getAccountNumber()[index] * Math.pow(NUMBER_TEN, account.getAccountNumber().length - index - 1);
+        }
+        return number;
     }
     public String printEntry() {
         String message = "";

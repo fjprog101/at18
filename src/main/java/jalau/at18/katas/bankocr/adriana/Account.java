@@ -3,21 +3,20 @@ package jalau.at18.katas.bankocr.adriana;
 public class Account {
     private static final int NUMBER_TEN = 10;
     private Digit[] accountDigits;
-    private int acountNumber;
+    private int[] acountNumber;
 
     public Account(Digit[] accountDigits) {
         this.accountDigits = accountDigits;
-        acountNumber = 0;
+        acountNumber = new int[accountDigits.length];
         setAccountNumber();
     }
 
-    public int getAccountNumber() {
+    public int[] getAccountNumber() {
         return acountNumber;
     }
 
     public void setAccountNumber() {
-        int[] digitsValues = getDigitsValues();
-        acountNumber = makeInteger(digitsValues);
+        acountNumber = getDigitsValues();
     }
 
     public int[] getDigitsValues() {
