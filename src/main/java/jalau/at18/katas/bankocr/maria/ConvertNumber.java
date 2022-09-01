@@ -7,6 +7,7 @@ public class ConvertNumber {
         ZeroNumber zeroNumber = new ZeroNumber();
         OneNumber oneNumber = new OneNumber();
         TwoNumber twoNumber = new TwoNumber();
+
         if (zeroNumber.isThisNumber(firstColumn, secondColumn, thirdColumn)) {
             number = 0;
         } else if (oneNumber.isThisNumber(firstColumn, secondColumn, thirdColumn)) {
