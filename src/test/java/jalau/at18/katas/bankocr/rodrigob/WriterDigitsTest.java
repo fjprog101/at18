@@ -13,4 +13,13 @@ public class WriterDigitsTest {
         String expected = writerOne.compareDigits(DigitValue.ONE.getValue() , one);
         assertEquals("1", expected);
     }
+
+    @Test
+    public void shouldReturnTwo() {
+        char[][] two = {{' ', '_', ' '}, {' ', '_', '|'}, {'|', '_', ' '}};
+        WriterDigits writerTwo = new WriterDigits(two);
+        String expected = writerTwo.compareDigits(DigitValue.TWO.getValue() , two);
+        assertEquals("2", expected);
+    }
+
 }

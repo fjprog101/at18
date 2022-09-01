@@ -1,12 +1,20 @@
 package jalau.at18.katas.bankocr.rodrigob;
 
-public class WriterDigits {
+import java.util.Arrays;
 
-    public WriterDigits(char[][] one) {
+public class WriterDigits {
+    //private DigitValue value;
+
+    public WriterDigits(char[][] number) {
     }
 
-    public String compareDigits(char[][] value, char[][] one) {
-        return "1";
+    public String compareDigits(char[][] number, char[][] value) {
+        for (DigitValue list: DigitValue.values()) {
+            if (Arrays.deepEquals(number, list.getValue())) {
+                return list.getDigit();
+            }
+        }
+        return "";
     }
 
 }
