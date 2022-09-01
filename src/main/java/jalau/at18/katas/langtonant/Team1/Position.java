@@ -5,6 +5,7 @@ public class Position {
     int posY;
     int posX;
     String direct;
+    char figure;
 
     public String getDirect() {
         return direct;
@@ -14,38 +15,50 @@ public class Position {
         this.direct = direct;
     }
 
+    public char getFigure() {
+        return figure;
+    }
+
+    public void setFigure(char figure) {
+        this.figure = figure;
+    }
+
     public Position() {
         ant = new Ant();
         posY = ant.getPosY();
         posX = ant.getPosX();
         direct = "Left";
+        figure = ' ';
     }
 
-    public void upPosition(char[][] tabs, String direction, Boolean pos) {
+    public void upPosition(char[][] tabs, String direction, char figure) {
         this.setDirect(direction);
-        if (pos) {tabs[posX][posY] = ' ';} else {tabs[posX][posY] = '█';}
-        tabs[posX][posY] = ' ';
+        this.setFigure(figure);
+        tabs[posX][posY] = getFigure();
         posX -= 1;
         tabs[posX][posY] = '¥';
     }
 
-    public void downPosition(char[][] tabs, String direction, Boolean pos) {
+    public void downPosition(char[][] tabs, String direction, char figure) {
         this.setDirect(direction);
-        if (pos) {tabs[posX][posY] = ' ';} else {tabs[posX][posY] = '█';}
+        this.setFigure(figure);
+        tabs[posX][posY] = getFigure();
         posX += 1;
         tabs[posX][posY] = '¥';
     }
 
-    public void rightPosition(char[][] tabs, String direction, Boolean pos) {
+    public void rightPosition(char[][] tabs, String direction, char figure) {
         this.setDirect(direction);
-        if (pos) {tabs[posX][posY] = ' ';} else {tabs[posX][posY] = '█';}
+        this.setFigure(figure);
+        tabs[posX][posY] = getFigure();
         posY += 1;
         tabs[posX][posY] = '¥';
     }
 
-    public void leftPosition(char[][] tabs, String direction, Boolean pos) {
+    public void leftPosition(char[][] tabs, String direction, char figure) {
         this.setDirect(direction);
-        if (pos) {tabs[posX][posY] = ' ';} else {tabs[posX][posY] = '█';}
+        this.setFigure(figure);
+        tabs[posX][posY] = getFigure();
         posY -= 1;
         tabs[posX][posY] = '¥';
     }
