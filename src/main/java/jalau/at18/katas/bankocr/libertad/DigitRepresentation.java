@@ -22,7 +22,6 @@ public class DigitRepresentation {
     private static final String[][] FIVE = {{" _ "},
                                             {"|_ "},
                                             {" _|"}};
-    
     private List<String[][]> digits;
     public DigitRepresentation() {
         digits = new ArrayList<>();

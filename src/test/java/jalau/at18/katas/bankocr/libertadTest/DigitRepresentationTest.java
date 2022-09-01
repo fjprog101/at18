@@ -22,12 +22,20 @@ public class DigitRepresentationTest {
                                {"|_ "}};
         String[][] inputThree = {{" _ "},
                                  {" _|"},
-                                 {" _|"}};                       
+                                 {" _|"}}; 
+        String[][] inputFour = {{"   "},
+                           {"|_|"},
+                           {"  |"}};
+        String[][] inputFive = {{" _ "},
+                           {"|_ "},
+                           {" _|"}};                      
         List<String[][]> expects = new ArrayList<>();
         expects.add(inputZero);
         expects.add(inputOne);
         expects.add(inputTwo);
         expects.add(inputThree);
+        expects.add(inputFour);
+        expects.add(inputFive);
         DigitRepresentation digitRepresentation = new DigitRepresentation();
         assertArrayEquals(expects.toArray(), digitRepresentation.getDigitsRepresentation().toArray());
     }
