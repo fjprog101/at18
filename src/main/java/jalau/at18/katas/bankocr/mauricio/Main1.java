@@ -1,6 +1,6 @@
 package jalau.at18.katas.bankocr.mauricio;
 
-public class Main {
+public class Main1 {
     public static void main(String[] arg) {
         final int one = 1;
         final int two = 2;
@@ -18,7 +18,7 @@ public class Main {
         String[][] number1 = numToCharOneToThree.chooseChar(one);
         String[][] number2 = numToCharOneToThree.chooseChar(two);
         String[][] number3 = numToCharSevenToNine.chooseChar(nine);
-        String[][] number4 = numToCharSevenToNine.chooseChar(nine);
+        String[][] number4 = numToCharSevenToNine.chooseChar(eight);
         // String[][] number4 = numToChar.chooseChar(TWO);
         // String[][] number5 = numToChar.chooseChar(TWO);
         // String[][] number6 = numToChar.chooseChar(ONE);
