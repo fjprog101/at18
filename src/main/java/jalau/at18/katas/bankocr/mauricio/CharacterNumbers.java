@@ -3,47 +3,47 @@ package jalau.at18.katas.bankocr.mauricio;
 public class CharacterNumbers {
 
     public String[][] characterForOne() {
-        String[][] one = {{" ", " " }, {" ", "|" }, {" ", "|"}};
+        String[][] one = {{" ", " " }, {" ", "  |" }, {" ", "  |"}};
         return one;
     }
 
     public String[][] characterForTwo() {
-        String[][] two = {{" ", "_" }, {" ", "_|" }, {" ", "|_"}};
+        String[][] two = {{" ", "___" }, {" ", "___|" }, {" ", "|___"}};
         return two;
     }
 
     public String[][] characterForThree() {
-        String[][] three = {{" ", "_"}, {" ", "_|" }, {" ", "_|"}};
+        String[][] three = {{" ", "___"}, {" ", "___|" }, {" ", "___|"}};
         return three;
     }
 
     public String[][] characterForFour() {
-        String[][] four = {{" ", " "}, {" ", "|_|" }, {" ", "|"}};
+        String[][] four = {{" ", " "}, {" ", "|___|" }, {" ", "   |"}};
         return four;
     }
 
     public String[][] characterForFive() {
-        String[][] five = {{" ", "_"}, {" ", "|_"}, {" ", "_|"}};
+        String[][] five = {{" ", "___"}, {" ", "|___"}, {" ", "___|"}};
         return five;
     }
 
     public String[][] characterForSix() {
-        String[][] six = {{" ", "_"}, {" ", "|_ "}, {" ", "|_|"}};
+        String[][] six = {{" ", "___"}, {" ", "|___"}, {" ", "|___|"}};
         return six;
     }
 
     public String[][] characterForSeven() {
-        String[][] seven = {{" ", "_"}, {" ", "|" }, {" ", "|"}};
+        String[][] seven = {{" ", "___"}, {" ", "  |" }, {" ", "  |"}};
         return seven;
     }
 
     public String[][] characterForEight() {
-        String[][] eight = {{" ", "_"}, {" ", "|_|"}, {" ", "|_|"}};
+        String[][] eight = {{" ", "___"}, {" ", "|___|"}, {" ", "|___|"}};
         return eight;
     }
 
     public String[][] characterForNine() {
-        String[][] nine = {{" ", "_"}, {" ", "|_|"}, {" ", "_|"}};
+        String[][] nine = {{" ", " ___"}, {" ", "|___|"}, {" ", "  __|"}};
         return nine;
     }
 

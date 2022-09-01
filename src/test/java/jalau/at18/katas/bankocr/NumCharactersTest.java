@@ -13,7 +13,7 @@ public class NumCharactersTest {
     @Test
     public void shouldObtainOne() {
         
-        String[][] one = {{" ", " "}, {" ", "|"}, {" ", "|"}};
+        String[][] one = {{" ", " " }, {" ", "  |" }, {" ", "  |"}};
         CharacterNumbers number = new CharacterNumbers();
         BuildNumber build = new BuildNumber(CharValue.ONE, number);
         CreateCharacter character = new CreateCharacter(CharValue.ONE, build);
@@ -23,7 +23,7 @@ public class NumCharactersTest {
     @Test
     public void shouldObtainTwo() {
         
-        String[][] two = {{" ", "_"}, {" ", "_|"}, {" ", "|_"}};
+        String[][] two = {{" ", "___" }, {" ", "___|" }, {" ", "|___"}};
         CharacterNumbers number = new CharacterNumbers();
         BuildNumber build = new BuildNumber(CharValue.TWO, number);
         CreateCharacter character = new CreateCharacter(CharValue.TWO, build);
@@ -33,7 +33,7 @@ public class NumCharactersTest {
     @Test
     public void shouldObtainThree() {
         
-        String[][] three = {{" ", "_"}, {" ", "_|"}, {" ", "_|"}};
+        String[][] three = {{" ", "___"}, {" ", "___|" }, {" ", "___|"}};
         CharacterNumbers number = new CharacterNumbers();
         BuildNumber build = new BuildNumber(CharValue.THREE, number);
         CreateCharacter character = new CreateCharacter(CharValue.THREE, build);
@@ -43,7 +43,7 @@ public class NumCharactersTest {
     @Test
     public void shouldObtainFour() {
         
-        String[][] four = {{" ", " "}, {" ", "|_|"}, {" ", "|"}};
+        String[][] four = {{" ", " "}, {" ", "|___|" }, {" ", "   |"}};
         CharacterNumbers number = new CharacterNumbers();
         BuildNumber build = new BuildNumber(CharValue.FOUR, number);
         CreateCharacter character = new CreateCharacter(CharValue.FOUR, build);
@@ -53,7 +53,7 @@ public class NumCharactersTest {
     @Test
     public void shouldObtainFive() {
         
-        String[][] five = {{" ", "_"}, {" ", "|_"}, {" ", "_|"}};
+        String[][] five = {{" ", "___"}, {" ", "|___"}, {" ", "___|"}};
         CharacterNumbers number = new CharacterNumbers();
         BuildNumber build = new BuildNumber(CharValue.FIVE, number);
         CreateCharacter character = new CreateCharacter(CharValue.FIVE, build);
@@ -63,7 +63,7 @@ public class NumCharactersTest {
     @Test
     public void shouldObtainSix() {
         
-        String[][] six = {{" ", "_"}, {" ", "|_ "}, {" ", "|_|"}};
+        String[][] six = {{" ", "___"}, {" ", "|___"}, {" ", "|___|"}};
         CharacterNumbers number = new CharacterNumbers();
         BuildNumber build = new BuildNumber(CharValue.SIX, number);
         CreateCharacter character = new CreateCharacter(CharValue.SIX, build);
@@ -73,7 +73,7 @@ public class NumCharactersTest {
     @Test
     public void shouldObtainSeven() {
         
-        String[][] seven = {{" ", "_"}, {" ", "|"}, {" ", "|"}};
+        String[][] seven = {{" ", "___"}, {" ", "  |" }, {" ", "  |"}};
         CharacterNumbers number = new CharacterNumbers();
         BuildNumber build = new BuildNumber(CharValue.SEVEN, number);
         CreateCharacter character = new CreateCharacter(CharValue.SEVEN, build);
@@ -83,7 +83,7 @@ public class NumCharactersTest {
     @Test
     public void shouldObtainEight() {
         
-        String[][] eight = {{" ", "_"}, {" ", "|_|"}, {" ", "|_|"}};
+        String[][] eight = {{" ", "___"}, {" ", "|___|"}, {" ", "|___|"}};
         CharacterNumbers number = new CharacterNumbers();
         BuildNumber build = new BuildNumber(CharValue.EIGHT, number);
         CreateCharacter character = new CreateCharacter(CharValue.EIGHT, build);
@@ -93,7 +93,7 @@ public class NumCharactersTest {
     @Test
     public void shouldObtainNine() {
         
-        String[][] nine = {{" ", "_"}, {" ", "|_|"}, {" ", "_|"}};
+        String[][] nine = {{" ", " ___"}, {" ", "|___|"}, {" ", "  __|"}};
         CharacterNumbers number = new CharacterNumbers();
         BuildNumber build = new BuildNumber(CharValue.NINE, number);
         CreateCharacter character = new CreateCharacter(CharValue.NINE, build);
