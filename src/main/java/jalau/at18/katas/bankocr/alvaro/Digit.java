@@ -8,10 +8,11 @@ public class Digit {
         this.mat3x3 = matrix;
         convertToNumber();
     }
-    public void convertToNumber() {
+    public int convertToNumber() {
         number = new Number(mat3x3);
         number.compareNumber();
         System.out.print(number.getNumber());
+        return number.getNumber();
     }
 
 }
