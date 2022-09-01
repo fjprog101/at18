@@ -28,3 +28,8 @@ checkstyleMain {
 
 test.finalizedBy("checkstyleMain")
 test.finalizedBy("jacocoTestReport")
+
+task runBanckocr (dependsOn: 'classes', type: JavaExec) {
+    main = 'jalau.at18.katas.banckocr.sergio.Main'
+    classpath = sourceSets.main.runtimeClasspath
+}
