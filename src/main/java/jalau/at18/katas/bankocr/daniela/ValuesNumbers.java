@@ -10,7 +10,7 @@ public enum ValuesNumbers {
             " _ ",
             " _|",
             "|_ ",
-            '3'),
+            '2'),
     DIGIT_3(
             " _ ",
             " _|",

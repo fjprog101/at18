@@ -4,19 +4,11 @@ public class Digit {
     private final String line1;
     private final String line2;
     private final String line3;
-    private static final int ZISE = 3;
 
     public Digit(String line1, String line2, String line3) {
-        checkLenght(line1);
         this.line1 = line1;
         this.line2 = line2;
         this.line3 = line3;
-    }
-
-    private void checkLenght(String line) {
-        if (line.length() != ZISE) {
-            throw new UnsupportedOperationException("The all numbers are invalid");
-        }
     }
 
     public char getDigitChar() {
