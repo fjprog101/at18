@@ -6,11 +6,10 @@ public class ZeroNumber extends TypeNumber {
     }
 
     @Override
-    public int whatNumberI(String firstColumn, String secondColumn, String thirdColumn) {
-        int number = 0;
-        if (firstColumn.equals(NumberEnum.ONLYUNDERSCORE) && secondColumn.equals(NumberEnum.TWOPIPESSPACE) & thirdColumn.equals(NumberEnum.PIPESUNDERSCORE)) {
-            number = 0;
-        }
-        return number;
+    public boolean isThisNumber(String firstColumn, String secondColumn, String thirdColumn) {
+        boolean result = NumberEnum.ZERO.getFirstColumn().equals(firstColumn) &&
+                NumberEnum.ZERO.getSecondColumn().equals(secondColumn) &&
+                NumberEnum.ZERO.getThirdColumn().equals(thirdColumn);
+        return result;
     }
 }
