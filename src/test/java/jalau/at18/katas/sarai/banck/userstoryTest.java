@@ -25,5 +25,4 @@ public class userstoryTest {
             Userstory1 storythree = new Userstory1(numthree);// envio numthree
         assertEquals(3,storythree.getrecorrer());
     }
-
 }
