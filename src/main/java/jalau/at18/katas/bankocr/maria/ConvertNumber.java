@@ -2,6 +2,7 @@ package jalau.at18.katas.bankocr.maria;
 
 public class ConvertNumber {
     public static final int INITIAL_VALUE = -1;
+
     public int convert(String firstColumn, String secondColumn, String thirdColumn) {
         int number = INITIAL_VALUE;
         ZeroNumber zeroNumber = new ZeroNumber();
@@ -17,7 +18,6 @@ public class ConvertNumber {
                 number = 2;
             }
         }
-
         return number;
     }
 }
