@@ -1,38 +1,35 @@
 package jalau.at18.katas.bankocr.alvaro;
+
+import java.util.ArrayList;
+
 public class SplitNumber {
     private static final int DIMENSIONS = 3;
     private static final int LONGITUD_NUMBER = 9;
     private static final int JUMP_TO_NEXT_NUMBER = 3;
-    private static final int COLUMNS = 27;
-    private static final int ROWS = 3;
-    private static char[][] mat = new char[ROWS][COLUMNS]; //3x27
-    private Digit digit;
     private int index = 0;
-    private char[][] matrix3x3 = new char[DIMENSIONS][DIMENSIONS];
-    private String[] data;
-    private ConvertToMatrix split;
-    public SplitNumber(String[] data) {
-        this.data = data;
-        split =  new ConvertToMatrix(data);
-        mat = split.getMatrix();
+    private char[][] digitExtracted = new char[DIMENSIONS][DIMENSIONS];
+    private Digit digit;
+    private ArrayList<Integer> numbers = new ArrayList<>();
+    public SplitNumber(String[] entry) {
+        String[] data = entry;
+        digit = new Digit(data);
         mainOperator();
+        printNumbers();
     }
     public void mainOperator() {
         for (int ind = 0; ind < LONGITUD_NUMBER; ind++) {
-            matrix3x3 = extractNumberIn3x3Matrix(index);
+            digitExtracted = digit.extractDigit(index);
             index = index + JUMP_TO_NEXT_NUMBER;
-            digit = new Digit(matrix3x3);
+            SearchNumber searchNumber = new SearchNumber(digitExtracted);
+            numbers.add(searchNumber.getNumber());
         }
     }
-    public char[][] extractNumberIn3x3Matrix(int indx) {
-        int newindex = indx;
-        for (int ind = 0; ind < ROWS; ind++) {
-            for (int indj = 0; indj < ROWS; indj++) {
-                matrix3x3[ind][indj] = mat[ind][newindex];
-                newindex++;
-            }
-            newindex = indx;
+    public void printNumbers() {
+        for (Integer num : numbers) {
+            System.out.print(num);
         }
-        return matrix3x3;
+    }
+    public ArrayList<Integer> getNumbers() {
+        return numbers;
     }
 }
