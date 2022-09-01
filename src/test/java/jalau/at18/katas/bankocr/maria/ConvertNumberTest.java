@@ -13,7 +13,7 @@ public class ConvertNumberTest {
         int number = convertNumber.convert(firsColumn, secondColumn, thirdColumn);
         assertEquals(0, number);
     }
-
+    /*
     @Test
     public void convertOne() {
         ConvertNumber convertNumber = new ConvertNumber();
@@ -22,7 +22,7 @@ public class ConvertNumberTest {
         String thirdColumn  = "  |";
         int number = convertNumber.convert(firsColumn, secondColumn, thirdColumn);
         assertEquals(1, number);
-    }
+    }*/
     /*
     @Test
     public void convertTwo() {

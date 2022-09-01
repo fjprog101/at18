@@ -8,7 +8,7 @@ public class ZeroNumber extends TypeNumber {
     @Override
     public int whatNumberI(String firstColumn, String secondColumn, String thirdColumn) {
         int number = 0;
-        if (firstColumn.equals(" _ ") && secondColumn.equals("| |") & thirdColumn.equals("|_|")) {
+        if (firstColumn.equals(NumberEnum.ONLYUNDERSCORE) && secondColumn.equals(NumberEnum.TWOPIPESSPACE) & thirdColumn.equals(NumberEnum.PIPESUNDERSCORE)) {
             number = 0;
         }
         return number;
