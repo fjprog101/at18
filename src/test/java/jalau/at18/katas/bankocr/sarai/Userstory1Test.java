@@ -11,7 +11,7 @@ public class Userstory1Test {
             {" ","_"," "},
             {"|"," ","|"},
             {"|","_","|"} };
-            Userstory1 storyzero = new Userstory1(numzero);// envio numzero
+            Userstory1 storyzero = new Userstory1(numzero); // envio numzero
         assertEquals(0, storyzero.getrecorrer());
     }
     @Test
@@ -20,7 +20,7 @@ public class Userstory1Test {
             {" ","_"," "},
             {" ","_","|"},
             {" ","_","|"} };
-            Userstory1 storythree = new Userstory1(numthree);// envio numthree
+            Userstory1 storythree = new Userstory1(numthree); // envio numthree
         assertEquals(3,storythree.getrecorrer());
     }
 }
