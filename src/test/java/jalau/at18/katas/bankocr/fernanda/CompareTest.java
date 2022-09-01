@@ -57,5 +57,10 @@ public class CompareTest {
         int expected9 = '9';
         int result9 = compare9.compareDig(numberToCompare9);
         assertEquals(expected9, result9);
+        Compare compareInvalid = new Compare();
+        char[][] numberToCompareInvalid = {{'|', '_', ' '}, {'|', '_', ' '}, {'|', '_', '|'}};
+        int expectedInvalid = ' ';
+        int resultInvalid = compareInvalid.compareDig(numberToCompareInvalid);
+        assertEquals(expectedInvalid, resultInvalid);
     }
 }
