@@ -2,13 +2,13 @@ package jalau.at18.katas.bankocr.adriana;
 
 public class Input {
     private static final int DIGIT_LEGTH = 3;
-    private String[][] input;
+    private String[] input;
     private Digit[] digits;
     private int totalDigits;
 
-    public Input(String[][] input) {
+    public Input(String[] input) {
         this.input = input;
-        totalDigits = input[0].length / DIGIT_LEGTH;
+        totalDigits = input[0].split("").length / DIGIT_LEGTH;
         digits = new Digit[totalDigits];
         generateDigits();
     }
@@ -25,7 +25,7 @@ public class Input {
         String[][] digitImage = new String[DIGIT_LEGTH][DIGIT_LEGTH];
         for (int row = 0; row < DIGIT_LEGTH; row++) {
             for (int column = 0; column < DIGIT_LEGTH; column++) {
-                digitImage[row][column] = input[row][column + DIGIT_LEGTH * index];
+                digitImage[row][column] = input[row].split("")[column + DIGIT_LEGTH * index];
             }
         }
         return digitImage;

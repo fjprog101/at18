@@ -9,10 +9,10 @@ import org.junit.Test;
 public class InputTest {
     @Test
     public void shouldGetDigits() {
-        String[] strin1 = {" ", "_", " ", " ", " ", " ", " ", "_", " "};
-        String[] strin2 = {"|", " ", "|", " ", " ", "|", " ", "_", "|"};
-        String[] strin3 = {"|", "_", "|", " ", " ", "|", "|", "_", " "};
-        String[][] stringInput = {strin1, strin2, strin3};
+        String strin1 = " _     _ ";
+        String strin2 = "| |  | _|";
+        String strin3 = "|_|  ||_ ";
+        String[] stringInput = {strin1, strin2, strin3};
         Input input = new Input(stringInput);
         String[][] digitExpect = DigitType.ZERO.getArrayCharacters();
         Digit[] expecteds = {new Digit(digitExpect), new Digit(DigitType.ONE.getArrayCharacters()), new Digit(DigitType.TWO.getArrayCharacters())};
@@ -23,10 +23,10 @@ public class InputTest {
 
     @Test
     public void shouldGenerateString() {
-        String[] strin1 = {" ", "_", " ", " ", " ", " ", " ", "_", " "};
-        String[] strin2 = {"|", " ", "|", " ", " ", "|", " ", "_", "|"};
-        String[] strin3 = {"|", "_", "|", " ", " ", "|", "|", "_", " "};
-        String[][] stringInput = {strin1, strin2, strin3};
+        String strin1 = " _     _ ";
+        String strin2 = "| |  | _|";
+        String strin3 = "|_|  ||_ ";
+        String[] stringInput = {strin1, strin2, strin3};
         Input input = new Input(stringInput);
         String[][] digitExpect = DigitType.ZERO.getArrayCharacters();
         String[][] digitIntput = input.generateString(0);
