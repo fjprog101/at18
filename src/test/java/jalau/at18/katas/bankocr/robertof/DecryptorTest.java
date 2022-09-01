@@ -15,4 +15,5 @@ public class DecryptorTest {
         String finalValue = decryptor.decryptValue(tableValue);
         assertEquals("123456789", finalValue);
     }
+
 }
