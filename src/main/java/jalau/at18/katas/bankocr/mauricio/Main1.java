@@ -11,20 +11,13 @@ public class Main1 {
         final int seven = 7;
         final int eight = 8;
         final int nine = 9;
-        AssiginigNumberOnetoThree numToCharOneToThree = new AssiginigNumberOnetoThree();
-        AssigningNumberFourToSix numToCharFourToSix = new AssigningNumberFourToSix();
-        AssigningNumberSevenToNine numToCharSevenToNine = new AssigningNumberSevenToNine();
+        int[] listChoose = {two, three, three, five, six, six, seven, nine, eight};
+        IntroduceNumbers listNumbers = new IntroduceNumbers();
         ShowFirstThreeNumbers show = new ShowFirstThreeNumbers();
-        String[][] number1 = numToCharOneToThree.chooseChar(one);
-        String[][] number2 = numToCharOneToThree.chooseChar(two);
-        String[][] number3 = numToCharSevenToNine.chooseChar(nine);
-        String[][] number4 = numToCharSevenToNine.chooseChar(eight);
-        // String[][] number4 = numToChar.chooseChar(TWO);
-        // String[][] number5 = numToChar.chooseChar(TWO);
-        // String[][] number6 = numToChar.chooseChar(ONE);
-        // String[][] number7 = numToChar.chooseChar(TWO);
-        // String[][] number8 = numToChar.chooseChar(TWO);
-        // String[][] number9 = numToChar.chooseChar(ONE);
-        show.showNumberSelected(number1, number2, number3);
+        Checksum checksum = new Checksum();
+        if (checksum.calculationChecksum(listChoose)) {
+            String[][][] numbersToVisualize = listNumbers.introduceYourNumbers(listChoose);
+            show.showNumberSelected(numbersToVisualize[0], numbersToVisualize[1], numbersToVisualize[2]);
+        }
     }
 }
