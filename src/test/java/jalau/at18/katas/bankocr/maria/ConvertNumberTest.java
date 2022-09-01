@@ -23,5 +23,15 @@ public class ConvertNumberTest {
         int number = convertNumber.convert(firsColumn, secondColumn, thirdColumn);
         assertEquals(1, number);
     }
-
+    /*
+    @Test
+    public void convertTwo() {
+        ConvertNumber convertNumber = new ConvertNumber();
+        String firsColumn   = " _ ";
+        String secondColumn = " _|";
+        String thirdColumn  = "|_";
+        int number = convertNumber.convert(firsColumn, secondColumn, thirdColumn);
+        assertEquals(2, number);
+    }
+    */
 }
