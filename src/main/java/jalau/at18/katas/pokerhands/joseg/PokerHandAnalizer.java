@@ -24,9 +24,7 @@ public class PokerHandAnalizer {
         return areSameSuit;
     }
 
-    public boolean hasCardsWithSameValue(PokerHand hand, int expectedCount) {
-        CardValuesCounter counter = new CardValuesCounter(hand);
-        CardValuesCount count = counter.getCount();
-        return count.exists(expectedCount);
+    public boolean analize(PokerHand handWith2CardsWithSameValue, CardsWithSameValue cardsWithSameValue) {
+        return cardsWithSameValue.match(handWith2CardsWithSameValue);
     }
 }

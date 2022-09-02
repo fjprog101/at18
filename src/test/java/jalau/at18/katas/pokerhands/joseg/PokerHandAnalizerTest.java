@@ -10,6 +10,7 @@ public class PokerHandAnalizerTest {
     @Test
     public void shouldSayIfHandNCardsWithSameValue() {
         PokerHandAnalizer analizer = new PokerHandAnalizer();
+        CardsWithSameValue have2CardsWithSameValue = new CardsWithSameValue(2);
 
         PokerHand handWith2CardsWithSameValue = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
@@ -18,8 +19,9 @@ public class PokerHandAnalizerTest {
             new Card(CardValue.FIVE, 'S'),
             new Card(CardValue.SIX, 'S'),
         });
-        assertTrue(analizer.hasCardsWithSameValue(handWith2CardsWithSameValue, 2));
+        assertTrue(analizer.analize(handWith2CardsWithSameValue, have2CardsWithSameValue));
 
+        CardsWithSameValue have3CardsWithSameValue = new CardsWithSameValue(3);
         PokerHand handWith3CardsWithSameValue = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.THREE, 'D'),
@@ -27,8 +29,9 @@ public class PokerHandAnalizerTest {
             new Card(CardValue.THREE, 'S'),
             new Card(CardValue.SIX, 'S'),
         });
-        assertTrue(analizer.hasCardsWithSameValue(handWith3CardsWithSameValue, 3));
+        assertTrue(analizer.analize(handWith3CardsWithSameValue, have3CardsWithSameValue));
 
+        CardsWithSameValue have4CardsWithSameValue = new CardsWithSameValue(4);
         PokerHand handWith4CardsWithSameValue = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.JACK, 'D'),
@@ -36,11 +39,11 @@ public class PokerHandAnalizerTest {
             new Card(CardValue.JACK, 'C'),
             new Card(CardValue.JACK, 'S'),
         });
-        assertTrue(analizer.hasCardsWithSameValue(handWith4CardsWithSameValue, 4));
+        assertTrue(analizer.analize(handWith4CardsWithSameValue, have4CardsWithSameValue));
 
-        assertFalse(analizer.hasCardsWithSameValue(handWith2CardsWithSameValue, 3));
-        assertFalse(analizer.hasCardsWithSameValue(handWith3CardsWithSameValue, 4));
-        assertFalse(analizer.hasCardsWithSameValue(handWith4CardsWithSameValue, 2));
+        assertFalse(analizer.analize(handWith2CardsWithSameValue, have3CardsWithSameValue));
+        assertFalse(analizer.analize(handWith3CardsWithSameValue, have4CardsWithSameValue));
+        assertFalse(analizer.analize(handWith4CardsWithSameValue, have2CardsWithSameValue));
     }
 
     @Test
