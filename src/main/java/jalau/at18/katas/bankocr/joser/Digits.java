@@ -26,5 +26,4 @@ public enum Digits {
     public String[] getCharacters() {
         return digit;
     }
-
 }

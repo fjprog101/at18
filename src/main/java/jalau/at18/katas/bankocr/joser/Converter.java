@@ -17,7 +17,7 @@ public class Converter {
         return numberScaned;
     }
 
-    public int parsed(String[] sDigit) {
+    public String parsed(String[] sDigit) {
         ParseDigit parse = new ParseDigit(sDigit);
         return parse.getValue();
     }
