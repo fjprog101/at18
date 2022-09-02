@@ -5,9 +5,9 @@ import java.util.List;
 
 public class Digits {
 
-    List<String> listOfNumbers = new ArrayList<>();
+    private List<String> listOfNumbers = new ArrayList<>();
 
-    public Digits(){
+    public Digits() {
         listOfNumbers.add(" _ | ||_|");
         listOfNumbers.add("     |  |");
         listOfNumbers.add(" _  _||_ ");
@@ -18,7 +18,6 @@ public class Digits {
         listOfNumbers.add(" _   |  |");
         listOfNumbers.add(" _ |_||_|");
         listOfNumbers.add(" _ |_| _|");
-        
     }
 
     public List<String> getListOfNumbers() {

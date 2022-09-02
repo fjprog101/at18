@@ -4,25 +4,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CompareNumbers {
-    List<String> listOfNumbers = new ArrayList<>();
-    String[] numbers;
-    String accountNumber = "";
+    private List<String> listOfNumbers = new ArrayList<>();
+    private String[] numbers;
+    private String accountNumber = "";
 
-    public CompareNumbers(List<String> listArray, String[] numbers){
+    public CompareNumbers(List<String> listArray, String[] numbers) {
         this.listOfNumbers = listArray;
         this.numbers = numbers;
     }
-
-    public String showAccountNumber(){
-        for (int i = 0; i < numbers.length; i++) {
-            for (int j = 0; j < listOfNumbers.size(); j++) {
-                if(numbers[i].intern() == listOfNumbers.get(j).intern()){
-                   // System.out.println(j+1);
-                    accountNumber += j;
+    public String showAccountNumber() {
+        for (int index = 0; index < numbers.length; index++) {
+            for (int jindex = 0; jindex < listOfNumbers.size(); jindex++) {
+                if (numbers[index].intern() == listOfNumbers.get(jindex).intern()) {
+                    accountNumber += jindex;
                 }
             }
         }
         return accountNumber;
     }
-
 }

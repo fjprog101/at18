@@ -3,31 +3,31 @@ import java.io.File;  // Import the File class
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 public class ReadFile {
-    
     private int cont = 0;
-    final String path = "D:/AutomationTesting/Prog101/gitRemote/at18/src/main/java/jalau/at18/katas/bankocr/rodrigov/account.txt";
-    private String lines[] = new String[3];
+    private final String path = "D:/AutomationTesting/Prog101/gitRemote/at18/src/main/java/jalau/at18/katas/bankocr/rodrigov/account.txt";
+    private final int limitLines = 3;
+    private String[] lines = new String[limitLines];
 
-    public void readAccountsTxt() throws FileNotFoundException{
+    public void readAccountsTxt() throws FileNotFoundException {
         File myObj = new File(path);
         Scanner myReader = new Scanner(myObj);
         loopReadAccount(myReader);
         myReader.close();
     }
 
-    public void loopReadAccount(Scanner myReader){
-        while(myReader.hasNextLine()){
+    public void loopReadAccount(Scanner myReader) {
+        while (myReader.hasNextLine()) {
             lines[cont] = myReader.nextLine();
             cont++;
         }
     }
 
-    public void printMatrix(){
+    public void printMatrix() {
         System.out.println(lines[0].length());
         System.out.println(lines[1].length());
         System.out.println(lines[2].length());
-        for (int i = 0; i < lines.length; i++) {
-            System.out.println(lines[i]);
+        for (int index = 0; index < lines.length; index++) {
+            System.out.println(lines[index]);
         }
     }
 
