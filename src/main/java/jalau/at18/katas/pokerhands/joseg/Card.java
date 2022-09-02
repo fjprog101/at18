@@ -17,4 +17,8 @@ public class Card {
     public char getSuit() {
         return suit;
     }
+
+    public boolean hasSameValueAs(Card anotherCard) {
+        return this.value == anotherCard.value;
+    }
 }
