@@ -16,10 +16,8 @@ public class BankAccount {
 
     private void extractDigits(String line1, String line2, String line3) { // break the 9digits of entry
         for (int searchminvalue = 0; searchminvalue < SIZE_NUMBERS; searchminvalue += ZISE) {
-            String chunk1 = line1.substring(searchminvalue, searchminvalue + ZISE);
-            String chunk2 = line2.substring(searchminvalue, searchminvalue + ZISE);
-            String chunk3 = line3.substring(searchminvalue, searchminvalue + ZISE);
-            digits.add(new Digit(chunk1, chunk2, chunk3));
+            digits.add(new Digit(chunkLine1(line1, line2, line3, searchminvalue),
+                    chunkLine2(line1, line2, line3, searchminvalue), chunkLine3(line1, line2, line3, searchminvalue)));
         }
     }
 
@@ -28,5 +26,17 @@ public class BankAccount {
             totaldigits.append(digit.getDigitChar());
         }
         return totaldigits.toString();
+    }
+
+    public String chunkLine1(String line1, String line2, String line3, int searchminvalue) {
+        return line1.substring(searchminvalue, searchminvalue + ZISE);
+    }
+
+    public String chunkLine2(String line1, String line2, String line3, int searchminvalue) {
+        return line2.substring(searchminvalue, searchminvalue + ZISE);
+    }
+
+    public String chunkLine3(String line1, String line2, String line3, int searchminvalue) {
+        return line3.substring(searchminvalue, searchminvalue + ZISE);
     }
 }

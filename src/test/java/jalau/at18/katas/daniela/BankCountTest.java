@@ -17,6 +17,11 @@ public class BankCountTest {
         String line3 = "  |";
         Digit digit = new Digit(line1, line2, line3);
         assertThat(digit.getDigitChar(), equalTo('4'));
+        String line11 = "   ";
+        String line21 = "| |";
+        String line33 = "  |";
+        Digit digit1 = new Digit(line11, line21, line33);
+        assertThat(digit1.getDigitChar(), equalTo('a'));
 
     }
 

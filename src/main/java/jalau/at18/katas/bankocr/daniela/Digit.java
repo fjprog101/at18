@@ -17,7 +17,7 @@ public class Digit {
                 return number.getCharValue();
             }
         }
-        throw new IllegalStateException("The digit it's wrong");
+        return 'a';
     }
 
     private boolean hasSameLinesAs(ValuesNumbers number) {
