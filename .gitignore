@@ -27,7 +27,7 @@ hs_err_pid*
 
 # Ignore Gradle build output directory
 build
-
+src/main/java/jalau/at18/katas/langtonan
 bin/
 .idea/
 .bin/
