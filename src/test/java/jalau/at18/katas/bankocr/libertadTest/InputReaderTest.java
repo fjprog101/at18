@@ -25,7 +25,7 @@ public class InputReaderTest {
         assertArrayEquals(expected, inputReader.getLinesOfInput());
     }
     @Test
-    public void getArrayOfString() {
+    public void getArrayOfString() throws IOException {
         File file = new File("C:\\Users\\livia\\Jala\\Prog101\\at18\\src\\main\\java\\jalau\\at18\\katas\\bankocr\\libertad\\inputs\\FirstCase.txt");
         InputReader inputReader = new InputReader(file);
         String[] one = {"   ",
@@ -65,5 +65,6 @@ public class InputReaderTest {
         expected.add(seven);
         expected.add(eigth);
         expected.add(nine);
+        assertArrayEquals(expected.toArray(), inputReader.getSeparateHasNumbers().toArray());
     }
 }
