@@ -2,6 +2,8 @@ package jalau.at18.katas.bankocr.rodrigob;
 
 public class Scanner {
     private static final int MAX_DIGITS_ACOUNT = 9;
+    private static final int ROW = 3;
+    private static final int COLUMN = 27;
     private SplitInput splitInput = new SplitInput();
     private CompareDigits compareDigits = new CompareDigits();
     public Scanner() {
@@ -16,12 +18,16 @@ public class Scanner {
         return convertInput.convertAllTheLines(line1, line2, line3);
     }
     public String writeOutput(char[][] inputConverted) {
-        char[][] out;
-        String writed = "";
+        char[][] out = new char[ROW][COLUMN];
+        String accountNumbers = "";
+        return parserDigit(out, accountNumbers, inputConverted);
+    }
+
+    public String parserDigit(char[][] out, String accountNumbers, char[][] inputConverted) {
         for (int digit = 0; digit < MAX_DIGITS_ACOUNT; digit++) {
             out = splitInput.splitOneDigit(inputConverted);
-            writed += compareDigits.getDigitString(out);
+            accountNumbers += compareDigits.getDigitString(out);
         }
-        return writed;
+        return accountNumbers;
     }
 }
