@@ -64,6 +64,7 @@ public class PokerHandAnalizerTest {
     @Test
     public void shouldSayIfHandHasAllCardsWithSameSuit() {
         PokerHandAnalizer analizer = new PokerHandAnalizer();
+        AllSameSuit allSameSuit = new AllSameSuit();
         PokerHand allSameSuitHand = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.FOUR, 'C'),
@@ -71,7 +72,7 @@ public class PokerHandAnalizerTest {
             new Card(CardValue.FIVE, 'C'),
             new Card(CardValue.SIX, 'C'),
         });
-        assertTrue(analizer.hasAllCardsSameSuit(allSameSuitHand));
+        assertTrue(analizer.analize(allSameSuitHand, allSameSuit));
 
         PokerHand notAllSameSuitHand = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
@@ -80,6 +81,6 @@ public class PokerHandAnalizerTest {
             new Card(CardValue.FIVE, 'H'),
             new Card(CardValue.SIX, 'C'),
         });
-        assertFalse(analizer.hasAllCardsSameSuit(notAllSameSuitHand));
+        assertFalse(analizer.analize(notAllSameSuitHand, allSameSuit));
     }
 }

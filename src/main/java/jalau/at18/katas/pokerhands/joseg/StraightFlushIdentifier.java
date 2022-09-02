@@ -9,7 +9,8 @@ public class StraightFlushIdentifier {
     }
 
     public boolean identify(PokerHand hand) {
-        return analizer.hasAllCardsSameSuit(hand) && analizer.hasConsecutiveValues(hand);
+        AllSameSuit allSameSuit = new AllSameSuit();
+        ConsecutiveValues consecutiveValues = new ConsecutiveValues();
+        return analizer.analize(hand, allSameSuit) && analizer.analize(hand, consecutiveValues);
     }
-
 }
