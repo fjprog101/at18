@@ -4,8 +4,8 @@ public class CheckSum extends BankAccount {
     private static final int MODULE = 11;
     private int sizeValue;
 
-    public CheckSum(String line1, String line2, String line3, int sizeValue) {
-        super(line1, line2, line3);
+    public CheckSum(String line1, String line2, String line3, int sizeValue, int sizenumbers) {
+        super(line1, line2, line3, sizenumbers);
         this.sizeValue = sizeValue;
     }
 

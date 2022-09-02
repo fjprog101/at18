@@ -1,6 +1,5 @@
 package jalau.at18.katas.daniela;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -15,10 +14,11 @@ public class CheckSumTest {
         int value = 0;
         int total = 0;
         int finalresult = 0;
+        int sizenumbers = 27;
         String line1 = "    _  _  _  _  _  _  _  _ ";
         String line2 = "|_||_   ||_ | ||_|| || || |";
         String line3 = "  | _|  | _||_||_||_||_||_|";
-        CheckSum sumatory = new CheckSum(line1, line2, line3, totaldigits);
+        CheckSum sumatory = new CheckSum(line1, line2, line3, totaldigits, sizenumbers);
         assertTrue(sumatory.checkSum(value, total, finalresult));
     }
 }

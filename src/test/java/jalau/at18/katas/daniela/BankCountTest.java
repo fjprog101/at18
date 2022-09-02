@@ -27,10 +27,11 @@ public class BankCountTest {
 
     @Test
     public void ShouldReturnTheValuesofNineDigits() {
+        int sizenumbers = 27;
         String line1 = "    _  _     _  _  _  _  _ ";
         String line2 = "  | _| _||_||_ |_   ||_||_|";
         String line3 = "  ||_  _|  | _||_|  ||_|  |";
-        BankAccount account = new BankAccount(line1, line2, line3);
+        BankAccount account = new BankAccount(line1, line2, line3, sizenumbers);
         assertThat(account.getDigitChar(), equalTo("123456789"));
 
     }
