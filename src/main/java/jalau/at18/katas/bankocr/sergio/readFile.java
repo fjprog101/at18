@@ -4,12 +4,14 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class ReadFile {
+    private Scanner input;
+    private PathFile path = new PathFile();
 
-    public ReadFile() throws FileNotFoundException {
-        PathFile path = new PathFile();
-        Scanner input = new Scanner(path.getPathFile());
-        while (input.hasNextLine()) {
-            System.out.println(input.nextLine());
-        }
+    ReadFile() throws FileNotFoundException {
+        input = new Scanner(path.getPathFile());
+    }
+
+    public Scanner getReadFile() {
+        return input;
     }
 }
