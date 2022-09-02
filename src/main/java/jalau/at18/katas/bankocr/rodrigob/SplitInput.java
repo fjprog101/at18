@@ -22,11 +22,12 @@ public class SplitInput {
         }
         this.countPosition++;
     }
+
     public char[][] getCharDigit() {
         return digit;
     }
+
     public int getCountPosition() {
         return countPosition;
     }
-
 }
