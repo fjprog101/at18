@@ -2,7 +2,7 @@ package jalau.at18.katas.bankocr.rodrigov;
 public class SplitDigit {
     private String[] lines;
     private int firstCont = 0;
-    private int limitCont = 3;
+    private int limitCont = 0;
     private final int mod3 = 3;
     private int cont = 0;
     private String number;
@@ -11,6 +11,7 @@ public class SplitDigit {
 
     public SplitDigit(String[] lines) {
         this.lines = lines;
+        limitCont = mod3;
     }
 
     public void splitNumbers() {
