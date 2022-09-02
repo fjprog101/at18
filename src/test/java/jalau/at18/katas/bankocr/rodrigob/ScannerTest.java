@@ -17,18 +17,5 @@ public class ScannerTest {
         char[][] input = scannerReader.readInput();
         assertArrayEquals(expected, input);
     }
-    @Test
-    public void shouldWriteOutput() {
-        Scanner scannerWritter = new Scanner();
-        String output = scannerWritter.writeOutput(expected);
-        assertEquals("123456789", output);
-    }
-    @Test
-    public void shouldParse() {
-        char[][] out = new char[3][27];
-        String accountNumbers = "";
-        Scanner scannerParse = new Scanner();
-        String accountExpected = scannerParse.parserDigit(out, accountNumbers, expected);
-        assertEquals("123456789", accountExpected);
-    }
+
 }

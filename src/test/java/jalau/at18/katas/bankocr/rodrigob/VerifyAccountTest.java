@@ -15,13 +15,13 @@ public class VerifyAccountTest {
     public void shouldVerifyAccountNumber() {
         String accountValid = "123456789";
         VerifyAccount validAccount = new VerifyAccount();
-        boolean valid = validAccount.isAccountValid(accountValid);
-        assertTrue(valid);
+        String valid = validAccount.accountValid(accountValid);
+        assertEquals("",valid);
 
         String accountInvalid = "123456788";
         VerifyAccount invalidAccount = new VerifyAccount();
-        boolean invalid = invalidAccount.isAccountValid(accountInvalid);
-        assertFalse(invalid);
+        String invalid = invalidAccount.accountValid(accountInvalid);
+        assertEquals("ERR",invalid);
 
     }
     @Test
