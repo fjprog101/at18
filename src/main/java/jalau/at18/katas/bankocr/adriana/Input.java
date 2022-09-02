@@ -16,11 +16,13 @@ public class Input {
     public Digit[] getDigits() {
         return digits;
     }
+
     public void generateDigits() {
         for (int index = 0; index < totalDigits; index++) {
             digits[index] = new Digit(generateString(index));
         }
     }
+
     public String[][] generateString(int index) {
         String[][] digitImage = new String[DIGIT_LEGTH][DIGIT_LEGTH];
         for (int row = 0; row < DIGIT_LEGTH; row++) {

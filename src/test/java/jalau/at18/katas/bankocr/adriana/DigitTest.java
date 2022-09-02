@@ -30,6 +30,6 @@ public class DigitTest {
         assertEquals("6", digit6.getValue());
         String[][] imageNumber7 = {{" ", " ", " "}, {" ", " ", " "}, {" ", " ", "|"}};
         Digit digit7 = new Digit(imageNumber7);
-        assertEquals("?", digit7.getValue());
+        assertEquals("-1", digit7.getValue());
     }
 }

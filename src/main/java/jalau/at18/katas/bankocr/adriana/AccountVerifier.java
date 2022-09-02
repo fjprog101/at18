@@ -1,27 +1,30 @@
 package jalau.at18.katas.bankocr.adriana;
 
 public class AccountVerifier {
-    private static final int NUMBER_ELEVEN = 11;
     private Account account;
-    private String isValidAccountNumber = " ERR";
-    private int checkSum;
+    private String statusAccount = " ";
 
     public AccountVerifier(Account account) {
         this.account = account;
-        this.checkSum = getCheckSum();
-        isValidAccountNumber = isValidAccountNumber();
+        setStatusAccount();
     }
-    public int getCheckSum() {
-        checkSum = 0;
-        for (int index = 0; index < account.getAccountNumber().length; index++) {
-            checkSum += Integer.parseInt(account.getAccountNumber()[index])  * (account.getAccountNumber().length - index);
+    public String getStatusAccount() {
+        return statusAccount;
+    }
+    public void setStatusAccount() {
+        isValidAccountNumber();
+        isValidDigits();
+    }
+    public void isValidAccountNumber() {
+        if (!new NumberAccountVerifier(account).isValidAccountNumber()) {
+            statusAccount = " ERR";
         }
-        return checkSum;
     }
-    public String isValidAccountNumber() {
-        if (checkSum % NUMBER_ELEVEN == 0) {
-            isValidAccountNumber = " ";
+    public void isValidDigits() {
+        if (!new DigitVerifier(account).isValidDigits()) {
+            statusAccount = " ILL";
         }
-        return isValidAccountNumber;
     }
+
+
 }

@@ -8,7 +8,7 @@ public class Digit {
 
     public Digit(String[][] digit) {
         this.digit = digit;
-        value = "?";
+        value = "-1";
         setValue();
     }
     public String getValue() {
