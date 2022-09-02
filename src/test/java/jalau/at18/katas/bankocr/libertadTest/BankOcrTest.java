@@ -1,7 +1,5 @@
 package jalau.at18.katas.bankocr.libertadTest;
 
-import static org.junit.Assert.assertEquals;
-
 import java.io.File;
 import java.io.IOException;
 
