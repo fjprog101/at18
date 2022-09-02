@@ -4,19 +4,28 @@ import java.util.Arrays;
 
 public class ParseDigit {
     private String[] digit;
-    private int value;
+    private String value;
 
     public ParseDigit(String[] digit) {
         this.digit = digit;
+        this.value = "?";
     }
 
-    public int getValue() {
+    public String getValue() {
         for (Digits number : Digits.values()) {
+            // return compare(digit, number.getCharacters())? number.ordinal() + "": value;
             if (Arrays.deepEquals(digit, number.getCharacters())) {
-                this.value = number.ordinal();
+                return number.ordinal() + "";
             }
         }
         return value;
+    }
+
+    public Boolean compare(String[] digitN, String[] number) {
+        if (Arrays.deepEquals(digitN, number)) {
+            return true;
+        }
+        return false;
     }
 
 }
