@@ -1,5 +1,7 @@
 package jalau.at18.katas.bankocr.maria;
 
+import jalau.at18.katas.bankocr.maria.Numbers.*;
+
 public class ConvertNumber {
     public static final int INITIAL_VALUE = -1;
     public static final int NUMBER_THREE = 3;

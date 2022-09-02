@@ -1,4 +1,4 @@
-package jalau.at18.katas.bankocr.maria;
+package jalau.at18.katas.bankocr.maria.Numbers;
 
 public class ZeroNumber extends TypeNumber {
     public ZeroNumber() {
