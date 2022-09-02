@@ -2,17 +2,18 @@ package jalau.at18.katas.bankocr.joser;
 
 public class Format {
     private String number;
-    public Check checksum;
+    private Check checksum;
 
     public Format(String number) {
         this.number = number;
-        checksum = new Check(this.number);
+        this.checksum = new Check(this.number);
     }
 
     public String formated() {
-        if (isIll()) return number ;
-        if (isERR()) return number ;
-        return number;
+        if (isIll()) {
+            return number;
+        }
+        return isERR() ? number : number;
     }
 
     public boolean isIll() {
