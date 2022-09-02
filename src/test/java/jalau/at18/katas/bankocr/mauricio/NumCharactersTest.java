@@ -1,4 +1,4 @@
-package jalau.at18.katas.bankocr;
+package jalau.at18.katas.bankocr.mauricio;
 
 import static org.junit.Assert.assertEquals;
 
@@ -43,7 +43,7 @@ public class NumCharactersTest {
     @Test
     public void shouldObtainFour() {
         
-        String[][] four = {{" ", " "}, {" ", "|___|" }, {" ", "   |"}};
+        String[][] four = {{" ", " "}, {" ", "|___|" }, {" ", "    |"}};
         CharacterNumbers number = new CharacterNumbers();
         BuildNumber build = new BuildNumber(CharValue.FOUR, number);
         CreateCharacter character = new CreateCharacter(CharValue.FOUR, build);

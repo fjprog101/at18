@@ -18,7 +18,7 @@ public class CharacterNumbers {
     }
 
     public String[][] characterForFour() {
-        String[][] four = {{" ", " "}, {" ", "|___|" }, {" ", "   |"}};
+        String[][] four = {{" ", " "}, {" ", "|___|" }, {" ", "    |"}};
         return four;
     }
 

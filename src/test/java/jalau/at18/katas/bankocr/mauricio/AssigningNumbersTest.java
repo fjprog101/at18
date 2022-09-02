@@ -1,11 +1,11 @@
-package jalau.at18.katas.bankocr;
+package jalau.at18.katas.bankocr.mauricio;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
-import jalau.at18.katas.bankocr.mauricio.AssiginigNumberOnetoThree;
-import jalau.at18.katas.bankocr.mauricio.AssigningNumberFourToSix;
-import jalau.at18.katas.bankocr.mauricio.AssigningNumberSevenToNine;
+import jalau.at18.katas.bankocr.mauricio.AssiginigNumber;
+import jalau.at18.katas.bankocr.mauricio.SecondAssigningNumber;
+import jalau.at18.katas.bankocr.mauricio.ThirdAssigningNumber;
 
 public class AssigningNumbersTest {
     final int one = 1;
@@ -20,63 +20,63 @@ public class AssigningNumbersTest {
     @Test
     public void assigningOne(){
         String[][] charOne = {{" ", " " }, {" ", "  |" }, {" ", "  |"}};
-        AssiginigNumberOnetoThree assignation = new AssiginigNumberOnetoThree();
+        AssiginigNumber assignation = new AssiginigNumber();
         assertEquals(charOne, assignation.chooseChar(one));
     }
 
     @Test
     public void assigningTwo(){
         String[][] charTwo = {{" ", "___" }, {" ", "___|" }, {" ", "|___"}};
-        AssiginigNumberOnetoThree assignation = new AssiginigNumberOnetoThree();
+        AssiginigNumber assignation = new AssiginigNumber();
         assertEquals(charTwo, assignation.chooseChar(two));
     }
 
     @Test
     public void assigningThree(){
         String[][] charThree = {{" ", "___"}, {" ", "___|" }, {" ", "___|"}};
-        AssiginigNumberOnetoThree assignation = new AssiginigNumberOnetoThree();
+        AssiginigNumber assignation = new AssiginigNumber();
         assertEquals(charThree, assignation.chooseChar(three));
     }
 
     @Test
     public void assigningFour(){
         String[][] charFour = {{" ", " "}, {" ", "|___|" }, {" ", "   |"}};
-        AssigningNumberFourToSix assignation = new AssigningNumberFourToSix();
+        SecondAssigningNumber assignation = new SecondAssigningNumber();
         assertEquals(charFour, assignation.chooseChar(four));
     }
 
     @Test
     public void assigningFive(){
         String[][] charFive = {{" ", "___"}, {" ", "|___"}, {" ", "___|"}};
-        AssigningNumberFourToSix assignation = new AssigningNumberFourToSix();
+        SecondAssigningNumber assignation = new SecondAssigningNumber();
         assertEquals(charFive, assignation.chooseChar(five));
     }
 
     @Test
     public void assigningSix(){
         String[][] charFive = {{" ", "___"}, {" ", "|___"}, {" ", "|___|"}};
-        AssigningNumberFourToSix assignation = new AssigningNumberFourToSix();
+        SecondAssigningNumber assignation = new SecondAssigningNumber();
         assertEquals(charFive, assignation.chooseChar(six));
     }
 
     @Test
     public void assigningSeven(){
         String[][] charFive = {{" ", "___"}, {" ", "  |" }, {" ", "  |"}};
-        AssigningNumberSevenToNine assignation = new AssigningNumberSevenToNine();
+        ThirdAssigningNumber assignation = new ThirdAssigningNumber();
         assertEquals(charFive, assignation.chooseChar(seven));
     }
 
     @Test
     public void assigningEight(){
         String[][] charFive = {{" ", "___"}, {" ", "|___|"}, {" ", "|___|"}};
-        AssigningNumberSevenToNine assignation = new AssigningNumberSevenToNine();
+        ThirdAssigningNumber assignation = new ThirdAssigningNumber();
         assertEquals(charFive, assignation.chooseChar(eight));
     }
 
     @Test
     public void assigningNine(){
         String[][] charNine = {{" ", " ___"}, {" ", "|___|"}, {" ", "  __|"}};
-        AssigningNumberSevenToNine assignation = new AssigningNumberSevenToNine();
+        ThirdAssigningNumber assignation = new ThirdAssigningNumber();
         assertEquals(charNine, assignation.chooseChar(nine));
     }
 }

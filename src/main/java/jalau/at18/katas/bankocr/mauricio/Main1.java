@@ -10,14 +10,16 @@ public class Main1 {
         final int six = 6;
         final int seven = 7;
         final int eight = 8;
-        final int nine = 9;
-        int[] listChoose = {two, three, three, five, six, six, seven, nine, eight};
+        // 3  4  5  8  8  2  8  6  5
+        int[] listChoose = {three, four, five, eight, eight, two, eight, six, five};
         IntroduceNumbers listNumbers = new IntroduceNumbers();
         ShowFirstThreeNumbers show = new ShowFirstThreeNumbers();
         Checksum checksum = new Checksum();
         if (checksum.calculationChecksum(listChoose)) {
             String[][][] numbersToVisualize = listNumbers.introduceYourNumbers(listChoose);
-            show.showNumberSelected(numbersToVisualize[0], numbersToVisualize[1], numbersToVisualize[2]);
+            show.showNumberSelected(numbersToVisualize[0], numbersToVisualize[one], numbersToVisualize[two]);
+            show.showNumberSelected(numbersToVisualize[three], numbersToVisualize[four], numbersToVisualize[five]);
+            show.showNumberSelected(numbersToVisualize[six], numbersToVisualize[seven], numbersToVisualize[eight]);
         }
     }
 }

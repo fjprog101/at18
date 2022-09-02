@@ -14,23 +14,49 @@ public class BuildNumber {
     public String[][] buildANumber() {
         if (value == value.ONE) {
             matNumber = number.characterForOne();
+            return matNumber;
         } else if (value == value.TWO) {
             matNumber = number.characterForTwo();
-        } else if (value == value.THREE) {
+            return matNumber;
+        }
+        return secondPartBuildNumber();
+    }
+
+    public String[][] secondPartBuildNumber() {
+        if (value == value.THREE) {
             matNumber = number.characterForThree();
+            return matNumber;
         } else if (value == value.FOUR) {
             matNumber = number.characterForFour();
-        } else if (value == value.FIVE) {
+            return matNumber;
+        }
+        return thirdPartBuildNumber();
+    }
+
+    public String[][] thirdPartBuildNumber() {
+        if (value == value.FIVE) {
             matNumber = number.characterForFive();
+            return matNumber;
         } else if (value == value.SIX) {
             matNumber = number.characterForSix();
-        } else if (value == value.SEVEN) {
+            return matNumber;
+        }
+        return fourthPartBuildNumber();
+    }
+
+    public String[][] fourthPartBuildNumber() {
+        if (value == value.SEVEN) {
             matNumber = number.characterForSeven();
+            return matNumber;
         } else if (value == value.EIGHT) {
             matNumber = number.characterForEight();
-        } else {
-            matNumber = number.characterForNine();
+            return matNumber;
         }
+        return fifthPartBuildNumber();
+    }
+
+    public String[][] fifthPartBuildNumber() {
+        matNumber = number.characterForNine();
         return matNumber;
     }
 }

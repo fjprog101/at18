@@ -18,12 +18,7 @@ public class Checksum {
                 + five * listNumbers[four] + six * listNumbers[three] + seven * listNumbers[two]
                 + eight * listNumbers[one]
                 + nine * listNumbers[0]);
-        if (formula % eleven == 0) {
-            System.out.println("Validated number account");
-            return true;
-        }
-        System.out.println("Not Validated number account");
-        return false;
+        boolean result = (formula % eleven == 0) ? true : false;
+        return result;
     }
-
 }
