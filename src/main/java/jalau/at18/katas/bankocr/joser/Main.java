@@ -2,14 +2,13 @@ package jalau.at18.katas.bankocr.joser;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("hi");
-        Digits[] digit = Digits.values();
+        String[] result;
 
-        for (Digits number : Digits.values()) {
+        String[] scaned = new String[] {"    _  _     _  _  _  _  _ ",
+                                        "  | _| _||_||_ |_   ||_||_|",
+                                        "  ||_  _|  | _||_|  ||_| _|" };
+        Converter conv = new Converter(scaned);
 
-            System.out.println(number.getCharacters()[1]);
-            System.out.println("--------------");
-        }
-
+        System.out.println(conv.getNumberScaned());
     }
 }

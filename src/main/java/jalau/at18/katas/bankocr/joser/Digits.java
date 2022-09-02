@@ -17,17 +17,11 @@ public enum Digits {
     Digits(String[] digit) {
         this.digit = digit;
     }
-    // private String{} arrayCharacters;
 
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
         return super.toString();
     }
-
-    // private DigitType(String{} arrayCharacters) {
-    // this.arrayCharacters = arrayCharacters;
-    // }
 
     public String[] getCharacters() {
         return digit;
