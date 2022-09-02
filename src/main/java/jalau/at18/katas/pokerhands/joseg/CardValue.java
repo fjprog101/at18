@@ -1,17 +1,27 @@
 package jalau.at18.katas.pokerhands.joseg;
 
 public enum CardValue {
-    TWO,
-    THREE,
-    FOUR,
-    FIVE,
-    SIX,
-    SEVEN,
-    EIGHT,
-    NINE,
-    TEN,
-    JACK,
-    QUEEN,
-    KING,
-    ACE
+    ACE(null),
+    KING(ACE),
+    QUEEN(KING),
+    JACK(QUEEN),
+    TEN(JACK),
+    NINE(TEN),
+    EIGHT(NINE),
+    SEVEN(EIGHT),
+    SIX(SEVEN),
+    FIVE(SIX),
+    FOUR(FIVE),
+    THREE(FOUR),
+    TWO(THREE);
+
+    private CardValue next;
+
+    CardValue(CardValue next) {
+        this.next = next;
+    }
+
+    public CardValue next() {
+        return next;
+    }
 }
