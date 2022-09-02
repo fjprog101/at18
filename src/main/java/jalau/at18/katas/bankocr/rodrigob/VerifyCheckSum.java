@@ -10,7 +10,7 @@ public class VerifyCheckSum {
 
     public String checkSumValid(String account) {
         checkSumResult(convertCheckSumNumber(account));
-        return getCheckResult() % NUMBER_CHECKSUM == 0 ? "" : "ERR";
+        return getCheckResult() % NUMBER_CHECKSUM == 0 ? "" : " ERR";
     }
 
     public void checkSumResult(int[] accountNumber) {

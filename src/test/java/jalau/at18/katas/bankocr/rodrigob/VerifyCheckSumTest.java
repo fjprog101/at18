@@ -16,7 +16,7 @@ public class VerifyCheckSumTest {
         String checkSumInvalid = "123456788";
         VerifyCheckSum invalidCheckSum = new VerifyCheckSum();
         String invalid = invalidCheckSum.checkSumValid(checkSumInvalid);
-        assertEquals("ERR",invalid);
+        assertEquals(" ERR",invalid);
 
     }
     @Test

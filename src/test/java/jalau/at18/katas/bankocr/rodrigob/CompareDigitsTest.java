@@ -17,6 +17,13 @@ public class CompareDigitsTest {
         CompareDigits compareTwo = new CompareDigits();
         String getTwo = compareTwo.getDigitString(two);
         assertEquals("2", getTwo);
+
+        char[][] invalid = {{' ', '_', ' '}, {'|', '_', '|'}, {'|', '_', ' '}};
+        CompareDigits compareInvalid = new CompareDigits();
+        String getQuestionMark = compareInvalid.getDigitString(invalid);
+        assertEquals("?", getQuestionMark);
+
+
     }
 
 }

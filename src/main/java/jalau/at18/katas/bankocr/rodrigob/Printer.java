@@ -9,7 +9,7 @@ public class Printer {
 
     public String writeOutput(char[][] inputConverted) {
         String output = convertDigits.writeDigits(inputConverted);
-        output += " " + verifyAccount.getStatusAccount(output);
+        output += verifyAccount.getStatusAccount(output);
         return output;
     }
 }
