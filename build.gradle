@@ -28,3 +28,9 @@ checkstyleMain {
 
 test.finalizedBy("checkstyleMain")
 test.finalizedBy("jacocoTestReport")
+
+task runBankOcr (dependsOn: 'classes', type: JavaExec) {
+    main = 'jalau.at18.katas.bankocr.hugo.Main'
+    classpath = sourceSets.main.runtimeClasspath
+    standardInput = System.in
+}
