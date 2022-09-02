@@ -41,7 +41,7 @@ public class OpticCharacterReader {
     }
 
     public Boolean numberFive(char[][] number) {
-        char[][] numberFive = {{' ', '_', ' ' }, {'|', '_', '|' }, {' ', '_', '|' } };
+        char[][] numberFive = {{' ', '_', ' ' }, {'|', '_', ' ' }, {' ', '_', '|' } };
         boolean check = false;
         if (Arrays.deepEquals(numberFive, number)) {
             check = true;
@@ -50,7 +50,7 @@ public class OpticCharacterReader {
     }
 
     public Boolean numberSix(char[][] number) {
-        char[][] numberSix = {{' ', '_', ' ' }, {'|', '_', '|' }, {'|', '_', '|' } };
+        char[][] numberSix = {{' ', '_', ' ' }, {'|', '_', ' ' }, {'|', '_', '|' } };
         boolean check = false;
         if (Arrays.deepEquals(numberSix, number)) {
             check = true;
