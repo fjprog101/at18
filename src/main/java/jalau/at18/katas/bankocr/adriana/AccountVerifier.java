@@ -3,7 +3,7 @@ package jalau.at18.katas.bankocr.adriana;
 public class AccountVerifier {
     private static final int NUMBER_ELEVEN = 11;
     private Account account;
-    private boolean isValidAccountNumber = false;
+    private String isValidAccountNumber = " ERR";
     private int checkSum;
 
     public AccountVerifier(Account account) {
@@ -18,9 +18,9 @@ public class AccountVerifier {
         }
         return checkSum;
     }
-    public boolean isValidAccountNumber() {
+    public String isValidAccountNumber() {
         if (checkSum % NUMBER_ELEVEN == 0) {
-            isValidAccountNumber = true;
+            isValidAccountNumber = " ";
         }
         return isValidAccountNumber;
     }

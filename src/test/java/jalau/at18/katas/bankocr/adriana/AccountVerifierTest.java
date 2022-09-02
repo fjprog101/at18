@@ -29,7 +29,7 @@ public class AccountVerifierTest {
         Input input = new Input(entry);
         Account account = new Account(input.getDigits());
         AccountVerifier verifier = new AccountVerifier(account);
-        assertFalse(verifier.isValidAccountNumber());
+        assertEquals(" ERR", verifier.isValidAccountNumber());
         String line4 = " _     _  _  _  _  _  _  _ ";
         String line5 = " _||_||_ |_||_| _||_||_ |_ ";
         String line6 = " _|  | _||_||_||_ |_||_| _|";
@@ -37,7 +37,7 @@ public class AccountVerifierTest {
         Input input1 = new Input(entry1);
         Account account1 = new Account(input1.getDigits());
         AccountVerifier verifier1 = new AccountVerifier(account1);
-        assertTrue(verifier1.isValidAccountNumber());
+        assertEquals(" ", verifier1.isValidAccountNumber());
         
     }
 
