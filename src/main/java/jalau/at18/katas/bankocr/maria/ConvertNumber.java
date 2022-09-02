@@ -9,6 +9,7 @@ public class ConvertNumber {
     public static final int NUMBER_SEVEN = 7;
     public static final int NUMBER_EIGHT = 8;
     public static final int NUMBER_NINE = 9;
+
     public int convert(String firstColumn, String secondColumn, String thirdColumn) {
         int number = INITIAL_VALUE;
 
