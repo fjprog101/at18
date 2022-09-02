@@ -21,9 +21,7 @@ public class SplitInputTest {
         String line2 = "  | _| _||_||_ |_   ||_||_|";
         String line3 = "  ||_  _|  | _||_|  ||_| _|";
         ConvertInput convertInput = new ConvertInput(line1, line2, line3);
-        convertInput.convertFirstLine(line1);
-        convertInput.convertSecondtLine(line2);
-        convertInput.convertThirdLine(line3);
-        return convertInput.getInputConverted();
+        char[][] actual = convertInput.getInputConverted(line1, line2, line3);
+        return actual;
     }
 }
