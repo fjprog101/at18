@@ -14,7 +14,8 @@ import jalau.at18.katas.bankocr.libertad.InputNumber;
 public class InputNumberTest {
     @Test
     public void getArrayOfString() throws IOException {
-        File file = new File("C:\\Users\\livia\\Jala\\Prog101\\at18\\src\\main\\java\\jalau\\at18\\katas\\bankocr\\libertad\\inputs\\FirstCase.txt");
+        String direction = "src\\main\\java\\jalau\\at18\\katas\\bankocr\\libertad\\inputs";
+        File file = new File(System.getProperty("user.dir")+File.separator+direction+File.separator+"FirstCase.txt");
         InputNumber inputNumber = new InputNumber(file);
         String[] one = {"   ",
                         "  |",
