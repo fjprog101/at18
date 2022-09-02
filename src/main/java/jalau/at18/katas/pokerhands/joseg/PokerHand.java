@@ -21,4 +21,12 @@ public class PokerHand {
         }
         return areConsecutive;
     }
+
+    public boolean hasAllCardsSameSuit() {
+        boolean areSameSuit = true;
+        for (int index = 0; areSameSuit && index < cards.length - 1; index++) {
+            areSameSuit = comparer.haveSameSuit(cards[index], cards[index + 1]);
+        }
+        return areSameSuit;
+    }
 }

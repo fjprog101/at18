@@ -1,6 +1,7 @@
 package jalau.at18.katas.pokerhands.joseg;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
@@ -31,5 +32,26 @@ public class PokerHandTest {
             new Card(CardValue.SIX, 'S'),
         });
         assertTrue(hand.hasConsecutiveValues());
+    }
+
+    @Test
+    public void shouldDetectIfAllCardsHaveSameSuit() {
+        PokerHand allSameSuitHand = new PokerHand(new Card[]{
+            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.FOUR, 'C'),
+            new Card(CardValue.FIVE, 'C'),
+            new Card(CardValue.FIVE, 'C'),
+            new Card(CardValue.SIX, 'C'),
+        });
+        assertTrue(allSameSuitHand.hasAllCardsSameSuit());
+
+        PokerHand notAllSameSuitHand = new PokerHand(new Card[]{
+            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.FOUR, 'S'),
+            new Card(CardValue.FIVE, 'S'),
+            new Card(CardValue.FIVE, 'H'),
+            new Card(CardValue.SIX, 'C'),
+        });
+        assertFalse(notAllSameSuitHand.hasAllCardsSameSuit());
     }
 }
