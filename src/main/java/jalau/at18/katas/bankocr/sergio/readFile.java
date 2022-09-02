@@ -3,13 +3,13 @@ package jalau.at18.katas.bankocr.sergio;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class readFile {
+public class ReadFile {
 
-    public readFile() throws FileNotFoundException {
+    public ReadFile() throws FileNotFoundException {
         PathFile path = new PathFile();
-        Scanner sc = new Scanner(path.getPathFile());
-        while (sc.hasNextLine())
-            System.out.println(sc.nextLine());
-
+        Scanner input = new Scanner(path.getPathFile());
+        while (input.hasNextLine()) {
+            System.out.println(input.nextLine());
+        }
     }
 }

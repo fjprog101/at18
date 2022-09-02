@@ -37,14 +37,14 @@ public class OpticCharacterReaderTest {
 
     @Test
     public void shouldReturnNumberFive() {
-        char[][] numberOcrTest = new char[][] {{' ', '_', ' ' }, {'|', '_', '|' }, {' ', '_', '|' } };
+        char[][] numberOcrTest = new char[][] {{' ', '_', ' ' }, {'|', '_', ' ' }, {' ', '_', '|' } };
         OpticCharacterReader ocr = new OpticCharacterReader();
         assertTrue(ocr.numberFive(numberOcrTest));
     }
 
     @Test
     public void shouldReturnNumberSix() {
-        char[][] numberOcrTest = new char[][] {{' ', '_', ' ' }, {'|', '_', '|' }, {'|', '_', '|' } };
+        char[][] numberOcrTest = new char[][] {{' ', '_', ' ' }, {'|', '_', ' ' }, {'|', '_', '|' } };
         OpticCharacterReader ocr = new OpticCharacterReader();
         assertTrue(ocr.numberSix(numberOcrTest));
     }
