@@ -4,10 +4,13 @@ public class Main {
     private static final int COLUMNS = 27;
     private static final int ROWS = 4;
     private static final int DIGITROW = 3;
+    private static final int DIGITCOL = 3;
     private static final int COLPOS = 9;
 
     public static void main(String[] args) {
-        Digits jdigit = new Digits();
+        Digits digit = new Digits();
+        Ocr searchNum = new Ocr();
+
         char[][] entry = {
             {' ', ' ', ' ', ' ', '_', ' ', ' ', '_', ' ', ' ', ' ', ' ', ' ', '_', ' ', ' ', '_', ' ', ' ', '_', ' ', ' ', '_', ' ', ' ', '_', ' '},
             {' ', ' ', '|', ' ', '_', '|', ' ', '_', '|', '|', '_', '|', '|', '_', ' ', '|', '_', ' ', ' ', ' ', '|', '|', '_', '|', '|', '_', '|'},
@@ -20,12 +23,13 @@ public class Main {
             System.out.println();
         }
 
-        char[][] get = jdigit.getDigit(entry, COLPOS);
+        char[][] get = digit.getDigit(entry, COLPOS);
         for (int row = 0; row < DIGITROW; row++) {
-            for (int col = 0; col < DIGITROW; col++) {
+            for (int col = 0; col < DIGITCOL; col++) {
                 System.out.print(get[row][col]);
             }
             System.out.println();
         }
+        System.out.println(searchNum.getValue(get));
     }
 }
