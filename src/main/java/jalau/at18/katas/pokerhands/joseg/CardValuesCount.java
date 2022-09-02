@@ -21,4 +21,8 @@ public class CardValuesCount {
     public int get(CardValue cardValue) {
         return valuesCount.get(cardValue);
     }
+
+    public boolean exists(int count) {
+        return valuesCount.containsValue(count);
+    }
 }
