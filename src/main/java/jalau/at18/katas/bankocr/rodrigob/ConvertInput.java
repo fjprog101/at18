@@ -5,11 +5,14 @@ public class ConvertInput {
     private static final int SIZE = 27;
     private static final int ROW = 3;
     private char[][] inputConverted = new char[ROW][SIZE];
-
     public ConvertInput(String line1, String line2, String line3) {
-
     }
-
+    public char[][] convertAllTheLines(String line1, String line2, String line3) {
+        convertFirstLine(line1);
+        convertSecondtLine(line2);
+        convertThirdLine(line3);
+        return getInputConverted();
+    }
     public void convertFirstLine(String line1) {
         for (int column = 0; column < SIZE; column++) {
             this.inputConverted[0][column] = line1.charAt(column);
@@ -28,5 +31,4 @@ public class ConvertInput {
     public char[][] getInputConverted() {
         return this.inputConverted;
     }
-
 }

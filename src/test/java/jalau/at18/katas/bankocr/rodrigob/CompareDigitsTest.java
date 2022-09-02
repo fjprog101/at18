@@ -9,14 +9,14 @@ public class CompareDigitsTest {
     @Test
     public void digitShouldChange() {
         char[][] one = {{' ', ' ', ' '}, {' ', ' ', '|'}, {' ', ' ', '|'}};
-        CompareDigits compareOne = new CompareDigits(one);
-        compareOne.compareAllDigits(one);
-        assertEquals("1", compareOne.getDigit());
+        CompareDigits compareOne = new CompareDigits();
+        String getOne = compareOne.getDigitString(one);
+        assertEquals("1", getOne);
 
         char[][] two = {{' ', '_', ' '}, {' ', '_', '|'}, {'|', '_', ' '}};
-        CompareDigits compareTwo = new CompareDigits(two);
-        compareTwo.compareAllDigits(two);
-        assertEquals("2", compareTwo.getDigit());
+        CompareDigits compareTwo = new CompareDigits();
+        String getTwo = compareTwo.getDigitString(two);
+        assertEquals("2", getTwo);
     }
 
 }
