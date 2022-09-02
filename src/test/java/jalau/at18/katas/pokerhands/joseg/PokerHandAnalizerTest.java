@@ -49,6 +49,8 @@ public class PokerHandAnalizerTest {
     @Test
     public void shouldSayIfHandHasConsecutiveValues() {
         PokerHandAnalizer analizer = new PokerHandAnalizer();
+        ConsecutiveValues consecutiveValues = new ConsecutiveValues();
+
         PokerHand hand = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.THREE, 'D'),
@@ -56,7 +58,7 @@ public class PokerHandAnalizerTest {
             new Card(CardValue.FIVE, 'S'),
             new Card(CardValue.SIX, 'S'),
         });
-        assertTrue(analizer.hasConsecutiveValues(hand));
+        assertTrue(analizer.analize(hand, consecutiveValues));
     }
 
     @Test

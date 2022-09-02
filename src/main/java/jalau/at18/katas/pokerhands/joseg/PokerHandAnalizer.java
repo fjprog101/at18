@@ -27,4 +27,8 @@ public class PokerHandAnalizer {
     public boolean analize(PokerHand handWith2CardsWithSameValue, CardsWithSameValue cardsWithSameValue) {
         return cardsWithSameValue.match(handWith2CardsWithSameValue);
     }
+
+    public boolean analize(PokerHand hand, ConsecutiveValues consecutiveValues) {
+        return consecutiveValues.match(hand);
+    }
 }
