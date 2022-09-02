@@ -2,6 +2,7 @@ package jalau.at18.katas.pokerhands.joseg;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -18,5 +19,17 @@ public class PokerHandTest {
         });
         assertNotNull(hand.getCards());
         assertEquals(5, hand.getCards().length);
+    }
+
+    @Test
+    public void shouldDetectIfItHasConsecutiveValues() {
+        PokerHand hand = new PokerHand(new Card[]{
+            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.THREE, 'D'),
+            new Card(CardValue.FOUR, 'H'),
+            new Card(CardValue.FIVE, 'S'),
+            new Card(CardValue.SIX, 'S'),
+        });
+        assertTrue(hand.hasConsecutiveValues());
     }
 }

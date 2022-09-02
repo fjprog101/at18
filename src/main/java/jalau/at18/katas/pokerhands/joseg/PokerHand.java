@@ -12,4 +12,11 @@ public class PokerHand {
         return cards;
     }
 
+    public boolean hasConsecutiveValues() {
+        boolean areConsecutive = true;
+        for (int index = 0; areConsecutive && index < cards.length - 1; index++) {
+            areConsecutive = cards[index].getValue().next() == cards[index + 1].getValue();
+        }
+        return areConsecutive;
+    }
 }
