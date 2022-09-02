@@ -39,4 +39,22 @@ public class CardComparerTest {
         Card twoHearts = new Card(CardValue.TWO, 'H');
         assertFalse(comparer.haveSameValue(jackHearts, twoHearts));
     }
+
+    @Test
+    public void shouldSayIfRightCardIsConsecutiveToLeftCard() {
+        CardComparer comparer = new CardComparer();
+        Card twoSpades = new Card(CardValue.Two, 'S');
+        Card threeSpades = new Card(CardValue.Three, 'S');
+        Card fourDiamonds = new Card(CardValue.Four, 'D');
+        Card jackHearts = new Card(CardValue.Jack, 'H');
+        Card queenClubs = new Card(CardValue.Queen, 'C');
+
+        assertTrue(comparer.areConsecutive(twoSpades, threeSpades));
+        assertTrue(comparer.areConsecutive(threeSpades, fourDiamonds));
+        assertTrue(comparer.areConsecutive(jackHearts, queenClubs));
+
+        assertFalse(comparer.areConsecutive(threeSpades, threeSpades));
+        assertFalse(comparer.areConsecutive(threeSpades, jackHearts));
+        assertFalse(comparer.areConsecutive(twoSpades, queenClubs));
+    }
 }
