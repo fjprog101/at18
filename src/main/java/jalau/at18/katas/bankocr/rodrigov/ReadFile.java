@@ -8,8 +8,6 @@ public class ReadFile {
     final String path = "D:/AutomationTesting/Prog101/gitRemote/at18/src/main/java/jalau/at18/katas/bankocr/rodrigov/account.txt";
     private String lines[] = new String[3];
 
-    
-
     public void readAccountsTxt() throws FileNotFoundException{
         File myObj = new File(path);
         Scanner myReader = new Scanner(myObj);
@@ -25,8 +23,10 @@ public class ReadFile {
     }
 
     public void printMatrix(){
+        System.out.println(lines[0].length());
+        System.out.println(lines[1].length());
+        System.out.println(lines[2].length());
         for (int i = 0; i < lines.length; i++) {
-            //System.out.println(lines[i].length());
             System.out.println(lines[i]);
         }
     }

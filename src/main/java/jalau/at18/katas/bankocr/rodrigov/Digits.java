@@ -1,14 +1,31 @@
 package jalau.at18.katas.bankocr.rodrigov;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Digits {
-    final String One = "     |  |";
-    final String two = " _  _||_ ";
-    final String three = " _  _| _|";
-    final String four = "   |_|  |";
-    final String five = " _ |_  _|";
-    final String six = " _ |_ |_|";
-    final String seven = " _   |  |";
-    final String eigth = " _ |_||_|";
-    final String nine = " _ |_| _|";
-    final String zero = " _ | ||_|";
+
+    List<String> listOfNumbers = new ArrayList<>();
+
+    public Digits(){
+        listOfNumbers.add(" _ | ||_|");
+        listOfNumbers.add("     |  |");
+        listOfNumbers.add(" _  _||_ ");
+        listOfNumbers.add(" _  _| _|");
+        listOfNumbers.add("   |_|  |");
+        listOfNumbers.add(" _ |_  _|");
+        listOfNumbers.add(" _ |_ |_|");
+        listOfNumbers.add(" _   |  |");
+        listOfNumbers.add(" _ |_||_|");
+        listOfNumbers.add(" _ |_| _|");
+        
+    }
+
+    public List<String> getListOfNumbers() {
+        return listOfNumbers;
+    }
+
+    public void setListOfNumbers(List<String> listOfNumbers) {
+        this.listOfNumbers = listOfNumbers;
+    }
 }

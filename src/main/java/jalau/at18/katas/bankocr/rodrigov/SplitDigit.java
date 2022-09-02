@@ -4,8 +4,9 @@ public class SplitDigit {
     int firstCont = 0;
     int limitCont = 3;
     int cont = 0;
-    String number;
-    String [] digits = new String[9];
+    private String number;
+    private String [] digits = new String[9];
+
     public SplitDigit(String [] lines){
         this.lines=lines;
     }
@@ -16,21 +17,29 @@ public class SplitDigit {
                 number = lines[0].substring(firstCont,limitCont);
                 number += lines[1].substring(firstCont,limitCont);
                 number += lines[2].substring(firstCont,limitCont);
-                digits[cont] = number;
-                cont++;
-                firstCont += 3;
-                limitCont += 3; 
-                //System.out.print(number);
-                number = "";
+                incrementAndClear();
             }
         }
     }
 
-    public void print(){
-        for (int index = 0; index < digits.length; index++) {
-            System.out.println(digits[index]+"\n");
-        }
+    public void incrementAndClear(){
+        digits[cont] = number;
+        cont++;
+        firstCont += 3;
+        limitCont += 3; 
+        number = "";
     }
     
+    public void print(){
+        for (int i = 0; i < digits.length; i++) {
+            System.out.println(digits[i]+"\n");
+        }
+    }
+    public String[] getDigits() {
+        return digits;
+    }
 
+    public void setDigits(String[] digits) {
+        this.digits = digits;
+    }
 }
