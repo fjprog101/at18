@@ -1,6 +1,6 @@
 package jalau.at18.katas.pokerhands.joseg;
 
-public class ConsecutiveValues {
+public class ConsecutiveValues extends CardsPattern {
 
     private CardComparer comparer;
 
@@ -8,6 +8,7 @@ public class ConsecutiveValues {
         this.comparer = new CardComparer();
     }
 
+    @Override
     public boolean match(PokerHand hand) {
         boolean areConsecutive = true;
         for (int index = 0; areConsecutive && index < hand.getCards().length - 1; index++) {

@@ -1,6 +1,6 @@
 package jalau.at18.katas.pokerhands.joseg;
 
-public class AllSameSuit {
+public class AllSameSuit extends CardsPattern {
 
     private CardComparer comparer;
 
@@ -8,6 +8,7 @@ public class AllSameSuit {
         this.comparer = new CardComparer();
     }
 
+    @Override
     public boolean match(PokerHand hand) {
         boolean areSameSuit = true;
         for (int index = 0; areSameSuit && index < hand.getCards().length - 1; index++) {
