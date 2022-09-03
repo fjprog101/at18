@@ -11,8 +11,8 @@ public class Main {
     protected static final String[] SECOND_ENTRY = {ENTRY_LINE_FOU, ENTRY_LINE_FIV, ENTRY_LINE_SIX};
     public static void main(String[] args) {
         Bankocr bankocr1 = new Bankocr(FIRST_ENTRY);
-        bankocr1.print();
+        bankocr1.run();
         Bankocr bankocr2 = new Bankocr(SECOND_ENTRY);
-        bankocr2.print();
+        bankocr2.run();
     }
 }
