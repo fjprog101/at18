@@ -12,4 +12,9 @@ public class ZeroNumber extends TypeNumber {
                 && NumberEnum.ZERO.getThirdColumn().equals(thirdColumn);
         return result;
     }
+
+    @Override
+    public int getValue() {
+        return 0;
+    }
 }

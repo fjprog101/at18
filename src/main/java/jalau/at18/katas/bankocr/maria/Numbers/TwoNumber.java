@@ -12,4 +12,8 @@ public class TwoNumber extends TypeNumber {
                 && NumberEnum.TWO.getThirdColumn().equals(thirdColumn);
         return result;
     }
+    @Override
+    public int getValue() {
+        return 2;
+    }
 }

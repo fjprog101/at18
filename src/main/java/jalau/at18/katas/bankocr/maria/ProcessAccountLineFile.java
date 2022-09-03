@@ -18,7 +18,6 @@ public class ProcessAccountLineFile {
                 accounts.add(account);
             }
         }
-
     }
 
     public List<String> getAccounts() {

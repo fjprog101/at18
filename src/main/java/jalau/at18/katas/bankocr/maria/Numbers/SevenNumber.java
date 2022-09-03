@@ -1,6 +1,8 @@
 package jalau.at18.katas.bankocr.maria.Numbers;
 
 public class SevenNumber extends TypeNumber {
+    public static final int SEVEN = 7;
+
     public SevenNumber() {
         super();
     }
@@ -11,5 +13,10 @@ public class SevenNumber extends TypeNumber {
                 && NumberEnum.SEVEN.getSecondColumn().equals(secondColumn)
                 && NumberEnum.SEVEN.getThirdColumn().equals(thirdColumn);
         return result;
+    }
+
+    @Override
+    public int getValue() {
+        return SEVEN;
     }
 }

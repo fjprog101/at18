@@ -1,6 +1,8 @@
 package jalau.at18.katas.bankocr.maria.Numbers;
 
 public class NineNumber extends TypeNumber {
+    public static final int NINE = 9;
+
     public NineNumber() {
         super();
     }
@@ -11,5 +13,10 @@ public class NineNumber extends TypeNumber {
                 && NumberEnum.NINE.getSecondColumn().equals(secondColumn)
                 && NumberEnum.NINE.getThirdColumn().equals(thirdColumn);
         return result;
+    }
+
+    @Override
+    public int getValue() {
+        return NINE;
     }
 }
