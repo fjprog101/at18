@@ -4,9 +4,11 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
+import java.io.FileNotFoundException;
+
 public class SplitMatrixTest {
     @Test
-    public void shouldReturnSingleNumber() {
+    public void shouldReturnSingleNumber() throws FileNotFoundException {
         SplitMatrix splitMatrix = new SplitMatrix();
         char[][] matrix = new char[27][27];
         char[][] singleNumberTest = new char[3][3];
