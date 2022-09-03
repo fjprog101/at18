@@ -4,13 +4,12 @@ import java.util.Arrays;
 
 public class Ocr {
 
-    public int getValue(char[][] digit) {
+    public char getValue(char[][] digit) {
         for (Numbers num : Numbers.values()) {
             if (Arrays.deepEquals(num.getdigit(), digit)) {
-                // System.out.println(num.getdigit());
                 return num.getValue();
             }
         }
-        return 0;
+        return '?';
     }
 }

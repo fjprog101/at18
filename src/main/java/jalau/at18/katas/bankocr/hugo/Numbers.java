@@ -4,48 +4,48 @@ public enum Numbers {
     NUM1(new char[][] {
             {' ', ' ', ' '},
             {' ', ' ', '|'},
-            {' ', ' ', '|'}}, 1),
+            {' ', ' ', '|'}}, '1'),
     NUM2(new char[][] {
             {' ', '_', ' '},
             {' ', '_', '|'},
-            {'|', '_', ' '}}, 2),
+            {'|', '_', ' '}}, '2'),
     NUM3(new char[][] {
             {' ', '_', ' '},
             {' ', '_', '|'},
-            {' ', '_', '|'}}, 3),
+            {' ', '_', '|'}}, '3'),
     NUM4(new char[][] {
             {' ', ' ', ' '},
             {'|', '_', '|'},
-            {' ', ' ', '|'}}, 4),
+            {' ', ' ', '|'}}, '4'),
     NUM5(new char[][] {
             {' ', '_', ' '},
             {'|', '_', ' '},
-            {' ', '_', '|'}}, 5),
+            {' ', '_', '|'}}, '5'),
     MUN6(new char[][] {
             {' ', '_', ' '},
             {'|', '_', ' '},
-            {'|', '_', '|'}}, 6),
+            {'|', '_', '|'}}, '6'),
     NUM7(new char[][] {
             {' ', '_', ' '},
             {' ', ' ', '|'},
-            {' ', ' ', '|'}}, 7),
+            {' ', ' ', '|'}}, '7'),
     NUM8(new char[][] {
             {' ', '_', ' '},
             {'|', '_', '|'},
-            {'|', '_', '|'}}, 8),
+            {'|', '_', '|'}}, '8'),
     NUM9(new char[][] {
             {' ', '_', ' '},
             {'|', '_', '|'},
-            {' ', '_', '|'}}, 9),
+            {' ', '_', '|'}}, '9'),
     NUM0(new char[][] {
             {' ', '_', ' '},
             {'|', ' ', '|'},
-            {'|', '_', '|'}}, 0);
+            {'|', '_', '|'}}, '0');
 
     private final char[][] digit;
-    private final int numberValue;
+    private final char numberValue;
 
-    Numbers(char[][] digit, int numberValue) {
+    Numbers(char[][] digit, char numberValue) {
         this.digit = digit;
         this.numberValue = numberValue;
     }
@@ -54,7 +54,7 @@ public enum Numbers {
         return digit;
     }
 
-    public int getValue() {
+    public char getValue() {
         return numberValue;
     }
 }
