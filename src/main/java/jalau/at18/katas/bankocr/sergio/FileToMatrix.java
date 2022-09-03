@@ -6,9 +6,13 @@ import java.util.Scanner;
 public class FileToMatrix {
     private final int sizeRow = 4;
     private final int sizeColum = 27;
-    private char[][] matrix = new char[sizeRow][sizeColum];
+    private char[][] matrix;
 
-    public void convertScannerToMatrix() throws FileNotFoundException {
+    FileToMatrix() {
+        matrix = new char[sizeRow][sizeColum];
+    }
+
+    public char[][] convertScannerToMatrix() throws FileNotFoundException {
         ReadFile input = new ReadFile();
         Scanner file = input.getReadFile();
         int rowCounter = 0;
@@ -19,5 +23,6 @@ public class FileToMatrix {
             }
             rowCounter++;
         }
+        return matrix;
     }
 }

@@ -7,7 +7,7 @@ public class ReadFile {
     private Scanner input;
     private PathFile path = new PathFile();
 
-    ReadFile() throws FileNotFoundException {
+    public ReadFile() throws FileNotFoundException {
         input = new Scanner(path.getPathFile());
     }
 
