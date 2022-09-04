@@ -13,7 +13,7 @@ public class FileToMatrix {
     }
 
     public char[][] convertScannerToMatrix() throws FileNotFoundException {
-        ReadFile input = new ReadFile();
+        FileReader input = new FileReader();
         Scanner file = input.getReadFile();
         int rowCounter = 0;
         while (file.hasNextLine()) {
