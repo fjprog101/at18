@@ -11,14 +11,13 @@ public class Format {
 
     public String formated() {
         if (isIll()) {
-            return number;
+            return number + " ILL";
         }
-        return isERR() ? number : number;
+        return isERR() ? number + " ERR" : number;
     }
 
     public boolean isIll() {
         if (this.number.indexOf("?") != -1) {
-            this.number += " ILL";
             return true;
         }
         return false;
@@ -26,8 +25,7 @@ public class Format {
 
     public boolean isERR() {
         if (!checksum.checkNumber()) {
-            this.number += " ERR";
-            return false;
+            return true;
         }
         return false;
     }
