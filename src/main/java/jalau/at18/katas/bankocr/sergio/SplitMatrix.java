@@ -19,4 +19,17 @@ public class SplitMatrix {
         }
         return singleNumber;
     }
+
+    public char[][] removeSingleNumber(char[][] matrix) {
+        if (matrix[0].length > singleNumberSize) {
+            char[][] newmatrix = new char[matrix.length][matrix[0].length - singleNumberSize];
+            for (int row = 0; row < matrix.length; row++) {
+                System.arraycopy(matrix[row], singleNumberSize, newmatrix[row], 0, newmatrix[row].length);
+            }
+            return newmatrix;
+        } else {
+            return matrix;
+        }
+
+    }
 }
