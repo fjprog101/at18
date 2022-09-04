@@ -21,6 +21,12 @@ public class ParseDigitTest {
         digit = new ParseDigit(oneNumber);
         assertEquals("1", digit.getValue());
 
+        String[] nineNumber = new String[] {" _ ",
+                                            "|_|",
+                                            " _|" };
+        digit = new ParseDigit(nineNumber);
+        assertEquals("9", digit.getValue());
+
         String[] twoNumber = new String[] {" _ ",
                                            "|  ",
                                            "|_|" };
