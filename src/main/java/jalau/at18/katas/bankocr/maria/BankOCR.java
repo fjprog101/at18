@@ -11,7 +11,7 @@ public class BankOCR {
         return processAccountLineFile.getAccounts();
     }
 
-    public List<String> readFile(String fileName) {
+    private List<String> readFile(String fileName) {
         ReadFile readFiles = new ReadFile(fileName);
         return readFiles.readFile();
     }

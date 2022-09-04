@@ -9,28 +9,16 @@ public class SetNumberToConvert {
 
     public List<TypeNumber> saveTypeNumber() {
         List<TypeNumber> typeNumbers = new ArrayList<>();
-        ZeroNumber zeroNumber = new ZeroNumber();
-        OneNumber oneNumber = new OneNumber();
-        TwoNumber twoNumber = new TwoNumber();
-        ThreeNumber threeNumber = new ThreeNumber();
-        FourNumber fourNumber = new FourNumber();
-        FiveNumber fiveNumber = new FiveNumber();
-        SixNumber sixNumber = new SixNumber();
-        SevenNumber sevenNumber = new SevenNumber();
-        EightNumber eightNumber = new EightNumber();
-        NineNumber nineNumber = new NineNumber();
-        typeNumbers.add(zeroNumber);
-        typeNumbers.add(oneNumber);
-        typeNumbers.add(twoNumber);
-        typeNumbers.add(threeNumber);
-        typeNumbers.add(fourNumber);
-        typeNumbers.add(fiveNumber);
-        typeNumbers.add(sixNumber);
-        typeNumbers.add(sevenNumber);
-        typeNumbers.add(eightNumber);
-        typeNumbers.add(nineNumber);
+        typeNumbers.add(new ZeroNumber());
+        typeNumbers.add(new OneNumber());
+        typeNumbers.add(new TwoNumber());
+        typeNumbers.add(new ThreeNumber());
+        typeNumbers.add(new FourNumber());
+        typeNumbers.add(new FiveNumber());
+        typeNumbers.add(new SixNumber());
+        typeNumbers.add(new SevenNumber());
+        typeNumbers.add(new EightNumber());
+        typeNumbers.add(new NineNumber());
         return typeNumbers;
     }
-
-
 }
