@@ -4,6 +4,8 @@ import java.io.FileNotFoundException;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
+        Numbers numbers = Numbers.EIGHT;
+        System.out.println(numbers.getNumberValue());
         // SplitMatrix splitmatrix = new SplitMatrix();
         // FileToMatrix matrix = new FileToMatrix();
         // char[][] oldmatrix = matrix.convertScannerToMatrix();

@@ -3,85 +3,77 @@ package jalau.at18.katas.bankocr.sergio;
 import java.util.Arrays;
 
 public class OpticCharacterReader {
+    private Numbers numbers;
 
-    public Boolean numberOne(char[][] number) {
+    public int numberOne(char[][] number) {
         char[][] numberOne = {{' ', ' ', ' ' }, {' ', ' ', '|' }, {' ', ' ', '|' } };
-        boolean check = false;
         if (Arrays.deepEquals(numberOne, number)) {
-            check = true;
+            numbers = Numbers.ONE;
         }
-        return check;
+        return numbers.getNumberValue();
     }
 
-    public Boolean numberTwo(char[][] number) {
+    public int numberTwo(char[][] number) {
         char[][] numberTwo = {{' ', '_', ' ' }, {' ', '_', '|' }, {'|', '_', ' ' } };
-        boolean check = false;
         if (Arrays.deepEquals(numberTwo, number)) {
-            check = true;
+            numbers = Numbers.TWO;
         }
-        return check;
+        return numbers.getNumberValue();
     }
 
-    public Boolean numberThree(char[][] number) {
+    public int numberThree(char[][] number) {
         char[][] numberThree = {{' ', '_', ' ' }, {' ', '_', '|' }, {' ', '_', '|' } };
-        boolean check = false;
         if (Arrays.deepEquals(numberThree, number)) {
-            check = true;
+            numbers = Numbers.THREE;
         }
-        return check;
+        return numbers.getNumberValue();
     }
 
-    public Boolean numberFour(char[][] number) {
+    public int numberFour(char[][] number) {
         char[][] numberFour = {{' ', ' ', ' ' }, {'|', '_', '|' }, {' ', ' ', '|' } };
-        boolean check = false;
         if (Arrays.deepEquals(numberFour, number)) {
-            check = true;
+            numbers = Numbers.FOUR;
         }
-        return check;
+        return numbers.getNumberValue();
     }
 
-    public Boolean numberFive(char[][] number) {
+    public int numberFive(char[][] number) {
         char[][] numberFive = {{' ', '_', ' ' }, {'|', '_', ' ' }, {' ', '_', '|' } };
-        boolean check = false;
         if (Arrays.deepEquals(numberFive, number)) {
-            check = true;
+            numbers = Numbers.FIVE;
         }
-        return check;
+        return numbers.getNumberValue();
     }
 
-    public Boolean numberSix(char[][] number) {
+    public int numberSix(char[][] number) {
         char[][] numberSix = {{' ', '_', ' ' }, {'|', '_', ' ' }, {'|', '_', '|' } };
-        boolean check = false;
         if (Arrays.deepEquals(numberSix, number)) {
-            check = true;
+            numbers = Numbers.SIX;
         }
-        return check;
+        return numbers.getNumberValue();
     }
 
-    public Boolean numberSeven(char[][] number) {
+    public int numberSeven(char[][] number) {
         char[][] numberSeven = {{' ', '_', ' ' }, {' ', ' ', '|' }, {' ', ' ', '|' } };
-        boolean check = false;
         if (Arrays.deepEquals(numberSeven, number)) {
-            check = true;
+            numbers = Numbers.SEVEN;
         }
-        return check;
+        return numbers.getNumberValue();
     }
 
-    public Boolean numberEight(char[][] number) {
+    public int numberEight(char[][] number) {
         char[][] numberEight = {{' ', '_', ' ' }, {'|', '_', '|' }, {'|', '_', '|' } };
-        boolean check = false;
         if (Arrays.deepEquals(numberEight, number)) {
-            check = true;
+            numbers = Numbers.EIGHT;
         }
-        return check;
+        return numbers.getNumberValue();
     }
 
-    public Boolean numberNine(char[][] number) {
+    public int numberNine(char[][] number) {
         char[][] numberNine = {{' ', '_', ' ' }, {'|', '_', '|' }, {' ', '_', '|' } };
-        boolean check = false;
         if (Arrays.deepEquals(numberNine, number)) {
-            check = true;
+            numbers = Numbers.NINE;
         }
-        return check;
+        return numbers.getNumberValue();
     }
 }
