@@ -19,7 +19,7 @@ public class CheckSum {
         return false;
     }
 
-    public int sumNumbers() {
+    private int sumNumbers() {
         List<Integer> reverseNumbers = reverseAccountNumber.reverseAccountNumber(account);
         int sumTotal = 0;
         int increment = 1;
@@ -29,5 +29,4 @@ public class CheckSum {
         }
         return sumTotal;
     }
-
 }
