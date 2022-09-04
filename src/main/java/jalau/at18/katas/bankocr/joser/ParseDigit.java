@@ -3,22 +3,20 @@ package jalau.at18.katas.bankocr.joser;
 import java.util.Arrays;
 
 public class ParseDigit {
+    private static final int NINE = 9;
     private String[] digit;
-    private String value;
+    private int index;
 
     public ParseDigit(String[] digit) {
         this.digit = digit;
-        this.value = "?";
     }
 
     public String getValue() {
-        for (Digits number : Digits.values()) {
-            // return compare(digit, number.getCharacters())? number.ordinal() + "": value;
-            if (Arrays.deepEquals(digit, number.getCharacters())) {
-                return number.ordinal() + "";
-            }
+        Boolean found = false;
+        for (this.index = 0; !found && this.index <= NINE; this.index++) {
+            found = compare(digit, Digits.values()[this.index].getCharacters());
         }
-        return value;
+        return found ? (Digits.values()[this.index - 1].ordinal()) + "" : "?";
     }
 
     public Boolean compare(String[] digitN, String[] number) {
@@ -27,5 +25,4 @@ public class ParseDigit {
         }
         return false;
     }
-
 }
