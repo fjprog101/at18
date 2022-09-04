@@ -21,6 +21,5 @@ public class CheckValue {
             return false;
         }
         return true;
-
     }
 }

@@ -10,8 +10,10 @@ public class CheckSumResult extends CheckSum {
     public boolean checkSum(int total, int finalresult) {
         finalresult = result(total) % MODULE;
         if (finalresult == 0) {
+            System.out.println("The account it's correct");
             return true;
         }
+        System.out.println("The account it's incorrect");
         return false;
     }
 

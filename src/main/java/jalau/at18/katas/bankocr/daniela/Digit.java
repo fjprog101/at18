@@ -13,15 +13,15 @@ public class Digit {
 
     public char getDigitChar() {
         for (ValuesNumbers number : ValuesNumbers.values()) {
-            if (this.hasSameLinesAs(number)) {
+            if (hasSameLinesAs(number)) {
                 return number.getCharValue();
             }
         }
-        return 'a';
+        return '?';
     }
 
     private boolean hasSameLinesAs(ValuesNumbers number) {
-        return (this.line1.equals(number.getLine1()) && this.line2.equals(number.getLine2())
-                && this.line3.equals(number.getLine3()));
+        return this.line1.equals(number.getLine1()) && this.line2.equals(number.getLine2())
+                && this.line3.equals(number.getLine3());
     }
 }
