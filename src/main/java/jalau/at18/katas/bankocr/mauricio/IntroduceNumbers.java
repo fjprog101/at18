@@ -10,15 +10,30 @@ public class IntroduceNumbers {
     private final int seven = 7;
     private final int eight = 8;
     private String[][][] chooseNumbers;
-    private AssiginigNumber numToChar = new AssiginigNumber();
-
+    private AssiginigNumber numToChar;
+    private ParseNumbers num = new ParseNumbers();
+    private ParseCharacters cha = new ParseCharacters();
 
     public String[][][] introduceYourNumbers(int[] listNumbers) {
-        chooseNumbers = new String[][][] {numToChar.chooseChar(listNumbers[0]), numToChar.chooseChar(listNumbers[one]),
-                numToChar.chooseChar(listNumbers[two]), numToChar.chooseChar(listNumbers[three]),
-                numToChar.chooseChar(listNumbers[four]), numToChar.chooseChar(listNumbers[five]),
-                numToChar.chooseChar(listNumbers[six]), numToChar.chooseChar(listNumbers[seven]),
-                numToChar.chooseChar(listNumbers[eight])};
+        chooseNumbers = new String[][][] {
+                new AssiginigNumber(num.convertNumber(listNumbers[0]), cha.convertCharacters(listNumbers[0]))
+                        .chooseChar(),
+                new AssiginigNumber(num.convertNumber(listNumbers[one]), cha.convertCharacters(listNumbers[one]))
+                        .chooseChar(),
+                new AssiginigNumber(num.convertNumber(listNumbers[two]), cha.convertCharacters(listNumbers[two]))
+                        .chooseChar(),
+                new AssiginigNumber(num.convertNumber(listNumbers[three]), cha.convertCharacters(listNumbers[three]))
+                        .chooseChar(),
+                new AssiginigNumber(num.convertNumber(listNumbers[four]), cha.convertCharacters(listNumbers[four]))
+                        .chooseChar(),
+                new AssiginigNumber(num.convertNumber(listNumbers[five]), cha.convertCharacters(listNumbers[five]))
+                        .chooseChar(),
+                new AssiginigNumber(num.convertNumber(listNumbers[six]), cha.convertCharacters(listNumbers[six]))
+                        .chooseChar(),
+                new AssiginigNumber(num.convertNumber(listNumbers[seven]), cha.convertCharacters(listNumbers[seven]))
+                        .chooseChar(),
+                new AssiginigNumber(num.convertNumber(listNumbers[eight]), cha.convertCharacters(listNumbers[eight]))
+                        .chooseChar()};
         return chooseNumbers;
     }
 }

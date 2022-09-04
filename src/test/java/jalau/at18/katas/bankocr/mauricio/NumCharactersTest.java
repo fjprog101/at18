@@ -13,9 +13,9 @@ public class NumCharactersTest {
     @Test
     public void shouldObtainOne() {
         
-        String[][] one = {{" ", " " }, {" ", "  |" }, {" ", "  |"}};
-        CharacterNumbers number = new CharacterNumbers();
-        BuildNumber build = new BuildNumber(CharValue.ONE, number);
+        String[][] one = {{" ", "|", " "}, {" ", "|", " "}, {" ", "|", " "}};
+        CharacterOne characterOne = new CharacterOne();
+        BuildNumber build = new BuildNumber(CharValue.ONE, characterOne);
         CreateCharacter character = new CreateCharacter(CharValue.ONE, build);
         assertEquals(one, character.makeNumber());
     }
@@ -23,9 +23,9 @@ public class NumCharactersTest {
     @Test
     public void shouldObtainTwo() {
         
-        String[][] two = {{" ", "___" }, {" ", "___|" }, {" ", "|___"}};
-        CharacterNumbers number = new CharacterNumbers();
-        BuildNumber build = new BuildNumber(CharValue.TWO, number);
+        String[][] two = {{" ", "_", " " }, {" ", "_", "|" }, {"|", "_", " " }};
+        CharacterTwo characterTwo = new CharacterTwo();
+        BuildNumber build = new BuildNumber(CharValue.TWO, characterTwo);
         CreateCharacter character = new CreateCharacter(CharValue.TWO, build);
         assertEquals(two, character.makeNumber());
     }
@@ -33,9 +33,9 @@ public class NumCharactersTest {
     @Test
     public void shouldObtainThree() {
         
-        String[][] three = {{" ", "___"}, {" ", "___|" }, {" ", "___|"}};
-        CharacterNumbers number = new CharacterNumbers();
-        BuildNumber build = new BuildNumber(CharValue.THREE, number);
+        String[][] three = {{" ", "_", " " }, {" ", "_", "|" }, {" ", "_", "|" }};
+        CharacterThree characterThree = new CharacterThree();
+        BuildNumber build = new BuildNumber(CharValue.THREE, characterThree);
         CreateCharacter character = new CreateCharacter(CharValue.THREE, build);
         assertEquals(three, character.makeNumber());
     }
@@ -43,9 +43,9 @@ public class NumCharactersTest {
     @Test
     public void shouldObtainFour() {
         
-        String[][] four = {{" ", " "}, {" ", "|___|" }, {" ", "   |"}};
-        CharacterNumbers number = new CharacterNumbers();
-        BuildNumber build = new BuildNumber(CharValue.FOUR, number);
+        String[][] four = {{" ", " ", " " }, {"|", "_", "|" }, {" ", " ", "|" }};
+        CharacterFour characterFour = new CharacterFour();
+        BuildNumber build = new BuildNumber(CharValue.FOUR, characterFour);
         CreateCharacter character = new CreateCharacter(CharValue.FOUR, build);
         assertEquals(four, character.makeNumber());
     }
@@ -53,9 +53,9 @@ public class NumCharactersTest {
     @Test
     public void shouldObtainFive() {
         
-        String[][] five = {{" ", "___"}, {" ", "|___"}, {" ", "___|"}};
-        CharacterNumbers number = new CharacterNumbers();
-        BuildNumber build = new BuildNumber(CharValue.FIVE, number);
+        String[][] five = {{" ", "_", " " }, {"|", "_", " " }, {" ", "_", "|" }};
+        CharacterFive characterFive = new CharacterFive();
+        BuildNumber build = new BuildNumber(CharValue.FIVE, characterFive);
         CreateCharacter character = new CreateCharacter(CharValue.FIVE, build);
         assertEquals(five, character.makeNumber());
     }
@@ -63,9 +63,9 @@ public class NumCharactersTest {
     @Test
     public void shouldObtainSix() {
         
-        String[][] six = {{" ", "___"}, {" ", "|___"}, {" ", "|___|"}};
-        CharacterNumbers number = new CharacterNumbers();
-        BuildNumber build = new BuildNumber(CharValue.SIX, number);
+        String[][] six = {{" ", "_", " " }, {"|", "_", " " }, {"|", "_", "|" }};
+        CharacterSix characterSix = new CharacterSix();
+        BuildNumber build = new BuildNumber(CharValue.SIX, characterSix);
         CreateCharacter character = new CreateCharacter(CharValue.SIX, build);
         assertEquals(six, character.makeNumber());
     }
@@ -73,9 +73,9 @@ public class NumCharactersTest {
     @Test
     public void shouldObtainSeven() {
         
-        String[][] seven = {{" ", "___"}, {" ", "  |" }, {" ", "  |"}};
-        CharacterNumbers number = new CharacterNumbers();
-        BuildNumber build = new BuildNumber(CharValue.SEVEN, number);
+        String[][] seven = {{" ", "_", " " }, {" ", " ", "|" }, {" ", " ", "|" }};
+        CharacterSeven characterSeven = new CharacterSeven();
+        BuildNumber build = new BuildNumber(CharValue.SEVEN, characterSeven);
         CreateCharacter character = new CreateCharacter(CharValue.SEVEN, build);
         assertEquals(seven, character.makeNumber());
     }
@@ -83,9 +83,9 @@ public class NumCharactersTest {
     @Test
     public void shouldObtainEight() {
         
-        String[][] eight = {{" ", "___"}, {" ", "|___|"}, {" ", "|___|"}};
-        CharacterNumbers number = new CharacterNumbers();
-        BuildNumber build = new BuildNumber(CharValue.EIGHT, number);
+        String[][] eight = {{" ", "_", " " }, {"|", "_", "|" }, {"|", "_", "|" }};
+        CharacterEight characterEight = new CharacterEight();
+        BuildNumber build = new BuildNumber(CharValue.EIGHT, characterEight);
         CreateCharacter character = new CreateCharacter(CharValue.EIGHT, build);
         assertEquals(eight, character.makeNumber());
     }
@@ -93,9 +93,9 @@ public class NumCharactersTest {
     @Test
     public void shouldObtainNine() {
         
-        String[][] nine = {{" ", " ___"}, {" ", "|___|"}, {" ", "  __|"}};
-        CharacterNumbers number = new CharacterNumbers();
-        BuildNumber build = new BuildNumber(CharValue.NINE, number);
+        String[][] nine = {{" ", "_", " " }, {"|", "_", "|" }, {" ", "_", "|" }};
+        CharacterNine characterNine = new CharacterNine();
+        BuildNumber build = new BuildNumber(CharValue.NINE, characterNine );
         CreateCharacter character = new CreateCharacter(CharValue.NINE, build);
         assertEquals(nine, character.makeNumber());
     }

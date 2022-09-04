@@ -11,18 +11,18 @@ public class Main1 {
         final int seven = 7;
         final int eight = 8;
         // This line fulfills with User Story 3
-        int[] listChoose = {three, four, five, eight, eight, two, eight, six, four};
+        int[] listChoose = {three, four, five, eight, eight, two, eight, six, five};
         IllegibleOrNotChecksumAccount illegibleOrChecksum = new IllegibleOrNotChecksumAccount();
         illegibleOrChecksum.checkMistakes(listChoose);
-        // IntroduceNumbers listNumbers = new IntroduceNumbers();
-        // ShowFirstThreeNumbers show = new ShowFirstThreeNumbers();
-        // Checksum checksum = new Checksum();
-        // if (checksum.calculationChecksum(listChoose)) {
+        IntroduceNumbers listNumbers = new IntroduceNumbers();
+        ShowFirstThreeNumbers show = new ShowFirstThreeNumbers();
+        Checksum checksum = new Checksum();
+        if (checksum.calculationChecksum(listChoose)) {
 
-        //     String[][][] numbersToVisualize = listNumbers.introduceYourNumbers(listChoose);
-        //     show.showNumberSelected(numbersToVisualize[0], numbersToVisualize[one], numbersToVisualize[two]);
-        //     show.showNumberSelected(numbersToVisualize[three], numbersToVisualize[four], numbersToVisualize[five]);
-        //     show.showNumberSelected(numbersToVisualize[six], numbersToVisualize[seven], numbersToVisualize[eight]);
-        // }
+            String[][][] numbersToVisualize = listNumbers.introduceYourNumbers(listChoose);
+            show.showNumberSelected(numbersToVisualize[0], numbersToVisualize[one], numbersToVisualize[two]);
+            show.showNumberSelected(numbersToVisualize[three], numbersToVisualize[four], numbersToVisualize[five]);
+            show.showNumberSelected(numbersToVisualize[six], numbersToVisualize[seven], numbersToVisualize[eight]);
+        }
     }
 }

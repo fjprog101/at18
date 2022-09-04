@@ -20,9 +20,9 @@ public class IntroduceNumbersTest {
     public void validateNumbers(){
         IntroduceNumbers numbers = new IntroduceNumbers();
         int[] listNumbers = {one, two, three, one, two, three, one, two, three};
-        String [][] oneCharacter = {{" ", " " }, {" ", "  |" }, {" ", "  |"}};
-        String [][] twoCharacter = {{" ", "___" }, {" ", "___|" }, {" ", "|___"}};
-        String [][] threeCharacter = {{" ", "___"}, {" ", "___|" }, {" ", "___|"}};
+        String [][] oneCharacter = {{" ", "|", " "}, {" ", "|", " "}, {" ", "|", " "}};
+        String [][] twoCharacter = {{" ", "_", " " }, {" ", "_", "|" }, {"|", "_", " " }};
+        String [][] threeCharacter = {{" ", "_", " " }, {" ", "_", "|" }, {" ", "_", "|" }};
         String[][][] result = numbers.introduceYourNumbers(listNumbers);
         assertEquals(oneCharacter, result[0]);
         assertEquals(twoCharacter, result[one]);
