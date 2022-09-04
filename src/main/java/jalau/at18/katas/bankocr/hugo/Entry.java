@@ -9,10 +9,6 @@ public class Entry {
     private String secrow = "|_||_|| || ||_   |  |  ||_ ";
     private String tirrow = "  | _||_||_||_|  |  |  | _|";
 
-    /*private String firrow = "    _  _     _  _  _  _  _ ";
-    private String secrow = "  | _| _||_||_ |_   ||_||_|";
-    private String tirrow = "  ||_  _|  | _||_|  ||_| _|";*/
-
     private void setAllRows() {
         allrow[0] = firrow;
         allrow[1] = secrow;

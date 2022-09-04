@@ -7,13 +7,22 @@ public class NumChecker {
 
     public boolean checkAccountNum(int[] accNum) {
         int sum = 0;
+        if (adder(sum, accNum) == 0) {
+            return true;
+        }
+        return false;
+    }
+
+    public int adder(int sum, int[] accNum) {
         for (int index = LENGHT; index >= 0; index--) {
             int mult = COMPL - index;
             sum = sum + (mult * (accNum[index]));
         }
-        if (sum % DIVIDER == 0) {
-            return true;
-        }
-        return false;
+        return divider(sum);
+    }
+
+    public int divider(int sum) {
+        int result = sum % DIVIDER;
+        return result;
     }
 }

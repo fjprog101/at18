@@ -1,5 +1,7 @@
 package jalau.at18.katas.bankocr.hugo;
 
+import java.util.Arrays;
+
 public class Main {
     private static final int COLUMNS = 27;
     private static final int ROWS = 4;
@@ -11,22 +13,19 @@ public class Main {
         Digits digit = new Digits();
         Ocr searchNum = new Ocr();
         NumChecker checker = new NumChecker();
+        Entry aEntry = new Entry();
+        Iterator iter = new Iterator();
+
         char[] accNum = new char[COLPOS];
         int[] intAccNum = new int[COLPOS];
-        Entry aEntry = new Entry();
 
         char[][] entry = aEntry.getEntry();
-    /*for (int row = 0; row < DIGITROW; row++) {
-    for (int col = 0; col < COLUMNS; col++) {
-    System.out.print(entry[row][col]);
-    }
-    System.out.println();
-    }*/
-        int count = 0;
-        for (int index = 0; index < COLUMNS; index += DIGITCOL) {
-            char[][] get = digit.getDigit(entry, index);
-            accNum[count] = searchNum.getValue(get);
-            count++;
+
+        int ind = 0;
+        for (int pos = 0; pos < COLUMNS; pos += DIGITCOL) {
+            char[][] aDigit = digit.getDigit(entry, pos);
+            accNum[ind] = searchNum.getValue(aDigit);
+            ind++;
         }
 
         for (int index = 0; index < COLPOS; index++) {
@@ -37,6 +36,7 @@ public class Main {
             System.out.println(String.copyValueOf(accNum) + " ok");
         } else {
             System.out.println(String.copyValueOf(accNum) + " ERR");
+            System.out.println(Arrays.toString(iter.iterate(intAccNum)));
         }
     }
 }
