@@ -5,7 +5,11 @@ import java.util.List;
 
 public class ConvertNumber {
     private static final int INITIAL_VALUE = -1;
-    private SetNumberToConvert setNumberToConvert = new SetNumberToConvert();
+    private SetNumberToConvert setNumberToConvert;
+
+    public ConvertNumber(SetNumberToConvert setNumberToConvert) {
+        this.setNumberToConvert = setNumberToConvert;
+    }
 
     public int convert(String firstColumn, String secondColumn, String thirdColumn) {
         int number = INITIAL_VALUE;

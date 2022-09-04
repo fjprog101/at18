@@ -5,8 +5,6 @@ import java.util.List;
 import java.util.Map;
 
 public class VerifyListAccounts {
-    private ProcessAccountLineFile processAccountLineFile = new ProcessAccountLineFile();
-
     public Map<String, Boolean> verifyValidAccounts(List<String> accountList) {
         Map<String, Boolean> validAccounts = new HashMap<String, Boolean>();
         for (String account : accountList) {

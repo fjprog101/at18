@@ -12,7 +12,10 @@ public class ProcessAccountLineFileTest {
 
     @Test
     public void readAccountLines() {
-        ProcessAccountLineFile processAccountLineFile = new ProcessAccountLineFile();
+        SetNumberToConvert setNumberToConvert = new SetNumberToConvert();
+        ConvertNumber convertNumber = new ConvertNumber(setNumberToConvert);
+        ConvertAccount convertAccount = new ConvertAccount(convertNumber);
+        ProcessAccountLineFile processAccountLineFile = new ProcessAccountLineFile(convertAccount);
         String string1 = "    _  _  _     _  _  _  _ ";
         String string2 = "  ||_| _| _||_||_ |_   ||_|";
         String string3 = "  | _||_  _|  | _||_|  ||_|";

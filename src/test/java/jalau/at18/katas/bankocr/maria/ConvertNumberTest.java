@@ -15,7 +15,8 @@ public class ConvertNumberTest {
 
     @Test
     public void convertZero() {
-        ConvertNumber convertNumber = new ConvertNumber();
+        SetNumberToConvert setNumberToConvert = new SetNumberToConvert();
+        ConvertNumber convertNumber = new ConvertNumber(setNumberToConvert);
         String firsColumn = " _ ";
         String secondColumn = "| |";
         String thirdColumn = "|_|";
@@ -25,7 +26,8 @@ public class ConvertNumberTest {
 
     @Test
     public void convertOne() {
-        ConvertNumber convertNumber = new ConvertNumber();
+        SetNumberToConvert setNumberToConvert = new SetNumberToConvert();
+        ConvertNumber convertNumber = new ConvertNumber(setNumberToConvert);
         String firsColumn = "   ";
         String secondColumn = "  |";
         String thirdColumn = "  |";
@@ -35,7 +37,8 @@ public class ConvertNumberTest {
 
     @Test
     public void convertTwo() {
-        ConvertNumber convertNumber = new ConvertNumber();
+        SetNumberToConvert setNumberToConvert = new SetNumberToConvert();
+        ConvertNumber convertNumber = new ConvertNumber(setNumberToConvert);
         String firsColumn = " _ ";
         String secondColumn = " _|";
         String thirdColumn = "|_ ";
@@ -45,7 +48,8 @@ public class ConvertNumberTest {
 
     @Test
     public void convertThree() {
-        ConvertNumber convertNumber = new ConvertNumber();
+        SetNumberToConvert setNumberToConvert = new SetNumberToConvert();
+        ConvertNumber convertNumber = new ConvertNumber(setNumberToConvert);
         String firsColumn = " _ ";
         String secondColumn = " _|";
         String thirdColumn = " _|";
@@ -55,7 +59,8 @@ public class ConvertNumberTest {
 
     @Test
     public void convertFour() {
-        ConvertNumber convertNumber = new ConvertNumber();
+        SetNumberToConvert setNumberToConvert = new SetNumberToConvert();
+        ConvertNumber convertNumber = new ConvertNumber(setNumberToConvert);
         String firsColumn = "   ";
         String secondColumn = "|_|";
         String thirdColumn = "  |";
@@ -65,7 +70,8 @@ public class ConvertNumberTest {
 
     @Test
     public void convertFive() {
-        ConvertNumber convertNumber = new ConvertNumber();
+        SetNumberToConvert setNumberToConvert = new SetNumberToConvert();
+        ConvertNumber convertNumber = new ConvertNumber(setNumberToConvert);
         String firsColumn = " _ ";
         String secondColumn = "|_ ";
         String thirdColumn = " _|";
@@ -75,7 +81,8 @@ public class ConvertNumberTest {
 
     @Test
     public void convertSix() {
-        ConvertNumber convertNumber = new ConvertNumber();
+        SetNumberToConvert setNumberToConvert = new SetNumberToConvert();
+        ConvertNumber convertNumber = new ConvertNumber(setNumberToConvert);
         String firsColumn = " _ ";
         String secondColumn = "|_ ";
         String thirdColumn = "|_|";
@@ -85,7 +92,8 @@ public class ConvertNumberTest {
 
     @Test
     public void convertSeven() {
-        ConvertNumber convertNumber = new ConvertNumber();
+        SetNumberToConvert setNumberToConvert = new SetNumberToConvert();
+        ConvertNumber convertNumber = new ConvertNumber(setNumberToConvert);
         String firsColumn = " _ ";
         String secondColumn = "  |";
         String thirdColumn = "  |";
@@ -95,7 +103,8 @@ public class ConvertNumberTest {
 
     @Test
     public void convertEight() {
-        ConvertNumber convertNumber = new ConvertNumber();
+        SetNumberToConvert setNumberToConvert = new SetNumberToConvert();
+        ConvertNumber convertNumber = new ConvertNumber(setNumberToConvert);
         String firsColumn = " _ ";
         String secondColumn = "|_|";
         String thirdColumn = "|_|";
@@ -104,7 +113,8 @@ public class ConvertNumberTest {
     }
     @Test
     public void convertNine() {
-        ConvertNumber convertNumber = new ConvertNumber();
+        SetNumberToConvert setNumberToConvert = new SetNumberToConvert();
+        ConvertNumber convertNumber = new ConvertNumber(setNumberToConvert);
         String firsColumn = " _ ";
         String secondColumn = "|_|";
         String thirdColumn = " _|";

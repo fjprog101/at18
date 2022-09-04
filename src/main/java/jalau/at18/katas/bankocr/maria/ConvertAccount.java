@@ -1,8 +1,12 @@
 package jalau.at18.katas.bankocr.maria;
 
 public class ConvertAccount {
-    private ConvertNumber convertNumber = new ConvertNumber();
+    private ConvertNumber convertNumber;
     public static final int NUMBER_COUNT = 3;
+
+    public ConvertAccount(ConvertNumber convertNumber) {
+        this.convertNumber = convertNumber;
+    }
 
     public String convertLinesToAccount(String linesFile1, String linesFile2, String linesFile3) {
         String accountNumber = "";

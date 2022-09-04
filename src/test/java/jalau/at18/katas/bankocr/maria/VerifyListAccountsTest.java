@@ -20,6 +20,7 @@ public class VerifyListAccountsTest {
         validAccounts.put("345882865", true);
         validAccounts.put("111111111", false);
         assertEquals(validAccounts, verifyListAccounts.verifyValidAccounts(accountList));
+
     }
 
 }

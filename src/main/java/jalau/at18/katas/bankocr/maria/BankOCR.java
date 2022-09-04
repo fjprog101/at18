@@ -3,18 +3,22 @@ package jalau.at18.katas.bankocr.maria;
 import java.util.List;
 
 public class BankOCR {
+    private ProcessAccountLineFile processAccountLineFile;
+    private ReadFile readFile;
 
-    public List<String> processAccountFromFile(String fileName) {
-        List<String> linesFile = readFile(fileName);
-        ProcessAccountLineFile processAccountLineFile = new ProcessAccountLineFile();
+    public BankOCR(ProcessAccountLineFile processAccountLineFile, ReadFile readFile) {
+
+        this.processAccountLineFile = processAccountLineFile;
+        this.readFile = readFile;
+    }
+
+    public List<String> processAccountFromFile() {
+        List<String> linesFile = readFile();
         processAccountLineFile.readAccountLines(linesFile);
         return processAccountLineFile.getAccounts();
     }
 
-    private List<String> readFile(String fileName) {
-        ReadFile readFiles = new ReadFile(fileName);
-        return readFiles.readFile();
+    private List<String> readFile() {
+        return readFile.readFile();
     }
-
-
 }
