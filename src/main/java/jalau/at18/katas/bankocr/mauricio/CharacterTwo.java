@@ -5,7 +5,8 @@ public class CharacterTwo extends CharacterNumbers {
     public String[][] character(CharValue value) {
         if (value == value.TWO) {
             return value.TWO.getcharacternumbers();
+        } else {
+            return value.ZERO.getcharacternumbers();
         }
-        return value.ZERO.getcharacternumbers();
     }
 }

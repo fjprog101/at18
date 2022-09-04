@@ -5,7 +5,8 @@ public class CharacterFour extends CharacterNumbers {
     public String[][] character(CharValue value) {
         if (value == value.FOUR) {
             return value.FOUR.getcharacternumbers();
+        } else {
+            return value.ZERO.getcharacternumbers();
         }
-        return value.ZERO.getcharacternumbers();
     }
 }

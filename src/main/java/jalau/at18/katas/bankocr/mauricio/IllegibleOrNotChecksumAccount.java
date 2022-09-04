@@ -12,19 +12,21 @@ public class IllegibleOrNotChecksumAccount {
     private Illegible illegible = new Illegible();
     private Checksum checksum = new Checksum();
 
-    public void checkMistakes(int[] listNumbers) {
+    public String checkMistakes(int[] listNumbers) {
+        String listNumbersStr = String.valueOf(listNumbers[0]) + "" + String.valueOf(listNumbers[one]) + ""
+                + String.valueOf(listNumbers[two]) + "" + String.valueOf(listNumbers[three]) + ""
+                + String.valueOf(listNumbers[four]) + "" + String.valueOf(listNumbers[five]) + ""
+                + String.valueOf(listNumbers[six]) + "" + String.valueOf(listNumbers[seven]) + ""
+                + String.valueOf(listNumbers[eight]);
         if (checksum.calculationChecksum(listNumbers) && illegible.illegibleNumber(listNumbers)) {
-            System.out.println(
-                    listNumbers[0] + "" + listNumbers[one] + "" + listNumbers[two] + "" + listNumbers[three] + ""
-                            + listNumbers[four] + "" + listNumbers[five] + "" + listNumbers[six] + "" + listNumbers[seven]
-                            + "" + listNumbers[eight]);
+            System.out.println(listNumbersStr);
+            return listNumbersStr;
         } else if (illegible.illegibleNumber(listNumbers)) {
-            System.out.println(
-                    listNumbers[0] + "" + listNumbers[one] + "" + listNumbers[two] + "" + listNumbers[three] + ""
-                            + listNumbers[four] + "" + listNumbers[five] + "" + listNumbers[six] + "" + listNumbers[seven]
-                            + "" + listNumbers[eight] + " ERR");
+            System.out.println(listNumbersStr + " ERR");
+            return listNumbersStr + " ERR";
         } else {
             System.out.println("Illegible");
+            return listNumbersStr;
         }
     }
 }

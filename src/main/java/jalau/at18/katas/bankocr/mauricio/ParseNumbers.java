@@ -20,17 +20,17 @@ public class ParseNumbers {
             case three:
                 return CharValue.THREE;
             case four:
-                return CharValue.ONE;
+                return CharValue.FOUR;
             case five:
-                return CharValue.TWO;
+                return CharValue.FIVE;
             case six:
-                return CharValue.THREE;
+                return CharValue.SIX;
             case seven:
-                return CharValue.ONE;
+                return CharValue.SEVEN;
             case eight:
-                return CharValue.TWO;
+                return CharValue.EIGHT;
             case nine:
-                return CharValue.THREE;
+                return CharValue.NINE;
             default:
                 return CharValue.ZERO;
         }
