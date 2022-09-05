@@ -7,6 +7,6 @@ public class Main {
         PrintNumberAccount printNumberAccount = new PrintNumberAccount();
         Printer printer = new Printer();
         printer.printArrayLines();
-        printNumberAccount.printAccount();
+        System.out.println(printNumberAccount.printAccount());
     }
 }

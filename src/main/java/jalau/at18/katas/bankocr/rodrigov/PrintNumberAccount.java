@@ -12,7 +12,7 @@ public class PrintNumberAccount {
         compareNumbers  = new CompareNumbers(digits.getListOfNumbers(), splitDigit.getDigits());
     }
 
-    public void printAccount() {
-        System.out.println(compareNumbers.showAccountNumber());
+    public String printAccount() {
+        return compareNumbers.showAccountNumber();
     }
 }

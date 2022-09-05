@@ -10,9 +10,10 @@ public class Printer {
         linesArray = readFile.getLines();
     }
 
-    public void printArrayLines() {
+    public String[] printArrayLines() {
         for (int index = 0; index < linesArray.length; index++) {
             System.out.println(linesArray[index]);
         }
+        return linesArray;
     }
 }
