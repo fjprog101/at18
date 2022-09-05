@@ -1,50 +1,43 @@
 package jalau.at18.katas.pokerhands.maria;
 
-import jalau.at18.katas.pokerhands.joseg.AllSameSuit;
-import jalau.at18.katas.pokerhands.joseg.Card;
-import jalau.at18.katas.pokerhands.joseg.CardValue;
-import jalau.at18.katas.pokerhands.joseg.CardsWithSameValue;
-import jalau.at18.katas.pokerhands.joseg.ConsecutiveValues;
-import jalau.at18.katas.pokerhands.joseg.PokerHand;
-import jalau.at18.katas.pokerhands.joseg.PokerHandAnalizer;
-import org.junit.Test;
-
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+
+import org.junit.Test;
 
 public class PokerHandAnalizerTest {
 
     @Test
     public void shouldSayIfHandNCardsWithSameValue() {
-        jalau.at18.katas.pokerhands.joseg.PokerHandAnalizer analizer = new jalau.at18.katas.pokerhands.joseg.PokerHandAnalizer();
-        jalau.at18.katas.pokerhands.joseg.CardsWithSameValue have2CardsWithSameValue = new jalau.at18.katas.pokerhands.joseg.CardsWithSameValue(2);
+        PokerHandAnalizer analizer = new PokerHandAnalizer();
+        CardsWithSameValue have2CardsWithSameValue = new CardsWithSameValue(2);
 
-        jalau.at18.katas.pokerhands.joseg.PokerHand handWith2CardsWithSameValue = new jalau.at18.katas.pokerhands.joseg.PokerHand(new jalau.at18.katas.pokerhands.joseg.Card[]{
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.TWO, 'C'),
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.TWO, 'D'),
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.FOUR, 'H'),
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.FIVE, 'S'),
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.SIX, 'S'),
+        PokerHand handWith2CardsWithSameValue = new PokerHand(new Card[]{
+            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.TWO, 'D'),
+            new Card(CardValue.FOUR, 'H'),
+            new Card(CardValue.FIVE, 'S'),
+            new Card(CardValue.SIX, 'S'),
         });
         assertTrue(analizer.analize(handWith2CardsWithSameValue, have2CardsWithSameValue));
 
-        jalau.at18.katas.pokerhands.joseg.CardsWithSameValue have3CardsWithSameValue = new jalau.at18.katas.pokerhands.joseg.CardsWithSameValue(3);
-        jalau.at18.katas.pokerhands.joseg.PokerHand handWith3CardsWithSameValue = new jalau.at18.katas.pokerhands.joseg.PokerHand(new jalau.at18.katas.pokerhands.joseg.Card[]{
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.TWO, 'C'),
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.THREE, 'D'),
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.THREE, 'H'),
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.THREE, 'S'),
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.SIX, 'S'),
+        CardsWithSameValue have3CardsWithSameValue = new CardsWithSameValue(3);
+        PokerHand handWith3CardsWithSameValue = new PokerHand(new Card[]{
+            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.THREE, 'D'),
+            new Card(CardValue.THREE, 'H'),
+            new Card(CardValue.THREE, 'S'),
+            new Card(CardValue.SIX, 'S'),
         });
         assertTrue(analizer.analize(handWith3CardsWithSameValue, have3CardsWithSameValue));
 
-        jalau.at18.katas.pokerhands.joseg.CardsWithSameValue have4CardsWithSameValue = new CardsWithSameValue(4);
-        jalau.at18.katas.pokerhands.joseg.PokerHand handWith4CardsWithSameValue = new jalau.at18.katas.pokerhands.joseg.PokerHand(new jalau.at18.katas.pokerhands.joseg.Card[]{
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.TWO, 'C'),
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.JACK, 'D'),
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.JACK, 'H'),
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.JACK, 'C'),
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.JACK, 'S'),
+        CardsWithSameValue have4CardsWithSameValue = new CardsWithSameValue(4);
+        PokerHand handWith4CardsWithSameValue = new PokerHand(new Card[]{
+            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.JACK, 'D'),
+            new Card(CardValue.JACK, 'H'),
+            new Card(CardValue.JACK, 'C'),
+            new Card(CardValue.JACK, 'S'),
         });
         assertTrue(analizer.analize(handWith4CardsWithSameValue, have4CardsWithSameValue));
 
@@ -55,37 +48,37 @@ public class PokerHandAnalizerTest {
 
     @Test
     public void shouldSayIfHandHasConsecutiveValues() {
-        jalau.at18.katas.pokerhands.joseg.PokerHandAnalizer analizer = new jalau.at18.katas.pokerhands.joseg.PokerHandAnalizer();
-        jalau.at18.katas.pokerhands.joseg.ConsecutiveValues consecutiveValues = new ConsecutiveValues();
+        PokerHandAnalizer analizer = new PokerHandAnalizer();
+        ConsecutiveValues consecutiveValues = new ConsecutiveValues();
 
-        jalau.at18.katas.pokerhands.joseg.PokerHand hand = new jalau.at18.katas.pokerhands.joseg.PokerHand(new jalau.at18.katas.pokerhands.joseg.Card[]{
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.TWO, 'C'),
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.THREE, 'D'),
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.FOUR, 'H'),
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.FIVE, 'S'),
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.SIX, 'S'),
+        PokerHand hand = new PokerHand(new Card[]{
+            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.THREE, 'D'),
+            new Card(CardValue.FOUR, 'H'),
+            new Card(CardValue.FIVE, 'S'),
+            new Card(CardValue.SIX, 'S'),
         });
         assertTrue(analizer.analize(hand, consecutiveValues));
     }
 
     @Test
     public void shouldSayIfHandHasAllCardsWithSameSuit() {
-        jalau.at18.katas.pokerhands.joseg.PokerHandAnalizer analizer = new PokerHandAnalizer();
-        jalau.at18.katas.pokerhands.joseg.AllSameSuit allSameSuit = new AllSameSuit();
-        jalau.at18.katas.pokerhands.joseg.PokerHand allSameSuitHand = new jalau.at18.katas.pokerhands.joseg.PokerHand(new jalau.at18.katas.pokerhands.joseg.Card[]{
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.TWO, 'C'),
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.FOUR, 'C'),
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.FIVE, 'C'),
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.FIVE, 'C'),
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.SIX, 'C'),
+        PokerHandAnalizer analizer = new PokerHandAnalizer();
+        AllSameSuit allSameSuit = new AllSameSuit();
+        PokerHand allSameSuitHand = new PokerHand(new Card[]{
+            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.FOUR, 'C'),
+            new Card(CardValue.FIVE, 'C'),
+            new Card(CardValue.FIVE, 'C'),
+            new Card(CardValue.SIX, 'C'),
         });
         assertTrue(analizer.analize(allSameSuitHand, allSameSuit));
 
-        jalau.at18.katas.pokerhands.joseg.PokerHand notAllSameSuitHand = new PokerHand(new jalau.at18.katas.pokerhands.joseg.Card[]{
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.TWO, 'C'),
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.FOUR, 'S'),
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.FIVE, 'S'),
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.FIVE, 'H'),
+        PokerHand notAllSameSuitHand = new PokerHand(new Card[]{
+            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.FOUR, 'S'),
+            new Card(CardValue.FIVE, 'S'),
+            new Card(CardValue.FIVE, 'H'),
             new Card(CardValue.SIX, 'C'),
         });
         assertFalse(analizer.analize(notAllSameSuitHand, allSameSuit));
