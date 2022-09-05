@@ -25,4 +25,23 @@ public class CheckSum extends BankAccount {
         }
         return total;
     }
+
+    public int status(String status, int bad) {
+        for (int i = 0; i < 9; i++) {
+            char result = entry.charAt(i);
+            if (result == '?') {
+                bad++;
+            }
+        }
+        return bad;
+
+    }
+
+    public String statusDigits(String status, int bad) {
+
+        if (status(status, bad) > 0) {
+            return "ILL";
+        }
+        return status;
+    }
 }

@@ -7,14 +7,12 @@ public class CheckSumResult extends CheckSum {
         super(line1, line2, line3, sizeValue, sizenumbers);
     }
 
-    public boolean checkSum(int total, int finalresult) {
+    public String checkSum(int total, int finalresult) {
         finalresult = result(total) % MODULE;
         if (finalresult == 0) {
-            System.out.println("The account it's correct");
-            return true;
+            return "OK";
         }
-        System.out.println("The account it's incorrect");
-        return false;
+        return "ERR";
     }
 
 }

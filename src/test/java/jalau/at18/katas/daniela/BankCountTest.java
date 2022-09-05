@@ -39,6 +39,11 @@ public class BankCountTest {
         String line31 = "  ||_  _|  | _||_|  ||_|  |";
         BankAccount account1 = new BankAccount(line11, line21, line31, sizenumbers1);
         assertThat(account1.getDigitChar(), equalTo("12345?789"));
+        String line12 = "    _  _     _  _  _  _  _ ";
+        String line22 = "  | _| _||_||_ |    ||_|| |";
+        String line32 = "  ||_  _|  | _||_|  ||_|  |";
+        BankAccount account2 = new BankAccount(line12, line22, line32, sizenumbers1);
+        assertThat(account2.getDigitChar(), equalTo("12345?78?"));
 
     }
 }
