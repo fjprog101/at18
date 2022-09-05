@@ -2,7 +2,6 @@ package jalau.at18.katas.bankocr.joser;
 
 public class Reconstruct {
     private static final int NINE = 9;
-    private static final int THREE = 3;
     private String[] number;
     private String results;
 
