@@ -10,13 +10,13 @@ public class Main1 {
         final int six = 6;
         final int seven = 7;
         final int eight = 8;
+        IntroduceNumbers listNumbers = new IntroduceNumbers();
+        ShowNumbers show = new ShowNumbers();
+        Checksum checksum = new Checksum();
+        IllegibleOrNotChecksumAccount illegibleOrChecksum = new IllegibleOrNotChecksumAccount();
         // This line fulfills with User Story 3
         int[] listChoose = {three, four, five, eight, eight, two, eight, six, five};
-        IllegibleOrNotChecksumAccount illegibleOrChecksum = new IllegibleOrNotChecksumAccount();
         illegibleOrChecksum.checkMistakes(listChoose);
-        IntroduceNumbers listNumbers = new IntroduceNumbers();
-        ShowFirstThreeNumbers show = new ShowFirstThreeNumbers();
-        Checksum checksum = new Checksum();
         if (checksum.calculationChecksum(listChoose)) {
             String[][][] numbersToVisualize = listNumbers.introduceYourNumbers(listChoose);
             show.showNumberSelected(numbersToVisualize);

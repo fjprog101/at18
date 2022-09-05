@@ -1,6 +1,6 @@
 package jalau.at18.katas.bankocr.mauricio;
 
-public class ShowFirstThreeNumbers {
+public class ShowNumbers {
     public void showNumberSelected(String[][][] listNumbers) {
         for (int element = 0; element < listNumbers.length; element++) {
             for (int row = 0; row < listNumbers[1].length; row++) {
