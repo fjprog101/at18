@@ -4,9 +4,9 @@ import java.io.FileNotFoundException;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
-        PrintNumberAccount printNumberAccount = new PrintNumberAccount();
+        CheckAccount checkAccount = new CheckAccount();
         Printer printer = new Printer();
         printer.printArrayLines();
-        System.out.println(printNumberAccount.printAccount());
+        System.out.println(checkAccount.returnNumberAccount());
     }
 }
