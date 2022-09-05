@@ -11,16 +11,11 @@ public class Reconstruct {
         this.results = "";
     }
 
-    public void result() {
+    public String result() {
         for (int index = 0; index <= NINE; index++) {
-            if (possible(0, Digits.values()[index].getCharacters()) == 1) {
-                System.out.println(Digits.values()[index].getCharacters()[0]);
-                System.out.println(Digits.values()[index].getCharacters()[1]);
-                System.out.println(Digits.values()[index].getCharacters()[2]);
-                System.out.println(index);
-                this.results += index;
-            }
+            this.results += possible(0, Digits.values()[index].getCharacters()) == 1 ? index : "";
         }
+        return this.results;
     }
 
     public int possible(int con, String[] digits) {
