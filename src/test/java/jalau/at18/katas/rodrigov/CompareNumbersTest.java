@@ -19,7 +19,7 @@ public class CompareNumbersTest {
         splitDigit.splitNumbers();
         digits.addDigitsFirstPart();
         digits.addDigitsSecondPart();
-        String expeted = "490067715";
+        String expeted = "000000051";
         assertEquals(expeted, compareNumbers.showAccountNumber());
     }
 }

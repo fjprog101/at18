@@ -21,11 +21,9 @@ public class ReadFile {
             cont++;
         }
     }
-
     public String[] getLines() {
         return lines;
     }
-
     public void setLines(String[] linesRead) {
         this.lines = linesRead;
     }

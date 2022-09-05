@@ -12,9 +12,9 @@ public class ReadFileTest {
         //File myObj = new File(parent, child)
         ReadFile readFile = new ReadFile();
         readFile.readAccountsTxt();
-        String firstOutput = "    _  _  _  _  _  _     _ ";
-        String secondOutput = "|_||_|| || ||_   |  |  ||_ ";
-        String thirdOutput = "  | _||_||_||_|  |  |  | _|";
+        String firstOutput = " _  _  _  _  _  _  _  _    ";
+        String secondOutput = "| || || || || || || ||_   |";
+        String thirdOutput = "|_||_||_||_||_||_||_| _|  |";
         assertEquals(firstOutput, readFile.getLines()[0]);
         assertEquals(secondOutput, readFile.getLines()[1]);
         assertEquals(thirdOutput, readFile.getLines()[2]);

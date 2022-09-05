@@ -8,7 +8,7 @@ import java.io.FileNotFoundException;
 public class PrinterTest {
     @Test
     public void shouldPrintArrayLines() throws FileNotFoundException{
-        String[] expected = {"    _  _  _  _  _  _     _ ","|_||_|| || ||_   |  |  ||_ ","  | _||_||_||_|  |  |  | _|"};
+        String[] expected = {" _  _  _  _  _  _  _  _    ","| || || || || || || ||_   |","|_||_||_||_||_||_||_| _|  |"};
         Printer printer = new Printer();
         assertArrayEquals(expected, printer.printArrayLines());
     }

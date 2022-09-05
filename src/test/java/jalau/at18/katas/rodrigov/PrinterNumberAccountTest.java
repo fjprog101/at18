@@ -11,7 +11,7 @@ public class PrinterNumberAccountTest {
     @Test
     public void shouldPrintAccount() throws FileNotFoundException{
         PrintNumberAccount printNumAccount = new PrintNumberAccount();
-        String expected = "490067715";
+        String expected = "000000051";
         assertEquals(expected, printNumAccount.printAccount());
     }
 }
