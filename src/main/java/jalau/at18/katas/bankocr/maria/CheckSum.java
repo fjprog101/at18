@@ -13,10 +13,7 @@ public class CheckSum {
     }
 
     public boolean isValidAccountNumber() {
-        if (sumNumbers() % MODULE_NUMBER == 0) {
-            return true;
-        }
-        return false;
+        return sumNumbers() % MODULE_NUMBER == 0;
     }
 
     private int sumNumbers() {

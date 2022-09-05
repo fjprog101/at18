@@ -5,12 +5,21 @@ import java.util.List;
 import java.util.Map;
 
 public class VerifyListAccounts {
-    public Map<String, Boolean> verifyValidAccounts(List<String> accountList) {
-        Map<String, Boolean> validAccounts = new HashMap<String, Boolean>();
+    public Map<String, AccountStatusEnum> verifyValidAccounts(List<String> accountList) {
+        Map<String, AccountStatusEnum> validAccounts = new HashMap<String, AccountStatusEnum>();
         for (String account : accountList) {
-            CheckSum checkSum = new CheckSum(account);
-            validAccounts.put(account, checkSum.isValidAccountNumber());
+            defineStatus(validAccounts, account);
         }
         return validAccounts;
+    }
+
+    private void defineStatus(Map<String, AccountStatusEnum> validAccounts, String account) {
+        CheckSum checkSum = new CheckSum(account);
+        validAccounts.put(account, AccountStatusEnum.VALID);
+        if (account.contains("?")) {
+            validAccounts.put(account, AccountStatusEnum.ILL);
+        } else if (!checkSum.isValidAccountNumber()) {
+            validAccounts.put(account, AccountStatusEnum.ERR);
+        }
     }
 }

@@ -13,14 +13,12 @@ public class Main {
         BankOCR bankOCR = new BankOCR(processAccountLineFile, readFile);
         List<String> accounts = bankOCR.processAccountFromFile();
         System.out.println(accounts);
+
         VerifyListAccounts verifyListAccounts = new VerifyListAccounts();
-        Map<String, Boolean> mapValidAccounts = verifyListAccounts.verifyValidAccounts(accounts);
-        for (Map.Entry<String, Boolean> entry : mapValidAccounts.entrySet()) {
-            if (entry.getValue()) {
-                System.out.println("Account: " + entry.getKey() + "is valid");
-            } else {
-                System.out.println("Account: " + entry.getKey() + "is not valid");
-            }
+        Map<String, AccountStatusEnum> mapValidAccounts = verifyListAccounts.verifyValidAccounts(accounts);
+        for (Map.Entry<String, AccountStatusEnum> entry : mapValidAccounts.entrySet()) {
+            System.out.println("Account: " + entry.getKey() + " " + entry.getValue().getValue());
         }
+
     }
 }
