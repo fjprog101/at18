@@ -1,5 +1,7 @@
 package jalau.at18.katas.bankocr.sarai;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 
 public class DigitCharacterTest {
@@ -9,11 +11,10 @@ public class DigitCharacterTest {
         //String [] firstEntry = {" ", "_", " "," ", "|", " "," ", "_", " "," ", "_", " "," ", " ", " "," ", "_", " "," ", "_", " "," ", "_", " "," ", "_", " "," ", "_", " "};
         String [] firstEntry = {"    _  _     _  _  _  _  _ ",
                                 "  | _| _||_||_ |_   ||_||_|",
-                                "  ||_  _|  | _||_|  ||_| _|"};
+                                "  ||_  _|  ||_||_|  ||_| _|"};
         
         DigitCharacter firstNumber = new DigitCharacter(firstEntry);
-        
-        assertArrayEquals(123456789,firstNumber);
+        assertEquals("123466789",firstNumber.getrespuesta());
 
         //DigitReader secondNumber = new DigitReader(firstEntry);
         //assertEquals(0,firstLine.getcompareCharacter());
