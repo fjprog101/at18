@@ -14,10 +14,8 @@ public class Checksum {
 
     public boolean calculationChecksum(int[] listNumbers) {
         int formula = (listNumbers[eight] + two * listNumbers[seven] + three * listNumbers[six]
-                + four * listNumbers[five]
-                + five * listNumbers[four] + six * listNumbers[three] + seven * listNumbers[two]
-                + eight * listNumbers[one]
-                + nine * listNumbers[0]);
+                + four * listNumbers[five] + five * listNumbers[four] + six * listNumbers[three]
+                + seven * listNumbers[two] + eight * listNumbers[one] + nine * listNumbers[0]);
         boolean result = (formula % eleven == 0) ? true : false;
         return result;
     }

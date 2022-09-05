@@ -16,14 +16,10 @@ public class IllegibleSecondPart {
     public Boolean checkNumbers(int[] listNumbers, ArrayList<Object> listNumbersOrWrongCharacters) {
         for (int index = 0; index < listNumbers.length; index++) {
             if (listNumbersOrWrongCharacters.get(index) == questionMark) {
-                System.out.println(listNumbersOrWrongCharacters.get(0).toString()
-                        + listNumbersOrWrongCharacters.get(one).toString()
-                        + listNumbersOrWrongCharacters.get(two).toString()
-                        + listNumbersOrWrongCharacters.get(three).toString()
-                        + listNumbersOrWrongCharacters.get(four).toString()
-                        + listNumbersOrWrongCharacters.get(five).toString()
-                        + listNumbersOrWrongCharacters.get(six).toString()
-                        + listNumbersOrWrongCharacters.get(seven).toString()
+                System.out.println(listNumbersOrWrongCharacters.get(0).toString() + listNumbersOrWrongCharacters.get(one).toString()
+                        + listNumbersOrWrongCharacters.get(two).toString() + listNumbersOrWrongCharacters.get(three).toString()
+                        + listNumbersOrWrongCharacters.get(four).toString() + listNumbersOrWrongCharacters.get(five).toString()
+                        + listNumbersOrWrongCharacters.get(six).toString() + listNumbersOrWrongCharacters.get(seven).toString()
                         + listNumbersOrWrongCharacters.get(eight).toString() + " ILL");
                 return false;
             }
