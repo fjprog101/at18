@@ -20,6 +20,27 @@ public class Main {
             if (matrixNumberVerifier.isNumberThree(matrix)) {
                 System.out.print("3");
             }
+            if (matrixNumberVerifier.isNumberFour(matrix)) {
+                System.out.print("4");
+            }
+            if (matrixNumberVerifier.isNumberFive(matrix)) {
+                System.out.print("5");
+            }
+            if (matrixNumberVerifier.isNumberSix(matrix)) {
+                System.out.print("6");
+            }
+            if (matrixNumberVerifier.isNumberSeven(matrix)) {
+                System.out.print("7");
+            }
+            if (matrixNumberVerifier.isNumberEight(matrix)) {
+                System.out.print("8");
+            }
+            if (matrixNumberVerifier.isNumberNine(matrix)) {
+                System.out.print("9");
+            }
+            if (matrixNumberVerifier.isNumberZero(matrix)) {
+                System.out.print("0");
+            }
         }
     }
 }

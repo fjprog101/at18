@@ -30,10 +30,10 @@ public class MatrixCharParser {
     }
 
     public char[][] getMatrixNumber(int pos) {
-        char[][] matrixNumber = new char [3][3];
+        char[][] matrixNumber = new char[3][3];
         for (int row = 0; row < matrixNumber.length; row++) {
             for (int col = 0; col < matrixNumber[0].length; col++) {
-                matrixNumber[row][col] = matrix[row][col+pos*3];
+                matrixNumber[row][col] = matrix[row][col + pos * 3];
             }
         }
         return matrixNumber;
