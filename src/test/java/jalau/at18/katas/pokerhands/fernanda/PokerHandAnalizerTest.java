@@ -83,4 +83,48 @@ public class PokerHandAnalizerTest {
         });
         assertFalse(analizer.analize(notAllSameSuitHand, allSameSuit));
     }
+    
+    @Test
+    public void shouldSayIfHandHasTwoPairs() {
+        PokerHandAnalizer analizer = new PokerHandAnalizer();
+        TwoPairs twopairs = new TwoPairs();
+
+        PokerHand hand = new PokerHand(new Card[]{
+            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.TWO, 'D'),
+            new Card(CardValue.FOUR, 'H'),
+            new Card(CardValue.FOUR, 'S'),
+            new Card(CardValue.SIX, 'S'),
+        });
+        assertTrue(analizer.analize(hand, twopairs));
+    }
+    @Test
+    public void shouldSayIfHandHas2Pairs() {
+        PokerHandAnalizer analizer = new PokerHandAnalizer();
+        TwoPairs twopairs = new TwoPairs();
+
+        PokerHand hand = new PokerHand(new Card[]{
+            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.TWO, 'D'),
+            new Card(CardValue.FOUR, 'H'),
+            new Card(CardValue.SIX, 'S'),
+            new Card(CardValue.SIX, 'S'),
+        });
+        assertTrue(analizer.analize(hand, twopairs));
+    }
+
+    @Test
+    public void shouldSayIfHandDoesntHaveTwoPairs() {
+        PokerHandAnalizer analizer = new PokerHandAnalizer();
+        TwoPairs twopairs = new TwoPairs();
+
+        PokerHand hand = new PokerHand(new Card[]{
+            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.THREE, 'D'),
+            new Card(CardValue.FOUR, 'H'),
+            new Card(CardValue.FOUR, 'S'),
+            new Card(CardValue.SIX, 'S'),
+        });
+        assertFalse(analizer.analize(hand, twopairs));
+    }
 }
