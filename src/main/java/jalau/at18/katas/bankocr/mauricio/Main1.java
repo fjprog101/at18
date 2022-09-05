@@ -18,11 +18,8 @@ public class Main1 {
         ShowFirstThreeNumbers show = new ShowFirstThreeNumbers();
         Checksum checksum = new Checksum();
         if (checksum.calculationChecksum(listChoose)) {
-
             String[][][] numbersToVisualize = listNumbers.introduceYourNumbers(listChoose);
-            show.showNumberSelected(numbersToVisualize[0], numbersToVisualize[one], numbersToVisualize[two]);
-            show.showNumberSelected(numbersToVisualize[three], numbersToVisualize[four], numbersToVisualize[five]);
-            show.showNumberSelected(numbersToVisualize[six], numbersToVisualize[seven], numbersToVisualize[eight]);
+            show.showNumberSelected(numbersToVisualize);
         }
     }
 }
