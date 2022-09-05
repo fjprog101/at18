@@ -1,46 +1,36 @@
 package jalau.at18.katas.bankocr.sarai;
 
 public class DigitCharacter {
-private final int sizethree = 3;
-private final int sizeArray = 27;
-private String[] matrixSize = new String[sizethree];
-private String[] matrixSize27 = new String[sizeArray];
-
-
-private final int sizenine = 9;
-private int []respuesta;
+    private static final int SIZETOTALDIGIT = 27;
+    private static final int SIZENINEDIGIT = 9;
+    private static final int SIZETHREE = 3;
+    private String[] matrixSize;
+    private int[]finalAcount;
+    private Position number;
 
     public DigitCharacter(String[] matrixSize) {
         this.matrixSize = matrixSize;
-        respuesta = new int [sizenine];
-        setrecorrerEntrada();
+        finalAcount = new int[SIZENINEDIGIT];
+        this.number = new Position(matrixSize);
+        setTraverseInput(0);
     }
-    public void setrecorrerEntrada() {
-        int cont=0;
-        for (int index = 0; index < matrixSize27.length; index += 3) {
-            DigitReader mirespuesta = new DigitReader(sacarposiciones(index));
-            respuesta[cont] = mirespuesta.getnaturalNumbers();
+
+    public void setTraverseInput(int cont) { //cont = 0;
+        for (int index = 0; index < SIZETOTALDIGIT; index += SIZETHREE) {
+            DigitReader acount = new DigitReader(number.getposition(index));
+            finalAcount[cont] = acount.getnaturalNumbers();
             cont += 1;
         }
     }
 
-    public String getrespuesta(){
-        String value = "";
-        for(int index=0 ; index < respuesta.length ;index++){
-            value += Integer.toString(respuesta[index]);
+    public String getfinalAcount(String value) { //String value = "";
+        for (int index = 0; index < SIZENINEDIGIT; index++) {
+            value += Integer.toString(finalAcount[index]);
         }
         return value;
     }
 
-    public int[] getrecorrerEntrada(){
-        return respuesta;
-    }
-
-    public String[] sacarposiciones(int index){
-        String[] numberEntry = new String[sizethree];
-        numberEntry[0] = matrixSize[0].substring(index, index+3);
-        numberEntry[1] = matrixSize[1].substring(index, index+3);
-        numberEntry[2] = matrixSize[2].substring(index, index+3);
-        return numberEntry;
+    public int[] getTraverseInput() {
+        return finalAcount;
     }
 }
