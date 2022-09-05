@@ -20,7 +20,7 @@ public class FileReaderTest {
     public void shouldReadFile() throws IOException {
         File file = new File("src/main/java/jalau/at18/katas/bankocr/robertof/sampleFile");
         FileReader fileReader = new FileReader(file);
-        ArrayList<String> tableValue = fileReader.readFile(fileReader.getFilePath());
+        ArrayList<String> tableValue = fileReader.readFile();
         assertEquals(3, tableValue.size());
     }
 

@@ -15,16 +15,13 @@ public class FileReader {
         return file.getPath();
     }
 
-    public ArrayList<String> readFile(String filePath) throws IOException {
+    public ArrayList<String> readFile() throws IOException {
         ArrayList<String> list = new ArrayList<>();
-        BufferedReader bufferedReader = new BufferedReader(new java.io.FileReader(file.getPath()));
-        try {
+        try (BufferedReader bufferedReader = new BufferedReader(new java.io.FileReader(file.getPath()))) {
             String line;
             while ((line = bufferedReader.readLine()) != null) {
                 list.add(line);
             }
-        } finally {
-            bufferedReader.close();
         }
         return list;
     }
