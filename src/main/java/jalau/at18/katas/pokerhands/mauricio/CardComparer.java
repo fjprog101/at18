@@ -13,4 +13,8 @@ public class CardComparer {
     public boolean haveSameSuit(Card leftCard, Card rightCard) {
         return leftCard.getSuit() == rightCard.getSuit();
     }
+
+    public boolean haveDifferentValue(Card leftCard, Card rightCard) {
+        return leftCard.getValue() != rightCard.getValue();
+    }
 }
