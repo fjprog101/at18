@@ -22,20 +22,11 @@ public class ReadFile {
         }
     }
 
-    public void printMatrix() {
-        System.out.println(lines[0].length());
-        System.out.println(lines[1].length());
-        System.out.println(lines[2].length());
-        for (int index = 0; index < lines.length; index++) {
-            System.out.println(lines[index]);
-        }
-    }
-
     public String[] getLines() {
         return lines;
     }
 
-    public void setLines(String[] lines) {
-        this.lines = lines;
+    public void setLines(String[] linesRead) {
+        this.lines = linesRead;
     }
 }

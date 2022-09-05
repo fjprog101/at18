@@ -1,18 +1,18 @@
 package jalau.at18.katas.bankocr.rodrigov;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Digits {
-
     private List<String> listOfNumbers = new ArrayList<>();
 
-    public Digits() {
+    public void addDigitsFirstPart() {
         listOfNumbers.add(" _ | ||_|");
         listOfNumbers.add("     |  |");
         listOfNumbers.add(" _  _||_ ");
         listOfNumbers.add(" _  _| _|");
         listOfNumbers.add("   |_|  |");
+    }
+    public void addDigitsSecondPart() {
         listOfNumbers.add(" _ |_  _|");
         listOfNumbers.add(" _ |_ |_|");
         listOfNumbers.add(" _   |  |");
@@ -24,7 +24,7 @@ public class Digits {
         return listOfNumbers;
     }
 
-    public void setListOfNumbers(List<String> listOfNumbers) {
-        this.listOfNumbers = listOfNumbers;
+    public void setListOfNumbers(List<String> listOfDigits) {
+        this.listOfNumbers = listOfDigits;
     }
 }
