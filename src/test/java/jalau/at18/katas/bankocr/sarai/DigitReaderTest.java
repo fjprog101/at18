@@ -5,6 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class DigitReaderTest {
+    /* 
     @Test
     public void acrossNumbersEnumZerro() {
         String[][] numzero = {
@@ -22,12 +23,6 @@ public class DigitReaderTest {
             {" ","_","|"} };
             DigitReader storythree = new DigitReader(numthree);
         assertEquals(3,storythree.getnaturalNumbers());
-    }
-    @Test
-    public void entryNumbers(){
-        String [][] firstEntry = {{" ", "_", " "," ", "|", " "," ", "_", " "," ", "_", " "," ", " ", " "," ", "_", " "," ", "_", " "," ", "_", " "," ", "_", " "," ", "_", " "}};
-        
-        DigitReader firstLine = new DigitReader(firstEntry);
-        assertEquals(0,firstLine.getcompareCharacter());
-    }
+    }*/
+    
 }
