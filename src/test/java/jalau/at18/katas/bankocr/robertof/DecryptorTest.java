@@ -8,7 +8,7 @@ import static org.junit.Assert.assertEquals;
 public class DecryptorTest {
     @Test
     public void shouldDecryptFileTable() throws IOException {
-        File file = new File("src/main/java/jalau/at18/katas/bankocr/robertof/sampleFile");
+        File file = new File("src/main/resources/sampleFile");
         FileReader fileReader = new FileReader(file);
         ArrayList<String> tableValue = fileReader.readFile();
         Decryptor decryptor = new Decryptor();

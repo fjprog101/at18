@@ -13,11 +13,8 @@ public class BlockNumberAnalyzer {
 
     private void setBlockNumber(ArrayList<String> tableValue, int i, String[] block) {
         for (int index = 0; index < THREE; index++) {
-            if ((i + THREE) < tableValue.get(0).length()) {
-                block[index] = tableValue.get(index).substring(i, i + THREE);
-            } else {
-                block[index] = tableValue.get(index).substring(i);
-            }
+            block[index] = (i + THREE) < tableValue.get(0).length()
+                    ? tableValue.get(index).substring(i, i + THREE) : tableValue.get(index).substring(i);
         }
     }
 }

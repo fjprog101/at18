@@ -7,11 +7,14 @@ public class TableAnalyzer {
     public int getTotalValue(String[] block) {
         int sum = 0;
         for (int index = 0; index < THREE; index++) {
-            for (int jndex = 0; jndex < block[index].length(); jndex++) {
-                if (block[index].charAt(jndex) != ' ') {
-                    sum += table.getValue(index, jndex);
-                }
-            }
+            sum = getSum(block, sum, index);
+        }
+        return sum;
+    }
+
+    private int getSum(String[] block, int sum, int index) {
+        for (int jndex = 0; jndex < block[index].length(); jndex++) {
+            sum += block[index].charAt(jndex) != ' ' ? table.getValue(index, jndex) : 0;
         }
         return sum;
     }

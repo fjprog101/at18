@@ -11,14 +11,14 @@ public class FileReaderTest {
 
     @Test
     public void shouldHavePath() {
-        File file = new File("src/main/java/jalau/at18/katas/bankocr/robertof/sampleFile");
+        File file = new File("src/main/resources/sampleFile");
         FileReader fileReader = new FileReader(file);
         assertEquals("src/main/java/jalau/at18/katas/bankocr/robertof/sampleFile", fileReader.getFilePath());
     }
 
     @Test
     public void shouldReadFile() throws IOException {
-        File file = new File("src/main/java/jalau/at18/katas/bankocr/robertof/sampleFile");
+        File file = new File("src/main/resources/sampleFile");
         FileReader fileReader = new FileReader(file);
         ArrayList<String> tableValue = fileReader.readFile();
         assertEquals(3, tableValue.size());
