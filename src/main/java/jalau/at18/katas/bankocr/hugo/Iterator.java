@@ -10,7 +10,6 @@ public class Iterator {
     private static final int NUM8 = 8;
     private static final int NUM9 = 9;
 
-    //int Iter;
     private NumChecker checker = new NumChecker();
 
     public boolean isNumberPos(int num) {
@@ -21,7 +20,7 @@ public class Iterator {
     }
 
     public int[] iterate(int[] errNum) {
-        int[] auxNum = errNum;
+        int[] auxNum = errNum.clone();
         boolean cycle = true;
         int pos = 0;
         do {

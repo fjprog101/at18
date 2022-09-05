@@ -9,12 +9,16 @@ public class Digits {
     public char[][] getDigit(char[][] entry, int colPos) {
         digitColPos = colPos;
         for (int row = 0; row < digit.length; row++) {
-            colPos = digitColPos;
-            for (int col = 0; col < digit.length; col++) {
-                digit[row][col] = entry[row][colPos];
-                colPos++;
-            }
+            columnsCycle(row, entry, colPos);
         }
         return digit;
+    }
+
+    public void columnsCycle(int row, char[][] entry, int colPos) {
+        colPos = digitColPos;
+        for (int col = 0; col < digit.length; col++) {
+            digit[row][col] = entry[row][colPos];
+            colPos++;
+        }
     }
 }
