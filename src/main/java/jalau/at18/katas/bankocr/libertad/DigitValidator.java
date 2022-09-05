@@ -20,4 +20,7 @@ public class DigitValidator {
         }
         return isEquals;
     }
+    public Digit getDigit() {
+        return digit;
+    }
 }
