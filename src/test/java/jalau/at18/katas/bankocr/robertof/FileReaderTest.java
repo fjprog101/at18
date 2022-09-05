@@ -13,7 +13,7 @@ public class FileReaderTest {
     public void shouldHavePath() {
         File file = new File("src/main/resources/sampleFile");
         FileReader fileReader = new FileReader(file);
-        assertEquals("src/main/java/jalau/at18/katas/bankocr/robertof/sampleFile", fileReader.getFilePath());
+        assertEquals("src/main/resources/sampleFile", fileReader.getFilePath());
     }
 
     @Test
