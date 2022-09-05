@@ -1,8 +1,10 @@
-package jalau.at18.katas.pokerhands.joseg;
+package jalau.at18.katas.pokerhands.carlos;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
+
+import jalau.at18.katas.pokerhands.carlos.CardValue;
 
 public class CardValueTest {
 

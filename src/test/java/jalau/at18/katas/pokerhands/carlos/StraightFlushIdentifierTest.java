@@ -5,6 +5,11 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+import jalau.at18.katas.pokerhands.carlos.Card;
+import jalau.at18.katas.pokerhands.carlos.CardValue;
+import jalau.at18.katas.pokerhands.carlos.PokerHand;
+import jalau.at18.katas.pokerhands.carlos.StraightFlushIdentifier;
+
 public class StraightFlushIdentifierTest {
 
     @Test

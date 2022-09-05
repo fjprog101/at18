@@ -1,9 +1,17 @@
-package jalau.at18.katas.pokerhands.joseg;
+package jalau.at18.katas.pokerhands.carlos;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
+
+import jalau.at18.katas.pokerhands.carlos.AllSameSuit;
+import jalau.at18.katas.pokerhands.carlos.Card;
+import jalau.at18.katas.pokerhands.carlos.CardValue;
+import jalau.at18.katas.pokerhands.carlos.CardsWithSameValue;
+import jalau.at18.katas.pokerhands.carlos.ConsecutiveValues;
+import jalau.at18.katas.pokerhands.carlos.PokerHand;
+import jalau.at18.katas.pokerhands.carlos.PokerHandAnalizer;
 
 public class PokerHandAnalizerTest {
 
