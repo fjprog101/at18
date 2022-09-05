@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BankAccount extends Separatedigits {
-    private static final int ZISE = 3;
+    private static final int SIZE = 3;
     private static final int CAPACITY = 9;
     private List<Digit> digits = new ArrayList<Digit>(CAPACITY);
     private StringBuilder totaldigits = new StringBuilder();
@@ -15,7 +15,7 @@ public class BankAccount extends Separatedigits {
     }
 
     private void extractDigits(String line1, String line2, String line3, int sizenumbers) {
-        for (int searchminvalue = 0; searchminvalue < sizenumbers; searchminvalue += ZISE) {
+        for (int searchminvalue = 0; searchminvalue < sizenumbers; searchminvalue += SIZE) {
             digits.add(new Digit(hasSameLinesAs1(line1, searchminvalue),
                     hasSameLinesAs2(line2, searchminvalue), hasSameLinesAs3(line3, searchminvalue)));
         }

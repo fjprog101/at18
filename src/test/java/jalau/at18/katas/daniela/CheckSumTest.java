@@ -1,12 +1,9 @@
 package jalau.at18.katas.daniela;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import jalau.at18.katas.bankocr.daniela.CheckSum;
 import jalau.at18.katas.bankocr.daniela.CheckSumResult;
 
 public class CheckSumTest {

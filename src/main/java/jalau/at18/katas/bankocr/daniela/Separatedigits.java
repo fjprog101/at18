@@ -1,7 +1,7 @@
 package jalau.at18.katas.bankocr.daniela;
 
 public class Separatedigits extends AnalyzedDigit {
-    private static final int ZISE = 3;
+    private static final int SIZE = 3;
     private final String firstline;
     private final String secondline;
     private final String thirdline;
@@ -14,16 +14,16 @@ public class Separatedigits extends AnalyzedDigit {
 
     @Override
     String hasSameLinesAs1(String line1, int searchminvalue) {
-        return line1.substring(searchminvalue, searchminvalue + ZISE);
+        return line1.substring(searchminvalue, searchminvalue + SIZE);
     }
 
     @Override
     String hasSameLinesAs2(String line2, int searchminvalue) {
-        return line2.substring(searchminvalue, searchminvalue + ZISE);
+        return line2.substring(searchminvalue, searchminvalue + SIZE);
     }
 
     @Override
     String hasSameLinesAs3(String line3, int searchminvalue) {
-        return line3.substring(searchminvalue, searchminvalue + ZISE);
+        return line3.substring(searchminvalue, searchminvalue + SIZE);
     }
 }
