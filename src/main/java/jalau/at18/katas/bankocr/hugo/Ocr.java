@@ -12,4 +12,13 @@ public class Ocr {
         }
         return '?';
     }
+
+    public boolean areErrors(char[] accNum, int colpos) {
+        for (int index = 0; index < colpos; index++) {
+            if (accNum[index] == '?') {
+                return true;
+            }
+        }
+        return false;
+    }
 }

@@ -1,5 +1,7 @@
 package jalau.at18.katas.bankocr.hugo;
 
+import java.util.Arrays;
+
 public class Iterator {
 
     private static final int COLPOS = 9;
@@ -19,24 +21,21 @@ public class Iterator {
         return false;
     }
 
-    public int[] iterate(int[] errNum) {
+    public void iterate(int[] errNum) {
         int[] auxNum = errNum.clone();
-        boolean cycle = true;
-        int pos = 0;
-        do {
+        int goodcounter = 0;
+        for (int pos = 0; pos < COLPOS; pos++) {
+            auxNum = errNum.clone();
             if (isNumberPos(auxNum[pos])) {
                 auxNum[pos] = numPosibilities(auxNum[pos]);
                 if (checker.checkAccountNum(auxNum)) {
-                    errNum[pos] = auxNum[pos];
-                    cycle = false;
-                    return errNum;
+                    System.out.println(Arrays.toString(auxNum));
+                    goodcounter++;
                 } else {
                     auxNum[pos] = errNum[pos];
                 }
             }
-            pos++;
-        } while (cycle && pos < COLPOS);
-        return errNum;
+        }
     }
 
     public int numPosibilities(int error) {
@@ -51,7 +50,7 @@ public class Iterator {
                 error = NUM9;
                 break;
             case NUM5:
-                error = NUM6;
+                error = NUM9;
                 break;
             case NUM6:
                 error = NUM8;

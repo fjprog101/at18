@@ -1,7 +1,5 @@
 package jalau.at18.katas.bankocr.hugo;
 
-import java.util.Arrays;
-
 public class Main {
     private static final int COLUMNS = 27;
     private static final int ROWS = 4;
@@ -12,9 +10,9 @@ public class Main {
     public static void main(String[] args) {
         Digits digit = new Digits();
         Ocr searchNum = new Ocr();
-        NumChecker checker = new NumChecker();
+        Ocr errors = new Ocr();
         Entry aEntry = new Entry();
-        Iterator iter = new Iterator();
+        Result get = new Result();
 
         char[] accNum = new char[COLPOS];
         int[] intAccNum = new int[COLPOS];
@@ -22,6 +20,7 @@ public class Main {
         char[][] entry = aEntry.getEntry();
 
         int ind = 0;
+
         for (int pos = 0; pos < COLUMNS; pos += DIGITCOL) {
             char[][] aDigit = digit.getDigit(entry, pos);
             accNum[ind] = searchNum.getValue(aDigit);
@@ -32,11 +31,7 @@ public class Main {
             intAccNum[index] = Character.getNumericValue(accNum[index]);
         }
 
-        if (checker.checkAccountNum(intAccNum)) {
-            System.out.println(String.copyValueOf(accNum) + " ok");
-        } else {
-            System.out.println(String.copyValueOf(accNum) + " ERR");
-            System.out.println(Arrays.toString(iter.iterate(intAccNum)));
-        }
+        boolean illegible = errors.areErrors(accNum, COLPOS);
+        get.getResult(intAccNum, accNum, illegible);
     }
 }
