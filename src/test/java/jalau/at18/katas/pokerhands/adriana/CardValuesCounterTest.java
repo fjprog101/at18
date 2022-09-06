@@ -2,6 +2,8 @@ package jalau.at18.katas.pokerhands.adriana;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.HashMap;
+
 import org.junit.Test;
 
 public class CardValuesCounterTest {
@@ -39,5 +41,22 @@ public class CardValuesCounterTest {
         CardValuesCount count = counter.getCount();
         assertEquals(2, count.get(CardValue.JACK));
         assertEquals(3, count.get(CardValue.SEVEN));
+    }
+    @Test
+    public void shouldGiveAllValues() {
+        PokerHand handWithGroupsOf2And3 = new PokerHand(new Card[]{
+            new Card(CardValue.JACK, 'C'),
+            new Card(CardValue.JACK, 'D'),
+            new Card(CardValue.SEVEN, 'H'),
+            new Card(CardValue.SEVEN, 'S'),
+            new Card(CardValue.SEVEN, 'C'),
+        });
+
+        CardValuesCounter counter = new CardValuesCounter(handWithGroupsOf2And3);
+        CardValuesCount count = counter.getCount();
+        HashMap <CardValue, Integer> expectedValues = new HashMap <CardValue, Integer>();
+        expectedValues.put(CardValue.JACK, 2);
+        expectedValues.put(CardValue.SEVEN, 3);
+        assertEquals(expectedValues, count.getValuesCount());
     }
 }
