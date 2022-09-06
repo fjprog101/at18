@@ -5,6 +5,7 @@ public class CheckSumResult extends CheckSum {
 
     public CheckSumResult(String line1, String line2, String line3, int sizeValue, int sizenumbers) {
         super(line1, line2, line3, sizeValue, sizenumbers);
+
     }
 
     public String checkSum(int total, int finalresult) {
