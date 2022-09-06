@@ -8,24 +8,24 @@ public class TwoPairIdentifierTest {
     public void shouldIdentifyTwoPair() {
         StraightFlushIdentifier identifier = new StraightFlushIdentifier();
 
-        PokerHand TwoPairHand = new PokerHand(new Card[]{
+        PokerHand twoPairWithDiferentSuit = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.TWO, 'H'),
-            new Card(CardValue.FOUR, 'C'),
-            new Card(CardValue.FOUR, 'H'),
+            new Card(CardValue.FOUR, 'D'),
+            new Card(CardValue.FOUR, 'S'),
             new Card(CardValue.SIX, 'C'),
         });
-        assertTrue(identifier.identify(TwoPairHand));
+        assertTrue(identifier.identify(twoPairWithDiferentSuit));
 
-        PokerHand noConsecutiveValues = new PokerHand(new Card[]{
+        PokerHand twoPairHand = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.TWO, 'H'),
-            new Card(CardValue.TWO, 'D'),
+            new Card(CardValue.ACE, 'D'),
             new Card(CardValue.FIVE, 'C'),
             new Card(CardValue.FIVE, 'H'),
         });
 
-        assertFalse(identifier.identify(noConsecutiveValues));
+        assertTrue(identifier.identify(twoPairHand));
         PokerHand sameSuite = new PokerHand(new Card[]{
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.THREE, 'C'),
