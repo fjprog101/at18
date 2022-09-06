@@ -18,6 +18,10 @@ public class CardValuesCount {
         valuesCount.put(cardValue, existingCount + 1);
     }
 
+    public HashMap<CardValue, Integer> getValuesCards() {
+        return valuesCount;
+    }
+
     public int get(CardValue cardValue) {
         return valuesCount.get(cardValue);
     }
