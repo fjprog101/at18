@@ -19,7 +19,7 @@ public class TwoPairsIdentifier {
                 new Card(CardValue.NINE, 'C'),
         });
         // Twopairidentifier twopairs = new Twopairidentifier();
-        assertTrue(twopairs.identify(handWithGroupsOfTwopairs, CardValue.JACK, CardValue.SEVEN, CardValue.NINE));
+        assertTrue(twopairs.identify(handWithGroupsOfTwopairs, CardValue.JACK, CardValue.SEVEN));
     }
 
     @Test
@@ -33,7 +33,7 @@ public class TwoPairsIdentifier {
                 new Card(CardValue.NINE, 'C'),
         });
         // Twopairidentifier twopairs = new Twopairidentifier();
-        assertFalse(twopairs.identify(handWithGroupsOfTwopairs, CardValue.JACK, CardValue.SEVEN, CardValue.NINE));
+        assertFalse(twopairs.identify(handWithGroupsOfTwopairs, CardValue.JACK, CardValue.SEVEN));
     }
 
 }
