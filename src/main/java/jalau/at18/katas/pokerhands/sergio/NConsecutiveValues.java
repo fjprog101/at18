@@ -15,6 +15,14 @@ public class NConsecutiveValues extends CardsPattern {
 
     @Override
     public boolean match(PokerHand hand) {
+        addCardsToList(hand);
+        if (pairList.size() == timesRepeated) {
+            return true;
+        }
+        return false;
+    }
+
+    public void addCardsToList(PokerHand hand) {
         boolean areSameValueCard = true;
         for (int index = 0; index < hand.getCards().length - 1; index++) {
             areSameValueCard = comparer.haveSameValue(hand.getCards()[index], hand.getCards()[index + 1]);
@@ -25,9 +33,5 @@ public class NConsecutiveValues extends CardsPattern {
                 pairList.add(hand.getCards()[index].getValue());
             }
         }
-        if (pairList.size() == timesRepeated) {
-            return true;
-        }
-        return false;
     }
 }
