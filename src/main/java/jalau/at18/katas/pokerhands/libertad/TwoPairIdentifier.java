@@ -9,7 +9,6 @@ public class TwoPairIdentifier {
 
     public boolean identify(PokerHand hand) {
         TwoPair twoPair = new TwoPair();
-        return pokerHandAnalizer.analize( hand, twoPair);
+        return pokerHandAnalizer.analize(hand, twoPair);
     }
-    
 }
