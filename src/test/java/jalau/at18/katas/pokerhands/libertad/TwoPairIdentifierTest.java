@@ -6,7 +6,7 @@ import org.junit.Test;
 public class TwoPairIdentifierTest {
     @Test
     public void shouldIdentifyTwoPair() {
-        StraightFlushIdentifier identifier = new StraightFlushIdentifier();
+        TwoPairIdentifier identifier = new TwoPairIdentifier();
 
         PokerHand twoPairWithDiferentSuit = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
@@ -34,5 +34,13 @@ public class TwoPairIdentifierTest {
             new Card(CardValue.SEVEN, 'C'),
         });
         assertTrue(identifier.identify(sameSuite));
+        PokerHand noTwoPairHand = new PokerHand(new Card[]{
+            new Card(CardValue.THREE, 'C'),
+            new Card(CardValue.THREE, 'C'),
+            new Card(CardValue.FIVE, 'C'),
+            new Card(CardValue.FIVE, 'C'),
+            new Card(CardValue.FIVE, 'C'),
+        });
+        assertFalse(identifier.identify(noTwoPairHand));
     }
 }
