@@ -1,8 +1,8 @@
 package jalau.at18.katas.pokerhands.sarai;
 
-public class TwoPairs extends CardsPattern {
+public class Pairs extends CardsPattern {
     private int existingCount = 0;
-    private final int pairsnumbers = 4;
+    private final int pairsnumbers = 2;
     private boolean ifTwoPairs = false;
 
     @Override
@@ -15,7 +15,7 @@ public class TwoPairs extends CardsPattern {
         return ifTwoPairs;
     }
     public void pairs(PokerHand hand, CardValuesCount count, int index) {
-        if (count.get(hand.getCards()[index].getValue()) == 2) {
+        if (count.get(hand.getCards()[index].getValue()) == 1) {
             existingCount += 1;
         }
         if (existingCount == pairsnumbers) {

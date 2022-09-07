@@ -12,7 +12,7 @@ public class CardValuesCount {
 
     public void add(CardValue cardValue) {
         int existingCount = 0;
-        if (valuesCount.containsKey(cardValue)) { // valores de la carta
+        if (valuesCount.containsKey(cardValue)) { // valores de la carta kbuscamos
             existingCount = get(cardValue);
         }
         valuesCount.put(cardValue, existingCount + 1); //carta enviada
