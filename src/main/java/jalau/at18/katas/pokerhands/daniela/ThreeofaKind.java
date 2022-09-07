@@ -13,11 +13,11 @@ public class ThreeofaKind extends CardsPattern {
 
     @Override
     public boolean match(PokerHand handWith3SimilarCards) {
-        ThreeKind(handWith3SimilarCards);
-        return ThreeKind(handWith3SimilarCards);
+        threeKind(handWith3SimilarCards);
+        return threeKind(handWith3SimilarCards);
     }
 
-    public boolean ThreeKind(PokerHand hand) {
+    public boolean threeKind(PokerHand hand) {
         CardValuesCounter cardValuesCounter = new CardValuesCounter(hand);
         CardValuesCount count = cardValuesCounter.getCount();
         boolean valueCount1 = (count.get(value1) == threecards) ? true : false;
