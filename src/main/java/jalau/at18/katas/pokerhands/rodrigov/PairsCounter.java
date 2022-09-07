@@ -1,8 +1,6 @@
 package jalau.at18.katas.pokerhands.rodrigov;
-
 import java.util.ArrayList;
 import java.util.HashMap;
-
 public class PairsCounter {
     private ArrayList<CardValue> pairsFoundedArray;
     private PokerHand hand;
@@ -34,5 +32,4 @@ public class PairsCounter {
     public ArrayList<CardValue> getPairsArray() {
         return pairsFoundedArray;
     }
-
 }

@@ -8,32 +8,32 @@ public class HandsTwoPairsTest {
     public void shouldSayIfThereAreTwoPairsInHand() {
         HandsTwoPairs handsTwoPairs = new HandsTwoPairs();
 
-        PokerHand handWithTwoPairs = new PokerHand(new Card[]{
-            new Card(CardValue.TWO, 'C'),
-            new Card(CardValue.TWO, 'C'),
-            new Card(CardValue.FOUR, 'C'),
-            new Card(CardValue.SIX, 'C'),
+        PokerHand twoPairs = new PokerHand(new Card[]{
+            new Card(CardValue.TWO, 'S'),
+            new Card(CardValue.TWO, 'D'),
+            new Card(CardValue.FOUR, 'H'),
+            new Card(CardValue.SIX, 'H'),
             new Card(CardValue.SIX, 'C'),
         });
-        assertTrue(handsTwoPairs.match(handWithTwoPairs));
+        assertTrue(handsTwoPairs.match(twoPairs));
 
-        PokerHand handWithOnePair = new PokerHand(new Card[]{
-            new Card(CardValue.TWO, 'C'),
-            new Card(CardValue.TWO, 'C'),
+        PokerHand onePair = new PokerHand(new Card[]{
+            new Card(CardValue.TWO, 'D'),
+            new Card(CardValue.TWO, 'S'),
             new Card(CardValue.FOUR, 'C'),
             new Card(CardValue.FIVE, 'C'),
-            new Card(CardValue.SIX, 'C'),
+            new Card(CardValue.SIX, 'H'),
         });
-        assertFalse(handsTwoPairs.match(handWithOnePair));
+        assertFalse(handsTwoPairs.match(onePair));
 
-        PokerHand handWithoutPair = new PokerHand(new Card[]{
-            new Card(CardValue.TWO, 'C'),
-            new Card(CardValue.THREE, 'C'),
-            new Card(CardValue.FOUR, 'C'),
-            new Card(CardValue.FIVE, 'C'),
-            new Card(CardValue.SIX, 'C'),
+        PokerHand diferentCards = new PokerHand(new Card[]{
+            new Card(CardValue.TWO, 'S'),
+            new Card(CardValue.THREE, 'H'),
+            new Card(CardValue.FOUR, 'H'),
+            new Card(CardValue.FIVE, 'D'),
+            new Card(CardValue.SIX, 'S'),
         });
-        assertFalse(handsTwoPairs.match(handWithoutPair));
+        assertFalse(handsTwoPairs.match(diferentCards));
 
     }
 }
