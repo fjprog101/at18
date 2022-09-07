@@ -13,19 +13,12 @@ public class TwoPairs extends CardsPattern {
         for (int index = 0; index < hand.getCards().length - 1; index++) {
             isItAPAir(hand, index);
         }
-        return twoPairs(pairCounter);
+        return pairCounter == 2;
     }
 
     public void isItAPAir(PokerHand hand, int index) {
         if (comparer.haveSameValue(hand.getCards()[index], hand.getCards()[index + 1])) {
             pairCounter += 1;
         }
-    }
-
-    public boolean twoPairs(int paircounter) {
-        if (paircounter == 2) {
-            return true;
-        }
-        return false;
     }
 }
