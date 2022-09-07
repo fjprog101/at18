@@ -1,6 +1,8 @@
 package jalau.at18.katas.bankocr.hugo;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Test;
 
 public class OcrTest {
@@ -135,5 +137,23 @@ public class OcrTest {
         int expected = '?';
         int result = number.getValue(numberToSearch);
         assertEquals(expected, result);
+    }
+
+    @Test
+    public void areErrors() {
+        Ocr number = new Ocr();
+        char[] numberToSearch = { '4', '9', '0', '?', '6', '7', '7', '1', '9' };
+        int colpos = 8;
+        boolean result = number.areErrors(numberToSearch, colpos);
+        assertEquals(true, result);
+    }
+
+    @Test
+    public void areNoErrors() {
+        Ocr number = new Ocr();
+        char[] numberToSearch = { '4', '9', '0', '7', '6', '7', '7', '1', '9' };
+        int colpos = 3;
+        boolean result = number.areErrors(numberToSearch, colpos);
+        assertEquals(false, result);
     }
 }
