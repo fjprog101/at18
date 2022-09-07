@@ -1,4 +1,4 @@
-package jalau.at18.katas.pokerhands.joseg;
+package jalau.at18.katas.pokerhands.alvaro;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
