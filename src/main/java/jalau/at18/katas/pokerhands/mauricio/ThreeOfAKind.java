@@ -21,8 +21,8 @@ public class ThreeOfAKind extends CardsPattern {
     public boolean threeOfAKind(PokerHand hand) {
         CardValuesCounter cardValuesCounter = new CardValuesCounter(hand);
         CardValuesCount count = cardValuesCounter.getCount();
-        boolean valueCount1 = (count.get(value1) == three) ? true : false;
-        boolean valueCount2 = (count.get(value2) == one) ? true : false;
+        boolean valueCount1 = (count.get(value1) == three && count.get(value1) != one) ? true : false;
+        boolean valueCount2 = (count.get(value2) == one && count.get(value2) != three) ? true : false;
         return (valueCount1 == valueCount2) && (count.get(value1) != two) && (count.get(value2) != two);
     }
 }

@@ -1,6 +1,6 @@
 package jalau.at18.katas.pokerhands.mauricio;
 
-public class StraightFlushIdentifier {
+public class StraightFlushIdentifier implements IndetifyHand {
 
     private PokerHandAnalizer analizer;
 
