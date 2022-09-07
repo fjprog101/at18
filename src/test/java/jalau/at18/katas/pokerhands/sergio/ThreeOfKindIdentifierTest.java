@@ -8,7 +8,7 @@ import org.junit.Test;
 public class ThreeOfKindIdentifierTest {
     @Test
     public void shouldIdentifyThreeOfKindHand() {
-        ThreeOfKindIdenfier identifier = new ThreeOfKindIdenfier();
+        ThreeOfKindIdentifier identifier = new ThreeOfKindIdentifier();
 
         PokerHand threeOfKindHand = new PokerHand(
                 new Card[] {new Card(CardValue.FOUR, 'C'), new Card(CardValue.FOUR, 'D'), new Card(CardValue.FOUR, 'S'),
