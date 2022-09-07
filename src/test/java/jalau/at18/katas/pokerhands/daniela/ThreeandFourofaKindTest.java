@@ -54,7 +54,7 @@ public class ThreeandFourofaKindTest {
         PokerHand handWithGroupsOfOnepairs = new PokerHand(new Card[] {
                 new Card(CardValue.JACK, 'H'),
                 new Card(CardValue.JACK, 'S'),
-                new Card(CardValue.EIGHT, 'D'),
+                new Card(CardValue.EIGHT, 'S'),
                 new Card(CardValue.SEVEN, 'H'),
                 new Card(CardValue.NINE, 'H'),
         });
