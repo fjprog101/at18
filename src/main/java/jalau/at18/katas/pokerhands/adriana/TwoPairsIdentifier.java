@@ -4,7 +4,7 @@ public class TwoPairsIdentifier extends HandIdentifier {
 
     @Override
     boolean identify(PokerHand hand) {
-        TwoPairsInHand haveTwoPairsInHand = new TwoPairsInHand();
-        return haveTwoPairsInHand.match(hand);
+        PairsCount pairsCount = new PairsCount(hand);
+        return pairsCount.get() == 2;
     }
 }
