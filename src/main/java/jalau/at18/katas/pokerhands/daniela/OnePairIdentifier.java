@@ -10,6 +10,7 @@ public class OnePairIdentifier {
     }
 
     public boolean identify(PokerHand hand) {
+        // Analice this class
         OnePair onepair = new OnePair(value1, value2);
         return analizer.analize(hand, onepair);
     }
