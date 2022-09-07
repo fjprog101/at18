@@ -3,12 +3,12 @@ package jalau.at18.katas.pokerhands.sergio;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NConsecutiveValues extends CardsPattern {
+public class SameValuePattern extends CardsPattern {
     private CardComparer comparer;
     private int timesRepeated;
     private List<CardValue> pairList = new ArrayList<CardValue>();
 
-    public NConsecutiveValues(int timesRepeated) {
+    public SameValuePattern(int timesRepeated) {
         this.timesRepeated = timesRepeated;
         comparer = new CardComparer();
     }

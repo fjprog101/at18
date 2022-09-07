@@ -1,15 +1,15 @@
 package jalau.at18.katas.pokerhands.sergio;
 
-public class TwoPairsIdentifier {
+public class PokerIdentifier {
     private PokerHandAnalizer analizer;
+    private final int fiveTimesRepeated = 5;
 
-    public TwoPairsIdentifier() {
+    public PokerIdentifier() {
         this.analizer = new PokerHandAnalizer();
     }
 
     public boolean identify(PokerHand hand) {
-        SameValuePattern twoConsecutiveValues = new SameValuePattern(2);
+        SameValuePattern twoConsecutiveValues = new SameValuePattern(fiveTimesRepeated);
         return analizer.analize(hand, twoConsecutiveValues);
     }
-
 }
