@@ -5,11 +5,11 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-public class TwoPairsTest {
+public class NumberOfPairsTest {
     @Test
-    public void shouldVerifyIfThereAreTwoPairs() {
+    public void shouldSayIfHandHasNNumberOfPairs() {
         PokerHandAnalizer analizer = new PokerHandAnalizer();
-        TwoPairs twoPairs = new TwoPairs();
+        NumberOfPairs twoPairs = new NumberOfPairs(2);
         PokerHand handWith2Pairs = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.TWO, 'C'),
@@ -19,7 +19,7 @@ public class TwoPairsTest {
         });
         assertTrue(analizer.analize(handWith2Pairs, twoPairs));
 
-        TwoPairs onePair = new TwoPairs();
+        NumberOfPairs onePair = new NumberOfPairs(1);
         PokerHand handWith1Pair = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.TWO, 'C'),
@@ -27,9 +27,9 @@ public class TwoPairsTest {
             new Card(CardValue.FOUR, 'S'),
             new Card(CardValue.SIX, 'S'),
         });
-        assertFalse(analizer.analize(handWith1Pair, onePair));
+        assertTrue(analizer.analize(handWith1Pair, onePair));
 
-        TwoPairs noPair = new TwoPairs();
+        NumberOfPairs noPair = new NumberOfPairs(2);
         PokerHand handWith0Pair = new PokerHand(new Card[]{
             new Card(CardValue.ACE, 'C'),
             new Card(CardValue.TWO, 'C'),
@@ -38,5 +38,8 @@ public class TwoPairsTest {
             new Card(CardValue.SIX, 'S'),
         });
         assertFalse(analizer.analize(handWith0Pair, noPair));
+
+        assertFalse(analizer.analize(handWith2Pairs, onePair));
+        assertFalse(analizer.analize(handWith1Pair, twoPairs));
     }
 }
