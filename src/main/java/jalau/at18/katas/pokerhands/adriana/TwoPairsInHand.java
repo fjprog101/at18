@@ -3,7 +3,7 @@ package jalau.at18.katas.pokerhands.adriana;
 public class TwoPairsInHand extends CardsPattern {
 
     public TwoPairsInHand() {
-        //this.counter = new CardValuesCounter();
+
     }
 
     @Override
