@@ -31,7 +31,7 @@ public class PairIdentifierTest {
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.ACE, 'D'),
             new Card(CardValue.FOUR, 'H'),
-            new Card(CardValue.TWO, 'S'),
+            new Card(CardValue.FOUR, 'S'),
             new Card(CardValue.SIX, 'S'),
         });
         assertTrue(identifypair.identify(handCase3));

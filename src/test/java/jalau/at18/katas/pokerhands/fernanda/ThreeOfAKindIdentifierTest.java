@@ -34,6 +34,14 @@ public class ThreeOfAKindIdentifierTest {
             new Card(CardValue.SIX, 'S'),
         });
         assertFalse(identifyThreeofaKind.identify(handWithoutThreeOfAKind));
+        PokerHand handWithoutThreeOfAKind1 = new PokerHand(new Card[]{
+            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.TWO, 'D'),
+            new Card(CardValue.FOUR, 'H'),
+            new Card(CardValue.QUEEN, 'S'),
+            new Card(CardValue.SIX, 'S'),
+        });
+        assertFalse(identifyThreeofaKind.identify(handWithoutThreeOfAKind1));
     }
 }
 
