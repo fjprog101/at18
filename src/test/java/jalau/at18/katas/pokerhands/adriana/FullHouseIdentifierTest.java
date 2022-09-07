@@ -5,10 +5,10 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-public class ThreeOfAKindIdentifierTest {
+public class FullHouseIdentifierTest {
     @Test
     public void shouldIdentifyStraightFlushHand() {
-        ThreeOfAKindIdentifier identifier = new ThreeOfAKindIdentifier();
+        FullHouseIdentifier identifier = new FullHouseIdentifier();
 
         PokerHand handWithThreeOfAKind = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
@@ -17,7 +17,7 @@ public class ThreeOfAKindIdentifierTest {
             new Card(CardValue.FIVE, 'C'),
             new Card(CardValue.SIX, 'S'),
         });
-        assertTrue(identifier.identify(handWithThreeOfAKind));
+        assertFalse(identifier.identify(handWithThreeOfAKind));
 
         PokerHand handWithThreeOfAKindAndPair = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
@@ -26,15 +26,15 @@ public class ThreeOfAKindIdentifierTest {
             new Card(CardValue.FOUR, 'C'),
             new Card(CardValue.FOUR, 'S'),
         });
-
-        assertFalse(identifier.identify(handWithThreeOfAKindAndPair));
-        PokerHand handWithoutThreeOfAKind = new PokerHand(new Card[]{
+        assertTrue(identifier.identify(handWithThreeOfAKindAndPair));
+        
+        PokerHand handWithoutFullHouse = new PokerHand(new Card[]{
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.FOUR, 'S'),
             new Card(CardValue.FIVE, 'H'),
             new Card(CardValue.SIX, 'D'),
             new Card(CardValue.SEVEN, 'C'),
         });
-        assertFalse(identifier.identify(handWithoutThreeOfAKind));
+        assertFalse(identifier.identify(handWithoutFullHouse));
     }
 }
