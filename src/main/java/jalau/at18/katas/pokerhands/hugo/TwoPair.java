@@ -2,11 +2,12 @@ package jalau.at18.katas.pokerhands.hugo;
 
 public class TwoPair extends CardsPattern {
 
-    private static final int CARDS_WITH_A_PAIR = 4;
-    private int cardsWithPairCounter;
+    private static final int CARDS_IN_PAIRS = 4;
+    private static final int NUMBER_OF_PAIRS = 2;
+    private int counterCardsWithPair;
 
     public TwoPair() {
-        cardsWithPairCounter = 0;
+        counterCardsWithPair = 0;
     }
 
     @Override
@@ -14,13 +15,13 @@ public class TwoPair extends CardsPattern {
         CardValuesCounter counter = new CardValuesCounter(hand);
         CardValuesCount count = counter.getCount();
         countCardsWithAPair(hand, count);
-        return this.cardsWithPairCounter == CARDS_WITH_A_PAIR;
+        return this.counterCardsWithPair == CARDS_IN_PAIRS;
     }
 
     public void countCardsWithAPair(PokerHand hand, CardValuesCount count) {
         for (Card card : hand.getCards()) {
-            if (count.get(card.getValue()) == 2) {
-                this.cardsWithPairCounter++;
+            if (count.get(card.getValue()) == NUMBER_OF_PAIRS) {
+                this.counterCardsWithPair++;
             }
         }
     }
