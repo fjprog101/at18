@@ -8,7 +8,7 @@ import org.junit.Test;
 public class ThreeandFourofaKindTest {
     @Test
     public void shouldReturnTrueThreeOfaKind() {
-        ThreeofaKind three = new ThreeofaKind(CardValue.JACK, CardValue.SEVEN);
+        ThreeofaKindIdentifier three = new ThreeofaKindIdentifier(CardValue.JACK, CardValue.SEVEN);
         PokerHand handWithGroupsOfOnepairs = new PokerHand(new Card[] {
                 new Card(CardValue.JACK, 'H'),
                 new Card(CardValue.JACK, 'S'),
@@ -17,12 +17,12 @@ public class ThreeandFourofaKindTest {
                 new Card(CardValue.NINE, 'H'),
         });
         // Twopairidentifier twopairs = new Twopairidentifier();
-        assertTrue(three.match(handWithGroupsOfOnepairs));
+        assertTrue(three.identify(handWithGroupsOfOnepairs));
     }
 
     @Test
     public void shouldReturnFalseThreeOfaKind() {
-        ThreeofaKind three = new ThreeofaKind(CardValue.JACK, CardValue.SEVEN);
+        ThreeofaKindIdentifier three = new ThreeofaKindIdentifier(CardValue.JACK, CardValue.SEVEN);
         PokerHand handWithGroupsOfOnepairs = new PokerHand(new Card[] {
                 new Card(CardValue.JACK, 'H'),
                 new Card(CardValue.JACK, 'S'),
@@ -31,12 +31,12 @@ public class ThreeandFourofaKindTest {
                 new Card(CardValue.SEVEN, 'H'),
         });
         // Twopairidentifier twopairs = new Twopairidentifier();
-        assertFalse(three.match(handWithGroupsOfOnepairs));
+        assertFalse(three.identify(handWithGroupsOfOnepairs));
     }
 
     @Test
     public void shouldReturnTrueFourOfaKind() {
-        FourofaKind four = new FourofaKind(CardValue.JACK, CardValue.SEVEN);
+        FourodaKindIdentifier four = new FourodaKindIdentifier(CardValue.JACK, CardValue.SEVEN);
         PokerHand handWithGroupsOfOnepairs = new PokerHand(new Card[] {
                 new Card(CardValue.JACK, 'H'),
                 new Card(CardValue.JACK, 'S'),
@@ -44,13 +44,12 @@ public class ThreeandFourofaKindTest {
                 new Card(CardValue.JACK, 'H'),
                 new Card(CardValue.SEVEN, 'H'),
         });
-        // Twopairidentifier twopairs = new Twopairidentifier();
-        assertTrue(four.match(handWithGroupsOfOnepairs));
+        assertTrue(four.identify(handWithGroupsOfOnepairs));
     }
 
     @Test
     public void shouldReturnFalseFourOfaKind() {
-        FourofaKind four = new FourofaKind(CardValue.JACK, CardValue.EIGHT);
+        FourodaKindIdentifier four = new FourodaKindIdentifier(CardValue.JACK, CardValue.EIGHT);
         PokerHand handWithGroupsOfOnepairs = new PokerHand(new Card[] {
                 new Card(CardValue.JACK, 'H'),
                 new Card(CardValue.JACK, 'S'),
@@ -58,7 +57,6 @@ public class ThreeandFourofaKindTest {
                 new Card(CardValue.SEVEN, 'H'),
                 new Card(CardValue.NINE, 'H'),
         });
-        // Twopairidentifier twopairs = new Twopairidentifier();
-        assertFalse(four.match(handWithGroupsOfOnepairs));
+        assertFalse(four.identify(handWithGroupsOfOnepairs));
     }
 }
