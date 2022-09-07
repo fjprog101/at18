@@ -25,4 +25,8 @@ public class CardValuesCount {
     public boolean exists(int count) {
         return valuesCount.containsValue(count);
     }
+
+    public void forEachValue() {
+        valuesCount.forEach((key, value) -> System.out.println(value));
+    }
 }
