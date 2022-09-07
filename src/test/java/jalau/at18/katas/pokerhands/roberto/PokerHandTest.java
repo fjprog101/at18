@@ -1,23 +1,20 @@
 package jalau.at18.katas.pokerhands.roberto;
 
-import jalau.at18.katas.pokerhands.joseg.Card;
-import jalau.at18.katas.pokerhands.joseg.CardValue;
-import jalau.at18.katas.pokerhands.joseg.PokerHand;
-import org.junit.Test;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+
+import org.junit.Test;
 
 public class PokerHandTest {
 
     @Test
     public void shouldHaveFiveCards() {
-        jalau.at18.katas.pokerhands.joseg.PokerHand hand = new PokerHand(new jalau.at18.katas.pokerhands.joseg.Card[] {
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.TWO, 'D'),
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.THREE, 'D'),
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.JACK, 'D'),
-            new jalau.at18.katas.pokerhands.joseg.Card(jalau.at18.katas.pokerhands.joseg.CardValue.TWO, 'C'),
-            new Card(CardValue.TWO, 'C'),
+        PokerHand hand = new PokerHand(new Card[] {
+                new Card(CardValue.TWO, 'D'),
+                new Card(CardValue.THREE, 'D'),
+                new Card(CardValue.JACK, 'D'),
+                new Card(CardValue.TWO, 'C'),
+                new Card(CardValue.TWO, 'C'),
         });
         assertNotNull(hand.getCards());
         assertEquals(5, hand.getCards().length);
