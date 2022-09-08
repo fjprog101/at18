@@ -1,21 +1,20 @@
 package jalau.at18.katas.pokerhands.maria;
 
-public class TwoPairsIdentifier implements PokerHandIdentifier {
+public class PairIdentifier implements PokerHandIdentifier {
     private PokerHandAnalizer analizer;
 
-    public TwoPairsIdentifier() {
+    public PairIdentifier() {
         this.analizer = new PokerHandAnalizer();
     }
 
     @Override
     public boolean identify(PokerHand hand) {
-        CardsWithTwoPairs cardsWithTwoPairs = new CardsWithTwoPairs();
-        return analizer.analize(hand, cardsWithTwoPairs);
+        CardsWithSameValue cardsWithSameValue = new CardsWithSameValue(2);
+        return analizer.analize(hand, cardsWithSameValue);
     }
 
     @Override
     public PokerHandRank getRank(PokerHand hand) {
         return null;
     }
-
 }
