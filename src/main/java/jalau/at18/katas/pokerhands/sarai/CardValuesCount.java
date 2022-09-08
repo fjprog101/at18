@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class CardValuesCount {
 
-    private HashMap<CardValue, Integer> valuesCount;
+    private HashMap<CardValue, Integer> valuesCount; //listas dinamicas  key / valor
 
     public CardValuesCount() {
         valuesCount = new HashMap<CardValue, Integer>();
@@ -12,10 +12,10 @@ public class CardValuesCount {
 
     public void add(CardValue cardValue) {
         int existingCount = 0;
-        if (valuesCount.containsKey(cardValue)) {
+        if (valuesCount.containsKey(cardValue)) { // valores de la carta
             existingCount = get(cardValue);
         }
-        valuesCount.put(cardValue, existingCount + 1);
+        valuesCount.put(cardValue, existingCount + 1); //carta enviada
     }
 
     public int get(CardValue cardValue) {
