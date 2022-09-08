@@ -1,6 +1,6 @@
 package jalau.at18.katas.pokerhands.daniela;
 
-public class Card implements Comparable<Card> {
+public class Card {
 
     private CardValue value;
     private char suit;
@@ -22,13 +22,4 @@ public class Card implements Comparable<Card> {
         return suit;
     }
 
-    @Override
-    public int compareTo(Card c) {
-        if (value.getRealNumberValue() > c.getValue().getRealNumberValue()) {
-            return 1;
-        } else if (value.getRealNumberValue() < c.getValue().getRealNumberValue()) {
-            return -1;
-        }
-        return 0;
-    }
 }
