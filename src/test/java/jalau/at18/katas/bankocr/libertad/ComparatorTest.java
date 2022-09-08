@@ -1,9 +1,7 @@
-package jalau.at18.katas.bankocr.libertadTest;
+package jalau.at18.katas.bankocr.libertad;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
-
-import jalau.at18.katas.bankocr.libertad.Comparator;
 
 public class ComparatorTest {
     @Test

@@ -1,4 +1,4 @@
-package jalau.at18.katas.bankocr.libertadTest;
+package jalau.at18.katas.bankocr.libertad;
 
 import static org.junit.Assert.assertArrayEquals;
 
@@ -6,8 +6,6 @@ import java.io.File;
 import java.io.IOException;
 
 import org.junit.Test;
-
-import jalau.at18.katas.bankocr.libertad.InputReader;
 
 public class InputReaderTest {
     @Test
