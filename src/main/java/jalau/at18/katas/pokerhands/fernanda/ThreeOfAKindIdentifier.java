@@ -9,6 +9,7 @@ public class ThreeOfAKindIdentifier extends Identifier {
 
     public boolean identify(PokerHand hand) {
         ThreeOFAKind threeofaKind = new ThreeOFAKind();
-        return pokerHandAnalizer.analize(hand, threeofaKind);
+        ThreeValuesinHand threevalues = new ThreeValuesinHand();
+        return pokerHandAnalizer.analize(hand, threeofaKind) && pokerHandAnalizer.analize(hand, threevalues);
     }
 }

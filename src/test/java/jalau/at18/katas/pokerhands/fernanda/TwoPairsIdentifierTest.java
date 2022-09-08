@@ -26,6 +26,14 @@ public class TwoPairsIdentifierTest {
             new Card(CardValue.SIX, 'S'),
         });
         assertTrue(identifyTwopairs.identify(handCase2));
+        PokerHand handCase3 = new PokerHand(new Card[]{
+            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.TWO, 'D'),
+            new Card(CardValue.TWO, 'H'),
+            new Card(CardValue.TWO, 'S'),
+            new Card(CardValue.SIX, 'S'),
+        });
+        assertTrue(identifyTwopairs.identify(handCase3));
 
         PokerHand handWithoutTwoPairs = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
