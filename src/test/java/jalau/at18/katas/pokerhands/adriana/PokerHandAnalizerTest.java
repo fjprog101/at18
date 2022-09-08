@@ -88,5 +88,15 @@ public class PokerHandAnalizerTest {
         });
         PokerHandAnalizer analizer7 = new PokerHandAnalizer(onePairHand);
         assertEquals(HandKind.PAIR, analizer7.getHandKind());
+
+        PokerHand noTypeHand = new PokerHand(new Card[]{
+            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.ACE, 'H'),
+            new Card(CardValue.SIX, 'D'),
+            new Card(CardValue.SEVEN, 'S'),
+            new Card(CardValue.JACK, 'C'),
+        });
+        PokerHandAnalizer analizer8 = new PokerHandAnalizer(noTypeHand);
+        assertEquals(HandKind.NONE, analizer8.getHandKind());
     }
 }
