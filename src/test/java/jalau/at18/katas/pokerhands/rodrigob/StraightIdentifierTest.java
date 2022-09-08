@@ -9,7 +9,7 @@ public class StraightIdentifierTest {
 
     @Test
     public void shouldVerifyIfThereIsAStraight() {
-        StraightFlushIdentifier identifier = new StraightFlushIdentifier();
+        StraightIdentifier identifier = new StraightIdentifier();
 
         PokerHand allCardsAreConsecutive = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),

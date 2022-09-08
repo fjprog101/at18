@@ -1,22 +1,29 @@
 package jalau.at18.katas.pokerhands.rodrigob;
 
 public enum HandsValue {
-    STRAIGHTFLUSH(8),
-    FOUROFAKIND(7),
-    FULLHOUSE(6),
-    FLUSH(5),
-    STRAIGHT(4),
-    THREEOFAKIND(3),
-    TWOPAIRS(2),
-    ONEPAIR(1);
 
-    private int handRange;
+    ONEPAIR(1, new OnePairIdentifier()),
+    TWOPAIRS(2, new TwoPairsIdentifier()),
+    THREEOFAKIND(3, new ThreeWithSameValueIdentifier()),
+    STRAIGHT(4, new StraightIdentifier()),
+    FLUSH(5, new FlushIdentifier()),
+    FULLHOUSE(6, new FullHouseIdentifier()),
+    FOUROFAKIND(7, new FourWithSameValueIdentifier()),
+    STRAIGHTFLUSH(8, new StraightFlushIdentifier());
 
-    HandsValue(int handRange) {
-        this.handRange = handRange;
+    private int rank;
+    private HandType handType;
+
+    HandsValue(int rank, HandType handType) {
+        this.rank = rank;
+        this.handType = handType;
     }
 
-    public int getHandRange() {
-        return handRange;
+    public int getRank() {
+        return rank;
+    }
+
+    public HandType getHandType() {
+        return handType;
     }
 }

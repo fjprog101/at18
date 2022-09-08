@@ -1,6 +1,6 @@
 package jalau.at18.katas.pokerhands.rodrigob;
 
-public class FullHouseIdentifier {
+public class FullHouseIdentifier extends HandType {
 
     private static final int CARDS_WITH_SAME_VALUE = 3;
     private PokerHandAnalizer analizer;
@@ -9,6 +9,7 @@ public class FullHouseIdentifier {
         this.analizer = new PokerHandAnalizer();
     }
 
+    @Override
     public boolean identify(PokerHand hand) {
         CardsWithSameValue threeOfAKind = new CardsWithSameValue(CARDS_WITH_SAME_VALUE);
         NumberOfPairs onePair = new NumberOfPairs(1);
