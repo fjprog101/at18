@@ -21,4 +21,8 @@ public class PokerHandAnalizer {
             }
         }
     }
+
+    public int getHighestCard() {
+        return handKind.getIdentifier().getHighest(hand);
+    }
 }

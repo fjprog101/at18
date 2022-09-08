@@ -6,4 +6,8 @@ public class Rank {
         PokerHandAnalizer analizer = new PokerHandAnalizer(hand);
         return analizer.getHandKind().ordinal();
     }
+    public int getHighestCard(PokerHand hand) {
+        PokerHandAnalizer analizer = new PokerHandAnalizer(hand);
+        return analizer.getHighestCard();
+    }
 }

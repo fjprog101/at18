@@ -17,4 +17,11 @@ public class FullHouseIdentifier extends HandIdentifier {
     public HandKind getKind() {
         return HandKind.FULL_HOUSE;
     }
+    @Override
+    public int getHighest(PokerHand hand) {
+        CardValuesCounter counter = new CardValuesCounter(hand);
+        CardValuesCount count = counter.getCount();
+        CardValue repeatedCard = getRepeatedCard(count, THREE_OF_A_KIND);
+        return repeatedCard.get();
+    }
 }

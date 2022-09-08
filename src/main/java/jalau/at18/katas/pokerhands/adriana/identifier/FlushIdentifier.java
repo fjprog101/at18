@@ -4,6 +4,7 @@ import jalau.at18.katas.pokerhands.adriana.*;
 
 
 public class FlushIdentifier extends HandIdentifier {
+    private static final int LAST_CARD = 4;
 
     public FlushIdentifier() {
     }
@@ -18,5 +19,11 @@ public class FlushIdentifier extends HandIdentifier {
     @Override
     public HandKind getKind() {
         return HandKind.FLUSH;
+    }
+
+    @Override
+    public int getHighest(PokerHand hand) {
+        CardValue highestCard = hand.getCards()[LAST_CARD].getValue();
+        return highestCard.get();
     }
 }

@@ -19,4 +19,12 @@ public class FourOfAKindIdentifier extends HandIdentifier {
     public HandKind getKind() {
         return HandKind.FOUR_EQUALS;
     }
+
+    @Override
+    public int getHighest(PokerHand hand) {
+        CardValuesCounter counter = new CardValuesCounter(hand);
+        CardValuesCount count = counter.getCount();
+        CardValue repeatedCard = getRepeatedCard(count, FOUR_OF_A_KIND);
+        return repeatedCard.get();
+    }
 }

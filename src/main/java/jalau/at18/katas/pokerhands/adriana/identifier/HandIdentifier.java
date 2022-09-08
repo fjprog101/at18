@@ -6,4 +6,15 @@ public abstract class HandIdentifier {
 
     public abstract boolean identify(PokerHand hand);
     public abstract HandKind getKind();
+    public abstract int getHighest(PokerHand hand);
+
+    public CardValue getRepeatedCard(CardValuesCount count, int value) {
+        CardValue repeatedCard = CardValue.TWO;
+        for (CardValue key : count.getValuesCount().keySet()) {
+            if (count.get(key) == value && key.get() >= repeatedCard.get()) {
+                repeatedCard = key;
+            }
+        }
+        return repeatedCard;
+    }
 }

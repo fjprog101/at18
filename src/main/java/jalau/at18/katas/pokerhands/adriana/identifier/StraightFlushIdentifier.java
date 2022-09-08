@@ -3,6 +3,7 @@ package jalau.at18.katas.pokerhands.adriana.identifier;
 import jalau.at18.katas.pokerhands.adriana.*;
 
 public class StraightFlushIdentifier extends HandIdentifier {
+    private static final int LAST_CARD = 4;
 
     public StraightFlushIdentifier() {
     }
@@ -16,5 +17,11 @@ public class StraightFlushIdentifier extends HandIdentifier {
     @Override
     public HandKind getKind() {
         return HandKind.STRAIGHT_FLUSH;
+    }
+
+    @Override
+    public int getHighest(PokerHand hand) {
+        CardValue highestCard = hand.getCards()[LAST_CARD].getValue();
+        return highestCard.get();
     }
 }

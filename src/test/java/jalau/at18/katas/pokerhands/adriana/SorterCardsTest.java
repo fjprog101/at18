@@ -1,6 +1,5 @@
 package jalau.at18.katas.pokerhands.adriana;
 
-import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;

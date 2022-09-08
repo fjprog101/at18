@@ -36,4 +36,36 @@ public class RankTest {
         });
         assertEquals(0, rankHand.getRank(noTypeHand));
     }
+
+    @Test
+    public void shouldReturnTheHighestCard() {
+        Rank rankHand = new Rank();
+
+        PokerHand noTypeHand = new PokerHand("White", new Card[]{
+            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.THREE, 'S'),
+            new Card(CardValue.ACE, 'C'),
+            new Card(CardValue.FOUR, 'H'),
+            new Card(CardValue.JACK, 'D'),
+        });
+        assertEquals(14, rankHand.getHighestCard(noTypeHand));
+
+        PokerHand straightFlushHand = new PokerHand("White", new Card[]{
+            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.THREE, 'C'),
+            new Card(CardValue.FOUR, 'C'),
+            new Card(CardValue.FIVE, 'C'),
+            new Card(CardValue.SIX, 'C'),
+        });
+        assertEquals(6, rankHand.getHighestCard(straightFlushHand));
+
+        PokerHand straightHand = new PokerHand("White", new Card[]{
+            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.THREE, 'C'),
+            new Card(CardValue.FOUR, 'H'),
+            new Card(CardValue.THREE, 'C'),
+            new Card(CardValue.SIX, 'C'),
+        });
+        assertEquals(3, rankHand.getHighestCard(straightHand));
+    }
 }
