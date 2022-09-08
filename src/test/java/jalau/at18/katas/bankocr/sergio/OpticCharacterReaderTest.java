@@ -10,62 +10,62 @@ public class OpticCharacterReaderTest {
     public void shouldReturnNumberOne() {
         char[][] numberOcrTest = new char[][] {{' ', ' ', ' ' }, {' ', ' ', '|' }, {' ', ' ', '|' } };
         OpticCharacterReader ocr = new OpticCharacterReader();
-        assertEquals(1, ocr.numberOne(numberOcrTest));
+        assertEquals(1, ocr.analizeSingleNumbers(numberOcrTest));
     }
 
     @Test
     public void shouldReturnNumberTwo() {
         char[][] numberOcrTest = new char[][] {{' ', '_', ' ' }, {' ', '_', '|' }, {'|', '_', ' ' } };
         OpticCharacterReader ocr = new OpticCharacterReader();
-        assertEquals(2, ocr.numberTwo(numberOcrTest));
+        assertEquals(2, ocr.analizeSingleNumbers(numberOcrTest));
     }
 
     @Test
     public void shouldReturnNumberThree() {
         char[][] numberOcrTest = new char[][] {{' ', '_', ' ' }, {' ', '_', '|' }, {' ', '_', '|' } };
         OpticCharacterReader ocr = new OpticCharacterReader();
-        assertEquals(3, ocr.numberThree(numberOcrTest));
+        assertEquals(3, ocr.analizeSingleNumbers(numberOcrTest));
     }
 
     @Test
     public void shouldReturnNumberFour() {
         char[][] numberOcrTest = new char[][] {{' ', ' ', ' ' }, {'|', '_', '|' }, {' ', ' ', '|' } };
         OpticCharacterReader ocr = new OpticCharacterReader();
-        assertEquals(4, ocr.numberFour(numberOcrTest));
+        assertEquals(4, ocr.analizeSingleNumbers(numberOcrTest));
     }
 
     @Test
     public void shouldReturnNumberFive() {
         char[][] numberOcrTest = new char[][] {{' ', '_', ' ' }, {'|', '_', ' ' }, {' ', '_', '|' } };
         OpticCharacterReader ocr = new OpticCharacterReader();
-        assertEquals(5, ocr.numberFive(numberOcrTest));
+        assertEquals(5, ocr.analizeSingleNumbers(numberOcrTest));
     }
 
     @Test
     public void shouldReturnNumberSix() {
         char[][] numberOcrTest = new char[][] {{' ', '_', ' ' }, {'|', '_', ' ' }, {'|', '_', '|' } };
         OpticCharacterReader ocr = new OpticCharacterReader();
-        assertEquals(6, ocr.numberSix(numberOcrTest));
+        assertEquals(6, ocr.analizeSingleNumbers(numberOcrTest));
     }
 
     @Test
     public void shouldReturnNumberSeven() {
         char[][] numberOcrTest = new char[][] {{' ', '_', ' ' }, {' ', ' ', '|' }, {' ', ' ', '|' } };
         OpticCharacterReader ocr = new OpticCharacterReader();
-        assertEquals(7, ocr.numberSeven(numberOcrTest));
+        assertEquals(7, ocr.analizeSingleNumbers(numberOcrTest));
     }
 
     @Test
     public void shouldReturnNumberEight() {
         char[][] numberOcrTest = new char[][] {{' ', '_', ' ' }, {'|', '_', '|' }, {'|', '_', '|' } };
         OpticCharacterReader ocr = new OpticCharacterReader();
-        assertEquals(8, ocr.numberEight(numberOcrTest));
+        assertEquals(8, ocr.analizeSingleNumbers(numberOcrTest));
     }
 
     @Test
     public void shouldReturnNumberNine() {
         char[][] numberOcrTest = new char[][] {{' ', '_', ' ' }, {'|', '_', '|' }, {' ', '_', '|' } };
         OpticCharacterReader ocr = new OpticCharacterReader();
-        assertEquals(9, ocr.numberNine(numberOcrTest));
+        assertEquals(9, ocr.analizeSingleNumbers(numberOcrTest));
     }
 }
