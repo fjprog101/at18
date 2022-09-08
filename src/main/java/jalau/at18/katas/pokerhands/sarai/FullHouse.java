@@ -14,20 +14,17 @@ public class FullHouse extends CardsPattern {
         CardValuesCount count = counter.getCount();
         for (int index = 0; index < hand.getCards().length; index++) {
             pairs(hand, count, index);
-            
         }
         comparer(count);
-        return ifFullHouse == ifFullHouseTwo; //ambos verdaderos
+        return ifFullHouse == ifFullHouseTwo;
     }
     public void pairs(PokerHand hand, CardValuesCount count, int index) {
-        if (count.get(hand.getCards()[index].getValue()) == pairsnumbersthree) {
+        if (count.get(hand.getCards()[index].getValue()) == pairsnumbersthree && count.get(hand.getCards()[index].getValue()) == pairsnumberstwo) {
             existingCount += 1;
-        } if (count.get(hand.getCards()[index].getValue()) == pairsnumberstwo) {
             existingCountTwo += 1;
         }
-        
     }
-    public void comparer(CardValuesCount count){
+    public void comparer(CardValuesCount count) {
         if (count.exists(pairsnumbersthree)) {
             ifFullHouse = true;
         }
@@ -36,5 +33,4 @@ public class FullHouse extends CardsPattern {
         }
     }
 }
-
 

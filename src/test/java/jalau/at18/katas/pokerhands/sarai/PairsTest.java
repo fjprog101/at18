@@ -9,7 +9,7 @@ public class PairsTest {
     @Test
     public void OnePairs() {
 
-        Pairs two_pairs= new Pairs();
+        Pairs pairs= new Pairs();
         PokerHand OnePairshand = new PokerHand(new Card[] {
             new Card(CardValue.THREE, 'D'),
             new Card(CardValue.THREE, 'D'),
@@ -17,8 +17,9 @@ public class PairsTest {
             new Card(CardValue.FOUR, 'C'),
             new Card(CardValue.TWO, 'H'),
         });
-        assertTrue(two_pairs.match(OnePairshand));
+        assertTrue(pairs.match(OnePairshand));
 
+        Pairs pairs2= new Pairs();
         PokerHand OnePairshandwithtoFour = new PokerHand(new Card[] {
             new Card(CardValue.THREE, 'D'),
             new Card(CardValue.FOUR, 'D'),
@@ -26,13 +27,13 @@ public class PairsTest {
             new Card(CardValue.FOUR, 'C'),
             new Card(CardValue.TWO, 'H'),
         });
-        assertTrue(two_pairs.match(OnePairshandwithtoFour));
+        assertTrue(pairs2.match(OnePairshandwithtoFour));
     }
 
     @Test
     public void OnePairsFalse() {
 
-        Pairs two_pairs = new Pairs();
+        Pairs pairs = new Pairs();
         PokerHand OnePairshand = new PokerHand(new Card[] {
             new Card(CardValue.THREE, 'D'),
             new Card(CardValue.THREE, 'D'),
@@ -40,8 +41,9 @@ public class PairsTest {
             new Card(CardValue.FOUR, 'C'),
             new Card(CardValue.TWO, 'H'),
         });
-        assertFalse(two_pairs.match(OnePairshand));
+        assertFalse(pairs.match(OnePairshand));
 
+        Pairs pairs1 = new Pairs();
         PokerHand Pairshand = new PokerHand(new Card[] {
             new Card(CardValue.THREE, 'D'),
             new Card(CardValue.TWO, 'H'),
@@ -49,6 +51,6 @@ public class PairsTest {
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.TWO, 'H'),
         });
-        assertFalse(two_pairs.match(Pairshand));
+        assertFalse(pairs1.match(Pairshand));
     }
 }

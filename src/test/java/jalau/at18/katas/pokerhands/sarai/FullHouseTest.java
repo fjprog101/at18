@@ -29,7 +29,7 @@ public class FullHouseTest {
         });
         assertTrue(full2.match(FullHousehand2));
     }
-    
+
     @Test
     public void fullHouseFalse() {
 
@@ -52,16 +52,6 @@ public class FullHouseTest {
             new Card(CardValue.SIX, 'H'),
         });
         assertFalse(fullfalse2.match(FullHousehandfalse2));
-
-        FullHouse fullfalse3 = new FullHouse();
-        PokerHand FullHousehandfalse3 = new PokerHand(new Card[] {
-            new Card(CardValue.FIVE, 'D'),
-            new Card(CardValue.FIVE, 'D'),
-            new Card(CardValue.FIVE, 'S'),
-            new Card(CardValue.FIVE, 'C'),
-            new Card(CardValue.FIVE, 'H'),
-        });
-        assertFalse(fullfalse3.match(FullHousehandfalse3));
     }
 
 }
