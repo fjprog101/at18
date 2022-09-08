@@ -7,7 +7,7 @@ import org.junit.Test;
 public class FullHouseTest {
     @Test
     public void shouldIdentifyFullHouseHandCase1() {
-        FullHouseidentify identifier = new FullHouseidentify(CardValue.THREE, CardValue.FIVE);
+        FullHouseidentify identifier = new FullHouseidentify();
 
         PokerHand FullHouse = new PokerHand(new Card[] {
                 new Card(CardValue.THREE, 'H'),
@@ -21,7 +21,7 @@ public class FullHouseTest {
 
     @Test
     public void shouldIdentifyFullHouseHandCase2() {
-        FullHouseidentify identifier = new FullHouseidentify(CardValue.FIVE, CardValue.THREE);
+        FullHouseidentify identifier = new FullHouseidentify();
 
         PokerHand FullHouse = new PokerHand(new Card[] {
                 new Card(CardValue.THREE, 'H'),
@@ -35,7 +35,7 @@ public class FullHouseTest {
 
     @Test
     public void shouldIdentifyFalseFullHouseHand() {
-        FullHouseidentify identifier = new FullHouseidentify(CardValue.NINE, CardValue.THREE);
+        FullHouseidentify identifier = new FullHouseidentify();
 
         PokerHand FullHouse = new PokerHand(new Card[] {
                 new Card(CardValue.TWO, 'C'),

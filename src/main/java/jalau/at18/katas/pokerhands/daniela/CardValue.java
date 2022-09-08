@@ -24,4 +24,8 @@ public enum CardValue {
     public CardValue next() {
         return next;
     }
+
+    public int getRealNumberValue() {
+        return 0;
+    }
 }

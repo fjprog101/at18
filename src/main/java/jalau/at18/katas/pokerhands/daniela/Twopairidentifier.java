@@ -13,4 +13,9 @@ public class Twopairidentifier extends CompareGame {
         return analizer.analize(hand, twopairs);
     }
 
+    @Override
+    Rank getidentifyPokerhand() {
+        return Rank.TWOPAIRS;
+    }
+
 }

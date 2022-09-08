@@ -12,4 +12,9 @@ public class Flush extends CompareGame {
         AllSameSuit allSameSuit = new AllSameSuit();
         return analizer.analize(hand, allSameSuit);
     }
+
+    @Override
+    Rank getidentifyPokerhand() {
+        return Rank.FLUSH;
+    }
 }

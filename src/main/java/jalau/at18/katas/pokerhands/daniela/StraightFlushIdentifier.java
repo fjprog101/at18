@@ -14,4 +14,9 @@ public class StraightFlushIdentifier extends CompareGame {
         ConsecutiveValues consecutiveValues = new ConsecutiveValues();
         return analizer.analize(hand, allSameSuit) && analizer.analize(hand, consecutiveValues);
     }
+
+    @Override
+    Rank getidentifyPokerhand() {
+        return Rank.STRAIGHTFLUSH;
+    }
 }

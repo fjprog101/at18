@@ -35,31 +35,20 @@ public class TwoPairsIdentifier {
         assertFalse(twopairs.identify(handWithGroupsOfTwopairs));
     }
 
-    @Test
-    public void shouldReturnOnePair() {
-        OnePairIdentifier onepair = new OnePairIdentifier(CardValue.JACK, CardValue.EIGHT);
-        PokerHand handWithGroupsOfOnepairs = new PokerHand(new Card[] {
-                new Card(CardValue.JACK, 'H'),
-                new Card(CardValue.JACK, 'H'),
-                new Card(CardValue.EIGHT, 'D'),
-                new Card(CardValue.SEVEN, 'S'),
-                new Card(CardValue.NINE, 'C'),
-        });
-        // Twopairidentifier twopairs = new Twopairidentifier();
-        assertTrue(onepair.identify(handWithGroupsOfOnepairs));
-    }
+    /*
+     * @Test
+     * public void shouldReturnHighCard() {
+     * HighCard twopairs = new HighCard();
+     * PokerHand handWithGroupsOfTwopairs = new PokerHand(new Card[] {
+     * new Card(CardValue.TWO, 'H'),
+     * new Card(CardValue.THREE, 'D'),
+     * new Card(CardValue.FOUR, 'D'),
+     * new Card(CardValue.FIVE, 'S'),
+     * new Card(CardValue.SIX, 'C'),
+     * });
+     * // Twopairidentifier twopairs = new Twopairidentifier();
+     * assertFalse(twopairs.oneHighCard(handWithGroupsOfTwopairs));
+     * }
+     */
 
-    @Test
-    public void shouldReturnFalseOnePair() {
-        OnePairIdentifier onepair = new OnePairIdentifier(CardValue.JACK, CardValue.SEVEN);
-        PokerHand handWithGroupsOfOnepairs = new PokerHand(new Card[] {
-                new Card(CardValue.JACK, 'H'),
-                new Card(CardValue.JACK, 'S'),
-                new Card(CardValue.SEVEN, 'D'),
-                new Card(CardValue.SEVEN, 'H'),
-                new Card(CardValue.NINE, 'H'),
-        });
-        // Twopairidentifier twopairs = new Twopairidentifier();
-        assertFalse(onepair.identify(handWithGroupsOfOnepairs));
-    }
 }

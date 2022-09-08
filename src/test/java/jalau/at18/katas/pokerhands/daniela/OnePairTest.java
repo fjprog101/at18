@@ -8,7 +8,7 @@ import org.junit.Test;
 public class OnePairTest {
     @Test
     public void shouldReturnOnePair() {
-        OnePairIdentifier onepair = new OnePairIdentifier(CardValue.JACK, CardValue.EIGHT);
+        OnePairIdentifier onepair = new OnePairIdentifier();
         PokerHand handWithGroupsOfOnepairs = new PokerHand(new Card[] {
                 new Card(CardValue.JACK, 'H'),
                 new Card(CardValue.JACK, 'H'),
@@ -22,12 +22,12 @@ public class OnePairTest {
 
     @Test
     public void shouldReturnFalseOnePair() {
-        OnePairIdentifier onepair = new OnePairIdentifier(CardValue.JACK, CardValue.SEVEN);
+        OnePairIdentifier onepair = new OnePairIdentifier();
         PokerHand handWithGroupsOfOnepairs = new PokerHand(new Card[] {
                 new Card(CardValue.JACK, 'H'),
-                new Card(CardValue.JACK, 'S'),
+                new Card(CardValue.QUEEN, 'S'),
                 new Card(CardValue.SEVEN, 'D'),
-                new Card(CardValue.SEVEN, 'H'),
+                new Card(CardValue.EIGHT, 'H'),
                 new Card(CardValue.NINE, 'H'),
         });
         // Twopairidentifier twopairs = new Twopairidentifier();

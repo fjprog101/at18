@@ -12,4 +12,9 @@ public class Straightidentify extends CompareGame {
         ConsecutiveValues consecutiveValues = new ConsecutiveValues();
         return analizer.analize(hand, consecutiveValues);
     }
+
+    @Override
+    Rank getidentifyPokerhand() {
+        return Rank.STRAIGHT;
+    }
 }

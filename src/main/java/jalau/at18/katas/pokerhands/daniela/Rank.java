@@ -1,23 +1,30 @@
 package jalau.at18.katas.pokerhands.daniela;
 
 public enum Rank {
-    HIGHCARD('1'),
-    PAIR('2'),
-    TWOPAIRS('3'),
-    THREEOFAKIND('4'),
-    STRAIGHT('5'),
-    FLUSH('6'),
-    FULLHOUSE('7'),
-    FOUROFAKIND('8'),
-    STRAIGHTFLUSH('9');
+    // HIGHCARD(),
+    PAIR(new OnePairIdentifier(), '2'),
+    TWOPAIRS(new Twopairidentifier(), '3'),
+    THREEOFAKIND(new ThreeofaKindIdentifier(), '4'),
+    STRAIGHT(new Straightidentify(), '5'),
+    FLUSH(new Flush(), '6'),
+    FULLHOUSE(new FullHouseidentify(), '7'),
+    FOUROFAKIND(new FourodaKindIdentifier(), '8'),
+    STRAIGHTFLUSH(new StraightFlushIdentifier(), '9');
 
-    private final char rankpokerhand;
+    private CompareGame comparegame;
+    private char score;
 
-    Rank(char charValue) {
-        this.rankpokerhand = charValue;
+    Rank(CompareGame comparegame, char score) {
+        this.comparegame = comparegame;
+        this.score = score;
     }
 
-    public char getCharValue() {
-        return rankpokerhand;
+    public CompareGame getidentifyPokerhand() {
+        return comparegame;
     }
+
+    public char getScore() {
+        return score;
+    }
+
 }
