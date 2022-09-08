@@ -26,7 +26,7 @@ public class CardValuesCount {
         return valuesCount.containsValue(count);
     }
 
-    public void forEachValue() {
-        valuesCount.forEach((key, value) -> System.out.println(value));
+    public int sizeOfGroup() {
+        return valuesCount.size();
     }
 }
