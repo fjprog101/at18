@@ -69,8 +69,8 @@ public class FourOfAKindIdentifierTest {
         assertFalse(identifier.identify(noFourOfAKindHand));
         PokerHand pokerHand = new PokerHand(new Card[]{
             new Card(CardValue.SEVEN, 'C'),
-            new Card(CardValue.SEVEN, 'S'),
-            new Card(CardValue.SEVEN, 'H'),
+            new Card(CardValue.ACE, 'S'),
+            new Card(CardValue.TWO, 'H'),
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.THREE, 'D'),
         });
