@@ -1,12 +1,7 @@
 package jalau.at18.katas.pokerhands.daniela;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
 public class HighCard extends CardsPattern {
-    private final int HighCard = 1;
-    private char suit;
+    private final int highCard = 1;
 
     public HighCard() {
         // this.value1 = value1;
@@ -22,7 +17,7 @@ public class HighCard extends CardsPattern {
     public boolean highCard(PokerHand hand) {
         CardValuesCounter cardValuesCounter = new CardValuesCounter(hand);
         CardValuesCount count = cardValuesCounter.getCount();
-        return count.exists(HighCard) && count.exists(HighCard) && count.exists(HighCard) && count.exists(HighCard);
+        return count.exists(highCard) && count.exists(highCard) && count.exists(highCard) && count.exists(highCard);
     }
     /*
      * public boolean oneHighCard(PokerHand hand) {

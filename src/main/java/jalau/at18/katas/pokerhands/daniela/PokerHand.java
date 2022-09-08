@@ -1,7 +1,5 @@
 package jalau.at18.katas.pokerhands.daniela;
 
-import java.util.Arrays;
-
 public class PokerHand {
 
     private Card[] cards;
