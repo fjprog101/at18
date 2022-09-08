@@ -1,45 +1,45 @@
 package jalau.at18.katas.pokerhands.roberto;
 
-import jalau.at18.katas.pokerhands.joseg.CardValue;
-import jalau.at18.katas.pokerhands.joseg.CardValuesCount;
-import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
-import static org.junit.Assert.*;
+import org.junit.Test;
 
 public class CardValuesCountTest {
 
     @Test
     public void shouldHaveCountsPerCardValue() {
-        jalau.at18.katas.pokerhands.joseg.CardValuesCount count = new jalau.at18.katas.pokerhands.joseg.CardValuesCount();
-        count.add(jalau.at18.katas.pokerhands.joseg.CardValue.ACE);
-        count.add(jalau.at18.katas.pokerhands.joseg.CardValue.JACK);
-        count.add(jalau.at18.katas.pokerhands.joseg.CardValue.FIVE);
+        CardValuesCount count = new CardValuesCount();
+        count.add(CardValue.ACE);
+        count.add(CardValue.JACK);
+        count.add(CardValue.FIVE);
 
-        assertEquals(1, count.get(jalau.at18.katas.pokerhands.joseg.CardValue.ACE));
-        assertEquals(1, count.get(jalau.at18.katas.pokerhands.joseg.CardValue.JACK));
-        assertEquals(1, count.get(jalau.at18.katas.pokerhands.joseg.CardValue.FIVE));
+        assertEquals(1, count.get(CardValue.ACE));
+        assertEquals(1, count.get(CardValue.JACK));
+        assertEquals(1, count.get(CardValue.FIVE));
     }
 
     @Test
     public void shouldIncrementCountForExistingCardValue() {
-        jalau.at18.katas.pokerhands.joseg.CardValuesCount count = new jalau.at18.katas.pokerhands.joseg.CardValuesCount();
-        count.add(jalau.at18.katas.pokerhands.joseg.CardValue.ACE);
-        count.add(jalau.at18.katas.pokerhands.joseg.CardValue.ACE);
-        count.add(jalau.at18.katas.pokerhands.joseg.CardValue.ACE);
-        count.add(jalau.at18.katas.pokerhands.joseg.CardValue.JACK);
-        count.add(jalau.at18.katas.pokerhands.joseg.CardValue.JACK);
+        CardValuesCount count = new CardValuesCount();
+        count.add(CardValue.ACE);
+        count.add(CardValue.ACE);
+        count.add(CardValue.ACE);
+        count.add(CardValue.JACK);
+        count.add(CardValue.JACK);
 
-        assertEquals(3, count.get(jalau.at18.katas.pokerhands.joseg.CardValue.ACE));
-        assertEquals(2, count.get(jalau.at18.katas.pokerhands.joseg.CardValue.JACK));
+        assertEquals(3, count.get(CardValue.ACE));
+        assertEquals(2, count.get(CardValue.JACK));
     }
 
     @Test
     public void shouldSayIfACountExists() {
-        jalau.at18.katas.pokerhands.joseg.CardValuesCount count = new CardValuesCount();
-        count.add(jalau.at18.katas.pokerhands.joseg.CardValue.ACE);
-        count.add(jalau.at18.katas.pokerhands.joseg.CardValue.ACE);
-        count.add(jalau.at18.katas.pokerhands.joseg.CardValue.ACE);
-        count.add(jalau.at18.katas.pokerhands.joseg.CardValue.JACK);
+        CardValuesCount count = new CardValuesCount();
+        count.add(CardValue.ACE);
+        count.add(CardValue.ACE);
+        count.add(CardValue.ACE);
+        count.add(CardValue.JACK);
         count.add(CardValue.JACK);
 
         assertTrue(count.exists(3));
