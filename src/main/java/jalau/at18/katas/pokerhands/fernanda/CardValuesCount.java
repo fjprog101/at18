@@ -25,4 +25,7 @@ public class CardValuesCount {
     public boolean exists(int count) {
         return valuesCount.containsValue(count);
     }
+    public int sizeOfGroup() {
+        return valuesCount.size();
+    }
 }
