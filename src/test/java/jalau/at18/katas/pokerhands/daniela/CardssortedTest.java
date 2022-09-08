@@ -57,4 +57,19 @@ public class CardssortedTest {
         CardstoString count = counter.getCount();
         assertEquals("1110767", count.get(CardValue.JACK));
     }
+
+    @Test
+    public void shouldReturntheScore() {
+        PokerHand handWithGroupsOf2And3 = new PokerHand(new Card[] {
+                new Card(CardValue.JACK, 'C'),
+                new Card(CardValue.TEN, 'D'),
+                new Card(CardValue.SEVEN, 'H'),
+                new Card(CardValue.SIX, 'S'),
+                new Card(CardValue.SEVEN, 'C'),
+        });
+
+        Cardssorted counter = new Cardssorted(handWithGroupsOf2And3);
+        CardstoString count = counter.getCount();
+        assertEquals(23, count.highCard(CardValue.JACK));
+    }
 }
