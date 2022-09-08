@@ -18,6 +18,24 @@ public class FullHouseTest {
             new Card(CardValue.SIX, 'C'),
         });
         assertFalse(identifier.identify(FullHouseHand));
+
+        PokerHand twoGroupHand = new PokerHand(new Card[]{
+            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.TWO, 'H'),
+            new Card(CardValue.TWO, 'D'),
+            new Card(CardValue.TWO, 'S'),
+            new Card(CardValue.SIX, 'C'),
+        });
+        assertFalse(identifier.identify(twoGroupHand));
+        
+        PokerHand allDiferrentCardsHand = new PokerHand(new Card[]{
+            new Card(CardValue.FOUR, 'C'),
+            new Card(CardValue.EIGHT, 'H'),
+            new Card(CardValue.KING, 'D'),
+            new Card(CardValue.TWO, 'S'),
+            new Card(CardValue.SIX, 'C'),
+        });
+        assertFalse(identifier.identify(allDiferrentCardsHand));
     }
     @Test
     public void identifyWhenExistFullHouseHand() {
