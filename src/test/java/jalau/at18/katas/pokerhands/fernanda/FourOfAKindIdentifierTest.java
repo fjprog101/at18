@@ -26,6 +26,14 @@ public class FourOfAKindIdentifierTest {
             new Card(CardValue.SIX, 'S'),
         });
         assertTrue(identifyFourofaKind.identify(handCase2));
+        PokerHand handCase3 = new PokerHand(new Card[]{
+            new Card(CardValue.SIX, 'C'),
+            new Card(CardValue.SIX, 'D'),
+            new Card(CardValue.KING, 'H'),
+            new Card(CardValue.SIX, 'S'),
+            new Card(CardValue.SIX, 'S'),
+        });
+        assertTrue(identifyFourofaKind.identify(handCase3));
 
         PokerHand handWithoutFourOfAKind = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
@@ -43,5 +51,21 @@ public class FourOfAKindIdentifierTest {
             new Card(CardValue.SIX, 'S'),
         });
         assertFalse(identifyFourofaKind.identify(handWithoutFourOfAKind1));
+        PokerHand handWithoutFourOfAKind2 = new PokerHand(new Card[]{
+            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.ACE, 'D'),
+            new Card(CardValue.FOUR, 'H'),
+            new Card(CardValue.QUEEN, 'S'),
+            new Card(CardValue.SIX, 'S'),
+        });
+        assertFalse(identifyFourofaKind.identify(handWithoutFourOfAKind2));
+        PokerHand handWithoutFourOfAKind3 = new PokerHand(new Card[]{
+            new Card(CardValue.ACE, 'C'),
+            new Card(CardValue.ACE, 'D'),
+            new Card(CardValue.ACE, 'H'),
+            new Card(CardValue.ACE, 'S'),
+            new Card(CardValue.ACE, 'S'),
+        });
+        assertFalse(identifyFourofaKind.identify(handWithoutFourOfAKind3));
     }
 }
