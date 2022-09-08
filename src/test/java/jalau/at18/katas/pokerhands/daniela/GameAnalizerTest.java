@@ -45,6 +45,6 @@ public class GameAnalizerTest {
                 new Card(CardValue.SIX, 'C'),
         });
         GameAnalizer analizer = new GameAnalizer(straightFlushHand);
-        assertEquals('9', analizer.getscore());
+        assertEquals(9, analizer.getscore());
     }
 }

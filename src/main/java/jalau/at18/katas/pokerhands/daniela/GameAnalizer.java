@@ -4,7 +4,7 @@ public class GameAnalizer {
 
     private Rank comparegame;
     private PokerHand hand;
-    private char finalscore;
+    private int finalscore;
 
     public GameAnalizer(PokerHand hand) {
         this.hand = hand;
@@ -15,7 +15,7 @@ public class GameAnalizer {
         return comparegame;
     }
 
-    public char getscore() {
+    public int getscore() {
         return finalscore;
     }
 
