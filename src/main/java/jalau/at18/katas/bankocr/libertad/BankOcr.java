@@ -6,22 +6,23 @@ import java.util.List;
 public class BankOcr {
     private final int numberHexadecimal = 16;
     private List<String[]> numbers;
+    private DigitValidator digitValidator;
     public BankOcr(InputNumber input) throws IOException {
         numbers = input.getSeparateHasNumbers();
+        digitValidator = new DigitValidator();
     }
 
     public String readNumbers() {
         String number = "";
         for (int index = 0; index < numbers.size(); index++) {
-            number += getValueOfNumber(index);
+            number += getValueOfNumber(numbers.get(index));
         }
         return number;
     }
 
-    private char getValueOfNumber(int index) {
-        DigitValidator digitValidator = new DigitValidator();
-        if (digitValidator.existInTheRank(numbers.get(index))) {
-            int valueNumber = digitValidator.getDigit().getValue();
+    private char getValueOfNumber(String[] input) {
+        if (digitValidator.existInTheRank(input)) {
+            int valueNumber = digitValidator.getDigitValue(input);
             return Character.forDigit(valueNumber, numberHexadecimal);
         }
         return '?';
