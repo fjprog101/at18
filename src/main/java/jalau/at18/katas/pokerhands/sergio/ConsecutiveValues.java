@@ -16,5 +16,4 @@ public class ConsecutiveValues extends CardsPattern {
         }
         return areConsecutive;
     }
-
 }
