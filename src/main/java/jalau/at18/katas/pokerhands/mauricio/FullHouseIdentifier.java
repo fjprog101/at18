@@ -12,7 +12,8 @@ public class FullHouseIdentifier implements IndetifyHand {
     }
 
     public boolean identify(PokerHand hand) {
+        AllSameSuit allSameSuit = new AllSameSuit();
         FullHouse fullHouse = new FullHouse(value1, value2);
-        return analizer.analize(hand, fullHouse);
+        return analizer.analize(hand, fullHouse) && !analizer.analize(hand, allSameSuit);
     }
 }

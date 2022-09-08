@@ -11,10 +11,10 @@ public class TwoPairsIdentifierTest {
 
         PokerHand twoPairs= new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
-            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.TWO, 'S'),
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.SIX, 'C'),
-            new Card(CardValue.SIX, 'C'),
+            new Card(CardValue.SIX, 'D'),
         });
         assertTrue(identifier.identify(twoPairs));
     }

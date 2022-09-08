@@ -9,6 +9,7 @@ public class FlushIdentifier implements IndetifyHand {
 
     public boolean identify(PokerHand hand) {
         AllSameSuit allSameSuit = new AllSameSuit();
-        return analizer.analize(hand, allSameSuit);
+        ConsecutiveValues consecutiveValues = new ConsecutiveValues();
+        return analizer.analize(hand, allSameSuit) && !analizer.analize(hand, consecutiveValues);
     }
 }

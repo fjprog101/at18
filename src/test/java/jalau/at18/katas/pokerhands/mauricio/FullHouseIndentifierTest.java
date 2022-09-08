@@ -11,9 +11,9 @@ public class FullHouseIndentifierTest {
 
         PokerHand fullHouse= new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
-            new Card(CardValue.TWO, 'C'),
-            new Card(CardValue.TWO, 'C'),
-            new Card(CardValue.SIX, 'C'),
+            new Card(CardValue.TWO, 'S'),
+            new Card(CardValue.TWO, 'D'),
+            new Card(CardValue.SIX, 'D'),
             new Card(CardValue.SIX, 'C'),
         });
         assertTrue(identifier.identify(fullHouse));

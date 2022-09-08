@@ -12,7 +12,8 @@ public class ThreeOfKindIdentifier implements IndetifyHand {
     }
 
     public boolean identify(PokerHand hand) {
+        AllSameSuit allSameSuit = new AllSameSuit();
         ThreeOfAKind threeOfAKind = new ThreeOfAKind(value1, value2);
-        return analizer.analize(hand, threeOfAKind);
+        return analizer.analize(hand, threeOfAKind) && !analizer.analize(hand, allSameSuit);
     }
 }

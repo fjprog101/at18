@@ -12,7 +12,8 @@ public class PairIdentifier implements IndetifyHand {
     }
 
     public boolean identify(PokerHand hand) {
+        AllSameSuit allSameSuit = new AllSameSuit();
         Pair pair = new Pair(value1, value2);
-        return analizer.analize(hand, pair);
+        return analizer.analize(hand, pair) && !analizer.analize(hand, allSameSuit);
     }
 }

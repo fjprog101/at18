@@ -11,9 +11,9 @@ public class PairIdentifierTest {
 
         PokerHand pair= new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
-            new Card(CardValue.TWO, 'C'),
-            new Card(CardValue.THREE, 'C'),
-            new Card(CardValue.FOUR, 'C'),
+            new Card(CardValue.TWO, 'S'),
+            new Card(CardValue.THREE, 'D'),
+            new Card(CardValue.FOUR, 'D'),
             new Card(CardValue.SIX, 'C'),
         });
         assertTrue(identifier.identify(pair));

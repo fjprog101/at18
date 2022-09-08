@@ -1,12 +1,13 @@
 package jalau.at18.katas.pokerhands.mauricio;
 
 public class FourOfAKindComparer {
+    private PokerHandComparer comparer = new PokerHandComparer();
     private StraightFlushComparer straightFlushComparer = new StraightFlushComparer();
 
 
     public Boolean fourOfAKindCase(PokerHand black, PokerHand white, CardValue value1, CardValue value2) {
-        return (new FourOfAKindIdentifier(value1, value2).identify(black)
-                && !new StraightFlushIdentifier().identify(white)) ? true
+        return (comparer.comparer(black, new FourOfAKindIdentifier(value1, value2))
+                && !comparer.comparer(white, new StraightFlushIdentifier())) ? true
                         : straightFlushComparer.straightFlushCase(black, white);
     }
 }

@@ -11,9 +11,9 @@ public class ThreeOfAKindIdentifierTest {
 
         PokerHand threeOfAKind= new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
-            new Card(CardValue.TWO, 'C'),
-            new Card(CardValue.TWO, 'C'),
-            new Card(CardValue.FIVE, 'C'),
+            new Card(CardValue.TWO, 'D'),
+            new Card(CardValue.TWO, 'S'),
+            new Card(CardValue.FIVE, 'S'),
             new Card(CardValue.SIX, 'C'),
         });
         assertTrue(identifier.identify(threeOfAKind));
