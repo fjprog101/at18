@@ -12,4 +12,9 @@ public class FourOfAKindIdentifier extends HandIdentifier {
         CardValuesCount count = counter.getCount();
         return count.exists(FOUR_OF_A_KIND);
     }
+
+    @Override
+    HandKind getKind() {
+        return HandKind.FOUR_EQUALS;
+    }
 }

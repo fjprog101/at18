@@ -11,4 +11,8 @@ public class StraightFlushIdentifier extends HandIdentifier {
         ConsecutiveValues consecutiveValues = new ConsecutiveValues();
         return allSameSuit.match(hand) && consecutiveValues.match(hand);
     }
+    @Override
+    public HandKind getKind() {
+        return HandKind.STRAIGHT_FLUSH;
+    }
 }

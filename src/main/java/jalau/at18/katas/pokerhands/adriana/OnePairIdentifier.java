@@ -13,5 +13,10 @@ public class OnePairIdentifier extends HandIdentifier {
         CardValuesCount count = counter.getCount();
         return pairsCount.get() == 1 && count.getValuesCount().size() == COUNT_FOR_HAND;
     }
+
+    @Override
+    HandKind getKind() {
+        return HandKind.PAIR;
+    }
 }
 

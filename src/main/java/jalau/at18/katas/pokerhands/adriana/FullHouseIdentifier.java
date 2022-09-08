@@ -10,4 +10,9 @@ public class FullHouseIdentifier extends HandIdentifier {
         CardValuesCount count = counter.getCount();
         return count.exists(THREE_OF_A_KIND) && pairsCount.get() == 1;
     }
+
+    @Override
+    HandKind getKind() {
+        return HandKind.FULL_HOUSE;
+    }
 }

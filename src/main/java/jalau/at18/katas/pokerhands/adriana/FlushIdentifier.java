@@ -11,4 +11,9 @@ public class FlushIdentifier extends HandIdentifier {
         ConsecutiveValues consecutiveValues = new ConsecutiveValues();
         return allSameSuit.match(hand) && !consecutiveValues.match(hand);
     }
+
+    @Override
+    HandKind getKind() {
+        return HandKind.FLUSH;
+    }
 }

@@ -14,4 +14,9 @@ public class ThreeOfAKindIdentifier extends HandIdentifier {
         CardValuesCount count = counter.getCount();
         return count.exists(THREE_OF_A_KIND) && pairsCount.get() == 0;
     }
+
+    @Override
+    HandKind getKind() {
+        return HandKind.THREE_EQUALS;
+    }
 }

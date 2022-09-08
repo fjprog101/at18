@@ -10,4 +10,9 @@ public class TwoPairsIdentifier extends HandIdentifier {
         PairsCount pairsCount = new PairsCount(hand);
         return pairsCount.get() == 2;
     }
+
+    @Override
+    HandKind getKind() {
+        return HandKind.TWO_PAIRS;
+    }
 }
