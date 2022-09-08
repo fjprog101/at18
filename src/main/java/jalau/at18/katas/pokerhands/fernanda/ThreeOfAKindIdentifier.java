@@ -1,15 +1,12 @@
 package jalau.at18.katas.pokerhands.fernanda;
 
 public class ThreeOfAKindIdentifier extends Identifier {
-    private PokerHandAnalizer pokerHandAnalizer;
-
-    public ThreeOfAKindIdentifier() {
-        pokerHandAnalizer = new PokerHandAnalizer();
-    }
+    private final int three = 3;
+    private final int one = 1;
 
     public boolean identify(PokerHand hand) {
-        ThreeOFAKind threeofaKind = new ThreeOFAKind();
-        ThreeValuesinHand threevalues = new ThreeValuesinHand();
-        return pokerHandAnalizer.analize(hand, threeofaKind) && pokerHandAnalizer.analize(hand, threevalues);
+        CardValuesCounter counter = new CardValuesCounter(hand);
+        CardValuesCount count = counter.getCount();
+        return count.exists(three) && count.exists(one) && count.exists(one);
     }
 }
