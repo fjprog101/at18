@@ -19,6 +19,7 @@ public class FullHouseTest {
         });
         assertTrue(full.match(FullHousehand));
 
+
         FullHouse full2 = new FullHouse();
         PokerHand FullHousehand2 = new PokerHand(new Card[] {
             new Card(CardValue.FIVE, 'D'),
