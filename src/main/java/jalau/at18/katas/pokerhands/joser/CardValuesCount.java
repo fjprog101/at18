@@ -6,6 +6,10 @@ public class CardValuesCount {
 
     private HashMap<CardValue, Integer> valuesCount;
 
+    public HashMap<CardValue, Integer> getValuesCount() {
+        return valuesCount;
+    }
+
     public CardValuesCount() {
         valuesCount = new HashMap<CardValue, Integer>();
     }
@@ -24,5 +28,9 @@ public class CardValuesCount {
 
     public boolean exists(int count) {
         return valuesCount.containsValue(count);
+    }
+
+    public int sizeOfGroup() {
+        return valuesCount.size();
     }
 }
