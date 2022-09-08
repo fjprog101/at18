@@ -12,7 +12,7 @@ public class ThreeOfAKindIdentifierTest {
     public void shouldIdentifyThreeOfAKindHand() {
         ThreeOfAKindIdentifier identifier = new ThreeOfAKindIdentifier();
 
-        PokerHand handWithThreeOfAKind = new PokerHand(new Card[]{
+        PokerHand handWithThreeOfAKind = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.TWO, 'H'),
             new Card(CardValue.TWO, 'D'),
@@ -21,7 +21,7 @@ public class ThreeOfAKindIdentifierTest {
         });
         assertTrue(identifier.identify(handWithThreeOfAKind));
 
-        PokerHand handWithThreeOfAKindAndPair = new PokerHand(new Card[]{
+        PokerHand handWithThreeOfAKindAndPair = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.TWO, 'H'),
             new Card(CardValue.FOUR, 'D'),
@@ -30,7 +30,7 @@ public class ThreeOfAKindIdentifierTest {
         });
 
         assertFalse(identifier.identify(handWithThreeOfAKindAndPair));
-        PokerHand handWithoutThreeOfAKind = new PokerHand(new Card[]{
+        PokerHand handWithoutThreeOfAKind = new PokerHand("White", new Card[]{
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.FOUR, 'S'),
             new Card(CardValue.FIVE, 'H'),

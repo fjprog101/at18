@@ -12,7 +12,7 @@ public class FullHouseIdentifierTest {
     public void shouldIdentifyFullHouseHand() {
         FullHouseIdentifier identifier = new FullHouseIdentifier();
 
-        PokerHand handWithThreeOfAKind = new PokerHand(new Card[]{
+        PokerHand handWithThreeOfAKind = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.TWO, 'H'),
             new Card(CardValue.TWO, 'D'),
@@ -21,7 +21,7 @@ public class FullHouseIdentifierTest {
         });
         assertFalse(identifier.identify(handWithThreeOfAKind));
 
-        PokerHand handWithThreeOfAKindAndPair = new PokerHand(new Card[]{
+        PokerHand handWithThreeOfAKindAndPair = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.TWO, 'H'),
             new Card(CardValue.FOUR, 'D'),
@@ -30,7 +30,7 @@ public class FullHouseIdentifierTest {
         });
         assertTrue(identifier.identify(handWithThreeOfAKindAndPair));
 
-        PokerHand handWithoutFullHouse = new PokerHand(new Card[]{
+        PokerHand handWithoutFullHouse = new PokerHand("White", new Card[]{
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.FOUR, 'S'),
             new Card(CardValue.FIVE, 'H'),

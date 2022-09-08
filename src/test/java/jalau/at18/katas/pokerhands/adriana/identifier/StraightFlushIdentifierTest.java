@@ -13,7 +13,7 @@ public class StraightFlushIdentifierTest {
     public void shouldIdentifyStraightFlushHand() {
         StraightFlushIdentifier identifier = new StraightFlushIdentifier();
 
-        PokerHand straightFlushHand = new PokerHand(new Card[]{
+        PokerHand straightFlushHand = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.FOUR, 'C'),
@@ -22,7 +22,7 @@ public class StraightFlushIdentifierTest {
         });
         assertTrue(identifier.identify(straightFlushHand));
 
-        PokerHand noConsecutiveValues = new PokerHand(new Card[]{
+        PokerHand noConsecutiveValues = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.FOUR, 'C'),
             new Card(CardValue.FIVE, 'C'),
@@ -31,7 +31,7 @@ public class StraightFlushIdentifierTest {
         });
 
         assertFalse(identifier.identify(noConsecutiveValues));
-        PokerHand noSameSuite = new PokerHand(new Card[]{
+        PokerHand noSameSuite = new PokerHand("White", new Card[]{
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.FOUR, 'C'),
             new Card(CardValue.FIVE, 'H'),

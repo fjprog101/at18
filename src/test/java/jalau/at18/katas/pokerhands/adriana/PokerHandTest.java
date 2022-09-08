@@ -9,7 +9,7 @@ public class PokerHandTest {
 
     @Test
     public void shouldHaveFiveCards() {
-        PokerHand hand = new PokerHand(new Card[] {
+        PokerHand hand = new PokerHand("White", new Card[] {
             new Card(CardValue.TWO, 'D'),
             new Card(CardValue.THREE, 'D'),
             new Card(CardValue.JACK, 'D'),
@@ -18,5 +18,6 @@ public class PokerHandTest {
         });
         assertNotNull(hand.getCards());
         assertEquals(5, hand.getCards().length);
+        assertEquals("White", hand.getPlayer());
     }
 }

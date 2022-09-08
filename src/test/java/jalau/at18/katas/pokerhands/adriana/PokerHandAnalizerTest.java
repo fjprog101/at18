@@ -9,7 +9,7 @@ public class PokerHandAnalizerTest {
     @Test
     public void shouldSayHandKind() {
 
-        PokerHand straightFlushHand = new PokerHand(new Card[]{
+        PokerHand straightFlushHand = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.FOUR, 'C'),
@@ -19,7 +19,7 @@ public class PokerHandAnalizerTest {
         PokerHandAnalizer analizer = new PokerHandAnalizer(straightFlushHand);
         assertEquals(HandKind.STRAIGHT_FLUSH, analizer.getHandKind());
 
-        PokerHand straightHand = new PokerHand(new Card[]{
+        PokerHand straightHand = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.THREE, 'H'),
             new Card(CardValue.FOUR, 'D'),
@@ -29,7 +29,7 @@ public class PokerHandAnalizerTest {
         PokerHandAnalizer analizer1 = new PokerHandAnalizer(straightHand);
         assertEquals(HandKind.STRAIGHT, analizer1.getHandKind());
 
-        PokerHand fourOfAKindHand = new PokerHand(new Card[]{
+        PokerHand fourOfAKindHand = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.TWO, 'H'),
             new Card(CardValue.TWO, 'D'),
@@ -39,7 +39,7 @@ public class PokerHandAnalizerTest {
         PokerHandAnalizer analizer2 = new PokerHandAnalizer(fourOfAKindHand);
         assertEquals(HandKind.FOUR_EQUALS, analizer2.getHandKind());
 
-        PokerHand fullHouseHand = new PokerHand(new Card[]{
+        PokerHand fullHouseHand = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.TWO, 'H'),
             new Card(CardValue.TWO, 'D'),
@@ -49,7 +49,7 @@ public class PokerHandAnalizerTest {
         PokerHandAnalizer analizer3 = new PokerHandAnalizer(fullHouseHand);
         assertEquals(HandKind.FULL_HOUSE, analizer3.getHandKind());
 
-        PokerHand flushHand = new PokerHand(new Card[]{
+        PokerHand flushHand = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.ACE, 'C'),
             new Card(CardValue.FOUR, 'C'),
@@ -59,7 +59,7 @@ public class PokerHandAnalizerTest {
         PokerHandAnalizer analizer4 = new PokerHandAnalizer(flushHand);
         assertEquals(HandKind.FLUSH, analizer4.getHandKind());
 
-        PokerHand threeOfAKindHand = new PokerHand(new Card[]{
+        PokerHand threeOfAKindHand = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.TWO, 'H'),
             new Card(CardValue.TWO, 'D'),
@@ -69,7 +69,7 @@ public class PokerHandAnalizerTest {
         PokerHandAnalizer analizer5 = new PokerHandAnalizer(threeOfAKindHand);
         assertEquals(HandKind.THREE_EQUALS, analizer5.getHandKind());
 
-        PokerHand twoPairsHand = new PokerHand(new Card[]{
+        PokerHand twoPairsHand = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.TWO, 'H'),
             new Card(CardValue.SIX, 'D'),
@@ -79,7 +79,7 @@ public class PokerHandAnalizerTest {
         PokerHandAnalizer analizer6 = new PokerHandAnalizer(twoPairsHand);
         assertEquals(HandKind.TWO_PAIRS, analizer6.getHandKind());
         
-        PokerHand onePairHand = new PokerHand(new Card[]{
+        PokerHand onePairHand = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.TWO, 'H'),
             new Card(CardValue.SIX, 'D'),
@@ -89,7 +89,7 @@ public class PokerHandAnalizerTest {
         PokerHandAnalizer analizer7 = new PokerHandAnalizer(onePairHand);
         assertEquals(HandKind.PAIR, analizer7.getHandKind());
 
-        PokerHand noTypeHand = new PokerHand(new Card[]{
+        PokerHand noTypeHand = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.ACE, 'H'),
             new Card(CardValue.SIX, 'D'),

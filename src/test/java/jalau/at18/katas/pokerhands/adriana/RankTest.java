@@ -9,7 +9,7 @@ public class RankTest {
     public void shouldReturnTheRankOfHand() {
         Rank rankHand = new Rank();
 
-        PokerHand straightFlushHand = new PokerHand(new Card[]{
+        PokerHand straightFlushHand = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.FOUR, 'C'),
@@ -18,7 +18,7 @@ public class RankTest {
         });
         assertEquals(8, rankHand.getRank(straightFlushHand));
 
-        PokerHand straightHand = new PokerHand(new Card[]{
+        PokerHand straightHand = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.FOUR, 'H'),
@@ -27,7 +27,7 @@ public class RankTest {
         });
         assertEquals(4, rankHand.getRank(straightHand));
 
-        PokerHand noTypeHand = new PokerHand(new Card[]{
+        PokerHand noTypeHand = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.THREE, 'S'),
             new Card(CardValue.FOUR, 'H'),

@@ -10,7 +10,7 @@ public class CardValuesCounterTest {
 
     @Test
     public void shouldCountValues1PerValue() {
-        PokerHand handWith1CardPerValue = new PokerHand(new Card[]{
+        PokerHand handWith1CardPerValue = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.THREE, 'D'),
             new Card(CardValue.FOUR, 'H'),
@@ -29,7 +29,7 @@ public class CardValuesCounterTest {
 
     @Test
     public void shouldCountValuesFor2And3OfSameValue() {
-        PokerHand handWithGroupsOf2And3 = new PokerHand(new Card[]{
+        PokerHand handWithGroupsOf2And3 = new PokerHand("White", new Card[]{
             new Card(CardValue.JACK, 'C'),
             new Card(CardValue.JACK, 'D'),
             new Card(CardValue.SEVEN, 'H'),
@@ -44,7 +44,7 @@ public class CardValuesCounterTest {
     }
     @Test
     public void shouldGiveAllValues() {
-        PokerHand handWithGroupsOf2And3 = new PokerHand(new Card[]{
+        PokerHand handWithGroupsOf2And3 = new PokerHand("White", new Card[]{
             new Card(CardValue.JACK, 'C'),
             new Card(CardValue.JACK, 'D'),
             new Card(CardValue.SEVEN, 'H'),

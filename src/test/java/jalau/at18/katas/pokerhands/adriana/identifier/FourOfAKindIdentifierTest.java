@@ -12,7 +12,7 @@ public class FourOfAKindIdentifierTest {
     public void shouldIdentifyFourOfAKindHand() {
         FourOfAKindIdentifier identifier = new FourOfAKindIdentifier();
 
-        PokerHand handWithFourOfAKind = new PokerHand(new Card[]{
+        PokerHand handWithFourOfAKind = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.TWO, 'H'),
             new Card(CardValue.TWO, 'D'),
@@ -21,7 +21,7 @@ public class FourOfAKindIdentifierTest {
         });
         assertTrue(identifier.identify(handWithFourOfAKind));
 
-        PokerHand handWithFourOfAKind2 = new PokerHand(new Card[]{
+        PokerHand handWithFourOfAKind2 = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.FOUR, 'H'),
             new Card(CardValue.FOUR, 'D'),
@@ -30,7 +30,7 @@ public class FourOfAKindIdentifierTest {
         });
         assertTrue(identifier.identify(handWithFourOfAKind2));
 
-        PokerHand handWithoutFourOfAKind = new PokerHand(new Card[]{
+        PokerHand handWithoutFourOfAKind = new PokerHand("White", new Card[]{
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.FOUR, 'S'),
             new Card(CardValue.FIVE, 'H'),
@@ -39,7 +39,7 @@ public class FourOfAKindIdentifierTest {
         });
         assertFalse(identifier.identify(handWithoutFourOfAKind));
 
-        PokerHand handWithoutFourOfAKind2 = new PokerHand(new Card[]{
+        PokerHand handWithoutFourOfAKind2 = new PokerHand("White", new Card[]{
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.THREE, 'S'),
             new Card(CardValue.FIVE, 'H'),
