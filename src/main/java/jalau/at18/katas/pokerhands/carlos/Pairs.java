@@ -8,11 +8,11 @@ public class Pairs {
     public Pairs() {
     }
 
-    public boolean identify(PokerHand hand) {
+    public boolean identifyPairs(PokerHand hand) {
         boolean twoPairsIndentifier = false;
         CardComparer comparer = new CardComparer();
         count = pairsCounter(hand, comparer);
-        if (count >= 2) {
+        if (count == 2) {
             twoPairsIndentifier = true;
         }
         return twoPairsIndentifier;
