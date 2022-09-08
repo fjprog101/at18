@@ -18,6 +18,7 @@ public class CardValuesCounterTest {
 
         CardValuesCounter counter = new CardValuesCounter(handWith1CardPerValue);
         CardValuesCount count = counter.getCount();
+        assertEquals(5, count.sizeOfGroup());
         assertEquals(1, count.get(CardValue.TWO));
         assertEquals(1, count.get(CardValue.THREE));
         assertEquals(1, count.get(CardValue.FOUR));
@@ -37,6 +38,7 @@ public class CardValuesCounterTest {
 
         CardValuesCounter counter = new CardValuesCounter(handWithGroupsOf2And3);
         CardValuesCount count = counter.getCount();
+        assertEquals(2, count.sizeOfGroup());
         assertEquals(2, count.get(CardValue.JACK));
         assertEquals(3, count.get(CardValue.SEVEN));
     }
