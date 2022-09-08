@@ -19,6 +19,24 @@ public class FourOfAKindIdentifierTest {
             new Card(CardValue.SIX, 'C'),
         });
         assertTrue(identifier.identify(FourOfAKindHand));
+
+        PokerHand fourOfAKindWithDiferentSuit = new PokerHand(new Card[]{
+            new Card(CardValue.SIX, 'C'),
+            new Card(CardValue.SIX, 'H'),
+            new Card(CardValue.SIX, 'D'),
+            new Card(CardValue.FOUR, 'S'),
+            new Card(CardValue.SIX, 'C'),
+        });
+        assertTrue(identifier.identify(fourOfAKindWithDiferentSuit));
+
+        PokerHand sameSuite = new PokerHand(new Card[]{
+            new Card(CardValue.FIVE, 'C'),
+            new Card(CardValue.FIVE, 'C'),
+            new Card(CardValue.FIVE, 'C'),
+            new Card(CardValue.FIVE, 'C'),
+            new Card(CardValue.SEVEN, 'C'),
+        });
+        assertTrue(identifier.identify(sameSuite));
     }
     @Test
     public void identifyWhenDontExistFourOfAKindHand() {
@@ -31,6 +49,23 @@ public class FourOfAKindIdentifierTest {
             new Card(CardValue.SIX, 'S'),
             new Card(CardValue.SIX, 'C'),
         });
+        
         assertFalse(identifier.identify(FourOfAKindHand));
+        PokerHand diferentsValues = new PokerHand(new Card[]{
+            new Card(CardValue.THREE, 'C'),
+            new Card(CardValue.THREE, 'C'),
+            new Card(CardValue.FIVE, 'C'),
+            new Card(CardValue.FIVE, 'C'),
+            new Card(CardValue.FIVE, 'C'),
+        });
+        assertFalse(identifier.identify(diferentsValues));
+        PokerHand noFourOfAKindHand = new PokerHand(new Card[]{
+            new Card(CardValue.THREE, 'C'),
+            new Card(CardValue.THREE, 'C'),
+            new Card(CardValue.FIVE, 'C'),
+            new Card(CardValue.FIVE, 'C'),
+            new Card(CardValue.FIVE, 'C'),
+        });
+        assertFalse(identifier.identify(noFourOfAKindHand));
     }
 }
