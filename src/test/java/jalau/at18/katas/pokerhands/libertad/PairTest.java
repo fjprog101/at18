@@ -20,6 +20,19 @@ public class PairTest {
         assertTrue(identifier.identify(PairHand));
     }
     @Test
+    public void identifyWhenPairHandHasSameSuit() {
+        PairIdentifier identifier = new PairIdentifier();
+
+        PokerHand PairHand = new PokerHand(new Card[]{
+            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.FIVE, 'D'),
+            new Card(CardValue.FIVE, 'D'),
+            new Card(CardValue.ACE, 'S'),
+            new Card(CardValue.SIX, 'C'),
+        });
+        assertTrue(identifier.identify(PairHand));
+    }
+    @Test
     public void identifyWhenDontExistPairHand() {
         PairIdentifier identifier = new PairIdentifier();
 
@@ -28,6 +41,19 @@ public class PairTest {
             new Card(CardValue.TWO, 'H'),
             new Card(CardValue.NINE, 'D'),
             new Card(CardValue.SIX, 'S'),
+            new Card(CardValue.SIX, 'C'),
+        });
+        assertFalse(identifier.identify(PairHand));
+    }
+    @Test
+    public void identifyWhenHaveAllDiferentHand() {
+        PairIdentifier identifier = new PairIdentifier();
+
+        PokerHand PairHand = new PokerHand(new Card[]{
+            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.FIVE, 'H'),
+            new Card(CardValue.NINE, 'D'),
+            new Card(CardValue.FOUR, 'S'),
             new Card(CardValue.SIX, 'C'),
         });
         assertFalse(identifier.identify(PairHand));
