@@ -1,5 +1,6 @@
 package jalau.at18.katas.pokerhands.fernanda;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -36,5 +37,12 @@ public class StraightIdentifierTest {
         });
         assertFalse(identifystraight.identify(handWithoutStraight));
 
+    }
+    @Test
+    public void testGetTypeofHand() {
+        int expected = 4;
+        assertEquals(expected,RankHand.STRAIGHT.getPoint() );
+        StraightIdentifier straight = new StraightIdentifier();
+        assertEquals(RankHand.STRAIGHT, straight.getTypeofHand());
     }
 }

@@ -1,5 +1,6 @@
 package jalau.at18.katas.pokerhands.fernanda;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -35,6 +36,13 @@ public class FlushIdentifierTest {
             new Card(CardValue.SIX, 'S'),
         });
         assertFalse(identifyflush.identify(handWithoutflush));
+    }
+    @Test
+    public void testGetTypeofHand() {
+        int expected = 5;
+        assertEquals(expected,RankHand.FLUSH.getPoint() );
+        FlushIdentifier flush = new FlushIdentifier();
+        assertEquals(RankHand.FLUSH, flush.getTypeofHand());
     }
 }
 

@@ -11,4 +11,7 @@ public class StraightIdentifier extends Identifier {
         ConsecutiveValues straight = new ConsecutiveValues();
         return pokerHandAnalizer.analize(hand, straight);
     }
+    public RankHand getTypeofHand() {
+        return RankHand.STRAIGHT;
+    }
 }

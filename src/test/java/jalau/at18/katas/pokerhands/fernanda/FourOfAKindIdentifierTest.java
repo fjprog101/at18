@@ -1,5 +1,6 @@
 package jalau.at18.katas.pokerhands.fernanda;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -67,5 +68,13 @@ public class FourOfAKindIdentifierTest {
             new Card(CardValue.ACE, 'S'),
         });
         assertFalse(identifyFourofaKind.identify(handWithoutFourOfAKind3));
+    }
+
+    @Test
+    public void testGetTypeofHand() {
+        int expected = 6;
+        assertEquals(expected,RankHand.FOUROFAKIND.getPoint());
+        FourOfAKindIdentifier four = new FourOfAKindIdentifier();
+        assertEquals(RankHand.FOUROFAKIND, four.getTypeofHand());
     }
 }

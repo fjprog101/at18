@@ -11,4 +11,7 @@ public class PairIdentifier extends Identifier {
         Pair pair = new Pair();
         return pokerHandAnalizer.analize(hand, pair);
     }
+    public RankHand getTypeofHand() {
+        return RankHand.PAIR;
+    }
 }

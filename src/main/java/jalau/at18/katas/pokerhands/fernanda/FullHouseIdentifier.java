@@ -9,4 +9,7 @@ public class FullHouseIdentifier extends Identifier {
         CardValuesCount count = counter.getCount();
         return count.exists(three) && count.exists(two);
     }
+    public RankHand getTypeofHand() {
+        return RankHand.FULLHOUSE;
+    }
 }

@@ -9,4 +9,7 @@ public class FourOfAKindIdentifier extends Identifier {
         CardValuesCount count = counter.getCount();
         return count.exists(four) && count.exists(one);
     }
+    public RankHand getTypeofHand() {
+        return RankHand.FOUROFAKIND;
+    }
 }

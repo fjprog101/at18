@@ -9,4 +9,7 @@ public class ThreeOfAKindIdentifier extends Identifier {
         CardValuesCount count = counter.getCount();
         return count.exists(three) && count.exists(one) && count.exists(one);
     }
+    public RankHand getTypeofHand() {
+        return RankHand.THREEOFAKIND;
+    }
 }
