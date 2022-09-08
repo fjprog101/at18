@@ -1,26 +1,17 @@
 package jalau.at18.katas.pokerhands.mauricio;
 
-import java.util.List;
-
-
 public class WhoIsTheWinner {
-    private PokerHand blackHand;
-    private PokerHand whiteHand;
+    private PokerHand black;
+    private PokerHand white;
 
-    public WhoIsTheWinner(PokerHand blackHand, PokerHand whiteHand){
-        this.blackHand = blackHand;
-        this.whiteHand = whiteHand;
-    }
-    public String whoisWinner(){
-        HandsCounter hands = new HandsCounter(blackHand, whiteHand);
-        List<Object> handsPerPlayer = hands.countHands();
-        CardValuesCount black = (CardValuesCount) handsPerPlayer.get(0);
-        CardValuesCount white = (CardValuesCount) handsPerPlayer.get(1);
-        return initialize(black, white);
+    public WhoIsTheWinner(PokerHand black, PokerHand white) {
+        this.black = black;
+        this.white = white;
     }
 
-    public String initialize(CardValuesCount black, CardValuesCount white){
-        String whoIsWinner = (black.sizeOfGroup() < white.sizeOfGroup()) ? "Black is winner" : "White is winner";
-        return whoIsWinner;
+    public String whoIsTheWInner(CardValue value1, CardValue value2) {
+        String winner = (new PairComparer().pairCase(black, white, value1, value2)) ? "Black is winner"
+                : "White is winner";
+        return winner;
     }
 }
