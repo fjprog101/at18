@@ -1,7 +1,6 @@
 package jalau.at18.katas.pokerhands.libertad;
 
-public class StraightFlushIdentifier implements Identifier{
-
+public class StraightFlushIdentifier implements Identifier {
     private PokerHandAnalizer analizer;
 
     public StraightFlushIdentifier() {

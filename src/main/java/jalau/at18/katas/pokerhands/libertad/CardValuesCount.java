@@ -1,15 +1,12 @@
 package jalau.at18.katas.pokerhands.libertad;
-
 import java.util.HashMap;
-
 public class CardValuesCount {
-
+    private Comparator comparator;
     private HashMap<CardValue, Integer> valuesCount;
-
     public CardValuesCount() {
         valuesCount = new HashMap<CardValue, Integer>();
+        comparator = new Comparator();
     }
-
     public void add(CardValue cardValue) {
         int existingCount = 0;
         if (valuesCount.containsKey(cardValue)) {
@@ -17,16 +14,20 @@ public class CardValuesCount {
         }
         valuesCount.put(cardValue, existingCount + 1);
     }
-
     public int get(CardValue cardValue) {
         return valuesCount.get(cardValue);
     }
-
     public boolean exists(int count) {
         return valuesCount.containsValue(count);
     }
-
-    public int sizeOfGroup() {
+    public int getGroupSize() {
         return valuesCount.size();
+    }
+    public int getBiggestSize() {
+        int max = 0;
+        for (HashMap.Entry<CardValue, Integer> pair: valuesCount.entrySet()) {
+            max = comparator.getHighest(pair.getValue().intValue(), max);
+        }
+        return max;
     }
 }

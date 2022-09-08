@@ -7,6 +7,6 @@ public class TwoPair extends CardsPattern {
     boolean match(PokerHand hand) {
         CardValuesCounter counter = new CardValuesCounter(hand);
         CardValuesCount count = counter.getCount();
-        return count.sizeOfGroup() == sizeOfGroup;
+        return count.getGroupSize() == sizeOfGroup;
     }
 }

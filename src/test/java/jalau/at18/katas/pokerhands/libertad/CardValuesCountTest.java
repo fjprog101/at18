@@ -14,7 +14,7 @@ public class CardValuesCountTest {
         count.add(CardValue.ACE);
         count.add(CardValue.JACK);
         count.add(CardValue.FIVE);
-        assertEquals(3, count.sizeOfGroup());
+        assertEquals(3, count.getGroupSize());
         assertEquals(1, count.get(CardValue.ACE));
         assertEquals(1, count.get(CardValue.JACK));
         assertEquals(1, count.get(CardValue.FIVE));
@@ -28,7 +28,7 @@ public class CardValuesCountTest {
         count.add(CardValue.ACE);
         count.add(CardValue.JACK);
         count.add(CardValue.JACK);
-        assertEquals(2, count.sizeOfGroup());
+        assertEquals(2, count.getGroupSize());
         assertEquals(3, count.get(CardValue.ACE));
         assertEquals(2, count.get(CardValue.JACK));
     }
@@ -41,7 +41,7 @@ public class CardValuesCountTest {
         count.add(CardValue.ACE);
         count.add(CardValue.JACK);
         count.add(CardValue.JACK);
-        assertEquals(2, count.sizeOfGroup());
+        assertEquals(2, count.getGroupSize());
         assertTrue(count.exists(3));
         assertTrue(count.exists(2));
 

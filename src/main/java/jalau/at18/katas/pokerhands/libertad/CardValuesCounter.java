@@ -1,7 +1,6 @@
 package jalau.at18.katas.pokerhands.libertad;
 
 public class CardValuesCounter {
-
     private PokerHand hand;
 
     public CardValuesCounter(PokerHand handWith1CardPerValue) {
@@ -15,5 +14,4 @@ public class CardValuesCounter {
         }
         return count;
     }
-
 }

@@ -1,6 +1,6 @@
 package jalau.at18.katas.pokerhands.libertad;
 
-public class TwoPairIdentifier implements Identifier{
+public class TwoPairIdentifier implements Identifier {
     private PokerHandAnalizer pokerHandAnalizer;
 
     public TwoPairIdentifier() {
