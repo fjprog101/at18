@@ -43,4 +43,18 @@ public class TwoPairIdentifierTest {
         });
         assertFalse(identifier.identify(noTwoPairHand));
     }
+
+    @Test
+    public void shouldIdentifyWhenAintTwoPair() {
+        TwoPairIdentifier identifier = new TwoPairIdentifier();
+
+        PokerHand threeGroupSize = new PokerHand(new Card[]{
+            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.TWO, 'H'),
+            new Card(CardValue.TWO, 'D'),
+            new Card(CardValue.FOUR, 'S'),
+            new Card(CardValue.SIX, 'C'),
+        });
+        assertFalse(identifier.identify(threeGroupSize));
+    }
 }
