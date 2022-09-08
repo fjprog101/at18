@@ -17,6 +17,6 @@ public class BankOcrTest {
         File file = new File(System.getProperty("user.dir")+File.separator+direction+File.separator+"FirstCase.txt");
         InputNumber input = new InputNumber(file);
         BankOcr bankOcr = new BankOcr(input);
-        //assertEquals("123456789", bankOcr.readNumbers());
+        assertEquals("123456789", bankOcr.readNumbers());
     }
 }

@@ -4,7 +4,7 @@ import java.util.Map;
 public class DigitRange {
     private Map<Integer, Digit> digits;
     private Comparator comparator;
-    DigitRange(){
+    DigitRange() {
         digits = new HashMap<>();
         comparator = new Comparator();
         fillWithDigits(Digit.ZERO);
