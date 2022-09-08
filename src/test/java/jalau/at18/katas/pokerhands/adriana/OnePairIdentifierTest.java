@@ -6,9 +6,9 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 public class OnePairIdentifierTest {
-    
+
     @Test
-    public void shouldIdentifyStraightFlushHand() {
+    public void shouldIdentifyOnePairInHand() {
         OnePairIdentifier identifier = new OnePairIdentifier();
 
         PokerHand handWithOnePair = new PokerHand(new Card[]{

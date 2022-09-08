@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class FullHouseIdentifierTest {
     @Test
-    public void shouldIdentifyStraightFlushHand() {
+    public void shouldIdentifyFullHouseHand() {
         FullHouseIdentifier identifier = new FullHouseIdentifier();
 
         PokerHand handWithThreeOfAKind = new PokerHand(new Card[]{
@@ -27,7 +27,7 @@ public class FullHouseIdentifierTest {
             new Card(CardValue.FOUR, 'S'),
         });
         assertTrue(identifier.identify(handWithThreeOfAKindAndPair));
-        
+
         PokerHand handWithoutFullHouse = new PokerHand(new Card[]{
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.FOUR, 'S'),

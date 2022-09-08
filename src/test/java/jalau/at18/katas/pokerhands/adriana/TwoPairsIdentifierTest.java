@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class TwoPairsIdentifierTest {
     @Test
-    public void shouldIdentifyStraightFlushHand() {
+    public void shouldIdentifyTwoPairsHand() {
         TwoPairsIdentifier identifier = new TwoPairsIdentifier();
 
         PokerHand handWithTwoPairs = new PokerHand(new Card[]{

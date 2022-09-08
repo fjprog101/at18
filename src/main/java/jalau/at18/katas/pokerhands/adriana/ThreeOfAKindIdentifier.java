@@ -4,6 +4,9 @@ public class ThreeOfAKindIdentifier extends HandIdentifier {
 
     private static final int THREE_OF_A_KIND = 3;
 
+    public ThreeOfAKindIdentifier() {
+    }
+
     @Override
     boolean identify(PokerHand hand) {
         PairsCount pairsCount = new PairsCount(hand);
