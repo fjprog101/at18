@@ -1,15 +1,17 @@
-package jalau.at18.katas.pokerhands.adriana;
+package jalau.at18.katas.pokerhands.adriana.identifier;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import jalau.at18.katas.pokerhands.adriana.*;
+
 import org.junit.Test;
 
-public class StraightFlushIdentifierTest {
-
+public class FlushIdentifierTest {
+    
     @Test
-    public void shouldIdentifyStraightFlushHand() {
-        StraightFlushIdentifier identifier = new StraightFlushIdentifier();
+    public void shouldIdentifyFlushHand() {
+        FlushIdentifier identifier = new FlushIdentifier();
 
         PokerHand straightFlushHand = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
@@ -18,24 +20,24 @@ public class StraightFlushIdentifierTest {
             new Card(CardValue.FIVE, 'C'),
             new Card(CardValue.SIX, 'C'),
         });
-        assertTrue(identifier.identify(straightFlushHand));
+        assertFalse(identifier.identify(straightFlushHand));
 
-        PokerHand noConsecutiveValues = new PokerHand(new Card[]{
+        PokerHand FlushHand = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.FOUR, 'C'),
             new Card(CardValue.FIVE, 'C'),
             new Card(CardValue.FIVE, 'C'),
             new Card(CardValue.SEVEN, 'C'),
         });
+        assertTrue(identifier.identify(FlushHand));
 
-        assertFalse(identifier.identify(noConsecutiveValues));
-        PokerHand noSameSuite = new PokerHand(new Card[]{
+        PokerHand straightHand = new PokerHand(new Card[]{
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.FOUR, 'C'),
             new Card(CardValue.FIVE, 'H'),
             new Card(CardValue.SIX, 'C'),
             new Card(CardValue.SEVEN, 'C'),
         });
-        assertFalse(identifier.identify(noSameSuite));
+        assertFalse(identifier.identify(straightHand));
     }
 }

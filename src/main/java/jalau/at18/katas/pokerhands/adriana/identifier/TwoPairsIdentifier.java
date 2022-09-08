@@ -1,4 +1,6 @@
-package jalau.at18.katas.pokerhands.adriana;
+package jalau.at18.katas.pokerhands.adriana.identifier;
+
+import jalau.at18.katas.pokerhands.adriana.*;
 
 public class TwoPairsIdentifier extends HandIdentifier {
 
@@ -6,13 +8,13 @@ public class TwoPairsIdentifier extends HandIdentifier {
     }
 
     @Override
-    boolean identify(PokerHand hand) {
+    public boolean identify(PokerHand hand) {
         PairsCount pairsCount = new PairsCount(hand);
         return pairsCount.get() == 2;
     }
 
     @Override
-    HandKind getKind() {
+    public HandKind getKind() {
         return HandKind.TWO_PAIRS;
     }
 }

@@ -1,4 +1,7 @@
-package jalau.at18.katas.pokerhands.adriana;
+package jalau.at18.katas.pokerhands.adriana.identifier;
+
+import jalau.at18.katas.pokerhands.adriana.*;
+
 
 public class FlushIdentifier extends HandIdentifier {
 
@@ -13,7 +16,7 @@ public class FlushIdentifier extends HandIdentifier {
     }
 
     @Override
-    HandKind getKind() {
+    public HandKind getKind() {
         return HandKind.FLUSH;
     }
 }

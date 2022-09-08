@@ -1,41 +1,42 @@
-package jalau.at18.katas.pokerhands.adriana;
+package jalau.at18.katas.pokerhands.adriana.identifier;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-public class OnePairIdentifierTest {
+import jalau.at18.katas.pokerhands.adriana.*;
 
+public class FullHouseIdentifierTest {
     @Test
-    public void shouldIdentifyOnePairInHand() {
-        OnePairIdentifier identifier = new OnePairIdentifier();
+    public void shouldIdentifyFullHouseHand() {
+        FullHouseIdentifier identifier = new FullHouseIdentifier();
 
-        PokerHand handWithOnePair = new PokerHand(new Card[]{
+        PokerHand handWithThreeOfAKind = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.TWO, 'H'),
-            new Card(CardValue.FOUR, 'D'),
+            new Card(CardValue.TWO, 'D'),
             new Card(CardValue.FIVE, 'C'),
             new Card(CardValue.SIX, 'S'),
         });
-        assertTrue(identifier.identify(handWithOnePair));
+        assertFalse(identifier.identify(handWithThreeOfAKind));
 
-        PokerHand handWithThreeOfAKind = new PokerHand(new Card[]{
+        PokerHand handWithThreeOfAKindAndPair = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.TWO, 'H'),
             new Card(CardValue.FOUR, 'D'),
             new Card(CardValue.FOUR, 'C'),
             new Card(CardValue.FOUR, 'S'),
         });
+        assertTrue(identifier.identify(handWithThreeOfAKindAndPair));
 
-        assertFalse(identifier.identify(handWithThreeOfAKind));
-        PokerHand handWithoutPairs = new PokerHand(new Card[]{
+        PokerHand handWithoutFullHouse = new PokerHand(new Card[]{
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.FOUR, 'S'),
             new Card(CardValue.FIVE, 'H'),
             new Card(CardValue.SIX, 'D'),
             new Card(CardValue.SEVEN, 'C'),
         });
-        assertFalse(identifier.identify(handWithoutPairs));
+        assertFalse(identifier.identify(handWithoutFullHouse));
     }
 }

@@ -1,9 +1,11 @@
-package jalau.at18.katas.pokerhands.adriana;
+package jalau.at18.katas.pokerhands.adriana.identifier;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
+
+import jalau.at18.katas.pokerhands.adriana.*;
 
 public class ThreeOfAKindIdentifierTest {
     @Test

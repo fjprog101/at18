@@ -1,4 +1,6 @@
-package jalau.at18.katas.pokerhands.adriana;
+package jalau.at18.katas.pokerhands.adriana.identifier;
+
+import jalau.at18.katas.pokerhands.adriana.*;
 
 public class StraightFlushIdentifier extends HandIdentifier {
 

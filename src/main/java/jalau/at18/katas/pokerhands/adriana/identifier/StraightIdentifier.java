@@ -1,4 +1,6 @@
-package jalau.at18.katas.pokerhands.adriana;
+package jalau.at18.katas.pokerhands.adriana.identifier;
+
+import jalau.at18.katas.pokerhands.adriana.*;
 
 public class StraightIdentifier extends HandIdentifier {
 
@@ -13,7 +15,7 @@ public class StraightIdentifier extends HandIdentifier {
     }
 
     @Override
-    HandKind getKind() {
+    public HandKind getKind() {
         return HandKind.STRAIGHT;
     }
 }

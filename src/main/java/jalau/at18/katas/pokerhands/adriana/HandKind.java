@@ -1,5 +1,7 @@
 package jalau.at18.katas.pokerhands.adriana;
 
+import jalau.at18.katas.pokerhands.adriana.identifier.*;
+
 public enum HandKind {
     PAIR(new OnePairIdentifier()),
     TWO_PAIRS(new TwoPairsIdentifier()),
