@@ -1,4 +1,6 @@
-package jalau.at18.katas.pokerhands.maria;
+package jalau.at18.katas.pokerhands.maria.Identifier;
+
+import jalau.at18.katas.pokerhands.maria.*;
 
 public class FullHouseIdentifier implements PokerHandIdentifier {
     public static final int CARDS_SAME_VALUE = 3;
@@ -18,6 +20,7 @@ public class FullHouseIdentifier implements PokerHandIdentifier {
 
     @Override
     public PokerHandRank getRank(PokerHand hand) {
-        return null;
+        PokerHandRank pokerHandRank = new PokerHandRank(PokerHandType.FULLHOUSE, CardValue.ACE);
+        return pokerHandRank;
     }
 }

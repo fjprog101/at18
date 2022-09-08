@@ -1,6 +1,6 @@
 package jalau.at18.katas.pokerhands.maria;
 
-public enum PokerHandValue {
+public enum PokerHandType {
     STRAIGHTFLUSH(9),
     FOURKIND(8),
     FULLHOUSE(7),
@@ -13,7 +13,7 @@ public enum PokerHandValue {
 
     private int pokerHandvalue;
 
-    PokerHandValue(int pokerHandvalue) {
+    PokerHandType(int pokerHandvalue) {
         this.pokerHandvalue = pokerHandvalue;
     }
 

@@ -1,5 +1,6 @@
 package jalau.at18.katas.pokerhands.maria;
 
+import jalau.at18.katas.pokerhands.maria.Identifier.StraightIdentifier;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;

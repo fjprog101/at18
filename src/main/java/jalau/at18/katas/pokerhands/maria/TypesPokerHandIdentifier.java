@@ -1,5 +1,7 @@
 package jalau.at18.katas.pokerhands.maria;
 
+import jalau.at18.katas.pokerhands.maria.Identifier.*;
+
 import java.util.ArrayList;
 import java.util.List;
 

@@ -3,6 +3,7 @@ package jalau.at18.katas.pokerhands.maria;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import jalau.at18.katas.pokerhands.maria.Identifier.StraightFlushIdentifier;
 import org.junit.Test;
 
 public class StraightFlushIdentifierTest {

@@ -1,4 +1,6 @@
-package jalau.at18.katas.pokerhands.maria;
+package jalau.at18.katas.pokerhands.maria.Identifier;
+
+import jalau.at18.katas.pokerhands.maria.*;
 
 public class HighCardIdentifier implements PokerHandIdentifier {
     @Override
@@ -8,7 +10,8 @@ public class HighCardIdentifier implements PokerHandIdentifier {
 
     @Override
     public PokerHandRank getRank(PokerHand hand) {
-        return null;
+        PokerHandRank pokerHandRank = new PokerHandRank(PokerHandType.HIGHCARD, CardValue.ACE);
+        return pokerHandRank;
     }
 
 

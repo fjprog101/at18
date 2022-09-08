@@ -1,4 +1,6 @@
-package jalau.at18.katas.pokerhands.maria;
+package jalau.at18.katas.pokerhands.maria.Identifier;
+
+import jalau.at18.katas.pokerhands.maria.*;
 
 public class PairIdentifier implements PokerHandIdentifier {
     private PokerHandAnalizer analizer;
@@ -15,6 +17,7 @@ public class PairIdentifier implements PokerHandIdentifier {
 
     @Override
     public PokerHandRank getRank(PokerHand hand) {
-        return null;
+        PokerHandRank pokerHandRank = new PokerHandRank(PokerHandType.PAIR, CardValue.ACE);
+        return pokerHandRank;
     }
 }

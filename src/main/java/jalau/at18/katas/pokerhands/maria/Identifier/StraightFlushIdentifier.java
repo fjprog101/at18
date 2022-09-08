@@ -1,4 +1,6 @@
-package jalau.at18.katas.pokerhands.maria;
+package jalau.at18.katas.pokerhands.maria.Identifier;
+
+import jalau.at18.katas.pokerhands.maria.*;
 
 public class StraightFlushIdentifier implements PokerHandIdentifier {
 
@@ -17,7 +19,7 @@ public class StraightFlushIdentifier implements PokerHandIdentifier {
 
     @Override
     public PokerHandRank getRank(PokerHand hand) {
-        PokerHandRank pokerHandRank = new PokerHandRank(PokerHandValue.STRAIGHTFLUSH, CardValue.ACE);
+        PokerHandRank pokerHandRank = new PokerHandRank(PokerHandType.STRAIGHTFLUSH, CardValue.ACE);
         return pokerHandRank;
     }
 }

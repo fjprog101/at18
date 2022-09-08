@@ -1,4 +1,6 @@
-package jalau.at18.katas.pokerhands.maria;
+package jalau.at18.katas.pokerhands.maria.Identifier;
+
+import jalau.at18.katas.pokerhands.maria.*;
 
 public class ThreeKindIdentifier implements PokerHandIdentifier {
     public static final int CARDS_SAME_VALUE = 3;
@@ -16,6 +18,7 @@ public class ThreeKindIdentifier implements PokerHandIdentifier {
 
     @Override
     public PokerHandRank getRank(PokerHand hand) {
-        return null;
+        PokerHandRank pokerHandRank = new PokerHandRank(PokerHandType.THREEKIND, CardValue.ACE);
+        return pokerHandRank;
     }
 }
