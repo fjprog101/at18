@@ -1,11 +1,13 @@
 package jalau.at18.katas.pokerhands.rodrigob;
 
-public class TwoPairs extends CardsPattern {
-    private static final int NUMBER_OF_CARDS_WITH_PAIRS = 4;
-    private int cardsWithPair;
+public class NumberOfPairs extends CardsPattern {
 
-    public TwoPairs() {
+    private int cardsWithPair;
+    private int expectedNumberPairs;
+
+    public NumberOfPairs(int expectedNumberPairs) {
         this.cardsWithPair = 0;
+        this.expectedNumberPairs = expectedNumberPairs * 2;
     }
 
     @Override
@@ -13,7 +15,7 @@ public class TwoPairs extends CardsPattern {
         CardValuesCounter counter = new CardValuesCounter(hand);
         CardValuesCount count = counter.getCount();
         countCardsWithPairs(hand, count);
-        return this.cardsWithPair == NUMBER_OF_CARDS_WITH_PAIRS;
+        return this.cardsWithPair == this.expectedNumberPairs;
     }
 
     public void countCardsWithPairs(PokerHand hand, CardValuesCount count) {
