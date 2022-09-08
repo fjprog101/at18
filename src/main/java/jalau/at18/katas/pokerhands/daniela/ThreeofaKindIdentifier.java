@@ -1,6 +1,6 @@
 package jalau.at18.katas.pokerhands.daniela;
 
-public class ThreeofaKindIdentifier {
+public class ThreeofaKindIdentifier extends CompareGame {
     private PokerHandAnalizer analizer;
     private CardValue value1;
     private CardValue value2;
@@ -11,6 +11,7 @@ public class ThreeofaKindIdentifier {
         this.value2 = value2;
     }
 
+    @Override
     public boolean identify(PokerHand hand) {
         // Analice this class
         ThreeofaKind threecards = new ThreeofaKind(value1, value2);

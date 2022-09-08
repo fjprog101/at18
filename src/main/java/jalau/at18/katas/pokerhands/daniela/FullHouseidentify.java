@@ -1,6 +1,6 @@
 package jalau.at18.katas.pokerhands.daniela;
 
-public class FullHouseidentify {
+public class FullHouseidentify extends CompareGame {
     private PokerHandAnalizer analizer;
     private CardValue value1;
     private CardValue value2;
@@ -11,6 +11,7 @@ public class FullHouseidentify {
         this.analizer = new PokerHandAnalizer();
     }
 
+    @Override
     public boolean identify(PokerHand hand) {
         // Analice this class
         FullHouse fullhouse = new FullHouse(value1, value2);

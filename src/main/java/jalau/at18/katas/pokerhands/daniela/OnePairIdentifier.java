@@ -1,6 +1,6 @@
 package jalau.at18.katas.pokerhands.daniela;
 
-public class OnePairIdentifier {
+public class OnePairIdentifier extends CompareGame {
     private PokerHandAnalizer analizer;
     private CardValue value1;
     private CardValue value2;
@@ -11,6 +11,7 @@ public class OnePairIdentifier {
         this.value2 = value2;
     }
 
+    @Override
     public boolean identify(PokerHand hand) {
         // Analice this class
         OnePair onepair = new OnePair(value1, value2);
