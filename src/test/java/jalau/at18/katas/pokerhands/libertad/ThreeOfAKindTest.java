@@ -31,5 +31,23 @@ public class ThreeOfAKindTest {
             new Card(CardValue.SIX, 'C'),
         });
         assertFalse(identifier.identify(ThreeOfAKindHand));
+
+        PokerHand hasTwoGroupHand = new PokerHand(new Card[]{
+            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.TWO, 'H'),
+            new Card(CardValue.TWO, 'D'),
+            new Card(CardValue.SIX, 'S'),
+            new Card(CardValue.SIX, 'C'),
+        });
+        assertFalse(identifier.identify(hasTwoGroupHand));
+
+        PokerHand allDiferentCardsHand = new PokerHand(new Card[]{
+            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.ACE, 'H'),
+            new Card(CardValue.EIGHT, 'D'),
+            new Card(CardValue.SEVEN, 'S'),
+            new Card(CardValue.SIX, 'C'),
+        });
+        assertFalse(identifier.identify(allDiferentCardsHand));
     }
 }
