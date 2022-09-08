@@ -7,7 +7,8 @@ public class PokerHand {
 
     public PokerHand(String player, Card[] cards) {
         this.player = player;
-        this.cards = cards;
+        SorterCards sorter = new SorterCards();
+        this.cards = sorter.sortCards(cards);
     }
 
     public Card[] getCards() {
