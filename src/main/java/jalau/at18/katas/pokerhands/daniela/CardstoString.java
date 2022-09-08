@@ -1,15 +1,11 @@
 package jalau.at18.katas.pokerhands.daniela;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class CardstoString {
 
     private StringBuilder totaldigits = new StringBuilder();
-    private List<CardValue> sortedCards;
+    private int tiebreaker = 0;
 
     public CardstoString() {
-        sortedCards = new ArrayList<CardValue>();
     }
 
     public void add(CardValue cardValue) {
@@ -23,7 +19,6 @@ public class CardstoString {
     public int highCard(CardValue cardValuefinal) {
         String sorted = get(cardValuefinal);
         String[] arrOfStr = sorted.split("");
-        int tiebreaker = 0;
         for (String cards : arrOfStr) {
             tiebreaker += Integer.parseInt(cards);
         }
