@@ -71,4 +71,27 @@ public class WinningTest {
                 assertEquals("Blackwins",
                                 identifywinner.defineWinnerinatie(White, Black, CardValue.TWO, CardValue.THREE));
         }
+
+        @Test
+        public void shouldIdentifyATieWhereWhiteWins() {
+                Winning identifywinner = new Winning();
+
+                PokerHand Black = new PokerHand(new Card[] {
+                                new Card(CardValue.TWO, 'C'),
+                                new Card(CardValue.TWO, 'H'),
+                                new Card(CardValue.FOUR, 'C'),
+                                new Card(CardValue.FIVE, 'S'),
+                                new Card(CardValue.JACK, 'C'),
+                });
+                PokerHand White = new PokerHand(new Card[] {
+                                new Card(CardValue.THREE, 'C'),
+                                new Card(CardValue.THREE, 'D'),
+                                new Card(CardValue.FOUR, 'D'),
+                                new Card(CardValue.FIVE, 'C'),
+                                new Card(CardValue.SIX, 'S'),
+                });
+
+                assertEquals("Whitewins",
+                                identifywinner.defineWinnerinatie(White, Black, CardValue.TWO, CardValue.THREE));
+        }
 }
