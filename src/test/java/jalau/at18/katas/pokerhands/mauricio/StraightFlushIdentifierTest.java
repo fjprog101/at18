@@ -27,7 +27,7 @@ public class StraightFlushIdentifierTest {
             new Card(CardValue.SIX, 'C'),
             new Card(CardValue.FIVE, 'C'),
         });
-        assertFalse(identifier.identify(straightFlushHand2));
+        assertTrue(identifier.identify(straightFlushHand2));
 
         PokerHand noConsecutiveValues = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
