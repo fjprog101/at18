@@ -8,7 +8,6 @@ public class FourKindPattern extends CardsPattern {
         CardValuesCounter counter = new CardValuesCounter(hand);
         CardValuesCount count = counter.getCount();
 
-        return count.exists(amountOfCartas)? true : false;
-      
+        return count.exists(amountOfCartas);
     }
 }
