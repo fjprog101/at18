@@ -60,6 +60,29 @@ public class WinningPlayerTest {
         assertEquals("White", winnerPlayer2.getWinner(player1, player2));
         assertNotEquals("Black", winnerPlayer2.getWinner(player1, player2));
 
+        WinningPlayer tie = new WinningPlayer();
 
+        PokerHand player1HandTie = new PokerHand(Arrays.asList(
+            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.THREE, 'H'),
+            new Card(CardValue.FOUR, 'C'),
+            new Card(CardValue.FIVE, 'S'),
+            new Card(CardValue.SIX, 'C')
+        ));
+
+        PokerHand player2HandTie = new PokerHand(Arrays.asList(
+            new Card(CardValue.TWO, 'H'),
+            new Card(CardValue.THREE, 'C'),
+            new Card(CardValue.FOUR, 'H'),
+            new Card(CardValue.FIVE, 'C'),
+            new Card(CardValue.SIX, 'H')
+        ));
+
+        player1 = new Player(player1HandTie, "Black");
+        player2 = new Player(player2HandTie, "White");
+
+        assertEquals("Tie", tie.getWinner(player1, player2));
+        assertNotEquals("Black", tie.getWinner(player1, player2));
+        assertNotEquals("White", tie.getWinner(player1, player2));
     }
 }
