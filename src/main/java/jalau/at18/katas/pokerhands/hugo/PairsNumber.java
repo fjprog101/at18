@@ -1,9 +1,9 @@
 package jalau.at18.katas.pokerhands.hugo;
 
-public class PairsNumber extends CardsPattern{
+public class PairsNumber extends CardsPattern {
 
     private int pairs;
-    private int cardsInPairs; 
+    private int cardsInPairs;
 
     public PairsNumber(int pairsNeeded) {
         this.pairs = 0;
