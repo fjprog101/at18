@@ -17,4 +17,7 @@ public class Card {
     public char getSuit() {
         return suit;
     }
+
+    public void setValue(CardValue value2) {
+    }
 }

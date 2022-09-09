@@ -9,8 +9,14 @@ public class WhoIsTheWinner {
         this.white = white;
     }
 
-    public String whoIsTheWInner(CardValue value1, CardValue value2) {
+    public String whoIsTheWInnerPerHands(CardValue value1, CardValue value2) {
         String winner = (new PairComparer().pairCase(black, white, value1, value2)) ? "Black is winner"
+                : "White is winner";
+        return winner;
+    }
+
+    public String whoIsTheWInnerPerValue() {
+        String winner = (new PokerHandComparer().compareValues(black, white, new HighValue())) ? "Black is winner"
                 : "White is winner";
         return winner;
     }

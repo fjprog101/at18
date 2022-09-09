@@ -13,8 +13,8 @@ public class ThreeOfAKindIdentifierTest {
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.TWO, 'D'),
             new Card(CardValue.TWO, 'S'),
-            new Card(CardValue.FIVE, 'S'),
-            new Card(CardValue.SIX, 'C'),
+            new Card(CardValue.SIX, 'S'),
+            new Card(CardValue.FIVE, 'C'),
         });
         assertTrue(identifier.identify(threeOfAKind));
     }

@@ -5,7 +5,6 @@ public class StraightFlushComparer {
 
     public Boolean straightFlushCase(PokerHand black, PokerHand white) {
         return (comparer.comparer(black, new StraightFlushIdentifier())
-                && !comparer.comparer(white, new StraightFlushIdentifier())) ? true
-                        : false;
+                && !comparer.comparer(white, new StraightFlushIdentifier())) ? true : false;
     }
 }

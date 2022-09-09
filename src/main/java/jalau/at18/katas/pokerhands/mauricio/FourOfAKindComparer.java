@@ -4,7 +4,6 @@ public class FourOfAKindComparer {
     private PokerHandComparer comparer = new PokerHandComparer();
     private StraightFlushComparer straightFlushComparer = new StraightFlushComparer();
 
-
     public Boolean fourOfAKindCase(PokerHand black, PokerHand white, CardValue value1, CardValue value2) {
         return (comparer.comparer(black, new FourOfAKindIdentifier(value1, value2))
                 && !comparer.comparer(white, new StraightFlushIdentifier())) ? true
