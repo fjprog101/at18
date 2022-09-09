@@ -1,6 +1,6 @@
 package jalau.at18.katas.pokerhands.sarai;
 
-public class Straight {
+public class Straight extends Cardhigth {
 
     private PokerHandAnalizer analizer;
 
@@ -11,5 +11,10 @@ public class Straight {
     public boolean identify(PokerHand hand) {
         ConsecutiveValues consecutiveValues = new ConsecutiveValues();
         return analizer.analize(hand, consecutiveValues);
+    }
+
+    @Override
+    Higth getidentifyOperation() {
+        return Higth.STRAIGHT;
     }
 }

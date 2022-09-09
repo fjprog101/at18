@@ -1,22 +1,23 @@
 package jalau.at18.katas.pokerhands.sarai;
 
 public enum Higth {
-    /*
-    FULLHOUSE(new IdentifyFullHouse()),
-    PAIR(new IdentifyPairs() ),
-    TWOPAIR(new IdentifyTwoPairs()),
-    THREEPAIR(new IdentifyThreePairs()),
-    FOURPAIR(new IdentifyFourOfaKind()),
+    FULLHOUSE(new FullHouseIdentify()),
+    PAIR(new PairsIdentify()),
+    TWOPAIR(new TwoPairsIdentify()),
+    THREEPAIR(new ThreePairsIdentify()),
+    FOURPAIR(new FourOfaKindIdentify()),
     STRAIGHT(new Straight()),
     FLUSH(new Flush());
 
-    private Options op;
+    private Cardhigth op;
 
-    Higth( Options op) {
-        this.op = opp;
+    Higth(Cardhigth op) {
+
+        this.op = op;
+
+    }
+    public Cardhigth getidentifyOperation() {
+        return op;
     }
 
-    public Options getop() {
-        return opp;
-    }*/
 }
