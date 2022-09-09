@@ -1,4 +1,4 @@
-package jalau.at18.katas.pokerhands.fernanda;
+package jalau.at18.katas.pokerhands.alvaro;
 
 import java.util.HashMap;
 
@@ -24,8 +24,5 @@ public class CardValuesCount {
 
     public boolean exists(int count) {
         return valuesCount.containsValue(count);
-    }
-    public int sizeOfGroup() {
-        return valuesCount.size();
     }
 }

@@ -1,6 +1,6 @@
-package jalau.at18.katas.pokerhands.fernanda;
+package jalau.at18.katas.pokerhands.alvaro;
 
-public class StraightFlushIdentifier extends Identifier {
+public class StraightFlushIdentifier {
 
     private PokerHandAnalizer analizer;
 
