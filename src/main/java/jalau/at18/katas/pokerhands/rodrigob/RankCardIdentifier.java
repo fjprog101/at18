@@ -8,12 +8,12 @@ public class RankCardIdentifier {
         this.rankCard = 0;
     }
 
-    public int getRankHand(PokerHand hand) {
-        handRank(hand);
+    public int getRankCard(PokerHand hand) {
+        cardRank(hand);
         return rankCard;
     }
 
-    public void handRank(PokerHand hand) {
+    public void cardRank(PokerHand hand) {
         for (HandsValue list: HandsValue.values()) {
             if (pokerHandIdentifier(hand, list.getHandType())) {
                 rankCard = list.getHandType().getCardRankedValue(hand);

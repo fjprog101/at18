@@ -2,28 +2,16 @@ package jalau.at18.katas.pokerhands.rodrigob;
 
 public class WinningPlayer {
 
-    private RankHandIdentifier rankHand;
+    private RankComparer rankComparer;
 
     public WinningPlayer() {
-        this.rankHand = new RankHandIdentifier();
-
+        this.rankComparer = new RankComparer();
     }
 
     public String getWinner(Player player1, Player player2) {
-        PokerHand winnerHand = compareHands(player1.getPlayerHand(), player2.getPlayerHand());
-        return winnerHand.equals(player1.getPlayerHand()) ? player1.getPlayerName() : player2.getPlayerName();
-    }
-
-    public PokerHand compareHands(PokerHand hand1, PokerHand hand2) {
-        if (rankHand.getRankHand(hand1) > rankHand.getRankHand(hand2)) {
-            return hand1;
+        if(rankComparer.compareHands(player1, player2) == 0) {
+            return "Tie";
         }
-        return hand2;
+        return rankComparer.compareHands(player1, player2) > 0 ? player1.getPlayerName() : player2.getPlayerName();
     }
-
-    //Class to determine the winner when both players have the same rank hand
-    /*public PokerHand equalHands(PokerHand hand1, PokerHand hand2) {
-
-    }*/
-
 }
