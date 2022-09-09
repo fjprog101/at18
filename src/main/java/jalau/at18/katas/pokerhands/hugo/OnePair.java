@@ -1,11 +1,11 @@
 package jalau.at18.katas.pokerhands.hugo;
 
-public class TwoPair {
+public class OnePair {
 
-    private static final int NUMBER_OF_PAIRS = 2;
+    private static final int NUMBER_OF_PAIRS = 1;
     private PokerHandAnalizer analizer;
 
-    public TwoPair() {
+    public OnePair() {
         this.analizer = new PokerHandAnalizer();
     }
 

@@ -5,12 +5,12 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-public class TwoPairTest {
-    
-    @Test
-    public void shouldVerifyThereAreTwoPairs() {
+public class OnePairTest {
 
-        TwoPair twoPairs = new TwoPair();
+    @Test
+    public void shouldVerifyThereAreOnePair() {
+
+        OnePair twoPairs = new OnePair();
         PokerHand handWithTwoPairs = new PokerHand(new Card[]{
             new Card(CardValue.ACE, 'C'),
             new Card(CardValue.ACE, 'H'),
@@ -18,9 +18,9 @@ public class TwoPairTest {
             new Card(CardValue.FOUR, 'S'),
             new Card(CardValue.SEVEN, 'S'),
         });
-        assertTrue(twoPairs.identify(handWithTwoPairs));
+        assertFalse(twoPairs.identify(handWithTwoPairs));
 
-        TwoPair onePair = new TwoPair();
+        OnePair onePair = new OnePair();
         PokerHand handWithOnePair = new PokerHand(new Card[]{
             new Card(CardValue.EIGHT, 'C'),
             new Card(CardValue.ACE, 'H'),
@@ -28,9 +28,9 @@ public class TwoPairTest {
             new Card(CardValue.THREE, 'S'),
             new Card(CardValue.EIGHT, 'S'),
         });
-        assertFalse(onePair.identify(handWithOnePair));
+        assertTrue(onePair.identify(handWithOnePair));
 
-        TwoPair noPair = new TwoPair();
+        OnePair noPair = new OnePair();
         PokerHand handWithNoPair = new PokerHand(new Card[]{
             new Card(CardValue.EIGHT, 'C'),
             new Card(CardValue.ACE, 'H'),
@@ -40,7 +40,7 @@ public class TwoPairTest {
         });
         assertFalse(noPair.identify(handWithNoPair));
         
-        TwoPair fourOfAKind = new TwoPair();
+        OnePair fourOfAKind = new OnePair();
         PokerHand handWithFourKind = new PokerHand(new Card[]{
             new Card(CardValue.EIGHT, 'C'),
             new Card(CardValue.ACE, 'H'),
