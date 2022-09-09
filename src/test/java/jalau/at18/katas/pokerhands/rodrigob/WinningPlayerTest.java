@@ -3,6 +3,8 @@ package jalau.at18.katas.pokerhands.rodrigob;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
+import java.util.Arrays;
+
 import org.junit.Test;
 
 public class WinningPlayerTest {
@@ -11,21 +13,21 @@ public class WinningPlayerTest {
     public void shouldSayWhoIsTheWinner() {
         WinningPlayer winnerPlayer1 = new WinningPlayer();
 
-        PokerHand player1HandWinner = new PokerHand(new Card[]{
+        PokerHand player1HandWinner = new PokerHand(Arrays.asList(
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.FOUR, 'C'),
             new Card(CardValue.FIVE, 'C'),
-            new Card(CardValue.SIX, 'C'),
-        });
+            new Card(CardValue.SIX, 'C')
+        ));
 
-        PokerHand player2HandLosser = new PokerHand(new Card[]{
+        PokerHand player2HandLosser = new PokerHand(Arrays.asList(
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.FOUR, 'C'),
             new Card(CardValue.FIVE, 'C'),
-            new Card(CardValue.SIX, 'C'),
-        });
+            new Card(CardValue.SIX, 'C')
+        ));
 
         Player player1 = new Player(player1HandWinner, "Black");
         Player player2 = new Player(player2HandLosser, "White");
@@ -36,21 +38,21 @@ public class WinningPlayerTest {
 
         WinningPlayer winnerPlayer2 = new WinningPlayer();
 
-        PokerHand player1HandLosser = new PokerHand(new Card[]{
+        PokerHand player1HandLosser = new PokerHand(Arrays.asList(
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.THREE, 'H'),
             new Card(CardValue.FOUR, 'C'),
             new Card(CardValue.FIVE, 'S'),
-            new Card(CardValue.SIX, 'C'),
-        });
+            new Card(CardValue.SIX, 'C')
+        ));
 
-        PokerHand player2HandWinner = new PokerHand(new Card[]{
+        PokerHand player2HandWinner = new PokerHand(Arrays.asList(
             new Card(CardValue.ACE, 'C'),
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.JACK, 'C'),
             new Card(CardValue.TEN, 'C'),
-            new Card(CardValue.SIX, 'C'),
-        });
+            new Card(CardValue.SIX, 'C')
+        ));
 
         player1 = new Player(player1HandLosser, "Black");
         player2 = new Player(player2HandWinner, "White");

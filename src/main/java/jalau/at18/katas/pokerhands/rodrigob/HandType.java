@@ -4,4 +4,5 @@ abstract class HandType {
 
     abstract boolean identify(PokerHand hand);
     abstract int getCardRankedValue(PokerHand hand);
+
 }

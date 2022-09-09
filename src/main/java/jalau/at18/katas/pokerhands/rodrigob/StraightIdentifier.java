@@ -2,13 +2,11 @@ package jalau.at18.katas.pokerhands.rodrigob;
 
 public class StraightIdentifier extends HandType {
 
-    private static final int NUMERIC_VALUES_LENGTH = 5;
+    private static final int SIZE_CARD_LIST = 5;
     private PokerHandAnalizer analizer;
-    private int[] numericValues;
 
     public StraightIdentifier() {
         this.analizer = new PokerHandAnalizer();
-        this.numericValues = new int[NUMERIC_VALUES_LENGTH];
     }
 
     @Override
@@ -19,9 +17,6 @@ public class StraightIdentifier extends HandType {
 
     @Override
     public int getCardRankedValue(PokerHand hand) {
-        for (int index = 0; index < hand.getCards().length; index++) {
-            numericValues[index] = hand.getCards()[index].getValue().getNumericValue();
-        }
-        return numericValues[NUMERIC_VALUES_LENGTH - 1];
+        return hand.getCards().get(SIZE_CARD_LIST - 1).getValue().getNumericValue();
     }
 }

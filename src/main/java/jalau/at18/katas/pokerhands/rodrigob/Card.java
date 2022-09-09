@@ -1,6 +1,6 @@
 package jalau.at18.katas.pokerhands.rodrigob;
 
-public class Card {
+public class Card implements Comparable<Card> {
 
     private CardValue value;
     private char suit;
@@ -16,5 +16,10 @@ public class Card {
 
     public char getSuit() {
         return suit;
+    }
+
+    @Override
+    public int compareTo(Card anotherCard) {
+        return this.value.getNumericValue() - anotherCard.value.getNumericValue();
     }
 }

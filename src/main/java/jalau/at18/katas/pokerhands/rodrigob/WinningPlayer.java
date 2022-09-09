@@ -21,7 +21,7 @@ public class WinningPlayer {
         return hand2;
     }
 
-    //Class to determine the winner when both players have the same rank
+    //Class to determine the winner when both players have the same rank hand
     /*public PokerHand equalHands(PokerHand hand1, PokerHand hand2) {
 
     }*/
