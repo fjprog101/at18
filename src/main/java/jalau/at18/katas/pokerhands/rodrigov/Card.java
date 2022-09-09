@@ -10,6 +10,10 @@ public class Card {
         this.suit = suit;
     }
 
+    public int getScore(CardValue value1) {
+        return value.getScore(value);
+    }
+
     public CardValue getValue() {
         return value;
     }

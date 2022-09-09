@@ -8,6 +8,7 @@ public class ThreeOfAKindTest {
     @Test
     public void shouldSayIfThereAreThreeOfaKindInHand (){
         ThreeOfAKind threeOfaKindInHand = new ThreeOfAKind();
+        CardComparer comparer = new CardComparer();
         PokerHand threeOfKind = new PokerHand(new Card[]{
             new Card(CardValue.SEVEN,'S'),
             new Card(CardValue.FOUR,'H'),
@@ -15,7 +16,6 @@ public class ThreeOfAKindTest {
             new Card(CardValue.FOUR,'C'),
             new Card(CardValue.THREE,'D')
         });
-        CardComparer comparer = new CardComparer();
         threeOfaKindInHand.compareCardsThreeofKind(threeOfKind, comparer);
         assertTrue(threeOfaKindInHand.identifyThreeOfKind());
     }
@@ -23,6 +23,7 @@ public class ThreeOfAKindTest {
     @Test
     public void shouldSayIfThereAreNotThreeOfaKindInHand (){
         ThreeOfAKind threeOfaKindInHand = new ThreeOfAKind();
+        CardComparer comparer = new CardComparer();
         PokerHand threeOfKind = new PokerHand(new Card[]{
             new Card(CardValue.SEVEN,'S'),
             new Card(CardValue.FOUR,'H'),
@@ -30,7 +31,6 @@ public class ThreeOfAKindTest {
             new Card(CardValue.FOUR,'C'),
             new Card(CardValue.THREE,'D')
         });
-        CardComparer comparer = new CardComparer();
         threeOfaKindInHand.compareCardsThreeofKind(threeOfKind, comparer);
         assertFalse(threeOfaKindInHand.identifyThreeOfKind());
     }

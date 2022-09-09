@@ -15,5 +15,4 @@ public class CardValuesCounter {
         }
         return count;
     }
-
 }

@@ -29,4 +29,16 @@ public class CardValuesCount {
     public boolean exists(int count) {
         return valuesCount.containsValue(count);
     }
+
+    public int getGroupOfSize() {
+        return valuesCount.size();
+    }
+
+    /*public int getBiggestSize() {
+        int max = 0;
+        for (HashMap.Entry<CardValue, Integer> pair: valuesCount.entrySet()) {
+            max = comparator.getHighest(pair.getValue().intValue(), max);
+        }
+        return max;
+    }*/
 }
