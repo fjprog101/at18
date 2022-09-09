@@ -20,6 +20,7 @@ public class StraightFlushIdentifier implements PokerHandIdentifier {
     @Override
     public PokerHandRank getRank(PokerHand hand) {
         PokerHandRank pokerHandRank = new PokerHandRank(PokerHandType.STRAIGHTFLUSH, CardValue.ACE);
+
         return pokerHandRank;
     }
 }

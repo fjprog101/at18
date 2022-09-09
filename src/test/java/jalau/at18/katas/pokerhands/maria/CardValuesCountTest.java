@@ -49,4 +49,18 @@ public class CardValuesCountTest {
         assertFalse(count.exists(4));
         assertFalse(count.exists(5));
     }
+
+
+    @Test
+    public void shouldInvertDataMap() {
+
+        CardValuesCount count = new CardValuesCount();
+        count.add(CardValue.ACE);
+        count.add(CardValue.ACE);
+        count.add(CardValue.ACE);
+        count.add(CardValue.ACE);
+        count.add(CardValue.FIVE);
+        count.invertMap();
+        assertEquals(CardValue.ACE, count.getCardValueInvertData(4));
+    }
 }
