@@ -33,12 +33,4 @@ public class CardValuesCount {
     public int getGroupOfSize() {
         return valuesCount.size();
     }
-
-    /*public int getBiggestSize() {
-        int max = 0;
-        for (HashMap.Entry<CardValue, Integer> pair: valuesCount.entrySet()) {
-            max = comparator.getHighest(pair.getValue().intValue(), max);
-        }
-        return max;
-    }*/
 }
