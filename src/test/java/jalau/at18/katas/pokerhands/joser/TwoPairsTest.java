@@ -35,7 +35,7 @@ public class TwoPairsTest {
         assertTrue(identifier.identify(sameSuite));
         PokerHand noTwoPairHand = new PokerHand(new Card[]{
             new Card(CardValue.THREE, 'C'),
-            new Card(CardValue.THREE, 'C'),
+            new Card(CardValue.TWO, 'C'),
             new Card(CardValue.FIVE, 'C'),
             new Card(CardValue.FIVE, 'C'),
             new Card(CardValue.FIVE, 'C'),

@@ -8,7 +8,9 @@ public class FullHouse {
     }
 
     public boolean identify(PokerHand hand) {
-        FullHousePattern full = new FullHousePattern();
-        return pokerHandAnalizer.analize(hand, full);
+        System.out.println(hand.toString());
+        ThreeKindPattern three = new ThreeKindPattern();
+        PairPattern pair = new PairPattern();
+        return pokerHandAnalizer.analize(hand, three) && pokerHandAnalizer.analize(hand, pair);
     }
 }
