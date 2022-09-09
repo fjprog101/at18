@@ -8,18 +8,14 @@ public class CardValuesCount {
 
     private HashMap<CardValue, Integer> valuesCount;
 
-    // private List<CardValue> sortedCards;
-
     public CardValuesCount() {
         valuesCount = new HashMap<CardValue, Integer>();
-        // sortedCards = new ArrayList<CardValue>();
     }
 
     public void add(CardValue cardValue) {
         int existingCount = 0;
         if (valuesCount.containsKey(cardValue)) {
             existingCount = get(cardValue);
-            // sortedCards.add(cardValue);
         }
         valuesCount.put(cardValue, existingCount + 1);
     }

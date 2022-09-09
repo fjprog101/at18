@@ -40,7 +40,7 @@ public class CardssortedTest {
 
         Cardssorted counter = new Cardssorted(handWithGroupsOf2And3);
         CardstoString count = counter.getCount();
-        assertEquals("1111777", count.get(CardValue.JACK));
+        assertEquals("7771111", count.get(CardValue.JACK));
     }
 
     @Test
@@ -55,7 +55,7 @@ public class CardssortedTest {
 
         Cardssorted counter = new Cardssorted(handWithGroupsOf2And3);
         CardstoString count = counter.getCount();
-        assertEquals("1110767", count.get(CardValue.JACK));
+        assertEquals("6771011", count.get(CardValue.JACK));
     }
 
     @Test

@@ -9,9 +9,9 @@ public class ThreeofaKindIdentifier extends CompareGame {
 
     @Override
     public boolean identify(PokerHand hand) {
-        // Analice this class
         ThreeofaKind threecards = new ThreeofaKind();
-        return analizer.analize(hand, threecards);
+        // analize(PokerHand hand, CardsPattern pattern)
+        return threecards.match(hand);
     }
 
     @Override
