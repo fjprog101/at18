@@ -33,4 +33,32 @@ public class OnePairTest {
         // Twopairidentifier twopairs = new Twopairidentifier();
         assertFalse(onepair.identify(handWithGroupsOfOnepairs));
     }
+
+    @Test
+    public void shouldReturnFalseOnePair1() {
+        OnePairIdentifier onepair = new OnePairIdentifier();
+        PokerHand handWithGroupsOfOnepairs = new PokerHand(new Card[] {
+                new Card(CardValue.JACK, 'H'),
+                new Card(CardValue.QUEEN, 'S'),
+                new Card(CardValue.SEVEN, 'D'),
+                new Card(CardValue.SEVEN, 'H'),
+                new Card(CardValue.SEVEN, 'H'),
+        });
+        // Twopairidentifier twopairs = new Twopairidentifier();
+        assertFalse(onepair.identify(handWithGroupsOfOnepairs));
+    }
+
+    @Test
+    public void shouldReturnFalseOnePair2() {
+        OnePairIdentifier onepair = new OnePairIdentifier();
+        PokerHand handWithGroupsOfOnepairs = new PokerHand(new Card[] {
+                new Card(CardValue.JACK, 'H'),
+                new Card(CardValue.JACK, 'S'),
+                new Card(CardValue.SEVEN, 'D'),
+                new Card(CardValue.SEVEN, 'H'),
+                new Card(CardValue.SEVEN, 'H'),
+        });
+        // Twopairidentifier twopairs = new Twopairidentifier();
+        assertFalse(onepair.identify(handWithGroupsOfOnepairs));
+    }
 }
