@@ -20,7 +20,7 @@ public class TwoPairsIdentifierTest {
             new Card(CardValue.SIX, 'C'),
         });
         assertTrue(identifier.identify(cardsWith2Pairs));
-        assertEquals(8, identifier.getRankedValue(cardsWith2Pairs));
+        assertEquals(8, identifier.getCardRankedValue(cardsWith2Pairs));
 
         PokerHand cardsWith1Pair = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),

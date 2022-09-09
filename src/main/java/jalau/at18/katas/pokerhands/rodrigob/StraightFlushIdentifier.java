@@ -18,7 +18,8 @@ public class StraightFlushIdentifier extends HandType {
         return analizer.analize(hand, allSameSuit) && analizer.analize(hand, consecutiveValues);
     }
 
-    public int getRankedValue(PokerHand hand) {
+    @Override
+    public int getCardRankedValue(PokerHand hand) {
         for (int index = 0; index < hand.getCards().length; index++) {
             numericValues[index] = hand.getCards()[index].getValue().getNumericValue();
         }

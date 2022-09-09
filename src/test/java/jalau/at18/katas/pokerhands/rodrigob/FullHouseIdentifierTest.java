@@ -20,7 +20,7 @@ public class FullHouseIdentifierTest {
             new Card(CardValue.FOUR, 'C'),
         });
         assertTrue(identifier.identify(fullHouseHand));
-        assertEquals(4, identifier.getRankedValue(fullHouseHand));
+        assertEquals(4, identifier.getCardRankedValue(fullHouseHand));
 
         PokerHand threeOfAKindHand = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),

@@ -18,7 +18,8 @@ public class OnePairIdentifier extends HandType {
         return analizer.analize(hand, numberOfPairs);
     }
 
-    public int getRankedValue(PokerHand hand) {
+    @Override
+    public int getCardRankedValue(PokerHand hand) {
         CardValuesCounter counter = new CardValuesCounter(hand);
         CardValuesCount count = counter.getCount();
         maximumValue(hand, count);

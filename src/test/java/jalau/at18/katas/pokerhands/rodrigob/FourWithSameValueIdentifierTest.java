@@ -19,7 +19,7 @@ public class FourWithSameValueIdentifierTest {
             new Card(CardValue.SIX, 'C'),
         });
         assertTrue(identifier.identify(fourCardsWithSameValue));
-        assertEquals(2, identifier.getRankedValue(fourCardsWithSameValue));
+        assertEquals(2, identifier.getCardRankedValue(fourCardsWithSameValue));
 
         PokerHand threeCardsWithSameValue = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),

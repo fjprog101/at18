@@ -13,13 +13,13 @@ public class ThreeWithSameValueIdentifierTest {
         ThreeWithSameValueIdentifier identifier = new ThreeWithSameValueIdentifier();
         PokerHand threeCardsWithSameValue = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.TWO, 'H'),
             new Card(CardValue.TWO, 'C'),
-            new Card(CardValue.TWO, 'C'),
-            new Card(CardValue.EIGHT, 'C'),
+            new Card(CardValue.EIGHT, 'H'),
             new Card(CardValue.SIX, 'C'),
         });
         assertTrue(identifier.identify(threeCardsWithSameValue));
-        assertEquals(2, identifier.getRankedValue(threeCardsWithSameValue));
+        assertEquals(2, identifier.getCardRankedValue(threeCardsWithSameValue));
 
         PokerHand fourCardsWithSameValue = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),

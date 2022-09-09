@@ -18,7 +18,8 @@ public class FullHouseIdentifier extends HandType {
         return analizer.analize(hand, threeOfAKind) && analizer.analize(hand, onePair);
     }
 
-    public int getRankedValue(PokerHand hand) {
+    @Override
+    public int getCardRankedValue(PokerHand hand) {
         CardValuesCounter counter = new CardValuesCounter(hand);
         CardValuesCount count = counter.getCount();
         maximumValue(hand, count);

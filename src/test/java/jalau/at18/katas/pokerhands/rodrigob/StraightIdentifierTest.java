@@ -20,7 +20,7 @@ public class StraightIdentifierTest {
             new Card(CardValue.SIX, 'C'),
         });
         assertTrue(identifier.identify(allCardsAreConsecutive));
-        assertEquals(6, identifier.getRankedValue(allCardsAreConsecutive));
+        assertEquals(6, identifier.getCardRankedValue(allCardsAreConsecutive));
 
         PokerHand fourCardsAreConsecutive = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),

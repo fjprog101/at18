@@ -20,7 +20,7 @@ public class StraightFlushIdentifierTest {
             new Card(CardValue.EIGHT, 'C'),
         });
         assertTrue(identifier.identify(straightFlushHand));
-        assertEquals(8, identifier.getRankedValue(straightFlushHand));
+        assertEquals(8, identifier.getCardRankedValue(straightFlushHand));
 
 
         PokerHand noConsecutiveValues = new PokerHand(new Card[]{
