@@ -2,6 +2,7 @@ package jalau.at18.katas.pokerhands.rodrigob;
 
 public enum HandsValue {
 
+    HIGHCARD(0, new HighCardIdentifier()),
     ONEPAIR(1, new OnePairIdentifier()),
     TWOPAIRS(2, new TwoPairsIdentifier()),
     THREEOFAKIND(3, new ThreeWithSameValueIdentifier()),
