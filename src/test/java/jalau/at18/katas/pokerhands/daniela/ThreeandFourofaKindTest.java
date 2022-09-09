@@ -59,4 +59,43 @@ public class ThreeandFourofaKindTest {
         });
         assertFalse(four.identify(handWithGroupsOfOnepairs));
     }
+
+    @Test
+    public void shouldReturnFalseFourOfaKind1() {
+        FourodaKindIdentifier four = new FourodaKindIdentifier();
+        PokerHand handWithGroupsOfOneCard = new PokerHand(new Card[] {
+                new Card(CardValue.JACK, 'H'),
+                new Card(CardValue.JACK, 'S'),
+                new Card(CardValue.JACK, 'S'),
+                new Card(CardValue.NINE, 'H'),
+                new Card(CardValue.NINE, 'H'),
+        });
+        assertFalse(four.identify(handWithGroupsOfOneCard));
+    }
+
+    @Test
+    public void shouldReturnFalseFourOfaKind2() {
+        FourodaKindIdentifier four = new FourodaKindIdentifier();
+        PokerHand handWithGroupsOfOneCard = new PokerHand(new Card[] {
+                new Card(CardValue.JACK, 'H'),
+                new Card(CardValue.JACK, 'S'),
+                new Card(CardValue.JACK, 'S'),
+                new Card(CardValue.JACK, 'H'),
+                new Card(CardValue.JACK, 'H'),
+        });
+        assertFalse(four.identify(handWithGroupsOfOneCard));
+    }
+
+    @Test
+    public void shouldReturnFalseFourOfaKind3() {
+        FourodaKindIdentifier four = new FourodaKindIdentifier();
+        PokerHand handWithGroupsOfOneCard = new PokerHand(new Card[] {
+                new Card(CardValue.JACK, 'H'),
+                new Card(CardValue.TEN, 'S'),
+                new Card(CardValue.QUEEN, 'S'),
+                new Card(CardValue.NINE, 'H'),
+                new Card(CardValue.TWO, 'H'),
+        });
+        assertFalse(four.identify(handWithGroupsOfOneCard));
+    }
 }
