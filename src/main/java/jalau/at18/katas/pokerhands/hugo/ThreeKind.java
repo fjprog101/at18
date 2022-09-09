@@ -10,7 +10,7 @@ public class ThreeKind {
     }
 
     public boolean identify(PokerHand hand) {
-        CardsWithSameValue handWiththreeOfAKind = new CardsWithSameValue(THREE_OF_A_KIND_CARDS);
-        return kindAnalizer.analize(hand, handWiththreeOfAKind);
+        CardsWithSameValue handWithThreeOfAKind = new CardsWithSameValue(THREE_OF_A_KIND_CARDS);
+        return kindAnalizer.analize(hand, handWithThreeOfAKind);
     }
 }
