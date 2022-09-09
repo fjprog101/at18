@@ -13,4 +13,5 @@ public class FlushIdentifier extends HandType {
         AllSameSuit allSameSuit = new AllSameSuit();
         return analizer.analize(hand, allSameSuit);
     }
+
 }

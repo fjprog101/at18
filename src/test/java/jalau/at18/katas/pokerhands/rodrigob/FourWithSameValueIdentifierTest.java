@@ -1,5 +1,6 @@
 package jalau.at18.katas.pokerhands.rodrigob;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -18,6 +19,7 @@ public class FourWithSameValueIdentifierTest {
             new Card(CardValue.SIX, 'C'),
         });
         assertTrue(identifier.identify(fourCardsWithSameValue));
+        assertEquals(2, identifier.getRankedValue(fourCardsWithSameValue));
 
         PokerHand threeCardsWithSameValue = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),

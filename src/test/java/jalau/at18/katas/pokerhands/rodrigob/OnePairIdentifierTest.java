@@ -1,5 +1,6 @@
 package jalau.at18.katas.pokerhands.rodrigob;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -19,6 +20,7 @@ public class OnePairIdentifierTest {
             new Card(CardValue.SIX, 'C'),
         });
         assertTrue(identifier.identify(cardsWith1Pair));
+        assertEquals(2, identifier.getRankedValue(cardsWith1Pair));
 
         PokerHand cardsWith2Pair = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
