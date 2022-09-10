@@ -18,7 +18,11 @@ public class ThreeKindIdentifier implements PokerHandIdentifier {
 
     @Override
     public PokerHandRank getRank(PokerHand hand) {
-        PokerHandRank pokerHandRank = new PokerHandRank(PokerHandType.THREEKIND, CardValue.ACE);
+        CardValuesCounter cardValuesCounter = new CardValuesCounter(hand);
+        CardValuesCount cardValuesCount = cardValuesCounter.getCount();
+        CardValueGroup cardValueGroup = cardValuesCount.getCardValuesGroup();
+        CardValue cardValue = cardValueGroup.getCardValues(CARDS_SAME_VALUE).get(0);
+        PokerHandRank pokerHandRank = new PokerHandRank(PokerHandType.THREEKIND, cardValue);
         return pokerHandRank;
     }
 }

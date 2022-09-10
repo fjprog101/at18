@@ -17,7 +17,11 @@ public class PairIdentifier implements PokerHandIdentifier {
 
     @Override
     public PokerHandRank getRank(PokerHand hand) {
-        PokerHandRank pokerHandRank = new PokerHandRank(PokerHandType.PAIR, CardValue.ACE);
+        CardValuesCounter cardValuesCounter = new CardValuesCounter(hand);
+        CardValuesCount cardValuesCount = cardValuesCounter.getCount();
+        CardValueGroup cardValueGroup = cardValuesCount.getCardValuesGroup();
+        CardValue cardValue = cardValueGroup.getCardValues(2).get(0);
+        PokerHandRank pokerHandRank = new PokerHandRank(PokerHandType.PAIR, cardValue);
         return pokerHandRank;
     }
 }

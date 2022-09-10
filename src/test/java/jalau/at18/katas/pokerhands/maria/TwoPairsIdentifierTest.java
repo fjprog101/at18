@@ -3,8 +3,7 @@ package jalau.at18.katas.pokerhands.maria;
 import jalau.at18.katas.pokerhands.maria.Identifier.TwoPairsIdentifier;
 import org.junit.Test;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class TwoPairsIdentifierTest {
     @Test
@@ -74,5 +73,17 @@ public class TwoPairsIdentifierTest {
         assertFalse(identifier.identify(twoPairsHand));
     }
 
+    @Test
+    public void shouldGetRankTwoPair() {
+        TwoPairsIdentifier identifier = new TwoPairsIdentifier();
 
+        PokerHand twoPairsHand = new PokerHand(new Card[]{
+                new Card(CardValue.TWO, 'H'),
+                new Card(CardValue.TWO, 'S'),
+                new Card(CardValue.FIVE, 'C'),
+                new Card(CardValue.NINE, 'H'),
+                new Card(CardValue.NINE, 'S'),
+        });
+        assertEquals(CardValue.NINE, identifier.getRank(twoPairsHand).getCardValue());
+    }
 }

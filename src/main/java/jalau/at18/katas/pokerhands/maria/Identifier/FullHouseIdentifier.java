@@ -2,6 +2,8 @@ package jalau.at18.katas.pokerhands.maria.Identifier;
 
 import jalau.at18.katas.pokerhands.maria.*;
 
+import java.util.List;
+
 public class FullHouseIdentifier implements PokerHandIdentifier {
     public static final int CARDS_SAME_VALUE = 3;
     private PokerHandAnalizer analizer;
@@ -20,7 +22,11 @@ public class FullHouseIdentifier implements PokerHandIdentifier {
 
     @Override
     public PokerHandRank getRank(PokerHand hand) {
-        PokerHandRank pokerHandRank = new PokerHandRank(PokerHandType.FULLHOUSE, CardValue.ACE);
+        CardValuesCounter cardValuesCounter = new CardValuesCounter(hand);
+        CardValuesCount cardValuesCount = cardValuesCounter.getCount();
+        CardValueGroup cardValueGroup = cardValuesCount.getCardValuesGroup();
+        List<CardValue> listCardValue = cardValueGroup.getCardValues(CARDS_SAME_VALUE);
+        PokerHandRank pokerHandRank = new PokerHandRank(PokerHandType.FULLHOUSE, listCardValue.get(0));
         return pokerHandRank;
     }
 }

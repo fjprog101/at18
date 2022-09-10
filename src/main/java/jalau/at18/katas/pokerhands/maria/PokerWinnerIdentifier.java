@@ -21,8 +21,13 @@ public class PokerWinnerIdentifier {
         } else if (resultPlayer1 < resultPlayer2) {
             return new GameResult(pokerHandRankPlayTwo, "Player Two");
         } else {
-            return new GameResult(null, "Tie");
+            if (pokerHandRankPlayOne.getCardValue().getRealNumberValue() > pokerHandRankPlayTwo.getCardValue().getRealNumberValue()) {
+                return new GameResult(pokerHandRankPlayOne, "Player One");
+            } else if (pokerHandRankPlayOne.getCardValue().getRealNumberValue() < pokerHandRankPlayTwo.getCardValue().getRealNumberValue()) {
+                return new GameResult(pokerHandRankPlayTwo, "Player Two");
+            } else {
+                return new GameResult(null, "Tie");
+            }
         }
     }
-
 }

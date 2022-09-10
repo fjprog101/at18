@@ -3,8 +3,7 @@ package jalau.at18.katas.pokerhands.maria;
 import jalau.at18.katas.pokerhands.maria.Identifier.ThreeKindIdentifier;
 import org.junit.Test;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class ThreeKindIdentifierTest {
     @Test
@@ -20,6 +19,7 @@ public class ThreeKindIdentifierTest {
         });
         assertTrue(identifier.identify(threeKindHand));
     }
+
     @Test
     public void shouldNotFourCardsHand() {
         ThreeKindIdentifier identifier = new ThreeKindIdentifier();
@@ -33,6 +33,7 @@ public class ThreeKindIdentifierTest {
         });
         assertFalse(identifier.identify(fourKindHand));
     }
+
     @Test
     public void shouldNotPairCardsHand() {
         ThreeKindIdentifier identifier = new ThreeKindIdentifier();
@@ -47,4 +48,17 @@ public class ThreeKindIdentifierTest {
         assertFalse(identifier.identify(fourKindHand));
     }
 
+    @Test
+    public void shouldGetThreeKindRank() {
+        ThreeKindIdentifier identifier = new ThreeKindIdentifier();
+
+        PokerHand threeKindHand = new PokerHand(new Card[]{
+                new Card(CardValue.TWO, 'C'),
+                new Card(CardValue.TEN, 'S'),
+                new Card(CardValue.TEN, 'D'),
+                new Card(CardValue.SEVEN, 'H'),
+                new Card(CardValue.TEN, 'H'),
+        });
+        assertEquals(CardValue.TEN, identifier.getRank(threeKindHand).getCardValue());
+    }
 }

@@ -2,6 +2,9 @@ package jalau.at18.katas.pokerhands.maria.Identifier;
 
 import jalau.at18.katas.pokerhands.maria.*;
 
+import java.util.Collections;
+import java.util.List;
+
 public class TwoPairsIdentifier implements PokerHandIdentifier {
     private PokerHandAnalizer analizer;
 
@@ -17,7 +20,12 @@ public class TwoPairsIdentifier implements PokerHandIdentifier {
 
     @Override
     public PokerHandRank getRank(PokerHand hand) {
-        PokerHandRank pokerHandRank = new PokerHandRank(PokerHandType.TWOPAIRS, CardValue.ACE);
+        CardValuesCounter cardValuesCounter = new CardValuesCounter(hand);
+        CardValuesCount cardValuesCount = cardValuesCounter.getCount();
+        CardValueGroup cardValueGroup = cardValuesCount.getCardValuesGroup();
+        List<CardValue> listCardValue = cardValueGroup.getCardValues(2);
+        Collections.sort(listCardValue);
+        PokerHandRank pokerHandRank = new PokerHandRank(PokerHandType.TWOPAIRS, listCardValue.get(0));
         return pokerHandRank;
     }
 

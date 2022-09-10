@@ -1,12 +1,9 @@
 package jalau.at18.katas.pokerhands.maria;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class CardValuesCount {
-
     private HashMap<CardValue, Integer> valuesCount;
-    private HashMap<Integer, CardValue> invertData;
 
     public CardValuesCount() {
         valuesCount = new HashMap<CardValue, Integer>();
@@ -20,11 +17,10 @@ public class CardValuesCount {
         valuesCount.put(cardValue, existingCount + 1);
     }
 
-    public void invertMap() {
-        invertData = new HashMap<>();
-        for (Map.Entry<CardValue, Integer> element : valuesCount.entrySet()) {
-            invertData.put(element.getValue(), element.getKey());
-        }
+    public CardValueGroup getCardValuesGroup() {
+        CardValueGroup cardValueGroup = new CardValueGroup(valuesCount);
+        cardValueGroup.initializeGroup();
+        return cardValueGroup;
     }
 
     public int get(CardValue cardValue) {
@@ -33,17 +29,5 @@ public class CardValuesCount {
 
     public boolean exists(int count) {
         return valuesCount.containsValue(count);
-    }
-
-    public int getSize() {
-        return valuesCount.size();
-    }
-
-    public boolean existCountKeyInvertData(int count) {
-        return invertData.containsKey(count);
-    }
-
-    public CardValue getCardValueInvertData(int count) {
-        return invertData.get(count);
     }
 }

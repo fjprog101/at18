@@ -3,8 +3,7 @@ package jalau.at18.katas.pokerhands.maria;
 import jalau.at18.katas.pokerhands.maria.Identifier.FullHouseIdentifier;
 import org.junit.Test;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class FullHouseIdentifierTest {
     @Test
@@ -48,4 +47,19 @@ public class FullHouseIdentifierTest {
         });
         assertFalse(identifier.identify(threeDifferentCardsHand));
     }
+
+    @Test
+    public void shouldGetFullHouseRank() {
+        FullHouseIdentifier identifier = new FullHouseIdentifier();
+
+        PokerHand fullHouseRank = new PokerHand(new Card[]{
+                new Card(CardValue.NINE, 'H'),
+                new Card(CardValue.FOUR, 'H'),
+                new Card(CardValue.FOUR, 'C'),
+                new Card(CardValue.NINE, 'C'),
+                new Card(CardValue.NINE, 'S'),
+        });
+        assertEquals(CardValue.NINE, identifier.getRank(fullHouseRank).getCardValue());
+    }
+
 }
