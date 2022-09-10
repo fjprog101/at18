@@ -3,7 +3,6 @@ package jalau.at18.katas.pokerhands.daniela;
 public class Cardssorted {
 
     private PokerHand hand;
-    private CardValue values;
 
     public Cardssorted(PokerHand handtoanalize) {
         this.hand = handtoanalize;
