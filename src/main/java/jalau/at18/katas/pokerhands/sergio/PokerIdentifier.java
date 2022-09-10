@@ -9,7 +9,7 @@ public class PokerIdentifier {
     }
 
     public boolean identify(PokerHand hand) {
-        SameValuePattern twoConsecutiveValues = new SameValuePattern(fiveTimesRepeated);
-        return analizer.analize(hand, twoConsecutiveValues);
+        SameValuePattern pokerPattern = new SameValuePattern(fiveTimesRepeated);
+        return analizer.analize(hand, pokerPattern);
     }
 }

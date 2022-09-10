@@ -9,7 +9,7 @@ public class ThreeOfKindIdentifier {
     }
 
     public boolean identify(PokerHand hand) {
-        SameValuePattern twoConsecutiveValues = new SameValuePattern(threeTimesRepeated);
-        return analizer.analize(hand, twoConsecutiveValues);
+        SameValuePattern threeOfKindPattern = new SameValuePattern(threeTimesRepeated);
+        return analizer.analize(hand, threeOfKindPattern);
     }
 }

@@ -9,7 +9,7 @@ public class FullHouseIdentifier {
     }
 
     public boolean identify(PokerHand hand) {
-        SameValuePattern twoConsecutiveValues = new SameValuePattern(fourTimesRepeated);
-        return analizer.analize(hand, twoConsecutiveValues);
+        SameValuePattern fullHousePattern = new SameValuePattern(fourTimesRepeated);
+        return analizer.analize(hand, fullHousePattern);
     }
 }
