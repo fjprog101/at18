@@ -8,7 +8,7 @@ public class ThreeOfAKindIdentifier {
     }
 
     public boolean identify(PokerHand threeOfAKindHand) {
-        FourOfAKind threeOfAKind = new FourOfAKind(COUNT);
+        ThreeOfAKind threeOfAKind = new ThreeOfAKind(COUNT);
         return analizer.analize(threeOfAKindHand, threeOfAKind);
     }
 

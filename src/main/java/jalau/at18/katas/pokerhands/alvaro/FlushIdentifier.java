@@ -9,6 +9,7 @@ public class FlushIdentifier {
 
     public boolean identify(PokerHand flushHand) {
         AllSameSuit flush = new AllSameSuit();
-        return analizer.analize(flushHand, flush);
+        ConsecutiveValues consecutiveValues =  new ConsecutiveValues();
+        return analizer.analize(flushHand, flush) && !analizer.analize(flushHand, consecutiveValues);
     }
 }

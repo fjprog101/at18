@@ -8,6 +8,7 @@ public class StraightIdentifier {
 
     public boolean identify(PokerHand straightHand) {
         ConsecutiveValues consecutiveValues = new ConsecutiveValues();
-        return analizer.analize(straightHand, consecutiveValues);
+        AllSameSuit sameSuit = new AllSameSuit();
+        return analizer.analize(straightHand, consecutiveValues) && !analizer.analize(straightHand, sameSuit);
     }
 }
