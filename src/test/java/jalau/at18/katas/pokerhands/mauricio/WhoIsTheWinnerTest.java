@@ -31,19 +31,19 @@ public class WhoIsTheWinnerTest {
             new Card(CardValue.SIX, 'C'),
             new Card(CardValue.SIX, 'D'),
             new Card(CardValue.SIX, 'H'),
-            new Card(CardValue.SIX, 'S'),
+            new Card(CardValue.SIX, 'C'),
             new Card(CardValue.FOUR, 'S'),
         });
 
         PokerHand white = new PokerHand(new Card[]{
+            new Card(CardValue.FOUR, 'C'),
+            new Card(CardValue.FOUR, 'D'),
+            new Card(CardValue.SIX, 'H'),
             new Card(CardValue.SIX, 'C'),
-            new Card(CardValue.SIX, 'D'),
-            new Card(CardValue.FOUR, 'H'),
-            new Card(CardValue.FOUR, 'S'),
-            new Card(CardValue.FOUR, 'S'),
+            new Card(CardValue.SIX, 'S'),
         });
         WhoIsTheWinner winner = new WhoIsTheWinner(black, white);
-        assertEquals("Black is winner", winner.whoIsTheWInnerPerHands(CardValue.FOUR, CardValue.SIX));
+        assertEquals("Black is winner", winner.whoIsTheWInnerPerHands(CardValue.SIX, CardValue.FOUR));
     }
 
     @Test
