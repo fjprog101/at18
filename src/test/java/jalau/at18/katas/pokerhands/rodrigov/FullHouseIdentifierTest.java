@@ -14,7 +14,7 @@ public class FullHouseIdentifierTest {
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.THREE, 'H'),
         });
-        assertTrue(fullHouseIdentifier.indentify(hand));
+        assertTrue(fullHouseIdentifier.identify(hand));
     }
 
     @Test
@@ -27,6 +27,6 @@ public class FullHouseIdentifierTest {
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.THREE, 'H'),
         });
-        assertFalse(fullHouseIdentifier.indentify(hand));
+        assertFalse(fullHouseIdentifier.identify(hand));
     }
 }

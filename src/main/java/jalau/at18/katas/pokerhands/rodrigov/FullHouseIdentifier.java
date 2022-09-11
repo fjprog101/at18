@@ -1,13 +1,20 @@
 package jalau.at18.katas.pokerhands.rodrigov;
 
-public class FullHouseIdentifier {
+public class FullHouseIdentifier extends Identifier{
     private PokerHandAnalizer analizer;
     public FullHouseIdentifier() {
         analizer = new PokerHandAnalizer();
     }
 
-    public boolean indentify(PokerHand hand) {
+    @Override
+    boolean identify(PokerHand hand) {
         FullHouse fullHouse = new FullHouse();
         return analizer.analize(hand, fullHouse);
+    }
+
+    @Override
+    Rank identifyRank() {
+        // TODO Auto-generated method stub
+        return null;
     }
 }

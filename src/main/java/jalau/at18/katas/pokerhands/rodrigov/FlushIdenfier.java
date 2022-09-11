@@ -1,6 +1,6 @@
 package jalau.at18.katas.pokerhands.rodrigov;
 
-public class FlushIdenfier {
+public class FlushIdenfier extends Identifier{
     private PokerHandAnalizer analizer;
     public FlushIdenfier() {
         analizer = new PokerHandAnalizer();
@@ -9,5 +9,11 @@ public class FlushIdenfier {
     public boolean identify(PokerHand hand) {
         AllSameSuit allSameSuit = new AllSameSuit();
         return analizer.analize(hand, allSameSuit);
+    }
+
+    @Override
+    Rank identifyRank() {
+        // TODO Auto-generated method stub
+        return null;
     }
 }

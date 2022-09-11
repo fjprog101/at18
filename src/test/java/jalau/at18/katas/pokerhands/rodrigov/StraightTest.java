@@ -15,7 +15,7 @@ public class StraightTest {
             new Card(CardValue.FIVE, 'D'),
             new Card(CardValue.SIX, 'D'),
         });
-        assertTrue(straightIdentifier.indentify(hand));
+        assertTrue(straightIdentifier.identify(hand));
     }
 
     @Test
@@ -28,6 +28,6 @@ public class StraightTest {
             new Card(CardValue.FIVE, 'D'),
             new Card(CardValue.SIX, 'D'),
         });
-        assertFalse(straightIdentifier.indentify(hand));
+        assertFalse(straightIdentifier.identify(hand));
     }
 }

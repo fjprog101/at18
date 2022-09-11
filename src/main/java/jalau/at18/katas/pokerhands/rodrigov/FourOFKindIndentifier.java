@@ -10,6 +10,11 @@ public class FourOFKindIndentifier extends Identifier {
         FourOfKind fourOfKind = new FourOfKind();
         return pokerHandAnalizer.analize(hand, fourOfKind);
     }
+    @Override
+    Rank identifyRank() {
+        // TODO Auto-generated method stub
+        return null;
+    }
 
 
 }
