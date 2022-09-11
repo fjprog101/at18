@@ -1,6 +1,6 @@
 package jalau.at18.katas.pokerhands.sergio;
 
-public class ThreeOfKindIdentifier {
+public class ThreeOfKindIdentifier extends CardsPattern {
     private PokerHandAnalizer analizer;
     private final int threeTimesRepeated = 3;
 
@@ -8,7 +8,8 @@ public class ThreeOfKindIdentifier {
         this.analizer = new PokerHandAnalizer();
     }
 
-    public boolean identify(PokerHand hand) {
+    @Override
+    boolean match(PokerHand hand) {
         SameValuePattern threeOfKindPattern = new SameValuePattern(threeTimesRepeated);
         return analizer.analize(hand, threeOfKindPattern);
     }

@@ -17,7 +17,7 @@ public class FlushIdentifierTest {
             new Card(CardValue.SIX, 'C'),
             new Card(CardValue.NINE, 'C'),
             new Card(CardValue.QUEEN, 'C'), });
-        assertTrue(identifier.identify(flushHand));
+        assertTrue(identifier.match(flushHand));
 
         PokerHand flushWithConsecutiveValues = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
@@ -26,13 +26,13 @@ public class FlushIdentifierTest {
             new Card(CardValue.FIVE, 'C'),
             new Card(CardValue.SIX, 'C'), });
 
-        assertFalse(identifier.identify(flushWithConsecutiveValues));
+        assertFalse(identifier.match(flushWithConsecutiveValues));
         PokerHand noSameSuite = new PokerHand(new Card[]{
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.SIX, 'D'),
             new Card(CardValue.EIGHT, 'H'),
             new Card(CardValue.JACK, 'C'),
             new Card(CardValue.ACE, 'S'), });
-        assertFalse(identifier.identify(noSameSuite));
+        assertFalse(identifier.match(noSameSuite));
     }
 }

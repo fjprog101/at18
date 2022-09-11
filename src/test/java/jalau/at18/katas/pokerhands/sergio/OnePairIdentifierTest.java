@@ -17,20 +17,20 @@ public class OnePairIdentifierTest {
             new Card(CardValue.FIVE, 'C'),
             new Card(CardValue.FOUR, 'S'),
             new Card(CardValue.JACK, 'C'), });
-        assertTrue(identifier.identify(onePairHand));
+        assertTrue(identifier.match(onePairHand));
         PokerHand twoPairsHand = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.TWO, 'D'),
             new Card(CardValue.FOUR, 'C'),
             new Card(CardValue.FOUR, 'S'),
             new Card(CardValue.JACK, 'C'), });
-        assertFalse(identifier.identify(twoPairsHand));
+        assertFalse(identifier.match(twoPairsHand));
         PokerHand PokerHand = new PokerHand(new Card[]{
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.THREE, 'S'),
             new Card(CardValue.THREE, 'H'),
             new Card(CardValue.THREE, 'D'),
             new Card(CardValue.SEVEN, 'C'), });
-        assertFalse(identifier.identify(PokerHand));
+        assertFalse(identifier.match(PokerHand));
     }
 }
