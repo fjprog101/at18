@@ -12,8 +12,7 @@ public class FourOFKindIndentifier extends Identifier {
     }
     @Override
     Rank identifyRank() {
-        // TODO Auto-generated method stub
-        return null;
+        return Rank.FOUROFAKIND;
     }
 
 

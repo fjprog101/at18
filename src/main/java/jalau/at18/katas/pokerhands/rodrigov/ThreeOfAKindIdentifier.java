@@ -13,7 +13,6 @@ public class ThreeOfAKindIdentifier extends Identifier{
 
     @Override
     Rank identifyRank() {
-        // TODO Auto-generated method stub
-        return null;
+        return Rank.THREEOFAKIND;
     }
 }

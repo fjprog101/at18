@@ -16,7 +16,6 @@ public class StraightFlushIdentifier extends Identifier{
 
     @Override
     Rank identifyRank() {
-        // TODO Auto-generated method stub
-        return null;
+        return Rank.STRAIGHTFLUSH;
     }
 }

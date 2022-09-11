@@ -13,7 +13,6 @@ public class FlushIdenfier extends Identifier{
 
     @Override
     Rank identifyRank() {
-        // TODO Auto-generated method stub
-        return null;
+        return Rank.FLUSH;
     }
 }
