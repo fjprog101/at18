@@ -1,6 +1,6 @@
 package jalau.at18.katas.pokerhands.alvaro;
 
-public class FullHouseIdentifier {
+public class FullHouseIdentifier extends Identifiers {
     private PokerHandAnalizer analizer;
     public FullHouseIdentifier() {
         this.analizer = new PokerHandAnalizer();

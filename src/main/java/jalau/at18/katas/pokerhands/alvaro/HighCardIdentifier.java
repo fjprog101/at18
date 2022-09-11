@@ -1,6 +1,6 @@
 package jalau.at18.katas.pokerhands.alvaro;
 
-public class HighCardIdentifier {
+public class HighCardIdentifier extends Identifiers {
     private PokerHandAnalizer analizer;
     private static final int COUNTER = 3;
     private static final int FOUR = 4;
@@ -13,6 +13,7 @@ public class HighCardIdentifier {
         this.consVal =  new ConsecutiveValues();
         this.fullHouse = new FullHouse();
     }
+    @Override
     public boolean identify(PokerHand highCard) {
         Pair pair = new Pair();
         TwoPair twoPair = new TwoPair();
