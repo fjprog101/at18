@@ -59,7 +59,7 @@ public class FullHouseIdentifierTest {
                 new Card(CardValue.NINE, 'C'),
                 new Card(CardValue.NINE, 'S'),
         });
-        assertEquals(CardValue.NINE, identifier.getRank(fullHouseRank).getCardValue());
+        assertEquals(CardValue.NINE, identifier.getRank(fullHouseRank).getListCardValue().get(0));
     }
 
 }

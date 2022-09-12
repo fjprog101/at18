@@ -24,7 +24,7 @@ public class FourKindIdentifier implements PokerHandIdentifier {
         CardValuesCount count = counter.getCount();
         CardValueGroup cardValueGroup = count.getCardValuesGroup();
         List<CardValue> listCardValue = cardValueGroup.getCardValues(CARDS_SAME_VALUE);
-        PokerHandRank pokerHandRank = new PokerHandRank(PokerHandType.FOURKIND, listCardValue.get(0));
+        PokerHandRank pokerHandRank = new PokerHandRank(PokerHandType.FOURKIND, listCardValue);
         return pokerHandRank;
     }
 }

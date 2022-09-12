@@ -1,5 +1,7 @@
 package jalau.at18.katas.pokerhands.maria;
 
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         //String input = "Black: 2H 3D 5S 9C KD  White: 2C 3H 4S 8C AH";
@@ -10,7 +12,7 @@ public class Main {
         GameResult gameResult = inputData.initGame(input);
         String player = gameResult.getWinnerPlayer();
         PokerHandType pokerHandType = gameResult.getPokerHandRank().getPokerHandType();
-        CardValue cardValue = gameResult.getPokerHandRank().getCardValue();
-        System.out.println(player + " wins. - with " + pokerHandType + ": " + cardValue);
+        List<CardValue> listCardValue = gameResult.getPokerHandRank().getListCardValue();
+        System.out.println(player + " wins. - with " + pokerHandType + ": " + listCardValue);
     }
 }

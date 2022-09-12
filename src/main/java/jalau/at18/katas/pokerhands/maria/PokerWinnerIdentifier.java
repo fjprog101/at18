@@ -23,13 +23,16 @@ public class PokerWinnerIdentifier {
     }
 
     private GameResult getResultByTie(PokerHandRank pokerHandRankPlayOne, PokerHandRank pokerHandRankPlayTwo) {
-        if (pokerHandRankPlayOne.getCardValue().getRealNumberValue() > pokerHandRankPlayTwo.getCardValue().getRealNumberValue()) {
-            return new GameResult(pokerHandRankPlayOne, "Player One");
-        } else if (pokerHandRankPlayOne.getCardValue().getRealNumberValue() < pokerHandRankPlayTwo.getCardValue().getRealNumberValue()) {
-            return new GameResult(pokerHandRankPlayTwo, "Player Two");
-        } else {
-            return new GameResult(null, "Tie");
+        for (int index = 0; index < pokerHandRankPlayOne.getListCardValue().size(); index++) {
+            CardValue cardValuePlayerOne = pokerHandRankPlayOne.getListCardValue().get(index);
+            CardValue cardValuePlayerTwo = pokerHandRankPlayTwo.getListCardValue().get(index);
+            if (cardValuePlayerOne.getRealNumberValue() > cardValuePlayerTwo.getRealNumberValue()) {
+                return new GameResult(pokerHandRankPlayOne, "Player One");
+            } else if (cardValuePlayerOne.getRealNumberValue() < cardValuePlayerTwo.getRealNumberValue()) {
+                return new GameResult(pokerHandRankPlayTwo, "Player Two");
+            }
         }
+        return new GameResult(null, "Tie");
     }
 
 

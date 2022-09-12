@@ -26,7 +26,7 @@ public class FullHouseIdentifier implements PokerHandIdentifier {
         CardValuesCount cardValuesCount = cardValuesCounter.getCount();
         CardValueGroup cardValueGroup = cardValuesCount.getCardValuesGroup();
         List<CardValue> listCardValue = cardValueGroup.getCardValues(CARDS_SAME_VALUE);
-        PokerHandRank pokerHandRank = new PokerHandRank(PokerHandType.FULLHOUSE, listCardValue.get(0));
+        PokerHandRank pokerHandRank = new PokerHandRank(PokerHandType.FULLHOUSE, listCardValue);
         return pokerHandRank;
     }
 }

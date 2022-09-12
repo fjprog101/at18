@@ -59,6 +59,6 @@ public class ThreeKindIdentifierTest {
                 new Card(CardValue.SEVEN, 'H'),
                 new Card(CardValue.TEN, 'H'),
         });
-        assertEquals(CardValue.TEN, identifier.getRank(threeKindHand).getCardValue());
+        assertEquals(CardValue.TEN, identifier.getRank(threeKindHand).getListCardValue().get(0));
     }
 }

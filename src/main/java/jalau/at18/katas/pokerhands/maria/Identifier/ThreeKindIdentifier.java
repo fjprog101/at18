@@ -2,6 +2,8 @@ package jalau.at18.katas.pokerhands.maria.Identifier;
 
 import jalau.at18.katas.pokerhands.maria.*;
 
+import java.util.List;
+
 public class ThreeKindIdentifier implements PokerHandIdentifier {
     public static final int CARDS_SAME_VALUE = 3;
     private PokerHandAnalizer analizer;
@@ -21,7 +23,7 @@ public class ThreeKindIdentifier implements PokerHandIdentifier {
         CardValuesCounter cardValuesCounter = new CardValuesCounter(hand);
         CardValuesCount cardValuesCount = cardValuesCounter.getCount();
         CardValueGroup cardValueGroup = cardValuesCount.getCardValuesGroup();
-        CardValue cardValue = cardValueGroup.getCardValues(CARDS_SAME_VALUE).get(0);
+        List<CardValue> cardValue = cardValueGroup.getCardValues(CARDS_SAME_VALUE);
         PokerHandRank pokerHandRank = new PokerHandRank(PokerHandType.THREEKIND, cardValue);
         return pokerHandRank;
     }

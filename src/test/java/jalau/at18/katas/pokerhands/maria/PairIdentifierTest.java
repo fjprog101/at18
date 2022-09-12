@@ -57,7 +57,7 @@ public class PairIdentifierTest {
                 new Card(CardValue.FIVE, 'D'),
                 new Card(CardValue.SIX, 'S'),
         });
-        assertEquals(CardValue.TWO, identifier.getRank(pairHand).getCardValue());
+        assertEquals(CardValue.TWO, identifier.getRank(pairHand).getListCardValue().get(0));
     }
 
 }

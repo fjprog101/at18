@@ -25,7 +25,7 @@ public class TwoPairsIdentifier implements PokerHandIdentifier {
         CardValueGroup cardValueGroup = cardValuesCount.getCardValuesGroup();
         List<CardValue> listCardValue = cardValueGroup.getCardValues(2);
         Collections.sort(listCardValue);
-        PokerHandRank pokerHandRank = new PokerHandRank(PokerHandType.TWOPAIRS, listCardValue.get(0));
+        PokerHandRank pokerHandRank = new PokerHandRank(PokerHandType.TWOPAIRS, listCardValue);
         return pokerHandRank;
     }
 

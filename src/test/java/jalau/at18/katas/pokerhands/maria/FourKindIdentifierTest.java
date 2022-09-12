@@ -42,6 +42,6 @@ public class FourKindIdentifierTest {
                 new Card(CardValue.SEVEN, 'H'),
                 new Card(CardValue.SEVEN, 'D'),
         });
-        assertEquals(CardValue.SEVEN, identifier.getRank(fourKindHand).getCardValue());
+        assertEquals(CardValue.SEVEN, identifier.getRank(fourKindHand).getListCardValue().get(0));
     }
 }

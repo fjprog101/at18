@@ -84,6 +84,6 @@ public class TwoPairsIdentifierTest {
                 new Card(CardValue.NINE, 'H'),
                 new Card(CardValue.NINE, 'S'),
         });
-        assertEquals(CardValue.NINE, identifier.getRank(twoPairsHand).getCardValue());
+        assertEquals(CardValue.NINE, identifier.getRank(twoPairsHand).getListCardValue().get(0));
     }
 }

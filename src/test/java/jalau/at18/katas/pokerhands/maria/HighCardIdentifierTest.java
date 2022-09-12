@@ -30,7 +30,7 @@ public class HighCardIdentifierTest {
                 new Card(CardValue.JACK, 'H'),
                 new Card(CardValue.SEVEN, 'S'),
         });
-        assertEquals(CardValue.JACK, identifier.getRank(highCardHand).getCardValue());
+        assertEquals(CardValue.JACK, identifier.getRank(highCardHand).getListCardValue().get(0));
     }
 
 }

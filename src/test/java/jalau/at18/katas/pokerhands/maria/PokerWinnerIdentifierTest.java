@@ -56,7 +56,31 @@ public class PokerWinnerIdentifierTest {
     }
 
     @Test
-    public void playersTie1() {
+    public void playersTie() {
+        PokerHand player1HighCard = new PokerHand(new Card[]{
+                new Card(CardValue.SIX, 'C'),
+                new Card(CardValue.JACK, 'S'),
+                new Card(CardValue.FOUR, 'C'),
+                new Card(CardValue.THREE, 'H'),
+                new Card(CardValue.TWO, 'D'),
+        });
+
+        PokerHand player2HighCard = new PokerHand(new Card[]{
+                new Card(CardValue.SIX, 'C'),
+                new Card(CardValue.JACK, 'S'),
+                new Card(CardValue.TWO, 'C'),
+                new Card(CardValue.THREE, 'H'),
+                new Card(CardValue.FOUR, 'D'),
+        });
+
+        PokerWinnerIdentifier pokerWinnerIdentifier = new PokerWinnerIdentifier();
+        GameResult gameResult = pokerWinnerIdentifier.calculatePokerWinner(player1HighCard, player2HighCard);
+        assertNull(gameResult.getPokerHandRank());
+        assertEquals("Tie", gameResult.getWinnerPlayer());
+    }
+
+    @Test
+    public void playersTieAndPlayer2() {
         PokerHand player1HighCard = new PokerHand(new Card[]{
                 new Card(CardValue.SIX, 'C'),
                 new Card(CardValue.JACK, 'S'),
@@ -75,8 +99,8 @@ public class PokerWinnerIdentifierTest {
 
         PokerWinnerIdentifier pokerWinnerIdentifier = new PokerWinnerIdentifier();
         GameResult gameResult = pokerWinnerIdentifier.calculatePokerWinner(player1HighCard, player2HighCard);
-        assertNull(gameResult.getPokerHandRank());
-        assertEquals("Tie", gameResult.getWinnerPlayer());
+        assertEquals(PokerHandType.HIGHCARD, gameResult.getPokerHandRank().getPokerHandType());
+        assertEquals("Player Two", gameResult.getWinnerPlayer());
     }
 
     @Test

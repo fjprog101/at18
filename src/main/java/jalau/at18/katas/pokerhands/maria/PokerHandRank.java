@@ -1,19 +1,21 @@
 package jalau.at18.katas.pokerhands.maria;
 
+import java.util.List;
+
 public class PokerHandRank {
     private PokerHandType pokerHandType;
-    private CardValue cardValue;
+    private List<CardValue> listCardValue;
 
-    public PokerHandRank(PokerHandType pokerHandType, CardValue cardValue) {
+    public PokerHandRank(PokerHandType pokerHandType, List<CardValue> listCardValue) {
         this.pokerHandType = pokerHandType;
-        this.cardValue = cardValue;
+        this.listCardValue = listCardValue;
     }
 
     public PokerHandType getPokerHandType() {
         return pokerHandType;
     }
 
-    public CardValue getCardValue() {
-        return cardValue;
+    public List<CardValue> getListCardValue() {
+        return listCardValue;
     }
 }
