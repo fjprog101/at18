@@ -17,7 +17,7 @@ public class IdentifyPattern {
         patterns.add(new ThreePairsIdentify().identifyThreePairs(hand));
         patterns.add(new TwoPairsIdentify().identifyTwoPairs(hand));
         patterns.add(new PairsIdentify().identifyPairs(hand));
-        patterns.add(new HightCardsIdentify().identifyhigthcard(hand));
+        patterns.add(new HighCardsIdentify().identifyhighcard(hand));
         findThePosition(patterns);
 
         return position;

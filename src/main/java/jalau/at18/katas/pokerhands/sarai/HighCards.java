@@ -1,6 +1,6 @@
 package jalau.at18.katas.pokerhands.sarai;
 
-public class HightCards extends CardsPattern {
+public class HighCards extends CardsPattern {
 
     private int existingCount = 0;
     private final int pairsnumbers = 5;
