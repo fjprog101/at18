@@ -1,5 +1,6 @@
 package jalau.at18.katas.pokerhands.hugo;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -10,7 +11,7 @@ public class ThreeKindTest {
     @Test
     public void shouldVerifyThereAreThreeOfAKind() {
 
-        ThreeKind threeOfAKind = new ThreeKind();
+        ThreeKind threeKind = new ThreeKind();
         PokerHand handWithThreeKind = new PokerHand(new Card[]{
             new Card(CardValue.EIGHT, 'C'),
             new Card(CardValue.NINE, 'H'),
@@ -18,9 +19,8 @@ public class ThreeKindTest {
             new Card(CardValue.ACE, 'S'),
             new Card(CardValue.ACE, 'S'),
         });
-        assertTrue(threeOfAKind.identify(handWithThreeKind));
+        assertTrue(threeKind.identify(handWithThreeKind));
 
-        ThreeKind twoPairs = new ThreeKind();
         PokerHand handWithTwoPairs = new PokerHand(new Card[]{
             new Card(CardValue.ACE, 'C'),
             new Card(CardValue.ACE, 'H'),
@@ -28,9 +28,8 @@ public class ThreeKindTest {
             new Card(CardValue.FOUR, 'S'),
             new Card(CardValue.SEVEN, 'S'),
         });
-        assertFalse(twoPairs.identify(handWithTwoPairs));
-
-        ThreeKind onePair = new ThreeKind();
+        assertFalse(threeKind.identify(handWithTwoPairs));
+        
         PokerHand handWithOnePair = new PokerHand(new Card[]{
             new Card(CardValue.EIGHT, 'C'),
             new Card(CardValue.ACE, 'H'),
@@ -38,9 +37,8 @@ public class ThreeKindTest {
             new Card(CardValue.THREE, 'S'),
             new Card(CardValue.EIGHT, 'S'),
         });
-        assertFalse(onePair.identify(handWithOnePair));
+        assertFalse(threeKind.identify(handWithOnePair));
 
-        ThreeKind noPair = new ThreeKind();
         PokerHand handWithNoPair = new PokerHand(new Card[]{
             new Card(CardValue.EIGHT, 'C'),
             new Card(CardValue.ACE, 'H'),
@@ -48,9 +46,8 @@ public class ThreeKindTest {
             new Card(CardValue.THREE, 'S'),
             new Card(CardValue.NINE, 'S'),
         });
-        assertFalse(noPair.identify(handWithNoPair));
+        assertFalse(threeKind.identify(handWithNoPair));
         
-        ThreeKind fourOfAKind = new ThreeKind();
         PokerHand handWithFourKind = new PokerHand(new Card[]{
             new Card(CardValue.EIGHT, 'C'),
             new Card(CardValue.ACE, 'H'),
@@ -58,6 +55,7 @@ public class ThreeKindTest {
             new Card(CardValue.ACE, 'S'),
             new Card(CardValue.ACE, 'S'),
         });
-        assertFalse(fourOfAKind.identify(handWithFourKind));
+        assertFalse(threeKind.identify(handWithFourKind));
+        assertEquals(13, threeKind.getRankedValue(handWithThreeKind));
     }
 }

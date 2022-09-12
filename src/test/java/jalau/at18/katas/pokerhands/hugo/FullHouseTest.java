@@ -1,5 +1,6 @@
 package jalau.at18.katas.pokerhands.hugo;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -20,7 +21,6 @@ public class FullHouseTest {
         });
         assertTrue(fullHouse.identify(handWithFullHouse));
 
-        FullHouse threeOfAKind = new FullHouse();
         PokerHand handWithThreeKind = new PokerHand(new Card[]{
             new Card(CardValue.EIGHT, 'C'),
             new Card(CardValue.NINE, 'H'),
@@ -28,9 +28,8 @@ public class FullHouseTest {
             new Card(CardValue.ACE, 'S'),
             new Card(CardValue.ACE, 'S'),
         });
-        assertFalse(threeOfAKind.identify(handWithThreeKind));
+        assertFalse(fullHouse.identify(handWithThreeKind));
 
-        FullHouse twoPairs = new FullHouse();
         PokerHand handWithTwoPairs = new PokerHand(new Card[]{
             new Card(CardValue.ACE, 'C'),
             new Card(CardValue.ACE, 'H'),
@@ -38,9 +37,8 @@ public class FullHouseTest {
             new Card(CardValue.FOUR, 'S'),
             new Card(CardValue.SEVEN, 'S'),
         });
-        assertFalse(twoPairs.identify(handWithTwoPairs));
+        assertFalse(fullHouse.identify(handWithTwoPairs));
 
-        FullHouse onePair = new FullHouse();
         PokerHand handWithOnePair = new PokerHand(new Card[]{
             new Card(CardValue.EIGHT, 'C'),
             new Card(CardValue.EIGHT, 'H'),
@@ -48,9 +46,8 @@ public class FullHouseTest {
             new Card(CardValue.THREE, 'S'),
             new Card(CardValue.ACE, 'S'),
         });
-        assertFalse(onePair.identify(handWithOnePair));
+        assertFalse(fullHouse.identify(handWithOnePair));
 
-        FullHouse noPair = new FullHouse();
         PokerHand handWithNoPair = new PokerHand(new Card[]{
             new Card(CardValue.EIGHT, 'C'),
             new Card(CardValue.ACE, 'H'),
@@ -58,6 +55,7 @@ public class FullHouseTest {
             new Card(CardValue.THREE, 'S'),
             new Card(CardValue.NINE, 'S'),
         });
-        assertFalse(noPair.identify(handWithNoPair));
+        assertFalse(fullHouse.identify(handWithNoPair));
+        assertEquals(7, fullHouse.getRankedValue(handWithFullHouse));
     }
 }
