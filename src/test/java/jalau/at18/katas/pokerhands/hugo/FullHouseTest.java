@@ -5,22 +5,22 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-public class FourKindTest {
-
+public class FullHouseTest {
+    
     @Test
-    public void shouldVerifyThereAreTwoPairs() {
+    public void shouldVerifyThereIsFullHouse() {
 
-        FourKind fourOfAKind = new FourKind();
-        PokerHand handWithFourKind = new PokerHand(new Card[]{
+        FullHouse fullHouse = new FullHouse();
+        PokerHand handWithFullHouse = new PokerHand(new Card[]{
             new Card(CardValue.EIGHT, 'C'),
-            new Card(CardValue.ACE, 'H'),
-            new Card(CardValue.ACE, 'H'),
-            new Card(CardValue.ACE, 'S'),
-            new Card(CardValue.ACE, 'S'),
+            new Card(CardValue.EIGHT, 'H'),
+            new Card(CardValue.TWO, 'H'),
+            new Card(CardValue.EIGHT, 'S'),
+            new Card(CardValue.TWO, 'S'),
         });
-        assertTrue(fourOfAKind.identify(handWithFourKind));
+        assertTrue(fullHouse.identify(handWithFullHouse));
 
-        FourKind threeOfAKind = new FourKind();
+        FullHouse threeOfAKind = new FullHouse();
         PokerHand handWithThreeKind = new PokerHand(new Card[]{
             new Card(CardValue.EIGHT, 'C'),
             new Card(CardValue.NINE, 'H'),
@@ -30,7 +30,7 @@ public class FourKindTest {
         });
         assertFalse(threeOfAKind.identify(handWithThreeKind));
 
-        FourKind twoPairs = new FourKind();
+        FullHouse twoPairs = new FullHouse();
         PokerHand handWithTwoPairs = new PokerHand(new Card[]{
             new Card(CardValue.ACE, 'C'),
             new Card(CardValue.ACE, 'H'),
@@ -40,17 +40,17 @@ public class FourKindTest {
         });
         assertFalse(twoPairs.identify(handWithTwoPairs));
 
-        FourKind onePair = new FourKind();
+        FullHouse onePair = new FullHouse();
         PokerHand handWithOnePair = new PokerHand(new Card[]{
             new Card(CardValue.EIGHT, 'C'),
-            new Card(CardValue.ACE, 'H'),
+            new Card(CardValue.EIGHT, 'H'),
             new Card(CardValue.FIVE, 'H'),
             new Card(CardValue.THREE, 'S'),
-            new Card(CardValue.EIGHT, 'S'),
+            new Card(CardValue.ACE, 'S'),
         });
         assertFalse(onePair.identify(handWithOnePair));
 
-        FourKind noPair = new FourKind();
+        FullHouse noPair = new FullHouse();
         PokerHand handWithNoPair = new PokerHand(new Card[]{
             new Card(CardValue.EIGHT, 'C'),
             new Card(CardValue.ACE, 'H'),

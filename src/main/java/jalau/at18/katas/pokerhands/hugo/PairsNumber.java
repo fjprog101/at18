@@ -6,8 +6,8 @@ public class PairsNumber extends CardsPattern {
     private int cardsInPairs;
 
     public PairsNumber(int pairsNeeded) {
-        this.pairs = 0;
         this.cardsInPairs = pairsNeeded * 2;
+        this.pairs = 0;
     }
 
     @Override
