@@ -5,8 +5,8 @@ public class FullHouseIdentify extends Cardhigth {
 
     }
     @Override
-    public Higth getidentifyOperation() {
-        return Higth.FULLHOUSE;
+    public Patterns getidentifyOperation() {
+        return Patterns.FULLHOUSE;
     }
     public boolean identifyFullHouse(PokerHand hand) {
         FullHouse fullHousecards = new FullHouse();

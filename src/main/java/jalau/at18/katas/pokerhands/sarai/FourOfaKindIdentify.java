@@ -5,8 +5,8 @@ public class FourOfaKindIdentify extends Cardhigth {
 
     }
     @Override
-    public Higth getidentifyOperation() {
-        return Higth.FOURPAIR;
+    public Patterns getidentifyOperation() {
+        return Patterns.FOURPAIR;
     }
     public boolean identifyFourOfaKind(PokerHand hand) {
         Fourofakind fourofaKindcards = new Fourofakind();

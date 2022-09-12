@@ -4,8 +4,8 @@ public class TwoPairsIdentify extends Cardhigth {
     public TwoPairsIdentify() {
     }
     @Override
-    public Higth getidentifyOperation() {
-        return Higth.TWOPAIR;
+    public Patterns getidentifyOperation() {
+        return Patterns.TWOPAIR;
     }
     public boolean identifyTwoPairs(PokerHand hand) {
         TwoPairs twocards = new TwoPairs();

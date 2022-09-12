@@ -1,6 +1,7 @@
 package jalau.at18.katas.pokerhands.sarai;
 
-public enum Higth {
+public enum Patterns {
+    HIGHTCARDS(new HightCardsIdentify()),
     FULLHOUSE(new FullHouseIdentify()),
     PAIR(new PairsIdentify()),
     TWOPAIR(new TwoPairsIdentify()),
@@ -11,7 +12,7 @@ public enum Higth {
 
     private Cardhigth op;
 
-    Higth(Cardhigth op) {
+    Patterns(Cardhigth op) {
 
         this.op = op;
 

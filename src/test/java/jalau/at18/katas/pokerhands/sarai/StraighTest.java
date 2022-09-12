@@ -29,7 +29,7 @@ public class StraighTest {
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.FOUR, 'D'),
             new Card(CardValue.FIVE, 'C'),
-            new Card(CardValue.FIVE, 'C'),
+            new Card(CardValue.FIVE, 'D'),
             new Card(CardValue.SEVEN, 'C'),
         });
         assertFalse(identifier.identify(noConsecutiveValues));

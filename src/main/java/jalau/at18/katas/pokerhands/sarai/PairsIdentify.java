@@ -11,7 +11,7 @@ public class PairsIdentify extends Cardhigth {
     }
 
     @Override
-    Higth getidentifyOperation() {
-        return Higth.PAIR;
+    Patterns getidentifyOperation() {
+        return Patterns.PAIR;
     }
 }

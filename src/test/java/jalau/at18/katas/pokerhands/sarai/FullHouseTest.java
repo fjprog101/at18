@@ -11,7 +11,7 @@ public class FullHouseTest {
 
         FullHouse full = new FullHouse();
         PokerHand FullHousehand = new PokerHand(new Card[] {
-            new Card(CardValue.THREE, 'D'),
+            new Card(CardValue.THREE, 'C'),
             new Card(CardValue.THREE, 'D'),
             new Card(CardValue.THREE, 'S'),
             new Card(CardValue.FOUR, 'C'),

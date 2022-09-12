@@ -36,7 +36,7 @@ public class PairsTest {
         Pairs pairs = new Pairs();
         PokerHand OnePairshand = new PokerHand(new Card[] {
             new Card(CardValue.THREE, 'D'),
-            new Card(CardValue.THREE, 'D'),
+            new Card(CardValue.THREE, 'S'),
             new Card(CardValue.TWO, 'S'),
             new Card(CardValue.FOUR, 'C'),
             new Card(CardValue.TWO, 'H'),

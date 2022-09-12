@@ -11,8 +11,8 @@ public class FourofaKindTest {
         Fourofakind  PairsHandTFourTrue = new Fourofakind();
         PokerHand PairshandTrue = new PokerHand(new Card[] {
             new Card(CardValue.THREE, 'D'),
-            new Card(CardValue.THREE, 'D'),
-            new Card(CardValue.THREE, 'D'),
+            new Card(CardValue.THREE, 'H'),
+            new Card(CardValue.THREE, 'S'),
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.TWO, 'H'),
         });
@@ -22,7 +22,7 @@ public class FourofaKindTest {
         PokerHand ThreePairs2 = new PokerHand(new Card[] {
             new Card(CardValue.THREE, 'D'),
             new Card(CardValue.TWO, 'D'),
-            new Card(CardValue.THREE, 'D'),
+            new Card(CardValue.THREE, 'S'),
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.THREE, 'H'),
         });

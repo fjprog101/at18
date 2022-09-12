@@ -14,7 +14,7 @@ public class Straight extends Cardhigth {
     }
 
     @Override
-    Higth getidentifyOperation() {
-        return Higth.STRAIGHT;
+    Patterns getidentifyOperation() {
+        return Patterns.STRAIGHT;
     }
 }

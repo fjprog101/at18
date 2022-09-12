@@ -14,7 +14,7 @@ public class Flush extends Cardhigth {
     }
 
     @Override
-    Higth getidentifyOperation() {
-        return Higth.FLUSH;
+    Patterns getidentifyOperation() {
+        return Patterns.FLUSH;
     }
 }

@@ -2,7 +2,7 @@ package jalau.at18.katas.pokerhands.sarai;
 
 public enum CardValue {
     ACE(null),
-    KING(ACE),
+    KING(ACE), //HIGTH CARD
     QUEEN(KING),
     JACK(QUEEN),
     TEN(JACK),

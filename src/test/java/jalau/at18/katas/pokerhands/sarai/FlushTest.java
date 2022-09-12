@@ -13,7 +13,7 @@ public class FlushTest {
 
         PokerHand flushHand = new PokerHand(new Card[]{
             new Card(CardValue.THREE, 'C'),
-            new Card(CardValue.THREE, 'C'),
+            new Card(CardValue.SEVEN, 'C'),
             new Card(CardValue.FOUR, 'C'),
             new Card(CardValue.FIVE, 'C'),
             new Card(CardValue.SIX, 'C'),

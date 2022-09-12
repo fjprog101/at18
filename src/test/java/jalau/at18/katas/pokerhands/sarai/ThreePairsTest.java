@@ -9,8 +9,8 @@ public class ThreePairsTest {
     public void ThreePairs() {
         ThreePairs  PairsHandThree = new ThreePairs();
         PokerHand ThreePairshand = new PokerHand(new Card[] {
-            new Card(CardValue.THREE, 'D'),
-            new Card(CardValue.THREE, 'D'),
+            new Card(CardValue.THREE, 'S'),
+            new Card(CardValue.THREE, 'C'),
             new Card(CardValue.THREE, 'D'),
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.TWO, 'H'),
@@ -18,7 +18,7 @@ public class ThreePairsTest {
         assertTrue(PairsHandThree.match(ThreePairshand));
 
         PokerHand ThreePairs2 = new PokerHand(new Card[] {
-            new Card(CardValue.THREE, 'D'),
+            new Card(CardValue.THREE, 'S'),
             new Card(CardValue.TWO, 'D'),
             new Card(CardValue.THREE, 'D'),
             new Card(CardValue.THREE, 'C'),
@@ -31,7 +31,7 @@ public class ThreePairsTest {
     public void ThreePairsFalse() {
         ThreePairs  PairsHandThree = new ThreePairs();
         PokerHand ThreePairshand = new PokerHand(new Card[] {
-            new Card(CardValue.THREE, 'D'),
+            new Card(CardValue.THREE, 'S'),
             new Card(CardValue.FOUR, 'D'),
             new Card(CardValue.THREE, 'D'),
             new Card(CardValue.TWO, 'C'),
