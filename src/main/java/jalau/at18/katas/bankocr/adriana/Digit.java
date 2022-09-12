@@ -16,9 +16,12 @@ public class Digit {
     }
     public void setValue() {
         for (DigitType number : DigitType.values()) {
-            if (Arrays.deepEquals(digit, number.getArrayCharacters())) {
+            if (Arrays.deepEquals(digit, number.getArray())) {
                 value = "" + number.ordinal();
             }
         }
+    }
+    public String[][] getDigit() {
+        return digit;
     }
 }
