@@ -15,8 +15,8 @@ public class StraightFlushIdentifierTest {
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.FOUR, 'C'),
-            new Card(CardValue.FIVE, 'C'),
             new Card(CardValue.SIX, 'C'),
+            new Card(CardValue.FIVE, 'C'),
         });
         assertTrue(identifier.identify(straightFlushHand));
 

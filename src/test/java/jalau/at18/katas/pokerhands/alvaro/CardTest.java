@@ -18,6 +18,7 @@ public class CardTest {
         assertEquals('H', jackOfHearts.getSuit());
         assertEquals(11, CardValue.JACK.getValue());
 
+        
 
     }
 }

@@ -3,15 +3,16 @@ package jalau.at18.katas.pokerhands.alvaro;
 
 public class IdentifyHand {
     private String nameHand;
+    private int rankValue;
 
     public int searchTypeHand(PokerHand hand) {
         for (TypesOfHands typeHand : TypesOfHands.values()) {
             if (typeHand.getTypeHand().identify(hand)) {
                 nameHand = typeHand.getHand();
-                return typeHand.getRankValue();
+                rankValue = typeHand.getRankValue();
             }
         }
-        return 0;
+        return rankValue;
     }
     public String getNameHand() {
         return nameHand;
