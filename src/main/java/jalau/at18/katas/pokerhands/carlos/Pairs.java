@@ -1,21 +1,8 @@
-package main.java.jalau.at18.katas.pokerhands.carlos;
+package jalau.at18.katas.pokerhands.carlos;
 
-import jalau.at18.katas.pokerhands.carlos.CardComparer;
-import jalau.at18.katas.pokerhands.carlos.PokerHand;
-
-public class Pairs {
+public class Pairs extends CardsPattern {
     private static int count = 0;
     public Pairs() {
-    }
-
-    public boolean identifyPairs(PokerHand hand) {
-        boolean twoPairsIndentifier = false;
-        CardComparer comparer = new CardComparer();
-        count = pairsCounter(hand, comparer);
-        if (count == 2) {
-            twoPairsIndentifier = true;
-        }
-        return twoPairsIndentifier;
     }
 
     private static int pairsCounter(PokerHand hand, CardComparer comparer) {
@@ -26,5 +13,16 @@ public class Pairs {
             }
         }
         return count;
+    }
+
+    @Override
+    boolean match(PokerHand hand) {
+        boolean twoPairsIndentifier = false;
+        CardComparer comparer = new CardComparer();
+        count = pairsCounter(hand, comparer);
+        if (count == 2) {
+            twoPairsIndentifier = true;
+        }
+        return twoPairsIndentifier;
     }
 }

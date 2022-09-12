@@ -1,10 +1,9 @@
 package jalau.at18.katas.pokerhands.carlos;
 
-public class StraightFlushIdentifier extends CardsPattern {
-
+public class FlushIdentifier extends CardsPattern {
     private PokerHandAnalizer analizer;
 
-    public StraightFlushIdentifier() {
+    public FlushIdentifier() {
         this.analizer = new PokerHandAnalizer();
     }
 
@@ -12,6 +11,6 @@ public class StraightFlushIdentifier extends CardsPattern {
     boolean match(PokerHand hand) {
         AllSameSuit allSameSuit = new AllSameSuit();
         ConsecutiveValues consecutiveValues = new ConsecutiveValues();
-        return analizer.analize(hand, allSameSuit) && analizer.analize(hand, consecutiveValues);
+        return analizer.analize(hand, allSameSuit) && !analizer.analize(hand, consecutiveValues);
     }
 }

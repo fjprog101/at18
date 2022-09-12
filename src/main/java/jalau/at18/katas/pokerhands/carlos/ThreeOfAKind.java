@@ -1,21 +1,8 @@
-package main.java.jalau.at18.katas.pokerhands.carlos;
+package jalau.at18.katas.pokerhands.carlos;
 
-import jalau.at18.katas.pokerhands.carlos.CardComparer;
-import jalau.at18.katas.pokerhands.carlos.PokerHand;
-
-public class ThreeOfAKind {
+public class ThreeOfAKind extends CardsPattern {
     private static int count = 0;
     public ThreeOfAKind() {
-    }
-
-    public boolean identifyThreeOfAKind(PokerHand hand) {
-        boolean threeKindIndentifier = false;
-        CardComparer comparer = new CardComparer();
-        count = threeKindCounter(hand, comparer);
-        if (count == 1) {
-            threeKindIndentifier = true;
-        }
-        return threeKindIndentifier;
     }
 
     private static int threeKindCounter(PokerHand hand, CardComparer comparer) {
@@ -28,5 +15,16 @@ public class ThreeOfAKind {
             }
         }
         return count;
+    }
+
+    @Override
+    boolean match(PokerHand hand) {
+        boolean threeKindIndentifier = false;
+        CardComparer comparer = new CardComparer();
+        count = threeKindCounter(hand, comparer);
+        if (count == 1) {
+            threeKindIndentifier = true;
+        }
+        return threeKindIndentifier;
     }
 }
