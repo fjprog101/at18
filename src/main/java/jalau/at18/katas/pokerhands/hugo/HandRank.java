@@ -17,7 +17,7 @@ public class HandRank {
         return rank;
     }
 
-    public boolean handIdentifier(PokerHand hand, HandIdentifier handType) {
-        return handType.identify(hand);
+    public boolean handIdentifier(PokerHand hand, HandIdentifier handTypes) {
+        return handTypes.identify(hand);
     }
 }
