@@ -1,13 +1,13 @@
 package jalau.at18.katas.pokerhands.rodrigov;
 
 public class Game {
-    
     private PokerHand hand;
     private int score = 0;
     private Rank rank;
 
-    public Game(PokerHand hand){
-        this.hand= hand;
+    public Game(PokerHand hand) {
+        this.hand = hand;
+        analizePokerHand();
     }
 
     public void analizePokerHand() {
@@ -18,12 +18,12 @@ public class Game {
             }
         }
     }
-    
-    public Rank getidentifyPokerHand(){
+
+    public Rank getidentifyPokerHand() {
         return rank;
     }
 
-    public int getScore(){
+    public int getScore() {
         return score;
     }
 }
