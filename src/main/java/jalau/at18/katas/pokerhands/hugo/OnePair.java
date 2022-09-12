@@ -1,6 +1,6 @@
 package jalau.at18.katas.pokerhands.hugo;
 
-public class OnePair {
+public class OnePair extends HandIdentifier {
 
     private static final int NUMBER_OF_PAIRS = 1;
     private PokerHandAnalizer pairAnalizer;

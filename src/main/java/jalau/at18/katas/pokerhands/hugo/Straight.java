@@ -1,6 +1,7 @@
 package jalau.at18.katas.pokerhands.hugo;
 
-public class Straight {
+public class Straight extends HandIdentifier {
+
     private PokerHandAnalizer analizer;
 
     public Straight() {

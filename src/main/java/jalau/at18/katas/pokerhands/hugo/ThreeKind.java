@@ -1,6 +1,6 @@
 package jalau.at18.katas.pokerhands.hugo;
 
-public class ThreeKind {
+public class ThreeKind extends HandIdentifier {
 
     private static final int THREE_OF_A_KIND_CARDS = 3;
     private PokerHandAnalizer kindAnalizer;

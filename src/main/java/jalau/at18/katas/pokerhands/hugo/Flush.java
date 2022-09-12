@@ -1,6 +1,6 @@
 package jalau.at18.katas.pokerhands.hugo;
 
-public class Flush {
+public class Flush extends HandIdentifier {
 
     private PokerHandAnalizer analizer;
 

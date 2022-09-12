@@ -1,6 +1,6 @@
 package jalau.at18.katas.pokerhands.hugo;
 
-public class FullHouse {
+public class FullHouse extends HandIdentifier {
 
     private PokerHandAnalizer analizer;
     private static final int THREE_KIND = 3;
