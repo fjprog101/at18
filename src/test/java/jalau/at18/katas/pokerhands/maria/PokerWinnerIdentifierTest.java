@@ -24,8 +24,8 @@ public class PokerWinnerIdentifierTest {
         });
 
 
-        PokerWinnerIdentifier pokerWinnerIdentifier = new PokerWinnerIdentifier(player1StraightFlush, player2ThreeKind);
-        GameResult gameResult = pokerWinnerIdentifier.calculatePokerWinner();
+        PokerWinnerIdentifier pokerWinnerIdentifier = new PokerWinnerIdentifier();
+        GameResult gameResult = pokerWinnerIdentifier.calculatePokerWinner(player1StraightFlush, player2ThreeKind);
         assertEquals(PokerHandType.STRAIGHTFLUSH, gameResult.getPokerHandRank().getPokerHandType());
         assertEquals("Player One", gameResult.getWinnerPlayer());
     }
@@ -49,8 +49,8 @@ public class PokerWinnerIdentifierTest {
         });
 
 
-        PokerWinnerIdentifier pokerWinnerIdentifier = new PokerWinnerIdentifier(player1TwoPair, player2Flush);
-        GameResult gameResult = pokerWinnerIdentifier.calculatePokerWinner();
+        PokerWinnerIdentifier pokerWinnerIdentifier = new PokerWinnerIdentifier();
+        GameResult gameResult = pokerWinnerIdentifier.calculatePokerWinner(player1TwoPair, player2Flush);
         assertEquals(PokerHandType.FLUSH, gameResult.getPokerHandRank().getPokerHandType());
         assertEquals("Player Two", gameResult.getWinnerPlayer());
     }
@@ -73,8 +73,8 @@ public class PokerWinnerIdentifierTest {
                 new Card(CardValue.FIVE, 'C'),
         });
 
-        PokerWinnerIdentifier pokerWinnerIdentifier = new PokerWinnerIdentifier(player1HighCard, player2HighCard);
-        GameResult gameResult = pokerWinnerIdentifier.calculatePokerWinner();
+        PokerWinnerIdentifier pokerWinnerIdentifier = new PokerWinnerIdentifier();
+        GameResult gameResult = pokerWinnerIdentifier.calculatePokerWinner(player1HighCard, player2HighCard);
         assertNull(gameResult.getPokerHandRank());
         assertEquals("Tie", gameResult.getWinnerPlayer());
     }
@@ -97,8 +97,8 @@ public class PokerWinnerIdentifierTest {
                 new Card(CardValue.EIGHT, 'H'),
         });
 
-        PokerWinnerIdentifier pokerWinnerIdentifier = new PokerWinnerIdentifier(player1FourKind, player2FourKind);
-        GameResult gameResult = pokerWinnerIdentifier.calculatePokerWinner();
+        PokerWinnerIdentifier pokerWinnerIdentifier = new PokerWinnerIdentifier();
+        GameResult gameResult = pokerWinnerIdentifier.calculatePokerWinner(player1FourKind, player2FourKind);
         assertEquals(PokerHandType.FOURKIND, gameResult.getPokerHandRank().getPokerHandType());
         assertEquals("Player Two", gameResult.getWinnerPlayer());
     }
@@ -121,8 +121,8 @@ public class PokerWinnerIdentifierTest {
                 new Card(CardValue.EIGHT, 'H'),
         });
 
-        PokerWinnerIdentifier pokerWinnerIdentifier = new PokerWinnerIdentifier(player1FullHouse, player2FullHouse);
-        GameResult gameResult = pokerWinnerIdentifier.calculatePokerWinner();
+        PokerWinnerIdentifier pokerWinnerIdentifier = new PokerWinnerIdentifier();
+        GameResult gameResult = pokerWinnerIdentifier.calculatePokerWinner(player1FullHouse, player2FullHouse);
         assertEquals(PokerHandType.FULLHOUSE, gameResult.getPokerHandRank().getPokerHandType());
         assertEquals("Player One", gameResult.getWinnerPlayer());
     }
