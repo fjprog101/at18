@@ -7,14 +7,12 @@ public class HighCardIdentifier extends HandType {
     private static final int SIZE_CARD_LIST = 5;
 
     @Override
-    public
-    boolean identify(PokerHand hand) {
+    public boolean identify(PokerHand hand) {
         return true;
     }
 
     @Override
-    public
-    int getCardRankedValue(PokerHand hand) {
+    public int getCardRankedValue(PokerHand hand) {
         return hand.getCards().get(SIZE_CARD_LIST - 1).getValue().getNumericValue();
     }
 

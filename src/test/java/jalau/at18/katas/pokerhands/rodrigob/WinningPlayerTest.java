@@ -36,8 +36,8 @@ public class WinningPlayerTest {
         Player player1 = new Player(player1HandWinner, "Black");
         Player player2 = new Player(player2HandLosser, "White");
 
-        assertEquals("Black", winnerPlayer1.getWinner(player1, player2));
-        assertNotEquals("White", winnerPlayer1.getWinner(player1, player2));
+        assertEquals(player1, winnerPlayer1.getWinner(player1, player2));
+        assertNotEquals(player2, winnerPlayer1.getWinner(player1, player2));
 
 
         WinningPlayer winnerPlayer2 = new WinningPlayer();
@@ -61,8 +61,8 @@ public class WinningPlayerTest {
         player1 = new Player(player1HandLosser, "Black");
         player2 = new Player(player2HandWinner, "White");
 
-        assertEquals("White", winnerPlayer2.getWinner(player1, player2));
-        assertNotEquals("Black", winnerPlayer2.getWinner(player1, player2));
+        assertEquals(player2, winnerPlayer2.getWinner(player1, player2));
+        assertNotEquals(player1, winnerPlayer2.getWinner(player1, player2));
 
         WinningPlayer tie = new WinningPlayer();
 
@@ -85,8 +85,8 @@ public class WinningPlayerTest {
         player1 = new Player(player1HandTie, "Black");
         player2 = new Player(player2HandTie, "White");
 
-        assertEquals("Tie", tie.getWinner(player1, player2));
-        assertNotEquals("Black", tie.getWinner(player1, player2));
-        assertNotEquals("White", tie.getWinner(player1, player2));
+        assertEquals("Tie", tie.getWinner(player1, player2).getPlayerName());
+        assertNotEquals(player1, tie.getWinner(player1, player2));
+        assertNotEquals(player2, tie.getWinner(player1, player2));
     }
 }

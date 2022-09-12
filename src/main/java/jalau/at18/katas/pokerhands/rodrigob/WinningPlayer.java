@@ -10,10 +10,12 @@ public class WinningPlayer {
         this.rankComparer = new RankComparer();
     }
 
-    public String getWinner(Player player1, Player player2) {
+    public Player getWinner(Player player1, Player player2) {
         if (rankComparer.compareHands(player1, player2) == 0) {
-            return "Tie";
+            return new Player(null, "Tie");
         }
-        return rankComparer.compareHands(player1, player2) > 0 ? player1.getPlayerName() : player2.getPlayerName();
+        return rankComparer.compareHands(player1, player2) > 0 ? player1 : player2;
     }
+
+
 }
