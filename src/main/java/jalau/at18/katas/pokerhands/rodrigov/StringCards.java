@@ -16,7 +16,7 @@ public class StringCards {
         return numbers.toString();
     }
 
-    public int highCard(CardValue cardValue) {
+    public int cardDefinitive(CardValue cardValue) {
         String sorted = get(cardValue);
         String[] arrayOfStrings = sorted.split("");
         for (String cards : arrayOfStrings) {
