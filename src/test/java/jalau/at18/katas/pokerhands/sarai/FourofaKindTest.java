@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class FourofaKindTest {
     @Test
-    public void ThreePairs() {
+    public void fourPairs() {
         Fourofakind  PairsHandTFourTrue = new Fourofakind();
         PokerHand PairshandTrue = new PokerHand(new Card[] {
             new Card(CardValue.THREE, 'D'),
@@ -30,7 +30,7 @@ public class FourofaKindTest {
     }
 
     @Test
-    public void ThreePairsFalse() {
+    public void fourPairsFalse() {
         Fourofakind  PairsHandFalse1 = new Fourofakind();
         PokerHand FourPairs1 = new PokerHand(new Card[] {
             new Card(CardValue.THREE, 'D'),

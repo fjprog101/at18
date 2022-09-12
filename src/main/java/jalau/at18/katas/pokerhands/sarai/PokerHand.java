@@ -5,7 +5,6 @@ import java.util.Arrays;
 public class PokerHand {
 
     private Card[] cards;
-    private Card[] nevo;
 
     public PokerHand(Card[] cards) {
         this.cards = cards;

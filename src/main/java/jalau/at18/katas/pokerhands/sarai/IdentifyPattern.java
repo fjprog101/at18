@@ -5,26 +5,26 @@ import java.util.List;
 
 public class IdentifyPattern {
 
-    private int in;
+    private int position;
     public int getidentifyPatterns(PokerHand hand) {
 
         List<Boolean> patterns = new ArrayList<Boolean>();
 
+        patterns.add(new FourOfaKindIdentify().identifyFourOfaKind(hand)); // 1 2 3 4 5 6 7
+        patterns.add(new FullHouseIdentify().identifyFullHouse(hand));
         patterns.add(new Flush().identify(hand));
         patterns.add(new Straight().identify(hand));
-        patterns.add(new FullHouseIdentify().identifyFullHouse(hand));
-        patterns.add(new PairsIdentify().identifyPairs(hand));
-        patterns.add(new TwoPairsIdentify().identifyTwoPairs(hand)); // 40  true
         patterns.add(new ThreePairsIdentify().identifyThreePairs(hand));
-        patterns.add(new FourOfaKindIdentify().identifyFourOfaKind(hand));
+        patterns.add(new TwoPairsIdentify().identifyTwoPairs(hand));
+        patterns.add(new PairsIdentify().identifyPairs(hand));
         patterns.add(new HightCardsIdentify().identifyhigthcard(hand));
 
         for (int index = 0; index < patterns.size(); index++) {
             if (patterns.get(index)) {
-                in = index;
+                position = index;
             }
         }
-        return in;
+        return position;
     }
 
 

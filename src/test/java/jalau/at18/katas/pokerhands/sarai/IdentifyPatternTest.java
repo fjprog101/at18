@@ -15,6 +15,16 @@ public class IdentifyPatternTest {
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.TWO, 'H'),
         });
-        assertEquals(4, intify_Pattern.getidentifyPatterns(TwoPairshand));
+        assertEquals(5, intify_Pattern.getidentifyPatterns(TwoPairshand));
+
+        PokerHand OnePairshand = new PokerHand(new Card[] {
+            new Card(CardValue.THREE, 'D'),
+            new Card(CardValue.THREE, 'D'),
+            new Card(CardValue.JACK, 'S'),
+            new Card(CardValue.FOUR, 'C'),
+            new Card(CardValue.TWO, 'H'),
+        }); 
+        assertEquals(6, intify_Pattern.getidentifyPatterns(OnePairshand));
+
     }
 }

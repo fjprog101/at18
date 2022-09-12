@@ -9,10 +9,12 @@ public class ThreePairs extends CardsPattern {
     public boolean match(PokerHand hand) {
         CardValuesCounter counter = new CardValuesCounter(hand);
         CardValuesCount count = counter.getCount();
+        return count.exists(pairsnumbers);
+/*
         for (int index = 0; index < hand.getCards().length; index++) {
             pairs(hand, count, index);
         }
-        return ifThreePairs;
+        return ifThreePairs; */
     }
     public void pairs(PokerHand hand, CardValuesCount count, int index) {
         if (count.get(hand.getCards()[index].getValue()) == pairsnumbers) {
