@@ -10,7 +10,7 @@ public class WhoIsTheWinner {
     }
 
     public String whoIsTheWInnerPerHands(CardValue value1, CardValue value2) {
-        String winner = (new PairComparer().pairCase(black, white, value1, value2)) ? "Black is winner"
+        String winner = (new PairComparer().blackHandWinnerForPairCase(black, white, value1, value2)) ? "Black is winner"
                 : "White is winner";
         return winner;
     }

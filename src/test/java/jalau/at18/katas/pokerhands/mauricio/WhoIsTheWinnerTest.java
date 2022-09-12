@@ -297,4 +297,25 @@ public class WhoIsTheWinnerTest {
         WhoIsTheWinner winner = new WhoIsTheWinner(black, white);
         assertEquals("White is winner", winner.whoIsTheWInnerPerValue());
     }
+
+    @Test
+    public void shoulWinWhiteCase9(){
+        PokerHand black= new PokerHand(new Card[]{
+            new Card(CardValue.THREE, 'S'),
+            new Card(CardValue.THREE, 'D'),
+            new Card(CardValue.THREE, 'C'),
+            new Card(CardValue.FOUR, 'H'),
+            new Card(CardValue.FOUR, 'S'),
+        });
+
+        PokerHand white = new PokerHand(new Card[]{
+            new Card(CardValue.THREE, 'C'),
+            new Card(CardValue.FOUR, 'C'),
+            new Card(CardValue.FIVE, 'C'),
+            new Card(CardValue.SIX, 'C'),
+            new Card(CardValue.SEVEN, 'C'),
+        });
+        WhoIsTheWinner winner = new WhoIsTheWinner(black, white);
+        assertEquals("White is winner", winner.whoIsTheWInnerPerHands(CardValue.THREE, CardValue.FOUR));
+    }
 }
