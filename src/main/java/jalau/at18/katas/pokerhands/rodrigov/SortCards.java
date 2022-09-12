@@ -4,17 +4,22 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-public class SortCards extends CardListSorted {
+public class SortCards {
+    private CardListSorted cardListSorted = new CardListSorted();
     public Card[] sortCards(Card[] cards) {
         ArrayList<Card> cardsSort = new ArrayList<>();
-        cardsSort = addCardsArray(cardsSort, cards);
+        cardsSort = cardListSorted.addCardsArray(cardsSort, cards);
+        sortingCardsCollections(cardsSort);
+        return getCards(cardsSort);
+    }
+
+    public void sortingCardsCollections(ArrayList<Card> cardsSort) {
         Collections.sort(cardsSort, new Comparator<Card>() {
             @Override
             public int compare(Card firsrCard, Card secondCard) {
                 return firsrCard.getValue().compareTo(secondCard.getValue());
             }
         });
-        return getCards(cardsSort);
     }
 
     public Card[] getCards(ArrayList<Card> cards) {

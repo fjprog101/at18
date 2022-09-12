@@ -1,8 +1,11 @@
 package jalau.at18.katas.pokerhands.rodrigov;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
+
+import jalau.at18.katas.pokerhands.daniela.Twopairidentifier;
 public class TwoPairsIdentifierTest {
     @Test
     public void shouldSayIfTheHandHaveTwoPair(){
@@ -28,5 +31,11 @@ public class TwoPairsIdentifierTest {
             new Card(CardValue.SIX, 'H'),
         });
         assertFalse(twoPairsIdentifier.identify(hand));;
+    }
+
+    @Test
+    public void shouldReturnTwoPairsRank(){
+        TwoPairsIdentifier twoPairsIdentifier = new TwoPairsIdentifier();
+        assertEquals("TWOPAIRS", twoPairsIdentifier.identifyRank().toString());
     }
 }
