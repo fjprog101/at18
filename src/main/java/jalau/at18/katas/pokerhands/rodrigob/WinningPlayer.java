@@ -1,5 +1,7 @@
 package jalau.at18.katas.pokerhands.rodrigob;
 
+import jalau.at18.katas.pokerhands.rodrigob.Ranks.RankComparer;
+
 public class WinningPlayer {
 
     private RankComparer rankComparer;

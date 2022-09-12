@@ -7,6 +7,10 @@ import java.util.Arrays;
 
 import org.junit.Test;
 
+import jalau.at18.katas.pokerhands.rodrigob.Cards.Card;
+import jalau.at18.katas.pokerhands.rodrigob.Cards.CardValue;
+import jalau.at18.katas.pokerhands.rodrigob.PokerHands.PokerHand;
+
 public class WinningPlayerTest {
 
     @Test
