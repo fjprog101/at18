@@ -1,6 +1,4 @@
 package jalau.at18.katas.pokerhands.alvaro;
-
-
 public class IdentifyHand {
     private String nameHand;
     private int rankValue;

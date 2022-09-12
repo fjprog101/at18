@@ -3,7 +3,6 @@ package jalau.at18.katas.pokerhands.alvaro;
 public class AllSameSuit extends CardsPattern {
 
     private CardComparer comparer;
-
     public AllSameSuit() {
         this.comparer = new CardComparer();
     }

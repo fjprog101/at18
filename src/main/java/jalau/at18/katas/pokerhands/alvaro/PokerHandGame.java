@@ -2,12 +2,8 @@ package jalau.at18.katas.pokerhands.alvaro;
 
 public class PokerHandGame {
     private IdentifyHand identifyHand;
-    private String nameHandWhite;
-    private String nameHandBlack;
     public PokerHandGame() {
         identifyHand = new IdentifyHand();
-
-
     }
     public String compareHands(PokerHand whiteHand, PokerHand blackHand) {
 
@@ -19,5 +15,4 @@ public class PokerHandGame {
             return "Tie";
         }
     }
-
 }

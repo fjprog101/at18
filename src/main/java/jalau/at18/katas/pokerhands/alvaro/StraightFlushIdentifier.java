@@ -1,9 +1,7 @@
 package jalau.at18.katas.pokerhands.alvaro;
-
 public class StraightFlushIdentifier extends Identifiers {
 
     private PokerHandAnalizer analizer;
-
     public StraightFlushIdentifier() {
         this.analizer = new PokerHandAnalizer();
     }

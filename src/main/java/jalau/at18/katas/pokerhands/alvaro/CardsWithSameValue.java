@@ -3,7 +3,6 @@ package jalau.at18.katas.pokerhands.alvaro;
 public class CardsWithSameValue extends CardsPattern {
 
     private int expectedCount;
-
     public CardsWithSameValue(int expectedCount) {
         this.expectedCount = expectedCount;
     }

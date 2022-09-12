@@ -4,7 +4,6 @@ public class Pair extends CardsPattern {
     private static final int EXPECTED_COUNT = 2;
     private static final int EXPECTED_COUNT3 = 3;
     private static final int COUNT_PAIRS = 2;
-
     @Override
     public boolean match(PokerHand hand) {
         CardValuesCounter counter = new CardValuesCounter(hand);
