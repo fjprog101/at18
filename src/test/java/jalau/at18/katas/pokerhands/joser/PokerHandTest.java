@@ -10,11 +10,11 @@ public class PokerHandTest {
     @Test
     public void shouldHaveFiveCards() {
         PokerHand hand = new PokerHand(new Card[] {
-            new Card(CardValue.TWO, 'D'),
-            new Card(CardValue.THREE, 'D'),
-            new Card(CardValue.JACK, 'D'),
-            new Card(CardValue.TWO, 'C'),
-            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.ACE, 'D'),
+            new Card(CardValue.KING, 'D'),
+            new Card(CardValue.QUEEN, 'D'),
+            new Card(CardValue.JACK, 'C'),
+            new Card(CardValue.TEN, 'C'),
         });
         assertNotNull(hand.getCards());
         assertEquals(5, hand.getCards().length);
