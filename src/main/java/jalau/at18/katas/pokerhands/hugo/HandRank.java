@@ -8,16 +8,16 @@ public class HandRank {
         this.rank = 0;
     }
 
-    public int getRankHand(PokerHand hand) {
+    public int getRank(PokerHand hand) {
         for (HandRanks list : HandRanks.values()) {
-            if (pokerHandIdentifier(hand, list.getHandType())) {
+            if (handIdentifier(hand, list.getHandType())) {
                 rank = list.getHandRank();
             }
         }
         return rank;
     }
 
-    public boolean pokerHandIdentifier(PokerHand hand, HandIdentifier handType) {
+    public boolean handIdentifier(PokerHand hand, HandIdentifier handType) {
         return handType.identify(hand);
     }
 }

@@ -8,6 +8,7 @@ public class Straight extends HandIdentifier {
         this.analizer = new PokerHandAnalizer();
     }
 
+    @Override
     public boolean identify(PokerHand hand) {
         ConsecutiveValues consecutiveValues = new ConsecutiveValues();
         return analizer.analize(hand, consecutiveValues);

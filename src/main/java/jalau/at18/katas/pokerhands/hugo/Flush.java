@@ -8,6 +8,7 @@ public class Flush extends HandIdentifier {
         this.analizer = new PokerHandAnalizer();
     }
 
+    @Override
     public boolean identify(PokerHand hand) {
         AllSameSuit flushHand = new AllSameSuit();
         return analizer.analize(hand, flushHand);

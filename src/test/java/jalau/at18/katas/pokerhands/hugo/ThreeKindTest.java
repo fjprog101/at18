@@ -8,7 +8,7 @@ import org.junit.Test;
 public class ThreeKindTest {
 
     @Test
-    public void shouldVerifyThereAreTwoPairs() {
+    public void shouldVerifyThereAreThreeOfAKind() {
 
         ThreeKind threeOfAKind = new ThreeKind();
         PokerHand handWithThreeKind = new PokerHand(new Card[]{

@@ -21,7 +21,7 @@ public class StraightTest {
         assertTrue(identifier.identify(straightHand));
 
         PokerHand StraightWithAceHand = new PokerHand(new Card[]{
-            new Card(CardValue.TEN, 'C'),
+            new Card(CardValue.TEN, 'S'),
             new Card(CardValue.JACK, 'C'),
             new Card(CardValue.QUEEN, 'H'),
             new Card(CardValue.KING, 'C'),
