@@ -1,13 +1,11 @@
 package jalau.at18.katas.bankocr.sergio;
 
-import java.io.FileNotFoundException;
-
 public class SplitMatrix {
 
     private final int singleNumberSize = 3;
     private char[][] singleNumber;
 
-    public SplitMatrix() throws FileNotFoundException {
+    public SplitMatrix() {
         singleNumber = new char[singleNumberSize][singleNumberSize];
     }
 
@@ -18,10 +16,12 @@ public class SplitMatrix {
             }
         }
         return singleNumber;
+
     }
 
     public char[][] removeSingleNumber(char[][] matrix) {
-        if (matrix[0].length > singleNumberSize) {
+
+        if (matrix[0].length > singleNumberSize + 1) {
             char[][] newmatrix = new char[matrix.length][matrix[0].length - singleNumberSize];
             for (int row = 0; row < matrix.length; row++) {
                 System.arraycopy(matrix[row], singleNumberSize, newmatrix[row], 0, newmatrix[row].length);

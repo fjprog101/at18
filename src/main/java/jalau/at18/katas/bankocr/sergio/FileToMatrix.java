@@ -8,7 +8,7 @@ public class FileToMatrix {
     private final int sizeColum = 27;
     private char[][] matrix;
 
-    FileToMatrix() {
+    FileToMatrix() throws FileNotFoundException {
         matrix = new char[sizeRow][sizeColum];
     }
 
