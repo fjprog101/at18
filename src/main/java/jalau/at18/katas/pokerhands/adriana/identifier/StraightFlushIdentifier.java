@@ -20,7 +20,7 @@ public class StraightFlushIdentifier extends HandIdentifier {
     }
 
     @Override
-    public int getHighest(PokerHand hand) {
+    public int getCardWithPatternValue(PokerHand hand) {
         CardValue highestCard = hand.getCards()[LAST_CARD].getValue();
         return highestCard.get();
     }

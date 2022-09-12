@@ -48,7 +48,7 @@ public class RankTest {
             new Card(CardValue.FOUR, 'H'),
             new Card(CardValue.JACK, 'D'),
         });
-        assertEquals(14, rankHand.getHighestCard(noTypeHand));
+        assertEquals(14, rankHand.getCardRank(noTypeHand));
 
         PokerHand straightFlushHand = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
@@ -57,7 +57,7 @@ public class RankTest {
             new Card(CardValue.FIVE, 'C'),
             new Card(CardValue.SIX, 'C'),
         });
-        assertEquals(6, rankHand.getHighestCard(straightFlushHand));
+        assertEquals(6, rankHand.getCardRank(straightFlushHand));
 
         PokerHand straightHand = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
@@ -66,6 +66,29 @@ public class RankTest {
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.SIX, 'C'),
         });
-        assertEquals(3, rankHand.getHighestCard(straightHand));
+        assertEquals(3, rankHand.getCardRank(straightHand));
+    }
+
+    @Test
+    public void shouldReturnSumOfTheCards() {
+        Rank rankHand = new Rank();
+
+        PokerHand noTypeHand = new PokerHand("White", new Card[]{
+            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.THREE, 'S'),
+            new Card(CardValue.ACE, 'C'),
+            new Card(CardValue.FOUR, 'H'),
+            new Card(CardValue.JACK, 'D'),
+        });
+        assertEquals(34, rankHand.sumOfCards(noTypeHand));
+
+        PokerHand straightFlushHand = new PokerHand("White", new Card[]{
+            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.THREE, 'C'),
+            new Card(CardValue.FOUR, 'C'),
+            new Card(CardValue.FIVE, 'C'),
+            new Card(CardValue.SIX, 'C'),
+        });
+        assertEquals(20, rankHand.sumOfCards(straightFlushHand));
     }
 }

@@ -18,7 +18,7 @@ public class PokerHandAnalizerTest {
         });
         PokerHandAnalizer analizer = new PokerHandAnalizer(straightFlushHand);
         assertEquals(HandKind.STRAIGHT_FLUSH, analizer.getHandKind());
-        assertEquals(9, analizer.getHighestCard());
+        assertEquals(9, analizer.getCardValueOfThePattern());
 
         PokerHand straightHand = new PokerHand("White", new Card[]{
             new Card(CardValue.FOUR, 'D'),
@@ -29,7 +29,7 @@ public class PokerHandAnalizerTest {
         });
         PokerHandAnalizer analizer1 = new PokerHandAnalizer(straightHand);
         assertEquals(HandKind.STRAIGHT, analizer1.getHandKind());
-        assertEquals(6, analizer1.getHighestCard());
+        assertEquals(6, analizer1.getCardValueOfThePattern());
 
         PokerHand fourOfAKindHand = new PokerHand("White", new Card[]{
             new Card(CardValue.SIX, 'C'),
@@ -40,7 +40,7 @@ public class PokerHandAnalizerTest {
         });
         PokerHandAnalizer analizer2 = new PokerHandAnalizer(fourOfAKindHand);
         assertEquals(HandKind.FOUR_EQUALS, analizer2.getHandKind());
-        assertEquals(6, analizer2.getHighestCard());
+        assertEquals(6, analizer2.getCardValueOfThePattern());
 
         PokerHand fullHouseHand = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
@@ -51,7 +51,7 @@ public class PokerHandAnalizerTest {
         });
         PokerHandAnalizer analizer3 = new PokerHandAnalizer(fullHouseHand);
         assertEquals(HandKind.FULL_HOUSE, analizer3.getHandKind());
-        assertEquals(2, analizer3.getHighestCard());
+        assertEquals(2, analizer3.getCardValueOfThePattern());
 
         PokerHand flushHand = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
@@ -62,7 +62,7 @@ public class PokerHandAnalizerTest {
         });
         PokerHandAnalizer analizer4 = new PokerHandAnalizer(flushHand);
         assertEquals(HandKind.FLUSH, analizer4.getHandKind());
-        assertEquals(13, analizer4.getHighestCard());
+        assertEquals(13, analizer4.getCardValueOfThePattern());
 
         PokerHand threeOfAKindHand = new PokerHand("White", new Card[]{
             new Card(CardValue.THREE, 'C'),
@@ -73,7 +73,7 @@ public class PokerHandAnalizerTest {
         });
         PokerHandAnalizer analizer5 = new PokerHandAnalizer(threeOfAKindHand);
         assertEquals(HandKind.THREE_EQUALS, analizer5.getHandKind());
-        assertEquals(3, analizer5.getHighestCard());
+        assertEquals(3, analizer5.getCardValueOfThePattern());
 
         PokerHand twoPairsHand = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
@@ -84,7 +84,7 @@ public class PokerHandAnalizerTest {
         });
         PokerHandAnalizer analizer6 = new PokerHandAnalizer(twoPairsHand);
         assertEquals(HandKind.TWO_PAIRS, analizer6.getHandKind());
-        assertEquals(6, analizer6.getHighestCard());
+        assertEquals(6, analizer6.getCardValueOfThePattern());
         
         PokerHand onePairHand = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
@@ -95,7 +95,7 @@ public class PokerHandAnalizerTest {
         });
         PokerHandAnalizer analizer7 = new PokerHandAnalizer(onePairHand);
         assertEquals(HandKind.PAIR, analizer7.getHandKind());
-        assertEquals(2, analizer7.getHighestCard());
+        assertEquals(2, analizer7.getCardValueOfThePattern());
 
         PokerHand noTypeHand = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
@@ -106,6 +106,16 @@ public class PokerHandAnalizerTest {
         });
         PokerHandAnalizer analizer8 = new PokerHandAnalizer(noTypeHand);
         assertEquals(HandKind.NONE, analizer8.getHandKind());
-        assertEquals(14, analizer8.getHighestCard());
+        assertEquals(14, analizer8.getCardValueOfThePattern());
+
+        PokerHand twoPairsHand1 = new PokerHand("White", new Card[]{
+            new Card(CardValue.ACE, 'C'),
+            new Card(CardValue.ACE, 'H'),
+            new Card(CardValue.SIX, 'D'),
+            new Card(CardValue.SIX, 'S'),
+            new Card(CardValue.TWO, 'H'),
+        });
+        PokerHandAnalizer analizer9 = new PokerHandAnalizer(twoPairsHand1);
+        assertEquals(14, analizer9.getCardValueOfThePattern());
     }
 }

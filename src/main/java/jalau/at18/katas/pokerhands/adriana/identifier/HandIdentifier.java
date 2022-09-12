@@ -6,7 +6,7 @@ public abstract class HandIdentifier {
 
     public abstract boolean identify(PokerHand hand);
     public abstract HandKind getKind();
-    public abstract int getHighest(PokerHand hand);
+    public abstract int getCardWithPatternValue(PokerHand hand);
 
     public CardValue getRepeatedCard(CardValuesCount count, int value) {
         CardValue repeatedCard = CardValue.TWO;

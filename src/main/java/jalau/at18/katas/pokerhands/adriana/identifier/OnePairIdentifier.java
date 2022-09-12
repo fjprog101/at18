@@ -22,7 +22,7 @@ public class OnePairIdentifier extends HandIdentifier {
         return HandKind.PAIR;
     }
     @Override
-    public int getHighest(PokerHand hand) {
+    public int getCardWithPatternValue(PokerHand hand) {
         CardValuesCounter counter = new CardValuesCounter(hand);
         CardValuesCount count = counter.getCount();
         CardValue repeatedCard = getRepeatedCard(count, PAIR);

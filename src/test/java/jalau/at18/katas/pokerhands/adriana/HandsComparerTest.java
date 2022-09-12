@@ -75,5 +75,39 @@ public class HandsComparerTest {
         });
         HandsComparer comparer3 = new HandsComparer(noTypeHand1, noTypeHand2);
         assertEquals("Black", comparer3.getWinner());
+
+        PokerHand pairHand1 = new PokerHand("Black", new Card[]{
+            new Card(CardValue.JACK, 'C'),
+            new Card(CardValue.EIGHT, 'H'),
+            new Card(CardValue.TWO, 'D'),
+            new Card(CardValue.ACE, 'S'),
+            new Card(CardValue.ACE, 'C'),
+        });
+        PokerHand pairHand2 = new PokerHand("White", new Card[]{
+            new Card(CardValue.THREE, 'C'),
+            new Card(CardValue.SEVEN, 'H'),
+            new Card(CardValue.QUEEN, 'D'),
+            new Card(CardValue.ACE, 'D'),
+            new Card(CardValue.ACE, 'H'),
+        });
+        HandsComparer comparer4 = new HandsComparer(pairHand1, pairHand2);
+        assertEquals("White", comparer4.getWinner());
+
+        PokerHand twoPairHand1 = new PokerHand("White", new Card[]{
+            new Card(CardValue.THREE, 'C'),
+            new Card(CardValue.THREE, 'H'),
+            new Card(CardValue.QUEEN, 'D'),
+            new Card(CardValue.ACE, 'S'),
+            new Card(CardValue.ACE, 'C'),
+        });
+        PokerHand twoPairHand2 = new PokerHand("Black", new Card[]{
+            new Card(CardValue.JACK, 'C'),
+            new Card(CardValue.TWO, 'H'),
+            new Card(CardValue.TWO, 'D'),
+            new Card(CardValue.ACE, 'S'),
+            new Card(CardValue.ACE, 'C'),
+        });
+        HandsComparer comparer5 = new HandsComparer(twoPairHand1, twoPairHand2);
+        assertEquals("White", comparer5.getWinner());
     }
 }
