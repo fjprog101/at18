@@ -5,4 +5,8 @@ Welcome to Azul board game!
 Details: https://boardgamearena.com/gamepanel?game=azul
 
 # Team
-TBD
+Hugo
+Daniela
+Rodrigo B
+Fernanda
+Rodrigo V
