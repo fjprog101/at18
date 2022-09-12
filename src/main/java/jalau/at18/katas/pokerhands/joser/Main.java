@@ -18,8 +18,8 @@ public class Main {
             new Card(CardValue.SIX, 'C'),
         });
 
-        Game game= new Game(hand1, hand2);
-        System.out.println(game.getWin()==1? "White wins":"Black wins");
+        Game game = new Game(hand1, hand2);
+        System.out.println(game.getWin() == 1 ? "White wins" : "Black wins");
 
     }
 
