@@ -18,14 +18,16 @@ public class IdentifyPattern {
         patterns.add(new TwoPairsIdentify().identifyTwoPairs(hand));
         patterns.add(new PairsIdentify().identifyPairs(hand));
         patterns.add(new HightCardsIdentify().identifyhigthcard(hand));
+        findThePosition(patterns);
 
+        return position;
+    }
+    public void findThePosition(List<Boolean> patterns) {
         for (int index = 0; index < patterns.size(); index++) {
             if (patterns.get(index)) {
                 position = index;
             }
         }
-        return position;
     }
-
 
 }
