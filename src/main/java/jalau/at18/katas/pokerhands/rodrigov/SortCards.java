@@ -10,11 +10,11 @@ public class SortCards extends CardListSorted {
         cardsSort = addCardsArray(cardsSort, cards);
         Collections.sort(cardsSort, new Comparator<Card>() {
             @Override
-            public int compare(Card firsrCard, Card secondCard){
+            public int compare(Card firsrCard, Card secondCard) {
                 return firsrCard.getValue().compareTo(secondCard.getValue());
             }
         });
-        return null;
+        return getCards(cardsSort);
     }
 
     public Card[] getCards(ArrayList<Card> cards) {

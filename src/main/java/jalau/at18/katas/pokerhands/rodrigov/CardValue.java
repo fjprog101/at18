@@ -1,7 +1,7 @@
 package jalau.at18.katas.pokerhands.rodrigov;
 
 public enum CardValue {
-    ACE(null, 1),
+    ACE(null, 14),
     KING(ACE, 13),
     QUEEN(KING, 12),
     JACK(QUEEN, 11),
