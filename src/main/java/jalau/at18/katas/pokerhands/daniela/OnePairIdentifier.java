@@ -9,7 +9,6 @@ public class OnePairIdentifier extends CompareGame {
 
     @Override
     public boolean identify(PokerHand hand) {
-        // Analice this class
         OnePair onepair = new OnePair();
         return analizer.analize(hand, onepair);
     }

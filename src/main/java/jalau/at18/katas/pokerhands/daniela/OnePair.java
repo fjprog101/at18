@@ -6,13 +6,10 @@ public class OnePair extends CardsPattern {
     private final int othercard2 = 3;
 
     public OnePair() {
-        // this.value1 = value1;
-        // this.value2 = value2;
     }
 
     @Override
     public boolean match(PokerHand handWith2PairsPerHand) {
-        onePairs(handWith2PairsPerHand);
         return onePairs(handWith2PairsPerHand);
     }
 

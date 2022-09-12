@@ -38,7 +38,7 @@ public class CardssortedTest {
                 new Card(CardValue.SEVEN, 'C'),
         });
 
-        Cardssorted counter = new Cardssorted(handWithGroupsOf2And3);
+        CardSorted counter = new CardSorted(handWithGroupsOf2And3);
         CardstoString count = counter.getCount();
         assertEquals("7771111", count.get(CardValue.JACK));
     }
@@ -53,7 +53,7 @@ public class CardssortedTest {
                 new Card(CardValue.SEVEN, 'C'),
         });
 
-        Cardssorted counter = new Cardssorted(handWithGroupsOf2And3);
+        CardSorted counter = new CardSorted(handWithGroupsOf2And3);
         CardstoString count = counter.getCount();
         assertEquals("6771011", count.get(CardValue.JACK));
     }
@@ -68,7 +68,7 @@ public class CardssortedTest {
                 new Card(CardValue.SEVEN, 'C'),
         });
 
-        Cardssorted counter = new Cardssorted(handWithGroupsOf2And3);
+        CardSorted counter = new CardSorted(handWithGroupsOf2And3);
         CardstoString count = counter.getCount();
         assertEquals(23, count.highCard(CardValue.JACK));
     }

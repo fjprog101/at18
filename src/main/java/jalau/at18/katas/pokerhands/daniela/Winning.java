@@ -1,6 +1,7 @@
 package jalau.at18.katas.pokerhands.daniela;
 
-public class Winning extends TieBraker {
+public class Winning {
+    private TieBraker nottie = new TieBraker();
 
     public Winning() {
     }
@@ -22,7 +23,7 @@ public class Winning extends TieBraker {
     }
 
     public String untie(PokerHand white, PokerHand black, CardValue whitecard, CardValue blackcard) {
-        if (highCardWhite(white, whitecard) > highCardBlack(black, blackcard)) {
+        if (nottie.highCardWhite(white, whitecard) > nottie.highCardBlack(black, blackcard)) {
             return "Whitewins";
         } else {
             return "Blackwins";

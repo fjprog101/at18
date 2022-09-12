@@ -11,7 +11,6 @@ public class HighCard extends CardsPattern {
 
     @Override
     public boolean match(PokerHand handWith2PairsPerHand) {
-        highCard(handWith2PairsPerHand);
         return highCard(handWith2PairsPerHand);
     }
 

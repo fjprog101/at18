@@ -1,10 +1,9 @@
 package jalau.at18.katas.pokerhands.daniela;
 
-public class Cardssorted {
-
+public class CardSorted {
     private PokerHand hand;
 
-    public Cardssorted(PokerHand handtoanalize) {
+    public CardSorted(PokerHand handtoanalize) {
         this.hand = handtoanalize;
     }
 

@@ -10,7 +10,6 @@ public class FullHouse extends CardsPattern {
 
     @Override
     public boolean match(PokerHand handWith3SimilarCards) {
-        fullHouse(handWith3SimilarCards);
         return fullHouse(handWith3SimilarCards);
     }
 

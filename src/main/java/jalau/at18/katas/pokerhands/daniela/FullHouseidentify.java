@@ -9,7 +9,6 @@ public class FullHouseidentify extends CompareGame {
 
     @Override
     public boolean identify(PokerHand hand) {
-        // Analice this class
         FullHouse fullhouse = new FullHouse();
         return analizer.analize(hand, fullhouse);
     }

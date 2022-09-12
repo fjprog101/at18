@@ -10,7 +10,6 @@ public class ThreeofaKind extends CardsPattern {
 
     @Override
     public boolean match(PokerHand handWith3SimilarCards) {
-        threeKind(handWith3SimilarCards);
         return threeKind(handWith3SimilarCards);
     }
 

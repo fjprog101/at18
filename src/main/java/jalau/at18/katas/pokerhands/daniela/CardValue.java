@@ -27,10 +27,6 @@ public enum CardValue {
         return next;
     }
 
-    public int getRealNumberValue() {
-        return 0;
-    }
-
     public int getScore(CardValue card) {
         return valuecard;
     }

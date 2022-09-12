@@ -9,7 +9,6 @@ public class FourofaKind extends CardsPattern {
 
     @Override
     public boolean match(PokerHand handWith4SimilarCards) {
-        fourKind(handWith4SimilarCards);
         return fourKind(handWith4SimilarCards);
     }
 
