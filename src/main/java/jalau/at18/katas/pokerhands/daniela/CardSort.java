@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-public class CardsSort {
-    private CardsSortedFinal finalcards = new CardsSortedFinal();
+public class CardSort {
+    private CardSortedFinal finalcards = new CardSortedFinal();
 
     public Card[] sortCards(Card[] cards) {
         ArrayList<Card> cardsorted = new ArrayList<>();
@@ -26,5 +26,4 @@ public class CardsSort {
         }
         return ascendingcards;
     }
-
 }
