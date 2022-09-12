@@ -18,8 +18,6 @@ public class FullHouse extends CardsPattern {
             ifFullHouse = true;
         }
     }
-    Patterns getidentifyOptions() {
-        return Patterns.FULLHOUSE;
-    }
+
 }
 

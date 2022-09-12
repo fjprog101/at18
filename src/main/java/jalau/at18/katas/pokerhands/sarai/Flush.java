@@ -1,6 +1,6 @@
 package jalau.at18.katas.pokerhands.sarai;
 
-public class Flush extends Cardhigth {
+public class Flush {
 
     private PokerHandAnalizer analizer;
 
@@ -13,8 +13,4 @@ public class Flush extends Cardhigth {
         return analizer.analize(hand, allSameSuit);
     }
 
-    @Override
-    Patterns getidentifyOperation() {
-        return Patterns.FLUSH;
-    }
 }

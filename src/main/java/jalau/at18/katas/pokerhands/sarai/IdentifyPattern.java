@@ -10,7 +10,7 @@ public class IdentifyPattern {
 
         List<Boolean> patterns = new ArrayList<Boolean>();
 
-        patterns.add(new FourOfaKindIdentify().identifyFourOfaKind(hand)); // 1 2 3 4 5 6 7
+        patterns.add(new FourOfaKindIdentify().identifyFourOfaKind(hand)); // 0 1 2 3 4 5 6 7
         patterns.add(new FullHouseIdentify().identifyFullHouse(hand));
         patterns.add(new Flush().identify(hand));
         patterns.add(new Straight().identify(hand));

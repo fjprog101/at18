@@ -1,6 +1,6 @@
 package jalau.at18.katas.pokerhands.sarai;
 
-public class PairsIdentify extends Cardhigth {
+public class PairsIdentify {
     public PairsIdentify() {
 
     }
@@ -10,8 +10,4 @@ public class PairsIdentify extends Cardhigth {
         return pairscards.match(hand);
     }
 
-    @Override
-    Patterns getidentifyOperation() {
-        return Patterns.PAIR;
-    }
 }
