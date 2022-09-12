@@ -1,6 +1,6 @@
 package jalau.at18.katas.pokerhands.rodrigov;
 
-public class StraightIdentifier extends Identifier{
+public class StraightIdentifier extends Identifier {
     private PokerHandAnalizer analizer;
     public StraightIdentifier() {
         this.analizer = new PokerHandAnalizer();

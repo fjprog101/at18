@@ -1,5 +1,5 @@
 package jalau.at18.katas.pokerhands.rodrigov;
-public class ThreeOfAKind extends CardsPattern{
+public class ThreeOfAKind extends CardsPattern {
     private final int threeOfAKind = 3;
     private final int differentCards = 1;
 

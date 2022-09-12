@@ -1,6 +1,6 @@
 package jalau.at18.katas.pokerhands.rodrigov;
 
-public class FullHouseIdentifier extends Identifier{
+public class FullHouseIdentifier extends Identifier {
     private PokerHandAnalizer analizer;
     public FullHouseIdentifier() {
         analizer = new PokerHandAnalizer();

@@ -1,6 +1,6 @@
 package jalau.at18.katas.pokerhands.rodrigov;
 
-public class FlushIdenfier extends Identifier{
+public class FlushIdenfier extends Identifier {
     private PokerHandAnalizer analizer;
     public FlushIdenfier() {
         analizer = new PokerHandAnalizer();

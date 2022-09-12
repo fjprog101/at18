@@ -1,8 +1,8 @@
 package jalau.at18.katas.pokerhands.rodrigov;
 
-public class TwoPairsIdentifier extends Identifier{
-    PokerHandAnalizer analizer;
-    public TwoPairsIdentifier(){
+public class TwoPairsIdentifier extends Identifier {
+    private PokerHandAnalizer analizer;
+    public TwoPairsIdentifier() {
         analizer = new PokerHandAnalizer();
     }
     @Override
@@ -15,5 +15,4 @@ public class TwoPairsIdentifier extends Identifier{
     Rank identifyRank() {
         return Rank.TWOPAIRS;
     }
-    
 }

@@ -1,9 +1,9 @@
 package jalau.at18.katas.pokerhands.rodrigov;
 
-public class HighCardIndetifier extends Identifier{
-    PokerHandAnalizer analizer;
+public class HighCardIndetifier extends Identifier {
+    private PokerHandAnalizer analizer;
 
-    public HighCardIndetifier(){
+    public HighCardIndetifier() {
         analizer = new PokerHandAnalizer();
     }
 

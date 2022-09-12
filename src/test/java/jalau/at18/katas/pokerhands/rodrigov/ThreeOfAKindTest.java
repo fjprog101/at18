@@ -1,4 +1,5 @@
 package jalau.at18.katas.pokerhands.rodrigov;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -29,5 +30,11 @@ public class ThreeOfAKindTest {
             new Card(CardValue.FOUR,'D')
         });
         assertFalse(threeOfaKindInHand.identify(hand)); 
+    }
+
+    @Test
+    public void shouldReturnThreeOfAKindRank(){
+        ThreeOfAKindIdentifier threeOfAKindIdentifier = new ThreeOfAKindIdentifier();
+        assertEquals("THREEOFAKIND", threeOfAKindIdentifier.identifyRank().toString());
     }
 }

@@ -1,4 +1,5 @@
 package jalau.at18.katas.pokerhands.rodrigov;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -28,5 +29,11 @@ public class FullHouseIdentifierTest {
             new Card(CardValue.THREE, 'H'),
         });
         assertFalse(fullHouseIdentifier.identify(hand));
+    }
+
+    @Test
+    public void shouldReturnFullHouseRank(){
+        FullHouseIdentifier fullHouseIdentifier = new FullHouseIdentifier();
+        assertEquals("FULLHOUSE", fullHouseIdentifier.identifyRank().toString());
     }
 }

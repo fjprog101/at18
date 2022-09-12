@@ -1,4 +1,5 @@
 package jalau.at18.katas.pokerhands.rodrigov;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -28,5 +29,12 @@ public class OnePairIdentifierTest {
             new Card(CardValue.SIX, 'H'),
         });
         assertFalse(onePairIdentifier.identify(hand));;
+    }
+
+    @Test
+    public void shouldReturnOnePairRank(){
+        OnePairIdentifier onePairIdentifier = new OnePairIdentifier();
+        assertEquals("PAIR", onePairIdentifier.identifyRank().toString());
+        System.out.println(onePairIdentifier.identifyRank().toString());
     }
 }

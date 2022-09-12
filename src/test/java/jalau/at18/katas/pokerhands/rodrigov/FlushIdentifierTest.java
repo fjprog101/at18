@@ -1,4 +1,5 @@
 package jalau.at18.katas.pokerhands.rodrigov;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -28,5 +29,11 @@ public class FlushIdentifierTest {
             new Card(CardValue.QUEEN, 'S'),
         });
         assertFalse(flushIdenfier.identify(hand));
+    }
+
+    @Test
+    public void shouldReturnFlushRank(){
+        FlushIdenfier flushIdenfier = new FlushIdenfier();
+        assertEquals("FLUSH", flushIdenfier.identifyRank().toString());
     }
 }
