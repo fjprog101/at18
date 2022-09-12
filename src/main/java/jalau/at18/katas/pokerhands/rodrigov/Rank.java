@@ -19,7 +19,7 @@ public enum Rank {
         this.score = score;
     }
 
-    public Identifier getidentifyPokerhand() {
+    public Identifier getIdentifyPokerhand() {
         return comparegame;
     }
 
