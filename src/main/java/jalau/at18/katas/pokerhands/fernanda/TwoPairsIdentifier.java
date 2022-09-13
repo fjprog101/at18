@@ -12,4 +12,8 @@ public class TwoPairsIdentifier extends Identifier {
         TwoPairs twoPairs = new TwoPairs();
         return pokerHandAnalizer.analize(hand, twoPairs);
     }
+
+    public RankHand getTypeofHand() {
+        return RankHand.TWOPAIRS;
+    }
 }

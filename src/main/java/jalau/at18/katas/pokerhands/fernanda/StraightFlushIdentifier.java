@@ -13,4 +13,7 @@ public class StraightFlushIdentifier extends Identifier {
         ConsecutiveValues consecutiveValues = new ConsecutiveValues();
         return analizer.analize(hand, allSameSuit) && analizer.analize(hand, consecutiveValues);
     }
+    public RankHand getTypeofHand() {
+        return RankHand.STRAIGHTFLUSH;
+    }
 }
