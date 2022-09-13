@@ -1,17 +1,18 @@
-package jalau.at18.kingoftokio;
+package jalau.at18.kingoftokyo;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotSame;
-import static org.junit.Assume.assumeNotNull;
+import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
-
-import jalau.at18.kingoftokyo.DiscardCards;
 
 public class DiscardCardsTest {
 
     @Test
     public void cardShouldHaveAEffect() {
         assertEquals(3, DiscardCards.ENERGIZER.getEffect().length);
+    }
+    @Test
+    public void cardShouldHaveACost() {
+        assertNotNull(DiscardCards.ENERGIZER.getCost());
     }
 }
