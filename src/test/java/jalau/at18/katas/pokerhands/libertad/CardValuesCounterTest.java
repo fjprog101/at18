@@ -2,19 +2,23 @@ package jalau.at18.katas.pokerhands.libertad;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import org.junit.Test;
 
 public class CardValuesCounterTest {
 
     @Test
     public void shouldCountValues1PerValue() {
-        PokerHand handWith1CardPerValue = new PokerHand(new Card[]{
-            new Card(CardValue.TWO, 'C'),
-            new Card(CardValue.THREE, 'D'),
-            new Card(CardValue.FOUR, 'H'),
-            new Card(CardValue.FIVE, 'S'),
-            new Card(CardValue.SIX, 'S'),
-        });
+        List<Card> input = new LinkedList<>();
+        input.add(new Card(CardValue.TWO, 'C'));
+        input.add(new Card(CardValue.THREE, 'D'));
+        input.add(new Card(CardValue.FOUR, 'H'));
+        input.add(new Card(CardValue.FIVE, 'S'));
+        input.add(new Card(CardValue.SIX, 'S'));
+
+        PokerHand handWith1CardPerValue = new PokerHand(input);
 
         CardValuesCounter counter = new CardValuesCounter(handWith1CardPerValue);
         CardValuesCount count = counter.getCount();
@@ -28,13 +32,14 @@ public class CardValuesCounterTest {
 
     @Test
     public void shouldCountValuesFor2And3OfSameValue() {
-        PokerHand handWithGroupsOf2And3 = new PokerHand(new Card[]{
-            new Card(CardValue.JACK, 'C'),
-            new Card(CardValue.JACK, 'D'),
-            new Card(CardValue.SEVEN, 'H'),
-            new Card(CardValue.SEVEN, 'S'),
-            new Card(CardValue.SEVEN, 'C'),
-        });
+        List<Card> input = new LinkedList<>();
+        input.add(new Card(CardValue.JACK, 'C'));
+        input.add(new Card(CardValue.JACK, 'D'));
+        input.add(new Card(CardValue.SEVEN, 'H'));
+        input.add(new Card(CardValue.SEVEN, 'S'));
+        input.add(new Card(CardValue.SEVEN, 'C'));
+        
+        PokerHand handWithGroupsOf2And3 = new PokerHand(input);
 
         CardValuesCounter counter = new CardValuesCounter(handWithGroupsOf2And3);
         CardValuesCount count = counter.getCount();
