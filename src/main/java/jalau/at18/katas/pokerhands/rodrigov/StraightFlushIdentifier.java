@@ -1,6 +1,6 @@
 package jalau.at18.katas.pokerhands.rodrigov;
 
-public class StraightFlushIdentifier {
+public class StraightFlushIdentifier extends Identifier {
 
     private PokerHandAnalizer analizer;
 
@@ -12,5 +12,10 @@ public class StraightFlushIdentifier {
         AllSameSuit allSameSuit = new AllSameSuit();
         ConsecutiveValues consecutiveValues = new ConsecutiveValues();
         return analizer.analize(hand, allSameSuit) && analizer.analize(hand, consecutiveValues);
+    }
+
+    @Override
+    Rank identifyRank() {
+        return Rank.STRAIGHTFLUSH;
     }
 }

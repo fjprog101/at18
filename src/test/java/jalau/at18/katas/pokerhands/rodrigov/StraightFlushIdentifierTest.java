@@ -1,5 +1,6 @@
 package jalau.at18.katas.pokerhands.rodrigov;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -37,5 +38,11 @@ public class StraightFlushIdentifierTest {
             new Card(CardValue.SEVEN, 'C'),
         });
         assertFalse(identifier.identify(noSameSuite));
+    }
+
+    @Test
+    public void shouldReturnStraightFlushRank(){
+        StraightFlushIdentifier straightFlushIdentifier = new StraightFlushIdentifier();
+        assertEquals("STRAIGHTFLUSH", straightFlushIdentifier.identifyRank().toString());
     }
 }

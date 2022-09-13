@@ -6,7 +6,7 @@ import org.junit.Test;
 public class HandsTwoPairsTest {
     @Test
     public void shouldSayIfThereAreTwoPairsInHand() {
-        HandsTwoPairs handsTwoPairs = new HandsTwoPairs();
+        TwoPairs handsTwoPairs = new TwoPairs();
 
         PokerHand twoPairs = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'S'),
