@@ -14,4 +14,8 @@ public class Factory {
         return tiles;
     }
 
+    public int getNumberTiles() {
+        return tiles.size();
+    }
+
 }
