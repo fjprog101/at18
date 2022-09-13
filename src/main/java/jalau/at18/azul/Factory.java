@@ -18,4 +18,8 @@ public class Factory {
         return tiles.size();
     }
 
+    public void removeTiles() {
+        tiles.clear();
+    }
+
 }
