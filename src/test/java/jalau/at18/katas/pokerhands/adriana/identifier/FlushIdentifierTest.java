@@ -1,7 +1,9 @@
-package jalau.at18.katas.pokerhands.adriana;
+package jalau.at18.katas.pokerhands.adriana.identifier;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+
+import jalau.at18.katas.pokerhands.adriana.*;
 
 import org.junit.Test;
 
@@ -11,7 +13,7 @@ public class FlushIdentifierTest {
     public void shouldIdentifyFlushHand() {
         FlushIdentifier identifier = new FlushIdentifier();
 
-        PokerHand straightFlushHand = new PokerHand(new Card[]{
+        PokerHand straightFlushHand = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.FOUR, 'C'),
@@ -20,7 +22,7 @@ public class FlushIdentifierTest {
         });
         assertFalse(identifier.identify(straightFlushHand));
 
-        PokerHand FlushHand = new PokerHand(new Card[]{
+        PokerHand FlushHand = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.FOUR, 'C'),
             new Card(CardValue.FIVE, 'C'),
@@ -29,7 +31,7 @@ public class FlushIdentifierTest {
         });
         assertTrue(identifier.identify(FlushHand));
 
-        PokerHand straightHand = new PokerHand(new Card[]{
+        PokerHand straightHand = new PokerHand("White", new Card[]{
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.FOUR, 'C'),
             new Card(CardValue.FIVE, 'H'),

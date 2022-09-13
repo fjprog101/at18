@@ -1,6 +1,9 @@
-package jalau.at18.katas.pokerhands.adriana;
+package jalau.at18.katas.pokerhands.adriana.identifier;
+
+import jalau.at18.katas.pokerhands.adriana.*;
 
 public class StraightIdentifier extends HandIdentifier {
+    private static final int LAST_CARD = 4;
 
     public StraightIdentifier() {
     }
@@ -13,7 +16,13 @@ public class StraightIdentifier extends HandIdentifier {
     }
 
     @Override
-    HandKind getKind() {
+    public HandKind getKind() {
         return HandKind.STRAIGHT;
+    }
+
+    @Override
+    public int getCardWithPatternValue(PokerHand hand) {
+        CardValue highestCard = hand.getCards()[LAST_CARD].getValue();
+        return highestCard.get();
     }
 }

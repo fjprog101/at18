@@ -1,9 +1,11 @@
-package jalau.at18.katas.pokerhands.adriana;
+package jalau.at18.katas.pokerhands.adriana.identifier;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
+
+import jalau.at18.katas.pokerhands.adriana.*;
 
 public class OnePairIdentifierTest {
 
@@ -11,7 +13,7 @@ public class OnePairIdentifierTest {
     public void shouldIdentifyOnePairInHand() {
         OnePairIdentifier identifier = new OnePairIdentifier();
 
-        PokerHand handWithOnePair = new PokerHand(new Card[]{
+        PokerHand handWithOnePair = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.TWO, 'H'),
             new Card(CardValue.FOUR, 'D'),
@@ -20,7 +22,7 @@ public class OnePairIdentifierTest {
         });
         assertTrue(identifier.identify(handWithOnePair));
 
-        PokerHand handWithThreeOfAKind = new PokerHand(new Card[]{
+        PokerHand handWithThreeOfAKind = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.TWO, 'H'),
             new Card(CardValue.FOUR, 'D'),
@@ -29,7 +31,7 @@ public class OnePairIdentifierTest {
         });
 
         assertFalse(identifier.identify(handWithThreeOfAKind));
-        PokerHand handWithoutPairs = new PokerHand(new Card[]{
+        PokerHand handWithoutPairs = new PokerHand("White", new Card[]{
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.FOUR, 'S'),
             new Card(CardValue.FIVE, 'H'),

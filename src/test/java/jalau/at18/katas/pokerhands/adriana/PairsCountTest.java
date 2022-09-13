@@ -9,7 +9,7 @@ import org.junit.Test;
 public class PairsCountTest {
     @Test
     public void shouldGivePairsCount() {
-        PokerHand handWithoutPairs = new PokerHand(new Card[]{
+        PokerHand handWithoutPairs = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.THREE, 'D'),
             new Card(CardValue.FOUR, 'H'),
@@ -19,7 +19,7 @@ public class PairsCountTest {
         PairsCount pairsCount = new PairsCount (handWithoutPairs);
         assertEquals(0, pairsCount.get());
 
-        PokerHand handWithOnePair = new PokerHand(new Card[]{
+        PokerHand handWithOnePair = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.TWO, 'D'),
             new Card(CardValue.FOUR, 'H'),
@@ -29,7 +29,7 @@ public class PairsCountTest {
         PairsCount pairsCount1 = new PairsCount (handWithOnePair);
         assertEquals(1, pairsCount1.get());
         
-        PokerHand handWithTwoPair = new PokerHand(new Card[]{
+        PokerHand handWithTwoPair = new PokerHand("White", new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.TWO, 'D'),
             new Card(CardValue.FOUR, 'H'),
@@ -42,7 +42,7 @@ public class PairsCountTest {
 
     @Test
     public void shouldGivePairsArray() {
-        PokerHand handWithoutPairs = new PokerHand(new Card[]{
+        PokerHand handWithoutPairs = new PokerHand("White", new Card[]{
             new Card(CardValue.FOUR, 'H'),
             new Card(CardValue.FIVE, 'S'),
             new Card(CardValue.SIX, 'S'),

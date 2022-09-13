@@ -21,4 +21,8 @@ public class PokerHandAnalizer {
             }
         }
     }
+
+    public int getCardValueOfThePattern() {
+        return handKind.getIdentifier().getCardWithPatternValue(hand);
+    }
 }
