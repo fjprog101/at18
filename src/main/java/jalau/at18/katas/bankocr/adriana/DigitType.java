@@ -15,7 +15,7 @@ public enum DigitType {
     DigitType(String[][] arrayCharacters) {
         this.arrayCharacters = arrayCharacters;
     }
-    public String[][] getArrayCharacters() {
+    public String[][] getArray() {
         return arrayCharacters;
     }
 }

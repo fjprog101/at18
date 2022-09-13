@@ -14,8 +14,8 @@ public class InputTest {
         String strin3 = "|_|  ||_ ";
         String[] stringInput = {strin1, strin2, strin3};
         Input input = new Input(stringInput);
-        String[][] digitExpect = DigitType.ZERO.getArrayCharacters();
-        Digit[] expecteds = {new Digit(digitExpect), new Digit(DigitType.ONE.getArrayCharacters()), new Digit(DigitType.TWO.getArrayCharacters())};
+        String[][] digitExpect = DigitType.ZERO.getArray();
+        Digit[] expecteds = {new Digit(digitExpect), new Digit(DigitType.ONE.getArray()), new Digit(DigitType.TWO.getArray())};
         assertEquals(expecteds[0].getValue(), input.getDigits()[0].getValue());
         assertEquals(expecteds[1].getValue(), input.getDigits()[1].getValue());
         assertEquals(expecteds[2].getValue(), input.getDigits()[2].getValue());
@@ -28,13 +28,13 @@ public class InputTest {
         String strin3 = "|_|  ||_ ";
         String[] stringInput = {strin1, strin2, strin3};
         Input input = new Input(stringInput);
-        String[][] digitExpect = DigitType.ZERO.getArrayCharacters();
-        String[][] digitIntput = input.generateString(0);
-        assertArrayEquals(digitExpect, digitIntput);
-        String[][] digitExpect1 = DigitType.ONE.getArrayCharacters();
+        String[][] digitExpect = DigitType.ZERO.getArray();
+        String[][] digitIntput = input.getDigits()[0].getDigit();
+        assertEquals(digitExpect, digitIntput);
+        String[][] digitExpect1 = DigitType.ONE.getArray();
         String[][] digitIntput1 = input.generateString(1);
         assertArrayEquals(digitExpect1, digitIntput1);
-        String[][] digitExpect2 = DigitType.TWO.getArrayCharacters();
+        String[][] digitExpect2 = DigitType.TWO.getArray();
         String[][] digitIntput2 = input.generateString(2);
         assertArrayEquals(digitExpect2, digitIntput2);
     }

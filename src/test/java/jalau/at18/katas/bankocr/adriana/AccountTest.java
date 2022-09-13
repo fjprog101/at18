@@ -5,9 +5,9 @@ import static org.junit.Assert.assertArrayEquals;
 import org.junit.Test;
 
 public class AccountTest {
-    final Digit ZERO = new Digit(DigitType.ZERO.getArrayCharacters());
-    final Digit ONE = new Digit(DigitType.ONE.getArrayCharacters());
-    final Digit TWO = new Digit(DigitType.TWO.getArrayCharacters());
+    final Digit ZERO = new Digit(DigitType.ZERO.getArray());
+    final Digit ONE = new Digit(DigitType.ONE.getArray());
+    final Digit TWO = new Digit(DigitType.TWO.getArray());
     
     @Test
     public void shouldReturnAccount() {
