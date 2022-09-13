@@ -17,4 +17,11 @@ public class Card {
     public char getSuit() {
         return suit;
     }
+
+    public boolean equals(Card card) {
+        if (suit == card.getSuit() && value.getIntValue() == card.getValue().getIntValue()) {
+            return true;
+        }
+        return false;
+    }
 }
