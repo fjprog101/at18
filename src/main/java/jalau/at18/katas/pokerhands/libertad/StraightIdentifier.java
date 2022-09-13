@@ -1,15 +1,14 @@
 package jalau.at18.katas.pokerhands.libertad;
 
-public class StraightFlushIdentifier implements Identifier {
+public class StraightIdentifier implements Identifier {
     private PokerHandAnalizer analizer;
 
-    public StraightFlushIdentifier() {
+    public StraightIdentifier() {
         this.analizer = new PokerHandAnalizer();
     }
     @Override
     public boolean identify(PokerHand hand) {
-        AllSameSuit allSameSuit = new AllSameSuit();
         ConsecutiveValues consecutiveValues = new ConsecutiveValues();
-        return analizer.analize(hand, allSameSuit) && analizer.analize(hand, consecutiveValues);
+        return analizer.analize(hand, consecutiveValues);
     }
 }

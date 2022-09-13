@@ -11,8 +11,8 @@ public class AllSameSuit extends CardsPattern {
     @Override
     public boolean match(PokerHand hand) {
         boolean areSameSuit = true;
-        for (int index = 0; areSameSuit && index < hand.getCards().length - 1; index++) {
-            areSameSuit = comparer.haveSameSuit(hand.getCards()[index], hand.getCards()[index + 1]);
+        for (int index = 0; areSameSuit && index < hand.getCards().size()  - 1; index++) {
+            areSameSuit = comparer.haveSameSuit(hand.getCards().get(index), hand.getCards().get(index + 1));
         }
         return areSameSuit;
     }

@@ -11,8 +11,8 @@ public class ConsecutiveValues extends CardsPattern {
     @Override
     public boolean match(PokerHand hand) {
         boolean areConsecutive = true;
-        for (int index = 0; areConsecutive && index < hand.getCards().length - 1; index++) {
-            areConsecutive = comparer.areConsecutive(hand.getCards()[index], hand.getCards()[index + 1]);
+        for (int index = 0; areConsecutive && index < hand.getCards().size() - 1; index++) {
+            areConsecutive = comparer.areConsecutive(hand.getCards().get(index), hand.getCards().get(index + 1));
         }
         return areConsecutive;
     }

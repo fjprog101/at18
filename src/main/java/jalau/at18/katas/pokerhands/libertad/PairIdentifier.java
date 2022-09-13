@@ -1,14 +1,14 @@
 package jalau.at18.katas.pokerhands.libertad;
 
-public class TwoPairIdentifier implements Identifier {
+public class PairIdentifier implements Identifier {
     private PokerHandAnalizer pokerHandAnalizer;
 
-    public TwoPairIdentifier() {
+    public PairIdentifier() {
         pokerHandAnalizer = new PokerHandAnalizer();
     }
     @Override
     public boolean identify(PokerHand hand) {
-        TwoPair twoPair = new TwoPair();
-        return pokerHandAnalizer.analize(hand, twoPair);
+        Pair pair = new Pair();
+        return pokerHandAnalizer.analize(hand, pair);
     }
 }
