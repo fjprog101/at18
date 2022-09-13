@@ -1,9 +1,8 @@
 package jalau.at18.katas.pokerhands.maria;
 
-import java.util.HashMap;
+import java.util.*;
 
 public class CardValuesCount {
-
     private HashMap<CardValue, Integer> valuesCount;
 
     public CardValuesCount() {
@@ -16,6 +15,12 @@ public class CardValuesCount {
             existingCount = get(cardValue);
         }
         valuesCount.put(cardValue, existingCount + 1);
+    }
+
+    public CardValueGroup getCardValuesGroup() {
+        CardValueGroup cardValueGroup = new CardValueGroup(valuesCount);
+        cardValueGroup.initializeGroup();
+        return cardValueGroup;
     }
 
     public int get(CardValue cardValue) {
