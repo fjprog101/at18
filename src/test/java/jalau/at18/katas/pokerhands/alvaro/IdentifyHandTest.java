@@ -1,15 +1,20 @@
 package jalau.at18.katas.pokerhands.alvaro;
-
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
-
-public class StraightFlushIdentifierTest {
+public class IdentifyHandTest {
 
     @Test
-    public void shouldIdentifyStraightFlushHand() {
-        StraightFlushIdentifier identifier = new StraightFlushIdentifier();
+    public void shouldIdentifyATypeOfHand() {
+        IdentifyHand identify = new IdentifyHand();
+        PokerHand handTwoPair = new PokerHand(new Card[]{
+            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.TWO, 'D'),
+            new Card(CardValue.FOUR, 'H'),
+            new Card(CardValue.FOUR, 'S'),
+            new Card(CardValue.SIX, 'S'),
+        });
+        assertEquals(TypesOfHands.TWOPAIR.getRankValue(),identify.searchTypeHand(handTwoPair));
 
         PokerHand straightFlushHand = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
@@ -18,25 +23,7 @@ public class StraightFlushIdentifierTest {
             new Card(CardValue.SIX, 'C'),
             new Card(CardValue.FIVE, 'C'),
         });
-        assertTrue(identifier.identify(straightFlushHand));
-
-        PokerHand noConsecutiveValues = new PokerHand(new Card[]{
-            new Card(CardValue.TWO, 'C'),
-            new Card(CardValue.FOUR, 'C'),
-            new Card(CardValue.FIVE, 'C'),
-            new Card(CardValue.FIVE, 'C'),
-            new Card(CardValue.SEVEN, 'C'),
-        });
-
-        assertFalse(identifier.identify(noConsecutiveValues));
-        PokerHand noSameSuite = new PokerHand(new Card[]{
-            new Card(CardValue.THREE, 'C'),
-            new Card(CardValue.FOUR, 'C'),
-            new Card(CardValue.FIVE, 'H'),
-            new Card(CardValue.SIX, 'C'),
-            new Card(CardValue.SEVEN, 'C'),
-        });
-        assertFalse(identifier.identify(noSameSuite));
+        assertEquals(TypesOfHands.STRAIGHTFLUSH.getRankValue(),identify.searchTypeHand(straightFlushHand));
 
         PokerHand highCardHand = new PokerHand(new Card[]{
             new Card(CardValue.FIVE, 'S'),
@@ -45,7 +32,7 @@ public class StraightFlushIdentifierTest {
             new Card(CardValue.QUEEN, 'H'),
             new Card(CardValue.ACE, 'C'),
         });
-        assertFalse(identifier.identify(highCardHand));
+        assertEquals(TypesOfHands.HIGHCARD.getRankValue(),identify.searchTypeHand(highCardHand));
 
         PokerHand flushHand = new PokerHand(new Card[]{ //flush hand
             new Card(CardValue.FIVE, 'S'),
@@ -54,7 +41,7 @@ public class StraightFlushIdentifierTest {
             new Card(CardValue.QUEEN, 'S'),
             new Card(CardValue.KING, 'S'),
         });
-        assertFalse(identifier.identify(flushHand));
+        assertEquals(TypesOfHands.FLUSH.getRankValue(),identify.searchTypeHand(flushHand));
 
         PokerHand pairHand = new PokerHand(new Card[]{ //pair hand
             new Card(CardValue.FIVE, 'S'),
@@ -63,7 +50,7 @@ public class StraightFlushIdentifierTest {
             new Card(CardValue.QUEEN, 'H'),
             new Card(CardValue.SIX, 'C'),
         });
-        assertFalse(identifier.identify(pairHand));
+        assertEquals(TypesOfHands.PAIR.getRankValue(),identify.searchTypeHand(pairHand));
 
         PokerHand straightHand = new PokerHand(new Card[]{ //straight hand
             new Card(CardValue.TWO, 'S'),
@@ -72,7 +59,7 @@ public class StraightFlushIdentifierTest {
             new Card(CardValue.FIVE, 'H'),
             new Card(CardValue.SIX, 'C'),
         });
-        assertFalse(identifier.identify(straightHand));
+        assertEquals(TypesOfHands.STRAIGHT.getRankValue(),identify.searchTypeHand(straightHand));
 
         PokerHand threeOfAKindHand = new PokerHand(new Card[]{ // three of a kind hand
             new Card(CardValue.TWO, 'S'),
@@ -81,16 +68,7 @@ public class StraightFlushIdentifierTest {
             new Card(CardValue.TWO, 'H'),
             new Card(CardValue.TWO, 'C'),
         });
-        assertFalse(identifier.identify(threeOfAKindHand));
-
-        PokerHand twoPairHand = new PokerHand(new Card[]{ //two pair hand
-            new Card(CardValue.TWO, 'S'),
-            new Card(CardValue.THREE, 'D'),
-            new Card(CardValue.TWO, 'D'),
-            new Card(CardValue.FIVE, 'H'),
-            new Card(CardValue.THREE, 'C'),
-        });
-        assertFalse(identifier.identify(twoPairHand));
+        assertEquals(TypesOfHands.THREEOFAKIND.getRankValue(),identify.searchTypeHand(threeOfAKindHand));
 
         PokerHand FullHouseHand = new PokerHand(new Card[]{ //Full House hand
             new Card(CardValue.FIVE, 'S'),
@@ -99,7 +77,8 @@ public class StraightFlushIdentifierTest {
             new Card(CardValue.TWO,'D'),
             new Card(CardValue.TWO,'S'),
         });
-        assertFalse(identifier.identify(FullHouseHand));
+        assertEquals(TypesOfHands.FULLHOUSE.getRankValue(),identify.searchTypeHand(FullHouseHand));
+
 
         PokerHand fourOfAKindHand = new PokerHand(new Card[]{ // fourof akind
             new Card(CardValue.TWO, 'S'),
@@ -108,7 +87,9 @@ public class StraightFlushIdentifierTest {
             new Card(CardValue.TWO,'D'),
             new Card(CardValue.THREE,'S'),
         });
-        assertFalse(identifier.identify(fourOfAKindHand));
+        assertEquals(TypesOfHands.FOUROFAKIND.getRankValue(),identify.searchTypeHand(fourOfAKindHand));
 
     }
+
+
 }

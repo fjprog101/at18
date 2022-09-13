@@ -1,13 +1,10 @@
 package jalau.at18.katas.pokerhands.alvaro;
-
 public class ConsecutiveValues extends CardsPattern {
 
     private CardComparer comparer;
-
     public ConsecutiveValues() {
         this.comparer = new CardComparer();
     }
-
     @Override
     public boolean match(PokerHand hand) {
         boolean areConsecutive = true;

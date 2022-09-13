@@ -11,9 +11,14 @@ public class CardTest {
         Card card = new Card(CardValue.TWO, 'C');
         assertEquals(CardValue.TWO, card.getValue());
         assertEquals('C', card.getSuit());
+        assertEquals(2, CardValue.TWO.getValue());
 
         Card jackOfHearts = new Card(CardValue.JACK, 'H');
         assertEquals(CardValue.JACK, jackOfHearts.getValue());
         assertEquals('H', jackOfHearts.getSuit());
+        assertEquals(11, CardValue.JACK.getValue());
+
+        
+
     }
 }

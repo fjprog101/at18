@@ -5,28 +5,27 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-public class PairIdentifierTest {
+public class TwoPairIdentifierTest {
     @Test
-    public void shouldIdentifyPairHand() {
-        PairIdentifier identifier = new PairIdentifier();
+    public void shouldIdentifyTwoPairHand() {
+        TwoPairIdentifier identifier = new TwoPairIdentifier();
 
-        PokerHand pairHand = new PokerHand(new Card[]{
+        PokerHand twoPairHand = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'S'),
-            new Card(CardValue.TWO, 'H'),
-            new Card(CardValue.THREE,'C'),
-            new Card(CardValue.SEVEN,'D'),
-            new Card(CardValue.SIX,'S'),
+            new Card(CardValue.THREE, 'D'),
+            new Card(CardValue.TWO, 'D'),
+            new Card(CardValue.FIVE, 'H'),
+            new Card(CardValue.THREE, 'C'),
         });
-        assertTrue(identifier.identify(pairHand));
-
-        PokerHand noConsecutivePairs = new PokerHand(new Card[]{
+        assertTrue(identifier.identify(twoPairHand));
+        PokerHand twoPairConsecutiveHand = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'S'),
-            new Card(CardValue.NINE, 'H'),
-            new Card(CardValue.THREE,'C'),
-            new Card(CardValue.SEVEN,'D'),
-            new Card(CardValue.TWO,'S'),
+            new Card(CardValue.TWO, 'D'),
+            new Card(CardValue.FIVE, 'D'),
+            new Card(CardValue.FIVE, 'H'),
+            new Card(CardValue.THREE, 'C'),
         });
-        assertTrue(identifier.identify(noConsecutivePairs));
+        assertTrue(identifier.identify(twoPairConsecutiveHand));
 
         PokerHand highCardHand = new PokerHand(new Card[]{
             new Card(CardValue.FIVE, 'S'),
@@ -46,6 +45,15 @@ public class PairIdentifierTest {
         });
         assertFalse(identifier.identify(flushHand));
 
+        PokerHand pairHand = new PokerHand(new Card[]{ //pair hand
+            new Card(CardValue.FIVE, 'S'),
+            new Card(CardValue.SIX, 'D'),
+            new Card(CardValue.JACK, 'D'),
+            new Card(CardValue.QUEEN, 'H'),
+            new Card(CardValue.SIX, 'C'),
+        });
+        assertFalse(identifier.identify(pairHand));
+
         PokerHand straightHand = new PokerHand(new Card[]{ //straight hand
             new Card(CardValue.TWO, 'S'),
             new Card(CardValue.THREE, 'D'),
@@ -63,15 +71,6 @@ public class PairIdentifierTest {
             new Card(CardValue.TWO, 'C'),
         });
         assertFalse(identifier.identify(threeOfAKindHand));
-
-        PokerHand twoPairHand = new PokerHand(new Card[]{ //two pair hand
-            new Card(CardValue.TWO, 'S'),
-            new Card(CardValue.THREE, 'D'),
-            new Card(CardValue.TWO, 'D'),
-            new Card(CardValue.FIVE, 'H'),
-            new Card(CardValue.THREE, 'C'),
-        });
-        assertFalse(identifier.identify(twoPairHand));
 
         PokerHand FullHouseHand = new PokerHand(new Card[]{ //Full House hand
             new Card(CardValue.FIVE, 'S'),
@@ -99,6 +98,6 @@ public class PairIdentifierTest {
             new Card(CardValue.SIX, 'C'),
         });
         assertFalse(identifier.identify(straightFlushHand));
-
     }
+
 }
