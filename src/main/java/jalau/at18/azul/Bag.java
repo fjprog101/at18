@@ -16,26 +16,6 @@ public class Bag {
 
     }
 
-    public char getTile() {
-        int randomizer = (int) Math.floor(Math.random() * (MAX - min + 1) + min);
-        tilecounter++;
-        if (tileLimit(tilecounter)) {
-            switch (randomizer) {
-                case 1:
-                    return 'R';
-                case 2:
-                    return 'Y';
-                case DARK_SELECTOR:
-                    return 'D';
-                case BLUE_SELECTOR:
-                    return 'B';
-                default:
-                    return 'W';
-            }
-        }
-        return 'X';
-    }
-
     public boolean tileLimit(int counter) {
         if (counter < NUMBER_OF_TILES) {
             return true;
