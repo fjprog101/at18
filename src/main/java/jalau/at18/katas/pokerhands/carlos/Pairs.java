@@ -1,7 +1,4 @@
-package main.java.jalau.at18.katas.pokerhands.carlos;
-
-import jalau.at18.katas.pokerhands.carlos.CardComparer;
-import jalau.at18.katas.pokerhands.carlos.PokerHand;
+package jalau.at18.katas.pokerhands.carlos;
 
 public class Pairs {
     private static int count = 0;

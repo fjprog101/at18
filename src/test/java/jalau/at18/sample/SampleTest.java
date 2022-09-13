@@ -1,4 +1,4 @@
-package jalau.at18.katas;
+package jalau.at18.sample;
 
 import static org.junit.Assert.assertEquals;
 

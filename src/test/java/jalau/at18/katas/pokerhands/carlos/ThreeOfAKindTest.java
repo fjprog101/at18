@@ -1,15 +1,8 @@
-package test.java.jalau.at18.katas.pokerhands.carlos;
+package jalau.at18.katas.pokerhands.carlos;
 
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
-
-import jalau.at18.katas.pokerhands.carlos.Card;
-import jalau.at18.katas.pokerhands.carlos.CardValue;
-import jalau.at18.katas.pokerhands.carlos.PokerHand;
-import jalau.at18.katas.pokerhands.carlos.StraightFlushIdentifier;
-import main.java.jalau.at18.katas.pokerhands.carlos.ThreeOfAKind;
 
 public class ThreeOfAKindTest {
     @Test
@@ -23,8 +16,8 @@ public class ThreeOfAKindTest {
             new Card(CardValue.FOUR, 'C'),
             new Card(CardValue.SIX, 'C'),
         });
-        assertTrue(identifier.identifyThreeOfAKind(threeCards));   
-        
-    } 
-    
+        assertTrue(identifier.identifyThreeOfAKind(threeCards));
+
+    }
+
 }

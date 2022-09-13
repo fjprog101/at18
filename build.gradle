@@ -15,6 +15,12 @@ test {
         events "failed"
         exceptionFormat "full"
     }
+    filter {
+        includeTestsMatching "jalau.at18.architects.*"
+        includeTestsMatching "jalau.at18.azul.*"
+        includeTestsMatching "jalau.at18.kingoftokyo.*"
+        includeTestsMatching "jalau.at18.sample.*"
+    }
 }
 
 checkstyle {
@@ -24,6 +30,14 @@ checkstyle {
 
 checkstyleMain {
     source = 'src/main/java'
+}
+
+jacocoTestReport {
+    afterEvaluate {
+        classDirectories.setFrom(files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: ['jalau/at18/katas/**'])
+        }))
+    }
 }
 
 test.finalizedBy("checkstyleMain")

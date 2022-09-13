@@ -1,4 +1,4 @@
-package jalau.at18.katas;
+package jalau.at18.sample;
 
 public class Sample {
     public String sayHello() {
