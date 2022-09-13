@@ -1,5 +1,7 @@
 package jalau.at18.katas.pokerhands.joser;
 
+import java.util.Arrays;
+
 public class PokerHand {
 
     private Card[] cards;
@@ -9,6 +11,8 @@ public class PokerHand {
     }
 
     public Card[] getCards() {
+        Arrays.sort(cards, (cartaA, cartaB) -> cartaB.getValue().compareTo(cartaA.getValue()));
         return cards;
     }
+
 }
