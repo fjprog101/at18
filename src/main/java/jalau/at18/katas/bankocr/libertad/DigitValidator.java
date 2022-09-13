@@ -1,26 +1,23 @@
 package jalau.at18.katas.bankocr.libertad;
-import java.util.Arrays;
 public class DigitValidator {
-    private Digit digit;
+    private DigitRange digitRange;
     public DigitValidator() {
-        digit = Digit.ZERO;
+        digitRange = new DigitRange();
     }
     public boolean existInTheRank(String[] input) {
-        boolean exist = false;
-        while (digit.hasNext() && !exist) {
-            exist = compare(digit.getRepresentation(), input);
-            digit = digit.getNextDigit();
+        for (int iterator = 0; iterator < digitRange.getDigits().size(); iterator++) {
+            if (digitRange.isDigit(iterator, input)) {
+                return true;
+            }
         }
-        return exist;
+        return false;
     }
-    public boolean compare(String[] strings, String[] input) {
-        boolean isEquals = false;
-        if (Arrays.deepEquals(strings, input)) {
-            isEquals = true;
+    public int getDigitValue(String[] input) {
+        for (int iterator = 0; iterator < digitRange.getDigits().size(); iterator++) {
+            if (digitRange.isDigit(iterator, input)) {
+                return iterator;
+            }
         }
-        return isEquals;
-    }
-    public Digit getDigit() {
-        return digit;
+        return 0;
     }
 }

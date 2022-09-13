@@ -1,4 +1,4 @@
-package jalau.at18.katas.bankocr.libertadTest;
+package jalau.at18.katas.bankocr.libertad;
 
 import static org.junit.Assert.assertArrayEquals;
 
@@ -8,8 +8,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 import org.junit.Test;
-
-import jalau.at18.katas.bankocr.libertad.InputNumber;
 
 public class InputNumberTest {
     @Test
