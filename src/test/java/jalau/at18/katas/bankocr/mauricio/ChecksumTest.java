@@ -1,6 +1,7 @@
 package jalau.at18.katas.bankocr.mauricio;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -23,5 +24,12 @@ public class ChecksumTest {
         Checksum checksum = new Checksum();
         int[] listNumbers = {three, four, five, eight, eight, two, eight, six, five};
         assertTrue(checksum.calculationChecksum(listNumbers));
+    }
+
+    @Test
+    public void checksumNotFulfilled(){
+        Checksum checksum = new Checksum();
+        int[] listNumbers = {three, four, five, eight, eight, two, eight, six, six};
+        assertFalse(checksum.calculationChecksum(listNumbers));
     }
 }
