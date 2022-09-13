@@ -1,6 +1,6 @@
 package jalau.at18.katas.pokerhands.sergio;
 
-public class PokerIdentifier {
+public class PokerIdentifier extends CardsPattern {
     private PokerHandAnalizer analizer;
     private final int fiveTimesRepeated = 5;
 
@@ -8,8 +8,9 @@ public class PokerIdentifier {
         this.analizer = new PokerHandAnalizer();
     }
 
-    public boolean identify(PokerHand hand) {
-        SameValuePattern twoConsecutiveValues = new SameValuePattern(fiveTimesRepeated);
-        return analizer.analize(hand, twoConsecutiveValues);
+    @Override
+    boolean match(PokerHand hand) {
+        SameValuePattern pokerPattern = new SameValuePattern(fiveTimesRepeated);
+        return analizer.analize(hand, pokerPattern);
     }
 }

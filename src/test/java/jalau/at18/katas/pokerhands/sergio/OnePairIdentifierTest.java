@@ -5,25 +5,26 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-public class TwoPairsIdentifierTest {
-    @Test
-    public void shouldIdentifyTwoPairsHand() {
-        TwoPairsIdentifier identifier = new TwoPairsIdentifier();
+public class OnePairIdentifierTest {
 
+    @Test
+    public void shouldIdentifyOnePairsHand() {
+        OnePairIdentifier identifier = new OnePairIdentifier();
+
+        PokerHand onePairHand = new PokerHand(new Card[]{
+            new Card(CardValue.TWO, 'C'),
+            new Card(CardValue.TWO, 'D'),
+            new Card(CardValue.FIVE, 'C'),
+            new Card(CardValue.FOUR, 'S'),
+            new Card(CardValue.JACK, 'C'), });
+        assertTrue(identifier.match(onePairHand));
         PokerHand twoPairsHand = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.TWO, 'D'),
             new Card(CardValue.FOUR, 'C'),
             new Card(CardValue.FOUR, 'S'),
             new Card(CardValue.JACK, 'C'), });
-        assertTrue(identifier.match(twoPairsHand));
-        PokerHand threeOfKindHand = new PokerHand(new Card[]{
-            new Card(CardValue.TWO, 'C'),
-            new Card(CardValue.TWO, 'S'),
-            new Card(CardValue.TWO, 'H'),
-            new Card(CardValue.FIVE, 'C'),
-            new Card(CardValue.SEVEN, 'C'), });
-        assertFalse(identifier.match(threeOfKindHand));
+        assertFalse(identifier.match(twoPairsHand));
         PokerHand PokerHand = new PokerHand(new Card[]{
             new Card(CardValue.THREE, 'C'),
             new Card(CardValue.THREE, 'S'),
