@@ -7,13 +7,13 @@ import org.junit.Test;
 public class CompletCardTest {
     @Test
     public void shouldHaveACardName() {
-        CompleteCard card = new CompleteCard(DiscardCards.ENERGIZER);
+        CompleteCard card = new CompleteCard(DiscardCards.ENERGIZE);
         assertNotNull(card.getName());
     }
 
     @Test
     public void shouldHaveADescription() {
-        CompleteCard card = new CompleteCard(DiscardCards.ENERGIZER);
+        CompleteCard card = new CompleteCard(DiscardCards.ENERGIZE);
         assertNotNull(card.setDescription());
     }
 }

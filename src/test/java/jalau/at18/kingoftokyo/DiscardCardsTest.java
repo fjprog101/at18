@@ -9,10 +9,10 @@ public class DiscardCardsTest {
 
     @Test
     public void cardShouldHaveAEffect() {
-        assertEquals(3, DiscardCards.ENERGIZER.getEffect().length);
+        assertEquals(3, DiscardCards.ENERGIZE.getEffect().length);
     }
     @Test
     public void cardShouldHaveACost() {
-        assertNotNull(DiscardCards.ENERGIZER.getCost());
+        assertNotNull(DiscardCards.ENERGIZE.getCost());
     }
 }
