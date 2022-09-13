@@ -5,7 +5,8 @@ public class PokerHand {
     private Card[] cards;
 
     public PokerHand(Card[] cards) {
-        this.cards = cards;
+        CardSort sorter = new CardSort();
+        this.cards = sorter.sortCards(cards);
     }
 
     public Card[] getCards() {

@@ -14,7 +14,12 @@ public class Card {
         return value;
     }
 
+    public int getScore(CardValue value1) {
+        return value.getScore(value1);
+    }
+
     public char getSuit() {
         return suit;
     }
+
 }

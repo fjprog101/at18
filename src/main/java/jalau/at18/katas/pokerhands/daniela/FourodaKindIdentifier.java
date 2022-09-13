@@ -1,21 +1,21 @@
 package jalau.at18.katas.pokerhands.daniela;
 
-public class Twopairidentifier extends CompareGame {
+public class FourodaKindIdentifier extends CompareGame {
     private PokerHandAnalizer analizer;
 
-    public Twopairidentifier() {
+    public FourodaKindIdentifier() {
         this.analizer = new PokerHandAnalizer();
+
     }
 
     @Override
     public boolean identify(PokerHand hand) {
-        Pairs twopairs = new Pairs();
-        return analizer.analize(hand, twopairs);
+        FourofaKind fourcards = new FourofaKind();
+        return analizer.analize(hand, fourcards);
     }
 
     @Override
     Rank getidentifyPokerhand() {
-        return Rank.TWOPAIRS;
+        return Rank.FOUROFAKIND;
     }
-
 }

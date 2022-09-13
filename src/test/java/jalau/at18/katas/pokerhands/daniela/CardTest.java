@@ -16,4 +16,12 @@ public class CardTest {
         assertEquals(CardValue.JACK, jackOfHearts.getValue());
         assertEquals('H', jackOfHearts.getSuit());
     }
+
+    @Test
+    public void shouldHaveScoreOneCard() {
+        Card card = new Card(CardValue.TWO, 'C');
+        assertEquals(CardValue.TWO, card.getValue());
+        assertEquals('C', card.getSuit());
+        assertEquals(2, card.getScore(CardValue.TWO));
+    }
 }

@@ -16,5 +16,4 @@ public class AllSameSuit extends CardsPattern {
         }
         return areSameSuit;
     }
-
 }
