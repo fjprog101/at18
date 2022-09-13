@@ -6,20 +6,20 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-public class TwoPairTest {
-    
-    @Test
-    public void shouldVerifyThereAreTwoPairs() {
+public class OnePairTest {
 
-        TwoPair twoPairIdentifier = new TwoPair();
+    @Test
+    public void shouldVerifyThereAreOnePair() {
+
+        OnePair onePairIdentifier = new OnePair();
         PokerHand handWithTwoPairs = new PokerHand(new Card[]{
-            new Card(CardValue.FOUR, 'C'),
-            new Card(CardValue.FOUR, 'H'),
+            new Card(CardValue.ACE, 'C'),
             new Card(CardValue.ACE, 'H'),
-            new Card(CardValue.ACE, 'S'),
+            new Card(CardValue.FOUR, 'H'),
+            new Card(CardValue.FOUR, 'S'),
             new Card(CardValue.SEVEN, 'S'),
         });
-        assertTrue(twoPairIdentifier.identify(handWithTwoPairs));
+        assertFalse(onePairIdentifier.identify(handWithTwoPairs));
 
         PokerHand handWithOnePair = new PokerHand(new Card[]{
             new Card(CardValue.EIGHT, 'C'),
@@ -28,7 +28,7 @@ public class TwoPairTest {
             new Card(CardValue.THREE, 'S'),
             new Card(CardValue.EIGHT, 'S'),
         });
-        assertFalse(twoPairIdentifier.identify(handWithOnePair));
+        assertTrue(onePairIdentifier.identify(handWithOnePair));
 
         PokerHand handWithNoPair = new PokerHand(new Card[]{
             new Card(CardValue.EIGHT, 'C'),
@@ -37,7 +37,7 @@ public class TwoPairTest {
             new Card(CardValue.THREE, 'S'),
             new Card(CardValue.NINE, 'S'),
         });
-        assertFalse(twoPairIdentifier.identify(handWithNoPair));
+        assertFalse(onePairIdentifier.identify(handWithNoPair));
         
         PokerHand handWithFourKind = new PokerHand(new Card[]{
             new Card(CardValue.EIGHT, 'C'),
@@ -46,7 +46,7 @@ public class TwoPairTest {
             new Card(CardValue.ACE, 'S'),
             new Card(CardValue.ACE, 'S'),
         });
-        assertFalse(twoPairIdentifier.identify(handWithFourKind));
-        assertEquals(13, twoPairIdentifier.getRankedValue(handWithTwoPairs));
+        assertFalse(onePairIdentifier.identify(handWithFourKind));
+        assertEquals(7, onePairIdentifier.getRankedValue(handWithOnePair));
     }
 }

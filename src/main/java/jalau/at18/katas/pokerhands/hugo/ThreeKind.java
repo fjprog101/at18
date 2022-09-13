@@ -1,21 +1,20 @@
 package jalau.at18.katas.pokerhands.hugo;
 
-public class TwoPair extends HandIdentifier {
+public class ThreeKind extends HandIdentifier {
 
-    private static final int NUMBER_OF_PAIRS = 2;
-    private static final int CARDS_WITH_SAME_VALUE = 2;
-    private PokerHandAnalizer pairAnalizer;
+    private static final int THREE_OF_A_KIND_CARDS = 3;
+    private PokerHandAnalizer kindAnalizer;
     private int numericValue;
 
-    public TwoPair() {
-        this.pairAnalizer = new PokerHandAnalizer();
+    public ThreeKind() {
+        kindAnalizer = new PokerHandAnalizer();
         this.numericValue = 0;
     }
 
     @Override
     public boolean identify(PokerHand hand) {
-        PairsNumber numberOfPairs = new PairsNumber(NUMBER_OF_PAIRS);
-        return pairAnalizer.analize(hand, numberOfPairs);
+        CardsWithSameValue handWithThreeOfAKind = new CardsWithSameValue(THREE_OF_A_KIND_CARDS);
+        return kindAnalizer.analize(hand, handWithThreeOfAKind);
     }
 
     public int getRankedValue(PokerHand hand) {
@@ -27,7 +26,7 @@ public class TwoPair extends HandIdentifier {
 
     public void maximumValue(PokerHand hand, CardValuesCount count) {
         for (Card card : hand.getCards()) {
-            if (count.get(card.getValue()) == CARDS_WITH_SAME_VALUE) {
+            if (count.get(card.getValue()) == THREE_OF_A_KIND_CARDS) {
                 numericValue = card.getValue().getNumericValue();
             }
         }

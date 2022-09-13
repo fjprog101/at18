@@ -1,13 +1,13 @@
 package jalau.at18.katas.pokerhands.hugo;
 
-public class TwoPair extends HandIdentifier {
+public class OnePair extends HandIdentifier {
 
-    private static final int NUMBER_OF_PAIRS = 2;
+    private static final int NUMBER_OF_PAIRS = 1;
     private static final int CARDS_WITH_SAME_VALUE = 2;
     private PokerHandAnalizer pairAnalizer;
     private int numericValue;
 
-    public TwoPair() {
+    public OnePair() {
         this.pairAnalizer = new PokerHandAnalizer();
         this.numericValue = 0;
     }
