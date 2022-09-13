@@ -1,7 +1,7 @@
 package jalau.at18.katas.bankocr.daniela;
 
 public class CheckValue {
-    private static final int ZISE = 3;
+    private static final int SIZEONEDIGIT = 3;
     private static final int SIZE_NUMBERS = 27;
     private final String line1;
     private final String line2;
@@ -21,6 +21,5 @@ public class CheckValue {
             return false;
         }
         return true;
-
     }
 }

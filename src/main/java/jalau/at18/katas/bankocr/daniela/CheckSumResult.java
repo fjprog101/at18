@@ -5,14 +5,15 @@ public class CheckSumResult extends CheckSum {
 
     public CheckSumResult(String line1, String line2, String line3, int sizeValue, int sizenumbers) {
         super(line1, line2, line3, sizeValue, sizenumbers);
+
     }
 
-    public boolean checkSum(int total, int finalresult) {
+    public String checkSum(int total, int finalresult) {
         finalresult = result(total) % MODULE;
         if (finalresult == 0) {
-            return true;
+            return "OK";
         }
-        return false;
+        return "ERR";
     }
 
 }

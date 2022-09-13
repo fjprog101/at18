@@ -25,4 +25,5 @@ public class CheckSum extends BankAccount {
         }
         return total;
     }
+
 }
