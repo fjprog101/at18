@@ -1,6 +1,7 @@
 package jalau.at18.katas.bankocr.mauricio;
 
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -21,5 +22,12 @@ public class IllegibleNumberTest {
             Illegible illegible = new Illegible();
             int[] listNumbers = {three, four, five, eight, eight, two, eight, six, ninetynine};
             assertFalse(illegible.illegibleNumber(listNumbers));
+        }
+
+        @Test
+        public void shouldNotBeIllegible(){
+            Illegible illegible = new Illegible();
+            int[] listNumbers = {three, four, five, eight, eight, two, eight, six, four};
+            assertTrue(illegible.illegibleNumber(listNumbers));
         }
 }

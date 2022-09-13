@@ -18,8 +18,12 @@ public class IllegibleOrNotChecksumAccount {
                 + String.valueOf(listNumbers[four]) + "" + String.valueOf(listNumbers[five]) + ""
                 + String.valueOf(listNumbers[six]) + "" + String.valueOf(listNumbers[seven]) + ""
                 + String.valueOf(listNumbers[eight]);
+        return conditionForMistakes(listNumbersStr, listNumbers);
+    }
+
+    public String conditionForMistakes(String listNumbersStr, int[] listNumbers) {
         if (checksum.calculationChecksum(listNumbers) && illegible.illegibleNumber(listNumbers)) {
-            System.out.println(listNumbersStr);
+            System.out.println("Correct account's number: " + listNumbersStr);
             return listNumbersStr;
         } else if (illegible.illegibleNumber(listNumbers)) {
             System.out.println(listNumbersStr + " ERR");

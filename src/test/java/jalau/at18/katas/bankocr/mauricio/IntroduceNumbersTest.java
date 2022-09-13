@@ -27,6 +27,12 @@ public class IntroduceNumbersTest {
         assertEquals(oneCharacter, result[0]);
         assertEquals(twoCharacter, result[one]);
         assertEquals(threeCharacter, result[two]);
+        assertEquals(oneCharacter, result[three]);
+        assertEquals(twoCharacter, result[four]);
+        assertEquals(threeCharacter, result[five]);
+        assertEquals(oneCharacter, result[six]);
+        assertEquals(twoCharacter, result[seven]);
+        assertEquals(threeCharacter, result[eight]);
     }
     
 }
