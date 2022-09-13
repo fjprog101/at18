@@ -17,7 +17,7 @@ public class PosibleValuesTest {
         String strin3 = "|_|";
         String[] stringInput = {strin1, strin2, strin3};
         Input input = new Input(stringInput);
-        PosibleValues posibleValues2 = new PosibleValues();
+        PossibleValues posibleValues2 = new PossibleValues();
         assertEquals(1 ,posibleValues2.getChanges(input.getDigits()[0], DigitType.EIGHT));
         assertEquals(0 ,posibleValues2.getChanges(input.getDigits()[0], DigitType.ZERO));
         assertEquals(4 ,posibleValues2.getChanges(input.getDigits()[0], DigitType.ONE));
@@ -27,7 +27,7 @@ public class PosibleValuesTest {
     public void shouldGiveArrayOfPossiblesValues() {
         String[][] stringDigit = {{" ", "_", " "}, {"|", " ", "|"}, {"|", "_", "|"}};
         Digit digit = new Digit(stringDigit);
-        PosibleValues posibleValues = new PosibleValues();
+        PossibleValues posibleValues = new PossibleValues();
         ArrayList<Integer> expectedList = new ArrayList<Integer>();
         expectedList.add(0);
         expectedList.add(8);
@@ -35,7 +35,7 @@ public class PosibleValuesTest {
 
         String[][] stringDigit1 = {{" ", " ", " "}, {" ", " ", "|"}, {" ", " ", "|"}};
         Digit digit1 = new Digit(stringDigit1);
-        PosibleValues posibleValues1 = new PosibleValues();
+        PossibleValues posibleValues1 = new PossibleValues();
         ArrayList<Integer> expectedList1 = new ArrayList<Integer>();
         expectedList1.add(1);
         expectedList1.add(7);
@@ -43,7 +43,7 @@ public class PosibleValuesTest {
 
         String[][] stringDigit2 = {{" ", "_", " "}, {"|", "_", " "}, {" ", "_", "|"}};
         Digit digit2 = new Digit(stringDigit2);
-        PosibleValues posibleValues2 = new PosibleValues();
+        PossibleValues posibleValues2 = new PossibleValues();
         ArrayList<Integer> expectedList2 = new ArrayList<Integer>();
         expectedList2.add(5);
         expectedList2.add(6);

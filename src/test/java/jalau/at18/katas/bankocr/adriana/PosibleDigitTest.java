@@ -14,7 +14,7 @@ public class PosibleDigitTest {
         String strin3 = "|_|  |  |  |";
         String[] stringInput = {strin1, strin2, strin3};
         Input input = new Input(stringInput);
-        PosibleDigits posibles = new PosibleDigits();
+        PossibleDigits posibles = new PossibleDigits();
 
         ArrayList<Integer> expectedDigit1 = new ArrayList<Integer>();
         expectedDigit1.add(0);

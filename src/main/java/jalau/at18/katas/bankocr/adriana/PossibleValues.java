@@ -2,10 +2,10 @@ package jalau.at18.katas.bankocr.adriana;
 
 import java.util.ArrayList;
 
-public class PosibleValues {
-    ArrayList<Integer> values;
-    
-    public PosibleValues() {
+public class PossibleValues {
+    private ArrayList<Integer> values;
+
+    public PossibleValues() {
         values = new ArrayList<Integer>();
     }
 
@@ -20,8 +20,8 @@ public class PosibleValues {
 
     public int getChanges(Digit digit, DigitType number) {
         int changes = 0;
-        for (int row = 0; row < 3; row ++) {
-            for (int column = 0; column < 3; column ++) {
+        for (int row = 0; row < digit.getDigit().length; row++) {
+            for (int column = 0; column < digit.getDigit().length; column++) {
                 changes = digit.getDigit()[row][column].equals(number.getArray()[row][column]) ? changes : changes + 1;
             }
         }
