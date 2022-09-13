@@ -4,7 +4,6 @@ import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
 
-
 public class CompletCardTest {
     @Test
     public void shouldHaveACardName() {
@@ -12,4 +11,9 @@ public class CompletCardTest {
         assertNotNull(card.getName());
     }
 
+    @Test
+    public void shouldHaveADescription() {
+        CompleteCard card = new CompleteCard(DiscardCards.ENERGIZER);
+        assertNotNull(card.setDescription());
+    }
 }
