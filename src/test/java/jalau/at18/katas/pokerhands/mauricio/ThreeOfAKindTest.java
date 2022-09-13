@@ -19,7 +19,7 @@ public class ThreeOfAKindTest {
     }
 
     @Test
-    public void shouldNotHaveTwoPairsOnThePokerHand(){
+    public void shouldNotHaveThreeOfKindOnThePokerHand(){
         PokerHand handWithout3OfAKindPerHand = new PokerHand(new Card[]{
             new Card(CardValue.TWO, 'C'),
             new Card(CardValue.TWO, 'D'),

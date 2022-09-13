@@ -1,13 +1,13 @@
 package jalau.at18.katas.pokerhands.mauricio;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public class CardValuesCount {
 
-    private HashMap<CardValue, Integer> valuesCount;
+    private LinkedHashMap<CardValue, Integer> valuesCount;
 
     public CardValuesCount() {
-        valuesCount = new HashMap<CardValue, Integer>();
+        valuesCount = new LinkedHashMap<CardValue, Integer>();
     }
 
     public void add(CardValue cardValue) {
