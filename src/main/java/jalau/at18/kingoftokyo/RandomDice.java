@@ -6,14 +6,10 @@ public class RandomDice {
     private int randomDice;
 
     public Dice generatedRandom() {
-        randomDice = new Random().nextInt(DiceFace.values().length) + 1;
-        for (DiceFace element : DiceFace.values()) {
-            if (element.getRepresentativeValue() == randomDice) {
-                Dice dice = new Dice(element);
-                return dice;
-            }
-        }
-        return null;
+        randomDice = new Random().nextInt(DiceFace.values().length);
+        DiceFace element  =  DiceFace.values()[randomDice];
+        Dice dice = new Dice(element);
+        return dice;
     }
 
     public boolean verifyRandomValue() {

@@ -21,6 +21,9 @@ public class DiceRoller {
         return newlistDice;
     }
 
+
+
+// Borrar
     public String showListDices() {
         List<Dice> listDiceRandom = randomDice();
         String numbersRandom = "";
