@@ -1,13 +1,11 @@
 package jalau.at18.kingoftokyo;
 
 public abstract class Card {
-    private String name;
-    private int cost;
-    private String description;
+    protected String name;
+    protected String description;
 
-    public Card(String name, int cost) {
+    public Card(String name) {
         this.name = name;
-        this.cost = cost;
     }
 
     public Object getName() {

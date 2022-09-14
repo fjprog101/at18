@@ -4,7 +4,7 @@ import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
 
-public class CompletCardTest {
+public class CompleteCardTest {
     @Test
     public void shouldHaveACardName() {
         CompleteCard card = new CompleteCard(DiscardCards.ENERGIZE);
