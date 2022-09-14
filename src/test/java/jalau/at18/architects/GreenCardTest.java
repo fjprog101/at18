@@ -10,14 +10,14 @@ public class GreenCardTest {
     public void shouldBeAGreenCard(){
         GreenCard greenCard = new GreenCard("Green", ScientificSymbol.COMPASS);
         assertEquals("Green", greenCard.getColor());
-        assertEquals("Compass", greenCard.getScientificSymbol());
+        assertEquals("Compass", greenCard.getSymbol());
     }
 
     @Test
     public void shouldNotBeAGreenCard(){
         GreenCard greenCard = new GreenCard("Green", ScientificSymbol.OLDTABLE);
         assertNotEquals("Red", greenCard.getColor());
-        assertNotEquals("Compass", greenCard.getScientificSymbol());
+        assertNotEquals("Compass", greenCard.getSymbol());
     }
     
 }
