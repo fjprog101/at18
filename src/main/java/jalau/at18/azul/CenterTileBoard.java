@@ -3,19 +3,8 @@ import java.util.*;
 
 public class CenterTileBoard extends ArrayList<Character> {
 
-
-    public CenterTileBoard() {
-        super();
-        this.add('F');
-    }
-
     public CenterTileBoard removeTilesOfSpecificColor(char color) {
-        for (int position = 0; position < this.size(); ++position) {
-            if (this.get(position) == color) {
-                this.remove(position);
-                position--;
-            }
-        }
+        this.removeAll(Collections.singleton(color));
         return this;
     }
 
