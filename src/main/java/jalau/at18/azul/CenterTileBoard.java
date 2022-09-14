@@ -6,6 +6,7 @@ public class CenterTileBoard extends ArrayList<Character> {
 
     public CenterTileBoard() {
         super();
+        this.add('F');
     }
 
     public CenterTileBoard removeTilesOfSpecificColor(char color) {

@@ -9,12 +9,14 @@ public class CenterTileBoardTest {
     @Test
     public void testRemoveTiles() {
         CenterTileBoard center = new CenterTileBoard(); 
+        center.add('F');
         center.add('D');
         center.add('D');
         center.add('R');
         center.add('Y');
         center.removeTilesOfSpecificColor('R');
         CenterTileBoard expected = new CenterTileBoard();
+        expected.add('F');
         expected.add('D');
         expected.add('D');
         expected.add('Y');
@@ -23,6 +25,7 @@ public class CenterTileBoardTest {
     @Test
     public void testRemoveTiles1() {
         CenterTileBoard center = new CenterTileBoard(); 
+        center.add('F');
         center.add('D');
         center.add('R');
         center.add('R');
@@ -30,6 +33,7 @@ public class CenterTileBoardTest {
         center.add('D');
         center.removeTilesOfSpecificColor('D');
         CenterTileBoard expected = new CenterTileBoard();
+        expected.add('F');
         expected.add('R');
         expected.add('R');
         expected.add('Y');
@@ -39,12 +43,14 @@ public class CenterTileBoardTest {
     @Test
     public void testRemoveTiles2() {
         CenterTileBoard center = new CenterTileBoard(); 
+        center.add('F');
         center.add('D');
         center.add('D');
         center.add('R');
         center.add('Y');
         center.removeTilesOfSpecificColor('D');
         CenterTileBoard expected = new CenterTileBoard();
+        expected.add('F');
         expected.add('R');
         expected.add('Y');
         assertEquals(expected, center);
@@ -52,10 +58,12 @@ public class CenterTileBoardTest {
     @Test
     public void testaddTiles() {
         CenterTileBoard center = new CenterTileBoard(); 
+        center.add('F');
         center.add('R');
         center.add('R');
         center.addTilestoCenter('D', 3);
         CenterTileBoard expected = new CenterTileBoard();
+        expected.add('F');
         expected.add('R');
         expected.add('R');
         expected.add('D');
