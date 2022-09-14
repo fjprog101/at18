@@ -14,6 +14,6 @@ public class CompleteCardTest {
     @Test
     public void shouldHaveADescription() {
         CompleteCard card = new CompleteCard(DiscardCards.ENERGIZE);
-        assertNotNull(card.setDescription());
+        assertNotNull(card.getDescription());
     }
 }

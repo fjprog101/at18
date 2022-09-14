@@ -9,7 +9,7 @@ public class CompleteCard extends Card {
     }
 
     @Override
-    String setDescription() {
+    String getDescription() {
         description = "LifePoints " + card.getEffect()[0] + "Score " + card.getEffect()[1] + "Energy "
                 + card.getEffect()[2];
         return description;

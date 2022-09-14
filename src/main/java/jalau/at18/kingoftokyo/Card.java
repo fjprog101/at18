@@ -12,5 +12,5 @@ public abstract class Card {
         return name;
     }
 
-    abstract String setDescription();
+    abstract String getDescription();
 }
