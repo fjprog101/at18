@@ -1,0 +1,23 @@
+package jalau.at18.architects;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+
+import org.junit.Test;
+
+public class GreenCardTest {
+    @Test
+    public void shouldBeAGreenCard(){
+        GreenCard greenCard = new GreenCard("Green", ScientificSymbol.COMPASS);
+        assertEquals("Green", greenCard.getColor());
+        assertEquals("Compass", greenCard.getScientificSymbol());
+    }
+
+    @Test
+    public void shouldNotBeAGreenCard(){
+        GreenCard greenCard = new GreenCard("Green", ScientificSymbol.OLDTABLE);
+        assertNotEquals("Red", greenCard.getColor());
+        assertNotEquals("Compass", greenCard.getScientificSymbol());
+    }
+    
+}
