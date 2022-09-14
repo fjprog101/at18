@@ -1,6 +1,6 @@
 package jalau.at18.azul;
 
-public enum Tiles {
+public enum Tile {
     RED('R'),
     YELLOW('Y'),
     DARK('D'),
@@ -10,7 +10,7 @@ public enum Tiles {
 
     private final char colorTile;
 
-    Tiles(char colorTile) {
+    Tile(char colorTile) {
         this.colorTile = colorTile;
     }
 
