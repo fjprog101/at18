@@ -2,8 +2,8 @@ package jalau.at18.kingoftokyo;
 
 public enum DiceFace {
     ONE(1, 1),
-    TWO(2, 1),
-    THREE(3, 1),
+    TWO(2, 2),
+    THREE(3, 3),
     HEALING(4, 1),
     ENERGY(5, 1),
     PUNDING(6, 1);

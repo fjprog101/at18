@@ -3,7 +3,7 @@ package jalau.at18.kingoftokyo;
 public class DiceFaceSameCounter {
     private DiceHand diceHand;
 
-    public DiceFaceSameCounter(DiceHand listDiceHand) {
+    public DiceFaceSameCounter(DiceHand listDiceHand) { //lista del random
         this.diceHand = listDiceHand;
     }
 
