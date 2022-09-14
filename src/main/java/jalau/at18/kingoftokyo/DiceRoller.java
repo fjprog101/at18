@@ -12,31 +12,12 @@ public class DiceRoller {
     }
 
     //This method generated the list with random values.
-    public List<Dice> randomDice() { // No olvidar que aqui recibira la cantidad de randoms a generar a la lista
-        List<Dice> newlistDice = new ArrayList<>();
+    public List<DiceFace> randomDice() { // No olvidar que aqui recibira la cantidad de randoms a generar a la lista
+        List<DiceFace> newListDiceFace = new ArrayList<>();
         for (int count = 0; count < COUNT_DICE; count++) {
-            Dice dice = randomDice.generatedRandom();
-            newlistDice.add(dice);
+            DiceFace diceFace = randomDice.generatedRandom();
+            newListDiceFace.add(diceFace);
         }
-        return newlistDice;
-    }
-
-
-
-// Borrar
-    public String showListDices() {
-        List<Dice> listDiceRandom = randomDice();
-        String numbersRandom = "";
-        for (int count = 0; count < listDiceRandom.size(); count++) {
-            numbersRandom = numbersRandom + String.valueOf(listDiceRandom.get(count).getDiceFace().getRepresentativeValue());
-        }
-        return numbersRandom;
-    }
-
-    public boolean verifyShowListDices() {
-        if (!showListDices().isEmpty()) {
-            return true;
-        }
-        return false;
+        return newListDiceFace;
     }
 }
