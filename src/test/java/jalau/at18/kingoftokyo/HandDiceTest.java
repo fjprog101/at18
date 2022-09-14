@@ -23,7 +23,7 @@ public class HandDiceTest {
         listDice.add(dice4);
         listDice.add(dice5);
         listDice.add(dice6);
-        HandDice handDice = new HandDice(listDice);
+        DiceHand handDice = new DiceHand(listDice);
         assertNotNull(handDice.getListDices());
         assertEquals(6, handDice.getListDices().size());
     }
