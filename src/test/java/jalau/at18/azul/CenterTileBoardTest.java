@@ -37,6 +37,19 @@ public class CenterTileBoardTest {
     }
 
     @Test
+    public void testRemoveTiles2() {
+        CenterTileBoard center = new CenterTileBoard(); 
+        center.add('D');
+        center.add('D');
+        center.add('R');
+        center.add('Y');
+        center.removeTilesOfSpecificColor('D');
+        CenterTileBoard expected = new CenterTileBoard();
+        expected.add('R');
+        expected.add('Y');
+        assertEquals(expected, center);
+    }
+    @Test
     public void testaddTiles() {
         CenterTileBoard center = new CenterTileBoard(); 
         center.add('R');

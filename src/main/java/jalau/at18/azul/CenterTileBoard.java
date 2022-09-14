@@ -12,6 +12,7 @@ public class CenterTileBoard extends ArrayList<Character> {
         for (int position = 0; position < this.size(); ++position) {
             if (this.get(position) == color) {
                 this.remove(position);
+                position--;
             }
         }
         return this;
