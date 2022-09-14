@@ -19,7 +19,6 @@ test {
         includeTestsMatching "jalau.at18.architects.*"
         includeTestsMatching "jalau.at18.azul.*"
         includeTestsMatching "jalau.at18.kingoftokyo.*"
-        includeTestsMatching "jalau.at18.sample.*"
     }
 }
 
