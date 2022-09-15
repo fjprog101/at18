@@ -2,6 +2,7 @@ package jalau.at18.kingoftokyo;
 
 public class CompleteCard extends Card {
     private DiscardCards card;
+    private static final int ENERGY_INDEX = 3;
 
     public CompleteCard(DiscardCards card) {
         super(card.name());
@@ -10,8 +11,8 @@ public class CompleteCard extends Card {
 
     @Override
     String getDescription() {
-        description = "LifePoints: " + card.getEffect()[0] + ", Score: " + card.getEffect()[1] + ", Energy: "
-                + card.getEffect()[2];
+        description = "Healing: " + card.getEffect()[0] + ", Damage: " + card.getEffect()[1]
+                + ", Score: " + card.getEffect()[2] + ", Energy: " + card.getEffect()[ENERGY_INDEX];
         return description;
     }
 

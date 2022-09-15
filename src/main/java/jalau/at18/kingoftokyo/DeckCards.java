@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class DeskCards {
+public class DeckCards {
     private List<CompleteCard> deskOfCards;
 
-    DeskCards() {
+    DeckCards() {
         deskOfCards = new ArrayList<CompleteCard>();
         createDesk();
     }

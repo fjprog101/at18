@@ -5,18 +5,18 @@ import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
 
-public class DeskCardsTest {
+public class DeckCardsTest {
 
     @Test
     public void deskShouldHaveCards() {
-        DeskCards deskCards = new DeskCards();
+        DeckCards deskCards = new DeckCards();
         assertEquals(11, deskCards.getDesk().size());
 
     }
 
     @Test
     public void deskShouldReturnARandomCard() {
-        DeskCards deskCards = new DeskCards();
+        DeckCards deskCards = new DeckCards();
         assertNotNull(deskCards.getRandomCard());
 
     }
