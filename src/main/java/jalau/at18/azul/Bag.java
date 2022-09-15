@@ -1,45 +1,28 @@
 package jalau.at18.azul;
 
+import java.util.ArrayList;
+
 public class Bag {
 
-    private static final int NUMBER_OF_TILES = 100;
-    private static final int MAX = 5;
-    private static final int BLUE_SELECTOR = 4;
-    private static final int DARK_SELECTOR = 3;
-
-    private int min = 1;
-    private char[] bag;
-    private int tilecounter = 0;
+    private ArrayList<Character> bag;
+    private char[] colors = {'R', 'Y', 'D', 'B', 'W'};
+    private static final int NUMBER_ONE_COLOR = 20;
+    private static final int NUMBER_OF_COLORS = 5;
 
     public Bag() {
-        bag = new char[NUMBER_OF_TILES];
-
+        this.bag = new ArrayList<>();
     }
 
-    public char getTile() {
-        int randomizer = (int) Math.floor(Math.random() * (MAX - min + 1) + min);
-        tilecounter++;
-        if (tileLimit(tilecounter)) {
-            switch (randomizer) {
-                case 1:
-                    return 'R';
-                case 2:
-                    return 'Y';
-                case DARK_SELECTOR:
-                    return 'D';
-                case BLUE_SELECTOR:
-                    return 'B';
-                default:
-                    return 'W';
+    public ArrayList<Character> fillBagWithColors() {
+        for (int index = 0; index < NUMBER_OF_COLORS; index++) {
+            for (int jindex = 0; jindex < NUMBER_ONE_COLOR; jindex++) {
+                bag.add(colors[index]);
             }
         }
-        return 'X';
+        return bag;
     }
 
-    public boolean tileLimit(int counter) {
-        if (counter < NUMBER_OF_TILES) {
-            return true;
-        }
-        return false;
+    public ArrayList<Character> getBag() {
+        return fillBagWithColors();
     }
 }
