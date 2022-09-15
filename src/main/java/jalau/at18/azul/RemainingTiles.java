@@ -5,17 +5,17 @@ import java.util.List;
 
 public class RemainingTiles {
 
-    private List<Character> boxWithRemainingTiles;
+    private List<Tile> boxWithRemainingTiles;
 
     public RemainingTiles() {
         this.boxWithRemainingTiles = new ArrayList<>();
     }
 
-    public void addTiles(List<Character> remainingTiles) {
+    public void addTiles(List<Tile> remainingTiles) {
         boxWithRemainingTiles.addAll(remainingTiles);
     }
 
-    public List<Character> getRemainingTiles() {
+    public List<Tile> getRemainingTiles() {
         return boxWithRemainingTiles;
     }
 

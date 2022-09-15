@@ -1,25 +1,37 @@
 package jalau.at18.azul;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Factory {
 
-    private List<Character> tiles;
+    private List<Tile> tiles;
+    private List<Tile> tilesSelected;
 
-    public Factory(List<Character> tiles) {
+    public Factory(List<Tile> tiles) {
         this.tiles = tiles;
+        this.tilesSelected = new ArrayList<>();
     }
 
-    public List<Character> getTiles() {
+    public List<Tile> getTiles() {
         return tiles;
     }
 
-    public int getNumberTiles() {
-        return tiles.size();
+    public List<Tile> getTilesSelected() {
+        return tilesSelected;
     }
 
-    public void removeTiles() {
-        tiles.clear();
+    public void removeTilesSelected(Tile tileSelected) {
+        tiles.removeAll(Collections.singleton(tileSelected));
+    }
+
+    public void addTilesSelected(Tile tileSelected) {
+        for (int index = 0; index < tiles.size(); index++) {
+            if (tileSelected.equals(tiles.get(index))) {
+                tilesSelected.add(tiles.get(index));
+            }
+        }
     }
 
 }
