@@ -2,6 +2,7 @@ package jalau.at18.azul;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -65,6 +66,10 @@ public class FactoryTest {
         Factory factory = new Factory(tiles);
         factory.addTilesSelected(Tile.RED);
         assertEquals(listWithtTilesSelected, factory.getTilesSelected());
+
+        Factory factory2 = new Factory(tiles);
+        factory.addTilesSelected(Tile.BLUE);
+        assertTrue(factory2.getTilesSelected().isEmpty());
     }
 
 }
