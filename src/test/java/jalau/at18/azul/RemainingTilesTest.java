@@ -12,24 +12,24 @@ public class RemainingTilesTest {
     @Test
     public void shouldAddTiles() {
         RemainingTiles box = new RemainingTiles();
-        List<Character> remainingTiles = new ArrayList<Character>(){
+        List<Tile> remainingTiles = new ArrayList<>(){
             {
-                add('R');
-                add('D');
-                add('B');
+                add(Tile.RED);
+                add(Tile.DARK);
+                add(Tile.BLUE);
             }
         };
         box.addTiles(remainingTiles);
         assertEquals(remainingTiles, box.getRemainingTiles());
 
-        List<Character> remainingTiles2 = new ArrayList<Character>(){
+        List<Tile> remainingTiles2 = new ArrayList<>(){
             {
-                add('R');
-                add('D');
-                add('B');
-                add('R');
-                add('D');
-                add('B');
+                add(Tile.RED);
+                add(Tile.DARK);
+                add(Tile.BLUE);
+                add(Tile.RED);
+                add(Tile.DARK);
+                add(Tile.BLUE);
             }
         };
 
@@ -40,11 +40,11 @@ public class RemainingTilesTest {
     @Test
     public void shouldRemoveTiles() {
         RemainingTiles box = new RemainingTiles();
-        List<Character> remainingTiles = new ArrayList<Character>(){
+        List<Tile> remainingTiles = new ArrayList<>(){
             {
-                add('R');
-                add('R');
-                add('Y');
+                add(Tile.RED);
+                add(Tile.RED);
+                add(Tile.YELLOW);
             }
         };
         box.addTiles(remainingTiles);
