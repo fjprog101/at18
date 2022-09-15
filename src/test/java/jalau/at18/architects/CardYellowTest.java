@@ -1,10 +1,8 @@
-package test.java.jalau.at18.architects;
+package jalau.at18.architects;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
-
-import jalau.at18.architects.CardYellow;
 
 public class CardYellowTest {
     @Test
