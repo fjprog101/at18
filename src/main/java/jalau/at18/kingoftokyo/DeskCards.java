@@ -2,6 +2,7 @@ package jalau.at18.kingoftokyo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class DeskCards {
     List<CompleteCard> deskOfCards;
@@ -19,5 +20,11 @@ public class DeskCards {
         for (DiscardCards discardCards : DiscardCards.values()) {
             deskOfCards.add(new CompleteCard(discardCards));
         }
+    }
+
+    public CompleteCard getRandomCard() {
+        Random random = new Random();
+        int indexRandom = random.nextInt(deskOfCards.size());
+        return deskOfCards.get(indexRandom);
     }
 }
