@@ -1,4 +1,4 @@
-package jalau.at18.Azul;
+package jalau.at18.azul;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
@@ -7,30 +7,33 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
-import jalau.at18.azul.Bag;
-import jalau.at18.azul.MixedBag;
 
 public class BagTest {
+
     @Test
     public void shouldVerifyThereIsBag() {
-
-        ArrayList<Character> bag = new ArrayList<>();
-        Bag my = new Bag();
-        bag.add('R');
-        assertNotEquals(bag, my.getBag());
+        ArrayList<Tile> aBag = new ArrayList<>();
+        Bag myBag = new Bag();
+        Tile[] color = {Tile.RED, Tile.YELLOW, Tile.DARK, Tile.BLUE, Tile.WHITE};
+        for (int index = 0; index < 5; index++) {
+            for (int jindex = 0; jindex < 20; jindex++) {
+                aBag.add((color[index]));
+            }
+        }
+        assertEquals(aBag, myBag.fillBagWithColors());
     }
 
     @Test
     public void shouldVerifyThereIsMixedBag() {
 
-        ArrayList<Character> mixed = new ArrayList<>();
-        MixedBag mix = new MixedBag();
-        mixed.add('R');
-        mixed.add('Y');
-        mixed.add('D');
-        mixed.add('B');
-        mixed.add('W');
+        ArrayList<Tile> mixed = new ArrayList<>();
+        Bag mix = new Bag();
+        mixed.add(Tile.RED);
+        mixed.add(Tile.YELLOW);
+        mixed.add(Tile.DARK);
+        mixed.add(Tile.BLUE);
+        mixed.add(Tile.WHITE);
         
-        assertEquals(mixed, mix.mixColors(mixed));
+        assertNotEquals(mixed, mix.getMixedBag());
     }
 }
