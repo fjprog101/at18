@@ -1,14 +1,14 @@
 package jalau.at18.azul;
 import java.util.*;
 
-public class CenterTileBoard extends ArrayList<Character> {
+public class CenterTileBoard extends ArrayList<Tile> {
 
-    public CenterTileBoard removeTilesOfSpecificColor(char color) {
+    public CenterTileBoard removeTilesOfSpecificColor(Tile color) {
         this.removeAll(Collections.singleton(color));
         return this;
     }
 
-    public CenterTileBoard addTilestoCenter(char tile, int count) {
+    public CenterTileBoard addTilestoCenter(Tile tile, int count) {
         for (int position = 0; position < count; ++position) {
             this.add(tile);
         }
