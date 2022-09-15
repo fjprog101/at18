@@ -14,7 +14,7 @@ public class WallBoolTest {
             {false, false, false, false, false},
         };
         boolBoard.intializeWallBoolean();
-        assertArrayEquals(expected, boolBoard.getTileBool());
+        assertArrayEquals(expected, boolBoard.getTilesBool());
     }
 
 }
