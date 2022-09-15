@@ -5,14 +5,14 @@ import java.util.List;
 import java.util.Random;
 
 public class DeckCards {
-    private List<CompleteCard> deskOfCards;
+    private List<Card> deskOfCards;
 
     DeckCards() {
-        deskOfCards = new ArrayList<CompleteCard>();
+        deskOfCards = new ArrayList<Card>();
         createDesk();
     }
 
-    public List<CompleteCard> getDesk() {
+    public List<Card> getDesk() {
         return deskOfCards;
     }
 
@@ -22,7 +22,7 @@ public class DeckCards {
         }
     }
 
-    public CompleteCard getRandomCard() {
+    public Card getRandomCard() {
         Random random = new Random();
         int indexRandom = random.nextInt(deskOfCards.size());
         return deskOfCards.get(indexRandom);

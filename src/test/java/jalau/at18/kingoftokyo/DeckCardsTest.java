@@ -11,13 +11,11 @@ public class DeckCardsTest {
     public void deskShouldHaveCards() {
         DeckCards deskCards = new DeckCards();
         assertEquals(11, deskCards.getDesk().size());
-
     }
 
     @Test
     public void deskShouldReturnARandomCard() {
         DeckCards deskCards = new DeckCards();
         assertNotNull(deskCards.getRandomCard());
-
     }
 }
