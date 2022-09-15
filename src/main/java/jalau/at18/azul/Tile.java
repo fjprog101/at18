@@ -19,5 +19,4 @@ public enum Tile {
     public char getColor() {
         return colorTile;
     }
-
 }
