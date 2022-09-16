@@ -1,20 +1,20 @@
 package jalau.at18.architects;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
-public class CardRedTest {
+public class RedCardTest {
     @Test
     public void shouldReturnColorOfCard() {
-        CardRed cardRed = new CardRed(0);
+        RedCard cardRed = new RedCard(0);
         assertEquals("Red", cardRed.getColor());
     }
     @Test
     public void shouldReturnNumberOfShields() {
-        CardRed cardRed = new CardRed(0);
+        RedCard cardRed = new RedCard(0);
         assertEquals(1, cardRed.getShields());
     }
     @Test
     public void shouldReturnNumberOfHorns() {
-        CardRed cardRed = new CardRed(2);
+        RedCard cardRed = new RedCard(2);
         assertEquals(2, cardRed.getHorns());
     }
 }

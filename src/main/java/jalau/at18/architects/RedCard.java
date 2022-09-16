@@ -1,10 +1,10 @@
 package jalau.at18.architects;
 
-public class CardRed extends Card {
+public class RedCard extends Card {
     private String color;
     private int shields;
     private int horns;
-    public CardRed(int horns) {
+    public RedCard(int horns) {
         this.color = "Red";
         this.shields = 1;
         this.horns = horns;
