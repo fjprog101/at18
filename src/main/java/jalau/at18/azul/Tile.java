@@ -6,7 +6,9 @@ public enum Tile {
     DARK('D'),
     BLUE('B'),
     WHITE('W'),
-    FIRST_PLAYER('F');
+    FIRST_PLAYER('F'),
+    EMPTY('E'),
+    NULL('N');
 
     private final char colorTile;
 
