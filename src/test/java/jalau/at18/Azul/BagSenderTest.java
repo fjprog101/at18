@@ -21,16 +21,4 @@ public class BagSenderTest {
         bag.saveBag();
         assertNotEquals(testbag, bag.saveRemainingBag());
     }
-    
-    /*@Test
-    public void shouldGetFactoryGroup (){
-        BagSender bag = new BagSender();
-        List<Tile> testbag = new ArrayList<>();
-        testbag.add(Tile.RED);
-        testbag.add(Tile.RED);
-        testbag.add(Tile.RED);
-        testbag.add(Tile.RED);
-        bag.saveBag();
-        assertNotEquals(testbag, bag.getFactoryGroup());
-    }   */
 }
