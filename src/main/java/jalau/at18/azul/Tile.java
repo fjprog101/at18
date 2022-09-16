@@ -1,6 +1,7 @@
 package jalau.at18.azul;
 
 public enum Tile {
+
     RED('R', false),
     YELLOW('Y', false),
     DARK('D', false),
