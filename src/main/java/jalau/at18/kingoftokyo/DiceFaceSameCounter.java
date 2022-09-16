@@ -7,10 +7,10 @@ public class DiceFaceSameCounter {
         this.diceHand = listDiceHand;
     }
 
-    public DiceIndentifier diceFaceCounter() { // grab the random list and count the number of repeated dice faces
-        DiceIndentifier newDiceIdentifier = new DiceIndentifier();
+    public DiceFaceIndentifier diceFaceCounter() {
+        DiceFaceIndentifier newDiceIdentifier = new DiceFaceIndentifier();
         for (Dice randomDice : diceHand.getListDices()) {
-            newDiceIdentifier.addDiceWithCount(randomDice.getDiceFace());
+            newDiceIdentifier.addDiceFaceWithCount(randomDice.getDiceFace());
         }
 
         return newDiceIdentifier;

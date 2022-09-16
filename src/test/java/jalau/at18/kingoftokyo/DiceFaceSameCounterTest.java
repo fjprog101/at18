@@ -3,7 +3,6 @@ package jalau.at18.kingoftokyo;
 import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import org.junit.Test;
@@ -12,7 +11,7 @@ public class DiceFaceSameCounterTest {
     @Test
     public void shouldDisplayDiceWithCount() {
 
-        DiceIndentifier diceIndentifier = new DiceIndentifier();
+        DiceFaceIndentifier diceFaceIndentifier = new DiceFaceIndentifier();
         List<Dice> listDice = new ArrayList<>();
         Dice dice1 = new Dice(DiceFace.ENERGY);
         Dice dice2 = new Dice(DiceFace.ONE);
@@ -31,7 +30,7 @@ public class DiceFaceSameCounterTest {
         DiceHand  dicehand = new DiceHand(listDice);
         DiceFaceSameCounter dicefacesamecounter = new DiceFaceSameCounter(dicehand);
 
-        DiceIndentifier diceidentifier = dicefacesamecounter.diceFaceCounter();
+        DiceFaceIndentifier diceidentifier = dicefacesamecounter.diceFaceCounter();
 
         assertEquals(2, diceidentifier.getCountDiceFace(DiceFace.THREE));
     }
