@@ -13,6 +13,6 @@ public class CardYellowTest {
     @Test
     public void getWildcard(){
         CardYellow cardYellow = new CardYellow();
-        assertEquals(2, cardYellow.getWildcard());
+        assertEquals(1, cardYellow.getWildcard());
     }
 }
