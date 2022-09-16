@@ -5,7 +5,7 @@ public class Stage {
     private boolean equals;
     private int points;
     private boolean isBuilt;
-    public Stage(int countOfResources,boolean equals,int points) {
+    public Stage(int countOfResources, boolean equals, int points) {
         this.countOfResources = countOfResources;
         this.equals = equals;
         this.points = points;
