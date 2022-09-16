@@ -9,12 +9,12 @@ public class DiscardCardsTest {
 
     @Test
     public void cardShouldHaveAEffects() {
-        assertEquals(3, DiscardCards.ENERGIZE.getEffect().length);
+        assertEquals(4, DiscardCards.ENERGIZE.getEffect().length);
     }
 
     @Test
     public void cardShouldReturnTheEffects() {
-        int[] expected = {0, 0, 9 };
+        int[] expected = {0, 0, 0, 9};
         assertArrayEquals(expected, DiscardCards.ENERGIZE.getEffect());
     }
 
