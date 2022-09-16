@@ -17,7 +17,7 @@ public class DiceFaceSameCounterTest {
         Dice dice2 = new Dice(DiceFace.ONE);
         Dice dice3 = new Dice(DiceFace.THREE);
         Dice dice4 = new Dice(DiceFace.THREE);
-        Dice dice5 = new Dice(DiceFace.PUNDING);
+        Dice dice5 = new Dice(DiceFace.PUNCHING);
         Dice dice6 = new Dice(DiceFace.HEALING);
 
         listDice.add(dice1);

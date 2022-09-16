@@ -1,24 +1,23 @@
 package jalau.at18.kingoftokyo;
-
 import java.util.HashMap;
 
-public class DiceKeeperResult {
+public class DiceFaceKeeperResult {
     private static final int NUMBER_SCORE = 3;
-    private DiceKeeperProcess diceKeeperProcess;
+    private DiceFaceKeeperProcess diceFaceKeeperProcess;
 
-    public DiceKeeperResult() {
-        this.diceKeeperProcess = new DiceKeeperProcess();
+    public DiceFaceKeeperResult(DiceFaceKeeperProcess diceFaceKeeperProcess) {
+        this.diceFaceKeeperProcess = diceFaceKeeperProcess;
     }
 
-    public DiceTurnResult resultDiceKeeper() {
-        HashMap<DiceFace, Integer> diceFaceCount = diceKeeperProcess.countDiceFace();
+    public DiceFaceTurnResult resultDiceFaceKeeper() {
+        HashMap<DiceFace, Integer> diceFaceCount = diceFaceKeeperProcess.countDiceFace();
         int scorePoint = calculateScorePoints(diceFaceCount, DiceFace.ONE)
                 + calculateScorePoints(diceFaceCount, DiceFace.TWO)
                 + calculateScorePoints(diceFaceCount, DiceFace.THREE);
         int healingPoint = diceFaceCount.getOrDefault(DiceFace.HEALING, 0);
         int energyPoint = diceFaceCount.getOrDefault(DiceFace.ENERGY, 0);
-        int punchingPoint = diceFaceCount.getOrDefault(DiceFace.PUNDING, 0);
-        return new DiceTurnResult(scorePoint, healingPoint, energyPoint, punchingPoint);
+        int punchingPoint = diceFaceCount.getOrDefault(DiceFace.PUNCHING, 0);
+        return new DiceFaceTurnResult(scorePoint, healingPoint, energyPoint, punchingPoint);
     }
 
     private int calculateScorePoints(HashMap<DiceFace, Integer> diceFaceCount, DiceFace diceFace) {

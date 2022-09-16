@@ -1,12 +1,12 @@
 package jalau.at18.kingoftokyo;
 
-public class DiceTurnResult {
+public class DiceFaceTurnResult {
     private int scorePoint;
     private int healingPoint;
     private int energyPoint;
     private int punchingPoint;
 
-    public DiceTurnResult(int scorePoint, int healingPoint, int energyPoint, int punchingPoint) {
+    public DiceFaceTurnResult(int scorePoint, int healingPoint, int energyPoint, int punchingPoint) {
         this.scorePoint = scorePoint;
         this.healingPoint = healingPoint;
         this.energyPoint = energyPoint;

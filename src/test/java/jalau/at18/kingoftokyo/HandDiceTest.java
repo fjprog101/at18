@@ -11,7 +11,7 @@ public class HandDiceTest {
     @Test
     public void shouldGetListDice() {
         List<Dice> listDice = new ArrayList<>();
-        Dice dice1 = new Dice(DiceFace.PUNDING);
+        Dice dice1 = new Dice(DiceFace.PUNCHING);
         Dice dice2 = new Dice(DiceFace.TWO);
         Dice dice3 = new Dice(DiceFace.ENERGY);
         Dice dice4 = new Dice(DiceFace.ONE);

@@ -2,12 +2,12 @@ package jalau.at18.kingoftokyo;
 
 import java.util.HashMap;
 
-public class DiceKeeperProcess {
+public class DiceFaceKeeperProcess {
     private DiceFaceKeeper diceFaceKeeper;
     private HashMap<DiceFace, Integer> diceFaceCount;
 
-    public DiceKeeperProcess() {
-        this.diceFaceKeeper = new DiceFaceKeeper();
+    public DiceFaceKeeperProcess(DiceFaceKeeper diceFaceKeeper) {
+        this.diceFaceKeeper = diceFaceKeeper;
         diceFaceCount = new HashMap<>();
     }
 

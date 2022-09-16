@@ -17,7 +17,7 @@ public class StartGame {
         DiceFaceIndentifier playerplayer1 = diceFaceSameCounteplayer1.diceFaceCounter(); // >  3
         DiceFaceIndentifier playerplayer2 = diceFaceSameCounteplayer2.diceFaceCounter(); // <  4
 
-        if (playerplayer1.getCountDiceFace(DiceFace.PUNDING) > playerplayer2.getCountDiceFace(DiceFace.PUNDING)) {
+        if (playerplayer1.getCountDiceFace(DiceFace.PUNCHING) > playerplayer2.getCountDiceFace(DiceFace.PUNCHING)) {
             return "Start Play player 1";
         }
         return "Start Play player 2";

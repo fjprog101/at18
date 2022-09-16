@@ -17,14 +17,14 @@ public class DiceFaceIndentifierTest {
         listDiceFace.add(DiceFace.ONE);
         listDiceFace.add(DiceFace.THREE);
         listDiceFace.add(DiceFace.THREE);
-        listDiceFace.add(DiceFace.PUNDING);
+        listDiceFace.add(DiceFace.PUNCHING);
         listDiceFace.add(DiceFace.HEALING);
 
         HashMap<DiceFace, Integer> diceFaceCount = new HashMap<>();
         diceFaceCount.put(DiceFace.ENERGY, 1);
         diceFaceCount.put(DiceFace.ONE, 1);
         diceFaceCount.put(DiceFace.THREE, 2);
-        diceFaceCount.put(DiceFace.PUNDING, 1);
+        diceFaceCount.put(DiceFace.PUNCHING, 1);
         diceFaceCount.put(DiceFace.HEALING, 1);
         //assertEquals(diceFaceCount, diceIndentifier.countDice(listDiceFace));
     }
