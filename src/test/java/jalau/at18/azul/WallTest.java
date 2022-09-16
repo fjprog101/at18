@@ -8,12 +8,13 @@ public class WallTest {
     @Test
     public void shouldInitializeWallBoard(){
         Wall wall = new Wall();
-        char[][] expected = {
-            {'B', 'Y', 'R', 'D', 'W'},
-            {'W', 'B', 'Y', 'R', 'D'},
-            {'D', 'W', 'B', 'Y', 'R'},
-            {'R', 'D', 'W', 'B', 'Y'},
-            {'Y', 'R', 'D', 'W', 'B'},
+        wall.initializeWall();
+        Tile[][] expected = {
+            {Tile.BLUE, Tile.YELLOW, Tile.RED, Tile.DARK, Tile.WHITE},
+            {Tile.WHITE, Tile.BLUE, Tile.YELLOW, Tile.RED, Tile.DARK},
+            {Tile.DARK, Tile.WHITE, Tile.BLUE, Tile.YELLOW, Tile.RED},
+            {Tile.RED, Tile.DARK, Tile.WHITE, Tile.BLUE, Tile.YELLOW},
+            {Tile.YELLOW, Tile.RED, Tile.DARK, Tile.WHITE, Tile.BLUE},
         };
         assertArrayEquals(expected, wall.getTiles());
     }

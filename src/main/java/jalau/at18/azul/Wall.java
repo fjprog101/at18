@@ -1,7 +1,7 @@
 package jalau.at18.azul;
 public class Wall {
     private final int wallMatrixSize = 5;
-    private char[][] tiles = new char[wallMatrixSize][wallMatrixSize];
+    private Tile[][] tiles = new Tile[wallMatrixSize][wallMatrixSize];
     private final int two = 2;
     private final int three = 3;
     private final int four = 4;
@@ -19,14 +19,14 @@ public class Wall {
     }
 
     public void defineWallColor(int row, int column) {
-        tiles[row][column] = column - row == four || column - row == -1 ? 'W'
-                            : column - row == three || column - row == two * (-1) ? 'D'
-                            : column - row == two || column - row == three * (-1) ? 'R'
-                            : column - row == 1 || column - row == four * (-1) ? 'Y'
-                            : column - row == 0 ? 'B' : ' ';
+        tiles[row][column] = column - row == four || column - row == -1 ? Tile.WHITE
+                            : column - row == three || column - row == two * (-1) ? Tile.DARK
+                            : column - row == two || column - row == three * (-1) ? Tile.RED
+                            : column - row == 1 || column - row == four * (-1) ? Tile.YELLOW
+                            : column - row == 0 ? Tile.BLUE : Tile.EMPTY;
     }
 
-    public char[][] getTiles() {
+    public Tile[][] getTiles() {
         return tiles;
     }
 }
