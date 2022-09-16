@@ -1,6 +1,6 @@
 package jalau.at18.architects;
 
-public class CardYellow extends Card {
+public class YellowCard extends Card {
     private final int wildcard = 1;
     @Override
     public String getColor() {
