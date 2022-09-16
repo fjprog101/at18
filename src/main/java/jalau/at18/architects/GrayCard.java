@@ -12,8 +12,8 @@ public class GrayCard extends Card {
     String getColor() {
         return color;
     }
-    Resource getResource() {
-        return resource;
+    String getResource() {
+        return resource.getResource();
     }
 
 }
