@@ -1,13 +1,13 @@
-package jalau.at18.architects;
+package jalau.at18.architects.Wonders;
 
 public abstract class Wonder {
     private final int maxOfStages = 5;
-    private Stage[] architects;
+    private Stage[] stages;
     public Wonder() {
-        architects = new Stage[maxOfStages];
+        stages = new Stage[maxOfStages];
     }
     public Stage[] getStages() {
-        return architects;
+        return stages;
     }
     abstract void fillStages();
 }

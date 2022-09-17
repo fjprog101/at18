@@ -1,4 +1,4 @@
-package jalau.at18.architects;
+package jalau.at18.architects.Wonders;
 
 public class Olympia extends Wonder {
     private Stage[] stageOlympia;

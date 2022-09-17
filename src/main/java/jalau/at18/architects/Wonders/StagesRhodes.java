@@ -1,18 +1,18 @@
-package jalau.at18.architects;
+package jalau.at18.architects.Wonders;
 
-enum StagesEphesus {
-    ONE(2, false, 3),
-    TWO(2, true, 3),
-    THREE(3, false, 4),
-    FOUR(3, true, 5),
+enum StagesRhodes {
+    ONE(2, false, 4),
+    TWO(2, true, 4),
+    THREE(3, false, 5),
+    FOUR(3, true, 6),
     FIVE(4, false, 7);
 
     private int countOfResources;
-    private boolean equals;
+    private boolean conditionToBuild;
     private int points;
-    StagesEphesus(int countOfResources, boolean equals, int points) {
+    StagesRhodes(int countOfResources, boolean equals, int points) {
         this.countOfResources = countOfResources;
-        this.equals = equals;
+        this.conditionToBuild = equals;
         this.points = points;
     }
     public int getCountOfResources() {
@@ -22,6 +22,6 @@ enum StagesEphesus {
         return points;
     }
     public boolean getEquals() {
-        return equals;
+        return conditionToBuild;
     }
 }

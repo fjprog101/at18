@@ -1,17 +1,17 @@
-package jalau.at18.architects;
-enum StagesOlympia {
+package jalau.at18.architects.Wonders;
+enum StagesHal {
     ONE(2, false, 3),
-    TWO(2, true, 2),
-    THREE(3, false, 5),
-    FOUR(3, true, 5),
+    TWO(2, true, 3),
+    THREE(3, true, 5),
+    FOUR(3, false, 6),
     FIVE(4, false, 7);
 
     private int countOfResources;
-    private boolean equals;
+    private boolean conditionToBuild;
     private int points;
-    StagesOlympia(int countOfResources, boolean equals, int points) {
+    StagesHal(int countOfResources, boolean equals, int points) {
         this.countOfResources = countOfResources;
-        this.equals = equals;
+        this.conditionToBuild = equals;
         this.points = points;
     }
     public int getCountOfResources() {
@@ -21,6 +21,6 @@ enum StagesOlympia {
         return points;
     }
     public boolean getEquals() {
-        return equals;
+        return conditionToBuild;
     }
 }
