@@ -1,8 +1,11 @@
 package jalau.at18.architects;
 
 import org.junit.Test;
-import org.junit.Assert;
-public class TestGrayCard {
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
+public class GrayCardTest {
     
     @Test
     public void cardShouldBeGray() {
