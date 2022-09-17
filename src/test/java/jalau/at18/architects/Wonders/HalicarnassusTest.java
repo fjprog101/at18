@@ -1,4 +1,4 @@
-package jalau.at18.architects;
+package jalau.at18.architects.Wonders;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
