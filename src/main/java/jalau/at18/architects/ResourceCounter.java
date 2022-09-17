@@ -4,10 +4,8 @@ import java.util.LinkedList;
 
 public class ResourceCounter {
     private LinkedList<String> listOfResources;
-    private GrayCard grayCard;
 
-    public ResourceCounter(Resource resource, LinkedList<String> listOfResources) {
-        this.grayCard = new GrayCard(resource);
+    public ResourceCounter(LinkedList<String> listOfResources) {
         this.listOfResources = listOfResources;
     }
 
@@ -15,17 +13,13 @@ public class ResourceCounter {
         return listOfResources;
     }
 
-    public void addResourceToList() {
+    public void addResourceToList(GrayCard grayCard) {
         listOfResources.add(grayCard.getResource());
     }
 
     public boolean traverseTheResourceList() {
-        int counter = 0;
-        for (String element : listOfResources) {
-            boolean sameValue = (listOfResources.get(counter + 1) == element) ? true : false;
-            return sameValue;
-        }
-        return false;
+        boolean sameValue = (listOfResources.getFirst() == listOfResources.getLast()) ? true : false;
+        return sameValue;
     }
 
     public void removeResourceFromList() {

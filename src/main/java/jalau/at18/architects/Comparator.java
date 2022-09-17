@@ -1,5 +1,5 @@
 package jalau.at18.architects;
 
 public interface Comparator {
-    boolean comparer(Card c1, Card c2);
+    boolean compare(Card c1, Card c2);
 }

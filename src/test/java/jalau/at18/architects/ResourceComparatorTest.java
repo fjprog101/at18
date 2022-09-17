@@ -10,15 +10,16 @@ import org.junit.Test;
 public class ResourceComparatorTest {
     @Test
     public void shouldHaveTheSameResource(){
-        Card card1 = new GrayCard(Resource.BRICK);
-        Card card2 = new GrayCard(Resource.BRICK);
+        GrayCard card1 = new GrayCard(Resource.BRICK);
+        GrayCard card2 = new GrayCard(Resource.BRICK);
         LinkedList<String> listOfResources = new LinkedList<String>();
-        ResourceCounter resourceCounter = new ResourceCounter(Resource.BRICK, listOfResources);
-        resourceCounter.addResourceToList();
+        ResourceCounter resourceCounter = new ResourceCounter(listOfResources);
+        resourceCounter.addResourceToList(card1);
         listOfResources = resourceCounter.getListOfResources();
-        resourceCounter = new ResourceCounter(Resource.BRICK, listOfResources);
-        resourceCounter.addResourceToList();
+        resourceCounter = new ResourceCounter(listOfResources);
+        resourceCounter.addResourceToList(card2);
         ResourceComparator resourceComparator = new ResourceComparator(resourceCounter);
+<<<<<<< HEAD
         assertTrue(resourceComparator.comparer(card1, card2));
     }
 
@@ -50,19 +51,48 @@ public class ResourceComparatorTest {
         ResourceCounter resourceCounter = new ResourceCounter(Resource.PAPER, listOfResources);
         ResourceComparator resourceComparator = new ResourceComparator(resourceCounter);
         assertFalse(resourceComparator.comparer(card1, card2));
+=======
+        assertTrue(resourceComparator.compare(card1, card2));
+>>>>>>> 68acacd (Fixed the observations made to the code)
     }
 
     @Test
     public void shouldNotHaveTheSameResource(){
-        Card card1 = new GrayCard(Resource.BRICK);
-        Card card2 = new GrayCard(Resource.PAPER);
+        GrayCard card1 = new GrayCard(Resource.BRICK);
+        GrayCard card2 = new GrayCard(Resource.PAPER);
         LinkedList<String> listOfResources = new LinkedList<String>();
-        ResourceCounter resourceCounter = new ResourceCounter(Resource.BRICK, listOfResources);
-        resourceCounter.addResourceToList();
+        ResourceCounter resourceCounter = new ResourceCounter(listOfResources);
+        resourceCounter.addResourceToList(card1);
         listOfResources = resourceCounter.getListOfResources();
-        resourceCounter = new ResourceCounter(Resource.PAPER, listOfResources);
-        resourceCounter.addResourceToList();
+        resourceCounter = new ResourceCounter(listOfResources);
+        resourceCounter.addResourceToList(card2);
         ResourceComparator resourceComparator = new ResourceComparator(resourceCounter);
-        assertFalse(resourceComparator.comparer(card1, card2));
+        assertFalse(resourceComparator.compare(card1, card2));
+    }
+
+    @Test
+    public void shouldHaveDifferentResources(){
+        GrayCard card1 = new GrayCard(Resource.BRICK);
+        GrayCard card2 = new GrayCard(Resource.PAPER);
+        LinkedList<String> listOfResources = new LinkedList<String>();
+        ResourceCounter resourceCounter = new ResourceCounter(listOfResources);
+        resourceCounter.addResourceToList(card1);
+        listOfResources = resourceCounter.getListOfResources();
+        resourceCounter = new ResourceCounter(listOfResources);
+        resourceCounter.addResourceToList(card2);
+        assertFalse(resourceCounter.traverseTheResourceList());
+    }
+
+    @Test
+    public void shouldHaveSameResources(){
+        GrayCard card1 = new GrayCard(Resource.BRICK);
+        GrayCard card2 = new GrayCard(Resource.BRICK);
+        LinkedList<String> listOfResources = new LinkedList<String>();
+        ResourceCounter resourceCounter = new ResourceCounter(listOfResources);
+        resourceCounter.addResourceToList(card1);
+        listOfResources = resourceCounter.getListOfResources();
+        resourceCounter = new ResourceCounter(listOfResources);
+        resourceCounter.addResourceToList(card2);
+        assertTrue(resourceCounter.traverseTheResourceList());
     }
 }

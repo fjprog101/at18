@@ -7,9 +7,7 @@ public class ResourceComparator implements Comparator {
         this.resourceCounter = resourceCounter;
     }
 
-    public boolean comparer(Card c1, Card c2) {
-        Boolean wildCardCase = ((c1.getColor() == "Gray" && c2.getColor() == "Yellow")
-                || (c1.getColor() == "Yellow" && c2.getColor() == "Gray")) ? true : false;
-        return wildCardCase || resourceCounter.traverseTheResourceList();
+    public boolean compare(Card c1, Card c2) {
+        return resourceCounter.traverseTheResourceList();
     }
 }
