@@ -19,41 +19,7 @@ public class ResourceComparatorTest {
         resourceCounter = new ResourceCounter(listOfResources);
         resourceCounter.addResourceToList(card2);
         ResourceComparator resourceComparator = new ResourceComparator(resourceCounter);
-<<<<<<< HEAD
-        assertTrue(resourceComparator.comparer(card1, card2));
-    }
-
-    @Test
-    public void shouldHaveTheSameResourceDueWildcard(){
-        Card card1 = new GrayCard(Resource.BRICK);
-        Card card2 = new YellowCard();
-        LinkedList<String> listOfResources = new LinkedList<String>();
-        ResourceCounter resourceCounter = new ResourceCounter(Resource.BRICK, listOfResources);
-        ResourceComparator resourceComparator = new ResourceComparator(resourceCounter);
-        assertTrue(resourceComparator.comparer(card1, card2));
-    }
-
-    @Test
-    public void shouldHaveTheSameResourceDueWildcard2(){
-        Card card1 = new YellowCard();
-        Card card2 = new GrayCard(Resource.PAPER);
-        LinkedList<String> listOfResources = new LinkedList<String>();
-        ResourceCounter resourceCounter = new ResourceCounter(Resource.PAPER, listOfResources);
-        ResourceComparator resourceComparator = new ResourceComparator(resourceCounter);
-        assertTrue(resourceComparator.comparer(card1, card2));
-    }
-
-    @Test
-    public void shouldNotHaveTheSameResourceDueWildcard(){
-        Card card1 = new GrayCard(Resource.BRICK);
-        Card card2 = new GrayCard(Resource.PAPER);
-        LinkedList<String> listOfResources = new LinkedList<String>();
-        ResourceCounter resourceCounter = new ResourceCounter(Resource.PAPER, listOfResources);
-        ResourceComparator resourceComparator = new ResourceComparator(resourceCounter);
-        assertFalse(resourceComparator.comparer(card1, card2));
-=======
         assertTrue(resourceComparator.compare(card1, card2));
->>>>>>> 68acacd (Fixed the observations made to the code)
     }
 
     @Test
