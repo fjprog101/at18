@@ -10,7 +10,6 @@ import org.junit.Test;
 public class BagSenderTest {
     
     @Test
-
     public void shouldGetBag (){
         BagSender bag = new BagSender();
         List<Tile> testbag = new ArrayList<>();

@@ -7,7 +7,6 @@ public class BagSender {
     private List<Tile> bag;
     private List<Tile> factory;
 
-
     private static final int RANGE = 4;
 
     public BagSender() {
@@ -21,7 +20,6 @@ public class BagSender {
     }
 
     public List<Tile> getFactoryGroup() {
-        bag = saveRemainingBag();
         factory = bag.subList(0, RANGE);
         bag.subList(0, RANGE).clear();
         return factory;

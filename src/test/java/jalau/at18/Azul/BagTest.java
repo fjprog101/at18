@@ -7,18 +7,27 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
-
 public class BagTest {
 
     @Test
-    public void shouldVerifyThereIsBag() {
+    public void shouldFillBagWithColors() {
         ArrayList<Tile> aBag = new ArrayList<>();
         Bag myBag = new Bag();
-        Tile[] color = {Tile.RED, Tile.YELLOW, Tile.DARK, Tile.BLUE, Tile.WHITE};
-        for (int index = 0; index < 5; index++) {
-            for (int jindex = 0; jindex < 20; jindex++) {
-                aBag.add((color[index]));
-            }
+        
+        for (int index = 0; index < 20; index++){
+            aBag.add(Tile.RED);
+        }
+        for (int index = 0; index < 20; index++){
+            aBag.add(Tile.YELLOW);
+        }
+        for (int index = 0; index < 20; index++){
+            aBag.add(Tile.DARK);
+        }
+        for (int index = 0; index < 20; index++){
+            aBag.add(Tile.BLUE);
+        }
+        for (int index = 0; index < 20; index++){
+            aBag.add(Tile.WHITE);
         }
         assertEquals(aBag, myBag.fillBagWithColors());
     }

@@ -1,6 +1,5 @@
 package jalau.at18.azul;
 
-import java.util.ArrayList;
 import java.util.*;
 
 public class Bag {
