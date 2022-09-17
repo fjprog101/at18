@@ -4,8 +4,8 @@ public class GreenCard extends Card {
     private String color;
     private ScientificSymbol scientificSymbol;
 
-    public GreenCard(String color, ScientificSymbol scientificSymbol) {
-        this.color = color;
+    public GreenCard(ScientificSymbol scientificSymbol) {
+        this.color = "Green";
         this.scientificSymbol = scientificSymbol;
     }
 

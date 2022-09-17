@@ -9,7 +9,7 @@ public class GrayCard extends Card {
     }
 
     @Override
-    String getColor() {
+    public String getColor() {
         return color;
     }
     String getResource() {
