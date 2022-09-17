@@ -1,27 +1,23 @@
 package jalau.at18.azul;
-
 public class Pyramid {
     private final int pyramidMatrixSize = 5;
     private final int dividePyramid = 4;
-    private char[][] tiles = new char[pyramidMatrixSize][pyramidMatrixSize];
+    private Tile[][] tilesMatrix = new Tile[pyramidMatrixSize][pyramidMatrixSize];
 
-    public Pyramid() {
-        initializePyramid();
-    }
     public void initializePyramid() {
         for (int row = 0; row < pyramidMatrixSize; row++) {
             for (int column = 0; column < pyramidMatrixSize; column++) {
-                tiles[row][column] = row + column >= dividePyramid ? 'O' : ' ';
+                tilesMatrix[row][column] = row + column >= dividePyramid ? Tile.EMPTY : Tile.NULL;
             }
         }
     }
 
-    public char[][] getTiles() {
-        return tiles;
+    public Tile[][] getTilesMatrix() {
+        return tilesMatrix;
     }
 
-    public void addTileToPyramid(int row, int column, char color) {
-        tiles[row][column] = color;
+    public void addTileToPyramid(int row, int column, Tile newTile) {
+        tilesMatrix[row][column] = newTile;
     }
 
     public void cleanPyramide() {
