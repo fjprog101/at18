@@ -1,19 +1,25 @@
 package jalau.at18.azul;
 
 public enum Tile {
-    RED('R'),
-    YELLOW('Y'),
-    DARK('D'),
-    BLUE('B'),
-    WHITE('W'),
-    FIRST_PLAYER('F'),
-    EMPTY('E'),
-    NULL('N');
+    RED('R', false),
+    YELLOW('Y', false),
+    DARK('D', false),
+    BLUE('B', false),
+    WHITE('W', false),
+    FIRST_PLAYER('F', false),
+    EMPTY('E', false),
+    NULL('N', false);
 
     private final char colorTile;
+    private final boolean statusTile;
 
-    Tile(char colorTile) {
+    public boolean getStatusTile() {
+        return statusTile;
+    }
+
+    Tile(char colorTile, boolean statusTile) {
         this.colorTile = colorTile;
+        this.statusTile = statusTile;
     }
 
     public char getColor() {
