@@ -11,7 +11,7 @@ public class DiceFaceSameCounterTest {
     @Test
     public void shouldDisplayDiceWithCount() {
 
-        DiceFaceIndentifier diceFaceIndentifier = new DiceFaceIndentifier();
+        DiceFaceIdentifier diceFaceIdentifier = new DiceFaceIdentifier();
         List<Dice> listDice = new ArrayList<>();
         Dice dice1 = new Dice(DiceFace.ENERGY);
         Dice dice2 = new Dice(DiceFace.ONE);
@@ -30,7 +30,7 @@ public class DiceFaceSameCounterTest {
         DiceHand  dicehand = new DiceHand(listDice);
         DiceFaceSameCounter dicefacesamecounter = new DiceFaceSameCounter(dicehand);
 
-        DiceFaceIndentifier diceidentifier = dicefacesamecounter.diceFaceCounter();
+        DiceFaceIdentifier diceidentifier = dicefacesamecounter.diceFaceCounter();
 
         assertEquals(2, diceidentifier.getCountDiceFace(DiceFace.THREE));
     }

@@ -7,8 +7,8 @@ public class DiceFaceSameCounter {
         this.diceHand = listDiceHand;
     }
 
-    public DiceFaceIndentifier diceFaceCounter() {
-        DiceFaceIndentifier newDiceIdentifier = new DiceFaceIndentifier();
+    public DiceFaceIdentifier diceFaceCounter() {
+        DiceFaceIdentifier newDiceIdentifier = new DiceFaceIdentifier();
         for (Dice randomDice : diceHand.getListDices()) {
             newDiceIdentifier.addDiceFaceWithCount(randomDice.getDiceFace());
         }
