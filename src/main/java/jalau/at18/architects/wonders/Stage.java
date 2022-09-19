@@ -1,13 +1,13 @@
-package jalau.at18.architects;
+package jalau.at18.architects.wonders;
 
 public class Stage {
     private int countOfResources;
-    private boolean equals;
+    private boolean condition;
     private int points;
     private boolean isBuilt;
     public Stage(int countOfResources, boolean equals, int points) {
         this.countOfResources = countOfResources;
-        this.equals = equals;
+        this.condition = equals;
         this.points = points;
         isBuilt = false;
     }
@@ -15,7 +15,7 @@ public class Stage {
         return countOfResources;
     }
     public boolean isEquals() {
-        return equals;
+        return condition;
     }
     public int getPoints() {
         return points;
