@@ -3,6 +3,9 @@ package jalau.at18.architects.wonders;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
+import jalau.at18.architects.wonders.Halicarnassus;
+import jalau.at18.architects.wonders.Stage;
+
 public class HalicarnassusTest {
     @Test
     public void shouldReturnStages() {

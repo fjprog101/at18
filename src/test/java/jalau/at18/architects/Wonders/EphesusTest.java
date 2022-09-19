@@ -4,6 +4,9 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import jalau.at18.architects.wonders.Ephesus;
+import jalau.at18.architects.wonders.Stage;
+
 public class EphesusTest {
     @Test
     public void shouldReturnStages() {
