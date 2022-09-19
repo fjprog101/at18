@@ -2,13 +2,13 @@ package jalau.at18.kingoftokyo;
 
 import java.util.HashMap;
 
-public class DiceIndentifier {
+public class DiceFaceIdentifier {
     private HashMap<DiceFace, Integer> diceCount;
 
-    public DiceIndentifier() {
-        this.diceCount = new HashMap<DiceFace, Integer>();
+    public DiceFaceIdentifier() {
+        this.diceCount = new HashMap<>();
     }
-    public void addDiceWithCount(DiceFace diceFace) {
+    public void addDiceFaceWithCount(DiceFace diceFace) {
         int existingCount = 0;
         if (diceCount.containsKey(diceFace)) {
             existingCount = getDiceHashMap(diceFace);
