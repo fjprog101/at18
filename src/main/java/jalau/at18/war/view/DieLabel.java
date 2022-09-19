@@ -10,7 +10,7 @@ public class DieLabel extends JLabel {
     public static final int DEFAULT_HEIGHT = 20;
 
     public DieLabel() {
-        super("-");
+        super("0");
         setBounds(DEFAULT_POSX, DEFAULT_POSY, DEFAULT_WIDTH, DEFAULT_HEIGHT);
     }
 }
