@@ -5,7 +5,7 @@ import java.awt.*;
 
 import javax.swing.JLabel;
 
-public class FactoryDrawing extends JLabel{
+public class FactoryDrawing extends JLabel {
     private static final int OVAL_WIDTH = 90;
     private static final int OVAL_HEIGHT = 130;
 

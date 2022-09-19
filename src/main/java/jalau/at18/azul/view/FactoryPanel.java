@@ -9,9 +9,12 @@ public class FactoryPanel extends JPanel {
     private static final int WIDTH = 300;
     private static final int HEIGHT = 600;
     private static final int NUMBER_OF_FACTORIES = 5;
+    private static final int ROWS = 3;
+    private static final int COLS = 600;
+
 
     public FactoryPanel() {
-        setLayout(new GridLayout(3, 2));
+        setLayout(new GridLayout(ROWS, COLS));
         setBounds(X_INITIAL_POSITION, Y_INITIAL_POSITION, WIDTH, HEIGHT);
         addFactories();
     }
