@@ -2,9 +2,9 @@ package jalau.at18.azul;
 public class Wall {
     private final int wallMatrixSize = 5;
     private Tile[][] tiles = new Tile[wallMatrixSize][wallMatrixSize];
-    private final int two = 2;
-    private final int three = 3;
-    private final int four = 4;
+    private static final int two = 2;
+    private static final int three = 3;
+    private static final int four = 4;
 
     public Wall() {
         initializeWall();
