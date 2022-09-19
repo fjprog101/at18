@@ -2,9 +2,6 @@ package jalau.at18.architects.wonders;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
-import jalau.at18.architects.wonders.Giza;
-import jalau.at18.architects.wonders.Stage;
-
 public class GizaTest {
     @Test
     public void shouldReturnStages() {

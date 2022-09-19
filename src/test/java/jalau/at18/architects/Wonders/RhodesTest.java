@@ -4,8 +4,6 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import jalau.at18.architects.wonders.Rhodes;
-import jalau.at18.architects.wonders.Stage;
 
 public class RhodesTest {
     @Test
