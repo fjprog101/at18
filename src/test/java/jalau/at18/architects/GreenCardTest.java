@@ -8,14 +8,14 @@ import org.junit.Test;
 public class GreenCardTest {
     @Test
     public void shouldBeAGreenCard(){
-        GreenCard greenCard = new GreenCard("Green", ScientificSymbol.COMPASS);
+        GreenCard greenCard = new GreenCard(ScientificSymbol.COMPASS);
         assertEquals("Green", greenCard.getColor());
         assertEquals("Compass", greenCard.getSymbol());
     }
 
     @Test
     public void shouldNotBeAGreenCard(){
-        GreenCard greenCard = new GreenCard("Green", ScientificSymbol.OLDTABLE);
+        GreenCard greenCard = new GreenCard(ScientificSymbol.OLDTABLE);
         assertNotEquals("Red", greenCard.getColor());
         assertNotEquals("Compass", greenCard.getSymbol());
     }
