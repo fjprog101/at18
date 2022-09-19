@@ -19,6 +19,7 @@ test {
         includeTestsMatching "jalau.at18.architects.*"
         includeTestsMatching "jalau.at18.azul.*"
         includeTestsMatching "jalau.at18.kingoftokyo.*"
+        includeTestsMatching "jalau.at18.war.*"
     }
 }
 
@@ -44,6 +45,5 @@ test.finalizedBy("jacocoTestReport")
 
 task runWar (dependsOn: 'classes', type: JavaExec) {
     main = 'jalau.at18.war.Main'
-    standardInput=System.in
     classpath = sourceSets.main.runtimeClasspath
 }
