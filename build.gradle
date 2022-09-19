@@ -42,8 +42,8 @@ jacocoTestReport {
 test.finalizedBy("checkstyleMain")
 test.finalizedBy("jacocoTestReport")
 
-task runBankocrAdriana (dependsOn: 'classes', type: JavaExec) {
-    main = 'jalau.at18.katas.bankocr.adriana.Main'
+task runWar (dependsOn: 'classes', type: JavaExec) {
+    main = 'jalau.at18.war.Main'
     standardInput=System.in
     classpath = sourceSets.main.runtimeClasspath
 }
