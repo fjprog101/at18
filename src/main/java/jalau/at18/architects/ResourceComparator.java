@@ -7,7 +7,7 @@ public class ResourceComparator implements Comparator {
         this.resourceCounter = resourceCounter;
     }
 
-    public boolean compare(Card c1, Card c2) {
+    public boolean compare(Card cardOne, Card cardTwo) {
         return resourceCounter.traverseTheResourceList();
     }
 }
