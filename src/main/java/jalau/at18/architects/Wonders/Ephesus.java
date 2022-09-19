@@ -1,4 +1,4 @@
-package jalau.at18.architects.Wonders;
+package jalau.at18.architects.wonders;
 
 public class Ephesus extends Wonder {
     private Stage[] stageEphesus;

@@ -1,4 +1,4 @@
-package jalau.at18.architects.Wonders;
+package jalau.at18.architects.wonders;
 
 enum StagesEphesus {
     ONE(2, false, 3),

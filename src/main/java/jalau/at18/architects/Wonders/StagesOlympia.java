@@ -1,4 +1,4 @@
-package jalau.at18.architects.Wonders;
+package jalau.at18.architects.wonders;
 enum StagesOlympia {
     ONE(2, false, 3),
     TWO(2, true, 2),

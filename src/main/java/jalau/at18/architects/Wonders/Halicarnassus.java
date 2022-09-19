@@ -1,4 +1,4 @@
-package jalau.at18.architects.Wonders;
+package jalau.at18.architects.wonders;
 
 public class Halicarnassus extends Wonder {
     private Stage[] stageHalicarnassus;

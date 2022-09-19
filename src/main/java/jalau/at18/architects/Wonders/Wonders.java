@@ -1,4 +1,4 @@
-package jalau.at18.architects.Wonders;
+package jalau.at18.architects.wonders;
 
 enum Wonders {
     ONE(new Alexandria(), 1),
