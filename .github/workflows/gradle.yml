@@ -19,7 +19,7 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Test with Gradle
-      run: ./gradlew test
+      run: xvfb-run ./gradlew test
     - name: Style Code Report
       if: failure()
       uses: actions/upload-artifact@v2
