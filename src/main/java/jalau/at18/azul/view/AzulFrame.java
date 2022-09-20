@@ -1,21 +1,24 @@
 package jalau.at18.azul.view;
 
-import javax.swing.JFrame;
+import javax.swing.*;
 
 public class AzulFrame extends JFrame {
-    private static final int X_INITIAL_POSITION = 200;
-    private static final int Y_INITIAL_POSITION = 10;
-    private static final int WIDTH = 900;
-    private static final int HEIGHT = 600;
+    public static final int DEFAULT_POS1 = 500;
+    public static final int DEFAULT_SIZE = 300;
+    public static final int INITIAL_POSITION = 200;
+    public static final int WIDTH = 900;
+    public static final int HEIGHT = 600;
 
     public AzulFrame() {
+        add(new PlayerPanel(0, 0, DEFAULT_POS1, DEFAULT_SIZE));
+        add(new PlayerPanel(0, DEFAULT_SIZE, DEFAULT_POS1, DEFAULT_SIZE));
         add(new FactoryPanel());
-        run();
+        initialize();
     }
 
-    public void run() {
+    public void initialize() {
         setLayout(null);
-        setBounds(X_INITIAL_POSITION, Y_INITIAL_POSITION, WIDTH, HEIGHT);
+        setBounds(INITIAL_POSITION, INITIAL_POSITION, WIDTH, HEIGHT);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("AZUL GAME");
         setVisible(true);

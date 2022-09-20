@@ -4,13 +4,13 @@ import javax.swing.JPanel;
 import java.awt.*;
 
 public class FactoryPanel extends JPanel {
-    private static final int X_INITIAL_POSITION = 610;
-    private static final int Y_INITIAL_POSITION = 20;
-    private static final int WIDTH = 300;
-    private static final int HEIGHT = 600;
-    private static final int NUMBER_OF_FACTORIES = 5;
-    private static final int ROWS = 3;
-    private static final int COLS = 600;
+    public static final int X_INITIAL_POSITION = 610;
+    public static final int Y_INITIAL_POSITION = 20;
+    public static final int WIDTH = 300;
+    public static final int HEIGHT = 600;
+    public static final int NUMBER_OF_FACTORIES = 5;
+    public static final int ROWS = 3;
+    public static final int COLS = 2;
 
 
     public FactoryPanel() {
@@ -21,7 +21,7 @@ public class FactoryPanel extends JPanel {
 
     public void addFactories() {
         for (int index = 0; index < NUMBER_OF_FACTORIES; index++) {
-            add(new FactoryDrawing());
+            add(new FactoryLabel());
         }
     }
 
