@@ -1,31 +1,31 @@
 package jalau.at18.architects;
 public class MilitaryStrengthCounter {
-    private int shieldPermanent;
-    private int shieldTemporal;
+    private int permanentShield;
+    private int temporalShield;
     private RedCard redCard;
 
     public MilitaryStrengthCounter() {
-        shieldPermanent = 0;
-        shieldTemporal = 0;
+        permanentShield = 0;
+        temporalShield = 0;
     }
     public void setMilitaryStrength(RedCard cardRed) {
         this.redCard = cardRed;
         if (redCard.getHorns() != 0) {
-            shieldTemporal += redCard.getShields();
+            temporalShield += redCard.getShields();
         } else {
-            shieldPermanent += redCard.getShields();
+            permanentShield += redCard.getShields();
         }
     }
-    public int getShieldPermanent() {
-        return shieldPermanent;
+    public int getPermanentShield() {
+        return permanentShield;
     }
-    public int getShieldTemporal() {
-        return shieldTemporal;
+    public int getTemporalShield() {
+        return temporalShield;
     }
     public int getMilitaryStrength() {
-        return shieldPermanent + shieldTemporal;
+        return permanentShield + temporalShield;
     }
-    public void resetShieldsTemporal() {
-        shieldTemporal = 0;
+    public void resetTemporalShields() {
+        temporalShield = 0;
     }
 }
