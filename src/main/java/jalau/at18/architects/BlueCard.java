@@ -7,7 +7,7 @@ public class BlueCard extends Card {
     private int victoryPoints;
 
     public BlueCard(boolean cat, int victoryPoints) {
-        this.color = "Blue";
+        super("Blue");
         this.cat = cat;
         this.victoryPoints = victoryPoints;
     }
