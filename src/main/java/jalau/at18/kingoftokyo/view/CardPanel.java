@@ -23,6 +23,7 @@ public class CardPanel extends JPanel {
         setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
         add(new CardCostLabel(card.getCost()));
         add(new CardNameLabel(card.getName()));
+        add(new CardImageLabel(card.getImagePath()));
         add(new CardKindLabel());
         add(new CardDescriptionLabel(card.getDescription()));
     }

@@ -5,7 +5,7 @@ public class CompleteCard extends Card {
     private static final int ENERGY_INDEX = 3;
 
     public CompleteCard(DiscardCards card) {
-        super(card.name(), card.getCost());
+        super(card.name(), card.getCost(), card.getImagePath());
         this.card = card;
         setDescription();
     }
