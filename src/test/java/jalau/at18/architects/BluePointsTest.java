@@ -9,7 +9,7 @@ public class BluePointsTest {
     public void testSetPoints() {
         BluePoints bPoints = new BluePoints();
         BlueCard blueCard = new BlueCard(true, 2);
-        bPoints.setPoints(blueCard);
+        bPoints.addPoints(blueCard);
 
         assertEquals(2, bPoints.getPoints());
         assertEquals(1, bPoints.getCats());
@@ -20,10 +20,10 @@ public class BluePointsTest {
         BluePoints bPoints = new BluePoints();
         BlueCard blueCard;
         blueCard = new BlueCard(true, 2);
-        bPoints.setPoints(blueCard);
+        bPoints.addPoints(blueCard);
 
         blueCard = new BlueCard(false, 4);
-        bPoints.setPoints(blueCard);
+        bPoints.addPoints(blueCard);
 
         assertEquals(6, bPoints.getPoints());
         assertEquals(1, bPoints.getCats());
@@ -35,16 +35,16 @@ public class BluePointsTest {
         BlueCard blueCard;
 
         blueCard = new BlueCard(true, 2);
-        bPoints.setPoints(blueCard);
+        bPoints.addPoints(blueCard);
 
         blueCard = new BlueCard(true, 4);
-        bPoints.setPoints(blueCard);
+        bPoints.addPoints(blueCard);
 
         blueCard = new BlueCard(true, 2);
-        bPoints.setPoints(blueCard);
+        bPoints.addPoints(blueCard);
 
         blueCard = new BlueCard(true, 1);
-        bPoints.setPoints(blueCard);
+        bPoints.addPoints(blueCard);
 
         assertEquals(9, bPoints.getPoints());
         assertEquals(4, bPoints.getCats());
