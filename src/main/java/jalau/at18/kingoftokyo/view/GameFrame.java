@@ -2,8 +2,7 @@ package jalau.at18.kingoftokyo.view;
 
 import javax.swing.JFrame;
 
-import jalau.at18.kingoftokyo.CompleteCard;
-import jalau.at18.kingoftokyo.DiscardCards;
+import jalau.at18.kingoftokyo.*;
 
 public class GameFrame extends JFrame {
     private static final int DEFAULT_POS = 30;
