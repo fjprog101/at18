@@ -1,4 +1,4 @@
-package jalau.at18.azul;
+package jalau.at18.azul.view;
 
 import javax.swing.*;
 

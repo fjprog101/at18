@@ -1,6 +1,8 @@
-package jalau.at18.azul;
+package jalau.at18.azul.view;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
+
+
 public class AzulFrameTest {
     @Test
     public void playerPanelShouldShowDashByDefault() {
@@ -14,9 +16,9 @@ public class AzulFrameTest {
     @Test
     public void AzulFrameShouldShowByDefault() {
         AzulFrame azulframe = new AzulFrame();
-        assertEquals(PlayerPanel.DEFAULT_POSX, azulframe.getBounds().getX(), 0);
-        assertEquals(PlayerPanel.DEFAULT_POSY, azulframe.getBounds().getY(), 0);
-        assertEquals(PlayerPanel.DEFAULT_WIDTH, azulframe.getBounds().getWidth(), 0);
-        assertEquals(PlayerPanel.DEFAULT_HEIGHT, azulframe.getBounds().getHeight(), 0);
+        assertEquals(AzulFrame.INITIAL_POSITION, azulframe.getBounds().getX(), 0);
+        assertEquals(AzulFrame.INITIAL_POSITION, azulframe.getBounds().getY(), 0);
+        assertEquals(AzulFrame.WIDTH, azulframe.getBounds().getWidth(), 0);
+        assertEquals(AzulFrame.HEIGHT, azulframe.getBounds().getHeight(), 0);
     }
 }
