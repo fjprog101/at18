@@ -10,8 +10,8 @@ public class AzulFrame extends JFrame{
 
     public AzulFrame() {
 
-        add(new PlayerPanel1(0, 0, DEFAULT_POS1, DEFAULT_SIZE));
-        add(new PlayerPanel1(0, DEFAULT_SIZE, DEFAULT_POS1, DEFAULT_SIZE));
-        add(new PlayerPanel1(DEFAULT_SIZE1, DEFAULT_POS2, DEFAULT_SIZE, DEFAULT_SIZE1));
+        add(new PlayerPanel(0, 0, DEFAULT_POS1, DEFAULT_SIZE));
+        add(new PlayerPanel(0, DEFAULT_SIZE, DEFAULT_POS1, DEFAULT_SIZE));
+        add(new PlayerPanel(DEFAULT_SIZE1, DEFAULT_POS2, DEFAULT_SIZE, DEFAULT_SIZE1));
     }
 }
