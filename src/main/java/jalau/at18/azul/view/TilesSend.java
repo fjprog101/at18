@@ -5,7 +5,7 @@ import javax.swing.DefaultListModel;
 import javax.swing.JList;
 import javax.swing.JPanel;
 
-public class TilesSend extends JPanel{
+public class TilesSend extends JPanel {
     private JList<String> countryList;
     public TilesSend(int posx, int posy, int width, int height) {
         //setBounds(posx, posy, width, height);

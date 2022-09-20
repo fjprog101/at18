@@ -8,16 +8,17 @@ public class AzulFrame extends JFrame {
     public static final int INITIAL_POSITION = 200;
     public static final int WIDTH = 900;
     public static final int HEIGHT = 600;
-
+    public static final int WIDTH1 = 50;
+    public static final int HEIGHT1 = 20;
     public AzulFrame() {
 
         add(new PlayerPanel(0, 0, DEFAULT_POS1, DEFAULT_SIZE));
         add(new PlayerPanel(0, DEFAULT_SIZE, DEFAULT_POS1, DEFAULT_SIZE));
-        add(new TilesSend(600, 20, 200, 50));
-        add(new TilesSend(800, 20, 200, 50));
-        add(new TilesSend(600, 300, 200, 50));
-        add(new TilesSend(800, 320, 200, 50));
-        add(new TilesSend(600, 500, 200, 50));
+        add(new TilesSend(HEIGHT, HEIGHT1, INITIAL_POSITION, WIDTH1));
+        add(new TilesSend(HEIGHT + INITIAL_POSITION, HEIGHT1, INITIAL_POSITION, WIDTH1));
+        add(new TilesSend(HEIGHT, DEFAULT_SIZE, INITIAL_POSITION, WIDTH1));
+        add(new TilesSend(HEIGHT + INITIAL_POSITION, DEFAULT_SIZE + HEIGHT1, INITIAL_POSITION, WIDTH1));
+        add(new TilesSend(HEIGHT, DEFAULT_POS1, INITIAL_POSITION, WIDTH1));
         add(new FactoryPanel());
 
 
@@ -26,7 +27,7 @@ public class AzulFrame extends JFrame {
 
     public void initialize() {
         setLayout(null);
-        setBounds(200,200,900,600);
+        setBounds(INITIAL_POSITION, INITIAL_POSITION, WIDTH, HEIGHT);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("AZUL GAME");
         //setLocationRelativeTo(null);

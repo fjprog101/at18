@@ -4,6 +4,6 @@ import jalau.at18.azul.view.AzulFrame;
 
 public class Main {
     public static void main(String[] args) {
-       new AzulFrame();
+        new AzulFrame();
     }
 }
