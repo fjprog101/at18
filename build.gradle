@@ -45,5 +45,11 @@ test.finalizedBy("jacocoTestReport")
 
 task runWar (dependsOn: 'classes', type: JavaExec) {
     main = 'jalau.at18.war.Main'
+    standardInput=System.in
+    classpath = sourceSets.main.runtimeClasspath
+}
+task runKingOfTokyo (dependsOn: 'classes', type: JavaExec) {
+    main = 'jalau.at18.kingoftokyo.Main'
+    standardInput=System.in
     classpath = sourceSets.main.runtimeClasspath
 }
