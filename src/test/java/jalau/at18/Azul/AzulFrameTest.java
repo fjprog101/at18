@@ -3,7 +3,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 public class AzulFrameTest {
     @Test
-    public void dieShouldShowDashByDefault() {
+    public void playerPanelShouldShowDashByDefault() {
         PlayerPanel panel = new PlayerPanel(0, 0, 0, 0);
         assertEquals(PlayerPanel.DEFAULT_POSX, panel.getBounds().getX(), 0);
         assertEquals(PlayerPanel.DEFAULT_POSY, panel.getBounds().getY(), 0);
