@@ -1,13 +1,17 @@
 package jalau.at18.kingoftokyo.view;
 
-import javax.swing.JFrame;
+import javax.swing.*;
 
 public class GameFrame extends JFrame {
     private static final int DEFAULT_POS = 30;
     private static final int DEFAULT_WIDTH = 1200;
     private static final int DEFAULT_HEIGHT = 700;
+
     public GameFrame() {
         setResizable(false);
+        add(new ButtonRollDices());
+        add(new DiceFace()); //DiceFace label = new  DiceFace();
+        add(new ButtonFinishTurn());
         initialize();
     }
 
