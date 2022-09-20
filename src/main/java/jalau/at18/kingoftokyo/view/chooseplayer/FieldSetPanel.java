@@ -6,7 +6,6 @@ import java.awt.*;
 public class FieldSetPanel extends JPanel {
 
     public FieldSetPanel() {
-        super();
         add(new PlayersLabel());
         add(new PlayersNumbersSpinner());
         setBackground(Color.RED);

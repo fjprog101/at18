@@ -5,7 +5,6 @@ import java.awt.*;
 
 public class FooterPanel extends JPanel {
     public FooterPanel() {
-        super();
         add(new FooterLabel());
         setBackground(Color.ORANGE);
         initialize();

@@ -5,7 +5,6 @@ import javax.swing.*;
 public class PlayersNumbersSpinner extends JSpinner {
 
     public PlayersNumbersSpinner() {
-        super();
     }
 
 }
