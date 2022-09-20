@@ -6,9 +6,13 @@ import javax.swing.*;
 import java.awt.*;
 
 public class PlayerPanel extends JPanel {
+    public static final int DEFAULT_POSX = 0; //Only tu run the test
+    public static final int DEFAULT_POSY = 0; //Only tu run the test
+    public static final int DEFAULT_WIDTH = 0; //Only tu run the test
+    public static final int DEFAULT_HEIGHT = 0; //Only tu run the test
 
-    public PlayerPanel(int default_posx, int default_posy, int default_size, int default_size2) {
-        setBounds(default_posx, default_posy, default_size, default_size2);
+    public PlayerPanel(int posx, int posy, int width, int height) {
+        setBounds(posx, posy, width, height);
         setBorder(BorderFactory.createLineBorder(Color.BLUE));
     }
 }

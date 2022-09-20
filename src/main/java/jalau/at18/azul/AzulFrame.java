@@ -2,7 +2,7 @@ package jalau.at18.azul;
 
 import javax.swing.*;
 
-public class AzulFrame extends JFrame{
+public class AzulFrame extends JFrame {
     private static final int DEFAULT_POS1 = 500;
     private static final int DEFAULT_SIZE = 300;
     private static final int DEFAULT_POS2 = 10;
