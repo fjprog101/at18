@@ -3,13 +3,19 @@ package jalau.at18.kingoftokyo;
 public abstract class Card {
     protected String name;
     protected String description;
+    protected int cost;
 
-    public Card(String name) {
+    public Card(String name, int cost) {
         this.name = name;
+        this.cost = cost;
     }
 
-    public Object getName() {
+    public String getName() {
         return name;
+    }
+
+    public int getCost() {
+        return cost;
     }
 
     abstract String getDescription();

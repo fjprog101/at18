@@ -13,8 +13,8 @@ public class GameFrame extends JFrame {
         setResizable(false);
         initialize();
         add(new CardPanel(0, new CompleteCard(DiscardCards.ENERGIZE)));
-        add(new CardPanel(1, new CompleteCard(DiscardCards.ENERGIZE)));
-        add(new CardPanel(2, new CompleteCard(DiscardCards.ENERGIZE)));
+        add(new CardPanel(1, new CompleteCard(DiscardCards.COMMUTER_TRAIN)));
+        add(new CardPanel(2, new CompleteCard(DiscardCards.FIRE_BLAST)));
     }
 
     private void initialize() {

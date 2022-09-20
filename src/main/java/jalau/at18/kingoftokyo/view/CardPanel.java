@@ -12,10 +12,14 @@ public class CardPanel extends JPanel {
     private static final int CARD_POSY = 200;
     private static final int CARD_POSX = 700;
     private static final int CARDS_SEPARATOR = 10;
+    private static final int COLOR_R = 2;
+    private static final int COLOR_G = 11;
+    private static final int COLOR_B = 43;
 
     public CardPanel(int cardNumber, Card card) {
         setBounds(CARD_POSX + (CARD_WIDTH + CARDS_SEPARATOR) * cardNumber, CARD_POSY, CARD_WIDTH, CARD_HEIGHT);
-        setBackground(Color.GREEN);
+        setBackground(new Color(COLOR_R, COLOR_G, COLOR_B));
         setLayout(null);
+        add(new CardCostLabel(card.getCost()));
     }
 }
