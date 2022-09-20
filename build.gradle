@@ -19,6 +19,7 @@ test {
         includeTestsMatching "jalau.at18.architects.*"
         includeTestsMatching "jalau.at18.azul.*"
         includeTestsMatching "jalau.at18.kingoftokyo.*"
+        includeTestsMatching "jalau.at18.war.*"
     }
 }
 
@@ -42,8 +43,7 @@ jacocoTestReport {
 test.finalizedBy("checkstyleMain")
 test.finalizedBy("jacocoTestReport")
 
-task runBankocrAdriana (dependsOn: 'classes', type: JavaExec) {
-    main = 'jalau.at18.katas.bankocr.adriana.Main'
-    standardInput=System.in
+task runWar (dependsOn: 'classes', type: JavaExec) {
+    main = 'jalau.at18.war.Main'
     classpath = sourceSets.main.runtimeClasspath
 }
