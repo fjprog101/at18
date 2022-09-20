@@ -1,7 +1,7 @@
 package jalau.at18.kingoftokyo.view;
 
 import java.awt.Font;
-import java.awt.Color;
+import java.awt.*;
 
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
@@ -17,8 +17,9 @@ public class CardKindLabel extends JLabel {
     public CardKindLabel() {
         super("Discard", SwingConstants.CENTER);
         setBounds(POS_X, POS_Y, WIDTH, HEIGHT);
-        setFont(new Font("Arial Roundeds", FONT_STYLE, FONT_SIZE));
+        setFont(new Font("Arial", FONT_STYLE, FONT_SIZE));
         setForeground(Color.WHITE);
+        setAlignmentX(Component.CENTER_ALIGNMENT);
         setVisible(true);
     }
 }
