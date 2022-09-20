@@ -21,5 +21,6 @@ public class CardPanel extends JPanel {
         setBackground(new Color(COLOR_R, COLOR_G, COLOR_B));
         setLayout(null);
         add(new CardCostLabel(card.getCost()));
+        add(new CardNameLabel(card.getName()));
     }
 }

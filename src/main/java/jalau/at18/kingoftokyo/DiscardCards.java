@@ -5,7 +5,7 @@ public enum DiscardCards {
     APARTMENT_BULIDING(5, 0, 0, 3, 0),
     COMMUTER_TRAIN(4, 0, 0, 2, 0),
     CORNER_STORE(3, 0, 0, 1, 0),
-    DROP_FROM_HIGH_ALTITUDE(5, 0, 0, 2, 0),
+    HIGH_ALTITUDE(5, 0, 0, 2, 0),
     FIRE_BLAST(3, 0, 2, 0, 0),
     GAS_REFINERY(6, 0, 3, 0, 0),
     HEAL(3, 2, 0, 0, 0),
