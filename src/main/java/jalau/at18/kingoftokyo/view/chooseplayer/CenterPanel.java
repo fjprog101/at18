@@ -1,12 +1,12 @@
 package jalau.at18.kingoftokyo.view.chooseplayer;
 
-import jalau.at18.kingoftokyo.view.chooseplayer.ButtonsPanel;
-import jalau.at18.kingoftokyo.view.chooseplayer.FieldSetPanel;
-
 import javax.swing.*;
 import java.awt.*;
 
 public class CenterPanel extends JPanel {
+
+    private static final int DEFAULT_WIDTH = 100;
+    private static final int DEFAULT_HEIGHT = 100;
 
     public CenterPanel() {
         FieldSetPanel fieldSetPanel = new FieldSetPanel();
@@ -17,7 +17,7 @@ public class CenterPanel extends JPanel {
     }
 
     private void initialize() {
-        setPreferredSize(new Dimension(100,100));
+        setPreferredSize(new Dimension(DEFAULT_WIDTH, DEFAULT_HEIGHT));
         setLayout(new BorderLayout());
     }
 }

@@ -4,6 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 
 public class HeaderPanel extends JPanel {
+
+    private static final int DEFAULT_WIDTH = 100;
+    private static final int DEFAULT_HEIGHT = 100;
     public HeaderPanel() {
         add(new HeaderLabel());
         setBackground(Color.GREEN);
@@ -11,6 +14,6 @@ public class HeaderPanel extends JPanel {
     }
 
     private void initialize() {
-        setPreferredSize(new Dimension(100,100));
+        setPreferredSize(new Dimension(DEFAULT_WIDTH, DEFAULT_HEIGHT));
     }
 }
