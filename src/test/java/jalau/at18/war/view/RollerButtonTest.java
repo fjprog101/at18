@@ -8,7 +8,7 @@ public class RollerButtonTest {
 
     @Test
     public void shouldSetupAsButtonWithRollText() {
-        RollerButton roller = new RollerButton();
+        RollerButton roller = new RollerButton(null);
         assertEquals("Roll!", roller.getText());
         assertEquals(RollerButton.DEFAULT_POSX, roller.getBounds().getX(), 0);
         assertEquals(RollerButton.DEFAULT_POSY, roller.getBounds().getY(), 0);
