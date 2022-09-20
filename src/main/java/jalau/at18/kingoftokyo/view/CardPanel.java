@@ -2,6 +2,7 @@ package jalau.at18.kingoftokyo.view;
 
 import java.awt.Color;
 
+import javax.swing.BoxLayout;
 import javax.swing.JPanel;
 
 import jalau.at18.kingoftokyo.Card;
@@ -19,8 +20,10 @@ public class CardPanel extends JPanel {
     public CardPanel(int cardNumber, Card card) {
         setBounds(CARD_POSX + (CARD_WIDTH + CARDS_SEPARATOR) * cardNumber, CARD_POSY, CARD_WIDTH, CARD_HEIGHT);
         setBackground(new Color(COLOR_R, COLOR_G, COLOR_B));
-        setLayout(null);
+        setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
         add(new CardCostLabel(card.getCost()));
         add(new CardNameLabel(card.getName()));
+        add(new CardKindLabel());
+        add(new CardDescriptionLabel(card.getDescription()));
     }
 }

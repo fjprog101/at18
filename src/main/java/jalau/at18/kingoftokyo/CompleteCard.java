@@ -7,13 +7,12 @@ public class CompleteCard extends Card {
     public CompleteCard(DiscardCards card) {
         super(card.name(), card.getCost());
         this.card = card;
+        setDescription();
     }
 
-    @Override
-    String getDescription() {
+    void setDescription() {
         description = "Healing: " + card.getEffect()[0] + ", Damage: " + card.getEffect()[1]
                 + ", Score: " + card.getEffect()[2] + ", Energy: " + card.getEffect()[ENERGY_INDEX];
-        return description;
     }
 
     public DiscardCards getCard() {

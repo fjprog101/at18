@@ -18,5 +18,7 @@ public abstract class Card {
         return cost;
     }
 
-    abstract String getDescription();
+    public String getDescription() {
+        return description;
+    }
 }
