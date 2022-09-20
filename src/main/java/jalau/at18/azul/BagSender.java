@@ -21,7 +21,7 @@ public class BagSender {
 
     public List<Tile> getFactoryGroup() {
         factory = bag.subList(0, RANGE);
-        bag.subList(0, RANGE).clear();
+       // bag.subList(0, RANGE).clear();
         return factory;
     }
 
