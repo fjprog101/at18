@@ -14,9 +14,9 @@ public class StartGameTest {
         List<Dice> listDice = new ArrayList<>();
         Dice dice1 = new Dice(DiceFace.ENERGY);
         Dice dice2 = new Dice(DiceFace.ONE);
-        Dice dice3 = new Dice(DiceFace.PUNDING);
-        Dice dice4 = new Dice(DiceFace.PUNDING);
-        Dice dice5 = new Dice(DiceFace.PUNDING);
+        Dice dice3 = new Dice(DiceFace.PUNCHING);
+        Dice dice4 = new Dice(DiceFace.PUNCHING);
+        Dice dice5 = new Dice(DiceFace.PUNCHING);
         Dice dice6 = new Dice(DiceFace.HEALING);
 
         listDice.add(dice1);
@@ -34,7 +34,7 @@ public class StartGameTest {
         Dice dice2W = new Dice(DiceFace.ONE);
         Dice dice3W = new Dice(DiceFace.THREE);
         Dice dice4W = new Dice(DiceFace.TWO);
-        Dice dice5W = new Dice(DiceFace.PUNDING);
+        Dice dice5W = new Dice(DiceFace.PUNCHING);
         Dice dice6W = new Dice(DiceFace.HEALING);
 
         listDiceW.add(dice1W);
@@ -54,7 +54,7 @@ public class StartGameTest {
         List<Dice> listDice = new ArrayList<>();
         Dice dice1 = new Dice(DiceFace.ENERGY);
         Dice dice2 = new Dice(DiceFace.ONE);
-        Dice dice3 = new Dice(DiceFace.PUNDING);
+        Dice dice3 = new Dice(DiceFace.PUNCHING);
         Dice dice4 = new Dice(DiceFace.HEALING);
         Dice dice5 = new Dice(DiceFace.THREE);
         Dice dice6 = new Dice(DiceFace.HEALING);
@@ -74,8 +74,8 @@ public class StartGameTest {
         Dice dice2W = new Dice(DiceFace.ONE);
         Dice dice3W = new Dice(DiceFace.THREE);
         Dice dice4W = new Dice(DiceFace.TWO);
-        Dice dice5W = new Dice(DiceFace.PUNDING);
-        Dice dice6W = new Dice(DiceFace.PUNDING);
+        Dice dice5W = new Dice(DiceFace.PUNCHING);
+        Dice dice6W = new Dice(DiceFace.PUNCHING);
 
         listDiceW.add(dice1W);
         listDiceW.add(dice2W);

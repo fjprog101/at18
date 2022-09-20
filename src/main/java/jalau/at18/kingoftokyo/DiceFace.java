@@ -6,7 +6,7 @@ public enum DiceFace {
     THREE(3, 3),
     HEALING(4, 1),
     ENERGY(5, 1),
-    PUNDING(6, 1);
+    PUNCHING(6, 1);
 
     private int representativeValue;
     private int pointValue;

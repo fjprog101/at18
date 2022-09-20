@@ -14,10 +14,10 @@ public class StartGame {
         DiceFaceSameCounter diceFaceSameCounteplayer1 = new DiceFaceSameCounter(player1);
         DiceFaceSameCounter diceFaceSameCounteplayer2 = new DiceFaceSameCounter(player2);
 
-        DiceIndentifier playerplayer1 = diceFaceSameCounteplayer1.diceFaceCounter(); // >  3
-        DiceIndentifier playerplayer2 = diceFaceSameCounteplayer2.diceFaceCounter(); // <  4
+        DiceFaceIdentifier playerplayer1 = diceFaceSameCounteplayer1.diceFaceCounter(); // >  3
+        DiceFaceIdentifier playerplayer2 = diceFaceSameCounteplayer2.diceFaceCounter(); // <  4
 
-        if (playerplayer1.getCountDiceFace(DiceFace.PUNDING) > playerplayer2.getCountDiceFace(DiceFace.PUNDING)) {
+        if (playerplayer1.getCountDiceFace(DiceFace.PUNCHING) > playerplayer2.getCountDiceFace(DiceFace.PUNCHING)) {
             return "Start Play player 1";
         }
         return "Start Play player 2";

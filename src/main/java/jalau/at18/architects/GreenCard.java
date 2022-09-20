@@ -1,17 +1,16 @@
 package jalau.at18.architects;
 
 public class GreenCard extends Card {
-    private String color;
     private ScientificSymbol scientificSymbol;
 
-    public GreenCard(String color, ScientificSymbol scientificSymbol) {
-        this.color = color;
+    public GreenCard(ScientificSymbol scientificSymbol) {
+        super("Green");
         this.scientificSymbol = scientificSymbol;
     }
 
     @Override
     public String getColor() {
-        return color;
+        return super.color();
     }
 
     public String getSymbol() {
