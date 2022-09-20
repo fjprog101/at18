@@ -30,10 +30,6 @@ public class Factory {
         tiles.removeAll(Collections.singleton(tileSelected));
     }
 
-    public void removeAllTiles() {
-        tiles.clear();
-    }
-
     public void addTilesSelected(Tile tileSelected) {
         for (int index = 0; index < tiles.size(); index++) {
             if (tileSelected.equals(tiles.get(index))) {

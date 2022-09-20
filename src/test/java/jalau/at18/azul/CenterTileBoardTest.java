@@ -2,6 +2,8 @@ package jalau.at18.azul;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.Test;
 
@@ -62,7 +64,15 @@ public class CenterTileBoardTest {
         center.add(new Tile(TileColor.FIRST_PLAYER));
         center.add(new Tile(TileColor.RED));
         center.add(new Tile(TileColor.RED));
-        center.addTilestoCenter(new Tile(TileColor.DARK), 3);
+        List<Tile> newCenterTiles = new ArrayList<>(){
+                {
+                    add(new Tile(TileColor.DARK));
+                    add(new Tile(TileColor.DARK));
+                    add(new Tile(TileColor.DARK));
+                }
+            };
+            center.addTilestoCenter(newCenterTiles);
+        center.addTilestoCenter(newCenterTiles);
         CenterTileBoard expected = new CenterTileBoard();
         expected.add(new Tile(TileColor.FIRST_PLAYER));
         expected.add(new Tile(TileColor.RED));
