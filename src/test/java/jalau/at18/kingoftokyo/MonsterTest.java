@@ -7,9 +7,9 @@ import static org.junit.Assert.assertEquals;
 public class MonsterTest {
     @Test
     public void shouldCreateMonsterWithAttributes() {
-        Monster monster = new Monster("Gigazaur");
-        assertEquals("Gigazaur", monster.getName());
-        assertEquals(10, monster.getLifePoints());
-        assertEquals(0, monster.getVictoryPoints());
+        assertEquals("Alienoid", Monster.ALIENOID.getName());
+        assertEquals(10, Monster.ALIENOID.getLifePoints());
+        assertEquals(0, Monster.ALIENOID.getVictoryPoints());
+        assertEquals("/at18/src/main/resources/kot/Alienoid.png", Monster.ALIENOID.getIconPath());
     }
 }

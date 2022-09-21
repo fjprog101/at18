@@ -1,6 +1,5 @@
 package jalau.at18.kingoftokyo.view;
 
-import java.awt.Component;
 import javax.swing.JFrame;
 import jalau.at18.kingoftokyo.*;
 

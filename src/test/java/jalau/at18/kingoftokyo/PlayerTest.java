@@ -13,12 +13,12 @@ public class PlayerTest {
         assertNull(player.getMonster());
         assertEquals(0, player.getEnergy());
     }
+
     @Test
     public void ShouldCreatePlayerWithAttributes() {
         Player player = new Player();
-        Monster monster = new Monster("Gigazaur");
-        player.addMonster(monster);
-        assertEquals("Gigazaur", player.getMonster().getName());
+        player.addMonster(Monster.ALIENOID);
+        assertEquals("Alienoid", player.getMonster().getName());
         assertEquals(0, player.getEnergy());
     }
 }

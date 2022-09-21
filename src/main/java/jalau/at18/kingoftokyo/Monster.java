@@ -11,7 +11,7 @@ public enum Monster {
     private static final int TEN = 10;
     private final String iconPath;
 
-    Monster(String name, int lifePoints, int victoryPoints, String iconPath ) {
+    Monster(String name, int lifePoints, int victoryPoints, String iconPath) {
         this.name = name;
         this.lifePoints = TEN;
         this.victoryPoints = 0;
@@ -29,7 +29,7 @@ public enum Monster {
     public int getVictoryPoints() {
         return this.victoryPoints;
     }
-    public String getIconPath(){
+    public String getIconPath() {
         return this.iconPath;
     }
 }

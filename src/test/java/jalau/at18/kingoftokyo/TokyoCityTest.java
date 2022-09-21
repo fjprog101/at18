@@ -15,7 +15,7 @@ public class TokyoCityTest {
         assertFalse(tokyoCity.thereIsMonsterInside());
 
         Player player = new Player();
-        player.addMonster(new Monster("CyberBunny"));
+        player.addMonster(Monster.ALIENOID);
         tokyoCity.addMonster(player);
         assertTrue(tokyoCity.thereIsMonsterInside());
 
@@ -30,16 +30,16 @@ public class TokyoCityTest {
         assertNull(tokyoCity.getMonster());
 
         Player player1 = new Player();
-        player1.addMonster(new Monster("CyberBunny"));
+        player1.addMonster(Monster.ALIENOID);
         Player player2 = new Player();
-        player2.addMonster(new Monster("Gigazaur"));
+        player2.addMonster(Monster.SPACE_PENGUIN);
         tokyoCity.addMonster(player1);
-        assertEquals("CyberBunny", tokyoCity.getMonster().getName());
+        assertEquals("Alienoid", tokyoCity.getMonster().getName());
         tokyoCity.removeMonster();
         assertNull(tokyoCity.getMonster());
         tokyoCity.addMonster(player2);
-        assertEquals("Gigazaur", tokyoCity.getMonster().getName());
+        assertEquals("Space Penguin", tokyoCity.getMonster().getName());
         tokyoCity.addMonster(player1);
-        assertNotEquals("CyberBunny", tokyoCity.getMonster().getName());
+        assertNotEquals("Alienoid", tokyoCity.getMonster().getName());
     }
 }
