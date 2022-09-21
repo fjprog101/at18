@@ -5,7 +5,6 @@ import java.awt.*;
 
 public class HeaderPanel extends JPanel {
     public HeaderPanel() {
-        super();
         add(new HeaderLabel());
         setBackground(Color.GREEN);
         initialize();

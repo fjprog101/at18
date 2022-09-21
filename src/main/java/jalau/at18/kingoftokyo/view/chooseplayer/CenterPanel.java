@@ -9,7 +9,6 @@ import java.awt.*;
 public class CenterPanel extends JPanel {
 
     public CenterPanel() {
-        super();
         FieldSetPanel fieldSetPanel = new FieldSetPanel();
         ButtonsPanel buttonsPanel = new ButtonsPanel();
         initialize();

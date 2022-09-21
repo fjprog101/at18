@@ -12,7 +12,6 @@ public class ChoosePlayersFrame extends JFrame {
     private static final int DEFAULT_HEIGHT = 700;
 
     public ChoosePlayersFrame() {
-        super();
         HeaderPanel headerPanel = new HeaderPanel();
         CenterPanel centerPanel = new CenterPanel();
         FooterPanel footerPanel = new FooterPanel();

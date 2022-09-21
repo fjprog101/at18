@@ -9,7 +9,6 @@ import java.awt.*;
 public class ButtonsPanel extends JPanel {
 
     public ButtonsPanel() {
-        super();
         add(new ExitButton());
         add(new NextButton());
         setBackground(Color.BLUE);
