@@ -3,9 +3,9 @@ package jalau.at18.architects;
 public class GenerateARandomBluePointForBluePoints {
     private final int two = 2;
     private final int three = 3;
+    private int randomNum = (int) (Math.random() * ((three - two) + 1)) + two;
 
     public BluePoints randomBluePoint() {
-        int randomNum = (int) (Math.random() * ((three - two) + 1)) + two;
         BluePoints bluePoints = new BluePoints();
         switch (randomNum) {
             case two:
