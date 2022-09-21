@@ -17,5 +17,7 @@ public class StartLabel extends JPanel {
         nextJLabel.setFont(new Font("Serif", Font.PLAIN, SIZE_FONT_LABEL2));
         add(nextJLabel);
     }
-
+    public void setNextJLabel(String newLabel) {
+        nextJLabel.setText(newLabel);
+    }
 }
