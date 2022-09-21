@@ -15,14 +15,23 @@ public class WondersFrame extends JFrame {
     private void initialize() {
         startLabel = new StartLabel();
         startButton = new StartButton(controller);
-        choiceNumberPlayers = new ChoiceNumberPlayers();
+        choiceNumberPlayers = new ChoiceNumberPlayers(controller);
         add(startButton);
         add(startLabel);
         add(choiceNumberPlayers);
         setTitle(WINDOW_NAME);
-        setBounds(DEFAULT_POS, DEFAULT_POS, DEFAULT_SIZE, DEFAULT_SIZE);
+        setBounds(DEFAULT_POS_Y, DEFAULT_POS_Y, DEFAULT_SIZE, DEFAULT_SIZE);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
         setVisible(true);
+    }
+    public void setLabels(String label) {
+        startLabel.setNextJLabel(label);
+    }
+    public ChoiceNumberPlayers getChoice() {
+        return choiceNumberPlayers;
+    }
+    public StartButton getButton() {
+        return startButton;
     }
 }
