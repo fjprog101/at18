@@ -5,7 +5,8 @@ enum Resource {
     WOOD("Wood"),
     STONE("Stone"),
     PAPER("Paper"),
-    BRICK("Brick");
+    BRICK("Brick"),
+    GOLD("Gold");
 
     private String resource;
 
