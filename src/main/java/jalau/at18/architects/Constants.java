@@ -3,7 +3,8 @@ package jalau.at18.architects;
 public final class Constants {
 
     public final class WonderFrame {
-        public static final int DEFAULT_POS = 100;
+        public static final int DEFAULT_POS_X = 100;
+        public static final int DEFAULT_POS_Y = 100;
         public static final int DEFAULT_SIZE = 700;
         public static final String WINDOW_NAME = "7 Wonders Architect";
     }
@@ -29,8 +30,8 @@ public final class Constants {
     public final class ComboBox {
         public static final int POS_X = 300;
         public static final int POS_Y = 190;
-        public static final int WIDTH_CHOICE = 50;
-        public static final int HEIGHT_CHOICE = 50;
+        public static final int WIDTH_CHOICE = 40;
+        public static final int HEIGHT_CHOICE = 40;
         public static final int FOUR = 4;
         public static final int TWO = 2;
         public static final int THREE = 3;
