@@ -1,7 +1,5 @@
 package jalau.at18.kingoftokyo.view.choosefirstplayer;
 
-import jalau.at18.kingoftokyo.view.chooseplayer.ChoosePlayersFrame;
-
 import javax.swing.*;
 import java.awt.*;
 

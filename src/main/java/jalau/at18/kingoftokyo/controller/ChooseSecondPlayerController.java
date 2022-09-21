@@ -1,7 +1,6 @@
 package jalau.at18.kingoftokyo.controller;
 
 import jalau.at18.kingoftokyo.view.GameFrame;
-import jalau.at18.kingoftokyo.view.choosefirstplayer.ChooseFirstPlayerFrame;
 import jalau.at18.kingoftokyo.view.choosesecondplayer.ChooseSecondPlayerFrame;
 
 import java.awt.event.ActionEvent;

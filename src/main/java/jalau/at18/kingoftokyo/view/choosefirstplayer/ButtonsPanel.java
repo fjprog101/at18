@@ -1,8 +1,6 @@
 package jalau.at18.kingoftokyo.view.choosefirstplayer;
 
 import jalau.at18.kingoftokyo.controller.ChooseFirstPlayerController;
-import jalau.at18.kingoftokyo.controller.ChoosePlayerController;
-import jalau.at18.kingoftokyo.view.chooseplayer.ChoosePlayersFrame;
 import jalau.at18.kingoftokyo.view.general.ExitButton;
 
 import javax.swing.*;
