@@ -21,15 +21,8 @@ public class GenerateARandomCardForResourceList {
                 return EnumResourceList.PAPER.getCard();
             case five:
                 return EnumResourceList.BRICK.getCard();
-            case six:
-                return EnumResourceList.GOLD.getCard();
             default:
-                System.out.println("Random number out of range");
-                return null;
+                return EnumResourceList.GOLD.getCard();
         }
-    }
-
-    public int getRandomNumber() {
-        return randomNum;
     }
 }
