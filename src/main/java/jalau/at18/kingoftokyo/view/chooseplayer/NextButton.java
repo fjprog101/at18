@@ -11,6 +11,5 @@ public class NextButton extends JButton {
 
     public NextButton() {
         super("Next");
-        //setBounds(DEFAULT_POS_X, DEFAULT_POS_Y, DEFAULT_WIDTH, DEFAULT_HEIGHT);
     }
 }
