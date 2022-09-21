@@ -22,7 +22,7 @@ public class FloorList extends JPanel {
         floortiles.add(new Tile(TileColor.EMPTY));
         DefaultListModel<String> floorlist = new DefaultListModel<>();
         for (int pos = 0; pos < floortiles.size(); pos++) {
-            floorlist.addElement((floortiles.get(pos)).toString());
+            floorlist.addElement((floortiles.get(pos).getColor().getName()));
         }
         floor = new JList<String>(floorlist);
         floor.setVisibleRowCount(1);
