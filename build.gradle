@@ -43,7 +43,6 @@ jacocoTestReport {
 test.finalizedBy("checkstyleMain")
 test.finalizedBy("jacocoTestReport")
 
-
 task runWar (dependsOn: 'classes', type: JavaExec) {
     main = 'jalau.at18.war.Main'
     standardInput=System.in
