@@ -7,7 +7,7 @@ public class Pyramid {
     public void initializePyramid() {
         for (int row = 0; row < pyramidMatrixSize; row++) {
             for (int column = 0; column < pyramidMatrixSize; column++) {
-                tilesMatrix[row][column] = row + column >= dividePyramid ? Tile.EMPTY : Tile.NULL;
+                tilesMatrix[row][column] = row + column >= dividePyramid ? new Tile(TileColor.EMPTY) : new Tile(TileColor.NULL);
             }
         }
     }

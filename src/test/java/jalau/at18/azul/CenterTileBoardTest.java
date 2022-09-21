@@ -9,67 +9,67 @@ public class CenterTileBoardTest {
 
     @Test
     public void testRemoveTiles() {
-        CenterTileBoard center = new CenterTileBoard(); 
-        center.add(Tile.FIRST_PLAYER);
-        center.add(Tile.DARK);
-        center.add(Tile.DARK);
-        center.add(Tile.RED);
-        center.add(Tile.YELLOW);
-        center.removeTilesOfSpecificColor(Tile.RED);
+        CenterTileBoard center = new CenterTileBoard();
+        center.add(new Tile(TileColor.FIRST_PLAYER));
+        center.add(new Tile(TileColor.DARK));
+        center.add(new Tile(TileColor.DARK));
+        center.add(new Tile(TileColor.RED));
+        center.add(new Tile(TileColor.YELLOW));
+        center.removeTilesOfSpecificColor(new Tile(TileColor.RED));
         CenterTileBoard expected = new CenterTileBoard();
-        expected.add(Tile.FIRST_PLAYER);
-        expected.add(Tile.DARK);
-        expected.add(Tile.DARK);
-        expected.add(Tile.YELLOW);
+        expected.add(new Tile(TileColor.FIRST_PLAYER));
+        expected.add(new Tile(TileColor.DARK));
+        expected.add(new Tile(TileColor.DARK));
+        expected.add(new Tile(TileColor.YELLOW));
         assertEquals(expected, center);
     }
     @Test
     public void testRemoveTiles1() {
-        CenterTileBoard center = new CenterTileBoard(); 
-        center.add(Tile.FIRST_PLAYER);
-        center.add(Tile.DARK);
-        center.add(Tile.RED);
-        center.add(Tile.RED);
-        center.add(Tile.YELLOW);
-        center.add(Tile.DARK);
-        center.removeTilesOfSpecificColor(Tile.DARK);
+        CenterTileBoard center = new CenterTileBoard();
+        center.add(new Tile(TileColor.FIRST_PLAYER));
+        center.add(new Tile(TileColor.DARK));
+        center.add(new Tile(TileColor.RED));
+        center.add(new Tile(TileColor.RED));
+        center.add(new Tile(TileColor.YELLOW));
+        center.add(new Tile(TileColor.DARK));
+        center.removeTilesOfSpecificColor(new Tile(TileColor.DARK));
         CenterTileBoard expected = new CenterTileBoard();
-        expected.add(Tile.FIRST_PLAYER);
-        expected.add(Tile.RED);
-        expected.add(Tile.RED);
-        expected.add(Tile.YELLOW);
+        expected.add(new Tile(TileColor.FIRST_PLAYER));
+        expected.add(new Tile(TileColor.RED));
+        expected.add(new Tile(TileColor.RED));
+        expected.add(new Tile(TileColor.YELLOW));
         assertEquals(expected, center);
     }
 
     @Test
     public void testRemoveTiles2() {
-        CenterTileBoard center = new CenterTileBoard(); 
-        center.add(Tile.FIRST_PLAYER);
-        center.add(Tile.DARK);
-        center.add(Tile.DARK);
-        center.add(Tile.RED);
-        center.add(Tile.YELLOW);
-        center.removeTilesOfSpecificColor(Tile.DARK);
+        CenterTileBoard center = new CenterTileBoard();
+        center.add(new Tile(TileColor.FIRST_PLAYER));
+        center.add(new Tile(TileColor.DARK));
+        center.add(new Tile(TileColor.DARK));
+        center.add(new Tile(TileColor.RED));
+        center.add(new Tile(TileColor.YELLOW));
+        center.removeTilesOfSpecificColor(new Tile(TileColor.DARK));
         CenterTileBoard expected = new CenterTileBoard();
-        expected.add(Tile.FIRST_PLAYER);
-        expected.add(Tile.RED);
-        expected.add(Tile.YELLOW);
+        expected.add(new Tile(TileColor.FIRST_PLAYER));
+        expected.add(new Tile(TileColor.RED));
+        expected.add(new Tile(TileColor.YELLOW));
         assertEquals(expected, center);
     }
     @Test
     public void testaddTiles() {
-        CenterTileBoard center = new CenterTileBoard(); 
-        center.add(Tile.FIRST_PLAYER);
-        center.add(Tile.RED);
-        center.add(Tile.RED);
-        center.addTilestoCenter(Tile.DARK, 3);
+        CenterTileBoard center = new CenterTileBoard();
+        center.add(new Tile(TileColor.FIRST_PLAYER));
+        center.add(new Tile(TileColor.RED));
+        center.add(new Tile(TileColor.RED));
+        center.addTilestoCenter(new Tile(TileColor.DARK), 3);
         CenterTileBoard expected = new CenterTileBoard();
-        expected.add(Tile.FIRST_PLAYER);
-        expected.add(Tile.RED);
-        expected.add(Tile.RED);
-        expected.add(Tile.DARK);
-        expected.add(Tile.DARK);
-        expected.add(Tile.DARK);
+        expected.add(new Tile(TileColor.FIRST_PLAYER));
+        expected.add(new Tile(TileColor.RED));
+        expected.add(new Tile(TileColor.RED));
+        expected.add(new Tile(TileColor.DARK));
+        expected.add(new Tile(TileColor.DARK));
+        expected.add(new Tile(TileColor.DARK));
         assertEquals(expected, center);
     }
 

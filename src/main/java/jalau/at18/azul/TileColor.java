@@ -5,7 +5,7 @@ public enum TileColor {
     RED(false),
     YELLOW(false),
     DARK(false),
-    BLUE( false),
+    BLUE(false),
     WHITE(false),
     FIRST_PLAYER(false),
     EMPTY(false),

@@ -14,9 +14,9 @@ public class RemainingTilesTest {
         RemainingTiles box = new RemainingTiles();
         List<Tile> remainingTiles = new ArrayList<>(){
             {
-                add(Tile.RED);
-                add(Tile.DARK);
-                add(Tile.BLUE);
+                add(new Tile(TileColor.RED));
+                add(new Tile(TileColor.DARK));
+                add(new Tile(TileColor.BLUE));
             }
         };
         box.addTiles(remainingTiles);
@@ -24,12 +24,12 @@ public class RemainingTilesTest {
 
         List<Tile> remainingTiles2 = new ArrayList<>(){
             {
-                add(Tile.RED);
-                add(Tile.DARK);
-                add(Tile.BLUE);
-                add(Tile.RED);
-                add(Tile.DARK);
-                add(Tile.BLUE);
+                add(new Tile(TileColor.RED));
+                add(new Tile(TileColor.DARK));
+                add(new Tile(TileColor.BLUE));
+                add(new Tile(TileColor.RED));
+                add(new Tile(TileColor.DARK));
+                add(new Tile(TileColor.BLUE));
             }
         };
 
@@ -42,9 +42,9 @@ public class RemainingTilesTest {
         RemainingTiles box = new RemainingTiles();
         List<Tile> remainingTiles = new ArrayList<>(){
             {
-                add(Tile.RED);
-                add(Tile.RED);
-                add(Tile.YELLOW);
+                add(new Tile(TileColor.RED));
+                add(new Tile(TileColor.RED));
+                add(new Tile(TileColor.YELLOW));
             }
         };
         box.addTiles(remainingTiles);

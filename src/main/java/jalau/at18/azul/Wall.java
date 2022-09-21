@@ -19,11 +19,11 @@ public class Wall {
     }
 
     public void defineWallColor(int row, int column) {
-        tiles[row][column] = column - row == FOUR || column - row == -1 ? Tile.WHITE
-                            : column - row == THREE || column - row == TWO * (-1) ? Tile.DARK
-                            : column - row == TWO || column - row == THREE * (-1) ? Tile.RED
-                            : column - row == 1 || column - row == FOUR * (-1) ? Tile.YELLOW
-                            : column - row == 0 ? Tile.BLUE : Tile.EMPTY;
+        tiles[row][column] = column - row == FOUR || column - row == -1 ? new Tile(TileColor.WHITE)
+                            : column - row == THREE || column - row == TWO * (-1) ? new Tile(TileColor.DARK)
+                            : column - row == TWO || column - row == THREE * (-1) ? new Tile(TileColor.RED)
+                            : column - row == 1 || column - row == FOUR * (-1) ? new Tile(TileColor.YELLOW)
+                            : column - row == 0 ? new Tile(TileColor.BLUE) : new Tile(TileColor.EMPTY);
     }
 
     public Tile[][] getTiles() {

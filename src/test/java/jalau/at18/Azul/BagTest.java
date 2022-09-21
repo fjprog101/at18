@@ -1,13 +1,11 @@
 package jalau.at18.azul;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.Objects;
 
-import org.hamcrest.core.IsEqual;
 import org.junit.Test;
 
 public class BagTest {
