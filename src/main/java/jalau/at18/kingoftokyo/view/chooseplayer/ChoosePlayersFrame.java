@@ -13,7 +13,7 @@ public class ChoosePlayersFrame extends JFrame {
 
     public ChoosePlayersFrame() {
         HeaderPanel headerPanel = new HeaderPanel();
-        CenterPanel centerPanel = new CenterPanel();
+        CenterPanel centerPanel = new CenterPanel(this);
         FooterPanel footerPanel = new FooterPanel();
         initialize();
         add(headerPanel, BorderLayout.NORTH);
