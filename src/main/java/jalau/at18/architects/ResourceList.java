@@ -2,11 +2,11 @@ package jalau.at18.architects;
 
 import java.util.LinkedList;
 
-public class ResourceCounter {
+public class ResourceList {
     private LinkedList<String> listOfResources;
 
-    public ResourceCounter(LinkedList<String> listOfResources) {
-        this.listOfResources = listOfResources;
+    public ResourceList() {
+        this.listOfResources = new LinkedList<>();
     }
 
     public LinkedList<String> getListOfResources() {
@@ -18,8 +18,7 @@ public class ResourceCounter {
     }
 
     public boolean traverseTheResourceList() {
-        boolean sameValue = (listOfResources.getFirst() == listOfResources.getLast()) ? true : false;
-        return sameValue;
+        return listOfResources.getFirst() == listOfResources.getLast();
     }
 
     public void removeResourceFromList() {

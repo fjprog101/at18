@@ -2,11 +2,11 @@ package jalau.at18.architects;
 
 import java.util.LinkedList;
 
-public class ScienceCounter {
+public class ScienceList {
     private LinkedList<String> listOfScienceElements;
 
-    public ScienceCounter(LinkedList<String> listOfScienceElements) {
-        this.listOfScienceElements = listOfScienceElements;
+    public ScienceList() {
+        this.listOfScienceElements = new LinkedList<>();
     }
 
     public LinkedList<String> getListOfScienceElements() {
@@ -18,8 +18,7 @@ public class ScienceCounter {
     }
 
     public boolean traverseTheScienceElementsList() {
-        boolean sameValue = (listOfScienceElements.getFirst() == listOfScienceElements.getLast()) ? true : false;
-        return sameValue;
+        return listOfScienceElements.getFirst() == listOfScienceElements.getLast();
     }
 
     public void removeElementFromList() {
