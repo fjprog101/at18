@@ -1,35 +1,25 @@
 package jalau.at18.azul;
 
-import java.util.List;
-
 public class FactorySender {
 
     private Factory factory;
-    private CenterTileBoard centerBoard;
+    private FactorySenderToCenterBoard factorySenderToCenterBoard;
 
     public FactorySender(Factory factory, CenterTileBoard centerBoard) {
         this.factory = factory;
-        this.centerBoard = centerBoard;
+        this.factorySenderToCenterBoard = new FactorySenderToCenterBoard(centerBoard);
     }
 
     public void sendTiles(Tile tileSelected) {
         factory.addTilesSelected(tileSelected);
-        //sendTilesToFactory(factory.getTilesSelected());
+        //Here will be added the function to send the tiles from the factory to the pyramid
         factory.removeTilesSelected(tileSelected);
-        sendTilesToCenter(factory.getTiles());
+        factorySenderToCenterBoard.sendTilesToCenterBoard(factory.getTiles());
         factory.getTiles().clear();
     }
 
-    public Factory getFactory() {
-        return factory;
-    }
-
-    public CenterTileBoard getCenterBoard() {
-        return centerBoard;
-    }
-
-    public void sendTilesToCenter(List<Tile> tilesToCenter) {
-        centerBoard.addTilestoCenter(tilesToCenter);
+    public CenterTileBoard geCenterTileBoard() {
+        return factorySenderToCenterBoard.getCenterBoard();
     }
 
 }

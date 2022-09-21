@@ -32,7 +32,7 @@ public class FactorySenderTest {
                 add(Tile.DARK);
             }
         };
-        assertEquals(expectedTilesCenter, factorySender.getCenterBoard());
+        assertEquals(expectedTilesCenter, factorySender.geCenterTileBoard());
 
         Factory factory2 = new Factory();
         List<Tile> tilesFromBag2 = new ArrayList<>(){
@@ -54,7 +54,7 @@ public class FactorySenderTest {
                 add(Tile.YELLOW);
             }
         };
-        assertEquals(expectedTilesCenter2, factorySender2.getCenterBoard());
+        assertEquals(expectedTilesCenter2, factorySender2.geCenterTileBoard());
 
         Factory factory3 = new Factory();
         List<Tile> tilesFromBag3 = new ArrayList<>(){
@@ -79,6 +79,6 @@ public class FactorySenderTest {
                 add(Tile.DARK);
             }
         };
-        assertEquals(expectedTilesCenter3, factorySender3.getCenterBoard());
+        assertEquals(expectedTilesCenter3, factorySender3.geCenterTileBoard());
     }
 }
