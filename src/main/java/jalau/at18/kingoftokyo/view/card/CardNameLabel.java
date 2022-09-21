@@ -17,7 +17,6 @@ public class CardNameLabel extends JLabel {
 
     public CardNameLabel(String name) {
         super(name, SwingConstants.CENTER);
-        setBounds(POS_X, POS_Y, WIDTH, HEIGHT);
         setFont(new Font("Arial Black", FONT_STYLE, FONT_SIZE));
         setForeground(Color.WHITE);
         setAlignmentX(Component.CENTER_ALIGNMENT);

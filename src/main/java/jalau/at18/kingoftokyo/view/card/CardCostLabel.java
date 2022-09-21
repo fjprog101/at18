@@ -14,7 +14,6 @@ public class CardCostLabel extends JLabel {
     public CardCostLabel(int cost) {
         super(cost + "                          ");
         setAlignmentX(Component.CENTER_ALIGNMENT);
-        setBounds(POS, POS, SIZE, SIZE);
         setFont(new Font("Arial Rounded MT Bold", FONT_STYLE, FONT_SIZE));
         setForeground(Color.WHITE);
         setVisible(true);

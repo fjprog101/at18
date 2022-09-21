@@ -14,7 +14,6 @@ public class CardDescriptionLabel extends JLabel {
     private static final int FONT_SIZE = 11;
 
     public CardDescriptionLabel(String description) {
-        setBounds(POS_X, POS_Y, WIDTH, HEIGHT);
         setText("<html><p style=\"width:100px\" style=\"text-align:center\" >" + description + "</p></html>");
         setFont(new Font("Arial Roundeds", FONT_STYLE, FONT_SIZE));
         setForeground(Color.WHITE);

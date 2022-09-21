@@ -14,7 +14,7 @@ public class CardImageLabel extends JLabel {
     private static final String PATH = "src/main/resources/kingoftokyo/cards/";
 
     public CardImageLabel(String imagePath) {
-        setBounds(POS_X, POS_Y, WIDTH, HEIGHT);
+        setSize(WIDTH, HEIGHT);
         ImageIcon image = new ImageIcon(PATH + imagePath);
         Icon icon = new ImageIcon(image.getImage().getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT));
         setIcon(icon);
