@@ -1,18 +1,20 @@
 package jalau.at18.azul.view;
 
+import javax.swing.DefaultListModel;
 import javax.swing.JList;
+import javax.swing.JPanel;
 
-import jalau.at18.azul.Tile;
+import jalau.at18.azul.Floor;
 
-public class FloorList extends JList<Tile> {
-    public static final int DEFAULT_POSX = 20;
-    public static final int DEFAULT_POSY = 50;
-    public static final int DEFAULT_WIDTH = 25;
-    public static final int DEFAULT_HEIGHT = 25;
+public class FloorList extends JPanel {
+    private JList<String> floor;
 
-    FloorList() {
-        super();
-        setBounds(DEFAULT_POSX, DEFAULT_POSY, DEFAULT_WIDTH, DEFAULT_HEIGHT);
-        setLayoutOrientation(HORIZONTAL_WRAP);
+    public FloorList(int positionx, int positiony, int width, int height) {
+        Floor floortiles = new Floor();
+        DefaultListModel<String> floorlist = new DefaultListModel<>();
+        floorlist.addElement(floortiles.toString());
+        floor = new JList<String>(floorlist);
+        add(floor);
+        setBounds(positionx, positiony, width, height);
     }
 }
