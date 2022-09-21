@@ -5,10 +5,10 @@ import javax.swing.JList;
 import jalau.at18.azul.Tile;
 
 public class FloorList extends JList<Tile> {
-    public static final int DEFAULT_POSX = 100;
+    public static final int DEFAULT_POSX = 20;
     public static final int DEFAULT_POSY = 50;
-    public static final int DEFAULT_WIDTH = 150;
-    public static final int DEFAULT_HEIGHT = 75;
+    public static final int DEFAULT_WIDTH = 25;
+    public static final int DEFAULT_HEIGHT = 25;
 
     FloorList() {
         super();
