@@ -2,9 +2,12 @@ package jalau.at18.azul;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
+import org.hamcrest.core.IsEqual;
 import org.junit.Test;
 
 public class BagTest {
@@ -13,23 +16,24 @@ public class BagTest {
     public void shouldFillBagWithColors() {
         ArrayList<Tile> aBag = new ArrayList<>();
         Bag myBag = new Bag();
-        
+
         for (int index = 0; index < 20; index++){
-            aBag.add(Tile.RED);
+            aBag.add(new Tile(TileColor.RED));
         }
         for (int index = 0; index < 20; index++){
-            aBag.add(Tile.YELLOW);
+            aBag.add(new Tile(TileColor.YELLOW));
         }
         for (int index = 0; index < 20; index++){
-            aBag.add(Tile.DARK);
+            aBag.add(new Tile(TileColor.DARK));
         }
         for (int index = 0; index < 20; index++){
-            aBag.add(Tile.BLUE);
+            aBag.add(new Tile(TileColor.BLUE));
         }
         for (int index = 0; index < 20; index++){
-            aBag.add(Tile.WHITE);
+            aBag.add(new Tile(TileColor.WHITE));
         }
-        assertEquals(aBag, myBag.fillBagWithColors());
+
+        assertTrue(Objects.equals(aBag, myBag.fillBagWithColors()));
     }
 
     @Test
@@ -37,12 +41,12 @@ public class BagTest {
 
         ArrayList<Tile> mixed = new ArrayList<>();
         Bag mix = new Bag();
-        mixed.add(Tile.RED);
-        mixed.add(Tile.YELLOW);
-        mixed.add(Tile.DARK);
-        mixed.add(Tile.BLUE);
-        mixed.add(Tile.WHITE);
-        
+        mixed.add(new Tile(TileColor.RED));
+        mixed.add(new Tile(TileColor.YELLOW));
+        mixed.add(new Tile(TileColor.DARK));
+        mixed.add(new Tile(TileColor.BLUE));
+        mixed.add(new Tile(TileColor.WHITE));
+
         assertNotEquals(mixed, mix.getMixedBag());
     }
 }

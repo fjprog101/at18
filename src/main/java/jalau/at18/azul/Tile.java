@@ -1,28 +1,33 @@
 package jalau.at18.azul;
 
-public enum Tile {
-    RED('R', false),
-    YELLOW('Y', false),
-    DARK('D', false),
-    BLUE('B', false),
-    WHITE('W', false),
-    FIRST_PLAYER('F', false),
-    EMPTY('E', false),
-    NULL('N', false);
+import java.util.Objects;
 
-    private final char colorTile;
-    private final boolean statusTile;
+public class Tile {
 
-    public boolean getStatusTile() {
-        return statusTile;
+    private TileColor currentTile;
+
+    public Tile(TileColor color) {
+        currentTile = color;
     }
 
-    Tile(char colorTile, boolean statusTile) {
-        this.colorTile = colorTile;
-        this.statusTile = statusTile;
+    public void setColor(TileColor newColor) {
+        currentTile = newColor;
     }
 
-    public char getColor() {
-        return colorTile;
+    public TileColor getColor() {
+        return currentTile;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Tile tile = (Tile) o;
+        return Objects.equals(currentTile, tile.currentTile);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(currentTile);
     }
 }
