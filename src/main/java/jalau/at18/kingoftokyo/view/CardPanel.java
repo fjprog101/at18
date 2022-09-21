@@ -10,7 +10,7 @@ import jalau.at18.kingoftokyo.Card;
 public class CardPanel extends JPanel {
     private static final int CARD_WIDTH = 150;
     private static final int CARD_HEIGHT = 220;
-    private static final int CARD_POSY = 200;
+    private static final int CARD_POSY = 185;
     private static final int CARD_POSX = 700;
     private static final int CARDS_SEPARATOR = 10;
     private static final int COLOR_R = 2;
