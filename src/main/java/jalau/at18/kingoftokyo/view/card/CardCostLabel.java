@@ -6,8 +6,6 @@ import java.awt.*;
 import javax.swing.JLabel;
 
 public class CardCostLabel extends JLabel {
-    private static final int POS = 5;
-    private static final int SIZE = 21;
     private static final int FONT_STYLE = 1;
     private static final int FONT_SIZE = 21;
 

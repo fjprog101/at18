@@ -7,8 +7,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 public class CardImageLabel extends JLabel {
-    private static final int POS_X = 1;
-    private static final int POS_Y = 120;
     private static final int WIDTH = 145;
     private static final int HEIGHT = 130;
     private static final String PATH = "src/main/resources/kingoftokyo/cards/";

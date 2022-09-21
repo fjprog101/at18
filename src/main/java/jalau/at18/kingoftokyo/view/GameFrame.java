@@ -21,11 +21,9 @@ public class GameFrame extends JFrame {
         gameFrameController = new GameFrameController(this);
         initialize();
         add(new DeckImagePanel());
-        add(new CardPanel(0, new CompleteCard(DiscardCards.ENERGIZE)));
-        add(new CardPanel(1, new CompleteCard(DiscardCards.COMMUTER_TRAIN)));
-        add(new CardPanel(2, new CompleteCard(DiscardCards.APARTMENT_BULIDING)));
         add(new PlayerCard(Monster.ALIENOID, 0, player1));
         add(new PlayerCard(Monster.SPACE_PENGUIN, 1, player2));
+        add(new CardsGroupPanel());
     }
 
     private void initialize() {
