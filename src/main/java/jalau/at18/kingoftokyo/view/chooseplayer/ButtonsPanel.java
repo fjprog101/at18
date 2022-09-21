@@ -1,5 +1,6 @@
 package jalau.at18.kingoftokyo.view.chooseplayer;
 
+import jalau.at18.kingoftokyo.controller.ChoosePlayerController;
 import jalau.at18.kingoftokyo.view.general.ExitButton;
 
 import javax.swing.*;
@@ -9,9 +10,11 @@ public class ButtonsPanel extends JPanel {
 
     private static final int DEFAULT_WIDTH = 100;
     private static final int DEFAULT_HEIGHT = 100;
-    public ButtonsPanel() {
+    private ChoosePlayerController choosePlayerController;
+    public ButtonsPanel(ChoosePlayersFrame frame) {
+        choosePlayerController = new ChoosePlayerController(frame);
         add(new ExitButton());
-        add(new NextButton());
+        add(new NextButton(choosePlayerController));
         setBackground(Color.BLUE);
         initialize();
     }
