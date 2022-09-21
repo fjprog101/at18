@@ -13,10 +13,10 @@ public class Bag {
     }
 
     public ArrayList<Tile> fillBagWithColors() {
-        Tile[] color = {Tile.RED, Tile.YELLOW, Tile.DARK, Tile.BLUE, Tile.WHITE};
+        TileColor[] color = {TileColor.RED, TileColor.YELLOW, TileColor.DARK, TileColor.BLUE, TileColor.WHITE};
         for (int index = 0; index < NUMBER_OF_COLORS; index++) {
             for (int jindex = 0; jindex < NUMBER_ONE_COLOR; jindex++) {
-                this.bag.add((color[index]));
+                this.bag.add(new Tile(color[index]));
             }
         }
         return bag;

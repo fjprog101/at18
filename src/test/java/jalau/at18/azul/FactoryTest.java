@@ -15,10 +15,10 @@ public class FactoryTest {
     public void shouldHaveTiles() {
         List<Tile> tiles = new ArrayList<>(){
             {
-                add(Tile.RED);
-                add(Tile.DARK);
-                add(Tile.BLUE);
-                add(Tile.BLUE);
+                add(new Tile(TileColor.RED));
+                add(new Tile(TileColor.DARK));
+                add(new Tile(TileColor.BLUE));
+                add(new Tile(TileColor.BLUE));
             }
         };
         Factory factory = new Factory(tiles);
@@ -29,21 +29,21 @@ public class FactoryTest {
     public void shouldRemoveTiles() {
         List<Tile> tiles = new ArrayList<>(){
             {
-                add(Tile.RED);
-                add(Tile.DARK);
-                add(Tile.WHITE);
-                add(Tile.DARK);
+                add(new Tile(TileColor.RED));
+                add(new Tile(TileColor.DARK));
+                add(new Tile(TileColor.WHITE));
+                add(new Tile(TileColor.DARK));
             }
         };
 
         List<Tile> factoryWithoutTilesSelected = new ArrayList<>(){
             {
-                add(Tile.RED);
-                add(Tile.WHITE);
+                add(new Tile(TileColor.RED));
+                add(new Tile(TileColor.WHITE));
             }
         };
         Factory factory = new Factory(tiles);
-        factory.removeTilesSelected(Tile.DARK);
+        factory.removeTilesSelected(new Tile(TileColor.DARK));
         assertEquals(factoryWithoutTilesSelected, factory.getTiles());
     }
 
@@ -51,24 +51,24 @@ public class FactoryTest {
     public void shouldCreateListWithTilesSelected() {
         List<Tile> tiles = new ArrayList<>(){
             {
-                add(Tile.RED);
-                add(Tile.DARK);
-                add(Tile.RED);
-                add(Tile.DARK);
+                add(new Tile(TileColor.RED));
+                add(new Tile(TileColor.DARK));
+                add(new Tile(TileColor.RED));
+                add(new Tile(TileColor.DARK));
             }
         };
         List<Tile> listWithtTilesSelected = new ArrayList<>(){
             {
-                add(Tile.RED);
-                add(Tile.RED);
+                add(new Tile(TileColor.RED));
+                add(new Tile(TileColor.RED));
             }
         };
         Factory factory = new Factory(tiles);
-        factory.addTilesSelected(Tile.RED);
+        factory.addTilesSelected(new Tile(TileColor.RED));
         assertEquals(listWithtTilesSelected, factory.getTilesSelected());
 
         Factory factory2 = new Factory(tiles);
-        factory.addTilesSelected(Tile.BLUE);
+        factory.addTilesSelected(new Tile(TileColor.BLUE));
         assertTrue(factory2.getTilesSelected().isEmpty());
     }
 

@@ -10,11 +10,11 @@ public class WallTest {
         Wall wall = new Wall();
         wall.initializeWall();
         Tile[][] expected = {
-            {Tile.BLUE, Tile.YELLOW, Tile.RED, Tile.DARK, Tile.WHITE},
-            {Tile.WHITE, Tile.BLUE, Tile.YELLOW, Tile.RED, Tile.DARK},
-            {Tile.DARK, Tile.WHITE, Tile.BLUE, Tile.YELLOW, Tile.RED},
-            {Tile.RED, Tile.DARK, Tile.WHITE, Tile.BLUE, Tile.YELLOW},
-            {Tile.YELLOW, Tile.RED, Tile.DARK, Tile.WHITE, Tile.BLUE},
+            {new Tile(TileColor.BLUE), new Tile(TileColor.YELLOW), new Tile(TileColor.RED), new Tile(TileColor.DARK), new Tile(TileColor.WHITE)},
+            {new Tile(TileColor.WHITE), new Tile(TileColor.BLUE), new Tile(TileColor.YELLOW), new Tile(TileColor.RED), new Tile(TileColor.DARK)},
+            {new Tile(TileColor.DARK), new Tile(TileColor.WHITE), new Tile(TileColor.BLUE), new Tile(TileColor.YELLOW), new Tile(TileColor.RED)},
+            {new Tile(TileColor.RED), new Tile(TileColor.DARK), new Tile(TileColor.WHITE), new Tile(TileColor.BLUE), new Tile(TileColor.YELLOW)},
+            {new Tile(TileColor.YELLOW), new Tile(TileColor.RED), new Tile(TileColor.DARK), new Tile(TileColor.WHITE), new Tile(TileColor.BLUE)},
         };
         assertArrayEquals(expected, wall.getTiles());
     }

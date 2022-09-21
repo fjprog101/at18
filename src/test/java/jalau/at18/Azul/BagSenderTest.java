@@ -8,15 +8,15 @@ import java.util.List;
 import org.junit.Test;
 
 public class BagSenderTest {
-    
+
     @Test
     public void shouldGetBag (){
         BagSender bag = new BagSender();
         List<Tile> testbag = new ArrayList<>();
-        testbag.add(Tile.RED);
-        testbag.add(Tile.RED);
-        testbag.add(Tile.RED);
-        testbag.add(Tile.RED);
+        testbag.add(new Tile(TileColor.RED));
+        testbag.add(new Tile(TileColor.RED));
+        testbag.add(new Tile(TileColor.RED));
+        testbag.add(new Tile(TileColor.RED));
         bag.saveBag();
         assertNotEquals(testbag, bag.saveRemainingBag());
     }

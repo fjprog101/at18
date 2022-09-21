@@ -8,11 +8,11 @@ public class PyramidTest {
         Pyramid pyramid = new Pyramid();
         pyramid.initializePyramid();
         Tile [][] expected = {
-            {Tile.NULL, Tile.NULL, Tile.NULL, Tile.NULL, Tile.EMPTY},
-            {Tile.NULL, Tile.NULL, Tile.NULL, Tile.EMPTY, Tile.EMPTY},
-            {Tile.NULL, Tile.NULL, Tile.EMPTY, Tile.EMPTY, Tile.EMPTY},
-            {Tile.NULL, Tile.EMPTY, Tile.EMPTY, Tile.EMPTY, Tile.EMPTY},
-            {Tile.EMPTY, Tile.EMPTY, Tile.EMPTY, Tile.EMPTY, Tile.EMPTY},
+            {new Tile(TileColor.NULL), new Tile(TileColor.NULL), new Tile(TileColor.NULL), new Tile(TileColor.NULL), new Tile(TileColor.EMPTY)},
+            {new Tile(TileColor.NULL), new Tile(TileColor.NULL), new Tile(TileColor.NULL), new Tile(TileColor.EMPTY), new Tile(TileColor.EMPTY)},
+            {new Tile(TileColor.NULL), new Tile(TileColor.NULL), new Tile(TileColor.EMPTY), new Tile(TileColor.EMPTY), new Tile(TileColor.EMPTY)},
+            {new Tile(TileColor.NULL), new Tile(TileColor.EMPTY), new Tile(TileColor.EMPTY), new Tile(TileColor.EMPTY), new Tile(TileColor.EMPTY)},
+            {new Tile(TileColor.EMPTY), new Tile(TileColor.EMPTY), new Tile(TileColor.EMPTY), new Tile(TileColor.EMPTY), new Tile(TileColor.EMPTY)},
         };
         assertArrayEquals(expected, pyramid.getTilesMatrix());
     }
@@ -22,19 +22,19 @@ public class PyramidTest {
         Pyramid pyramid = new Pyramid();
         pyramid.initializePyramid();
         Tile[][] expected = {
-            {Tile.NULL, Tile.NULL, Tile.NULL, Tile.NULL, Tile.WHITE},
-            {Tile.NULL, Tile.NULL, Tile.NULL, Tile.EMPTY, Tile.DARK},
-            {Tile.NULL, Tile.NULL, Tile.EMPTY, Tile.EMPTY, Tile.EMPTY},
-            {Tile.NULL, Tile.EMPTY, Tile.YELLOW, Tile.YELLOW, Tile.EMPTY},
-            {Tile.RED, Tile.RED, Tile.RED, Tile.EMPTY, Tile.EMPTY},
+            {new Tile(TileColor.NULL), new Tile(TileColor.NULL), new Tile(TileColor.NULL), new Tile(TileColor.NULL), new Tile(TileColor.WHITE)},
+            {new Tile(TileColor.NULL), new Tile(TileColor.NULL), new Tile(TileColor.NULL), new Tile(TileColor.EMPTY), new Tile(TileColor.DARK)},
+            {new Tile(TileColor.NULL), new Tile(TileColor.NULL), new Tile(TileColor.EMPTY), new Tile(TileColor.EMPTY), new Tile(TileColor.EMPTY)},
+            {new Tile(TileColor.NULL), new Tile(TileColor.EMPTY), new Tile(TileColor.YELLOW), new Tile(TileColor.YELLOW), new Tile(TileColor.EMPTY)},
+            {new Tile(TileColor.RED), new Tile(TileColor.RED), new Tile(TileColor.RED), new Tile(TileColor.EMPTY), new Tile(TileColor.EMPTY)},
         };
-        pyramid.addTileToPyramid(0, 4, Tile.WHITE);
-        pyramid.addTileToPyramid(1, 4, Tile.DARK);
-        pyramid.addTileToPyramid(3, 2, Tile.YELLOW);
-        pyramid.addTileToPyramid(3, 3, Tile.YELLOW);
-        pyramid.addTileToPyramid(4, 0, Tile.RED);
-        pyramid.addTileToPyramid(4, 1, Tile.RED);
-        pyramid.addTileToPyramid(4, 2, Tile.RED);
+        pyramid.addTileToPyramid(0, 4, new Tile(TileColor.WHITE));
+        pyramid.addTileToPyramid(1, 4, new Tile(TileColor.DARK));
+        pyramid.addTileToPyramid(3, 2, new Tile(TileColor.YELLOW));
+        pyramid.addTileToPyramid(3, 3, new Tile(TileColor.YELLOW));
+        pyramid.addTileToPyramid(4, 0, new Tile(TileColor.RED));
+        pyramid.addTileToPyramid(4, 1, new Tile(TileColor.RED));
+        pyramid.addTileToPyramid(4, 2, new Tile(TileColor.RED));
         assertArrayEquals(expected, pyramid.getTilesMatrix());
     }
 
@@ -42,19 +42,19 @@ public class PyramidTest {
     public void shouldCleanPyramid(){
         Pyramid pyramid = new Pyramid();
         Tile [][] expected = {
-            {Tile.NULL, Tile.NULL, Tile.NULL, Tile.NULL, Tile.EMPTY},
-            {Tile.NULL, Tile.NULL, Tile.NULL, Tile.EMPTY, Tile.EMPTY},
-            {Tile.NULL, Tile.NULL, Tile.EMPTY, Tile.EMPTY, Tile.EMPTY},
-            {Tile.NULL, Tile.EMPTY, Tile.EMPTY, Tile.EMPTY, Tile.EMPTY},
-            {Tile.EMPTY, Tile.EMPTY, Tile.EMPTY, Tile.EMPTY, Tile.EMPTY},
+            {new Tile(TileColor.NULL), new Tile(TileColor.NULL), new Tile(TileColor.NULL), new Tile(TileColor.NULL), new Tile(TileColor.EMPTY)},
+            {new Tile(TileColor.NULL), new Tile(TileColor.NULL), new Tile(TileColor.NULL), new Tile(TileColor.EMPTY), new Tile(TileColor.EMPTY)},
+            {new Tile(TileColor.NULL), new Tile(TileColor.NULL), new Tile(TileColor.EMPTY), new Tile(TileColor.EMPTY), new Tile(TileColor.EMPTY)},
+            {new Tile(TileColor.NULL), new Tile(TileColor.EMPTY), new Tile(TileColor.EMPTY), new Tile(TileColor.EMPTY), new Tile(TileColor.EMPTY)},
+            {new Tile(TileColor.EMPTY), new Tile(TileColor.EMPTY), new Tile(TileColor.EMPTY), new Tile(TileColor.EMPTY), new Tile(TileColor.EMPTY)},
         };
-        pyramid.addTileToPyramid(0, 4, Tile.WHITE);
-        pyramid.addTileToPyramid(1, 4, Tile.DARK);
-        pyramid.addTileToPyramid(3, 2, Tile.YELLOW);
-        pyramid.addTileToPyramid(3, 3, Tile.YELLOW);
-        pyramid.addTileToPyramid(4, 0, Tile.RED);
-        pyramid.addTileToPyramid(4, 1, Tile.RED);
-        pyramid.addTileToPyramid(4, 2, Tile.RED);
+        pyramid.addTileToPyramid(0, 4, new Tile(TileColor.WHITE));
+        pyramid.addTileToPyramid(1, 4, new Tile(TileColor.DARK));
+        pyramid.addTileToPyramid(3, 2, new Tile(TileColor.YELLOW));
+        pyramid.addTileToPyramid(3, 3, new Tile(TileColor.YELLOW));
+        pyramid.addTileToPyramid(4, 0, new Tile(TileColor.RED));
+        pyramid.addTileToPyramid(4, 1, new Tile(TileColor.RED));
+        pyramid.addTileToPyramid(4, 2, new Tile(TileColor.RED));
         pyramid.cleanPyramide();
         assertArrayEquals(expected, pyramid.getTilesMatrix());
     }
