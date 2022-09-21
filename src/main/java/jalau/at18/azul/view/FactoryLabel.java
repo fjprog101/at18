@@ -2,12 +2,11 @@ package jalau.at18.azul.view;
 
 
 import java.awt.*;
-
 import javax.swing.JLabel;
 
 public class FactoryLabel extends JLabel {
-    private static final int OVAL_WIDTH = 90;
-    private static final int OVAL_HEIGHT = 130;
+    private static final int OVAL_WIDTH = 100;
+    private static final int OVAL_HEIGHT = 150;
 
     @Override
     public void paint(Graphics g) {
@@ -15,4 +14,6 @@ public class FactoryLabel extends JLabel {
         g.setColor(Color.GRAY);
         g.fillOval(0, 0, OVAL_WIDTH, OVAL_HEIGHT);
     }
+
 }
+

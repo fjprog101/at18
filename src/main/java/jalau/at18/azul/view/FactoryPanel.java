@@ -12,7 +12,6 @@ public class FactoryPanel extends JPanel {
     public static final int ROWS = 3;
     public static final int COLS = 2;
 
-
     public FactoryPanel() {
         setLayout(new GridLayout(ROWS, COLS));
         setBounds(X_INITIAL_POSITION, Y_INITIAL_POSITION, WIDTH, HEIGHT);
@@ -24,5 +23,4 @@ public class FactoryPanel extends JPanel {
             add(new FactoryLabel());
         }
     }
-
 }
