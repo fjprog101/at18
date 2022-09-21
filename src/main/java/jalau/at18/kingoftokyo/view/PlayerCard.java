@@ -14,6 +14,7 @@ public class PlayerCard extends JPanel {
         setBackground(Color.BLUE);
         setBounds(POSITION, POSITION + (HEIGHT + POSITION) * playerNumber, WIDTH,
                 HEIGHT);
+        setLayout(null);
         add(new PlayerCardName(monster.getName()));
     }
 
