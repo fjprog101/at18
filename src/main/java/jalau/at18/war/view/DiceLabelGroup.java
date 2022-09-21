@@ -11,10 +11,6 @@ public class DiceLabelGroup extends JPanel {
     public static final int DEFAULT_WIDTH = 100;
     public static final int DEFAULT_HEIGHT = 20;
 
-    /**
-     * Create a group of DieLabel objects tha will be shown in
-     * UI. By default, three dice are set
-     */
     public DiceLabelGroup() {
         add(new DieLabel());
         add(new DieLabel());
