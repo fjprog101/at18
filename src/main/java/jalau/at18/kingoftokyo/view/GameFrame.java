@@ -1,8 +1,8 @@
 package jalau.at18.kingoftokyo.view;
 
 import java.awt.Component;
-
 import javax.swing.JFrame;
+import jalau.at18.kingoftokyo.*;
 
 import jalau.at18.kingoftokyo.*;
 
@@ -14,7 +14,6 @@ public class GameFrame extends JFrame {
     PlayerCard playerCard;
 
     public GameFrame() {
-        playerCard = new PlayerCard();
         setResizable(false);
         initialize();
 
@@ -29,8 +28,8 @@ public class GameFrame extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
         setVisible(true);
-        add(playerCard.playerOnePanel);
-        add(playerCard.playerTwoPanel);
+        add(new PlayerCard(Monster.ALIENOID, 0));
+        add(new PlayerCard(Monster.SPACE_PENGUIN, 1));
 
     }
 }
