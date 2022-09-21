@@ -6,7 +6,7 @@ import jalau.at18.kingoftokyo.view.general.HeaderPanel;
 import javax.swing.*;
 import java.awt.*;
 
-public class ChooseFirstPlayerFrame extends JFrame{
+public class ChooseFirstPlayerFrame extends JFrame {
     private static final int DEFAULT_POS = 30;
     private static final int DEFAULT_WIDTH = 1200;
     private static final int DEFAULT_HEIGHT = 700;
