@@ -15,22 +15,17 @@ public class TileButtonGroup extends JPanel {
         add(new FactoryButton());
         add(new FactoryButton());
         add(new FactoryButton());
-        // add(new TileLabel());
+        //add(new TileLabel());
         setBounds(posx, posy, width, height);
         // updateButtonGroup(tileList);
     }
 
     public void updateButtonGroup(List<Tile> newValues) {
         for (int index = 0; index < getComponentCount(); index++) {
-            TileButton dieLabel = (TileButton) getComponent(index);
+            FactoryButton dieLabel = (FactoryButton) getComponent(index);
             Tile dieSource = newValues.get(index);
-            dieLabel.setText(dieSource.getColor().getName());
-            // setBounds(300, 300, 100, 100);
+            dieLabel.updateLabel(dieSource.getColor().getName());
         }
-        // for (int index = 0; index < getComponentCount(); index++) {
-        // TileLabel dieLabel = (TileLabel) getComponent(index);
-        // Tile dieSource = newValues.get(index);
-        // dieLabel.setText(dieSource.getColor().getName());
-        // }
+
     }
 }
