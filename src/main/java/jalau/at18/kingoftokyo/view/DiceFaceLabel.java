@@ -21,7 +21,7 @@ public class DiceFaceLabel extends JLabel {
     }
 
     private ImageIcon generateIcon(String image) {
-        String imagePath = "kingtokyo/";
+        String imagePath = "kingoftokyo/";
         BufferedImage bufferedImage = null;
         try {
             URL resource = getClass().getClassLoader().getResource(imagePath + image);

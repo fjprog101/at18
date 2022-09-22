@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import jalau.at18.kingoftokyo.*;
+import jalau.at18.kingoftokyo.view.card.CardPanel;
 
 import org.junit.Test;
 

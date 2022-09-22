@@ -1,4 +1,4 @@
-package jalau.at18.kingoftokyo.view;
+package jalau.at18.kingoftokyo.view.card;
 
 import java.awt.Font;
 import java.awt.*;
