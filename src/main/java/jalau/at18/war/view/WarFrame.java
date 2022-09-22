@@ -32,7 +32,11 @@ public class WarFrame extends JFrame {
         // Add components
         rollerButton = new RollerButton(gameController);
         diceLabelGroup = new DiceLabelGroup();
+        diceLabelGroup = new DiceLabelGroup();
+        diceLabelGroup = new DiceLabelGroup();
         add(rollerButton);
+        add(diceLabelGroup);
+        add(diceLabelGroup);
         add(diceLabelGroup);
 
         // Configure frame
