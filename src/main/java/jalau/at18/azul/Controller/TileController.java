@@ -1,4 +1,4 @@
-package jalau.at18.azul.Controller;
+package jalau.at18.azul.controller;
 
 import jalau.at18.azul.BagSender;
 import jalau.at18.azul.Tile;
