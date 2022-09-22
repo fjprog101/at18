@@ -7,7 +7,7 @@ import java.util.Random;
 public class DeckCards {
     private List<Card> deskOfCards;
 
-    DeckCards() {
+    public DeckCards() {
         deskOfCards = new ArrayList<Card>();
         createDesk();
     }
