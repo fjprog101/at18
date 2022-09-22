@@ -12,19 +12,19 @@ public class FactorySenderToCenterBoardTest {
     @Test
     public void shouldSendTilesFromFactoryToCenterBoard() {
         CenterTileBoard centerBoard = new CenterTileBoard();
-        centerBoard.add(Tile.FIRST_PLAYER);
+        centerBoard.add(new Tile(TileColor.FIRST_PLAYER));
         FactorySenderToCenterBoard senderToCenterBoard = new FactorySenderToCenterBoard(centerBoard);
         List<Tile> tilesToCenter = new ArrayList<>(){
             {
-                add(Tile.DARK);
-                add(Tile.DARK);
+                add(new Tile(TileColor.DARK));
+                add(new Tile(TileColor.DARK));
             }
         };
         List<Tile> expectedTilesCenter = new ArrayList<>(){
             {
-                add(Tile.FIRST_PLAYER);
-                add(Tile.DARK);
-                add(Tile.DARK);
+                add(new Tile(TileColor.FIRST_PLAYER));
+                add(new Tile(TileColor.DARK));
+                add(new Tile(TileColor.DARK));
             }
         };
         assertEquals(expectedTilesCenter, senderToCenterBoard.sendTilesToCenterBoard(tilesToCenter));
@@ -32,19 +32,19 @@ public class FactorySenderToCenterBoardTest {
         FactorySenderToCenterBoard senderToCenterBoard2 = new FactorySenderToCenterBoard(centerBoard);
         List<Tile> tilesToCenter2 = new ArrayList<>(){
             {
-                add(Tile.WHITE);
-                add(Tile.WHITE);
-                add(Tile.YELLOW);
+                add(new Tile(TileColor.WHITE));
+                add(new Tile(TileColor.WHITE));
+                add(new Tile(TileColor.YELLOW));
             }
         };
         List<Tile> expectedTilesCenter2 = new ArrayList<>(){
             {
-                add(Tile.FIRST_PLAYER);
-                add(Tile.DARK);
-                add(Tile.DARK);
-                add(Tile.WHITE);
-                add(Tile.WHITE);
-                add(Tile.YELLOW);
+                add(new Tile(TileColor.FIRST_PLAYER));
+                add(new Tile(TileColor.DARK));
+                add(new Tile(TileColor.DARK));
+                add(new Tile(TileColor.WHITE));
+                add(new Tile(TileColor.WHITE));
+                add(new Tile(TileColor.YELLOW));
             }
         };
         assertEquals(expectedTilesCenter2, senderToCenterBoard2.sendTilesToCenterBoard(tilesToCenter2));
@@ -52,20 +52,20 @@ public class FactorySenderToCenterBoardTest {
         FactorySenderToCenterBoard senderToCenterBoard3 = new FactorySenderToCenterBoard(centerBoard);
         List<Tile> tilesToCenter3 = new ArrayList<>(){
             {
-                add(Tile.DARK);
-                add(Tile.BLUE);
+                add(new Tile(TileColor.DARK));
+                add(new Tile(TileColor.BLUE));
             }
         };
         List<Tile> expectedTilesCenter3 = new ArrayList<>(){
             {
-                add(Tile.FIRST_PLAYER);
-                add(Tile.DARK);
-                add(Tile.DARK);
-                add(Tile.WHITE);
-                add(Tile.WHITE);
-                add(Tile.YELLOW);
-                add(Tile.DARK);
-                add(Tile.BLUE);
+                add(new Tile(TileColor.FIRST_PLAYER));
+                add(new Tile(TileColor.DARK));
+                add(new Tile(TileColor.DARK));
+                add(new Tile(TileColor.WHITE));
+                add(new Tile(TileColor.WHITE));
+                add(new Tile(TileColor.YELLOW));
+                add(new Tile(TileColor.DARK));
+                add(new Tile(TileColor.BLUE));
             }
         };
         assertEquals(expectedTilesCenter3, senderToCenterBoard3.sendTilesToCenterBoard(tilesToCenter3));

@@ -71,7 +71,6 @@ public class CenterTileBoardTest {
                     add(new Tile(TileColor.DARK));
                 }
             };
-            center.addTilestoCenter(newCenterTiles);
         center.addTilestoCenter(newCenterTiles);
         CenterTileBoard expected = new CenterTileBoard();
         expected.add(new Tile(TileColor.FIRST_PLAYER));
