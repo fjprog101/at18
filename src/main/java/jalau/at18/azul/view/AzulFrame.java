@@ -13,9 +13,9 @@ public class AzulFrame extends JFrame {
     public static final int TILES_HEIGHT = 50;
     public static final int TILES_WIDTH = 20;
     public static final int CENTER = 100;
-    private TileButtonGroup tileButtonGroup;
-    private TileButtonGroup tileButtonGroup1;
-    private TileButtonGroup tileButtonGroup2;
+    private BagButton tileButtonGroup;
+    private BagButton tileButtonGroup1;
+    private BagButton tileButtonGroup2;
     private TileButton tileButton;
     private TileController gameController;
 
@@ -38,18 +38,18 @@ public class AzulFrame extends JFrame {
         initialize();
     }
 
-    public TileButtonGroup getTileButtonGroup() {
+    public BagButton getTileButtonGroup() {
         return this.tileButtonGroup;
     }
 
-    public TileButtonGroup getTileButtonGroup1() {
+    public BagButton getTileButtonGroup1() {
         return this.tileButtonGroup1;
     }
 
     public void initialize() {
         tileButton = new TileButton(gameController);
-        tileButtonGroup = new TileButtonGroup(HEIGHT, TILES_WIDTH, INITIAL_POSITION, DEFAULT_POS1);
-        tileButtonGroup1 = new TileButtonGroup(HEIGHT + INITIAL_POSITION, TILES_WIDTH, CENTER, TILES_HEIGHT);
+        tileButtonGroup = new BagButton(HEIGHT, TILES_WIDTH, INITIAL_POSITION, DEFAULT_POS1);
+        tileButtonGroup1 = new BagButton(HEIGHT + INITIAL_POSITION, TILES_WIDTH, CENTER, TILES_HEIGHT);
         add(tileButton);
         add(tileButtonGroup);
         add(tileButtonGroup1);
