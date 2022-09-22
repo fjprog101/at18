@@ -13,7 +13,7 @@ public class GenerateARandomBluePointForBluePoints {
             case three:
                 bluePoints.addPoints(new BlueCard(false, three));
             default:
-                System.out.println("Random number out of range");
+                System.out.println("Random number out of Range");
         }
         return bluePoints;
     }
