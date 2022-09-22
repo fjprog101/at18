@@ -17,7 +17,7 @@ public class CardPanel extends JPanel {
     private static final int COLOR_B = 43;
     private static final int EDGE_SPACE = 5;
 
-    public CardPanel(int cardNumber, Card card) {
+    public CardPanel(Card card) {
         setSize(CARD_WIDTH, CARD_HEIGHT);
         setBackground(new Color(COLOR_R, COLOR_G, COLOR_B));
         setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));

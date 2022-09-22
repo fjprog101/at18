@@ -5,6 +5,8 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+import jalau.at18.kingoftokyo.view.card.CardsGroupPanel;
+
 public class CardsGroupPanelTest {
     @Test
     public void shouldShowACard() {
