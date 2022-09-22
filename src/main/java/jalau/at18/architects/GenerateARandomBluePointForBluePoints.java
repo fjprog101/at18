@@ -10,8 +10,10 @@ public class GenerateARandomBluePointForBluePoints {
         switch (randomNum) {
             case two:
                 bluePoints.addPoints(new BlueCard(true, two));
+                return bluePoints;
             case three:
                 bluePoints.addPoints(new BlueCard(false, three));
+                return bluePoints;
             default:
                 System.out.println("Random number out of Range");
         }
