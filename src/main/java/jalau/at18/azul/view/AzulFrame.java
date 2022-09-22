@@ -46,7 +46,6 @@ public class AzulFrame extends JFrame {
     }
 
     public void initialize() {
-        tileButton = new TileButton(gameController);
         tileButtonGroup = new BagButton(HEIGHT, TILES_WIDTH, INITIAL_POSITION, DEFAULT_POS1);
         tileButtonGroup1 = new BagButton(HEIGHT + INITIAL_POSITION, TILES_WIDTH, CENTER, TILES_HEIGHT);
         centertileButtonGroup = new CenterButtons(HEIGHT + CENTER, DEFAULT_POS1 + CENTER, INITIAL_POSITION + TILES_HEIGHT, TILES_HEIGHT + CENTER);
