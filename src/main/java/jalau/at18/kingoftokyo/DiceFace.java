@@ -6,7 +6,7 @@ public enum DiceFace {
     THREE("dicethree.png", 3),
     HEALING("dicefourhealing.png", 1),
     ENERGY("dicefiveenergy.png", 1),
-    PUNDING("dicesixpunching.png", 1);
+    PUNCHING("dicesixpunching.png", 1);
 
     private String representativeValue;
     private int pointValue;
