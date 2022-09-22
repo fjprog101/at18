@@ -9,9 +9,13 @@ public class Factory {
     private List<Tile> tiles;
     private List<Tile> tilesSelected;
 
-    public Factory(List<Tile> tiles) {
-        this.tiles = tiles;
+    public Factory() {
+        this.tiles = new ArrayList<>();
         this.tilesSelected = new ArrayList<>();
+    }
+
+    public void addTilesFromBag(List<Tile> tilesFromBag) {
+        this.tiles = tilesFromBag;
     }
 
     public List<Tile> getTiles() {

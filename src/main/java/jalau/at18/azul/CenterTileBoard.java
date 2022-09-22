@@ -8,10 +8,8 @@ public class CenterTileBoard extends ArrayList<Tile> {
         return this;
     }
 
-    public CenterTileBoard addTilestoCenter(Tile tile, int count) {
-        for (int position = 0; position < count; ++position) {
-            this.add(tile);
-        }
+    public CenterTileBoard addTilestoCenter(List<Tile> newCenterTiles) {
+        this.addAll(newCenterTiles);
         return this;
     }
 
