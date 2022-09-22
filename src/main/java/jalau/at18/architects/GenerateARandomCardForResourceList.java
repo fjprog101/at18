@@ -26,7 +26,7 @@ public class GenerateARandomCardForResourceList {
         }
     }
 
-    public int getRandomNumber(){
+    public int getRandomNumber() {
         return randomNum;
     }
 }
