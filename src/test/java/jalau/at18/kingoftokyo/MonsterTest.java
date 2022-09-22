@@ -10,6 +10,6 @@ public class MonsterTest {
         assertEquals("Alienoid", Monster.ALIENOID.getName());
         assertEquals(10, Monster.ALIENOID.getLifePoints());
         assertEquals(0, Monster.ALIENOID.getVictoryPoints());
-        assertEquals("/at18/src/main/resources/kot/Alienoid.png", Monster.ALIENOID.getIconPath());
+        assertEquals("src/main/resources/kingoftokyo/monsters/Alienoid.png", Monster.ALIENOID.getIconPath());
     }
 }
