@@ -4,7 +4,6 @@ import java.awt.Color;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
-import javax.swing.JToggleButton;
 
 public class TileButton extends JButton {
     public static final int DEFAULT_SIZE = 50;

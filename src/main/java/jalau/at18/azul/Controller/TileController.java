@@ -23,5 +23,6 @@ public class TileController implements ActionListener {
         bag.saveBag();
         List<Tile> game = bag.getFactoryGroup();
         azulFrame.getTileButtonGroup().updateButtonGroup(game);
+        azulFrame.getTileButtonGroup1().updateButtonGroup(game);
     }
 }
