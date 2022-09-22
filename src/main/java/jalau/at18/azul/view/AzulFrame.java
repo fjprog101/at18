@@ -2,7 +2,7 @@ package jalau.at18.azul.view;
 
 import javax.swing.*;
 import jalau.at18.azul.BagSender;
-import jalau.at18.azul.Controller.TileController;
+import jalau.at18.azul.controller.TileController;
 
 public class AzulFrame extends JFrame {
     public static final int DEFAULT_POS1 = 500;
@@ -15,6 +15,9 @@ public class AzulFrame extends JFrame {
     public static final int CENTER = 100;
     private BagButton tileButtonGroup;
     private BagButton tileButtonGroup1;
+    private CenterButtons centertileButtonGroup;
+    private FloorButtons floorButtonGroup;
+    private FloorButtons floorButtonGroup1;
     private BagButton tileButtonGroup2;
     private TileButton tileButton;
     private TileController gameController;
@@ -28,10 +31,10 @@ public class AzulFrame extends JFrame {
       // add(new TileButtonGroup(HEIGHT + INITIAL_POSITION, DEFAULT_SIZE +
       // TILES_WIDTH, CENTER, TILES_HEIGHT));
       // add(new TileButtonGroup(HEIGHT, DEFAULT_POS1, CENTER, TILES_HEIGHT));
-        add(new CenterList(HEIGHT + CENTER, DEFAULT_POS1 + CENTER, INITIAL_POSITION + CENTER, TILES_HEIGHT + CENTER));
-        add(new FloorList(CENTER, TILES_HEIGHT + DEFAULT_SIZE, DEFAULT_SIZE, INITIAL_POSITION));
-        add(new FloorList(CENTER, HEIGHT + CENTER, DEFAULT_SIZE, INITIAL_POSITION));
-        add(new FactoryPanel());
+        //add(new CenterList(HEIGHT + CENTER, DEFAULT_POS1 + CENTER, INITIAL_POSITION + CENTER, TILES_HEIGHT + CENTER));
+        //add(new FloorList(CENTER, TILES_HEIGHT + DEFAULT_SIZE, DEFAULT_SIZE, INITIAL_POSITION));
+        //add(new FloorList(CENTER, HEIGHT + CENTER, DEFAULT_SIZE, INITIAL_POSITION));
+        //add(new FactoryPanel());
         BagSender bag = new BagSender();
         bag.saveBag();
         gameController = new TileController(this, bag.getFactoryGroup());
@@ -45,14 +48,29 @@ public class AzulFrame extends JFrame {
     public BagButton getTileButtonGroup1() {
         return this.tileButtonGroup1;
     }
+    public CenterButtons getCenterTileButtonGroup() {
+        return this.centertileButtonGroup;
+    }
+    public FloorButtons getfloorButtonGroup() {
+        return this.floorButtonGroup;
+    }
+    public FloorButtons getfloorButtonGroup1() {
+        return this.floorButtonGroup1;
+    }
 
     public void initialize() {
         tileButton = new TileButton(gameController);
         tileButtonGroup = new BagButton(HEIGHT, TILES_WIDTH, INITIAL_POSITION, DEFAULT_POS1);
         tileButtonGroup1 = new BagButton(HEIGHT + INITIAL_POSITION, TILES_WIDTH, CENTER, TILES_HEIGHT);
+        centertileButtonGroup = new CenterButtons(HEIGHT + CENTER, DEFAULT_POS1 + CENTER, INITIAL_POSITION + TILES_HEIGHT, TILES_HEIGHT + CENTER);
+        floorButtonGroup = new FloorButtons(TILES_HEIGHT, TILES_HEIGHT + DEFAULT_SIZE, DEFAULT_POS1, INITIAL_POSITION);
+        floorButtonGroup1 = new FloorButtons(TILES_HEIGHT, HEIGHT + CENTER, DEFAULT_POS1, INITIAL_POSITION);
         add(tileButton);
         add(tileButtonGroup);
         add(tileButtonGroup1);
+        add(centertileButtonGroup);
+        add(floorButtonGroup);
+        add(floorButtonGroup1);
         setLayout(null);
         setBounds(INITIAL_POSITION, INITIAL_POSITION, WIDTH, HEIGHT);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
