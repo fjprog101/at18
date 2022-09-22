@@ -7,10 +7,10 @@ import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
 public class PlayerCardName extends JLabel {
-    private static final int POSITION_X = 50;
+    private static final int POSITION_X = 80;
     private static final int POSITION_Y = 0;
-    private static final int WIDTH = 200;
-    private static final int HEIGHT = 50;
+    private static final int WIDTH = 140;
+    private static final int HEIGHT = 20;
     private static final int FONT_SIZE = 17;
     private static final int FONT_STYLE = 1;
 

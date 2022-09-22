@@ -1,9 +1,9 @@
 package jalau.at18.kingoftokyo;
 
 public enum Monster {
-    ALIENOID("Alienoid", 0, 0, "/at18/src/main/resources/kot/Alienoid.png"),
-    SPACE_PENGUIN("Space Penguin", 0, 0, "/at18/src/main/resources/kot/Space_Penguin.png"),
-    CYBER_KITTY("Cyber Kitty", 0, 0, "/at18/src/main/resources/kot/Cyber_Kitty.png");
+    ALIENOID("Alienoid", 0, 0, "src/main/resources/kingoftokyo/monsters/Alienoid.png"),
+    SPACE_PENGUIN("Space Penguin", 0, 0, "src/main/resources/kingoftokyo/monsters/Space_Penguin.png"),
+    CYBER_KITTY("Cyber Kitty", 0, 0, "src/main/resources/kingoftokyo/monsters/Cyber_Kitty.png");
 
     private final String name;
     private int lifePoints;
