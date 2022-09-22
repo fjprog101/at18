@@ -2,7 +2,7 @@ package jalau.at18.azul.view;
 
 import javax.swing.*;
 import jalau.at18.azul.BagSender;
-import jalau.at18.azul.controller.TileController;
+import jalau.at18.azul.controllerazul.TileController;
 
 public class AzulFrame extends JFrame {
     public static final int DEFAULT_POS1 = 500;
@@ -18,23 +18,10 @@ public class AzulFrame extends JFrame {
     private CenterButtons centertileButtonGroup;
     private FloorButtons floorButtonGroup;
     private FloorButtons floorButtonGroup1;
-    private BagButton tileButtonGroup2;
     private TileButton tileButton;
     private TileController gameController;
 
     public AzulFrame() {
-      // add(new TileButtonGroup(HEIGHT, TILES_WIDTH, INITIAL_POSITION,
-      // DEFAULT_POS1));
-      // add(new TileButtonGroup(HEIGHT + INITIAL_POSITION, TILES_WIDTH, CENTER,
-      // TILES_HEIGHT));
-      // add(new TileButtonGroup(HEIGHT, DEFAULT_SIZE, CENTER, TILES_HEIGHT));
-      // add(new TileButtonGroup(HEIGHT + INITIAL_POSITION, DEFAULT_SIZE +
-      // TILES_WIDTH, CENTER, TILES_HEIGHT));
-      // add(new TileButtonGroup(HEIGHT, DEFAULT_POS1, CENTER, TILES_HEIGHT));
-        //add(new CenterList(HEIGHT + CENTER, DEFAULT_POS1 + CENTER, INITIAL_POSITION + CENTER, TILES_HEIGHT + CENTER));
-        //add(new FloorList(CENTER, TILES_HEIGHT + DEFAULT_SIZE, DEFAULT_SIZE, INITIAL_POSITION));
-        //add(new FloorList(CENTER, HEIGHT + CENTER, DEFAULT_SIZE, INITIAL_POSITION));
-        //add(new FactoryPanel());
         BagSender bag = new BagSender();
         bag.saveBag();
         gameController = new TileController(this, bag.getFactoryGroup());
