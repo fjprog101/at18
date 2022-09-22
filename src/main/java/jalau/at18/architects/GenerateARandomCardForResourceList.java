@@ -25,4 +25,8 @@ public class GenerateARandomCardForResourceList {
                 return EnumResourceList.GOLD.getCard();
         }
     }
+
+    public int getRandomNumber(){
+        return randomNum;
+    }
 }
