@@ -1,7 +1,7 @@
 package jalau.at18.kingoftokyo.view.whoStartsTheGame;
 
 import javax.swing.*;
-
+/*
 public class RollerButton extends JButton {
     public static final int DEFAULT_POSX = 800;
     public static final int DEFAULT_POSY = 200;
@@ -12,4 +12,4 @@ public class RollerButton extends JButton {
         super("Roll Dice");
         setBounds(DEFAULT_POSX, DEFAULT_POSY, DEFAULT_WIDTH, DEFAULT_HEIGHT);
     }
-}
+} */
