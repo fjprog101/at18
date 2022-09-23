@@ -1,0 +1,23 @@
+package jalau.at18.azul.view;
+
+
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+
+public class PyramidPointer extends JButton {
+
+    public static final int CENTER = 100;
+    public static final int DEFAULT_POS1 = 400;
+
+    public PyramidPointer() {
+        setSize(DEFAULT_POS1, DEFAULT_POS1);
+        setLocation(CENTER, CENTER);
+        Icon icon = new ImageIcon("src/main/resources/Azul/triangle.png");
+        setIcon(icon);
+        setContentAreaFilled(false);
+        setFocusPainted(false);
+        setBorderPainted(false);
+
+    }
+}
