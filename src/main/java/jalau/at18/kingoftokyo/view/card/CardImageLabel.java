@@ -17,7 +17,7 @@ public class CardImageLabel extends JLabel {
         setImage(imagePath);
         setVisible(true);
     }
-
+ 
     public void setImage(String imagePath) {
         ImageIcon image = new ImageIcon(PATH + imagePath);
         Icon icon = new ImageIcon(image.getImage().getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT));

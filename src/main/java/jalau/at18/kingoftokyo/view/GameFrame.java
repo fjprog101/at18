@@ -5,6 +5,8 @@ import jalau.at18.kingoftokyo.controller.GameFrameController;
 import jalau.at18.kingoftokyo.view.card.CardPanel;
 import jalau.at18.kingoftokyo.*;
 
+import jalau.at18.kingoftokyo.view.card.BuyCardButton;
+import jalau.at18.kingoftokyo.view.card.CardButtonsGroupPanel;
 import jalau.at18.kingoftokyo.view.card.CardsGroupPanel;
 
 public class GameFrame extends JFrame {
@@ -26,6 +28,7 @@ public class GameFrame extends JFrame {
         add(new PlayerCard(Monster.ALIENOID, 0, player1));
         add(new PlayerCard(Monster.SPACE_PENGUIN, 1, player2));
         add(new CardsGroupPanel());
+        add(new CardButtonsGroupPanel());
     }
 
     private void initialize() {
