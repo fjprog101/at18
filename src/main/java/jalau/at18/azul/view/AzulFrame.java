@@ -2,6 +2,7 @@ package jalau.at18.azul.view;
 
 import javax.swing.*;
 import jalau.at18.azul.BagSender;
+import jalau.at18.azul.controllerazul.MoveTileController;
 import jalau.at18.azul.controllerazul.TileController;
 
 public class AzulFrame extends JFrame {
@@ -52,6 +53,8 @@ public class AzulFrame extends JFrame {
         tileButtonGroup = new FactoryButtonGroup(HEIGHT, TILES_WIDTH, INITIAL_POSITION, DEFAULT_POS1);
         tileButtonGroup1 = new FactoryButtonGroup(HEIGHT + INITIAL_POSITION, TILES_WIDTH, INITIAL_POSITION, DEFAULT_POS1);
         centertileButtonGroup = new CenterButtons(HEIGHT + CENTER, DEFAULT_POS1 + CENTER, INITIAL_POSITION + TILES_HEIGHT, TILES_HEIGHT + CENTER);
+        tileButtonGroup = new BagButton(HEIGHT, TILES_WIDTH, INITIAL_POSITION, DEFAULT_POS1, centertileButtonGroup);
+        tileButtonGroup1 = new BagButton(HEIGHT + INITIAL_POSITION, TILES_WIDTH, CENTER, TILES_HEIGHT, centertileButtonGroup);
         floorButtonGroup = new FloorButtons(TILES_HEIGHT, TILES_HEIGHT + DEFAULT_SIZE, DEFAULT_POS1, INITIAL_POSITION);
         floorButtonGroup1 = new FloorButtons(TILES_HEIGHT, HEIGHT + CENTER, DEFAULT_POS1, INITIAL_POSITION);
         add(tileButton);

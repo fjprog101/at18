@@ -10,7 +10,6 @@ import java.util.List;
 public class TileController implements ActionListener {
     private AzulFrame azulFrame;
     private List<Tile> gameazul;
-    private BagSender game1;
 
     public TileController(AzulFrame frame, List<Tile> newValues) {
         this.azulFrame = frame;
