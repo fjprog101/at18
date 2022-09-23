@@ -4,7 +4,6 @@ import javax.swing.JToggleButton;
 import javax.swing.ImageIcon;
 import java.awt.Color;
 import jalau.at18.azul.TileColor;
-import java.awt.Color;
 
 public class TilesButton extends JToggleButton {
     //public static final int TILES_HEIGHT = 50;
@@ -17,7 +16,7 @@ public class TilesButton extends JToggleButton {
     public TilesButton() {
         tileLabel = new TileLabel();
         newpath = TileColor.EMPTY.getColorPath();
-        icon = new ImageIcon("src/main/resources/Azul/" + "myicon.png");
+        icon = new ImageIcon("src/main/resources/azul/" + newpath);
         setSize(DEFAULT_POS1, DEFAULT_POS1);
         setLocation(CENTER, CENTER);
         setBackground(Color.GRAY);
@@ -30,7 +29,7 @@ public class TilesButton extends JToggleButton {
     }
 
     public void updateColor(String newText) {
-        ImageIcon newIcon = new ImageIcon("src/main/resources/Azul/" + newText);
+        ImageIcon newIcon = new ImageIcon("src/main/resources/azul/" + newText);
         setIcon(newIcon);
     }
 }
