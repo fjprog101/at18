@@ -10,12 +10,11 @@ public class WhoStartFrame extends JFrame {
     private static final int DEFAULT_HEIGHT = 700;
 
     public WhoStartFrame() {
-        PanelSouth panelSouth = new PanelSouth(this); //panel para el boton
-
+        PanelSouth panelSouth = new PanelSouth(this);
         setResizable(false);
-
-
+        WhoStartLabel whoStartLabel = new WhoStartLabel();
         initialize();
+        add(whoStartLabel, BorderLayout.CENTER);
         add(panelSouth, BorderLayout.SOUTH);
         add(new Player1(), BorderLayout.WEST);
         add(new Player2(), BorderLayout.EAST);

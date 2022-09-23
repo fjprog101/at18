@@ -17,6 +17,5 @@ public class WhoStartController implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         whostartframe.setVisible(false);
         new GameFrame();
-        //new WhoStartFrame();
     }
 }

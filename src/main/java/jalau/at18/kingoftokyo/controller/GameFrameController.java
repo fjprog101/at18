@@ -16,8 +16,6 @@ public class GameFrameController implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         gameFrame.setVisible(false);
-        //new GameFrame();
         new WhoStartFrame();
-        //gameFrame.rollDice();
     }
 }
