@@ -1,7 +1,6 @@
 package jalau.at18.architects.view;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-
 import java.awt.Font;
 import static jalau.at18.architects.Constants.Label.*;
 public class StartLabel extends JPanel {
@@ -9,7 +8,7 @@ public class StartLabel extends JPanel {
     private JLabel nextJLabel;
     public StartLabel() {
         labelWelcome = new JLabel(MESSAGE);
-        setBounds(POS_X, POS_Y, WIDTH_LABEL, HEIGHT_LABEL);
+        setBounds(POS_X_LABEL, POS_Y_LABEL, WIDTH_LABEL, HEIGHT_LABEL);
         labelWelcome.setFont(new Font("Serif", Font.PLAIN, SIZE_FONT));
         add(labelWelcome);
         nextJLabel = new JLabel(MESSAGE2);

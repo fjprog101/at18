@@ -15,7 +15,7 @@ public class ContantsTest {
     public void shouldReturnValuesOfFinalClassLabel() {
         Constants constants = new Constants();
         Constants.Label label = constants.new Label();
-        assertEquals(120, label.POS_X);
+        assertEquals(120, label.POS_X_LABEL);
     }
     @Test
     public void shouldReturnValuesOfFinalClassButton() {
