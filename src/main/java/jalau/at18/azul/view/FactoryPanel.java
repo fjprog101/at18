@@ -16,7 +16,6 @@ public class FactoryPanel extends JPanel {
         setLayout(new GridLayout(ROWS, COLS));
         setBounds(X_INITIAL_POSITION, Y_INITIAL_POSITION, WIDTH, HEIGHT);
         addFactories();
-       //add(new TileButtonGroup(590, Y_INITIAL_POSITION, 200, 600));
     }
 
     public void addFactories() {

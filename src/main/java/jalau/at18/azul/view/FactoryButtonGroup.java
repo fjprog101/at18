@@ -3,18 +3,20 @@ package jalau.at18.azul.view;
 import java.util.List;
 import javax.swing.JPanel;
 
+import jalau.at18.azul.CenterTileBoard;
 import jalau.at18.azul.Tile;
-//import jalau.at18.azul.Controller.TileController;
+import jalau.at18.azul.controllerazul.MoveTileController;
 
 public class FactoryButtonGroup extends JPanel {
-   // private TileController gameController;
-  //  private List<Tile> tileList;
+    private MoveTileController moveTiles;
 
-    public FactoryButtonGroup(int posx, int posy, int width, int height) {
-        add(new TilesButton());
-        add(new TilesButton());
-        add(new TilesButton());
-        add(new TilesButton());
+    public FactoryButtonGroup(int posx, int posy, int width, int height, CenterButtons tilesCenter) {
+        CenterTileBoard center = new CenterTileBoard();
+        moveTiles = new MoveTileController(tilesCenter, center);
+        add(new TilesButton(moveTiles));
+        add(new TilesButton(moveTiles));
+        add(new TilesButton(moveTiles));
+        add(new TilesButton(moveTiles));
         setBounds(posx, posy, width, height);
     }
 
