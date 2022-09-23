@@ -9,8 +9,8 @@ public final class Constants {
         public static final String WINDOW_NAME = "7 Wonders Architect";
     }
     public final class Label {
-        public static final int POS_X = 120;
-        public static final int POS_Y = 0;
+        public static final int POS_X_LABEL = 120;
+        public static final int POS_Y_LABEL = 0;
         public static final int WIDTH_LABEL = 500;
         public static final int HEIGHT_LABEL = 100;
         public static final int SIZE_FONT = 25;
@@ -35,6 +35,15 @@ public final class Constants {
         public static final int FOUR = 4;
         public static final int TWO = 2;
         public static final int THREE = 3;
+
+    }
+    public final class WonderStructure {
+        public static final int HEIGHT = 100;
+        public static final int MIDDLE = 50;
+        public static final int DEFAULT_POSX = 280;
+        public static final int DEFAULT_POSY = 500;
+        public static final int DEFAULT_WIDTH = 150;
+        public static final int DEFAULT_HEIGHT = 150;
 
     }
 }
