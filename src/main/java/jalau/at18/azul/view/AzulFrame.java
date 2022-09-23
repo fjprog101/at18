@@ -18,6 +18,7 @@ public class AzulFrame extends JFrame {
     private CenterButtons centertileButtonGroup;
     private FloorButtons floorButtonGroup;
     private FloorButtons floorButtonGroup1;
+    private PointerGroup pointergroup;
     private BagButton tileButton;
     private TileController gameController;
 
@@ -54,6 +55,8 @@ public class AzulFrame extends JFrame {
         tileButtonGroup1 = new FactoryButtonGroup(HEIGHT + INITIAL_POSITION, TILES_WIDTH, INITIAL_POSITION, DEFAULT_POS1, centertileButtonGroup);
         floorButtonGroup = new FloorButtons(TILES_HEIGHT, TILES_HEIGHT + DEFAULT_SIZE, DEFAULT_POS1, INITIAL_POSITION);
         floorButtonGroup1 = new FloorButtons(TILES_HEIGHT, HEIGHT + CENTER, DEFAULT_POS1, INITIAL_POSITION);
+        pointergroup = new PointerGroup(100, 190, 50, 125);
+        add(pointergroup);
         add(tileButton);
         add(tileButtonGroup);
         add(tileButtonGroup1);
