@@ -2,6 +2,7 @@ package jalau.at18.kingoftokyo.view;
 
 import javax.swing.JFrame;
 import jalau.at18.kingoftokyo.controller.GameFrameController;
+import jalau.at18.kingoftokyo.view.PlayerCards.PlayerCard;
 import jalau.at18.kingoftokyo.*;
 
 import jalau.at18.kingoftokyo.view.card.CardsGroupPanel;
@@ -11,7 +12,7 @@ public class GameFrame extends JFrame {
     private static final int DEFAULT_WIDTH = 1200;
     private static final int DEFAULT_HEIGHT = 700;
 
-    //Controller
+    // Controller
     private GameFrameController gameFrameController;
     private Player player1 = new Player();
     private Player player2 = new Player();
