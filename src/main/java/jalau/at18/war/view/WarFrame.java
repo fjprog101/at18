@@ -20,10 +20,10 @@ public class WarFrame extends JFrame {
 
     private void initialize(Game game) {
         // Add 4 players
-        add(new PlayerPanel(game), BorderLayout.NORTH);
-        add(new PlayerPanel(game), BorderLayout.EAST);
-        add(new PlayerPanel(game), BorderLayout.WEST);
-        add(new PlayerPanel(game), BorderLayout.SOUTH);
+        add(new PlayerPanel(game), BorderLayout.PAGE_START);
+        add(new PlayerPanel(game), BorderLayout.LINE_END);
+        add(new PlayerPanel(game), BorderLayout.PAGE_END);
+        add(new PlayerPanel(game), BorderLayout.LINE_START);
 
         // Add world map
         JLabel worldMap = new JLabel(new ImageIcon("src/main/resources/war/world-map.png"));
