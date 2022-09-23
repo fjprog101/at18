@@ -5,10 +5,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JPanel;
 import java.awt.*;
 
-import jalau.at18.kingoftokyo.CompleteCard;
 import jalau.at18.kingoftokyo.DeckCards;
-import jalau.at18.kingoftokyo.DiscardCards;
-import jalau.at18.kingoftokyo.view.card.CardPanel;
 
 public class CardsGroupPanel extends JPanel {
     private static final int CARD_WIDTH = 470;

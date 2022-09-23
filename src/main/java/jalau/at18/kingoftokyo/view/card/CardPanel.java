@@ -10,16 +10,14 @@ import javax.swing.JPanel;
 import jalau.at18.kingoftokyo.Card;
 
 public class CardPanel extends JPanel {
-    private static final int CARD_WIDTH = 150;
-    private static final int CARD_HEIGHT = 220;
-    private static final int COLOR_R = 2;
-    private static final int COLOR_G = 11;
-    private static final int COLOR_B = 43;
+    private static final int[] CARD_SIZE = {150, 220};
+    private static final int[] COLOR = {2, 11, 43};
     private static final int EDGE_SPACE = 5;
+    private static final int INDEX_DESCRIPTION = 4;
 
     public CardPanel(Card card) {
-        setSize(CARD_WIDTH, CARD_HEIGHT);
-        setBackground(new Color(COLOR_R, COLOR_G, COLOR_B));
+        setSize(CARD_SIZE[0], CARD_SIZE[1]);
+        setBackground(new Color(COLOR[0], COLOR[1], COLOR[2]));
         setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
         add(new CardCostLabel(card.getCost()));
         add(new CardNameLabel(card.getName()));
@@ -27,5 +25,11 @@ public class CardPanel extends JPanel {
         add(new CardKindLabel());
         add(new CardDescriptionLabel(card.getDescription()));
         add(Box.createRigidArea(new Dimension(0, EDGE_SPACE)));
+    }
+    public void setCard(Card newCard) {
+        ((CardCostLabel) getComponent(0)).setText(newCard.getCost() + "                          ");
+        ((CardNameLabel) getComponent(1)).setText(newCard.getName());
+        ((CardImageLabel) getComponent(2)).setImage(newCard.getImagePath());
+        ((CardDescriptionLabel) getComponent(INDEX_DESCRIPTION)).setDescription(newCard.getDescription());
     }
 }
