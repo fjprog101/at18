@@ -12,12 +12,12 @@ public class WhoStartFrame extends JFrame {
     public WhoStartFrame() {
         PanelSouth panelSouth = new PanelSouth(this);
         setResizable(false);
-        WhoStartLabel whoStartLabel = new WhoStartLabel();
+        ShowResultsLabel whoStartLabel = new ShowResultsLabel();
         initialize();
         add(whoStartLabel, BorderLayout.CENTER);
         add(panelSouth, BorderLayout.SOUTH);
-        add(new Player1(), BorderLayout.WEST);
-        add(new Player2(), BorderLayout.EAST);
+        add(new Player1Panel(), BorderLayout.WEST);
+        add(new Player2Panel(), BorderLayout.EAST);
 
     }
 

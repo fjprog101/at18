@@ -6,11 +6,11 @@ import jalau.at18.kingoftokyo.controller.RollDiceSectionController;
 import jalau.at18.kingoftokyo.view.RollDiceSectionUI;
 import java.awt.*;
 
-public class Player1 extends JPanel {
+public class Player2Panel extends JPanel  {
     private RollDiceSectionController rollDiceSectionController;
-    private JLabel player1 = new JLabel("Player 1");
-    public Player1() {
-        add(player1);
+    private JLabel player2 = new JLabel("Player 2");
+    public Player2Panel() {
+        add(player2);
         RollDiceSectionUI rollDiceSectionUI = new RollDiceSectionUI();
         add(rollDiceSectionUI);
         rollDiceSectionController = new RollDiceSectionController(rollDiceSectionUI);
