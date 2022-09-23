@@ -1,7 +1,5 @@
 package jalau.at18.azul.view;
 
-import java.io.IOException;
-
 import javax.swing.JPanel;
 
 public class PointerGroup extends JPanel {
