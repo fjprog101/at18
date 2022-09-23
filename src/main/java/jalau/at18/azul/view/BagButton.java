@@ -1,29 +1,18 @@
 package jalau.at18.azul.view;
 
-import java.util.List;
-import javax.swing.JPanel;
+import java.awt.Color;
+import java.awt.event.ActionListener;
 
-import jalau.at18.azul.Tile;
-//import jalau.at18.azul.Controller.TileController;
+import javax.swing.JButton;
 
-public class BagButton extends JPanel {
-   // private TileController gameController;
-  //  private List<Tile> tileList;
-
-    public BagButton(int posx, int posy, int width, int height) {
-        add(new TilesButton());
-        add(new TilesButton());
-        add(new TilesButton());
-        add(new TilesButton());
-        setBounds(posx, posy, width, height);
-    }
-
-    public void updateButtonGroup(List<Tile> newValues) {
-        for (int index = 0; index < getComponentCount(); index++) {
-            TilesButton dieLabel = (TilesButton) getComponent(index);
-            Tile dieSource = newValues.get(index);
-            dieLabel.updateLabel(dieSource.getColor().getName());
-        }
-
+public class BagButton extends JButton {
+    public static final int DEFAULT_SIZE = 50;
+    public static final int DEFAULT_POS1  = 500;
+    public static final int DEFAULT_POS2  = 40;
+    public BagButton(ActionListener listener) {
+        setSize(DEFAULT_SIZE, DEFAULT_SIZE);
+        setLocation(DEFAULT_POS1, DEFAULT_POS2);
+        setBackground(Color.PINK);
+        addActionListener(listener);
     }
 }
