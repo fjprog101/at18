@@ -17,7 +17,6 @@ public class RollDiceSectionControllerTest {
     @Test
     public void shouldInitializeDiceFaceLabels() {
         final int QUANTITY_DICES = 6;
-
         List<DiceFace> mockedResult = new ArrayList<DiceFace>();
         mockedResult.add(DiceFace.ONE);
         mockedResult.add(DiceFace.TWO);
@@ -39,6 +38,5 @@ public class RollDiceSectionControllerTest {
         assertNotNull(listDiceFaceLabel.get(3));
         assertNotNull(listDiceFaceLabel.get(4));
         assertNotNull(listDiceFaceLabel.get(5));
-
     }
 }

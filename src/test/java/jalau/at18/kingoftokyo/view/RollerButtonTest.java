@@ -14,6 +14,4 @@ public class RollerButtonTest {
         assertEquals(RollerButton.DEFAULT_WIDTH, roller.getBounds().getWidth(), 0);
         assertEquals(RollerButton.DEFAULT_HEIGHT, roller.getBounds().getHeight(), 0);
     }
-
-
 }

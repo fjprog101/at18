@@ -12,6 +12,6 @@ public class RollerButton extends JButton {
     public RollerButton(ActionListener listener) {
         super("Roll Dice");
         setBounds(DEFAULT_POSX, DEFAULT_POSY, DEFAULT_WIDTH, DEFAULT_HEIGHT);
-        //addActionListener(listener);
+        addActionListener(listener);
     }
 }
