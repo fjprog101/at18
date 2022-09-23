@@ -15,7 +15,7 @@ public class CardsGroupPanelTest {
         assertEquals(700, cardsGroup.getBounds().getX(), 0);
         assertEquals(185, cardsGroup.getBounds().getY(), 0);
         assertEquals(470, cardsGroup.getBounds().getWidth(), 0);
-        assertEquals(280, cardsGroup.getBounds().getHeight(), 0);
+        assertEquals(250, cardsGroup.getBounds().getHeight(), 0);
         assertTrue(cardsGroup.isVisible());
     }
 }

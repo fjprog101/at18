@@ -2,7 +2,6 @@ package jalau.at18.kingoftokyo.view;
 
 import javax.swing.JFrame;
 import jalau.at18.kingoftokyo.controller.GameFrameController;
-import jalau.at18.kingoftokyo.view.card.CardPanel;
 import jalau.at18.kingoftokyo.*;
 
 import jalau.at18.kingoftokyo.view.card.CardsGroupPanel;

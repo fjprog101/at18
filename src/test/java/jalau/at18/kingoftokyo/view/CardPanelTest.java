@@ -18,7 +18,7 @@ public class CardPanelTest {
         CardPanel cardPanel1 = new CardPanel(new CompleteCard(DiscardCards.ENERGIZE));
         assertEquals(7, cardPanel1.getComponentCount());
         assertEquals(150, cardPanel1.getBounds().getWidth(), 0);
-        assertEquals(280, cardPanel1.getBounds().getHeight(), 0);
+        assertEquals(250, cardPanel1.getBounds().getHeight(), 0);
         assertTrue(cardPanel1.isVisible());
 
         assertEquals("8                         ", ((CardCostLabel)cardPanel1.getComponent(0)).getText());

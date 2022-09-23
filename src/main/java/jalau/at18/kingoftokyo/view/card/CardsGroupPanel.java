@@ -9,7 +9,7 @@ import jalau.at18.kingoftokyo.CompleteCard;
 import jalau.at18.kingoftokyo.DeckCards;
 
 public class CardsGroupPanel extends JPanel {
-    private static final int[] CARD_SIZE = {470, 280};
+    private static final int[] CARD_SIZE = {470, 250};
     private static final int[] CARD_POS = {700, 185};
     private static final int CARDS_SEPARATION = 10;
     private static final int THIRD_CARD = 4;

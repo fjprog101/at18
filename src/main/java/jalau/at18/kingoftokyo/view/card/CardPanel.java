@@ -13,7 +13,7 @@ import jalau.at18.kingoftokyo.DeckCards;
 import jalau.at18.kingoftokyo.controller.BuyCardButtomController;
 
 public class CardPanel extends JPanel {
-    private static final int[] CARD_SIZE = {150, 280};
+    private static final int[] CARD_SIZE = {150, 250};
     private static final int[] COLOR = {2, 11, 43};
     private static final int EDGE_SPACE = 5;
     private static final int INDEX_DESCRIPTION = 4;
