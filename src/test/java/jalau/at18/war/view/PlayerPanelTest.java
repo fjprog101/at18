@@ -10,6 +10,6 @@ public class PlayerPanelTest {
     @Test
     public void shouldHaveRollerAndDice() {
         PlayerPanel playerPanel = new PlayerPanel(new Game());
-        assertEquals(2, playerPanel.getComponentCount());
+        assertEquals(4, playerPanel.getComponentCount());
     }
 }
