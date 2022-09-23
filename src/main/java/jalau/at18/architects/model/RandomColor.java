@@ -1,4 +1,4 @@
-package jalau.at18.architects;
+package jalau.at18.architects.model;
 
 import java.util.Random;
 

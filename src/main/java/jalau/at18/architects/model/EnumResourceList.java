@@ -1,4 +1,4 @@
-package jalau.at18.architects;
+package jalau.at18.architects.model;
 
 enum EnumResourceList {
     WATER(new GrayCard(Resource.WATER), 1),

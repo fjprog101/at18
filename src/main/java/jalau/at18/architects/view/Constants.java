@@ -1,4 +1,4 @@
-package jalau.at18.architects;
+package jalau.at18.architects.view;
 
 public final class Constants {
 
@@ -6,6 +6,7 @@ public final class Constants {
         public static final int DEFAULT_POS_X = 100;
         public static final int DEFAULT_POS_Y = 100;
         public static final int DEFAULT_SIZE = 700;
+        public static final int DEFAULT_SIZE2 = 670;
         public static final String WINDOW_NAME = "7 Wonders Architect";
     }
     public final class Label {

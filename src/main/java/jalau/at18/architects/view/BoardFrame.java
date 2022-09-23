@@ -20,12 +20,12 @@ public class BoardFrame extends JFrame {
     public static final int COLOR2 = 245;
     public static final int COLOR3 = 230;
     private String direction = "src/main/resources/architects/images/reverse.jpg";
-    private MiddleDeck middleDeck;
+    //private MiddleDeck middleDeck;
     public BoardFrame() {
         initialize();
     }
     private void initialize() {
-        middleDeck = new MiddleDeck();
+        //middleDeck = new MiddleDeck();
         //add(middleDeck);
         JLabel mazo = new JLabel();
         mazo.setBounds(DEFAULT_SIZE_5, DEFAULT_SIZE_4, DEFAULT_POS_X, DEFAULT_SIZE_3);

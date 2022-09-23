@@ -1,4 +1,4 @@
-package jalau.at18.architects;
+package jalau.at18.architects.model;
 
 public class GenerateARandomBluePointForBluePoints {
     private final int two = 2;

@@ -1,4 +1,4 @@
-package jalau.at18.architects;
+package jalau.at18.architects.model;
 
 public enum Colors {
     RED(1, "Red"),
