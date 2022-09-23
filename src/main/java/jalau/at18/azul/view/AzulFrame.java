@@ -13,12 +13,12 @@ public class AzulFrame extends JFrame {
     public static final int TILES_HEIGHT = 50;
     public static final int TILES_WIDTH = 20;
     public static final int CENTER = 100;
-    private BagButton tileButtonGroup;
-    private BagButton tileButtonGroup1;
+    private FactoryButtonGroup tileButtonGroup;
+    private FactoryButtonGroup tileButtonGroup1;
     private CenterButtons centertileButtonGroup;
     private FloorButtons floorButtonGroup;
     private FloorButtons floorButtonGroup1;
-    private TileButton tileButton;
+    private BagButton tileButton;
     private TileController gameController;
 
     public AzulFrame() {
@@ -28,11 +28,11 @@ public class AzulFrame extends JFrame {
         initialize();
     }
 
-    public BagButton getTileButtonGroup() {
+    public FactoryButtonGroup getTileButtonGroup() {
         return this.tileButtonGroup;
     }
 
-    public BagButton getTileButtonGroup1() {
+    public FactoryButtonGroup getTileButtonGroup1() {
         return this.tileButtonGroup1;
     }
     public CenterButtons getCenterTileButtonGroup() {
@@ -48,9 +48,9 @@ public class AzulFrame extends JFrame {
     public void initialize() {
         add(new PyramidBoard());
         add(new WallBoard());
-        tileButton = new TileButton(gameController);
-        tileButtonGroup = new BagButton(HEIGHT, TILES_WIDTH, INITIAL_POSITION, DEFAULT_POS1);
-        tileButtonGroup1 = new BagButton(HEIGHT + INITIAL_POSITION, TILES_WIDTH, CENTER, TILES_HEIGHT);
+        tileButton = new BagButton(gameController);
+        tileButtonGroup = new FactoryButtonGroup(HEIGHT, TILES_WIDTH, INITIAL_POSITION, DEFAULT_POS1);
+        tileButtonGroup1 = new FactoryButtonGroup(HEIGHT + INITIAL_POSITION, TILES_WIDTH, INITIAL_POSITION, DEFAULT_POS1);
         centertileButtonGroup = new CenterButtons(HEIGHT + CENTER, DEFAULT_POS1 + CENTER, INITIAL_POSITION + TILES_HEIGHT, TILES_HEIGHT + CENTER);
         floorButtonGroup = new FloorButtons(TILES_HEIGHT, TILES_HEIGHT + DEFAULT_SIZE, DEFAULT_POS1, INITIAL_POSITION);
         floorButtonGroup1 = new FloorButtons(TILES_HEIGHT, HEIGHT + CENTER, DEFAULT_POS1, INITIAL_POSITION);
