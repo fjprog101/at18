@@ -2,8 +2,9 @@ package jalau.at18.kingoftokyo.view;
 
 import javax.swing.JFrame;
 import jalau.at18.kingoftokyo.controller.GameFrameController;
-import jalau.at18.kingoftokyo.view.card.CardPanel;
 import jalau.at18.kingoftokyo.*;
+
+import jalau.at18.kingoftokyo.view.card.CardsGroupPanel;
 
 public class GameFrame extends JFrame {
     private static final int DEFAULT_POS = 30;
@@ -21,11 +22,9 @@ public class GameFrame extends JFrame {
         gameFrameController = new GameFrameController(this);
         initialize();
         add(new DeckImagePanel());
-        add(new CardPanel(0, new CompleteCard(DiscardCards.ENERGIZE)));
-        add(new CardPanel(1, new CompleteCard(DiscardCards.COMMUTER_TRAIN)));
-        add(new CardPanel(2, new CompleteCard(DiscardCards.APARTMENT_BULIDING)));
         add(new PlayerCard(Monster.ALIENOID, 0, player1));
         add(new PlayerCard(Monster.SPACE_PENGUIN, 1, player2));
+        add(new CardsGroupPanel());
     }
 
     private void initialize() {

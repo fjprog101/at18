@@ -5,26 +5,34 @@ import java.util.List;
 import java.util.Random;
 
 public class DeckCards {
-    private List<Card> deskOfCards;
+    private List<Card> deckOfCards;
 
-    DeckCards() {
-        deskOfCards = new ArrayList<Card>();
-        createDesk();
+    public DeckCards() {
+        deckOfCards = new ArrayList<Card>();
+        createDeck();
     }
 
-    public List<Card> getDesk() {
-        return deskOfCards;
+    public List<Card> getDeck() {
+        return deckOfCards;
     }
 
-    public void createDesk() {
+    public void createDeck() {
         for (DiscardCards discardCards : DiscardCards.values()) {
-            deskOfCards.add(new CompleteCard(discardCards));
+            deckOfCards.add(new CompleteCard(discardCards));
         }
     }
 
     public Card getRandomCard() {
         Random random = new Random();
-        int indexRandom = random.nextInt(deskOfCards.size());
-        return deskOfCards.get(indexRandom);
+        int indexRandom = random.nextInt(deckOfCards.size());
+        return deckOfCards.get(indexRandom);
+    }
+
+    public void removeCard(CompleteCard card) {
+        for (int index = 0; index < deckOfCards.size(); index++) {
+            if (card.getCard() == ((CompleteCard) deckOfCards.get(index)).getCard()) {
+                deckOfCards.remove(deckOfCards.get(index));
+            }
+        }
     }
 }

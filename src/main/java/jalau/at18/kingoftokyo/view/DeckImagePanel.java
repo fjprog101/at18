@@ -17,7 +17,6 @@ public class DeckImagePanel extends JPanel {
     public DeckImagePanel() {
         setBounds(POS_X, POS_Y, WIDTH, HEIGHT);
         JLabel deckImage = new JLabel();
-        deckImage.setBounds(0, 0, WIDTH, HEIGHT);
         ImageIcon image = new ImageIcon(PATH);
         Icon icon = new ImageIcon(image.getImage().getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT));
         deckImage.setIcon(icon);

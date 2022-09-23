@@ -4,32 +4,34 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import jalau.at18.kingoftokyo.*;
-import jalau.at18.kingoftokyo.view.card.CardPanel;
+import jalau.at18.kingoftokyo.view.card.*;
+
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 import org.junit.Test;
 
 public class CardPanelTest {
     @Test
     public void shouldShowACard() {
-        CardPanel cardPanel1 = new CardPanel(0, new CompleteCard(DiscardCards.ENERGIZE));
-        assertEquals(5, cardPanel1.getComponentCount());
-        assertEquals(700, cardPanel1.getBounds().getX(), 0);
-        assertEquals(185, cardPanel1.getBounds().getY(), 0);
+        DeckCards deck = new DeckCards();
+        CardPanel cardPanel1 = new CardPanel(new CompleteCard(DiscardCards.ENERGIZE));
+        assertEquals(7, cardPanel1.getComponentCount());
         assertEquals(150, cardPanel1.getBounds().getWidth(), 0);
-        assertEquals(220, cardPanel1.getBounds().getHeight(), 0);
+        assertEquals(250, cardPanel1.getBounds().getHeight(), 0);
         assertTrue(cardPanel1.isVisible());
 
-        CardPanel cardPanel2 = new CardPanel(1, new CompleteCard(DiscardCards.ENERGIZE));
-        assertEquals(5, cardPanel2.getComponentCount());
-        assertEquals(860, cardPanel2.getBounds().getX(), 0);
-        assertEquals(185, cardPanel2.getBounds().getY(), 0);
-        assertEquals(150, cardPanel2.getBounds().getWidth(), 0);
-        assertEquals(220, cardPanel2.getBounds().getHeight(), 0);
-        assertTrue(cardPanel2.isVisible());
+        assertEquals("8                         ", ((CardCostLabel)cardPanel1.getComponent(0)).getText());
+        assertEquals("ENERGIZE", ((CardNameLabel)cardPanel1.getComponent(1)).getText());
+        assertEquals("<html><p style=\"width:100px\" style=\"text-align:center\" >Healing: 0, Damage: 0, Score: 0, Energy: 9</p></html>", ((CardDescriptionLabel)cardPanel1.getComponent(4)).getText());
 
-        CardPanel cardPanel3 = new CardPanel(2, new CompleteCard(DiscardCards.ENERGIZE));
-        assertEquals(5, cardPanel3.getComponentCount());
-        assertEquals(1020, cardPanel3.getBounds().getX(), 0);
-        assertTrue(cardPanel2.isVisible());
+        CompleteCard mockCard =new CompleteCard(DiscardCards.APARTMENT_BULIDING);
+        DeckCards mockedDeck = mock(DeckCards.class);
+        when(mockedDeck.getRandomCard()).thenReturn(mockCard);
+
+        cardPanel1.setCard(mockedDeck);
+        assertEquals("5                         ", ((CardCostLabel)cardPanel1.getComponent(0)).getText());
+        assertEquals("APARTMENT_BULIDING", ((CardNameLabel)cardPanel1.getComponent(1)).getText());
+        assertEquals("<html><p style=\"width:100px\" style=\"text-align:center\" >Healing: 0, Damage: 0, Score: 3, Energy: 0</p></html>", ((CardDescriptionLabel)cardPanel1.getComponent(4)).getText());
     }
 }
