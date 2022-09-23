@@ -8,14 +8,16 @@ public class Controller implements ActionListener {
     public Controller(WondersFrame frame) {
         this.wondersFrame = frame;
     }
-
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == wondersFrame.getButton()) {
-
+            wondersFrame.getContentPane().removeAll();
+            wondersFrame.repaint();
             System.out.println("Pressed start");
+            wondersFrame.addNewComponents();
         }
         wondersFrame.setLabels("Game players: " + wondersFrame.getChoice().getSelectedItem());
     }
 }
+
 
