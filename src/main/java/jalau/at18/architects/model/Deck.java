@@ -1,10 +1,9 @@
 package jalau.at18.architects.model;
 
 import java.util.Random;
-
 public class Deck {
     private CardFace[] cards;
-    Deck() {
+    public Deck() {
         cards = CardFace.values();
     }
 
