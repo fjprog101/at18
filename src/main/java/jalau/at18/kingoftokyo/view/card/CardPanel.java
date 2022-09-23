@@ -27,7 +27,7 @@ public class CardPanel extends JPanel {
         add(Box.createRigidArea(new Dimension(0, EDGE_SPACE)));
     }
     public void setCard(Card newCard) {
-        ((CardCostLabel) getComponent(0)).setText(newCard.getCost() + "                          ");
+        ((CardCostLabel) getComponent(0)).setCost(newCard.getCost());
         ((CardNameLabel) getComponent(1)).setText(newCard.getName());
         ((CardImageLabel) getComponent(2)).setImage(newCard.getImagePath());
         ((CardDescriptionLabel) getComponent(INDEX_DESCRIPTION)).setDescription(newCard.getDescription());

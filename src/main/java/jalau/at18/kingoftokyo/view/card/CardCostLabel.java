@@ -10,10 +10,13 @@ public class CardCostLabel extends JLabel {
     private static final int FONT_SIZE = 21;
 
     public CardCostLabel(int cost) {
-        super(cost + "                          ");
+        setCost(cost);
         setAlignmentX(Component.CENTER_ALIGNMENT);
         setFont(new Font("Arial Rounded MT Bold", FONT_STYLE, FONT_SIZE));
         setForeground(Color.WHITE);
         setVisible(true);
+    }
+    public void setCost(int cost) {
+        setText(cost + "                         ");
     }
 }

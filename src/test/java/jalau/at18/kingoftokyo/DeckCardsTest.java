@@ -9,13 +9,25 @@ public class DeckCardsTest {
 
     @Test
     public void deskShouldHaveCards() {
-        DeckCards deskCards = new DeckCards();
-        assertEquals(11, deskCards.getDesk().size());
+        DeckCards cardsDeck = new DeckCards();
+        assertEquals(11, cardsDeck.getDeck().size());
     }
 
     @Test
     public void deskShouldReturnARandomCard() {
-        DeckCards deskCards = new DeckCards();
-        assertNotNull(deskCards.getRandomCard());
+        DeckCards cardsDeck = new DeckCards();
+        assertNotNull(cardsDeck.getRandomCard());
+    }
+
+    @Test
+    public void deskRemoveACardOfDeck() {
+        DeckCards cardsDeck = new DeckCards();
+        assertEquals(11, cardsDeck.getDeck().size());
+        cardsDeck.removeCard(new CompleteCard(DiscardCards.ENERGIZE));
+        assertEquals(10, cardsDeck.getDeck().size());
+        cardsDeck.removeCard(new CompleteCard(DiscardCards.ENERGIZE));
+        assertEquals(10, cardsDeck.getDeck().size());
+        cardsDeck.removeCard(new CompleteCard(DiscardCards.APARTMENT_BULIDING));
+        assertEquals(9, cardsDeck.getDeck().size());
     }
 }
