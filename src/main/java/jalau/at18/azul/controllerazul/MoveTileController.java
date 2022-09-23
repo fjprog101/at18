@@ -29,5 +29,6 @@ public class MoveTileController implements ActionListener {
         listColors.add(color);
         center.addTilestoCenter(listColors);
         centerButtonPanel.updateCenterButtons(center);
+        b.updateLabel("EMPTY");
     }
 }
