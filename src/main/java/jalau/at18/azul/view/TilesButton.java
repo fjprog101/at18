@@ -7,7 +7,7 @@ import jalau.at18.azul.TileColor;
 import java.awt.event.ActionListener;
 
 public class TilesButton extends JButton {
-    //public static final int TILES_HEIGHT = 50;
+
     public static final int CENTER = 100;
     public static final int DEFAULT_POS1 = 400;
     private TileLabel tileLabel;

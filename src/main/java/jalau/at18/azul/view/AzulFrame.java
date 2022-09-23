@@ -25,7 +25,7 @@ public class AzulFrame extends JFrame {
     public AzulFrame() {
         BagSender bag = new BagSender();
         bag.saveBag();
-        gameController = new TileController(this, bag.getFactoryGroup());
+        gameController = new TileController(this, bag);
         initialize();
     }
 

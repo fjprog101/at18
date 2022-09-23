@@ -9,19 +9,20 @@ import java.util.List;
 
 public class TileController implements ActionListener {
     private AzulFrame azulFrame;
-    private List<Tile> gameazul;
+    private BagSender gameAzul;
 
-    public TileController(AzulFrame frame, List<Tile> newValues) {
+    public TileController(AzulFrame frame, BagSender newValues) {
         this.azulFrame = frame;
-        this.gameazul = newValues;
+        this.gameAzul = newValues;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        BagSender bag = new BagSender();
-        bag.saveBag();
-        List<Tile> game = bag.getFactoryGroup();
+        List<Tile> game = gameAzul.getFactoryGroup();
         azulFrame.getTileButtonGroup().updateButtonGroup(game);
-        azulFrame.getTileButtonGroup1().updateButtonGroup(game);
+        gameAzul.removeTiles();
+        List<Tile> game1 = gameAzul.getFactoryGroup();
+        azulFrame.getTileButtonGroup1().updateButtonGroup(game1);
+        gameAzul.removeTiles();
     }
 }

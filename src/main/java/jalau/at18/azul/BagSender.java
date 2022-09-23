@@ -25,6 +25,10 @@ public class BagSender {
         return factory;
     }
 
+    public void removeTiles() {
+        bag.subList(0, RANGE).clear();
+    }
+
     public List<Tile> saveRemainingBag() {
         return bag;
     }
