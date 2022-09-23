@@ -1,7 +1,6 @@
 package jalau.at18.azul.view;
 
 import javax.swing.JButton;
-import javax.swing.JToggleButton;
 import javax.swing.ImageIcon;
 import java.awt.Color;
 import jalau.at18.azul.TileColor;
@@ -18,7 +17,7 @@ public class TilesButton extends JButton {
     public TilesButton(ActionListener listener) {
         tileLabel = new TileLabel();
         newpath = TileColor.EMPTY.getColorPath();
-        icon = new ImageIcon("src/main/resources/azul/" + newpath);
+        icon = new ImageIcon("src/main/resources/Azul/" + newpath);
         setSize(DEFAULT_POS1, DEFAULT_POS1);
         setLocation(CENTER, CENTER);
         setBackground(Color.GRAY);
@@ -32,7 +31,7 @@ public class TilesButton extends JButton {
     }
 
     public void updateColor(String newText) {
-        ImageIcon newIcon = new ImageIcon("src/main/resources/azul/" + newText);
+        ImageIcon newIcon = new ImageIcon("src/main/resources/Azul/" + newText);
         setIcon(newIcon);
     }
 

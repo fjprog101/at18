@@ -23,12 +23,12 @@ public class MoveTileController implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        TilesButton b = (TilesButton)e.getSource();
-        Tile color = new Tile(TileColor.valueOf(b.getTileValue()));
+        TilesButton buttonSelected = (TilesButton) e.getSource();
+        Tile color = new Tile(TileColor.valueOf(buttonSelected.getTileValue()));
         List<Tile> listColors = new ArrayList<>();
         listColors.add(color);
         center.addTilestoCenter(listColors);
         centerButtonPanel.updateCenterButtons(center);
-        b.updateLabel("EMPTY");
+        buttonSelected.updateLabel("EMPTY");
     }
 }

@@ -4,7 +4,7 @@ import javax.swing.JToggleButton;
 import java.awt.Color;
 
 
-public class CenterTileButton extends JToggleButton{
+public class CenterTileButton extends JToggleButton {
     public static final int CENTER = 100;
     public static final int DEFAULT_POS1 = 400;
     private TileLabel tileLabel;
