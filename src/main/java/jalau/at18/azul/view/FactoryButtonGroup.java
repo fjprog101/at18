@@ -23,7 +23,7 @@ public class FactoryButtonGroup extends JPanel {
             TilesButton dieLabel = (TilesButton) getComponent(index);
             Tile dieSource = newValues.get(index);
             dieLabel.updateLabel(dieSource.getColor().getName());
+            dieLabel.updateColor(dieSource.getColor().getColorPath());
         }
-
     }
 }
