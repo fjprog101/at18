@@ -1,4 +1,4 @@
-package jalau.at18.architects;
+package jalau.at18.architects.view;
 
 import static org.junit.Assert.assertEquals;
 

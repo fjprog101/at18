@@ -1,7 +1,7 @@
 package jalau.at18.architects.view;
 import java.awt.*;
 import javax.swing.*;
-import static jalau.at18.architects.Constants.WonderStructure.*;
+import static jalau.at18.architects.view.Constants.WonderStructure.*;
 class WonderStructure extends JPanel {
     public static final int HEIGHT = 100;
     public static final int MIDDLE = 50;

@@ -2,7 +2,7 @@ package jalau.at18.architects.view;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import java.awt.Font;
-import static jalau.at18.architects.Constants.Label.*;
+import static jalau.at18.architects.view.Constants.Label.*;
 public class StartLabel extends JPanel {
     private JLabel labelWelcome;
     private JLabel nextJLabel;

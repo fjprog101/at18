@@ -1,7 +1,7 @@
 package jalau.at18.architects.view;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
-import static jalau.at18.architects.Constants.WonderFrame.*;
+import static jalau.at18.architects.view.Constants.WonderFrame.*;
 
 public class WondersFrameTest {
     @Test

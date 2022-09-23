@@ -1,5 +1,5 @@
 package jalau.at18.architects.view;
-import static jalau.at18.architects.Constants.WonderFrame.*;
+import static jalau.at18.architects.view.Constants.WonderFrame.*;
 import javax.swing.JFrame;
 import jalau.at18.architects.controller.Controller;
 public class WondersFrame extends JFrame {
