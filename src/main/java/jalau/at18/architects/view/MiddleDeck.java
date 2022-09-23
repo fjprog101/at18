@@ -1,20 +1,28 @@
 package jalau.at18.architects.view;
 
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
-
+import java.awt.*;
 public class MiddleDeck extends JPanel{
-    private CardLabel mazo;
-    private CardLabel card;
+    public String direction = "src/main/java/jalau/at18/resources/images/reverse.jpg";
     MiddleDeck() {
-        mazo = new CardLabel();
-        card = new CardLabel();
-        setBounds(10, 200, 150, 70);
-        setVisible(true);
-        addCards();
+        initComponets();
+        loadCards();
     }
-    private void addCards() {
+    private void initComponets() {
+        //setLayout(new GridLayout(1, 2));
+    }
+    private void loadCards() {
+        setBounds(400, 5, 200, 250);
+        JLabel mazo = new JLabel();
+        mazo.setBounds(410, 10, 100, 150);
+        ImageIcon image = new ImageIcon(direction);
+        Icon icon = new ImageIcon(image.getImage().getScaledInstance(mazo.getWidth(), mazo.getHeight(), Image.SCALE_DEFAULT));
+        mazo.setIcon(icon);
         add(mazo);
-        add(card);
-        this.repaint();
+        repaint();
+        setVisible(true);
     }
 }
