@@ -11,8 +11,9 @@ public class PlayerPanel extends JPanel {
     public static final int DEFAULT_WIDTH = 0; //Only tu run the test
     public static final int DEFAULT_HEIGHT = 0; //Only tu run the test
 
-    public PlayerPanel(int posx, int posy, int width, int height) {
-        setBounds(posx, posy, width, height);
+    public PlayerPanel(int posx, int posy) {
+        setLayout(new BorderLayout());
+        setBounds(posx, posy, 700, 400);
         setBorder(BorderFactory.createLineBorder(Color.BLUE));
     }
 }
