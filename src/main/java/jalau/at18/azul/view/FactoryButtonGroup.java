@@ -5,12 +5,10 @@ import javax.swing.JPanel;
 
 import jalau.at18.azul.CenterTileBoard;
 import jalau.at18.azul.Tile;
-//import jalau.at18.azul.Controller.TileController;
 import jalau.at18.azul.controllerazul.MoveTileController;
 
 public class FactoryButtonGroup extends JPanel {
     private MoveTileController moveTiles;
-  //  private List<Tile> tileList;
 
     public FactoryButtonGroup(int posx, int posy, int width, int height, CenterButtons tilesCenter) {
         CenterTileBoard center = new CenterTileBoard();
