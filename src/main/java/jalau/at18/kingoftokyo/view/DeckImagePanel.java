@@ -8,7 +8,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class DeckImagePanel extends JPanel {
-    private static final int POS_X = 850;
+    private static final int POS_X = 1100;
     private static final int POS_Y = 20;
     private static final int WIDTH = 220;
     private static final int HEIGHT = 150;

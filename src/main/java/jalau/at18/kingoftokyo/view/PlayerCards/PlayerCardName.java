@@ -1,4 +1,4 @@
-package jalau.at18.kingoftokyo.view.PlayerCards;
+package jalau.at18.kingoftokyo.view.playercards;
 
 import java.awt.Color;
 import java.awt.Font;

@@ -12,7 +12,7 @@ public class CardsGroupPanelTest {
     public void shouldShowACard() {
         CardsGroupPanel cardsGroup = new CardsGroupPanel();
         assertEquals(5, cardsGroup.getComponentCount());
-        assertEquals(700, cardsGroup.getBounds().getX(), 0);
+        assertEquals(950, cardsGroup.getBounds().getX(), 0);
         assertEquals(185, cardsGroup.getBounds().getY(), 0);
         assertEquals(470, cardsGroup.getBounds().getWidth(), 0);
         assertEquals(250, cardsGroup.getBounds().getHeight(), 0);
