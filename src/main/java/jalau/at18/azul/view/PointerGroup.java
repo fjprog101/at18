@@ -9,6 +9,5 @@ public class PointerGroup extends JPanel {
         add(new PyramidPointer());
         add(new PyramidPointer());
         add(new PyramidPointer());
-        //setBounds(posx, posy, width, height);
     }
 }

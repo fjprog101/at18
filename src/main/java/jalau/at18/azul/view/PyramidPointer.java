@@ -13,7 +13,7 @@ public class PyramidPointer extends JButton {
     public PyramidPointer() {
         setSize(DEFAULT_POS1, DEFAULT_POS1);
         setLocation(CENTER, CENTER);
-        Icon icon = new ImageIcon("src/main/resources/Azul/triangle.png");
+        Icon icon = new ImageIcon("src/main/resources/azul/triangle.png");
         setIcon(icon);
         setContentAreaFilled(false);
         setFocusPainted(false);
