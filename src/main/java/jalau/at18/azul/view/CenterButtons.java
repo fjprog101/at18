@@ -27,7 +27,6 @@ public class CenterButtons extends JPanel {
     }
 
     public void updateCenterButtons(CenterTileBoard centerTiles) {
-
         for (int index = 0; index < getComponentCount() && index < centerTiles.size(); index++) {
             CenterTileButton centerLabel = (CenterTileButton) getComponent(index);
             Tile centerSource = centerTiles.get(index);

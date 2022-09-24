@@ -16,50 +16,25 @@ public class FactoryPanel extends JPanel {
     public static final int Y_INITIAL_POSITION = 20;
     public static final int WIDTH = 550;
     public static final int HEIGHT = 730;
+    private static final int NUMBER_OF_FACTORIES = 5;
 
-    private FactoryButtonGroup tileButtonGroup;
-    private FactoryButtonGroup tileButtonGroup1;
-    private FactoryButtonGroup tileButtonGroup2;
-    private FactoryButtonGroup tileButtonGroup3;
-    private FactoryButtonGroup tileButtonGroup4;
     private CenterButtons centerTileButtonGroup;
 
     public FactoryPanel() {
         BagSender bag = new BagSender();
         bag.saveBag();
+        centerTileButtonGroup = new CenterButtons();
         setLayout(new GridLayout(ROWS, COLS, HORIZONTAL_GAP, VERTIXCAL_GAP));
         setBounds(X_INITIAL_POSITION, Y_INITIAL_POSITION, WIDTH, HEIGHT);
         add(new BagButton(new TileController(this, bag)));
-        add(centerTileButtonGroup = new CenterButtons());
+        add(centerTileButtonGroup);
         addFactories();
     }
 
     public void addFactories() {
-        add(tileButtonGroup = new FactoryButtonGroup(centerTileButtonGroup));
-        add(tileButtonGroup1 = new FactoryButtonGroup(centerTileButtonGroup));
-        add(tileButtonGroup2 = new FactoryButtonGroup(centerTileButtonGroup));
-        add(tileButtonGroup3 = new FactoryButtonGroup(centerTileButtonGroup));
-        add(tileButtonGroup4 = new FactoryButtonGroup(centerTileButtonGroup));
-    }
-
-    public FactoryButtonGroup getTileButtonGroup() {
-        return this.tileButtonGroup;
-    }
-
-    public FactoryButtonGroup getTileButtonGroup1() {
-        return this.tileButtonGroup1;
-    }
-
-    public FactoryButtonGroup getTileButtonGroup2() {
-        return this.tileButtonGroup2;
-    }
-
-    public FactoryButtonGroup getTileButtonGroup3() {
-        return this.tileButtonGroup3;
-    }
-
-    public FactoryButtonGroup getTileButtonGroup4() {
-        return this.tileButtonGroup4;
+        for (int index = 0; index < NUMBER_OF_FACTORIES; index++) {
+            add(new FactoryButtonGroup(centerTileButtonGroup));
+        }
     }
 
     public CenterButtons getCenterTileButtonGroup() {

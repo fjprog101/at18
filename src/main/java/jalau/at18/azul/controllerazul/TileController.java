@@ -2,6 +2,7 @@ package jalau.at18.azul.controllerazul;
 
 import jalau.at18.azul.BagSender;
 import jalau.at18.azul.Tile;
+import jalau.at18.azul.view.FactoryButtonGroup;
 import jalau.at18.azul.view.FactoryPanel;
 
 import java.awt.event.ActionEvent;
@@ -9,6 +10,9 @@ import java.awt.event.ActionListener;
 import java.util.List;
 
 public class TileController implements ActionListener {
+
+    private static final int NUMBER_OF_FACTORIES = 5;
+    private static final int FIRST_INDEX_FACTORY_COMPONENT = 2;
     private FactoryPanel factoryPanel;
     private BagSender gameAzul;
 
@@ -19,20 +23,11 @@ public class TileController implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        List<Tile> game = gameAzul.getFactoryGroup();
-        factoryPanel.getTileButtonGroup().updateButtonGroup(game);
-        gameAzul.removeTiles();
-        List<Tile> game1 = gameAzul.getFactoryGroup();
-        factoryPanel.getTileButtonGroup1().updateButtonGroup(game1);
-        gameAzul.removeTiles();
-        List<Tile> game2 = gameAzul.getFactoryGroup();
-        factoryPanel.getTileButtonGroup2().updateButtonGroup(game2);
-        gameAzul.removeTiles();
-        List<Tile> game3 = gameAzul.getFactoryGroup();
-        factoryPanel.getTileButtonGroup3().updateButtonGroup(game3);
-        gameAzul.removeTiles();
-        List<Tile> game4 = gameAzul.getFactoryGroup();
-        factoryPanel.getTileButtonGroup4().updateButtonGroup(game4);
-        gameAzul.removeTiles();
+        for (int index = 0; index < NUMBER_OF_FACTORIES; index++) {
+            List<Tile> game = gameAzul.getFactoryGroup();
+            FactoryButtonGroup factoryButtons = (FactoryButtonGroup) factoryPanel.getComponent(index + FIRST_INDEX_FACTORY_COMPONENT);
+            factoryButtons.updateButtonGroup(game);
+            gameAzul.removeTiles();
+        }
     }
 }
