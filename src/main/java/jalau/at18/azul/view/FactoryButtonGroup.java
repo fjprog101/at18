@@ -18,6 +18,7 @@ public class FactoryButtonGroup extends JPanel {
         add(new TilesButton(moveTiles));
         add(new TilesButton(moveTiles));
         add(new TilesButton(moveTiles));
+        //setBounds(posx, posy, width, height);
         setBackground(Color.CYAN);
     }
 

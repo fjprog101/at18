@@ -3,46 +3,23 @@ package jalau.at18.azul.view;
 import javax.swing.*;
 
 public class AzulFrame extends JFrame {
-    public static final int DEFAULT_POS1 = 500;
-    public static final int DEFAULT_SIZE = 300;
-    public static final int INITIAL_POSITION = 200;
-    public static final int WIDTH = 900;
-    public static final int HEIGHT = 600;
-    public static final int TILES_HEIGHT = 50;
-    public static final int TILES_WIDTH = 20;
-    public static final int CENTER = 100;
 
-    private CenterButtons centertileButtonGroup;
-    private FloorButtons floorButtonGroup;
-    private FloorButtons floorButtonGroup1;
-    private PointerGroup pointergroup;
-
-
+    public static final int PLAYER1 = 1;
+    public static final int PLAYER2 = 2;
+    public static final int PLAYER1_Y_POSITION = 0;
+    public static final int PLAYER2_Y_POSITION = 401;
+    public static final int INITIAL_POSITION = 10;
+    public static final int WIDTH = 1200;
+    public static final int HEIGHT = 800;
 
     public AzulFrame() {
         initialize();
     }
 
-    public CenterButtons getCenterTileButtonGroup() {
-        return this.centertileButtonGroup;
-    }
-    public FloorButtons getfloorButtonGroup() {
-        return this.floorButtonGroup;
-    }
-    public FloorButtons getfloorButtonGroup1() {
-        return this.floorButtonGroup1;
-    }
-
     public void initialize() {
-        add(new PyramidBoard());
-        add(new WallBoard());
-        centertileButtonGroup = new CenterButtons(HEIGHT + CENTER, DEFAULT_POS1 + CENTER, INITIAL_POSITION + TILES_HEIGHT, TILES_HEIGHT + CENTER);
-        floorButtonGroup = new FloorButtons(TILES_HEIGHT, TILES_HEIGHT + DEFAULT_SIZE, DEFAULT_POS1, INITIAL_POSITION);
-        floorButtonGroup1 = new FloorButtons(TILES_HEIGHT, HEIGHT + CENTER, DEFAULT_POS1, INITIAL_POSITION);
+        add(new PlayerPanel(PLAYER1, PLAYER1_Y_POSITION));
+        add(new PlayerPanel(PLAYER2, PLAYER2_Y_POSITION));
         add(new FactoryPanel());
-        add(centertileButtonGroup);
-        add(floorButtonGroup);
-        add(floorButtonGroup1);
         setLayout(null);
         setBounds(INITIAL_POSITION, INITIAL_POSITION, WIDTH, HEIGHT);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

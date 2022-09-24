@@ -3,12 +3,12 @@ package jalau.at18.azul.view;
 import javax.swing.JPanel;
 
 public class PointerGroup extends JPanel {
-    public PointerGroup(int posx, int posy, int width, int height) {
+    public PointerGroup() {
         add(new PyramidPointer());
         add(new PyramidPointer());
         add(new PyramidPointer());
         add(new PyramidPointer());
         add(new PyramidPointer());
-        setBounds(posx, posy, width, height);
+        //setBounds(posx, posy, width, height);
     }
 }

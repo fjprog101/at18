@@ -7,15 +7,14 @@ import jalau.at18.azul.Tile;
 
 public class FloorButtons extends JPanel {
 
-    public FloorButtons(int posx, int posy, int width, int height) {
-        /*add(new TilesButton());
-        add(new TilesButton());
-        add(new TilesButton());
-        add(new TilesButton());
-        add(new TilesButton());
-        add(new TilesButton());
-        add(new TilesButton());*/
-        setBounds(posx, posy, width, height);
+    public FloorButtons() {
+        add(new FloorTileButton());
+        add(new FloorTileButton());
+        add(new FloorTileButton());
+        add(new FloorTileButton());
+        add(new FloorTileButton());
+        add(new FloorTileButton());
+        add(new FloorTileButton());
     }
 
     public void updateButtonGroup(Floor floor) {

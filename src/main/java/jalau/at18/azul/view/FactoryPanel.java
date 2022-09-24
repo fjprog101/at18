@@ -17,39 +17,46 @@ public class FactoryPanel extends JPanel {
     private TileController gameController;
     private BagButton tileButton;
 
-    public static final int X_INITIAL_POSITION = 610;
-    public static final int Y_INITIAL_POSITION = 20;
-    public static final int WIDTH = 700;
-    public static final int HEIGHT = 600;
-    public static final int NUMBER_OF_FACTORIES = 5;
-    public static final int ROWS = 3;
-    public static final int COLS = 2;
 
+    public static final int NUMBER_OF_FACTORIES = 5;
     public static final int TILES_WIDTH = 20;
     public static final int INITIAL_POSITION = 200;
     public static final int DEFAULT_POS1 = 500;
 
-    private CenterButtons centertileButtonGroup;
+    public static final int ROWS = 4;
+    public static final int COLS = 2;
+    public static final int HORIZONTAL_GAP = 100;
+    public static final int VERTIXCAL_GAP = 40;
+
+    public static final int X_INITIAL_POSITION = 610;
+    public static final int Y_INITIAL_POSITION = 20;
+    public static final int WIDTH = 550;
+    public static final int HEIGHT = 730;
+
+
+
+    private CenterButtons centerTileButtonGroup;
 
     public FactoryPanel() {
-
         BagSender bag = new BagSender();
         bag.saveBag();
         gameController = new TileController(this, bag);
 
-        setLayout(new GridLayout(ROWS, COLS,100,100));
+        setLayout(new GridLayout(ROWS, COLS,HORIZONTAL_GAP,VERTIXCAL_GAP));
         setBounds(X_INITIAL_POSITION, Y_INITIAL_POSITION, WIDTH, HEIGHT);
         add(tileButton = new BagButton(gameController));
+        add(centerTileButtonGroup = new CenterButtons(0, 0, 0, 0));
         addFactories();
+
 
     }
 
     public void addFactories() {
-        add(tileButtonGroup = new FactoryButtonGroup(centertileButtonGroup));
-        add(tileButtonGroup1 = new FactoryButtonGroup(centertileButtonGroup));
-        add(tileButtonGroup2 = new FactoryButtonGroup(centertileButtonGroup));
-        add(tileButtonGroup3 = new FactoryButtonGroup(centertileButtonGroup));
-        add(tileButtonGroup4 = new FactoryButtonGroup(centertileButtonGroup));
+        add(tileButtonGroup = new FactoryButtonGroup(centerTileButtonGroup));
+        add(tileButtonGroup1 = new FactoryButtonGroup(centerTileButtonGroup));
+        add(tileButtonGroup2 = new FactoryButtonGroup(centerTileButtonGroup));
+        add(tileButtonGroup3 = new FactoryButtonGroup(centerTileButtonGroup));
+        add(tileButtonGroup4 = new FactoryButtonGroup(centerTileButtonGroup));
     }
 
     public FactoryButtonGroup getTileButtonGroup() {
@@ -70,6 +77,10 @@ public class FactoryPanel extends JPanel {
 
     public FactoryButtonGroup getTileButtonGroup4() {
         return this.tileButtonGroup4;
+    }
+
+    public CenterButtons getCenterTileButtonGroup() {
+        return this.centerTileButtonGroup;
     }
 
 }

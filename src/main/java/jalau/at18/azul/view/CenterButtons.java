@@ -24,7 +24,7 @@ public class CenterButtons extends JPanel {
         add(new CenterTileButton());
         add(new CenterTileButton());
         add(new CenterTileButton());
-        setBounds(posx, posy, width, height);
+        //setBounds(posx, posy, width, height);
     }
 
     public void updateCenterButtons(CenterTileBoard centerTiles) {
