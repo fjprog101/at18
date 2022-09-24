@@ -2,7 +2,6 @@ package jalau.at18.azul.controllerazul;
 
 import jalau.at18.azul.BagSender;
 import jalau.at18.azul.Tile;
-import jalau.at18.azul.view.AzulFrame;
 import jalau.at18.azul.view.FactoryPanel;
 
 import java.awt.event.ActionEvent;

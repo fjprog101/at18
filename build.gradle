@@ -59,3 +59,7 @@ task runWonders (dependsOn: 'classes', type: JavaExec) {
     main = 'jalau.at18.architects.Main'
     classpath = sourceSets.main.runtimeClasspath
 }
+task runAzul (dependsOn: 'classes', type: JavaExec) {
+    main = 'jalau.at18.azul.Main'
+    classpath = sourceSets.main.runtimeClasspath
+}

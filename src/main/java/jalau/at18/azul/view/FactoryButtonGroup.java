@@ -9,6 +9,7 @@ import jalau.at18.azul.Tile;
 import jalau.at18.azul.controllerazul.MoveTileController;
 
 public class FactoryButtonGroup extends JPanel {
+
     private MoveTileController moveTiles;
 
     public FactoryButtonGroup(CenterButtons tilesCenter) {
@@ -18,7 +19,6 @@ public class FactoryButtonGroup extends JPanel {
         add(new TilesButton(moveTiles));
         add(new TilesButton(moveTiles));
         add(new TilesButton(moveTiles));
-        //setBounds(posx, posy, width, height);
         setBackground(Color.CYAN);
     }
 

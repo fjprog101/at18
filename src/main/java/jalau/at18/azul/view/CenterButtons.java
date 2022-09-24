@@ -7,7 +7,7 @@ import jalau.at18.azul.Tile;
 
 public class CenterButtons extends JPanel {
 
-    public CenterButtons(int posx, int posy, int width, int height) {
+    public CenterButtons() {
         add(new CenterTileButton());
         add(new CenterTileButton());
         add(new CenterTileButton());
@@ -24,7 +24,6 @@ public class CenterButtons extends JPanel {
         add(new CenterTileButton());
         add(new CenterTileButton());
         add(new CenterTileButton());
-        //setBounds(posx, posy, width, height);
     }
 
     public void updateCenterButtons(CenterTileBoard centerTiles) {

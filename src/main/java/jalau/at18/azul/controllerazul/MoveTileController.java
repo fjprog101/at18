@@ -4,7 +4,6 @@ import jalau.at18.azul.CenterTileBoard;
 import jalau.at18.azul.Tile;
 import jalau.at18.azul.TileColor;
 import jalau.at18.azul.view.CenterButtons;
-import jalau.at18.azul.view.FactoryPanel;
 import jalau.at18.azul.view.TilesButton;
 
 import java.awt.event.ActionEvent;

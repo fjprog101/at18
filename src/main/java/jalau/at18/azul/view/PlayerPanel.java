@@ -15,12 +15,12 @@ public class PlayerPanel extends JPanel {
 
     private FloorButtons floorButtonGroup;
 
-    public PlayerPanel(int player,int posy) {
-        setLayout(new BorderLayout(HORIZONTAL_GAP,VERTIXCAL_GAP));
+    public PlayerPanel(int player, int posy) {
+        setLayout(new BorderLayout(HORIZONTAL_GAP, VERTIXCAL_GAP));
         add(new JLabel("PLAYER " + player), BorderLayout.PAGE_START);
-        add(new PyramidBoard(),BorderLayout.LINE_START);
+        add(new PyramidBoard(), BorderLayout.LINE_START);
         add(new WallBoard(), BorderLayout.CENTER);
-        add(new FloorButtons(),BorderLayout.PAGE_END);
+        add(new FloorButtons(), BorderLayout.PAGE_END);
         setBounds(DEFAULT_POSX, posy, DEFAULT_WIDTH, DEFAULT_HEIGHT);
         setBorder(BorderFactory.createLineBorder(Color.BLUE));
     }
