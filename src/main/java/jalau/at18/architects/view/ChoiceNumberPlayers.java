@@ -6,7 +6,7 @@ public class ChoiceNumberPlayers extends JComboBox {
 
     private JComboBox<Integer> list;
     public ChoiceNumberPlayers(ActionListener listener) {
-        list = new JComboBox<>();
+        list = new JComboBox<Integer>();
         setBounds(POS_X, POS_Y, WIDTH_CHOICE, HEIGHT_CHOICE);
         addItem(TWO);
         addItem(THREE);
