@@ -1,6 +1,6 @@
 package jalau.at18.architects.view;
 import javax.swing.JComboBox;
-import static jalau.at18.architects.Constants.ComboBox.*;
+import static jalau.at18.architects.view.Constants.ComboBox.*;
 import java.awt.event.ActionListener;
 public class ChoiceNumberPlayers extends JComboBox {
 
