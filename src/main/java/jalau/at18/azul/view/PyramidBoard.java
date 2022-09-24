@@ -7,24 +7,21 @@ import jalau.at18.azul.TileColor;
 
 public class PyramidBoard extends JPanel {
 
-    public static final int WIDTH = 220;
-    public static final int HEIGHT = 120;
-    private final int pyramidMatrixSize = 5;
-    private PyramidTileButton[][] tileButton = new PyramidTileButton[pyramidMatrixSize][pyramidMatrixSize];
+    private static final int PYRAMID_MATRIZ_SIZE = 5;
+    private PyramidTileButton[][] tileButton = new PyramidTileButton[PYRAMID_MATRIZ_SIZE][PYRAMID_MATRIZ_SIZE];
     private Tile emptyTile = new Tile(TileColor.EMPTY);
-    private final int dividePyramid = 4;
+    private static final int DIVIDE_PYRAMID = 4;
 
     public PyramidBoard() {
-        setLayout(new GridLayout(pyramidMatrixSize, pyramidMatrixSize, pyramidMatrixSize, pyramidMatrixSize));
-        setBounds(0, 0, WIDTH, HEIGHT);
+        setLayout(new GridLayout(PYRAMID_MATRIZ_SIZE, PYRAMID_MATRIZ_SIZE, PYRAMID_MATRIZ_SIZE, PYRAMID_MATRIZ_SIZE));
         getPyramid();
     }
 
     public void getPyramid() {
-        for (int row = 0; row < pyramidMatrixSize; row++) {
-            for (int column = 0; column < pyramidMatrixSize; column++) {
+        for (int row = 0; row < PYRAMID_MATRIZ_SIZE; row++) {
+            for (int column = 0; column < PYRAMID_MATRIZ_SIZE; column++) {
                 tileButton[row][column] = new PyramidTileButton();
-                if (row + column >= dividePyramid) {
+                if (row + column >= DIVIDE_PYRAMID) {
                     tileButton[row][column].updateLabel(emptyTile.getColor().getName());
                     add(tileButton[row][column]);
                 } else {

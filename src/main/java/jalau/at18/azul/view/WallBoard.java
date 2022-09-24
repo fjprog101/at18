@@ -8,22 +8,19 @@ import jalau.at18.azul.TileColor;
 import java.awt.GridLayout;
 
 public class WallBoard extends JPanel {
-    public static final int X_INITIAL_POSITION = 250;
-    public static final int WIDTH = 220;
-    public static final int HEIGHT = 120;
-    private final int wallMatrixSize = 5;
-    private PyramidTileButton[][] tileButton = new PyramidTileButton[wallMatrixSize][wallMatrixSize];
+
+    private static final int WALL_MATRIX_SIZE = 5;
+    private PyramidTileButton[][] tileButton = new PyramidTileButton[WALL_MATRIX_SIZE][WALL_MATRIX_SIZE];
     private static final int THREE = 3;
 
     public WallBoard() {
-        setLayout(new GridLayout(wallMatrixSize, wallMatrixSize, wallMatrixSize, wallMatrixSize));
-        setBounds(X_INITIAL_POSITION, 0, WIDTH, HEIGHT);
+        setLayout(new GridLayout(WALL_MATRIX_SIZE, WALL_MATRIX_SIZE, WALL_MATRIX_SIZE, WALL_MATRIX_SIZE));
         initializeWall();
     }
 
     public void initializeWall() {
-        for (int row = 0; row < wallMatrixSize; row++) {
-            for (int column = 0; column < wallMatrixSize; column++) {
+        for (int row = 0; row < WALL_MATRIX_SIZE; row++) {
+            for (int column = 0; column < WALL_MATRIX_SIZE; column++) {
                 tileButton[row][column] = new PyramidTileButton();
                 Tile tile = new Tile(TileColor.BLUE);
                 tile = column - row == THREE + 1 || column - row == -1 ? new Tile(TileColor.WHITE)

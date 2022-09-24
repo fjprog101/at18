@@ -7,8 +7,8 @@ import jalau.at18.azul.TileColor;
 import java.awt.event.ActionListener;
 
 public class TilesButton extends JButton {
-    //public static final int TILES_HEIGHT = 50;
-    public static final int CENTER = 100;
+
+    public static final int CENTER = 50;
     public static final int DEFAULT_POS1 = 400;
     private TileLabel tileLabel;
     private String newpath;
@@ -17,7 +17,7 @@ public class TilesButton extends JButton {
     public TilesButton(ActionListener listener) {
         tileLabel = new TileLabel();
         newpath = TileColor.EMPTY.getColorPath();
-        icon = new ImageIcon("src/main/resources/Azul/" + newpath);
+        icon = new ImageIcon("src/main/resources/azul/" + newpath);
         setSize(DEFAULT_POS1, DEFAULT_POS1);
         setLocation(CENTER, CENTER);
         setBackground(Color.GRAY);
@@ -31,7 +31,7 @@ public class TilesButton extends JButton {
     }
 
     public void updateColor(String newText) {
-        ImageIcon newIcon = new ImageIcon("src/main/resources/Azul/" + newText);
+        ImageIcon newIcon = new ImageIcon("src/main/resources/azul/" + newText);
         setIcon(newIcon);
     }
 

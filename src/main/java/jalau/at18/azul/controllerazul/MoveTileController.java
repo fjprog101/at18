@@ -13,11 +13,11 @@ import java.util.List;
 
 public class MoveTileController implements ActionListener {
 
-    private CenterButtons centerButtonPanel;
+    private CenterButtons centerButton;
     private CenterTileBoard center;
 
-    public MoveTileController(CenterButtons centerButton, CenterTileBoard centerBoard) {
-        this.centerButtonPanel = centerButton;
+    public MoveTileController(CenterButtons newCenterButton, CenterTileBoard centerBoard) {
+        this.centerButton = newCenterButton;
         this.center = centerBoard;
     }
 
@@ -28,7 +28,7 @@ public class MoveTileController implements ActionListener {
         List<Tile> listColors = new ArrayList<>();
         listColors.add(color);
         center.addTilestoCenter(listColors);
-        centerButtonPanel.updateCenterButtons(center);
+        centerButton.updateCenterButtons(center);
         buttonSelected.updateLabel("EMPTY");
     }
 }
