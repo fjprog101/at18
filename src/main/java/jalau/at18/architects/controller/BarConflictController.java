@@ -14,9 +14,8 @@ public class BarConflictController implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        boardFrame.getContentPane();
-        boardFrame.repaint();
         BarConflict barconflict = new BarConflict(boardFrame.getNumberOfPlayers());
         boardFrame.add(barconflict);
+        boardFrame.validate();
     }
 }
