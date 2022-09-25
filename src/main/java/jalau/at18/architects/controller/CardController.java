@@ -20,7 +20,7 @@ public class CardController implements MouseInputListener {
         CardFace cardFace = deck.getRamdomCard();
         String newImage = cardFace.getNameOfFile();
         card.setImage(newImage);
-        System.out.println("Mouse usado");
+        System.out.println("Mouse just used");
     }
     @Override
     public void mousePressed(MouseEvent e) {
