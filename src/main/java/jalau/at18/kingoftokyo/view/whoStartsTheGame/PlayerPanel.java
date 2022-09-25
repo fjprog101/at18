@@ -4,13 +4,14 @@ import javax.swing.*;
 import javax.swing.border.LineBorder;
 
 import jalau.at18.kingoftokyo.Player;
-import jalau.at18.kingoftokyo.controller.RollDiceSectionController;
+import jalau.at18.kingoftokyo.controller.WhoStartRollDiceController;
 import jalau.at18.kingoftokyo.view.rolldicesection.RollDiceSectionUI;
+
 import java.awt.*;
 
 public class PlayerPanel extends JPanel {
 
-    private RollDiceSectionController rollDiceSectionController;
+    private WhoStartRollDiceController whoStartRollDiceController;
     private JLabel playerLabel;
 
     public PlayerPanel(Player player) {
@@ -19,12 +20,12 @@ public class PlayerPanel extends JPanel {
 
         RollDiceSectionUI rollDiceSectionUI = new RollDiceSectionUI();
         add(rollDiceSectionUI);
-        rollDiceSectionController = new RollDiceSectionController(rollDiceSectionUI, null);
+        whoStartRollDiceController = new WhoStartRollDiceController(rollDiceSectionUI);
 
         setBorder(new LineBorder(Color.BLACK, 1));
     }
 
-    public RollDiceSectionController getRollDiceSectionController() {
-        return rollDiceSectionController;
+    public WhoStartRollDiceController getWhoStartRollDiceController() {
+        return whoStartRollDiceController;
     }
 }

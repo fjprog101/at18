@@ -39,8 +39,8 @@ public class WhoStartController {
     }
 
     public void clickCalculateWinnerButton() {
-        List<DiceFace> diceFacesPlayer1 = whoStartFrame.getPlayer1Panel().getRollDiceSectionController().getListRandomDiceFace();
-        List<DiceFace> diceFacesPlayer2 = whoStartFrame.getPlayer2Panel().getRollDiceSectionController().getListRandomDiceFace();
+        List<DiceFace> diceFacesPlayer1 = whoStartFrame.getPlayer1Panel().getWhoStartRollDiceController().getListRandomDiceFace();
+        List<DiceFace> diceFacesPlayer2 = whoStartFrame.getPlayer2Panel().getWhoStartRollDiceController().getListRandomDiceFace();
         List<Dice> dicePlayer1 = new ArrayList<>();
         for (DiceFace diceFace : diceFacesPlayer1) {
             dicePlayer1.add(new Dice(diceFace));
