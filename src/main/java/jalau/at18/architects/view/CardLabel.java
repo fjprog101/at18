@@ -24,6 +24,6 @@ public class CardLabel extends JLabel {
         Icon icon = new ImageIcon(image.getImage().getScaledInstance(getWidth(), getHeight(), Image.SCALE_DEFAULT));
         setIcon(icon);
         setVisible(true);
-        this.repaint();
+        this.validate();
     }
 }
