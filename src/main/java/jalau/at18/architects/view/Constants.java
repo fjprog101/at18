@@ -41,10 +41,10 @@ public final class Constants {
     public final class WonderStructure {
         public static final int HEIGHT = 100;
         public static final int MIDDLE = 50;
-        public static final int DEFAULT_POSX = 280;
-        public static final int DEFAULT_POSY = 500;
-        public static final int DEFAULT_WIDTH = 150;
-        public static final int DEFAULT_HEIGHT = 150;
+        public static final int DEFAULT_POSX = 400;
+        public static final int DEFAULT_POSY = 400;
+        public static final int DEFAULT_WIDTH = 300;
+        public static final int DEFAULT_HEIGHT = 200;
 
     }
 }
