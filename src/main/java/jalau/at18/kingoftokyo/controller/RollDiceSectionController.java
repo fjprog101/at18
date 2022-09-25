@@ -2,31 +2,33 @@ package jalau.at18.kingoftokyo.controller;
 
 import jalau.at18.kingoftokyo.DiceFace;
 import jalau.at18.kingoftokyo.DiceRoller;
-import jalau.at18.kingoftokyo.view.DiceFaceLabel;
-import jalau.at18.kingoftokyo.view.DiceFaceLabelMouseListener;
-import jalau.at18.kingoftokyo.view.RollDiceSectionUI;
+import jalau.at18.kingoftokyo.view.rolldicesection.DiceFaceLabel;
+import jalau.at18.kingoftokyo.view.rolldicesection.DiceFaceLabelMouseListener;
+import jalau.at18.kingoftokyo.view.rolldicesection.RollDiceSectionUI;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class RollDiceSectionController {
     private static final int QUANTITY_DICES = 6;
     private RollDiceSectionUI rollDiceSectionUI;
     private KeepDiceSectionController keepDiceSectionController;
-
+    private List<DiceFace> listRandomDiceFace;
     public RollDiceSectionController(RollDiceSectionUI rollDiceSectionUI,
                                      KeepDiceSectionController keepDiceSectionController) {
         this.rollDiceSectionUI = rollDiceSectionUI;
         this.keepDiceSectionController = keepDiceSectionController;
         rollDiceSectionUI.getRollerDiceButton().addActionListener(e -> rollDices());
         settingMouseEvent();
+        listRandomDiceFace = new ArrayList<>();
     }
 
     private void rollDices() {
         DiceRoller diceRoller = new DiceRoller();
-        List<DiceFace> diceFaces = diceRoller.randomDice(QUANTITY_DICES);
+        listRandomDiceFace = diceRoller.randomDice(QUANTITY_DICES);
         int count = 0;
         for (DiceFaceLabel diceFaceLabel : rollDiceSectionUI.getListDiceFaceLabel()) {
-            diceFaceLabel.paintDiceFace(diceFaces.get(count));
+            diceFaceLabel.paintDiceFace(listRandomDiceFace.get(count));
             count++;
         }
     }
@@ -35,5 +37,9 @@ public class RollDiceSectionController {
         for (DiceFaceLabel diceFaceLabel : rollDiceSectionUI.getListDiceFaceLabel()) {
             diceFaceLabel.addMouseListener(new DiceFaceLabelMouseListener(keepDiceSectionController));
         }
+    }
+
+    public List<DiceFace> getListRandomDiceFace() {
+        return listRandomDiceFace;
     }
 }

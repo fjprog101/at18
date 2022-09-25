@@ -1,5 +1,6 @@
 package jalau.at18.kingoftokyo.view;
 
+import jalau.at18.kingoftokyo.view.rolldicesection.DiceSectionUI;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

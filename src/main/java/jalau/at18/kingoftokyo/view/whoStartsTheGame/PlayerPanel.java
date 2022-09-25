@@ -8,14 +8,23 @@ import jalau.at18.kingoftokyo.controller.RollDiceSectionController;
 import jalau.at18.kingoftokyo.view.rolldicesection.RollDiceSectionUI;
 import java.awt.*;
 
-public class Player2Panel extends JPanel  {
+public class PlayerPanel extends JPanel {
+
     private RollDiceSectionController rollDiceSectionController;
-    private JLabel player2 = new JLabel("Player 2");
-    public Player2Panel(Player player) {
-        add(player2);
+    private JLabel playerLabel;
+
+    public PlayerPanel(Player player) {
+        playerLabel = new JLabel(player.getMonster().getName());
+        add(playerLabel);
+
         RollDiceSectionUI rollDiceSectionUI = new RollDiceSectionUI();
         add(rollDiceSectionUI);
-        //rollDiceSectionController = new RollDiceSectionController(rollDiceSectionUI);
+        rollDiceSectionController = new RollDiceSectionController(rollDiceSectionUI, null);
+
         setBorder(new LineBorder(Color.BLACK, 1));
+    }
+
+    public RollDiceSectionController getRollDiceSectionController() {
+        return rollDiceSectionController;
     }
 }

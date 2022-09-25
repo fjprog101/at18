@@ -1,11 +1,11 @@
 package jalau.at18.kingoftokyo.view.whoStartsTheGame;
+import jalau.at18.kingoftokyo.controller.WhoStartController;
+
 import javax.swing.*;
-import java.awt.event.ActionListener;
 
 public class StartGameButton extends JButton {
-
-    public StartGameButton(ActionListener listener) {
+    public StartGameButton(WhoStartController whoStartController) {
         super("Start Game");
-        addActionListener(listener);
+        addActionListener(e -> whoStartController.clickStartGameButton());
     }
 }

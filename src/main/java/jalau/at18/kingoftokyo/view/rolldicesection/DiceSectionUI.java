@@ -1,4 +1,4 @@
-package jalau.at18.kingoftokyo.view;
+package jalau.at18.kingoftokyo.view.rolldicesection;
 
 import jalau.at18.kingoftokyo.controller.KeepDiceSectionController;
 import jalau.at18.kingoftokyo.controller.RollDiceSectionController;
