@@ -29,7 +29,7 @@ public class RollDiceSectionControllerTest {
         when(mockedDiceRoller.randomDice(QUANTITY_DICES)).thenReturn(mockedResult);
 
         RollDiceSectionUI rollDiceSectionUI = new RollDiceSectionUI();
-        RollDiceSectionController rollDiceSectionController = new RollDiceSectionController(rollDiceSectionUI);
+        RollDiceSectionController rollDiceSectionController = new RollDiceSectionController(rollDiceSectionUI, null);
 
         List<DiceFaceLabel> listDiceFaceLabel = rollDiceSectionUI.getListDiceFaceLabel();
         assertNotNull(listDiceFaceLabel.get(0));

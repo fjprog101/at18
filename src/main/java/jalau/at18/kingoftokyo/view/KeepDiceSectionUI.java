@@ -1,9 +1,45 @@
 package jalau.at18.kingoftokyo.view;
 
 import javax.swing.*;
+import javax.swing.border.LineBorder;
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class KeepDiceSectionUI extends JPanel {
-    public KeepDiceSectionUI() {
+    private static final int QUANTITY_DICES = 6;
+    private JLabel displayResult = new JLabel();
+    private RollerButton rollerButton;
+    private List<DiceFaceLabel> listKeepDiceFaceLabel = new ArrayList<>();
 
+    public KeepDiceSectionUI() {
+        initializeDice();
+        setBorder(new LineBorder(Color.GREEN, 1));
+    }
+
+    public void initializeDice() {
+        JPanel panelKeepDice = new JPanel();
+        add(panelKeepDice);
+        rollerButton = new RollerButton();
+        add(rollerButton);
+        //first time to create the 6 labels to KeepFace
+        for (int index = 1; index <= QUANTITY_DICES; index++) {
+            DiceFaceLabel diceFaceLabel = new DiceFaceLabel();
+            panelKeepDice.add(diceFaceLabel);
+            listKeepDiceFaceLabel.add(diceFaceLabel);
+        }
+        add(displayResult);
+    }
+
+    public RollerButton getRollerButton() {
+        return rollerButton;
+    }
+
+    public JLabel getDisplayResult() {
+        return displayResult;
+    }
+
+    public List<DiceFaceLabel> getListKeepDiceFaceLabel() {
+        return listKeepDiceFaceLabel;
     }
 }

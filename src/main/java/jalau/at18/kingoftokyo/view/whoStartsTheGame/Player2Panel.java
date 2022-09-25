@@ -13,7 +13,7 @@ public class Player2Panel extends JPanel  {
         add(player2);
         RollDiceSectionUI rollDiceSectionUI = new RollDiceSectionUI();
         add(rollDiceSectionUI);
-        rollDiceSectionController = new RollDiceSectionController(rollDiceSectionUI);
+        //rollDiceSectionController = new RollDiceSectionController(rollDiceSectionUI);
         setBorder(new LineBorder(Color.BLACK, 1));
     }
 }
