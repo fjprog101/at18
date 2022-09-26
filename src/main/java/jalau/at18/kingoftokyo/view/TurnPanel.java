@@ -4,7 +4,8 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import jalau.at18.kingoftokyo.Player;
+import jalau.at18.kingoftokyo.Turn;
+import jalau.at18.kingoftokyo.controller.EndTurnButtonController;
 
 import java.awt.BorderLayout;
 import java.awt.Font;
@@ -19,18 +20,22 @@ public class TurnPanel extends JPanel {
 
     private JLabel turnOfLabel;
     private JButton endTurnButton;
+    private Turn turn;
 
-    public TurnPanel() {
+    public TurnPanel(Turn turn) {
+        this.turn = turn;
         setLayout(new BorderLayout());
         setBounds(POS_X, POS_Y, WIDTH, HEIGHT);
         turnOfLabel = new JLabel("Turn of: ");
         turnOfLabel.setFont(new Font("Arial", FONT_STYLE, FONT_SIZE));
+        setPlayerWithTurnLabel();
         add(turnOfLabel, BorderLayout.LINE_START);
         endTurnButton = new JButton("End Turn");
         add(endTurnButton, BorderLayout.LINE_END);
+        endTurnButton.addActionListener(new EndTurnButtonController(turn, this));
     }
 
-    public void setPlayerWithTurnLabel(Player playerWithTurn) {
-        turnOfLabel.setText("Turn of: " + playerWithTurn.getMonster().getName());
+    public void setPlayerWithTurnLabel() {
+        turnOfLabel.setText("Turn of: " + turn.getPlayerWithTheTurn().getMonster().getName());
     }
 }

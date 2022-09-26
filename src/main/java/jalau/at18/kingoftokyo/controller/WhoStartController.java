@@ -1,6 +1,10 @@
 package jalau.at18.kingoftokyo.controller;
 
 import jalau.at18.kingoftokyo.*;
+import jalau.at18.kingoftokyo.Monster;
+import jalau.at18.kingoftokyo.Player;
+import jalau.at18.kingoftokyo.Turn;
+import jalau.at18.kingoftokyo.view.GameFrame;
 import jalau.at18.kingoftokyo.view.whoStartsTheGame.WhoStartFrame;
 
 import javax.swing.*;
@@ -35,7 +39,13 @@ public class WhoStartController {
     //The button of PanelSouth
     public void clickStartGameButton() {
         whoStartFrame.setVisible(false);
+        Player player1 = new Player();
+        player1.addMonster(Monster.ALIENOID);
+        Player player2 = new Player();
+        player2.addMonster(Monster.SPACE_PENGUIN);
+        Player[] playerList = {player2, player1};
         GameFrameController gameFrameController = new GameFrameController(player1, player2);
+        new GameFrame(new Turn(playerList));
     }
 
     public void clickCalculateWinnerButton() {
@@ -81,4 +91,9 @@ public class WhoStartController {
                     JOptionPane.WARNING_MESSAGE);
         }
     }
+    /*@Override
+    public void actionPerformed(ActionEvent e) {
+        //whostartframe.setVisible(false);
+        
+    }*/
 }
