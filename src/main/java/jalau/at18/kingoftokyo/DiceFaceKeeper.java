@@ -14,6 +14,10 @@ public class DiceFaceKeeper {
         keepListDiceFace.addAll(savePlayerListDiceFace);
     }
 
+    public void saveDiceFace(DiceFace savePlayerDiceFace) {
+        keepListDiceFace.add(savePlayerDiceFace);
+    }
+
     public List<DiceFace> getListDiceFaceKeeper() {
         return keepListDiceFace;
     }
