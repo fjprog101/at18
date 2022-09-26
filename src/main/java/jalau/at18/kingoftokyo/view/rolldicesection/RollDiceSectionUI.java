@@ -1,4 +1,4 @@
-package jalau.at18.kingoftokyo.view;
+package jalau.at18.kingoftokyo.view.rolldicesection;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;

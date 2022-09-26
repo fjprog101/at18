@@ -1,21 +1,24 @@
 package jalau.at18.kingoftokyo.controller;
 
+import jalau.at18.kingoftokyo.Player;
 import jalau.at18.kingoftokyo.view.GameFrame;
-import jalau.at18.kingoftokyo.view.whoStartsTheGame.WhoStartFrame;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-public class GameFrameController implements ActionListener {
+public class GameFrameController {
     private GameFrame gameFrame;
+    private Player player1;
+    private Player player2;
 
-    public GameFrameController(GameFrame gameFrame) {
-        this.gameFrame = gameFrame;
+    public GameFrameController(Player player1, Player player2) {
+        this.player1 = player1;
+        this.player2 = player2;
+        this.gameFrame = new GameFrame(player1, player2);
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        gameFrame.setVisible(false);
-        new WhoStartFrame();
+    public Player getPlayer1() {
+        return player1;
+    }
+
+    public Player getPlayer2() {
+        return player2;
     }
 }

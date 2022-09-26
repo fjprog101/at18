@@ -8,4 +8,6 @@ public class ShowResultsLabel extends JLabel {
         super("Who start is :");
         setFont(new Font("Times New Roman", Font.PLAIN, SIZE_FONT));
     }
+
+
 }

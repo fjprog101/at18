@@ -2,8 +2,8 @@ package jalau.at18.kingoftokyo.controller;
 
 import jalau.at18.kingoftokyo.DiceFace;
 import jalau.at18.kingoftokyo.DiceRoller;
-import jalau.at18.kingoftokyo.view.DiceFaceLabel;
-import jalau.at18.kingoftokyo.view.RollDiceSectionUI;
+import jalau.at18.kingoftokyo.view.rolldicesection.DiceFaceLabel;
+import jalau.at18.kingoftokyo.view.rolldicesection.RollDiceSectionUI;
 import org.junit.Test;
 
 import java.util.ArrayList;

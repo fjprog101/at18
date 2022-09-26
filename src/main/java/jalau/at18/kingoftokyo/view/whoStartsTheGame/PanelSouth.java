@@ -9,8 +9,8 @@ public class PanelSouth  extends JPanel {
     private static final int DEFAULT_HEIGHT = 100;
     private WhoStartController whoStartController;
 
-    public PanelSouth(WhoStartFrame frame) {
-        whoStartController = new WhoStartController(frame);
+    public PanelSouth(WhoStartController whoStartController) {
+        //whoStartController = new WhoStartController(frame);
         add(new StartGameButton(whoStartController));
         initialize();
     }
@@ -18,5 +18,4 @@ public class PanelSouth  extends JPanel {
     private void initialize() {
         setPreferredSize(new Dimension(DEFAULT_WIDTH, DEFAULT_HEIGHT));
     }
-
 }

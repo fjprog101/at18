@@ -25,7 +25,7 @@ public class DiceFaceIdentifier {
     }
 
     public int getCountDiceFace(DiceFace diceFace) {
-        return diceCount.get(diceFace);
+        return diceCount.getOrDefault(diceFace, 0);
     }
 
     public boolean exists(int count) {

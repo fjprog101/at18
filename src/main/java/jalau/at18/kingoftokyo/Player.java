@@ -3,6 +3,7 @@ package jalau.at18.kingoftokyo;
 public class Player {
     private Monster monster;
     private int energy;
+    private boolean start;
 
     public Player() {
         this.monster = null;
@@ -19,5 +20,13 @@ public class Player {
 
     public int getEnergy() {
         return this.energy;
+    }
+
+    public boolean isStart() {
+        return start;
+    }
+
+    public void setStart(boolean begin) {
+        this.start = begin;
     }
 }
