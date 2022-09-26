@@ -46,6 +46,7 @@ public class FactoryButtonGroup extends JPanel {
             Tile empty = new Tile(TileColor.EMPTY);
             buttonSelected.updateLabel(empty.getColor().getName());
             buttonSelected.updateColor(empty.getColor().getColorPath());
+            //colorListFactory.clear();
         }
     }
 }

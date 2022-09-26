@@ -25,6 +25,7 @@ public class AzulFrame extends JFrame {
         add(new FactoryPanel(stackButtonGroup));
         setLayout(null);
         setBounds(INITIAL_POSITION, INITIAL_POSITION, WIDTH, HEIGHT);
+        //setExtendedState(getExtendedState() | JFrame.MAXIMIZED_BOTH);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("AZUL GAME");
         setVisible(true);
