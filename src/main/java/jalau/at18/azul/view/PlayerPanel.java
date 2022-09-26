@@ -14,13 +14,9 @@ public class PlayerPanel extends JPanel {
     public static final int VERTIXCAL_GAP = 50;
 
     private FloorButtons floorButtonGroup;
-    private StackButtonGroup stackButtonGroup;
 
     public PlayerPanel(int player, int posy) {
-        //stackButtonGroup = new StackButtonGroup();
         setLayout(new BorderLayout(HORIZONTAL_GAP, VERTIXCAL_GAP));
-        //add(new JLabel("PLAYER " + player), BorderLayout.PAGE_START);
-        //add(stackButtonGroup,BorderLayout.PAGE_START);
         add(new PyramidBoard(), BorderLayout.LINE_START);
         add(new WallBoard(), BorderLayout.CENTER);
         add(new FloorButtons(), BorderLayout.PAGE_END);

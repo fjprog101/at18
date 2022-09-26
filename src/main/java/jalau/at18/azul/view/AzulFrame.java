@@ -10,7 +10,7 @@ public class AzulFrame extends JFrame {
     public static final int PLAYER2_Y_POSITION = 401;
     public static final int INITIAL_POSITION = 10;
     public static final int WIDTH = 1200;
-    public static final int HEIGHT = 800;
+    public static final int HEIGHT = 780;
     private StackButtonGroup stackButtonGroup;
 
     public AzulFrame() {

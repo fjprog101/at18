@@ -7,12 +7,16 @@ import javax.swing.JPanel;
 import jalau.at18.azul.Tile;
 
 public class StackButtonGroup extends JPanel {
-    public StackButtonGroup(int y){
+
+    private final int posX = 515;
+    private final int posY = 90;
+    private final int height = 200;
+    public StackButtonGroup(int y) {
         add(new StackTileButton());
         add(new StackTileButton());
         add(new StackTileButton());
         add(new StackTileButton());
-        setBounds(515, y, 90, 200);
+        setBounds(posX, y, posY, height);
     }
 
     public void updateStackButtons(List<Tile> stackList) {
@@ -20,6 +24,7 @@ public class StackButtonGroup extends JPanel {
             StackTileButton stackLabel = (StackTileButton) getComponent(index);
             Tile stackTileSource = stackList.get(index);
             stackLabel.updateLabel(stackTileSource.getColor().getName());
+            stackLabel.updateColor(stackTileSource.getColor().getColorPath());
         }
     }
 }

@@ -1,16 +1,12 @@
 package jalau.at18.azul.view;
-
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JPanel;
-
 import jalau.at18.azul.CenterTileBoard;
-import jalau.at18.azul.StackTileBoard;
 import jalau.at18.azul.Tile;
 import jalau.at18.azul.TileColor;
 import jalau.at18.azul.controllerazul.MoveTileController;
-
 public class FactoryButtonGroup extends JPanel {
 
     private MoveTileController moveTiles;
@@ -36,11 +32,20 @@ public class FactoryButtonGroup extends JPanel {
         }
     }
 
-    public List<Tile> fillArrayList(){
-        for (int i = 0; i < getComponentCount(); i++) {
-            TilesButton buttonSelected = (TilesButton) getComponent(i);
+    public List<Tile> fillArrayList() {
+        for (int index = 0; index < getComponentCount(); index++) {
+            TilesButton buttonSelected = (TilesButton) getComponent(index);
             colorListFactory.add(new Tile(TileColor.valueOf(buttonSelected.getTileValue())));
         }
         return colorListFactory;
+    }
+
+    public void clearFactoryTiles() {
+        for (int index = 0; index < getComponentCount(); index++) {
+            TilesButton buttonSelected = (TilesButton) getComponent(index);
+            Tile empty = new Tile(TileColor.EMPTY);
+            buttonSelected.updateLabel(empty.getColor().getName());
+            buttonSelected.updateColor(empty.getColor().getColorPath());
+        }
     }
 }
