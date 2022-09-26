@@ -3,6 +3,7 @@ package jalau.at18.azul.view;
 import javax.swing.JPanel;
 
 import jalau.at18.azul.BagSender;
+import jalau.at18.azul.CenterTileBoard;
 import jalau.at18.azul.controllerazul.TileController;
 
 import java.awt.*;
@@ -19,8 +20,12 @@ public class FactoryPanel extends JPanel {
     private static final int NUMBER_OF_FACTORIES = 5;
 
     private CenterButtons centerTileButtonGroup;
+    private CenterTileBoard centerBoard;
+    private StackButtonGroup stackButtonGroup;
 
-    public FactoryPanel() {
+    public FactoryPanel(StackButtonGroup newStackButtonGroup) {
+        stackButtonGroup = newStackButtonGroup;
+        centerBoard = new CenterTileBoard();
         BagSender bag = new BagSender();
         bag.saveBag();
         centerTileButtonGroup = new CenterButtons();
@@ -33,7 +38,7 @@ public class FactoryPanel extends JPanel {
 
     public void addFactories() {
         for (int index = 0; index < NUMBER_OF_FACTORIES; index++) {
-            add(new FactoryButtonGroup(centerTileButtonGroup));
+            add(new FactoryButtonGroup(centerTileButtonGroup, centerBoard, stackButtonGroup));
         }
     }
 
