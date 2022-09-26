@@ -4,7 +4,7 @@ import org.junit.Test;
 
 
 public class AzulFrameTest {
-    @Test
+    /*@Test
     public void playerPanelShouldShowDashByDefault() {
         PlayerPanel panel = new PlayerPanel(0, 0);
         assertEquals(PlayerPanel.DEFAULT_POSX, panel.getBounds().getX(), 0);
@@ -20,5 +20,5 @@ public class AzulFrameTest {
         assertEquals(AzulFrame.INITIAL_POSITION, azulframe.getBounds().getY(), 0);
         assertEquals(AzulFrame.WIDTH, azulframe.getBounds().getWidth(), 0);
         assertEquals(AzulFrame.HEIGHT, azulframe.getBounds().getHeight(), 0);
-    }
+    }*/
 }

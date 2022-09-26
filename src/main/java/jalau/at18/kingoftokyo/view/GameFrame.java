@@ -40,6 +40,7 @@ public class GameFrame extends JFrame {
 
         add(new CardsGroupPanel());
         add(new BoardPanel(Monster.ALIENOID));
+        add(new TurnPanel());
     }
 
     private void initialize() {
