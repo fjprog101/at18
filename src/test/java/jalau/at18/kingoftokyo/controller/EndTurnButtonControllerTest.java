@@ -2,8 +2,6 @@ package jalau.at18.kingoftokyo.controller;
 
 import static org.junit.Assert.assertEquals;
 
-import java.awt.event.ActionEvent;
-
 import javax.swing.JLabel;
 
 import org.junit.Test;
