@@ -16,33 +16,33 @@ public class GameFrame extends JFrame {
 
     // Controller
     private GameFrameController gameFrameController;
-    private Player player1;
-    private Player player2;
-    //Only to prove
     private JLabel labelDisplayWhoStart;
+    private Turn turn;
 
-    public GameFrame(Player player1, Player player2) {
-        setResizable(false);
+    public GameFrame(Turn turn) {
+        this.turn = turn;
         add(new DiceSectionUI());
         initialize();
         add(new DeckImagePanel());
         //add(new PlayerCard(Monster.ALIENOID, 0, player1));
         //add(new PlayerCard(Monster.SPACE_PENGUIN, 1, player2));
 
-        add(new PlayerCard(player1.getMonster(), 0, player1));
-        add(new PlayerCard(player2.getMonster(), 1, player2));
-        String whoWon = displayPlayerWinner(player1, player2);
+        add(new PlayerCard(turn.getPlayersList()[0].getMonster(), 0, turn.getPlayersList()[0]));
+        add(new PlayerCard(turn.getPlayersList()[1].getMonster(), 1, turn.getPlayersList()[1]));
+        /*String whoWon = displayPlayerWinner(player1, player2);
         add(new JLabel(whoWon));
         JOptionPane.showMessageDialog(this,
                 whoWon,
                 "Warning",
-                JOptionPane.WARNING_MESSAGE);
+                JOptionPane.WARNING_MESSAGE);*/
 
         add(new CardsGroupPanel());
         add(new BoardPanel(Monster.ALIENOID));
+        add(new TurnPanel(turn));
     }
 
     private void initialize() {
+        setResizable(false);
         setBounds(DEFAULT_POS, DEFAULT_POS, DEFAULT_WIDTH, DEFAULT_HEIGHT);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
