@@ -10,11 +10,10 @@ public class DeckImagePanelTest {
     public void shouldShowACard() {
         DeckImagePanel deckImage = new DeckImagePanel();
         assertEquals(1, deckImage.getComponentCount());
-        assertEquals(850, deckImage.getBounds().getX(), 0);
+        assertEquals(1100, deckImage.getBounds().getX(), 0);
         assertEquals(20, deckImage.getBounds().getY(), 0);
         assertEquals(220, deckImage.getBounds().getWidth(), 0);
         assertEquals(150, deckImage.getBounds().getHeight(), 0);
         assertTrue(deckImage.isVisible());
     }
 }
-
