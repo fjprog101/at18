@@ -38,25 +38,28 @@ public class StackButtonGroup extends JPanel {
         }
     }
 
-    public List<Tile> sentStackColorList() {
+    public void sentStackColorList() {
         for (int index = 0; index < getComponentCount(); index++) {
             StackTileButton buttonSelected = (StackTileButton) getComponent(index);
             if (buttonSelected.getTileValue() != "EMPTY") {
                 stackColorList.add(new Tile(TileColor.valueOf(buttonSelected.getTileValue())));
             }
         }
+    }
+
+    public List<Tile> getStackColorList() {
         return stackColorList;
     }
 
+
+
     public void sendTilesToPyramid(ActionEvent e, PointerGroup pointerGroup, PyramidBoard pyramidBoard) {
+        sentStackColorList();
         for (int index = 0; index < pointerGroup.getComponentCount(); index++) {
             if (e.getSource() == (pointerGroup.getComponent(index))) {
-                for (int jindex = 0; jindex < sentStackColorList().size(); jindex++) {
-                    pyramidBoard.updateTiles(index, count, sentStackColorList().get(jindex));
+                for (int jindex = 0; jindex < getStackColorList().size(); jindex++) {
+                    pyramidBoard.updateTiles(index, count, getStackColorList().get(jindex));
                     count--;
-                    if (count == sentStackColorList().size()) {
-                        break;
-                    }
                 }
             }
         }
