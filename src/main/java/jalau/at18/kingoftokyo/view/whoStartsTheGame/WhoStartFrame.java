@@ -1,6 +1,6 @@
 package jalau.at18.kingoftokyo.view.whoStartsTheGame;
 
-import jalau.at18.kingoftokyo.controller.WhoStartController;
+import jalau.at18.kingoftokyo.model.Player;
 
 import java.awt.BorderLayout;
 
@@ -10,25 +10,35 @@ public class WhoStartFrame extends JFrame {
     private static final int DEFAULT_POS = 30;
     private static final int DEFAULT_WIDTH = 1200;
     private static final int DEFAULT_HEIGHT = 700;
-    private PlayerPanel player1Panel;
-    private PlayerPanel player2Panel;
+    private ShowDicesPanel player1Panel;
 
-    public WhoStartFrame(WhoStartController whoStartController) {
-        PanelSouth panelSouth = new PanelSouth(whoStartController);
+    //private Player2Panel player2Panel;
+    private ShowResultsPanel showResultsPanel;
+
+    private Player[] playerList;
+
+    //public WhoStartFrame(WhoStartController whoStartController) { //no sirve
+    public WhoStartFrame(Player[] playerList) { //
+        //PanelSouth panelSouth = new PanelSouth(whoStartController); //?????????????
         setResizable(false);
+        setVisible(true);
 
         ShowResultsLabel whoStartLabel = new ShowResultsLabel();
         initialize();
-        JButton calculateWinnerButton = new JButton("Calculate winner");
-        calculateWinnerButton.addActionListener(e -> whoStartController.clickCalculateWinnerButton());
-        add(calculateWinnerButton, BorderLayout.PAGE_START);
-        add(whoStartLabel, BorderLayout.CENTER);
-        add(panelSouth, BorderLayout.SOUTH);
+       // JButton calculateWinnerButton = new JButton("Calculate winner");
+       // calculateWinnerButton.addActionListener(e -> whoStartController.clickCalculateWinnerButton());
+        //add(calculateWinnerButton, BorderLayout.PAGE_START);
 
-        player1Panel = new PlayerPanel(whoStartController.getPlayer1());
-        player2Panel = new PlayerPanel(whoStartController.getPlayer2());
+        //add(whoStartLabel, BorderLayout.CENTER);
+
+        //add(panelSouth, BorderLayout.SOUTH); //panel de respuesta sirve
+
+        player1Panel = new ShowDicesPanel(playerList[0]);
+
+        //player2Panel = new ShowResultsPanel();
+        showResultsPanel = new ShowResultsPanel(playerList);
         add(player1Panel, BorderLayout.WEST);
-        add(player2Panel, BorderLayout.EAST);
+        add(showResultsPanel, BorderLayout.CENTER);
     }
 
     private void initialize() {
@@ -38,11 +48,11 @@ public class WhoStartFrame extends JFrame {
         setTitle("King of Tokyo");
     }
 
-    public PlayerPanel getPlayer1Panel() {
+    public ShowDicesPanel getPlayer1Panel() {
         return player1Panel;
     }
-
-    public PlayerPanel getPlayer2Panel() {
+/*//no sirbe
+    public ShowDicesPanel getPlayer2Panel() {
         return player2Panel;
-    }
+    } */
 }

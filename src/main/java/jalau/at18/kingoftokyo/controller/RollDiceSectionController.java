@@ -17,7 +17,7 @@ public class RollDiceSectionController {
     private List<DiceFace> listRandomDiceFace;
 
     public RollDiceSectionController(RollDiceSectionUI rollDiceSectionUI,
-                                     KeepDiceSectionController keepDiceSectionController) {
+                                        KeepDiceSectionController keepDiceSectionController) {
         this.rollDiceSectionUI = rollDiceSectionUI;
         this.keepDiceSectionController = keepDiceSectionController;
         rollDiceSectionUI.getRollerDiceButton().addActionListener(e -> rollDices());

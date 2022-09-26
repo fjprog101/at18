@@ -17,24 +17,29 @@ import java.util.List;
 
 public class WhoStartController {
     private WhoStartFrame whoStartFrame;
-    private Player player1;
-    private Player player2;
+    //private Player player1;
+    //private Player player2;
 
     //Here we need to improve the Open/Close principle
     //Should be Arrive a list of players
-    public WhoStartController(Player player1, Player player2) {
-        this.player1 = player1;
-        this.player2 = player2;
-        this.whoStartFrame = new WhoStartFrame(this);
-    }
 
+    private Player[] playerList;
+
+    //public WhoStartController(Player player1, Player player2) {
+    public WhoStartController(Player[] playerList) {
+        //this.player1 = player1;
+        //this.player2 = player2;
+        this.playerList = playerList;
+        //this.whoStartFrame = new WhoStartFrame(this);
+    }
+/*
     public Player getPlayer1() {
         return player1;
     }
 
     public Player getPlayer2() {
         return player2;
-    }
+    }*/
 
     public void showFrame() {
         whoStartFrame.setVisible(true);
@@ -53,30 +58,18 @@ public class WhoStartController {
         //GameFrameController gameFrameController = new GameFrameController(player1, player2);
         new GameFrame(new Turn(playerList));
     }
-
-    public void clickCalculateWinnerButton() {
+/*
+    public int getCountPounching() {
         List<DiceFace> diceFacesPlayer1 = whoStartFrame.getPlayer1Panel().getWhoStartRollDiceController().getListRandomDiceFace();
-        List<DiceFace> diceFacesPlayer2 = whoStartFrame.getPlayer2Panel().getWhoStartRollDiceController().getListRandomDiceFace();
         List<Dice> dicePlayer1 = new ArrayList<>();
         for (DiceFace diceFace : diceFacesPlayer1) {
             dicePlayer1.add(new Dice(diceFace));
         }
-
-        List<Dice> dicePlayer2 = new ArrayList<>();
-        for (DiceFace diceFace : diceFacesPlayer2) {
-            dicePlayer2.add(new Dice(diceFace));
-        }
-
         DiceHand diceHandPlayer1 = new DiceHand(dicePlayer1);
-        DiceHand diceHandPlayer2 = new DiceHand(dicePlayer2);
         DiceFaceSameCounter diceFaceSameCounterPlayer1 = new DiceFaceSameCounter(diceHandPlayer1);
-        DiceFaceSameCounter diceFaceSameCounterPlayer2 = new DiceFaceSameCounter(diceHandPlayer2);
-
         DiceFaceIdentifier diceFaceIdentifier1 = diceFaceSameCounterPlayer1.diceFaceCounter();
-        DiceFaceIdentifier diceFaceIdentifier2 = diceFaceSameCounterPlayer2.diceFaceCounter();
 
         int countPounchingPlayer1 = diceFaceIdentifier1.getCountDiceFace(DiceFace.PUNCHING);
-        int countPounchingPlayer2 = diceFaceIdentifier2.getCountDiceFace(DiceFace.PUNCHING);
 
         if (countPounchingPlayer1 > countPounchingPlayer2) {
             JOptionPane.showMessageDialog(whoStartFrame,
@@ -95,10 +88,10 @@ public class WhoStartController {
                     "Newly start the Roll Dice by Turn.",
                     "Warning",
                     JOptionPane.WARNING_MESSAGE);
-        }
+        }*/
     }
     /*@Override
     public void actionPerformed(ActionEvent e) {
         //whostartframe.setVisible(false);
-    }*/
-}
+    }
+}*/

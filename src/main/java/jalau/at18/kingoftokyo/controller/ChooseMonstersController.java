@@ -4,6 +4,7 @@ import jalau.at18.kingoftokyo.Game;
 import jalau.at18.kingoftokyo.model.Player;
 import jalau.at18.kingoftokyo.model.Monster;
 import jalau.at18.kingoftokyo.view.choosemonsters.ChooseMonstersFrame;
+//import jalau.at18.kingoftokyo.view.choosemonsters.ChooseMonstersFrame;
 import jalau.at18.kingoftokyo.view.general.MonsterList;
 import jalau.at18.kingoftokyo.view.general.UsernameTextBox;
 
@@ -12,6 +13,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class ChooseMonstersController implements ActionListener {
+    //private ChooseMonstersController monstersFrame;
     private ChooseMonstersFrame monstersFrame;
     private WhoStartController whoStartController;
     // We need to implement the chain from where someone send us the Players.
@@ -39,7 +41,7 @@ public class ChooseMonstersController implements ActionListener {
         makePlayersList();
         monstersFrame.setVisible(false);
         //Should send two players
-        whoStartController = new WhoStartController(player1, player2);
+        //whoStartController = new WhoStartController(player1, player2);
         whoStartController.showFrame();
     }
 
