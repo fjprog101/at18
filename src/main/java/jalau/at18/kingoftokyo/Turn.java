@@ -13,6 +13,10 @@ public class Turn {
         return playersSequence[turn];
     }
 
+    public Player[] getPlayersList() {
+        return playersSequence;
+    }
+
     public void changePlayerWithTheTurn() {
         if (turn == playersSequence.length - 1) {
             turn = 0;

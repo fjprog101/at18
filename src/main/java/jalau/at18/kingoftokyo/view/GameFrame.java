@@ -27,8 +27,8 @@ public class GameFrame extends JFrame {
         //add(new PlayerCard(Monster.ALIENOID, 0, player1));
         //add(new PlayerCard(Monster.SPACE_PENGUIN, 1, player2));
 
-        //add(new PlayerCard(player1.getMonster(), 0, player1));
-        //add(new PlayerCard(player2.getMonster(), 1, player2));
+        add(new PlayerCard(turn.getPlayersList()[0].getMonster(), 0, turn.getPlayersList()[0]));
+        add(new PlayerCard(turn.getPlayersList()[1].getMonster(), 1, turn.getPlayersList()[1]));
         /*String whoWon = displayPlayerWinner(player1, player2);
         add(new JLabel(whoWon));
         JOptionPane.showMessageDialog(this,

@@ -39,12 +39,12 @@ public class WhoStartController {
     //The button of PanelSouth
     public void clickStartGameButton() {
         whoStartFrame.setVisible(false);
-        Player player1 = new Player();
-        player1.addMonster(Monster.ALIENOID);
-        Player player2 = new Player();
-        player2.addMonster(Monster.SPACE_PENGUIN);
-        Player[] playerList = {player2, player1};
-        GameFrameController gameFrameController = new GameFrameController(player1, player2);
+        Player newPlayer1 = new Player();
+        newPlayer1.addMonster(Monster.ALIENOID);
+        Player newPlayer2 = new Player();
+        newPlayer2.addMonster(Monster.SPACE_PENGUIN);
+        Player[] playerList = {newPlayer2, newPlayer1};
+        //GameFrameController gameFrameController = new GameFrameController(player1, player2);
         new GameFrame(new Turn(playerList));
     }
 
@@ -94,6 +94,5 @@ public class WhoStartController {
     /*@Override
     public void actionPerformed(ActionEvent e) {
         //whostartframe.setVisible(false);
-        
     }*/
 }
