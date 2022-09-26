@@ -1,8 +1,8 @@
 package jalau.at18.azul.view;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.Color;
-
 public class PyramidTileButton extends JButton {
 
     private PyramidTileLabel pyramidTileLabel;
@@ -23,5 +23,14 @@ public class PyramidTileButton extends JButton {
         setOpaque(false);
         setContentAreaFilled(false);
         setBorderPainted(false);
+    }
+
+    public void updateColor(String newText) {
+        ImageIcon newIcon = new ImageIcon("src/main/resources/azul/" + newText);
+        setIcon(newIcon);
+    }
+
+    public String getTileValue() {
+        return pyramidTileLabel.getText();
     }
 }

@@ -23,6 +23,7 @@ public class PyramidBoard extends JPanel {
                 tileButton[row][column] = new PyramidTileButton();
                 if (row + column >= DIVIDE_PYRAMID) {
                     tileButton[row][column].updateLabel(emptyTile.getColor().getName());
+                    tileButton[row][column].updateColor(emptyTile.getColor().getColorPath());
                     add(tileButton[row][column]);
                 } else {
                     tileButton[row][column].hideButton();
@@ -30,5 +31,10 @@ public class PyramidBoard extends JPanel {
                 }
             }
         }
+    }
+
+    public void updateTiles(int row, int column, Tile newTile) {
+        tileButton[row][column].updateLabel(newTile.getColor().getName());
+        tileButton[row][column].updateColor(newTile.getColor().getColorPath());
     }
 }

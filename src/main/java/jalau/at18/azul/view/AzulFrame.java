@@ -19,9 +19,9 @@ public class AzulFrame extends JFrame {
     }
 
     public void initialize() {
-        add(new PlayerPanel(PLAYER1, PLAYER1_Y_POSITION));
+        add(new PlayerPanel(PLAYER1, PLAYER1_Y_POSITION, stackButtonGroup));
         add(stackButtonGroup);
-        add(new PlayerPanel(PLAYER2, PLAYER2_Y_POSITION));
+        add(new PlayerPanel(PLAYER2, PLAYER2_Y_POSITION, stackButtonGroup));
         add(new FactoryPanel(stackButtonGroup));
         setLayout(null);
         setBounds(INITIAL_POSITION, INITIAL_POSITION, WIDTH, HEIGHT);

@@ -13,7 +13,7 @@ public class FactoryPanel extends JPanel {
     public static final int COLS = 2;
     public static final int HORIZONTAL_GAP = 100;
     public static final int VERTIXCAL_GAP = 40;
-    public static final int X_INITIAL_POSITION = 610;
+    public static final int X_INITIAL_POSITION = 810;
     public static final int Y_INITIAL_POSITION = 20;
     public static final int WIDTH = 550;
     public static final int HEIGHT = 730;
