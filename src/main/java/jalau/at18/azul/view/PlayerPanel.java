@@ -17,7 +17,6 @@ public class PlayerPanel extends JPanel {
 
     public PlayerPanel(int player, int posy) {
         setLayout(new BorderLayout(HORIZONTAL_GAP, VERTIXCAL_GAP));
-        add(new JLabel("PLAYER " + player), BorderLayout.PAGE_START);
         add(new PyramidBoard(), BorderLayout.LINE_START);
         add(new WallBoard(), BorderLayout.CENTER);
         add(new FloorButtons(), BorderLayout.PAGE_END);
