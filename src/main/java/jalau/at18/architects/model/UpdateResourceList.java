@@ -9,8 +9,8 @@ public class UpdateResourceList {
     private List<Object> conditionAndCounter;
     private int accumulatedCounter = 0;
 
-    public UpdateResourceList(ResourceList resourceList) {
-        this.resourceList = resourceList;
+    public UpdateResourceList() {
+        this.resourceList = new ResourceList();
         System.out.println(resourceList);
     }
 
