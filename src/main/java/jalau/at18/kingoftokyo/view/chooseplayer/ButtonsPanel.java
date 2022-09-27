@@ -10,9 +10,9 @@ public class ButtonsPanel extends JPanel {
 
     private static final int ONE_HUNDRED = 100;
     private ChoosePlayerController choosePlayerController;
-    public ButtonsPanel(ChoosePlayersFrame frame) {
+    public ButtonsPanel(ChoosePlayersFrame frame, PlayersNumbersSpinner spinner) {
         setLayout(new FlowLayout());
-        choosePlayerController = new ChoosePlayerController(frame);
+        choosePlayerController = new ChoosePlayerController(frame, spinner);
         add(Box.createRigidArea(new Dimension(0, ONE_HUNDRED)));
         add(new ExitButton());
         add(Box.createRigidArea(new Dimension(ONE_HUNDRED, 0)));

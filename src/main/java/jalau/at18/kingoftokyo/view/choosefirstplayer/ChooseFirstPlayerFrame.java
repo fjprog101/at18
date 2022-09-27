@@ -1,5 +1,6 @@
 package jalau.at18.kingoftokyo.view.choosefirstplayer;
 
+import jalau.at18.kingoftokyo.Game;
 import jalau.at18.kingoftokyo.view.general.FooterPanel;
 import jalau.at18.kingoftokyo.view.general.HeaderPanel;
 
@@ -11,7 +12,7 @@ public class ChooseFirstPlayerFrame extends JFrame {
     private static final int DEFAULT_WIDTH = 1200;
     private static final int DEFAULT_HEIGHT = 700;
 
-    public ChooseFirstPlayerFrame() {
+    public ChooseFirstPlayerFrame(Game game) {
         HeaderPanel headerPanel = new HeaderPanel();
         CenterPanel centerPanel = new CenterPanel(this);
         FooterPanel footerPanel = new FooterPanel();
