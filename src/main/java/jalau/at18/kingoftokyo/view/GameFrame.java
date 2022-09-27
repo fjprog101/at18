@@ -3,10 +3,11 @@ package jalau.at18.kingoftokyo.view;
 import javax.swing.*;
 
 import jalau.at18.kingoftokyo.controller.PlayerStatusController;
+import jalau.at18.kingoftokyo.model.Monster;
+import jalau.at18.kingoftokyo.model.Turn;
 import jalau.at18.kingoftokyo.*;
 import jalau.at18.kingoftokyo.view.board.BoardPanel;
 import jalau.at18.kingoftokyo.view.card.CardsGroupPanel;
-import jalau.at18.kingoftokyo.view.playercards.PlayerCard;
 import jalau.at18.kingoftokyo.view.playercards.PlayerCardsGroupPanel;
 import jalau.at18.kingoftokyo.view.rolldicesection.DiceSectionUI;
 

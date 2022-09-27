@@ -5,9 +5,9 @@ import javax.swing.BoxLayout;
 import javax.swing.JPanel;
 import java.awt.*;
 
-import jalau.at18.kingoftokyo.CompleteCard;
-import jalau.at18.kingoftokyo.DeckCards;
 import jalau.at18.kingoftokyo.controller.PlayerStatusController;
+import jalau.at18.kingoftokyo.model.CompleteCard;
+import jalau.at18.kingoftokyo.model.DeckCards;
 
 public class CardsGroupPanel extends JPanel {
     private static final int[] CARD_SIZE = {470, 250};
@@ -43,6 +43,6 @@ public class CardsGroupPanel extends JPanel {
     }
 
     public void sendEffect(int[] effect) {
-        playerController.setPlayerStatus(effect);
+        playerController.setPlayersStatus(effect);
     }
 }

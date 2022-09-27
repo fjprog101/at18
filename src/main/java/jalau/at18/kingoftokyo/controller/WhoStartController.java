@@ -1,9 +1,14 @@
 package jalau.at18.kingoftokyo.controller;
 
 import jalau.at18.kingoftokyo.*;
-import jalau.at18.kingoftokyo.Monster;
-import jalau.at18.kingoftokyo.Player;
-import jalau.at18.kingoftokyo.Turn;
+import jalau.at18.kingoftokyo.model.Dice;
+import jalau.at18.kingoftokyo.model.DiceFace;
+import jalau.at18.kingoftokyo.model.DiceFaceIdentifier;
+import jalau.at18.kingoftokyo.model.DiceFaceSameCounter;
+import jalau.at18.kingoftokyo.model.DiceHand;
+import jalau.at18.kingoftokyo.model.Monster;
+import jalau.at18.kingoftokyo.model.Player;
+import jalau.at18.kingoftokyo.model.Turn;
 import jalau.at18.kingoftokyo.view.GameFrame;
 import jalau.at18.kingoftokyo.view.whoStartsTheGame.WhoStartFrame;
 

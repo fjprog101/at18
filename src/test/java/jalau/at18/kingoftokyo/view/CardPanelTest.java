@@ -4,6 +4,9 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import jalau.at18.kingoftokyo.*;
+import jalau.at18.kingoftokyo.model.CompleteCard;
+import jalau.at18.kingoftokyo.model.DeckCards;
+import jalau.at18.kingoftokyo.model.DiscardCards;
 import jalau.at18.kingoftokyo.view.card.*;
 
 import static org.mockito.Mockito.mock;

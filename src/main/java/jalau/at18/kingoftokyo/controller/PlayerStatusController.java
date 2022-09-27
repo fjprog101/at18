@@ -1,7 +1,7 @@
 package jalau.at18.kingoftokyo.controller;
 
-import jalau.at18.kingoftokyo.Player;
-import jalau.at18.kingoftokyo.Turn;
+import jalau.at18.kingoftokyo.model.Player;
+import jalau.at18.kingoftokyo.model.Turn;
 import jalau.at18.kingoftokyo.view.GameFrame;
 
 public class PlayerStatusController {
@@ -16,17 +16,20 @@ public class PlayerStatusController {
         this.turn = gameFrame.getTurns();
     }
 
-    public void setPlayerStatus(int[] effect) {
-        setHealing(effect[HEAL]);
+    public void setPlayersStatus(int[] effect) {
+        setPlayerWithTurn(effect[HEAL], effect[SCORE], effect[ENERGY]);
         giveDamage(effect[DAMAGE]);
-        setVictoryPoints(effect[SCORE]);
-        setEnergy(effect[ENERGY]);
+    }
 
-    }
-    public void setHealing(int healing) {
+    public void setPlayerWithTurn(int healing, int victoryPoints, int energy) {
         int newLifePoints = turn.getPlayerWithTheTurn().getLifePoints() + healing;
+        int newVictoryPoints = turn.getPlayerWithTheTurn().getVictoryPoints() + victoryPoints;
+        int newEnery = turn.getPlayerWithTheTurn().getEnergy() + energy;
         turn.getPlayerWithTheTurn().setLifePoints(newLifePoints);
+        turn.getPlayerWithTheTurn().setVictoryPoints(newVictoryPoints);
+        turn.getPlayerWithTheTurn().setEnergy(newEnery);
     }
+
     public void giveDamage(int damage) {
         for (Player player : turn.getPlayersList()) {
             if (player != turn.getPlayerWithTheTurn()) {
@@ -34,13 +37,5 @@ public class PlayerStatusController {
                 player.setLifePoints(newLifePoints);
             }
         }
-    }
-    public void setVictoryPoints(int victoryPoints) {
-        int newVictoryPoints = turn.getPlayerWithTheTurn().getVictoryPoints() + victoryPoints;
-        turn.getPlayerWithTheTurn().setVictoryPoints(newVictoryPoints);
-    }
-    public void setEnergy(int energy) {
-        int newEnery = turn.getPlayerWithTheTurn().getEnergy() + energy;
-        turn.getPlayerWithTheTurn().setEnergy(newEnery);
     }
 }

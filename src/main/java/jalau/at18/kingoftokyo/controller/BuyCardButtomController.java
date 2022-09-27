@@ -6,10 +6,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
-import jalau.at18.kingoftokyo.CompleteCard;
-import jalau.at18.kingoftokyo.view.card.CardNameLabel;
-import jalau.at18.kingoftokyo.view.card.CardPanel;
-import jalau.at18.kingoftokyo.view.card.CardsGroupPanel;
+import jalau.at18.kingoftokyo.model.CompleteCard;
+import jalau.at18.kingoftokyo.view.card.*;
 
 public class BuyCardButtomController implements ActionListener {
     private CardPanel card;

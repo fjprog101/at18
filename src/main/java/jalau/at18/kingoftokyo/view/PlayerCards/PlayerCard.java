@@ -3,7 +3,7 @@ package jalau.at18.kingoftokyo.view.playercards;
 import java.awt.*;
 import javax.swing.JPanel;
 
-import jalau.at18.kingoftokyo.Player;
+import jalau.at18.kingoftokyo.model.Player;
 
 public class PlayerCard extends JPanel {
     private static final int WIDTH = 300;
@@ -20,5 +20,10 @@ public class PlayerCard extends JPanel {
         add(new PlayerCardEnergyPoints(player.getEnergy()));
         add(new PlayerCardVictoryPoints(player.getVictoryPoints()));
         add(new PlayerCardMonsterIcon(player.getMonster().getIconPath()));
+        setVisible(false);
+    }
+
+    public void updatePlayerStatus() {
+
     }
 }

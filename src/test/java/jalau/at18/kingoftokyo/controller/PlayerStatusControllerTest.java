@@ -4,9 +4,9 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import jalau.at18.kingoftokyo.Monster;
-import jalau.at18.kingoftokyo.Player;
-import jalau.at18.kingoftokyo.Turn;
+import jalau.at18.kingoftokyo.model.Monster;
+import jalau.at18.kingoftokyo.model.Player;
+import jalau.at18.kingoftokyo.model.Turn;
 import jalau.at18.kingoftokyo.view.GameFrame;
 
 public class PlayerStatusControllerTest {
@@ -25,7 +25,7 @@ public class PlayerStatusControllerTest {
         assertEquals(0, player1.getVictoryPoints());
         assertEquals(0, player1.getEnergy());
         int[] effectsSetter = {3, 2, 1, 4};
-        playerController.setPlayerStatus(effectsSetter);
+        playerController.setPlayersStatus(effectsSetter);
         assertEquals(13, player1.getLifePoints());
         assertEquals(8, player2.getLifePoints());
         assertEquals(1, player1.getVictoryPoints());
