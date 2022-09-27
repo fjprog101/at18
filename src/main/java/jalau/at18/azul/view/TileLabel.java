@@ -4,6 +4,6 @@ import javax.swing.JLabel;
 
 public class TileLabel extends JLabel {
     public TileLabel() {
-        super("tile");
+        super("EMPTY");
     }
 }

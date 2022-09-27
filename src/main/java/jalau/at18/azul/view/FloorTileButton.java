@@ -1,5 +1,6 @@
 package jalau.at18.azul.view;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.Color;
 
@@ -18,5 +19,10 @@ public class FloorTileButton extends JButton {
 
     public void updateLabel(String newText) {
         tileLabel.setText(newText);
+    }
+
+    public void updateColor(String newText) {
+        ImageIcon newIcon = new ImageIcon("src/main/resources/azul/" + newText);
+        setIcon(newIcon);
     }
 }
