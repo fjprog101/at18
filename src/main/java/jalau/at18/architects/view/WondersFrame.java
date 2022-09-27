@@ -19,7 +19,7 @@ public class WondersFrame extends JFrame {
         add(choiceNumberPlayers);
         add(startLabel);
         setTitle(WINDOW_NAME);
-        setBounds(DEFAULT_POS_Y, DEFAULT_POS_Y, DEFAULT_SIZE, DEFAULT_SIZE2);
+        setSize(DEFAULT_SIZE, DEFAULT_SIZE2);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(null);

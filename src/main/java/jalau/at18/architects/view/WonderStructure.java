@@ -17,6 +17,7 @@ class WonderStructure extends JPanel {
 
     }
     public void addStage() {
+
         if (index >= 0) {
             stage = stages.get(index);
             setBounds(DEFAULT_POSX, DEFAULT_POSY, DEFAULT_WIDTH, DEFAULT_HEIGHT);
@@ -28,5 +29,6 @@ class WonderStructure extends JPanel {
         for (int ind = 0; ind < quantity; ind++) {
             addStage();
         }
+        index = QUANTITY_STAGES;
     }
 }
