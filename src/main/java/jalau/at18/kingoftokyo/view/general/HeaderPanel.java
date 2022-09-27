@@ -8,6 +8,7 @@ public class HeaderPanel extends JPanel {
     private static final int DEFAULT_WIDTH = 100;
     private static final int DEFAULT_HEIGHT = 100;
     public HeaderPanel() {
+        setLayout(new BorderLayout());
         add(new HeaderLabel());
         setBackground(Color.GREEN);
         initialize();
