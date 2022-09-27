@@ -4,16 +4,16 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import jalau.at18.kingoftokyo.Turn;
 import jalau.at18.kingoftokyo.controller.EndTurnButtonController;
+import jalau.at18.kingoftokyo.model.Turn;
 
 import java.awt.BorderLayout;
 import java.awt.Font;
 
 public class TurnPanel extends JPanel {
-    private static final int POS_X = 5;
+    private static final int POS_X = 310;
     private static final int POS_Y = 600;
-    private static final int WIDTH = 1150;
+    private static final int WIDTH = 1000;
     private static final int HEIGHT = 40;
     private static final int FONT_STYLE = 1;
     private static final int FONT_SIZE = 24;

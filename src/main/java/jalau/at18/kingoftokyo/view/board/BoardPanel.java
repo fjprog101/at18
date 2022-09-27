@@ -3,7 +3,7 @@ package jalau.at18.kingoftokyo.view.board;
 import java.awt.Color;
 import javax.swing.JPanel;
 
-import jalau.at18.kingoftokyo.Monster;
+import jalau.at18.kingoftokyo.model.Monster;
 
 public class BoardPanel extends JPanel {
     private static final int SIZE = 500;

@@ -7,9 +7,9 @@ import javax.swing.JLabel;
 
 import org.junit.Test;
 
-import jalau.at18.kingoftokyo.Player;
-import jalau.at18.kingoftokyo.Turn;
-import jalau.at18.kingoftokyo.Monster;
+import jalau.at18.kingoftokyo.model.Monster;
+import jalau.at18.kingoftokyo.model.Player;
+import jalau.at18.kingoftokyo.model.Turn;
 
 public class TurnPanelTest {
     @Test
@@ -24,9 +24,9 @@ public class TurnPanelTest {
         Turn turn = new Turn(playerList);
         TurnPanel turnPanel = new TurnPanel(turn);
         assertEquals(2, turnPanel.getComponentCount());
-        assertEquals(5, turnPanel.getBounds().getX(), 0);
+        assertEquals(310, turnPanel.getBounds().getX(), 0);
         assertEquals(600, turnPanel.getBounds().getY(), 0);
-        assertEquals(1150, turnPanel.getBounds().getWidth(), 0);
+        assertEquals(1000, turnPanel.getBounds().getWidth(), 0);
         assertEquals(40, turnPanel.getBounds().getHeight(), 0);
         assertTrue(turnPanel.isVisible());
     }

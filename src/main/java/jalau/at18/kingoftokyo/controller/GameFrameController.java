@@ -1,6 +1,6 @@
 package jalau.at18.kingoftokyo.controller;
 
-import jalau.at18.kingoftokyo.Player;
+import jalau.at18.kingoftokyo.model.Player;
 import jalau.at18.kingoftokyo.view.GameFrame;
 
 public class GameFrameController {

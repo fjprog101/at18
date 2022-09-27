@@ -1,7 +1,7 @@
 package jalau.at18.kingoftokyo.controller;
 
-import jalau.at18.kingoftokyo.Monster;
-import jalau.at18.kingoftokyo.Player;
+import jalau.at18.kingoftokyo.model.Monster;
+import jalau.at18.kingoftokyo.model.Player;
 import jalau.at18.kingoftokyo.view.choosesecondplayer.ChooseSecondPlayerFrame;
 
 import java.awt.event.ActionEvent;

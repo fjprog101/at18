@@ -1,9 +1,14 @@
 package jalau.at18.kingoftokyo.controller;
 
 import jalau.at18.kingoftokyo.*;
-import jalau.at18.kingoftokyo.Monster;
-import jalau.at18.kingoftokyo.Player;
-import jalau.at18.kingoftokyo.Turn;
+import jalau.at18.kingoftokyo.model.Dice;
+import jalau.at18.kingoftokyo.model.DiceFace;
+import jalau.at18.kingoftokyo.model.DiceFaceIdentifier;
+import jalau.at18.kingoftokyo.model.DiceFaceSameCounter;
+import jalau.at18.kingoftokyo.model.DiceHand;
+import jalau.at18.kingoftokyo.model.Monster;
+import jalau.at18.kingoftokyo.model.Player;
+import jalau.at18.kingoftokyo.model.Turn;
 import jalau.at18.kingoftokyo.view.GameFrame;
 import jalau.at18.kingoftokyo.view.whoStartsTheGame.WhoStartFrame;
 
@@ -77,13 +82,13 @@ public class WhoStartController {
                     "Player 1 is the winner.",
                     "Warning",
                     JOptionPane.WARNING_MESSAGE);
-            player1.setStart(true);
+            //player1.setStart(true);
         } else if (countPounchingPlayer2 > countPounchingPlayer1) {
             JOptionPane.showMessageDialog(whoStartFrame,
                     "Player 2 is the winner.",
                     "Warning",
                     JOptionPane.WARNING_MESSAGE);
-            player2.setStart(true);
+            //player2.setStart(true);
         } else if (countPounchingPlayer2 == countPounchingPlayer1) {
             JOptionPane.showMessageDialog(whoStartFrame,
                     "Newly start the Roll Dice by Turn.",

@@ -1,9 +1,10 @@
 package jalau.at18.kingoftokyo.view.rolldicesection;
 
-import jalau.at18.kingoftokyo.DiceFace;
-
 import javax.imageio.ImageIO;
 import javax.swing.*;
+
+import jalau.at18.kingoftokyo.model.DiceFace;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
