@@ -23,6 +23,5 @@ public class FloorButtons extends JPanel {
             Tile floorSource = floor.get(index);
             floorLabel.updateLabel(floorSource.getColor().getName());
         }
-
     }
 }

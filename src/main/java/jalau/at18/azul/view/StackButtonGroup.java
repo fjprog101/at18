@@ -7,7 +7,6 @@ import javax.swing.JPanel;
 
 import jalau.at18.azul.Tile;
 import jalau.at18.azul.TileColor;
-import java.awt.event.ActionEvent;
 
 public class StackButtonGroup extends JPanel {
 
@@ -51,17 +50,13 @@ public class StackButtonGroup extends JPanel {
         return stackColorList;
     }
 
-
-
-    public void sendTilesToPyramid(ActionEvent e, PointerGroup pointerGroup, PyramidBoard pyramidBoard) {
-        sentStackColorList();
-        for (int index = 0; index < pointerGroup.getComponentCount(); index++) {
-            if (e.getSource() == (pointerGroup.getComponent(index))) {
-                for (int jindex = 0; jindex < getStackColorList().size(); jindex++) {
-                    pyramidBoard.updateTiles(index, count, getStackColorList().get(jindex));
-                    count--;
-                }
-            }
+    public void clearStackList() {
+        Tile emptyTile = new Tile(TileColor.EMPTY);
+        for (int index = 0; index < getComponentCount(); index++) {
+            StackTileButton stackLabel = (StackTileButton) getComponent(index);
+            stackLabel.updateLabel(emptyTile.getColor().getName());
+            stackLabel.updateColor(emptyTile.getColor().getColorPath());
         }
+        stackColorList.clear();
     }
 }
