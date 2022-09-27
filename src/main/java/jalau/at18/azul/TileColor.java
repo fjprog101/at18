@@ -7,7 +7,7 @@ public enum TileColor {
     DARK(false, "DARK", "dark.png", "darkOpacity.png"),
     BLUE(false, "BLUE", "blue.png", "blueOpacity.png"),
     WHITE(false, "WHITE", "white.png", "whiteOpacity.png"),
-    FIRST_PLAYER(false, "FIRST", "first.png", "first.png"),
+    FIRST(false, "FIRST", "first.png", "first.png"),
     EMPTY(false, "EMPTY", "empty.png", "empty.png"),
     NULL(false, "NULL", "null.png", "null.png");
 

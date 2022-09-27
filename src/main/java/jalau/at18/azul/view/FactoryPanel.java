@@ -36,6 +36,7 @@ public class FactoryPanel extends JPanel {
         setLayout(new GridLayout(ROWS, COLS, HORIZONTAL_GAP, VERTIXCAL_GAP));
         setBounds(X_INITIAL_POSITION, Y_INITIAL_POSITION, WIDTH, HEIGHT);
         add(new BagButton(new TileController(this, bag, player1, player2, centerTileButtonGroup)));
+
         add(centerTileButtonGroup);
         addFactories();
     }
