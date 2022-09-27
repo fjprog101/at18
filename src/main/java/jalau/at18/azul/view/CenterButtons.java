@@ -37,6 +37,10 @@ public class CenterButtons extends JPanel {
             centerLabel.updateLabel(centerSource.getColor().getName());
             centerLabel.updateColor(centerSource.getColor().getColorPath());
         }
-
+        for (int index = centerTiles.size(); index < getComponentCount(); index++) {
+            CenterTileButton centerLabel = (CenterTileButton) getComponent(index);
+            centerLabel.updateLabel("EMPTY");
+            centerLabel.updateColor("empty.png");
+        }
     }
 }

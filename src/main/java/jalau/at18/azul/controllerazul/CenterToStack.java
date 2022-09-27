@@ -22,11 +22,11 @@ public class CenterToStack implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        CenterTileBoard newcenter = new CenterTileBoard();
         CenterTileButton buttonSelected = (CenterTileButton) e.getSource();
+        CenterTileBoard newcenter = center;
         Tile color = new Tile(TileColor.valueOf(buttonSelected.getTileValue()));
-        stackButtonGroup.updateStackButtons(center.selectedTilesList(color));
-        newcenter = center.removeTilesOfSpecificColor(color);
-        centerbutton.updateCenterButtons(newcenter);
+        stackButtonGroup.updateStackButtons(newcenter.selectedTilesList(color));
+        center.removeTilesOfSpecificColor(color);
+        centerbutton.updateCenterButtons(center);
     }
 }
