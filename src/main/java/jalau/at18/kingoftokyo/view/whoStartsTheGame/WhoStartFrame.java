@@ -24,6 +24,8 @@ public class WhoStartFrame extends JFrame {
 
         setResizable(false);
         setVisible(true);
+        //TitleLabelPanel titleLabelPanel = new TitleLabelPanel(); //anadido
+        //add(titleLabelPanel); //anadido
 
         showResultsPanel = new ShowResultsPanel(playerList);
 
@@ -34,17 +36,22 @@ public class WhoStartFrame extends JFrame {
         // JButton calculateWinnerButton = new JButton("Calculate winner");
         // calculateWinnerButton.addActionListener(e -> whoStartController.clickCalculateWinnerButton());
         //add(calculateWinnerButton, BorderLayout.PAGE_START);
+
         //PanelSouth panelSouth = new PanelSouth(whoStartController); //?????????????
         //add(panelSouth, BorderLayout.SOUTH); //panel de respuesta sirve
 
         add(player1Panel, BorderLayout.WEST);
-        add(showResultsPanel, BorderLayout.CENTER);
+       // add(showResultsPanel, BorderLayout.CENTER);
+        //add(player1Panel);
+        add(showResultsPanel);
+
     }
 
     private void initialize() {
         setBounds(DEFAULT_POS, DEFAULT_POS, DEFAULT_WIDTH, DEFAULT_HEIGHT);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLayout(new BorderLayout());
+        //setLayout(new BorderLayout());
+        setLayout(null);
         setTitle("King of Tokyo");
     }
 
