@@ -2,20 +2,20 @@ package jalau.at18.kingoftokyo.controller;
 
 import jalau.at18.kingoftokyo.Monster;
 import jalau.at18.kingoftokyo.Player;
-import jalau.at18.kingoftokyo.view.choosesecondplayer.ChooseSecondPlayerFrame;
+import jalau.at18.kingoftokyo.view.choosemonsters.ChooseMonstersFrame;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ChooseSecondPlayerController implements ActionListener {
-    private ChooseSecondPlayerFrame chooseSecondPlayersFrame;
+public class ChooseMonstersController implements ActionListener {
+    private ChooseMonstersFrame chooseSecondPlayersFrame;
     private WhoStartController whoStartController;
     // We need to implement the chain from where someone send us the Players.
     // for Open/close we need to receive a list<Player>
     private Player player1;
     private Player player2;
 
-    public ChooseSecondPlayerController(ChooseSecondPlayerFrame chooseSecondPlayersFrame) {
+    public ChooseMonstersController(ChooseMonstersFrame chooseSecondPlayersFrame) {
         this.chooseSecondPlayersFrame = chooseSecondPlayersFrame;
         player1 = new Player();
         player2 = new Player();

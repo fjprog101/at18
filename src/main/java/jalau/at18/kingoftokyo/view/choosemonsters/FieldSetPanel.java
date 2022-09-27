@@ -1,4 +1,4 @@
-package jalau.at18.kingoftokyo.view.choosesecondplayer;
+package jalau.at18.kingoftokyo.view.choosemonsters;
 
 import jalau.at18.kingoftokyo.view.general.MonsterLabel;
 import jalau.at18.kingoftokyo.view.general.MonsterList;

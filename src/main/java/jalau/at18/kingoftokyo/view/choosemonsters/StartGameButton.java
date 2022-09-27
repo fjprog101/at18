@@ -1,4 +1,4 @@
-package jalau.at18.kingoftokyo.view.choosesecondplayer;
+package jalau.at18.kingoftokyo.view.choosemonsters;
 
 import javax.swing.*;
 import java.awt.event.ActionListener;
