@@ -5,6 +5,7 @@ import javax.swing.JFrame;
 
 import jalau.at18.architects.controller.BarConflictController;
 import jalau.at18.architects.controller.WonderController;
+import jalau.at18.architects.model.BuildStage;
 
 public class BoardFrame extends JFrame {
     public static final int WIDTH = 1000;
@@ -20,10 +21,10 @@ public class BoardFrame extends JFrame {
     private WonderController wonderController;
     private WonderStructure wonderStructure;
     private AddStageButton addStage;
-
+    //private BuildStage buildStage;
     public BoardFrame(String numberOfPlayers) {
         barConflictController = new BarConflictController(this);
-        wonderController = new WonderController(this);
+        wonderController = new WonderController(this, new BuildStage());
         this.numbersOfPlayers = numberOfPlayers;
         initialize();
     }
@@ -32,7 +33,6 @@ public class BoardFrame extends JFrame {
         middleDeck = new MiddleDeck();
         checkTheConflictTokens = new CheckTheConflictTokens(barConflictController);
         wonderStructure = new WonderStructure();
-        //wonderStructure.buildStages(3);
         addStage = new AddStageButton(wonderController);
         add(addStage);
         add(middleDeck);
@@ -51,8 +51,8 @@ public class BoardFrame extends JFrame {
         int players = Integer.valueOf(numbersOfPlayers);
         return players;
     }
-    public void addStage() {
-        wonderStructure.addStage();
+    public void addStage(int stagesCompleted) {
+        wonderStructure.buildStages(stagesCompleted);
         this.validate();
     }
 }
