@@ -81,5 +81,24 @@ public class CenterTileBoardTest {
         expected.add(new Tile(TileColor.DARK));
         assertEquals(expected, center);
     }
+    @Test
+    public void testSelectedTilesList() {
+        CenterTileBoard center = new CenterTileBoard();
+        List<Tile> selectedtiles = new CenterTileBoard();
+        center.add(new Tile(TileColor.RED));
+        center.add(new Tile(TileColor.YELLOW));
+        center.add(new Tile(TileColor.YELLOW));
+        center.add(new Tile(TileColor.RED));
+        center.add(new Tile(TileColor.DARK));
+        center.add(new Tile(TileColor.DARK));
+        selectedtiles = center.selectedTilesList(new Tile(TileColor.RED));
+        List<Tile> expected = new ArrayList<>(){
+            {
+                add(new Tile(TileColor.RED));
+                add(new Tile(TileColor.RED));
+            }
+        };
+        assertEquals(expected, selectedtiles);
+    }
 
 }
