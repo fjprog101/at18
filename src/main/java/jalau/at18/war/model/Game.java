@@ -5,24 +5,17 @@ import java.util.List;
 
 public class Game {
 
-    private List<Die> dice;
+    private List<Player> players;
 
     public Game() {
-        dice = new ArrayList<Die>();
-        dice.add(new Die(DieFace.ONE));
-        dice.add(new Die(DieFace.TWO));
-        dice.add(new Die(DieFace.THREE));
+        players = new ArrayList<Player>();
     }
 
-    public List<Die> rollDice() {
-        for (Die die: dice) {
-            die.setFace(rollNewRandomFace());
-        }
-        return dice;
+    public List<Player> getPlayers() {
+        return players;
     }
 
-    private DieFace rollNewRandomFace() {
-        int randomIndex = (int) (Math.random() * DieFace.values().length);
-        return DieFace.values()[randomIndex];
+    public void addPlayer(Player player) {
+        players.add(player);
     }
 }
