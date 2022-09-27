@@ -8,9 +8,9 @@ import javax.swing.border.LineBorder;
 import java.awt.*;
 
 public class DiceSectionUI extends JPanel {
-    private static final int DEFAULT_POSX = 0;
+    private static final int DEFAULT_POSX = 310;
     private static final int DEFAULT_POSY = 450;
-    private static final int DEFAULT_WIDTH = 1186;
+    private static final int DEFAULT_WIDTH = 1000;
     private static final int DEFAULT_HEIGHT = 300 - 1;
     private RollDiceSectionController rollDiceSectionController;
     private KeepDiceSectionController keepDiceSectionController;

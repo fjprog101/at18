@@ -7,6 +7,7 @@ import jalau.at18.kingoftokyo.*;
 import jalau.at18.kingoftokyo.view.board.BoardPanel;
 import jalau.at18.kingoftokyo.view.card.CardsGroupPanel;
 import jalau.at18.kingoftokyo.view.playercards.PlayerCard;
+import jalau.at18.kingoftokyo.view.playercards.PlayerCardsGroupPanel;
 import jalau.at18.kingoftokyo.view.rolldicesection.DiceSectionUI;
 
 public class GameFrame extends JFrame {
@@ -22,8 +23,7 @@ public class GameFrame extends JFrame {
         initialize();
         playerController = new PlayerStatusController(this);
 
-        add(new PlayerCard(0, turn.getPlayersList()[0]));
-        add(new PlayerCard(1, turn.getPlayersList()[1]));
+        add(new PlayerCardsGroupPanel(turn.getPlayersList()));
 
         add(new DeckImagePanel());
         add(new DiceSectionUI());
