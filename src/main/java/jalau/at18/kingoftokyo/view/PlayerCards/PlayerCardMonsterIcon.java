@@ -21,8 +21,7 @@ public class PlayerCardMonsterIcon extends JLabel {
 
     public void setMonsterImage(String iconPath) {
         ImageIcon image = new ImageIcon(iconPath);
-        Icon icon = new ImageIcon(image.getImage().getScaledInstance(WIDTH, HEIGHT,
-                WIDTH));
+        Icon icon = new ImageIcon(image.getImage().getScaledInstance(WIDTH, HEIGHT, WIDTH));
         setIcon(icon);
     }
 }
