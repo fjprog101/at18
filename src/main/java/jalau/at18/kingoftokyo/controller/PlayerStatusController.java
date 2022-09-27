@@ -11,9 +11,9 @@ public class PlayerStatusController {
     private static final int ENERGY = 3;
     private GameFrame gameFrame;
     private Turn turn;
-    public PlayerStatusController(GameFrame gameFrame, Turn turn) {
+    public PlayerStatusController(GameFrame gameFrame) {
         this.gameFrame = gameFrame;
-        this.turn = turn;
+        this.turn = gameFrame.getTurns();
     }
 
     public void setPlayerStatus(int[] effect) {
@@ -24,20 +24,20 @@ public class PlayerStatusController {
 
     }
     public void setHealing(int healing) {
-        int newLifePoints = turn.getPlayerWithTheTurn().getMonster().getLifePoints() + healing;
-        turn.getPlayerWithTheTurn().getMonster().setLifePoints(newLifePoints);
+        int newLifePoints = turn.getPlayerWithTheTurn().getLifePoints() + healing;
+        turn.getPlayerWithTheTurn().setLifePoints(newLifePoints);
     }
     public void giveDamage(int damage) {
         for (Player player : turn.getPlayersList()) {
             if (player != turn.getPlayerWithTheTurn()) {
-                int newLifePoints = player.getMonster().getLifePoints() - damage;
-                player.getMonster().setLifePoints(newLifePoints);
+                int newLifePoints = player.getLifePoints() - damage;
+                player.setLifePoints(newLifePoints);
             }
         }
     }
     public void setVictoryPoints(int victoryPoints) {
-        int newVictoryPoints = turn.getPlayerWithTheTurn().getMonster().getVictoryPoints() + victoryPoints;
-        turn.getPlayerWithTheTurn().getMonster().setVictoryPoints(newVictoryPoints);
+        int newVictoryPoints = turn.getPlayerWithTheTurn().getVictoryPoints() + victoryPoints;
+        turn.getPlayerWithTheTurn().setVictoryPoints(newVictoryPoints);
     }
     public void setEnergy(int energy) {
         int newEnery = turn.getPlayerWithTheTurn().getEnergy() + energy;

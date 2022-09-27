@@ -12,7 +12,8 @@ public class PlayerCardTest {
     @Test
     public void shouldShowACard() {
         Player player = new Player();
-        PlayerCard PlayerPanel1 = new PlayerCard(Monster.ALIENOID, 0, player);
+        player.addMonster(Monster.ALIENOID);
+        PlayerCard PlayerPanel1 = new PlayerCard(0, player);
         assertEquals(5, PlayerPanel1.getComponentCount());
         assertEquals(20, PlayerPanel1.getBounds().getX(), 0);
         assertEquals(20, PlayerPanel1.getBounds().getY(), 0);
@@ -20,7 +21,7 @@ public class PlayerCardTest {
         assertEquals(150, PlayerPanel1.getBounds().getHeight(), 0);
         assertTrue(PlayerPanel1.isVisible());
 
-        PlayerCard PlayerPanel2 = new PlayerCard(Monster.ALIENOID, 1, player);
+        PlayerCard PlayerPanel2 = new PlayerCard(1, player);
         assertEquals(5, PlayerPanel2.getComponentCount());
         assertEquals(20, PlayerPanel2.getBounds().getX(), 0);
         assertEquals(190, PlayerPanel2.getBounds().getY(), 0);

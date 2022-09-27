@@ -6,12 +6,12 @@ import java.awt.event.ActionListener;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
+import jalau.at18.kingoftokyo.CompleteCard;
 import jalau.at18.kingoftokyo.view.card.CardNameLabel;
 import jalau.at18.kingoftokyo.view.card.CardPanel;
 import jalau.at18.kingoftokyo.view.card.CardsGroupPanel;
 
 public class BuyCardButtomController implements ActionListener {
-
     private CardPanel card;
 
     public BuyCardButtomController(CardPanel card) {
@@ -24,6 +24,7 @@ public class BuyCardButtomController implements ActionListener {
         int result = JOptionPane.showConfirmDialog(null, label, "Buy Card",
                 JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
         if (result == JOptionPane.YES_OPTION) {
+            ((CardsGroupPanel) card.getParent()).sendEffect(((CompleteCard) card.getCard()).getCard().getEffect());
             card.setCard(((CardsGroupPanel) card.getParent()).getDeck());
         }
     }

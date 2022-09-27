@@ -19,16 +19,16 @@ public class PlayerStatusControllerTest {
         Player[] playerList = {player1, player2};
         Turn turn = new Turn(playerList);
         GameFrame gameFrame = new GameFrame(turn);
-        PlayerStatusController playerController = new PlayerStatusController(gameFrame, turn);
-        assertEquals(10, player1.getMonster().getLifePoints());
-        assertEquals(10, player2.getMonster().getLifePoints());
-        assertEquals(0, player1.getMonster().getVictoryPoints());
+        PlayerStatusController playerController = new PlayerStatusController(gameFrame);
+        assertEquals(10, player1.getLifePoints());
+        assertEquals(10, player2.getLifePoints());
+        assertEquals(0, player1.getVictoryPoints());
         assertEquals(0, player1.getEnergy());
         int[] effectsSetter = {3, 2, 1, 4};
         playerController.setPlayerStatus(effectsSetter);
-        assertEquals(13, player1.getMonster().getLifePoints());
-        assertEquals(8, player2.getMonster().getLifePoints());
-        assertEquals(1, player1.getMonster().getVictoryPoints());
+        assertEquals(13, player1.getLifePoints());
+        assertEquals(8, player2.getLifePoints());
+        assertEquals(1, player1.getVictoryPoints());
         assertEquals(4, player1.getEnergy());
     }
 }
