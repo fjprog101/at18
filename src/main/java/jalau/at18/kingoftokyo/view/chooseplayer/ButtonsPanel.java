@@ -8,18 +8,17 @@ import java.awt.*;
 
 public class ButtonsPanel extends JPanel {
 
-    private static final int DEFAULT_WIDTH = 100;
-    private static final int DEFAULT_HEIGHT = 100;
+    private static final int ONE_HUNDRED = 100;
     private ChoosePlayerController choosePlayerController;
     public ButtonsPanel(ChoosePlayersFrame frame) {
+        setLayout(new FlowLayout());
         choosePlayerController = new ChoosePlayerController(frame);
+        add(Box.createRigidArea(new Dimension(0, ONE_HUNDRED)));
         add(new ExitButton());
+        add(Box.createRigidArea(new Dimension(ONE_HUNDRED, 0)));
         add(new NextButton(choosePlayerController));
+        add(Box.createRigidArea(new Dimension(0, ONE_HUNDRED)));
         setBackground(Color.BLUE);
-        initialize();
     }
 
-    private void initialize() {
-        setPreferredSize(new Dimension(DEFAULT_WIDTH, DEFAULT_HEIGHT));
-    }
 }
