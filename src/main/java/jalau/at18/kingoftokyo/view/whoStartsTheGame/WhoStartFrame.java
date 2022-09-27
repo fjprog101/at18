@@ -1,5 +1,6 @@
 package jalau.at18.kingoftokyo.view.whoStartsTheGame;
 
+import jalau.at18.kingoftokyo.controller.WhoStartRollDiceController;
 import jalau.at18.kingoftokyo.model.Player;
 
 import java.awt.BorderLayout;
@@ -16,27 +17,26 @@ public class WhoStartFrame extends JFrame {
     private ShowResultsPanel showResultsPanel;
 
     private Player[] playerList;
+    private WhoStartRollDiceController whoStartRollDiceController;
 
     //public WhoStartFrame(WhoStartController whoStartController) { //no sirve
     public WhoStartFrame(Player[] playerList) { //
-        //PanelSouth panelSouth = new PanelSouth(whoStartController); //?????????????
+
         setResizable(false);
         setVisible(true);
 
-        ShowResultsLabel whoStartLabel = new ShowResultsLabel();
-        initialize();
-       // JButton calculateWinnerButton = new JButton("Calculate winner");
-       // calculateWinnerButton.addActionListener(e -> whoStartController.clickCalculateWinnerButton());
-        //add(calculateWinnerButton, BorderLayout.PAGE_START);
-
-        //add(whoStartLabel, BorderLayout.CENTER);
-
-        //add(panelSouth, BorderLayout.SOUTH); //panel de respuesta sirve
+        showResultsPanel = new ShowResultsPanel(playerList);
 
         player1Panel = new ShowDicesPanel(playerList[0]);
+        whoStartRollDiceController = new WhoStartRollDiceController(player1Panel.getRolldiceSeccionUI(), showResultsPanel);
 
-        //player2Panel = new ShowResultsPanel();
-        showResultsPanel = new ShowResultsPanel(playerList);
+        initialize();
+        // JButton calculateWinnerButton = new JButton("Calculate winner");
+        // calculateWinnerButton.addActionListener(e -> whoStartController.clickCalculateWinnerButton());
+        //add(calculateWinnerButton, BorderLayout.PAGE_START);
+        //PanelSouth panelSouth = new PanelSouth(whoStartController); //?????????????
+        //add(panelSouth, BorderLayout.SOUTH); //panel de respuesta sirve
+
         add(player1Panel, BorderLayout.WEST);
         add(showResultsPanel, BorderLayout.CENTER);
     }

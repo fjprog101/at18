@@ -8,7 +8,7 @@ import jalau.at18.kingoftokyo.model.DiceFaceSameCounter;
 import jalau.at18.kingoftokyo.model.DiceRoller;
 import jalau.at18.kingoftokyo.view.rolldicesection.DiceFaceLabel;
 import jalau.at18.kingoftokyo.view.rolldicesection.RollDiceSectionUI;
-import jalau.at18.kingoftokyo.view.whoStartsTheGame.PlayerNameLabel;
+import jalau.at18.kingoftokyo.view.whoStartsTheGame.ShowResultsPanel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,11 +19,15 @@ public class WhoStartRollDiceController {
 
     private List<DiceFace> listRandomDiceFace;
 
-    private  PlayerNameLabel playerNameLabel;
+    //private  PlayerNameLabel playerNameLabel;
+    private ShowResultsPanel  showResultsPanel;
+    private int buttonCount;
 
-    public WhoStartRollDiceController(RollDiceSectionUI rollDiceSectionUI, PlayerNameLabel playerNameLabel) {
+    //public WhoStartRollDiceController(RollDiceSectionUI rollDiceSectionUI, PlayerNameLabel playerNameLabel) {
+    public WhoStartRollDiceController(RollDiceSectionUI rollDiceSectionUI, ShowResultsPanel  showResultsPanel) {
         this.rollDiceSectionUI = rollDiceSectionUI;
-        this.playerNameLabel = playerNameLabel;
+        this.showResultsPanel = showResultsPanel;
+        buttonCount = 1;
         rollDiceSectionUI.getRollerDiceButton().addActionListener(e -> rollDices());
         listRandomDiceFace = new ArrayList<>();
     }
@@ -37,7 +41,11 @@ public class WhoStartRollDiceController {
             diceFaceLabel.paintDiceFace(listRandomDiceFace.get(count));
             count++;
         }
-        playerNameLabel.setPlayerName(getCountPounching());
+        //playerNameLabel.setPlayerName(getCountPounching());
+
+        showResultsPanel.setTextComponent(buttonCount, getCountPounching());
+        buttonCount++;
+        //if(buttonCount == ShowResultsPanel.getArrayPlayer())
         //getCountPounching();
     }
 

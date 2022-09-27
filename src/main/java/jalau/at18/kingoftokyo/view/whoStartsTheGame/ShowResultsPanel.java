@@ -33,4 +33,14 @@ public class ShowResultsPanel extends JPanel  {
             add(playerNameLabel);
         }
     }
+    public void setTextComponent(int count, int cantPunching) {
+        ((PlayerNameLabel) getComponent(count)).setPlayerName(cantPunching);
+    }
+
+    public PlayerNameLabel getPlayerNameLabel(int index) { //for change values of amount
+        return (PlayerNameLabel) getComponent(index);
+    }
+    public Player[] getArrayPlayer() {
+        return playerList;
+    }
 }
