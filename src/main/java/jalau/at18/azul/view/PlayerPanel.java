@@ -17,12 +17,13 @@ public class PlayerPanel extends JPanel {
     private StackButtonGroup stackButtonGroup;
     public PlayerPanel(int player, int posy, StackButtonGroup newStackButtonGroup) {
         pyramidBoard = new PyramidBoard();
+        floorButtonGroup = new FloorButtons();
         stackButtonGroup = newStackButtonGroup;
         setLayout(new BorderLayout(HORIZONTAL_GAP, VERTIXCAL_GAP));
-        add(new PointerGroup(stackButtonGroup, pyramidBoard), BorderLayout.LINE_START);
+        add(new PointerGroup(stackButtonGroup, pyramidBoard, floorButtonGroup), BorderLayout.LINE_START);
         add(pyramidBoard, BorderLayout.CENTER);
         add(new WallBoard(), BorderLayout.LINE_END);
-        add(new FloorButtons(), BorderLayout.PAGE_END);
+        add(floorButtonGroup, BorderLayout.PAGE_END);
         setBounds(DEFAULT_POSX, posy, DEFAULT_WIDTH, DEFAULT_HEIGHT);
         setBorder(BorderFactory.createLineBorder(Color.BLUE));
     }

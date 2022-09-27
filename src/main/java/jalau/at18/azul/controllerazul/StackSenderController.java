@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import jalau.at18.azul.Tile;
+import jalau.at18.azul.view.FloorButtons;
 import jalau.at18.azul.view.PointerGroup;
 import jalau.at18.azul.view.PyramidBoard;
 import jalau.at18.azul.view.StackButtonGroup;
@@ -13,15 +14,17 @@ public class StackSenderController implements ActionListener {
     private StackButtonGroup stackButtonGroup;
     private PointerGroup pointerGroup;
     private PyramidBoard pyramidBoard;
+    private FloorButtons floorButtons;
     private final int counter = 4;
     private int count;
     private List<Tile> colorPyramidTilesList = new ArrayList<Tile>();
 
-    public StackSenderController(StackButtonGroup newStackButtonGroup, PointerGroup newPointerGroup, PyramidBoard newPyramidBoard) {
+    public StackSenderController(StackButtonGroup newStack, PointerGroup newPointer, PyramidBoard newPyramid, FloorButtons newFloor) {
         count = counter;
-        this.stackButtonGroup = newStackButtonGroup;
-        this.pointerGroup = newPointerGroup;
-        this.pyramidBoard = newPyramidBoard;
+        this.stackButtonGroup = newStack;
+        this.pointerGroup = newPointer;
+        this.pyramidBoard = newPyramid;
+        this.floorButtons = newFloor;
     }
 
     @Override
@@ -30,23 +33,17 @@ public class StackSenderController implements ActionListener {
         for (int index = 0; index < pointerGroup.getComponentCount(); index++) {
             if (e.getSource() == (pointerGroup.getComponent(index))) {
                 count = pyramidBoard.sendEmptyTiles(index);
-                for (int jindex = 0; jindex < stackButtonGroup.getStackColorList().size(); jindex++) {  
-                    for (int i = 0; i < stackButtonGroup.getStackColorList().size(); i++) {
-                        if (pyramidBoard.countEmptyPyramidTiles(index) > 0) {
-                            pyramidBoard.updateTiles(index, count, stackButtonGroup.getStackColorList().get(jindex));
-                            count--;
-                        } else {
-                            colorPyramidTilesList.add(stackButtonGroup.getStackColorList().get(jindex));
-                        }
-                        /*if (pyramidBoard.countEmptyPyramidTiles(index) < stackButtonGroup.getStackColorList().size()) {
-                            System.out.println(pyramidBoard.countEmptyPyramidTiles(index));
-                            pyramidBoard.updateTiles(index, count, stackButtonGroup.getStackColorList().get(jindex));
-                            count--;
-                        }*/
+                for (int jindex = 0; jindex < stackButtonGroup.getStackColorList().size(); jindex++) {
+                    if (pyramidBoard.countEmptyPyramidTiles(index) > 0) {
+                        pyramidBoard.updateTiles(index, count, stackButtonGroup.getStackColorList().get(jindex));
+                        count--;
+                    } else {
+                        colorPyramidTilesList.add(stackButtonGroup.getStackColorList().get(jindex));
                     }
                 }
             }
         }
+        floorButtons.updateButtonGroup(colorPyramidTilesList);
         count = counter;
         stackButtonGroup.clearStackList();
     }

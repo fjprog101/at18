@@ -1,8 +1,9 @@
 package jalau.at18.azul.view;
 
+import java.util.List;
+
 import javax.swing.JPanel;
 
-import jalau.at18.azul.Floor;
 import jalau.at18.azul.Tile;
 
 public class FloorButtons extends JPanel {
@@ -17,11 +18,14 @@ public class FloorButtons extends JPanel {
         add(new FloorTileButton());
     }
 
-    public void updateButtonGroup(Floor floor) {
-        for (int index = 0; index < getComponentCount(); index++) {
-            TilesButton floorLabel = (TilesButton) getComponent(index);
-            Tile floorSource = floor.get(index);
-            floorLabel.updateLabel(floorSource.getColor().getName());
+    public void updateButtonGroup(List<Tile> listFloor) {
+        for (int index = 0; index < getComponentCount() && index < listFloor.size(); index++) {
+            if (listFloor.size() > 0) {
+                FloorTileButton floorLabel = (FloorTileButton) getComponent(index);
+                Tile floorSource = listFloor.get(index);
+                floorLabel.updateLabel(floorSource.getColor().getName());
+                floorLabel.updateColor(floorSource.getColor().getColorPath());
+            }
         }
     }
 }

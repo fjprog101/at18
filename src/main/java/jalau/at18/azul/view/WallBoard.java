@@ -28,7 +28,8 @@ public class WallBoard extends JPanel {
                         : column - row == THREE - 1 || column - row == -THREE ?  new Tile(TileColor.RED)
                         : column - row == 1 || column - row == -THREE - 1 ?  new Tile(TileColor.YELLOW)
                         : column - row == 0 ?  new Tile(TileColor.BLUE) : new Tile(TileColor.EMPTY);
-                tileButton[row][column].updateLabel(tile.getColor().getName() + "/" + tile.getColor().getStatusTile());
+                tileButton[row][column].updateLabel(tile.getColor().getName() + "" + tile.getColor().getStatusTile());
+                tileButton[row][column].updateColor(tile.getColor().getColorPath());
                 add(tileButton[row][column]);
             }
         }

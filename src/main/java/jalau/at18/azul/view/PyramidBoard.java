@@ -39,7 +39,7 @@ public class PyramidBoard extends JPanel {
         tileButton[row][column].updateColor(newTile.getColor().getColorPath());
     }
 
-    public int sendEmptyTiles(int row){
+    public int sendEmptyTiles(int row) {
         for (int index = DIVIDE_PYRAMID; index > 0; index--) {
             if (tileButton[row][index].getTileValue() == "EMPTY") {
                 emptyColumn = index;
@@ -49,7 +49,7 @@ public class PyramidBoard extends JPanel {
         return emptyColumn;
     }
 
-    public int countEmptyPyramidTiles(int row){
+    public int countEmptyPyramidTiles(int row) {
         int emptyCount = 0;
         for (int index = DIVIDE_PYRAMID; index >= 0; index--) {
             if (tileButton[row][index].getTileValue() == "EMPTY") {
