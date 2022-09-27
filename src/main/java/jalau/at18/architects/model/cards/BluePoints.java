@@ -1,4 +1,4 @@
-package jalau.at18.architects.model;
+package jalau.at18.architects.model.cards;
 
 public class BluePoints {
     private int points = 0;

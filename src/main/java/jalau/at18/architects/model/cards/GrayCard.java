@@ -1,4 +1,4 @@
-package jalau.at18.architects.model;
+package jalau.at18.architects.model.cards;
 
 public class GrayCard extends Card {
     private Resource resource;

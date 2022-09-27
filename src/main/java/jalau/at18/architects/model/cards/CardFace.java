@@ -1,4 +1,4 @@
-package jalau.at18.architects.model;
+package jalau.at18.architects.model.cards;
 
 public enum CardFace {
     PAPER_GRAY("grayPaper.png", new GrayCard(Resource.PAPER)),

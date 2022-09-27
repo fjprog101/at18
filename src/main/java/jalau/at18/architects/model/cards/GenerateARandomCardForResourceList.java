@@ -1,4 +1,4 @@
-package jalau.at18.architects.model;
+package jalau.at18.architects.model.cards;
 
 public class GenerateARandomCardForResourceList {
     private final int one = 1;

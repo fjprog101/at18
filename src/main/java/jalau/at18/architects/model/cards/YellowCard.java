@@ -1,4 +1,4 @@
-package jalau.at18.architects.model;
+package jalau.at18.architects.model.cards;
 
 public class YellowCard extends Card {
     private final int wildcard = 1;
