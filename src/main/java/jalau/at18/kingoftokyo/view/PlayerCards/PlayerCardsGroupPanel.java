@@ -35,7 +35,7 @@ public class PlayerCardsGroupPanel extends JPanel {
     public void updatePlayerCards(Player[] playersArray) {
         for (int index = 0; index < playersArray.length; index++) {
             getComponent(index * 2).setVisible(true);
-            //((PlayerCard) getComponent(index * 2)).updatePlayerStatus();
+            ((PlayerCard) getComponent(index * 2)).setPlayer(playersArray[index]);
         }
     }
 }

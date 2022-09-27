@@ -14,11 +14,15 @@ public class PlayerCardName extends JLabel {
     private static final int FONT_SIZE = 17;
     private static final int FONT_STYLE = 1;
 
-    public PlayerCardName(String name) {
-        super(name, SwingConstants.CENTER);
+    public PlayerCardName() {
+        super(" ", SwingConstants.CENTER);
         setBounds(POSITION_X, POSITION_Y, WIDTH, HEIGHT);
         setFont(new Font("Arial Black", FONT_STYLE, FONT_SIZE));
         setForeground(Color.white);
         setVisible(true);
+    }
+
+    public void setMonsterName(String name) {
+        setText(name);
     }
 }
