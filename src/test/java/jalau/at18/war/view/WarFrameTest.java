@@ -14,7 +14,6 @@ public class WarFrameTest {
         WarFrame warFrame = new WarFrame();
         assertEquals(5, warFrame.getContentPane().getComponentCount());
         assertEquals(JFrame.EXIT_ON_CLOSE, warFrame.getDefaultCloseOperation());
-        assertEquals(JFrame.MAXIMIZED_BOTH, warFrame.getExtendedState());
         assertNotNull(warFrame.getLayout());
         assertTrue(warFrame.isVisible());
     }
