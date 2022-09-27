@@ -7,7 +7,7 @@ public class PlayersLabel extends JLabel {
     private static final String FONT_NAME = "Serif";
     private static final int FONT_SIZE = 22;
     private static final int WIDTH = 100;
-    private static final int HEIGHT = 200;
+    private static final int HEIGHT = 300;
 
     public PlayersLabel() {
         super("Players: ");

@@ -17,7 +17,6 @@ public class CenterPanel extends JPanel {
     }
 
     private void initialize() {
-        setPreferredSize(new Dimension(DEFAULT_WIDTH, DEFAULT_HEIGHT));
         setLayout(new BorderLayout());
     }
 }
