@@ -77,13 +77,13 @@ public class WhoStartController {
                     "Player 1 is the winner.",
                     "Warning",
                     JOptionPane.WARNING_MESSAGE);
-            player1.setStart(true);
+            //player1.setStart(true);
         } else if (countPounchingPlayer2 > countPounchingPlayer1) {
             JOptionPane.showMessageDialog(whoStartFrame,
                     "Player 2 is the winner.",
                     "Warning",
                     JOptionPane.WARNING_MESSAGE);
-            player2.setStart(true);
+            //player2.setStart(true);
         } else if (countPounchingPlayer2 == countPounchingPlayer1) {
             JOptionPane.showMessageDialog(whoStartFrame,
                     "Newly start the Roll Dice by Turn.",

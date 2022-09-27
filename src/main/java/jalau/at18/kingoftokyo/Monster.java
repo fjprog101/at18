@@ -25,11 +25,17 @@ public enum Monster {
     public int getLifePoints() {
         return this.lifePoints;
     }
-
     public int getVictoryPoints() {
         return this.victoryPoints;
     }
     public String getIconPath() {
         return this.iconPath;
+    }
+
+    public void setLifePoints(int newLifePoints) {
+        lifePoints = newLifePoints;
+    }
+    public void setVictoryPoints(int newVictoryPoints) {
+        victoryPoints = newVictoryPoints;
     }
 }
