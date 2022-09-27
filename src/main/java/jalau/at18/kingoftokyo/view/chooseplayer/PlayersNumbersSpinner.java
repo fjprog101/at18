@@ -12,7 +12,7 @@ public class PlayersNumbersSpinner extends JSpinner {
     private static final int ONE = 1;
 
     public PlayersNumbersSpinner() {
-        super(new SpinnerNumberModel(MINIMUM,MINIMUM,MAXIMUM,ONE));
+        super(new SpinnerNumberModel(MINIMUM, MINIMUM, MAXIMUM, ONE));
         setFont(new Font(FONT_NAME, Font.BOLD, FONT_SIZE));
         setPreferredSize(new Dimension(SIZE, SIZE));
     }

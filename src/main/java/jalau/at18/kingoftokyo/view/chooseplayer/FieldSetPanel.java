@@ -20,6 +20,6 @@ public class FieldSetPanel extends JPanel {
 
     private void initialize() {
         Font font = new Font(NAME, Font.BOLD, SIZE);
-        setBorder(BorderFactory.createTitledBorder(null,TITLE, TitledBorder.LEFT,0, font));
+        setBorder(BorderFactory.createTitledBorder(null, TITLE, TitledBorder.LEFT, 0, font));
     }
 }
