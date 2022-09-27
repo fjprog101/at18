@@ -1,22 +1,31 @@
 package jalau.at18.kingoftokyo.view.chooseplayer;
 
 import javax.swing.*;
+import javax.swing.border.TitledBorder;
 import java.awt.*;
 
 public class FieldSetPanel extends JPanel {
 
-    private static final int DEFAULT_WIDTH = 100;
-    private static final int DEFAULT_HEIGHT = 300;
+    private static final String TITLE = "Number of Players";
+    private static final String NAME = "Serif";
+    private static final int SIZE = 22;
+    private PlayersNumbersSpinner spinner;
 
     public FieldSetPanel() {
-        add(new PlayersLabel());
-        add(new PlayersNumbersSpinner());
-        setBackground(Color.RED);
         initialize();
+        setLayout(new FlowLayout());
+        add(new PlayersLabel());
+        spinner = new PlayersNumbersSpinner();
+        add(spinner);
+        setBackground(Color.RED);
     }
 
     private void initialize() {
-        setBorder(BorderFactory.createTitledBorder("Number of Players"));
-        setPreferredSize(new Dimension(DEFAULT_WIDTH, DEFAULT_HEIGHT));
+        Font font = new Font(NAME, Font.BOLD, SIZE);
+        setBorder(BorderFactory.createTitledBorder(null, TITLE, TitledBorder.LEFT, 0, font));
+    }
+
+    public PlayersNumbersSpinner getSpinner() {
+        return spinner;
     }
 }
