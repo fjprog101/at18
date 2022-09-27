@@ -17,6 +17,8 @@ public class StackList extends JPanel {
         stackTiles.add(new Tile(TileColor.EMPTY));
         stackTiles.add(new Tile(TileColor.EMPTY));
         stackTiles.add(new Tile(TileColor.EMPTY));
+        stackTiles.add(new Tile(TileColor.EMPTY));
+        stackTiles.add(new Tile(TileColor.EMPTY));
         DefaultListModel<String> stackList = new DefaultListModel<>();
         for (int pos = 0; pos < stackTiles.size(); pos++) {
             stackList.addElement((stackTiles.get(pos)).toString());

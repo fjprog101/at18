@@ -28,7 +28,7 @@ public class FactoryPanel extends JPanel {
         centerBoard = new CenterTileBoard();
         BagSender bag = new BagSender();
         bag.saveBag();
-        centerTileButtonGroup = new CenterButtons();
+        centerTileButtonGroup = new CenterButtons(centerBoard, stackButtonGroup);
         setLayout(new GridLayout(ROWS, COLS, HORIZONTAL_GAP, VERTIXCAL_GAP));
         setBounds(X_INITIAL_POSITION, Y_INITIAL_POSITION, WIDTH, HEIGHT);
         add(new BagButton(new TileController(this, bag)));

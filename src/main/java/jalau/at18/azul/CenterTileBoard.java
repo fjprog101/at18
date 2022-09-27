@@ -12,6 +12,12 @@ public class CenterTileBoard extends ArrayList<Tile> {
         this.addAll(newCenterTiles);
         return this;
     }
-
-
+    public List<Tile> selectedTilesList(Tile color) {
+        List<Tile> selectedTiles = new ArrayList<Tile>();
+        int occurrences = Collections.frequency(this, color);
+        for (int index = 0; index < occurrences; index++) {
+            selectedTiles.add(color);
+        }
+        return selectedTiles;
+    }
 }
