@@ -7,11 +7,9 @@ import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JPanel;
 
-import jalau.at18.kingoftokyo.*;
 import jalau.at18.kingoftokyo.controller.BuyCardButtomController;
 import jalau.at18.kingoftokyo.model.Card;
 import jalau.at18.kingoftokyo.model.CompleteCard;
-import jalau.at18.kingoftokyo.model.DeckCards;
 
 public class CardPanel extends JPanel {
     private static final int[] CARD_SIZE = {150, 250};
@@ -39,9 +37,8 @@ public class CardPanel extends JPanel {
         add(Box.createRigidArea(new Dimension(0, EDGE_SPACE)));
         add(new BuyCardButton(buyButtomController));
     }
-    public void setCard(DeckCards deck) {
-        CompleteCard newCard = (CompleteCard) deck.getRandomCard();
-        deck.removeCard(newCard);
+    public void setCard(CompleteCard newCard) {
+        this.card = newCard;
         ((CardCostLabel) getComponent(0)).setCost(newCard.getCost());
         ((CardNameLabel) getComponent(1)).setText(newCard.getName());
         ((CardImageLabel) getComponent(2)).setImage(newCard.getImagePath());

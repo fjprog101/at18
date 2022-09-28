@@ -1,5 +1,6 @@
 package jalau.at18.kingoftokyo.view.rolldicesection;
 
+import jalau.at18.kingoftokyo.controller.PlayerStatusController;
 import jalau.at18.kingoftokyo.view.RollerButton;
 
 import javax.swing.*;
@@ -13,8 +14,10 @@ public class KeepDiceSectionUI extends JPanel {
     private JLabel displayResult = new JLabel();
     private RollerButton rollerButton;
     private List<DiceFaceLabel> listKeepDiceFaceLabel = new ArrayList<>();
+    private PlayerStatusController playerController;
 
-    public KeepDiceSectionUI() {
+    public KeepDiceSectionUI(PlayerStatusController playerController) {
+        this.playerController = playerController;
         initializeDice();
         setBorder(new LineBorder(Color.GREEN, 1));
     }
@@ -43,5 +46,9 @@ public class KeepDiceSectionUI extends JPanel {
 
     public List<DiceFaceLabel> getListKeepDiceFaceLabel() {
         return listKeepDiceFaceLabel;
+    }
+
+    public void sendResults(int[] effect) {
+        playerController.setPlayersStatus(effect);
     }
 }

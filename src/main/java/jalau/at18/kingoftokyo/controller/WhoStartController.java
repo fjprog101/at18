@@ -48,7 +48,9 @@ public class WhoStartController {
         newPlayer1.addMonster(Monster.ALIENOID);
         Player newPlayer2 = new Player();
         newPlayer2.addMonster(Monster.SPACE_PENGUIN);
-        Player[] playerList = {newPlayer2, newPlayer1};
+        Player newPlayer3 = new Player();
+        newPlayer3.addMonster(Monster.CYBER_KITTY);
+        Player[] playerList = {newPlayer2, newPlayer3, newPlayer1};
         //GameFrameController gameFrameController = new GameFrameController(player1, player2);
         new GameFrame(new Turn(playerList));
     }

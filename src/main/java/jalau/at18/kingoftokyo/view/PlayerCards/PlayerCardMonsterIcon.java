@@ -9,16 +9,19 @@ import javax.swing.JLabel;
 public class PlayerCardMonsterIcon extends JLabel {
     private static final int POSITION_X = 150;
     private static final int POSITION_Y = 30;
-    private static final int WIDTH = 100;
-    private static final int HEIGHT = 100;
+    private static final int WIDTH = 120;
+    private static final int HEIGHT = 120;
 
     public PlayerCardMonsterIcon(String path) {
         setBounds(POSITION_X, POSITION_Y, WIDTH, HEIGHT);
-        ImageIcon image = new ImageIcon(path);
-        Icon icon = new ImageIcon(image.getImage().getScaledInstance(WIDTH, HEIGHT,
-                WIDTH));
-        setIcon(icon);
+        setMonsterImage(path);
         setAlignmentX(Component.CENTER_ALIGNMENT);
         setVisible(true);
+    }
+
+    public void setMonsterImage(String iconPath) {
+        ImageIcon image = new ImageIcon(iconPath);
+        Icon icon = new ImageIcon(image.getImage().getScaledInstance(WIDTH, HEIGHT, WIDTH));
+        setIcon(icon);
     }
 }

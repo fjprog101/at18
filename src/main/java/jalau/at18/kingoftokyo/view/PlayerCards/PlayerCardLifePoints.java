@@ -17,8 +17,8 @@ public class PlayerCardLifePoints extends JLabel {
     private static final int FONT_SIZE = 20;
     private static final int FONT_STYLE = 1;
 
-    public PlayerCardLifePoints(int lifePoints) {
-        super(lifePoints + " ", SwingConstants.RIGHT);
+    public PlayerCardLifePoints() {
+        super(" ", SwingConstants.RIGHT);
         setBounds(POSITION_X, POSITION_Y, WIDTH, HEIGHT);
         setFont(new Font("Arial Black", FONT_STYLE, FONT_SIZE));
         setForeground(Color.white);
@@ -29,5 +29,9 @@ public class PlayerCardLifePoints extends JLabel {
         setIcon(icon);
         setAlignmentX(Component.LEFT_ALIGNMENT);
         setVisible(true);
+    }
+
+    public void setLifePoints(int lifePoints) {
+        setText(lifePoints + " ");
     }
 }
