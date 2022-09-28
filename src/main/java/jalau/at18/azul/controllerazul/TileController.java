@@ -26,9 +26,9 @@ public class TileController implements ActionListener {
     private CenterTileBoard firstplayer;
     private int scoreP1 = 0;
     private int scoreP2 = 0;
+    //private WinnerLabel winner;
     public TileController(FactoryPanel panel, BagSender newValues, PlayerPanel newPlayer1, PlayerPanel newPlayer2,
         CenterButtons newCenter, CenterTileBoard centernew) {
-   // public TileController(FactoryPanel panel, BagSender newValues, PlayerPanel newPlayer1, PlayerPanel newPlayer2, CenterButtons newCenter) {
         this.factoryPanel = panel;
         this.gameAzul = newValues;
         this.player1 = newPlayer1;
@@ -49,6 +49,9 @@ public class TileController implements ActionListener {
                     player1.getPyramidBoard().cleanPyramid(index);
                     scoreP1++;
                     player1.getScore().updateLabel(scoreP1, 1);
+                    if (player1.getWallBoard().verifyRowWall(index)) {
+                        System.out.println("winner is player1");
+                    }
                 }
                 if (player2.getPyramidBoard().countEmptyPyramidTiles(index) == 0) {
                     Tile tileSelected = new Tile(TileColor.valueOf(player2.getPyramidBoard().getTileButton()[index][PYRAMID_INDEX].getTileValue()));
@@ -56,6 +59,9 @@ public class TileController implements ActionListener {
                     player2.getPyramidBoard().cleanPyramid(index);
                     scoreP2++;
                     player2.getScore().updateLabel(scoreP2, 2);
+                    if (player2.getWallBoard().verifyRowWall(index)) {
+                        System.out.println("winner is player2");
+                    }
                 }
                 factoryButtons.updateButtonGroup(game);
                 gameAzul.removeTiles();

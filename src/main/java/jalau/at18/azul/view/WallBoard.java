@@ -48,4 +48,16 @@ public class WallBoard extends JPanel {
         }
     }
 
+    public boolean verifyRowWall(int row) {
+        int count = 0;
+        for (int index = 0; index < WALL_MATRIX_SIZE; index++) {
+            if (tileButton[row][index].getTileValue() == "TRUE") {
+                count++;
+            }
+        }
+        if (count == 2) {
+            return true;
+        }
+        return false;
+    }
 }

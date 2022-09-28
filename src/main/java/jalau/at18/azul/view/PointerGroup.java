@@ -19,7 +19,7 @@ public class PointerGroup extends JPanel {
         this.stackButtonGroup = newStackButtonGroup;
         this.pyramidBoard = newPyramidBoard;
         this.floorButtons = newFloorButtons;
-        controller = new StackSenderController(newStackButtonGroup, this, pyramidBoard, floorButtons);
+        controller = new StackSenderController(stackButtonGroup, this, pyramidBoard, floorButtons);
         setLayout(new GridLayout(ROW, COL, GAP, GAP));
         add(new PyramidPointer(controller));
         add(new PyramidPointer(controller));
