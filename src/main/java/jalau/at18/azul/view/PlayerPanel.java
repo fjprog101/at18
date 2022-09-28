@@ -15,14 +15,16 @@ public class PlayerPanel extends JPanel {
     private PyramidBoard pyramidBoard;
     private FloorButtons floorButtonGroup;
     private StackButtonGroup stackButtonGroup;
+    private WallBoard wallBoard;
     public PlayerPanel(int player, int posy, StackButtonGroup newStackButtonGroup) {
         pyramidBoard = new PyramidBoard();
         floorButtonGroup = new FloorButtons();
+        wallBoard = new WallBoard();
         stackButtonGroup = newStackButtonGroup;
         setLayout(new BorderLayout(HORIZONTAL_GAP, VERTIXCAL_GAP));
         add(new PointerGroup(stackButtonGroup, pyramidBoard, floorButtonGroup), BorderLayout.LINE_START);
         add(pyramidBoard, BorderLayout.CENTER);
-        add(new WallBoard(), BorderLayout.LINE_END);
+        add(wallBoard, BorderLayout.LINE_END);
         add(floorButtonGroup, BorderLayout.PAGE_END);
         setBounds(DEFAULT_POSX, posy, DEFAULT_WIDTH, DEFAULT_HEIGHT);
         setBorder(BorderFactory.createLineBorder(Color.BLUE));
@@ -30,5 +32,13 @@ public class PlayerPanel extends JPanel {
 
     public FloorButtons getfloorButtonGroup() {
         return this.floorButtonGroup;
+    }
+
+    public PyramidBoard getPyramidBoard() {
+        return this.pyramidBoard;
+    }
+
+    public WallBoard getWallBoard() {
+        return this.wallBoard;
     }
 }
