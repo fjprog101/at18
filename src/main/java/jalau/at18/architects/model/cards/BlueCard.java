@@ -2,7 +2,6 @@ package jalau.at18.architects.model.cards;
 
 public class BlueCard extends Card {
 
-    private String color;
     private boolean cat;
     private int victoryPoints;
 
@@ -14,7 +13,7 @@ public class BlueCard extends Card {
 
     @Override
     public String getColor() {
-        return color;
+        return super.color();
     }
 
     public boolean isCat() {
