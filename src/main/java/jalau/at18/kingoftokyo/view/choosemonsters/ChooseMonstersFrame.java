@@ -9,8 +9,8 @@ import java.awt.*;
 
 public class ChooseMonstersFrame extends JFrame {
     private static final int DEFAULT_POS = 30;
-    private static final int DEFAULT_WIDTH = 1200;
-    private static final int DEFAULT_HEIGHT = 700;
+    private static final int DEFAULT_WIDTH = 700;
+    private static final int DEFAULT_HEIGHT = 500;
 
     public ChooseMonstersFrame(Game game) {
         HeaderPanel headerPanel = new HeaderPanel();
