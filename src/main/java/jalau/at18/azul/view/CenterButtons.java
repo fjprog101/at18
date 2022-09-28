@@ -4,6 +4,7 @@ import javax.swing.JPanel;
 
 import jalau.at18.azul.CenterTileBoard;
 import jalau.at18.azul.Tile;
+import jalau.at18.azul.TileColor;
 import jalau.at18.azul.controllerazul.CenterToStack;
 
 public class CenterButtons extends JPanel {
@@ -42,5 +43,19 @@ public class CenterButtons extends JPanel {
             centerLabel.updateLabel("EMPTY");
             centerLabel.updateColor("empty.png");
         }
+    }
+
+    public boolean isCenterEmpty() {
+        //boolean isEmpty = false;
+        int count = 0;
+        Tile empty = new Tile(TileColor.EMPTY);
+        for (int index = 0; index < getComponentCount(); index++) {
+            CenterTileButton buttonSelected = (CenterTileButton) getComponent(index);
+            if (buttonSelected.getTileValue() == empty.getColor().getName()) {
+                //isEmpty = true;
+                count++;
+            }
+        }
+        return count == getComponentCount();
     }
 }

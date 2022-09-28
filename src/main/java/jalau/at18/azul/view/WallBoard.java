@@ -28,10 +28,24 @@ public class WallBoard extends JPanel {
                         : column - row == THREE - 1 || column - row == -THREE ?  new Tile(TileColor.RED)
                         : column - row == 1 || column - row == -THREE - 1 ?  new Tile(TileColor.YELLOW)
                         : column - row == 0 ?  new Tile(TileColor.BLUE) : new Tile(TileColor.EMPTY);
-                tileButton[row][column].updateLabel(tile.getColor().getName() + "" + tile.getColor().getStatusTile());
-                tileButton[row][column].updateColor(tile.getColor().getColorPath());
+                tileButton[row][column].updateLabel(tile.getColor().getName());
+                tileButton[row][column].updateColor(tile.getColor().getColorPathOpacity());
                 add(tileButton[row][column]);
             }
         }
     }
+
+    public void updateTiles(int row, int column, Tile newTile) {
+        tileButton[row][column].updateLabel("TRUE");
+        tileButton[row][column].updateColor(newTile.getColor().getColorPath());
+    }
+
+    public void verifyTileWall(int row, Tile tileSelected) {
+        for (int index = 0; index < WALL_MATRIX_SIZE; index++) {
+            if (tileSelected.getColor().getName() == tileButton[row][index].getTileValue()) {
+                updateTiles(row, index, tileSelected);
+            }
+        }
+    }
+
 }
