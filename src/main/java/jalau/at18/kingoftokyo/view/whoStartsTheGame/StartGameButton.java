@@ -1,6 +1,5 @@
 package jalau.at18.kingoftokyo.view.whoStartsTheGame;
-//import jalau.at18.kingoftokyo.Player;
-//import jalau.at18.kingoftokyo.controller.WhoStartController;
+
 import jalau.at18.kingoftokyo.controller.WhoStartRollDiceController;
 
 import javax.swing.*;

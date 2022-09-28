@@ -29,19 +29,24 @@ public class WhoStartFrame extends JFrame {
 
         showResultsPanel = new ShowResultsPanel(playerList);
 
-        player1Panel = new ShowDicesPanel(playerList[0]);
-        whoStartRollDiceController = new WhoStartRollDiceController(player1Panel.getRolldiceSeccionUI(), showResultsPanel, startGameButton);
+        PanelSouth panelSouth = new PanelSouth(whoStartRollDiceController); //?????????????
+        //add(panelSouth, BorderLayout.SOUTH); //panel de respuesta sirve
+        add(panelSouth); //panel de respuesta sirve
+
+
+        player1Panel = new ShowDicesPanel(playerList[0]); //startGameButton
 
         initialize();
         // JButton calculateWinnerButton = new JButton("Calculate winner");
         // calculateWinnerButton.addActionListener(e -> whoStartController.clickCalculateWinnerButton());
         //add(calculateWinnerButton, BorderLayout.PAGE_START);
 
+        whoStartRollDiceController = new WhoStartRollDiceController(player1Panel.getRolldiceSeccionUI(), showResultsPanel, panelSouth.getButton());
 
 
-        PanelSouth panelSouth = new PanelSouth(whoStartRollDiceController); //?????????????
-        //add(panelSouth, BorderLayout.SOUTH); //panel de respuesta sirve
-        add(panelSouth); //panel de respuesta sirve
+
+
+
 
         add(player1Panel, BorderLayout.WEST);
         add(showResultsPanel);

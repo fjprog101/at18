@@ -25,8 +25,9 @@ public class WhoStartRollDiceController {
     //private  PlayerNameLabel playerNameLabel;
     private ShowResultsPanel  showResultsPanel;
     private int buttonCount;
-    private int[] punchingList;
-    private Player[] arrangePlayers;
+    //private int[] punchingList;
+    private ArrayList<Integer> punchingList;
+    private ArrayList<Player> arrangePlayers;
     private WhoStartFrame whoStartFrame; //anadido
     private StartGameButton startGameButton; //anadido
 
@@ -41,8 +42,8 @@ public class WhoStartRollDiceController {
         this.startGameButton = startGameButton;
         buttonCount = 1;
         playermaxpunch = 0;
-        punchingList = new int[showResultsPanel.getArrayPlayer().length];
-        arrangePlayers = new Player[showResultsPanel.getArrayPlayer().length];
+        punchingList = new ArrayList<Integer>();
+        arrangePlayers = new ArrayList<Player>();
 
         rollDiceSectionUI.getRollerDiceButton().addActionListener(e -> rollDices());
         listRandomDiceFace = new ArrayList<>();
@@ -60,16 +61,18 @@ public class WhoStartRollDiceController {
         //playerNameLabel.setPlayerName(getCountPounching());
 
         showResultsPanel.setTextComponent(buttonCount, getCountPounching());
-        punchingList[buttonCount - 1] = getCountPounching();
+        //punchingList[buttonCount - 1] = getCountPounching();
 
         //comparerPunching(getCountPounching());
-        comparerPunching(punchingList);  //anadido
+        //comparerPunching(punchingList);  //anadido
+
+        comparerPunchin(getCountPounching()); //28
 
 
         buttonCount++;
         if (buttonCount == showResultsPanel.getArrayPlayer().length + 1) {
             rollDiceSectionUI.getRollerDiceButton().setEnabled(false);
-            startGameButton.setVisible(true); // no cambia de estado
+            startGameButton.setEnabled(true); // no cambia de estado
         }
     }
     public void clickStartGameButton() { //anadido
@@ -77,28 +80,20 @@ public class WhoStartRollDiceController {
         //GameFrameController gameFrameController = new GameFrameController(arrangePlayers);
     }
 
-//    public void comparerPunching(int actualPunching) {
-    public int comparerPunching(int[] punchingList) { // anadido
+    public void comparerPunchin(int getCountPounching) {
+        //arrangePlayers
+        if (arrangePlayers.size() == 0) {
+            punchingList.add(getCountPounching);
+            arrangePlayers.add(showResultsPanel.getArrayPlayer()[buttonCount - 1]);
 
-        this.punchingList = punchingList;
-        int maxPunch =  0;
-
-        for (int index = 0; index < punchingList.length; index++) {
-            if (punchingList[index] > maxPunch) {
-                maxPunch =  punchingList[index];
-                playermaxpunch = index;
-            }
-            /*
-            if (punchingList[index] > actualPunching) {
-                arrangePlayers[index] = showResultsPanel.getArrayPlayer()[buttonCount - 1];
-            } else {
-                if (punchingList[index] < actualPunching) {
-                    punchingList[index] = actualPunching;
-                    //punchingList[index] = punchingList[index];
+        } else {
+            for (int index = 0; index < punchingList.size(); index++) {
+                if (getCountPounching > punchingList.get(index)) {
+                    punchingList.add(index, getCountPounching);
+                    arrangePlayers.add(index, showResultsPanel.getArrayPlayer()[buttonCount - 1]);
                 }
-            }*/
+            }
         }
-        return playermaxpunch;
 
     }
 
