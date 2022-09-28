@@ -37,4 +37,20 @@ public class CardComparatorForResourceTest {
         CardComparatorForResource cardComparatorForResource = new CardComparatorForResource();
         assertFalse(cardComparatorForResource.compare(card1, card2));
     }
+    @Test
+    public void shouldNotBeTheSameCard(){
+        Card card1 = new YellowCard();
+        Card card2 = new RedCard(0);
+        CardComparatorForResource cardComparatorForResource = new CardComparatorForResource();
+        assertFalse(cardComparatorForResource.compare(card1, card2));
+
+    }
+    @Test
+    public void shouldNotBeTheSameCard1(){
+        Card card1 = new RedCard(0);
+        Card card2 = new YellowCard();
+        CardComparatorForResource cardComparatorForResource = new CardComparatorForResource();
+        assertFalse(cardComparatorForResource.compare(card1, card2));
+
+    }
 }
