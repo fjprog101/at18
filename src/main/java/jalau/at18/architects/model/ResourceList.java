@@ -17,6 +17,14 @@ public class ResourceList {
         listOfResources.add(grayCard.getResource());
     }
 
+    public void addResourceFromWildCard() {
+        listOfResources.add(Resource.GOLD.getResource());
+    }
+
+    public String getAResource(int index) {
+        return listOfResources.get(index);
+    }
+
     public boolean traverseTheResourceList() {
         return listOfResources.getFirst() == listOfResources.getLast();
     }
