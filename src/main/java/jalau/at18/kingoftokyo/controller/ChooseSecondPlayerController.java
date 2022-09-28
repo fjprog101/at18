@@ -3,7 +3,7 @@ package jalau.at18.kingoftokyo.controller;
 import jalau.at18.kingoftokyo.model.Monster;
 import jalau.at18.kingoftokyo.model.Player;
 //import jalau.at18.kingoftokyo.view.choosesecondplayer.ChooseSecondPlayerFrame;
-import jalau.at18.kingoftokyo.view.whoStartsTheGame.WhoStartFrame;
+//import jalau.at18.kingoftokyo.view.whoStartsTheGame.WhoStartFrame;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,7 +15,7 @@ public class ChooseSecondPlayerController implements ActionListener {
     private Player player1;
     private Player player2;
     private Player player3;
-    private WhoStartFrame whoStartFrame;
+    //private WhoStartFrame whoStartFrame;
     public ChooseSecondPlayerController(ChooseSecondPlayerFrame chooseSecondPlayersFrame) {
         this.chooseSecondPlayersFrame = chooseSecondPlayersFrame;
         player1 = new Player();
@@ -33,7 +33,5 @@ public class ChooseSecondPlayerController implements ActionListener {
         Player[] playerList = {player1, player2, player3};
         chooseSecondPlayersFrame.setVisible(false);
         new WhoStartFrame(playerList);
-
-
     }
 }*/

@@ -11,9 +11,9 @@ import jalau.at18.kingoftokyo.model.Turn;
 import jalau.at18.kingoftokyo.view.GameFrame;
 import jalau.at18.kingoftokyo.view.rolldicesection.DiceFaceLabel;
 import jalau.at18.kingoftokyo.view.rolldicesection.RollDiceSectionUI;
-import jalau.at18.kingoftokyo.view.whoStartsTheGame.ShowResultsPanel;
-import jalau.at18.kingoftokyo.view.whoStartsTheGame.StartGameButton;
-import jalau.at18.kingoftokyo.view.whoStartsTheGame.WhoStartFrame;
+import jalau.at18.kingoftokyo.view.whostart.ShowResultsPanel;
+import jalau.at18.kingoftokyo.view.whostart.StartGameButton;
+import jalau.at18.kingoftokyo.view.whostart.WhoStartFrame;
 import java.util.ArrayList;
 import java.util.List;
 

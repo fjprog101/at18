@@ -2,7 +2,7 @@ package jalau.at18.kingoftokyo.controller;
 import org.junit.Test;
 
 import jalau.at18.kingoftokyo.view.rolldicesection.RollDiceSectionUI;
-import jalau.at18.kingoftokyo.view.whoStartsTheGame.ShowResultsPanel;
+//import jalau.at18.kingoftokyo.view.whoStartsTheGame.ShowResultsPanel;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;

@@ -1,4 +1,4 @@
-package jalau.at18.kingoftokyo.view.whoStartsTheGame;
+package jalau.at18.kingoftokyo.view.whostart;
 
 import jalau.at18.kingoftokyo.controller.WhoStartRollDiceController;
 
