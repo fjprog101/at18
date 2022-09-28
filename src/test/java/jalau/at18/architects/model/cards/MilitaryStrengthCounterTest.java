@@ -10,8 +10,8 @@ public class MilitaryStrengthCounterTest {
         MilitaryStrengthCounter militaryStrength = new MilitaryStrengthCounter();
         RedCard redCard = new RedCard(2);
         militaryStrength.setMilitaryStrength(redCard);
-        assertEquals(0,militaryStrength.getPermanentShield());
-        assertEquals(1,militaryStrength.getTemporalShield());
+        assertEquals(0, militaryStrength.getPermanentShield());
+        assertEquals(1, militaryStrength.getTemporalShield());
 
         RedCard redCard1 = new RedCard(0);
         militaryStrength.setMilitaryStrength(redCard1);
@@ -23,7 +23,7 @@ public class MilitaryStrengthCounterTest {
         MilitaryStrengthCounter militaryStrength = new MilitaryStrengthCounter();
         RedCard redCard = new RedCard(2);
         militaryStrength.setMilitaryStrength(redCard);
-        assertEquals(1,militaryStrength.getTemporalShield());
+        assertEquals(1, militaryStrength.getTemporalShield());
         militaryStrength.resetTemporalShields();
 
         RedCard redCard1 = new RedCard(0);
