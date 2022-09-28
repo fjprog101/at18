@@ -1,6 +1,6 @@
 package jalau.at18.architects.model.wonders;
 
-enum Wonders {
+public enum Wonders {
     ONE(new Alexandria(), 1),
     TWO(new Babylon(), 2),
     THREE(new Ephesus(), 3),
