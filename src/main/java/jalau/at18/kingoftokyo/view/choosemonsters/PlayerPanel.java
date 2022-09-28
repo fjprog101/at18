@@ -18,8 +18,8 @@ public class PlayerPanel extends JPanel {
     public PlayerPanel() {
         initialize();
         SpringLayout springLayout = new SpringLayout();
-        springLayout.putConstraint(SpringLayout.WEST, add(new UsernameLabel()),50, SpringLayout.EAST, add(new UsernameTextBox()));
-        springLayout.putConstraint(SpringLayout.NORTH, add(new MonsterLabel()),50, SpringLayout.NORTH, add(new MonsterList()));
+        springLayout.putConstraint(SpringLayout.WEST, add(new UsernameLabel()), 0, SpringLayout.EAST, add(new UsernameTextBox()));
+        springLayout.putConstraint(SpringLayout.NORTH, add(new MonsterLabel()), 0, SpringLayout.NORTH, add(new MonsterList()));
     }
 
     private void initialize() {
