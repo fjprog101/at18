@@ -1,4 +1,4 @@
-package jalau.at18.architects.model;
+package jalau.at18.architects.model.cards;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
