@@ -15,34 +15,35 @@ public class WhoStartFrame extends JFrame {
 
     //private Player2Panel player2Panel;
     private ShowResultsPanel showResultsPanel;
+    private StartGameButton startGameButton;
 
     private Player[] playerList;
     private WhoStartRollDiceController whoStartRollDiceController;
 
     //public WhoStartFrame(WhoStartController whoStartController) { //no sirve
-    public WhoStartFrame(Player[] playerList) { //
+    public WhoStartFrame(Player[] playerList) {
+
 
         setResizable(false);
         setVisible(true);
-        //TitleLabelPanel titleLabelPanel = new TitleLabelPanel(); //anadido
-        //add(titleLabelPanel); //anadido
 
         showResultsPanel = new ShowResultsPanel(playerList);
 
         player1Panel = new ShowDicesPanel(playerList[0]);
-        whoStartRollDiceController = new WhoStartRollDiceController(player1Panel.getRolldiceSeccionUI(), showResultsPanel);
+        whoStartRollDiceController = new WhoStartRollDiceController(player1Panel.getRolldiceSeccionUI(), showResultsPanel, startGameButton);
 
         initialize();
         // JButton calculateWinnerButton = new JButton("Calculate winner");
         // calculateWinnerButton.addActionListener(e -> whoStartController.clickCalculateWinnerButton());
         //add(calculateWinnerButton, BorderLayout.PAGE_START);
 
-        //PanelSouth panelSouth = new PanelSouth(whoStartController); //?????????????
+
+
+        PanelSouth panelSouth = new PanelSouth(whoStartRollDiceController); //?????????????
         //add(panelSouth, BorderLayout.SOUTH); //panel de respuesta sirve
+        add(panelSouth); //panel de respuesta sirve
 
         add(player1Panel, BorderLayout.WEST);
-       // add(showResultsPanel, BorderLayout.CENTER);
-        //add(player1Panel);
         add(showResultsPanel);
 
     }

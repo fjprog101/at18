@@ -9,7 +9,10 @@ import jalau.at18.kingoftokyo.model.DiceRoller;
 import jalau.at18.kingoftokyo.model.Player;
 import jalau.at18.kingoftokyo.view.rolldicesection.DiceFaceLabel;
 import jalau.at18.kingoftokyo.view.rolldicesection.RollDiceSectionUI;
+import jalau.at18.kingoftokyo.view.whoStartsTheGame.PanelSouth;
 import jalau.at18.kingoftokyo.view.whoStartsTheGame.ShowResultsPanel;
+import jalau.at18.kingoftokyo.view.whoStartsTheGame.StartGameButton;
+import jalau.at18.kingoftokyo.view.whoStartsTheGame.WhoStartFrame;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,11 +28,15 @@ public class WhoStartRollDiceController {
     private int buttonCount;
     private int[] punchingList;
     private Player[] arrangePlayers;
+    private WhoStartFrame whoStartFrame; //anadido
+    private StartGameButton startGameButton; //anadido
+    private PanelSouth panelSouth;
 
     //public WhoStartRollDiceController(RollDiceSectionUI rollDiceSectionUI, PlayerNameLabel playerNameLabel) {
-    public WhoStartRollDiceController(RollDiceSectionUI rollDiceSectionUI, ShowResultsPanel  showResultsPanel) {
+    public WhoStartRollDiceController(RollDiceSectionUI rollDiceSectionUI, ShowResultsPanel  showResultsPanel, StartGameButton startGameButton) {
         this.rollDiceSectionUI = rollDiceSectionUI;
         this.showResultsPanel = showResultsPanel;
+        this.startGameButton = startGameButton;
         buttonCount = 1;
         punchingList = new int[showResultsPanel.getArrayPlayer().length];
         arrangePlayers = new Player[showResultsPanel.getArrayPlayer().length];
@@ -55,15 +62,26 @@ public class WhoStartRollDiceController {
         buttonCount++;
         if (buttonCount == showResultsPanel.getArrayPlayer().length + 1) { //+ 1
             rollDiceSectionUI.getRollerDiceButton().setEnabled(false);
+            //startGameButton.setVisible(true);
+            //panelSouth.setVisible(true);
+            panelSouth.setEnabled(true);
         }
+    }
+    public void clickStartGameButton() { //anadido
+        whoStartFrame.setVisible(false);
+        //GameFrameController gameFrameController = new GameFrameController(arrangePlayers);
     }
 
     public void comparerPunching(int actualPunching) {
 
         for (int index = 0; index < punchingList.length; index++) {
-            if (punchingList[index] < actualPunching) {
+            if (punchingList[index] > actualPunching) { //<      //  0 > 2 ?  //2 > 1
                 //getArrayPlayer
-                arrangePlayers[index] = showResultsPanel.getArrayPlayer()[buttonCount - 1]; //-1
+                arrangePlayers[index] = showResultsPanel.getArrayPlayer()[buttonCount - 1];
+            } else {
+                if (punchingList[index] < actualPunching) { //>        //0 > 2 ?
+                    punchingList[index] = punchingList[index];
+                }
             }
         }
 
