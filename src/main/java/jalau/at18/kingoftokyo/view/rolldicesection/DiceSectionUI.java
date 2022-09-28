@@ -1,6 +1,7 @@
 package jalau.at18.kingoftokyo.view.rolldicesection;
 
 import jalau.at18.kingoftokyo.controller.KeepDiceSectionController;
+import jalau.at18.kingoftokyo.controller.PlayerStatusController;
 import jalau.at18.kingoftokyo.controller.RollDiceSectionController;
 
 import javax.swing.*;
@@ -8,19 +9,19 @@ import javax.swing.border.LineBorder;
 import java.awt.*;
 
 public class DiceSectionUI extends JPanel {
-    private static final int DEFAULT_POSX = 0;
+    private static final int DEFAULT_POSX = 310;
     private static final int DEFAULT_POSY = 450;
-    private static final int DEFAULT_WIDTH = 1186;
+    private static final int DEFAULT_WIDTH = 1000;
     private static final int DEFAULT_HEIGHT = 300 - 1;
     private RollDiceSectionController rollDiceSectionController;
     private KeepDiceSectionController keepDiceSectionController;
 
-    public DiceSectionUI() {
-        KeepDiceSectionUI keepDiceSectionUI = new KeepDiceSectionUI();
+    public DiceSectionUI(PlayerStatusController playerController) {
+        KeepDiceSectionUI keepDiceSectionUI = new KeepDiceSectionUI(playerController);
         RollDiceSectionUI rollDiceSectionUI = new RollDiceSectionUI();
         add(keepDiceSectionUI);
         add(rollDiceSectionUI);
-        keepDiceSectionController = new KeepDiceSectionController(keepDiceSectionUI);
+        keepDiceSectionController = new KeepDiceSectionController(keepDiceSectionUI, rollDiceSectionUI);
         rollDiceSectionController = new RollDiceSectionController(rollDiceSectionUI, keepDiceSectionController);
 
         //Position of this Panel DiceSectionUI

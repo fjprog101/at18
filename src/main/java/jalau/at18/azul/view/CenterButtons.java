@@ -4,14 +4,15 @@ import javax.swing.JPanel;
 
 import jalau.at18.azul.CenterTileBoard;
 import jalau.at18.azul.Tile;
+import jalau.at18.azul.TileColor;
 import jalau.at18.azul.controllerazul.CenterToStack;
 
 public class CenterButtons extends JPanel {
 
     private CenterToStack moveCenterTiles;
 
-    public CenterButtons(CenterTileBoard center, StackButtonGroup stackButtonGroup) {
-        moveCenterTiles = new CenterToStack(center, stackButtonGroup, this);
+    public CenterButtons(CenterTileBoard center, StackButtonGroup stackButtonGroup, FloorButtons floorbuttons1, FloorButtons floorbuttons2) {
+        moveCenterTiles = new CenterToStack(center, stackButtonGroup, this, floorbuttons1, floorbuttons2);
         add(new CenterTileButton(moveCenterTiles));
         add(new CenterTileButton(moveCenterTiles));
         add(new CenterTileButton(moveCenterTiles));
@@ -42,5 +43,17 @@ public class CenterButtons extends JPanel {
             centerLabel.updateLabel("EMPTY");
             centerLabel.updateColor("empty.png");
         }
+    }
+
+    public boolean isCenterEmpty() {
+        int count = 0;
+        Tile empty = new Tile(TileColor.EMPTY);
+        for (int index = 0; index < getComponentCount(); index++) {
+            CenterTileButton buttonSelected = (CenterTileButton) getComponent(index);
+            if (buttonSelected.getTileValue() == empty.getColor().getName()) {
+                count++;
+            }
+        }
+        return count == getComponentCount();
     }
 }

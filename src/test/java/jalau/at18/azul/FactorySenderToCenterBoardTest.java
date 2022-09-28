@@ -12,7 +12,7 @@ public class FactorySenderToCenterBoardTest {
     @Test
     public void shouldSendTilesFromFactoryToCenterBoard() {
         CenterTileBoard centerBoard = new CenterTileBoard();
-        centerBoard.add(new Tile(TileColor.FIRST_PLAYER));
+        centerBoard.add(new Tile(TileColor.FIRST));
         FactorySenderToCenterBoard senderToCenterBoard = new FactorySenderToCenterBoard(centerBoard);
         List<Tile> tilesToCenter = new ArrayList<>(){
             {
@@ -22,7 +22,7 @@ public class FactorySenderToCenterBoardTest {
         };
         List<Tile> expectedTilesCenter = new ArrayList<>(){
             {
-                add(new Tile(TileColor.FIRST_PLAYER));
+                add(new Tile(TileColor.FIRST));
                 add(new Tile(TileColor.DARK));
                 add(new Tile(TileColor.DARK));
             }
@@ -39,7 +39,7 @@ public class FactorySenderToCenterBoardTest {
         };
         List<Tile> expectedTilesCenter2 = new ArrayList<>(){
             {
-                add(new Tile(TileColor.FIRST_PLAYER));
+                add(new Tile(TileColor.FIRST));
                 add(new Tile(TileColor.DARK));
                 add(new Tile(TileColor.DARK));
                 add(new Tile(TileColor.WHITE));
@@ -58,7 +58,7 @@ public class FactorySenderToCenterBoardTest {
         };
         List<Tile> expectedTilesCenter3 = new ArrayList<>(){
             {
-                add(new Tile(TileColor.FIRST_PLAYER));
+                add(new Tile(TileColor.FIRST));
                 add(new Tile(TileColor.DARK));
                 add(new Tile(TileColor.DARK));
                 add(new Tile(TileColor.WHITE));

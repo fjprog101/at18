@@ -5,6 +5,7 @@ import javax.swing.JFrame;
 
 import jalau.at18.architects.controller.BarConflictController;
 import jalau.at18.architects.controller.WonderController;
+import jalau.at18.architects.model.BuildStage;
 
 public class BoardFrame extends JFrame {
     public static final int WIDTH = 1000;
@@ -18,12 +19,13 @@ public class BoardFrame extends JFrame {
     private CheckTheConflictTokens checkTheConflictTokens;
     private BarConflictController barConflictController;
     private WonderController wonderController;
+    private WarWinnerPointsView warWinnerPointsView;
     private WonderStructure wonderStructure;
     private AddStageButton addStage;
-
+    //private BuildStage buildStage;
     public BoardFrame(String numberOfPlayers) {
         barConflictController = new BarConflictController(this);
-        wonderController = new WonderController(this);
+        wonderController = new WonderController(this, new BuildStage());
         this.numbersOfPlayers = numberOfPlayers;
         initialize();
     }
@@ -32,12 +34,13 @@ public class BoardFrame extends JFrame {
         middleDeck = new MiddleDeck();
         checkTheConflictTokens = new CheckTheConflictTokens(barConflictController);
         wonderStructure = new WonderStructure();
-        //wonderStructure.buildStages(3);
         addStage = new AddStageButton(wonderController);
+        warWinnerPointsView = new WarWinnerPointsView();
         add(addStage);
         add(middleDeck);
         add(checkTheConflictTokens);
         add(wonderStructure);
+        add(warWinnerPointsView);
         setTitle(WINDOW_NAME);
         setSize(WIDTH, HEIGHT);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -51,8 +54,8 @@ public class BoardFrame extends JFrame {
         int players = Integer.valueOf(numbersOfPlayers);
         return players;
     }
-    public void addStage() {
-        wonderStructure.addStage();
+    public void addStage(int stagesCompleted) {
+        wonderStructure.buildStages(stagesCompleted);
         this.validate();
     }
 }

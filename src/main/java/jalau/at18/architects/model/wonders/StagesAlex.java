@@ -10,17 +10,21 @@ enum StagesAlex {
     private int countOfResources;
     private boolean conditionToBuild;
     private int points;
+
     StagesAlex(int countOfResources, boolean equals, int points) {
         this.countOfResources = countOfResources;
         this.conditionToBuild = equals;
         this.points = points;
     }
+
     public int getCountOfResources() {
         return countOfResources;
     }
+
     public int getPoints() {
         return points;
     }
+
     public boolean getEquals() {
         return conditionToBuild;
     }

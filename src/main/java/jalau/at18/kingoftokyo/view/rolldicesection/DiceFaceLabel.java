@@ -1,9 +1,10 @@
 package jalau.at18.kingoftokyo.view.rolldicesection;
 
-import jalau.at18.kingoftokyo.DiceFace;
-
 import javax.imageio.ImageIO;
 import javax.swing.*;
+
+import jalau.at18.kingoftokyo.model.DiceFace;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -33,6 +34,7 @@ public class DiceFaceLabel extends JLabel {
         this.diceFace = diceFacee;
         setDiceFaceImage(diceFace.getRepresentativeValue());
         initialize = true;
+        setVisible(true);
     }
 
     public DiceFace getPaintDiceFace() {
@@ -41,6 +43,7 @@ public class DiceFaceLabel extends JLabel {
 
     public void painQuestionMark() {
         setDiceFaceImage("question.png");
+        initialize = false;
     }
 
     private void setDiceFaceImage(String image) {

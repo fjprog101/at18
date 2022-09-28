@@ -3,8 +3,8 @@ package jalau.at18.kingoftokyo.view.whoStartsTheGame;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 
-import jalau.at18.kingoftokyo.Player;
 import jalau.at18.kingoftokyo.controller.WhoStartRollDiceController;
+import jalau.at18.kingoftokyo.model.Player;
 import jalau.at18.kingoftokyo.view.rolldicesection.RollDiceSectionUI;
 
 import java.awt.*;

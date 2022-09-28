@@ -1,5 +1,4 @@
 package jalau.at18.architects.view;
-import static jalau.at18.architects.view.Constants.Button.*;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 
@@ -13,5 +12,6 @@ public class AddStageButton extends JButton {
         super("Add stage");
         setBounds(POSX, POSY, WIDTH, HEIGHT);
         addActionListener(listener);
+
     }
 }

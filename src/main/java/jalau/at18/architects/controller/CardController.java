@@ -4,8 +4,8 @@ import java.awt.event.MouseEvent;
 
 import javax.swing.event.MouseInputListener;
 
-import jalau.at18.architects.model.CardFace;
-import jalau.at18.architects.model.Deck;
+import jalau.at18.architects.model.cards.CardFace;
+import jalau.at18.architects.model.cards.Deck;
 import jalau.at18.architects.view.CardLabel;
 
 public class CardController implements MouseInputListener {
@@ -20,7 +20,7 @@ public class CardController implements MouseInputListener {
         CardFace cardFace = deck.getRamdomCard();
         String newImage = cardFace.getNameOfFile();
         card.setImage(newImage);
-        System.out.println("Mouse usado");
+        System.out.println("Mouse just used");
     }
     @Override
     public void mousePressed(MouseEvent e) {

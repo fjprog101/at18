@@ -13,7 +13,7 @@ public class TileColorTest {
         assertThat(TileColor.valueOf("DARK"), is(notNullValue()));
         assertThat(TileColor.valueOf("BLUE"), is(notNullValue()));
         assertThat(TileColor.valueOf("WHITE"), is(notNullValue()));
-        assertThat(TileColor.valueOf("FIRST_PLAYER"), is(notNullValue()));
+        assertThat(TileColor.valueOf("FIRST"), is(notNullValue()));
     }
 
 }

@@ -5,20 +5,22 @@ import javax.swing.BoxLayout;
 import javax.swing.JPanel;
 import java.awt.*;
 
-import jalau.at18.kingoftokyo.CompleteCard;
-import jalau.at18.kingoftokyo.DeckCards;
+import jalau.at18.kingoftokyo.controller.PlayerStatusController;
+import jalau.at18.kingoftokyo.model.CompleteCard;
+import jalau.at18.kingoftokyo.model.DeckCards;
 
 public class CardsGroupPanel extends JPanel {
-    private static final int[] CARD_SIZE = {470, 250 };
-    private static final int[] CARD_POS = {950, 185 };
+    private static final int[] CARD_SIZE = {470, 250};
+    private static final int[] CARD_POS = {950, 185};
     private static final int CARDS_SEPARATION = 10;
-    private static final int THIRD_CARD = 4;
     private DeckCards deck;
+    private PlayerStatusController playerController;
 
-    public CardsGroupPanel() {
+    public CardsGroupPanel(PlayerStatusController playerController) {
         setBounds(CARD_POS[0], CARD_POS[1], CARD_SIZE[0], CARD_SIZE[1]);
         setLayout(new BoxLayout(this, BoxLayout.LINE_AXIS));
         deck = new DeckCards();
+        this.playerController = playerController;
         initialCards();
     }
 
@@ -38,5 +40,9 @@ public class CardsGroupPanel extends JPanel {
 
     public DeckCards getDeck() {
         return deck;
+    }
+
+    public void sendEffect(int[] effect) {
+        playerController.setPlayersStatus(effect);
     }
 }

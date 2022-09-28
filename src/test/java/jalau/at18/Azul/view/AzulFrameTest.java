@@ -19,6 +19,5 @@ public class AzulFrameTest {
         assertEquals(AzulFrame.INITIAL_POSITION, azulframe.getBounds().getX(), 0);
         assertEquals(AzulFrame.INITIAL_POSITION, azulframe.getBounds().getY(), 0);
         assertEquals(AzulFrame.WIDTH, azulframe.getBounds().getWidth(), 0);
-        assertEquals(AzulFrame.HEIGHT, azulframe.getBounds().getHeight(), 0);
     }
 }

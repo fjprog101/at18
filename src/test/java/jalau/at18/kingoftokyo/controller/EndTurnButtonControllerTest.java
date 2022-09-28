@@ -6,9 +6,9 @@ import javax.swing.JLabel;
 
 import org.junit.Test;
 
-import jalau.at18.kingoftokyo.Monster;
-import jalau.at18.kingoftokyo.Player;
-import jalau.at18.kingoftokyo.Turn;
+import jalau.at18.kingoftokyo.model.Monster;
+import jalau.at18.kingoftokyo.model.Player;
+import jalau.at18.kingoftokyo.model.Turn;
 import jalau.at18.kingoftokyo.view.TurnPanel;
 
 public class EndTurnButtonControllerTest {

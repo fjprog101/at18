@@ -1,26 +1,41 @@
 package jalau.at18.kingoftokyo.view.playercards;
 
-import java.awt.Color;
+import java.awt.*;
 import javax.swing.JPanel;
 
-import jalau.at18.kingoftokyo.Monster;
-import jalau.at18.kingoftokyo.Player;
+import jalau.at18.kingoftokyo.model.Player;
 
 public class PlayerCard extends JPanel {
     private static final int WIDTH = 300;
     private static final int HEIGHT = 150;
-    private static final int POSITION = 20;
+    private static final int VICTORY_INDEX = 3;
+    private static final int ICON_INDEX = 4;
 
-    public PlayerCard(Monster monster, int playerNumber, Player player) {
+    private Player player;
+
+    public PlayerCard(Player player) {
+        this.player = player;
         setBackground(Color.BLUE);
-        setBounds(POSITION, POSITION + (HEIGHT + POSITION) * playerNumber, WIDTH,
-                HEIGHT);
+        setAlignmentX(Component.CENTER_ALIGNMENT);
+        setSize(WIDTH, HEIGHT);
         setLayout(null);
-        add(new PlayerCardName(monster.getName()));
-        add(new PlayerCardLifePoints(monster.getLifePoints()));
-        add(new PlayerCardEnergyPoints(player.getEnergy()));
-        add(new PlayerCardVictoryPoints(monster.getVictoryPoints()));
-        add(new PlayerCardMonsterIcon(monster.getIconPath()));
+        add(new PlayerCardName());
+        add(new PlayerCardLifePoints());
+        add(new PlayerCardEnergyPoints());
+        add(new PlayerCardVictoryPoints());
+        add(new PlayerCardMonsterIcon(player.getMonster().getIconPath()));
+        updatePlayerStatus();
+        setVisible(false);
+    }
+    public void setPlayer(Player newPlayer) {
+        this.player = newPlayer;
+        ((PlayerCardName) getComponent(0)).setMonsterName(player.getMonster().getName());
+        ((PlayerCardMonsterIcon) getComponent(ICON_INDEX)).setMonsterImage(player.getMonster().getIconPath());
     }
 
+    public void updatePlayerStatus() {
+        ((PlayerCardLifePoints) getComponent(1)).setLifePoints(player.getLifePoints());
+        ((PlayerCardEnergyPoints) getComponent(2)).setEnergyPoints(player.getEnergy());
+        ((PlayerCardVictoryPoints) getComponent(VICTORY_INDEX)).setVictoryPoints(player.getVictoryPoints());
+    }
 }
