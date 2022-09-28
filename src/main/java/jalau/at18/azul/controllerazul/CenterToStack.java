@@ -18,14 +18,15 @@ public class CenterToStack implements ActionListener {
     private CenterTileBoard center;
     private StackButtonGroup stackButtonGroup;
     private FloorButtons floorButtons;
+    private FloorButtons floorButtons2;
     private Tile first = new Tile(TileColor.FIRST);
     private List<Tile> firsttile = new ArrayList<Tile>();
-    
 
-    public CenterToStack(CenterTileBoard center, StackButtonGroup stack, CenterButtons centerbutton, FloorButtons newFloor) {
+    public CenterToStack(CenterTileBoard center, StackButtonGroup stack, CenterButtons centerbutton, FloorButtons newFloor1, FloorButtons newfloor2) {
         this.centerbutton = centerbutton;
         this.center = center;
-        this.floorButtons = newFloor;
+        this.floorButtons = newFloor1;
+        this.floorButtons2 = newfloor2;
         this.stackButtonGroup = stack;
     }
 
@@ -34,15 +35,15 @@ public class CenterToStack implements ActionListener {
         CenterTileButton buttonSelected = (CenterTileButton) e.getSource();
         CenterTileBoard newcenter = center;
         Tile color = new Tile(TileColor.valueOf(buttonSelected.getTileValue()));
-        if(color.equals(first)) {
+        if (color.equals(first)) {
             firsttile.add(new Tile(TileColor.FIRST));
-            System.out.print(firsttile.get(0));
             floorButtons.updateButtonGroup(firsttile);
+            center.removeTilesOfSpecificColor(first);
+            centerbutton.updateCenterButtons(center);
         } else {
             stackButtonGroup.updateStackButtons(newcenter.selectedTilesList(color));
             center.removeTilesOfSpecificColor(color);
             centerbutton.updateCenterButtons(center);
         }
-        
     }
 }
