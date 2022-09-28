@@ -9,12 +9,12 @@ import javax.swing.JLabel;
 public class WarWinnerIcon extends JLabel {
     private static final int POSITION_X = 0;
     private static final int POSITION_Y = 0;
-    private static final int WIDTH = 150;
-    private static final int HEIGHT = 150;
+    private static final int WIDTH = 40;
+    private static final int HEIGHT = 40;
 
     public WarWinnerIcon() {
         setBounds(POSITION_X, POSITION_Y, WIDTH, HEIGHT);
-        ImageIcon image = new ImageIcon("src/main/resources/architects/tokens/warwinnertokens");
+        ImageIcon image = new ImageIcon("src/main/resources/architects/tokens/warwinnertokens.png");
         Icon icon = new ImageIcon(image.getImage().getScaledInstance(WIDTH, HEIGHT,
                 WIDTH));
         setIcon(icon);
