@@ -7,19 +7,16 @@ import javax.swing.*;
 import java.awt.*;
 
 public class ButtonsPanel extends JPanel {
+    private static final int ONE_HUNDRED = 100;
 
-    private static final int DEFAULT_WIDTH = 100;
-    private static final int DEFAULT_HEIGHT = 100;
-    private ChooseMonstersController chooseMonstersController;
     public ButtonsPanel(ChooseMonstersFrame frame) {
-        chooseMonstersController = new ChooseMonstersController(frame);
+        setLayout(new FlowLayout());
+        ChooseMonstersController chooseMonstersController = new ChooseMonstersController(frame);
+        add(Box.createRigidArea(new Dimension(0, ONE_HUNDRED)));
         add(new ExitButton());
+        add(Box.createRigidArea(new Dimension(ONE_HUNDRED, 0)));
         add(new StartGameButton(chooseMonstersController));
+        add(Box.createRigidArea(new Dimension(0, ONE_HUNDRED)));
         setBackground(Color.BLUE);
-        initialize();
-    }
-
-    private void initialize() {
-        setPreferredSize(new Dimension(DEFAULT_WIDTH, DEFAULT_HEIGHT));
     }
 }
