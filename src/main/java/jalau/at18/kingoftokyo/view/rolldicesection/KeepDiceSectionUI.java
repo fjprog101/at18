@@ -1,7 +1,6 @@
 package jalau.at18.kingoftokyo.view.rolldicesection;
 
 import jalau.at18.kingoftokyo.controller.PlayerStatusController;
-import jalau.at18.kingoftokyo.view.RollerButton;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
