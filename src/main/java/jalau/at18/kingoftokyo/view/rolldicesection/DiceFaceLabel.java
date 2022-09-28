@@ -34,6 +34,7 @@ public class DiceFaceLabel extends JLabel {
         this.diceFace = diceFacee;
         setDiceFaceImage(diceFace.getRepresentativeValue());
         initialize = true;
+        setVisible(true);
     }
 
     public DiceFace getPaintDiceFace() {
@@ -42,6 +43,7 @@ public class DiceFaceLabel extends JLabel {
 
     public void painQuestionMark() {
         setDiceFaceImage("question.png");
+        initialize = false;
     }
 
     private void setDiceFaceImage(String image) {

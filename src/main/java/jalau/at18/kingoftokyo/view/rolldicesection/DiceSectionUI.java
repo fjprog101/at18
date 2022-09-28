@@ -21,7 +21,7 @@ public class DiceSectionUI extends JPanel {
         RollDiceSectionUI rollDiceSectionUI = new RollDiceSectionUI();
         add(keepDiceSectionUI);
         add(rollDiceSectionUI);
-        keepDiceSectionController = new KeepDiceSectionController(keepDiceSectionUI);
+        keepDiceSectionController = new KeepDiceSectionController(keepDiceSectionUI, rollDiceSectionUI);
         rollDiceSectionController = new RollDiceSectionController(rollDiceSectionUI, keepDiceSectionController);
 
         //Position of this Panel DiceSectionUI

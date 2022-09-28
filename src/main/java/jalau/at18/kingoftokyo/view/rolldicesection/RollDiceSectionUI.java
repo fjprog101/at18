@@ -37,4 +37,12 @@ public class RollDiceSectionUI extends JPanel {
     public List<DiceFaceLabel> getListDiceFaceLabel() {
         return listDiceFaceLabel;
     }
+
+    public void resetUI() {
+        rollerDiceButton.setEnabled(true);
+        for (DiceFaceLabel diceFaceLabel : listDiceFaceLabel) {
+            diceFaceLabel.painQuestionMark();
+            diceFaceLabel.setVisible(true);
+        }
+    }
 }
