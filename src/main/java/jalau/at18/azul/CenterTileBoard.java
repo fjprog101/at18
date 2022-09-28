@@ -22,7 +22,7 @@ public class CenterTileBoard extends ArrayList<Tile> {
     }
 
     public CenterTileBoard addFirstPlayer() {
-        this.add(new Tile(TileColor.FIRST_PLAYER));
+        this.add(new Tile(TileColor.FIRST));
         return this;
     }
 }

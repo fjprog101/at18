@@ -52,5 +52,6 @@ public class TileController implements ActionListener {
                 gameAzul.removeTiles();
             }
         }
+        centerbutton.updateCenterButtons(firstplayer.addFirstPlayer());
     }
 }

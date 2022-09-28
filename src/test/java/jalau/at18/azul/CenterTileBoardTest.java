@@ -12,14 +12,14 @@ public class CenterTileBoardTest {
     @Test
     public void testRemoveTiles() {
         CenterTileBoard center = new CenterTileBoard();
-        center.add(new Tile(TileColor.FIRST_PLAYER));
+        center.add(new Tile(TileColor.FIRST));
         center.add(new Tile(TileColor.DARK));
         center.add(new Tile(TileColor.DARK));
         center.add(new Tile(TileColor.RED));
         center.add(new Tile(TileColor.YELLOW));
         center.removeTilesOfSpecificColor(new Tile(TileColor.RED));
         CenterTileBoard expected = new CenterTileBoard();
-        expected.add(new Tile(TileColor.FIRST_PLAYER));
+        expected.add(new Tile(TileColor.FIRST));
         expected.add(new Tile(TileColor.DARK));
         expected.add(new Tile(TileColor.DARK));
         expected.add(new Tile(TileColor.YELLOW));
@@ -28,7 +28,7 @@ public class CenterTileBoardTest {
     @Test
     public void testRemoveTiles1() {
         CenterTileBoard center = new CenterTileBoard();
-        center.add(new Tile(TileColor.FIRST_PLAYER));
+        center.add(new Tile(TileColor.FIRST));
         center.add(new Tile(TileColor.DARK));
         center.add(new Tile(TileColor.RED));
         center.add(new Tile(TileColor.RED));
@@ -36,7 +36,7 @@ public class CenterTileBoardTest {
         center.add(new Tile(TileColor.DARK));
         center.removeTilesOfSpecificColor(new Tile(TileColor.DARK));
         CenterTileBoard expected = new CenterTileBoard();
-        expected.add(new Tile(TileColor.FIRST_PLAYER));
+        expected.add(new Tile(TileColor.FIRST));
         expected.add(new Tile(TileColor.RED));
         expected.add(new Tile(TileColor.RED));
         expected.add(new Tile(TileColor.YELLOW));
@@ -46,14 +46,14 @@ public class CenterTileBoardTest {
     @Test
     public void testRemoveTiles2() {
         CenterTileBoard center = new CenterTileBoard();
-        center.add(new Tile(TileColor.FIRST_PLAYER));
+        center.add(new Tile(TileColor.FIRST));
         center.add(new Tile(TileColor.DARK));
         center.add(new Tile(TileColor.DARK));
         center.add(new Tile(TileColor.RED));
         center.add(new Tile(TileColor.YELLOW));
         center.removeTilesOfSpecificColor(new Tile(TileColor.DARK));
         CenterTileBoard expected = new CenterTileBoard();
-        expected.add(new Tile(TileColor.FIRST_PLAYER));
+        expected.add(new Tile(TileColor.FIRST));
         expected.add(new Tile(TileColor.RED));
         expected.add(new Tile(TileColor.YELLOW));
         assertEquals(expected, center);
@@ -61,7 +61,7 @@ public class CenterTileBoardTest {
     @Test
     public void testaddTiles() {
         CenterTileBoard center = new CenterTileBoard();
-        center.add(new Tile(TileColor.FIRST_PLAYER));
+        center.add(new Tile(TileColor.FIRST));
         center.add(new Tile(TileColor.RED));
         center.add(new Tile(TileColor.RED));
         List<Tile> newCenterTiles = new ArrayList<>(){
@@ -73,7 +73,7 @@ public class CenterTileBoardTest {
             };
         center.addTilestoCenter(newCenterTiles);
         CenterTileBoard expected = new CenterTileBoard();
-        expected.add(new Tile(TileColor.FIRST_PLAYER));
+        expected.add(new Tile(TileColor.FIRST));
         expected.add(new Tile(TileColor.RED));
         expected.add(new Tile(TileColor.RED));
         expected.add(new Tile(TileColor.DARK));
