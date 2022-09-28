@@ -46,13 +46,11 @@ public class CenterButtons extends JPanel {
     }
 
     public boolean isCenterEmpty() {
-        //boolean isEmpty = false;
         int count = 0;
         Tile empty = new Tile(TileColor.EMPTY);
         for (int index = 0; index < getComponentCount(); index++) {
             CenterTileButton buttonSelected = (CenterTileButton) getComponent(index);
             if (buttonSelected.getTileValue() == empty.getColor().getName()) {
-                //isEmpty = true;
                 count++;
             }
         }
