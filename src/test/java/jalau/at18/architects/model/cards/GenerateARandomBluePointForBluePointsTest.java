@@ -1,9 +1,4 @@
-<<<<<<< HEAD:src/test/java/jalau/at18/architects/model/cards/GenerateARandomBluePointForBluePointsTest.java
 package jalau.at18.architects.model.cards;
-
-=======
-package jalau.at18.architects.model;
->>>>>>> 1d829ad4 (added unitest for GenerateARandomBluePointForBluePoints class):src/test/java/jalau/at18/architects/model/GenerateARandomBluePointForBluePointsTest.java
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
