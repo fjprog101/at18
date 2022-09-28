@@ -11,4 +11,10 @@ public class WarWinnerPointsTest {
         warWinnerPoints.setQuantityToken(2);
         assertEquals(6, warWinnerPoints.getPoints());
     }
+    @Test
+    public void shouldReturnQuantityTokens() {
+        WarWinnerPoints warWinnerPoints = new WarWinnerPoints();
+        warWinnerPoints.setQuantityToken(2);
+        assertEquals(2, warWinnerPoints.getTokens());
+    }
 }
