@@ -1,7 +1,6 @@
 package jalau.at18.kingoftokyo.view.whostart;
 
 import javax.swing.*;
-//import jalau.at18.kingoftokyo.controller.WhoStartController;
 import jalau.at18.kingoftokyo.controller.WhoStartRollDiceController;
 
 import java.awt.*;
@@ -9,7 +8,6 @@ import java.awt.*;
 public class PanelSouth  extends JPanel {
     private static final int DEFAULT_WIDTH = 100;
     private static final int DEFAULT_HEIGHT = 200;
-
     private static final int DEFAULT_LABEL_POSX = 300;
     private static final int DEFAULT_LABEL_POSY = 400;
     private static final int DEFAULT_LABEL_WIDTH = 600;

@@ -1,13 +1,7 @@
 package jalau.at18.kingoftokyo.controller;
 
-import jalau.at18.kingoftokyo.model.DiceFace;
-import jalau.at18.kingoftokyo.model.DiceFaceKeeper;
-import jalau.at18.kingoftokyo.model.DiceFaceKeeperProcess;
-import jalau.at18.kingoftokyo.model.DiceFaceKeeperResult;
-import jalau.at18.kingoftokyo.model.DiceFaceTurnResult;
-import jalau.at18.kingoftokyo.view.rolldicesection.DiceFaceLabel;
-import jalau.at18.kingoftokyo.view.rolldicesection.KeepDiceSectionUI;
-import jalau.at18.kingoftokyo.view.rolldicesection.RollDiceSectionUI;
+import jalau.at18.kingoftokyo.model.*;
+import jalau.at18.kingoftokyo.view.rolldicesection.*;
 
 public class KeepDiceSectionController {
     private KeepDiceSectionUI keepDiceSectionUI;
@@ -54,7 +48,6 @@ public class KeepDiceSectionController {
         int energy = diceFaceTurnResult.getEnergyPoint();
         int[] effect = {healing, damage, score, energy};
         keepDiceSectionUI.sendResults(effect); //For chenge player atributes
-
         String result = String.valueOf(healing) + String.valueOf(damage)
                 + String.valueOf(score) + String.valueOf(energy);
         keepDiceSectionUI.getDisplayResult().setText(result);

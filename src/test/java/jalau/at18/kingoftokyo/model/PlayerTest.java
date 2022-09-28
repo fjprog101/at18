@@ -1,10 +1,6 @@
 package jalau.at18.kingoftokyo.model;
 
 import org.junit.Test;
-
-import jalau.at18.kingoftokyo.model.Monster;
-import jalau.at18.kingoftokyo.model.Player;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 

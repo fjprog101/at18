@@ -2,10 +2,7 @@ package jalau.at18.kingoftokyo.model;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
-
-import jalau.at18.kingoftokyo.model.DiscardCards;
 
 public class DiscardCardsTest {
 

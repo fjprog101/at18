@@ -3,10 +3,8 @@ package jalau.at18.kingoftokyo.view;
 import jalau.at18.kingoftokyo.Game;
 import jalau.at18.kingoftokyo.view.choosemonsters.ChooseMonstersFrame;
 import org.junit.Test;
-
 import javax.swing.*;
 import java.awt.*;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 

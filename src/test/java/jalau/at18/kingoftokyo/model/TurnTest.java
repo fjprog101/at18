@@ -1,9 +1,7 @@
 package jalau.at18.kingoftokyo.model;
 
 import static org.junit.Assert.assertEquals;
-
 import java.util.ArrayList;
-
 import org.junit.Test;
 
 public class TurnTest {

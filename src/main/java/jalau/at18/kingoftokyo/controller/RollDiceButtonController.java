@@ -14,7 +14,6 @@ public class RollDiceButtonController {
 
         this.rollDiceSectionUI = rollDiceSectionUI;
         rollDiceSectionUI.getRollerDiceButton().addActionListener(e -> rollDices());
-
         listRandomDiceFace = new ArrayList<>();
     }
     private void rollDices() {

@@ -4,7 +4,6 @@ import javax.swing.*;
 import jalau.at18.kingoftokyo.controller.WhoStartRollDiceController;
 import jalau.at18.kingoftokyo.view.rolldicesection.RollDiceSectionUI;
 
-
 public class ShowDicesPanel extends JPanel {
     private static final int DEFAULT_LABEL_POSX = 100;
     private static final int DEFAULT_LABEL_POSY = 90;

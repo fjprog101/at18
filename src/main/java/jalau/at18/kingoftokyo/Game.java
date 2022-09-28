@@ -1,7 +1,6 @@
 package jalau.at18.kingoftokyo;
 
 import jalau.at18.kingoftokyo.model.Player;
-
 import java.util.ArrayList;
 
 public class Game {
@@ -24,8 +23,8 @@ public class Game {
     public void setPlayersList(ArrayList<Player> list) {
         this.playersList = list;
     }
+
     public ArrayList<Player> getPlayersList() {
-       // this.playersList = list;
         return playersList;
     }
 

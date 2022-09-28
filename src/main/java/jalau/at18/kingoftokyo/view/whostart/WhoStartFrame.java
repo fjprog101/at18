@@ -2,10 +2,8 @@ package jalau.at18.kingoftokyo.view.whostart;
 
 import jalau.at18.kingoftokyo.controller.WhoStartRollDiceController;
 import jalau.at18.kingoftokyo.model.Player;
-
 import java.awt.BorderLayout;
 import java.util.ArrayList;
-
 import javax.swing.*;
 
 public class WhoStartFrame extends JFrame {

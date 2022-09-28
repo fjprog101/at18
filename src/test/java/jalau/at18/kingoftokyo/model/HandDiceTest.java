@@ -1,14 +1,8 @@
 package jalau.at18.kingoftokyo.model;
 
 import org.junit.Test;
-
-import jalau.at18.kingoftokyo.model.Dice;
-import jalau.at18.kingoftokyo.model.DiceFace;
-import jalau.at18.kingoftokyo.model.DiceHand;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import static org.junit.Assert.*;
 
 public class HandDiceTest {

@@ -2,10 +2,7 @@ package jalau.at18.kingoftokyo.view;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-
-import jalau.at18.kingoftokyo.model.CompleteCard;
-import jalau.at18.kingoftokyo.model.DeckCards;
-import jalau.at18.kingoftokyo.model.DiscardCards;
+import jalau.at18.kingoftokyo.model.*;
 import jalau.at18.kingoftokyo.view.card.*;
 
 import org.junit.Test;

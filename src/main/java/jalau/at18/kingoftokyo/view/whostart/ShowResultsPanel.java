@@ -1,7 +1,6 @@
 package jalau.at18.kingoftokyo.view.whostart;
 
 import java.util.ArrayList;
-
 import javax.swing.*;
 import jalau.at18.kingoftokyo.model.Player;
 

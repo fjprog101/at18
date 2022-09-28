@@ -1,8 +1,6 @@
 package jalau.at18.kingoftokyo.view;
 
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+import javax.swing.*;
 import jalau.at18.kingoftokyo.controller.EndTurnButtonController;
 import jalau.at18.kingoftokyo.model.Turn;
 import java.awt.BorderLayout;

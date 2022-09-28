@@ -1,13 +1,6 @@
 package jalau.at18.kingoftokyo.model;
 
 import org.junit.Test;
-
-import jalau.at18.kingoftokyo.model.DiceFace;
-import jalau.at18.kingoftokyo.model.DiceFaceKeeper;
-import jalau.at18.kingoftokyo.model.DiceFaceKeeperProcess;
-import jalau.at18.kingoftokyo.model.DiceFaceKeeperResult;
-import jalau.at18.kingoftokyo.model.DiceFaceTurnResult;
-
 import java.util.ArrayList;
 import java.util.List;
 

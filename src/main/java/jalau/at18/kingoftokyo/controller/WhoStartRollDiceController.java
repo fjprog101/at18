@@ -1,26 +1,15 @@
 package jalau.at18.kingoftokyo.controller;
 
-import jalau.at18.kingoftokyo.model.Dice;
-import jalau.at18.kingoftokyo.model.DiceFace;
-import jalau.at18.kingoftokyo.model.DiceFaceIdentifier;
-import jalau.at18.kingoftokyo.model.DiceHand;
-import jalau.at18.kingoftokyo.model.DiceFaceSameCounter;
-import jalau.at18.kingoftokyo.model.DiceRoller;
-import jalau.at18.kingoftokyo.model.Player;
-import jalau.at18.kingoftokyo.model.Turn;
-import jalau.at18.kingoftokyo.view.GameFrame;
-import jalau.at18.kingoftokyo.view.rolldicesection.DiceFaceLabel;
-import jalau.at18.kingoftokyo.view.rolldicesection.RollDiceSectionUI;
-import jalau.at18.kingoftokyo.view.whostart.ShowResultsPanel;
-import jalau.at18.kingoftokyo.view.whostart.StartGameButton;
-import jalau.at18.kingoftokyo.view.whostart.WhoStartFrame;
+import jalau.at18.kingoftokyo.model.*;
+import jalau.at18.kingoftokyo.view.*;
+import jalau.at18.kingoftokyo.view.rolldicesection.*;
+import jalau.at18.kingoftokyo.view.whostart.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class WhoStartRollDiceController {
     private static final int QUANTITY_DICES = 6;
     private RollDiceSectionUI rollDiceSectionUI;
-
     private List<DiceFace> listRandomDiceFace;
     private ShowResultsPanel  showResultsPanel;
     private int buttonCount;
@@ -102,5 +91,4 @@ public class WhoStartRollDiceController {
         int countPounchingPlayer1 = diceFaceIdentifier1.getCountDiceFace(DiceFace.PUNCHING);
         return countPounchingPlayer1;
     }
-
 }

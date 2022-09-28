@@ -9,10 +9,8 @@ public class PlayerStatusController {
     private static final int DAMAGE = 1;
     private static final int SCORE = 2;
     private static final int ENERGY = 3;
-    private GameFrame gameFrame;
     private Turn turn;
     public PlayerStatusController(GameFrame gameFrame) {
-        this.gameFrame = gameFrame;
         this.turn = gameFrame.getTurns();
     }
 
