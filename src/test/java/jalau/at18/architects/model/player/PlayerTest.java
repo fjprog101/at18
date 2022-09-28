@@ -12,5 +12,22 @@ public class PlayerTest {
         Player player = new Player("Jose", Wonders.FOUR);
         assertEquals("Jose", player.getName());
         assertEquals(4, player.getWonder().getNumberWonder());
+        assertEquals(0, player.getPlaycard().getBluePoints().getPoints());
+        assertEquals(0, player.getPlaycard().getWarWinnerPoints().getPoints());
+        assertEquals(0, player.getPlaycard().getScienceSection().sizeOfScienceELementsList());
+        assertEquals(0, player.getPlaycard().getMilitarySection().getTemporalShield());
+        assertEquals(0, player.getPlaycard().getMilitarySection().getPermanentShield());
+    }
+
+    @Test
+    public void addCardtoPlayer() {
+        Player player = new Player("Jose", Wonders.FOUR);
+        assertEquals("Jose", player.getName());
+        assertEquals(4, player.getWonder().getNumberWonder());
+        assertEquals(0, player.getPlaycard().getBluePoints().getPoints());
+        assertEquals(0, player.getPlaycard().getWarWinnerPoints().getPoints());
+        assertEquals(0, player.getPlaycard().getScienceSection().sizeOfScienceELementsList());
+        assertEquals(0, player.getPlaycard().getMilitarySection().getTemporalShield());
+        assertEquals(0, player.getPlaycard().getMilitarySection().getPermanentShield());
     }
 }
