@@ -32,6 +32,6 @@ public class PanelSouth  extends JPanel {
 
     private void initialize() {
         setPreferredSize(new Dimension(DEFAULT_WIDTH, DEFAULT_HEIGHT));
-        setEnabled(false);
+        //setEnabled(false);
     }
 }

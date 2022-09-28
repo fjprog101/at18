@@ -9,7 +9,6 @@ import jalau.at18.kingoftokyo.model.DiceRoller;
 import jalau.at18.kingoftokyo.model.Player;
 import jalau.at18.kingoftokyo.view.rolldicesection.DiceFaceLabel;
 import jalau.at18.kingoftokyo.view.rolldicesection.RollDiceSectionUI;
-import jalau.at18.kingoftokyo.view.whoStartsTheGame.PanelSouth;
 import jalau.at18.kingoftokyo.view.whoStartsTheGame.ShowResultsPanel;
 import jalau.at18.kingoftokyo.view.whoStartsTheGame.StartGameButton;
 import jalau.at18.kingoftokyo.view.whoStartsTheGame.WhoStartFrame;
@@ -30,14 +29,18 @@ public class WhoStartRollDiceController {
     private Player[] arrangePlayers;
     private WhoStartFrame whoStartFrame; //anadido
     private StartGameButton startGameButton; //anadido
-    private PanelSouth panelSouth;
 
+    private int playermaxpunch;
     //public WhoStartRollDiceController(RollDiceSectionUI rollDiceSectionUI, PlayerNameLabel playerNameLabel) {
-    public WhoStartRollDiceController(RollDiceSectionUI rollDiceSectionUI, ShowResultsPanel  showResultsPanel, StartGameButton startGameButton) {
+    public WhoStartRollDiceController(RollDiceSectionUI rollDiceSectionUI, ShowResultsPanel
+        showResultsPanel, StartGameButton startGameButton) { //anadido
+
+
         this.rollDiceSectionUI = rollDiceSectionUI;
         this.showResultsPanel = showResultsPanel;
         this.startGameButton = startGameButton;
         buttonCount = 1;
+        playermaxpunch = 0;
         punchingList = new int[showResultsPanel.getArrayPlayer().length];
         arrangePlayers = new Player[showResultsPanel.getArrayPlayer().length];
 
@@ -57,14 +60,16 @@ public class WhoStartRollDiceController {
         //playerNameLabel.setPlayerName(getCountPounching());
 
         showResultsPanel.setTextComponent(buttonCount, getCountPounching());
-        punchingList[buttonCount - 1] = getCountPounching(); //-1
-        comparerPunching(getCountPounching());
+        punchingList[buttonCount - 1] = getCountPounching();
+
+        //comparerPunching(getCountPounching());
+        comparerPunching(punchingList);  //anadido
+
+
         buttonCount++;
-        if (buttonCount == showResultsPanel.getArrayPlayer().length + 1) { //+ 1
+        if (buttonCount == showResultsPanel.getArrayPlayer().length + 1) {
             rollDiceSectionUI.getRollerDiceButton().setEnabled(false);
-            //startGameButton.setVisible(true);
-            //panelSouth.setVisible(true);
-            panelSouth.setEnabled(true);
+            startGameButton.setVisible(true); // no cambia de estado
         }
     }
     public void clickStartGameButton() { //anadido
@@ -72,18 +77,28 @@ public class WhoStartRollDiceController {
         //GameFrameController gameFrameController = new GameFrameController(arrangePlayers);
     }
 
-    public void comparerPunching(int actualPunching) {
+//    public void comparerPunching(int actualPunching) {
+    public int comparerPunching(int[] punchingList) { // anadido
+
+        this.punchingList = punchingList;
+        int maxPunch =  0;
 
         for (int index = 0; index < punchingList.length; index++) {
-            if (punchingList[index] > actualPunching) { //<      //  0 > 2 ?  //2 > 1
-                //getArrayPlayer
+            if (punchingList[index] > maxPunch) {
+                maxPunch =  punchingList[index];
+                playermaxpunch = index;
+            }
+            /*
+            if (punchingList[index] > actualPunching) {
                 arrangePlayers[index] = showResultsPanel.getArrayPlayer()[buttonCount - 1];
             } else {
-                if (punchingList[index] < actualPunching) { //>        //0 > 2 ?
-                    punchingList[index] = punchingList[index];
+                if (punchingList[index] < actualPunching) {
+                    punchingList[index] = actualPunching;
+                    //punchingList[index] = punchingList[index];
                 }
-            }
+            }*/
         }
+        return playermaxpunch;
 
     }
 
