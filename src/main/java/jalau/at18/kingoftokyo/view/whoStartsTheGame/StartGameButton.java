@@ -10,7 +10,7 @@ public class StartGameButton extends JButton {
 
         super("Start Game");
         //addActionListener(e -> whoStartController.clickStartGameButton());
-        addActionListener(e -> whoStartRollDiceController.clickStartGameButton());
+        //addActionListener(e -> whoStartRollDiceController.clickStartGameButton());
         setEnabled(false);
         //setVisible(true);
     }

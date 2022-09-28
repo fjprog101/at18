@@ -7,13 +7,9 @@ import jalau.at18.kingoftokyo.model.DiceFaceSameCounter;
 import jalau.at18.kingoftokyo.model.DiceHand;
 import jalau.at18.kingoftokyo.model.Monster;
 import jalau.at18.kingoftokyo.model.Player;
-import jalau.at18.kingoftokyo.model.Turn;
-import jalau.at18.kingoftokyo.view.GameFrame;
+
 import jalau.at18.kingoftokyo.view.whoStartsTheGame.WhoStartFrame;
 
-import javax.swing.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class WhoStartController {
     private WhoStartFrame whoStartFrame;
@@ -46,17 +42,19 @@ public class WhoStartController {
     }
 
     //The button of PanelSouth
+
     public void clickStartGameButton() {
         whoStartFrame.setVisible(false);
+        /*
         Player newPlayer1 = new Player();
         newPlayer1.addMonster(Monster.ALIENOID);
         Player newPlayer2 = new Player();
         newPlayer2.addMonster(Monster.SPACE_PENGUIN);
         Player newPlayer3 = new Player();
         newPlayer3.addMonster(Monster.CYBER_KITTY);
-        Player[] playerList = {newPlayer2, newPlayer3, newPlayer1};
+        Player[] playerList = {newPlayer2, newPlayer3, newPlayer1};*/
         //GameFrameController gameFrameController = new GameFrameController(player1, player2);
-        new GameFrame(new Turn(playerList));
+        //new GameFrame(new Turn(playerList));
     }
 /*
     public int getCountPounching() {
@@ -89,7 +87,7 @@ public class WhoStartController {
                     "Warning",
                     JOptionPane.WARNING_MESSAGE);
         }*/
-    }
+}
     /*@Override
     public void actionPerformed(ActionEvent e) {
         //whostartframe.setVisible(false);

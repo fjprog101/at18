@@ -3,6 +3,8 @@ package jalau.at18.kingoftokyo.view;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import java.util.ArrayList;
+
 import javax.swing.JLabel;
 
 import org.junit.Test;
@@ -20,7 +22,11 @@ public class TurnPanelTest {
         player2.addMonster(Monster.CYBER_KITTY);
         Player player3 = new Player();
         player3.addMonster(Monster.SPACE_PENGUIN);
-        Player[] playerList = {player3, player1, player2};
+
+        ArrayList<Player> playerList = new ArrayList<Player>();
+        playerList.add(player3);
+        playerList.add(player1);
+        playerList.add(player2);
         Turn turn = new Turn(playerList);
         TurnPanel turnPanel = new TurnPanel(turn);
         assertEquals(2, turnPanel.getComponentCount());
@@ -39,7 +45,11 @@ public class TurnPanelTest {
         player2.addMonster(Monster.CYBER_KITTY);
         Player player3 = new Player();
         player3.addMonster(Monster.SPACE_PENGUIN);
-        Player[] playerList = {player3, player1, player2};
+
+        ArrayList<Player> playerList = new ArrayList<Player>();
+        playerList.add(player3);
+        playerList.add(player1);
+        playerList.add(player2);
         Turn turn = new Turn(playerList);
         TurnPanel turnPanel = new TurnPanel(turn);
         assertEquals("Turn of: Space Penguin", ((JLabel)turnPanel.getComponent(0)).getText());

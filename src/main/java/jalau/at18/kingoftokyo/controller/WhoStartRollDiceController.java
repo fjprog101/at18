@@ -7,6 +7,8 @@ import jalau.at18.kingoftokyo.model.DiceHand;
 import jalau.at18.kingoftokyo.model.DiceFaceSameCounter;
 import jalau.at18.kingoftokyo.model.DiceRoller;
 import jalau.at18.kingoftokyo.model.Player;
+import jalau.at18.kingoftokyo.model.Turn;
+import jalau.at18.kingoftokyo.view.GameFrame;
 import jalau.at18.kingoftokyo.view.rolldicesection.DiceFaceLabel;
 import jalau.at18.kingoftokyo.view.rolldicesection.RollDiceSectionUI;
 import jalau.at18.kingoftokyo.view.whoStartsTheGame.ShowResultsPanel;
@@ -33,10 +35,10 @@ public class WhoStartRollDiceController {
 
     private int playermaxpunch;
     //public WhoStartRollDiceController(RollDiceSectionUI rollDiceSectionUI, PlayerNameLabel playerNameLabel) {
-    public WhoStartRollDiceController(RollDiceSectionUI rollDiceSectionUI, ShowResultsPanel
+    public WhoStartRollDiceController(WhoStartFrame whoStartFrame, RollDiceSectionUI rollDiceSectionUI, ShowResultsPanel
         showResultsPanel, StartGameButton startGameButton) { //anadido
 
-
+        this.whoStartFrame = whoStartFrame;
         this.rollDiceSectionUI = rollDiceSectionUI;
         this.showResultsPanel = showResultsPanel;
         this.startGameButton = startGameButton;
@@ -78,6 +80,8 @@ public class WhoStartRollDiceController {
     public void clickStartGameButton() { //anadido
         whoStartFrame.setVisible(false);
         //GameFrameController gameFrameController = new GameFrameController(arrangePlayers);
+        Turn turn = new Turn(arrangePlayers);
+        new GameFrame(turn);
     }
 
     public void comparerPunchin(int getCountPounching) {
@@ -87,10 +91,16 @@ public class WhoStartRollDiceController {
             arrangePlayers.add(showResultsPanel.getArrayPlayer()[buttonCount - 1]);
 
         } else {
-            for (int index = 0; index < punchingList.size(); index++) {
+            //for (int index = 0; index < punchingList.size(); index++) {
+            for (int index = 0; index < buttonCount; index++) {
                 if (getCountPounching > punchingList.get(index)) {
                     punchingList.add(index, getCountPounching);
                     arrangePlayers.add(index, showResultsPanel.getArrayPlayer()[buttonCount - 1]);
+                    break;
+                } else if (index == punchingList.size() - 1) {
+                    punchingList.add(getCountPounching);
+                    arrangePlayers.add(showResultsPanel.getArrayPlayer()[buttonCount - 1]);
+                    break;
                 }
             }
         }
