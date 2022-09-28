@@ -56,7 +56,7 @@ public class WhoStartRollDiceController {
         showResultsPanel.setTextComponent(buttonCount, getCountPounching());
         comparerPunchin(getCountPounching());
         buttonCount++;
-        if (buttonCount == showResultsPanel.getArrayPlayer().length + 1) {
+        if (buttonCount == showResultsPanel.getArrayPlayer().size() + 1) {
             rollDiceSectionUI.getRollerDiceButton().setEnabled(false);
             startGameButton.setEnabled(true);
         }
@@ -70,17 +70,17 @@ public class WhoStartRollDiceController {
     public void comparerPunchin(int getCountPounching) {
         if (arrangePlayers.size() == 0) {
             punchingList.add(getCountPounching);
-            arrangePlayers.add(showResultsPanel.getArrayPlayer()[buttonCount - 1]);
+            arrangePlayers.add(showResultsPanel.getArrayPlayer().get(buttonCount - 1));
 
         } else {
             for (int index = 0; index < buttonCount; index++) {
                 if (getCountPounching > punchingList.get(index)) {
                     punchingList.add(index, getCountPounching);
-                    arrangePlayers.add(index, showResultsPanel.getArrayPlayer()[buttonCount - 1]);
+                    arrangePlayers.add(index, showResultsPanel.getArrayPlayer().get(buttonCount - 1));
                     break;
                 } else if (index == punchingList.size() - 1) {
                     punchingList.add(getCountPounching);
-                    arrangePlayers.add(showResultsPanel.getArrayPlayer()[buttonCount - 1]);
+                    arrangePlayers.add(showResultsPanel.getArrayPlayer().get(buttonCount - 1));
                     break;
                 }
             }

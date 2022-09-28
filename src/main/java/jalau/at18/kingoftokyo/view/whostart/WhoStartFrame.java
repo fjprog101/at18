@@ -4,6 +4,7 @@ import jalau.at18.kingoftokyo.controller.WhoStartRollDiceController;
 import jalau.at18.kingoftokyo.model.Player;
 
 import java.awt.BorderLayout;
+import java.util.ArrayList;
 
 import javax.swing.*;
 
@@ -16,7 +17,7 @@ public class WhoStartFrame extends JFrame {
 
     private WhoStartRollDiceController whoStartRollDiceController;
 
-    public WhoStartFrame(Player[] playerList) {
+    public WhoStartFrame(ArrayList<Player> playerList) {
 
         setResizable(false);
         setVisible(true);
@@ -25,7 +26,7 @@ public class WhoStartFrame extends JFrame {
         PanelSouth panelSouth = new PanelSouth(whoStartRollDiceController);
         add(panelSouth);
 
-        player1Panel = new ShowDicesPanel(playerList[0]);
+        player1Panel = new ShowDicesPanel();
         initialize();
 
         whoStartRollDiceController = new WhoStartRollDiceController(this, player1Panel.getRolldiceSeccionUI(),

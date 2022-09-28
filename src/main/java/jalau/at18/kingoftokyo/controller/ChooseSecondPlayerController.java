@@ -1,13 +1,8 @@
 package jalau.at18.kingoftokyo.controller;
 
-import jalau.at18.kingoftokyo.model.Monster;
-import jalau.at18.kingoftokyo.model.Player;
 //import jalau.at18.kingoftokyo.view.choosesecondplayer.ChooseSecondPlayerFrame;
 //import jalau.at18.kingoftokyo.view.whoStartsTheGame.WhoStartFrame;
-
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-/* 
+/*
 public class ChooseSecondPlayerController implements ActionListener {
     private ChooseSecondPlayerController chooseSecondPlayersFrame;
     //private WhoStartController whoStartController;

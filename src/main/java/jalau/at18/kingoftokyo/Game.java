@@ -24,5 +24,9 @@ public class Game {
     public void setPlayersList(ArrayList<Player> list) {
         this.playersList = list;
     }
+    public ArrayList<Player> getPlayersList() {
+       // this.playersList = list;
+        return playersList;
+    }
 
 }

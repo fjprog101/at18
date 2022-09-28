@@ -1,5 +1,7 @@
 package jalau.at18.kingoftokyo.view.whostart;
 
+import java.util.ArrayList;
+
 import javax.swing.*;
 import jalau.at18.kingoftokyo.model.Player;
 
@@ -9,8 +11,8 @@ public class ShowResultsPanel extends JPanel  {
     private static final int DEFAULT_LABEL_POSY = 50;
     private static final int DEFAULT_LABEL_WIDTH = 300;
     private static final int DEFAULT_LABEL_HEIGHT = 200;
-    private Player[] playerList;
-    public ShowResultsPanel(Player[] playerList) {
+    private ArrayList<Player>  playerList;
+    public ShowResultsPanel(ArrayList<Player>  playerList) {
         this.playerList = playerList;
         PlayerTitleLabel playerLabel = new PlayerTitleLabel();
         add(playerLabel);
@@ -19,8 +21,8 @@ public class ShowResultsPanel extends JPanel  {
     }
 
     public void initPlayerLabel() {
-        for (int index = 0; index < playerList.length; index++) {
-            PlayerNameLabel playerNameLabel = new PlayerNameLabel(playerList[index].getMonster().getName());
+        for (int index = 0; index < playerList.size(); index++) {
+            PlayerNameLabel playerNameLabel = new PlayerNameLabel(playerList.get(index).getMonster().getName());
             add(playerNameLabel);
         }
     }
@@ -31,7 +33,7 @@ public class ShowResultsPanel extends JPanel  {
     public PlayerNameLabel getPlayerNameLabel(int index) {
         return (PlayerNameLabel) getComponent(index);
     }
-    public Player[] getArrayPlayer() {
+    public ArrayList<Player>  getArrayPlayer() {
         return playerList;
     }
 }

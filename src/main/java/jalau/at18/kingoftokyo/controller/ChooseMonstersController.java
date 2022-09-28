@@ -7,6 +7,7 @@ import jalau.at18.kingoftokyo.view.choosemonsters.ChooseMonstersFrame;
 //import jalau.at18.kingoftokyo.view.choosemonsters.ChooseMonstersFrame;
 import jalau.at18.kingoftokyo.view.general.MonsterList;
 import jalau.at18.kingoftokyo.view.general.UsernameTextBox;
+import jalau.at18.kingoftokyo.view.whostart.WhoStartFrame;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -23,6 +24,12 @@ public class ChooseMonstersController implements ActionListener {
     private ArrayList<UsernameTextBox> playersUsernameList;
     private ArrayList<MonsterList> monstersList;
     private Game game;
+
+
+
+    //private Player player1;
+    //private Player player2;
+    private Player player3;
 
     public ChooseMonstersController(ChooseMonstersFrame mFrame, Game game, ArrayList<UsernameTextBox>  pList, ArrayList<MonsterList> mList) {
         this.monstersFrame = mFrame;
@@ -42,7 +49,22 @@ public class ChooseMonstersController implements ActionListener {
         monstersFrame.setVisible(false);
         //Should send two players
         //whoStartController = new WhoStartController(player1, player2);
-        whoStartController.showFrame();
+        //whoStartController.showFrame();
+
+
+
+        //player1 = new Player();
+        //player2 = new Player();
+        //player3 = new Player();
+
+        //Right Now the code is HardCode
+        //player1.addMonster(Monster.ALIENOID);
+        //player2.addMonster(Monster.SPACE_PENGUIN);
+        //player3.addMonster(Monster.CYBER_KITTY);
+        //Player[] playerList = {player1, player2, player3};
+        //chooseSecondPlayersFrame.setVisible(false);
+
+        new WhoStartFrame(game.getPlayersList());
     }
 
     private void makePlayersList() {
@@ -56,5 +78,6 @@ public class ChooseMonstersController implements ActionListener {
             System.out.println(list.get(index).getMonster());
         }
         game.setPlayersList(list);
+
     }
 }
