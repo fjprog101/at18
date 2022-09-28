@@ -1,6 +1,7 @@
 package jalau.at18.azul.controllerazul;
 
 import jalau.at18.azul.BagSender;
+import jalau.at18.azul.CenterTileBoard;
 import jalau.at18.azul.Tile;
 import jalau.at18.azul.TileColor;
 import jalau.at18.azul.view.CenterButtons;
@@ -22,13 +23,15 @@ public class TileController implements ActionListener {
     private PlayerPanel player1;
     private PlayerPanel player2;
     private CenterButtons center;
-
-    public TileController(FactoryPanel panel, BagSender newValues, PlayerPanel newPlayer1, PlayerPanel newPlayer2, CenterButtons newCenter) {
+    private CenterTileBoard firstplayer;
+    public TileController(FactoryPanel panel, BagSender newValues, PlayerPanel newPlayer1, PlayerPanel newPlayer2,
+        CenterButtons newCenter, CenterTileBoard centernew) {
         this.factoryPanel = panel;
         this.gameAzul = newValues;
         this.player1 = newPlayer1;
         this.player2 = newPlayer2;
         this.center = newCenter;
+        this.firstplayer = centernew;
     }
 
     @Override
@@ -51,5 +54,6 @@ public class TileController implements ActionListener {
                 gameAzul.removeTiles();
             }
         }
+        center.updateCenterButtons(firstplayer.addFirstPlayer());
     }
 }

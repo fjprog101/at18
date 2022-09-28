@@ -21,13 +21,13 @@ public class FactorySenderTest {
                 add(new Tile(TileColor.DARK));
             }
         };
-        centerBoard.add(new Tile(TileColor.FIRST_PLAYER));
+        centerBoard.add(new Tile(TileColor.FIRST));
         factory.addTilesFromBag(tilesFromBag);
         FactorySender factorySender = new FactorySender(factory, centerBoard);
         factorySender.sendTiles(new Tile(TileColor.RED));
         List<Tile> expectedTilesCenter = new ArrayList<>(){
             {
-                add(new Tile(TileColor.FIRST_PLAYER));
+                add(new Tile(TileColor.FIRST));
                 add(new Tile(TileColor.DARK));
                 add(new Tile(TileColor.DARK));
             }
@@ -48,7 +48,7 @@ public class FactorySenderTest {
         factorySender2.sendTiles(new Tile(TileColor.BLUE));
         List<Tile> expectedTilesCenter2 = new ArrayList<>(){
             {
-                add(new Tile(TileColor.FIRST_PLAYER));
+                add(new Tile(TileColor.FIRST));
                 add(new Tile(TileColor.DARK));
                 add(new Tile(TileColor.DARK));
                 add(new Tile(TileColor.YELLOW));
@@ -70,7 +70,7 @@ public class FactorySenderTest {
         factorySender3.sendTiles(new Tile(TileColor.YELLOW));
         List<Tile> expectedTilesCenter3 = new ArrayList<>(){
             {
-                add(new Tile(TileColor.FIRST_PLAYER));
+                add(new Tile(TileColor.FIRST));
                 add(new Tile(TileColor.DARK));
                 add(new Tile(TileColor.DARK));
                 add(new Tile(TileColor.YELLOW));

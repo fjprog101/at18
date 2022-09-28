@@ -20,4 +20,9 @@ public class CenterTileBoard extends ArrayList<Tile> {
         }
         return selectedTiles;
     }
+
+    public CenterTileBoard addFirstPlayer() {
+        this.add(new Tile(TileColor.FIRST));
+        return this;
+    }
 }
