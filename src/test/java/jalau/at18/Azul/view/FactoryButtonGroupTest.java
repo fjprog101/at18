@@ -17,7 +17,7 @@ public class FactoryButtonGroupTest {
     @Test
     public void shouldUpdateLabelAndColorOfButtons() {
 
-        FactoryButtonGroup myButtonGroup = new FactoryButtonGroup(new CenterButtons(null, null), new CenterTileBoard(), new StackButtonGroup(4));
+        FactoryButtonGroup myButtonGroup = new FactoryButtonGroup(new CenterButtons(null, null, null), new CenterTileBoard(), new StackButtonGroup(4));
         List<Tile> testTiles1 = new ArrayList<Tile>();
         testTiles1.add(new Tile(TileColor.BLUE));
         testTiles1.add(new Tile(TileColor.RED));

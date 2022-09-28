@@ -11,4 +11,18 @@ public class StackTileBoard extends ArrayList<Tile> {
         this.addAll(newStackTiles);
         return this;
     }
+
+    public boolean isItFirstPlayer(){
+        List<Tile> first = new ArrayList<>();
+        first.add(new Tile(TileColor.FIRST));
+        first.add(new Tile(TileColor.EMPTY));
+        first.add(new Tile(TileColor.EMPTY));
+        first.add(new Tile(TileColor.EMPTY));
+        first.add(new Tile(TileColor.EMPTY));
+        first.add(new Tile(TileColor.EMPTY));
+        if(this == (first)) {
+            return true;
+        }
+        return false;
+    }
 }

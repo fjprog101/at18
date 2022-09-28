@@ -10,7 +10,7 @@ public class CenterButtonsTest {
     @Test
     public void shouldUpdateLabelAndColorOfCenterButtons() {
 
-        CenterButtons centergroup = new CenterButtons(new CenterTileBoard(), new StackButtonGroup(4));
+        CenterButtons centergroup = new CenterButtons(new CenterTileBoard(), new StackButtonGroup(4), null);
         CenterTileBoard centertilesTest = new CenterTileBoard();
         centertilesTest.add(new Tile(TileColor.YELLOW));
         centertilesTest.add(new Tile(TileColor.RED));

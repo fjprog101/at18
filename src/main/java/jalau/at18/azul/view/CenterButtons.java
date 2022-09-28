@@ -11,8 +11,8 @@ public class CenterButtons extends JPanel {
 
     private CenterToStack moveCenterTiles;
 
-    public CenterButtons(CenterTileBoard center, StackButtonGroup stackButtonGroup) {
-        moveCenterTiles = new CenterToStack(center, stackButtonGroup, this);
+    public CenterButtons(CenterTileBoard center, StackButtonGroup stackButtonGroup, FloorButtons floorbuttons) {
+        moveCenterTiles = new CenterToStack(center, stackButtonGroup, this, floorbuttons);
         add(new CenterTileButton(moveCenterTiles));
         add(new CenterTileButton(moveCenterTiles));
         add(new CenterTileButton(moveCenterTiles));

@@ -22,7 +22,7 @@ public class CenterToStack implements ActionListener {
     private List<Tile> firsttile = new ArrayList<Tile>();
     
 
-    public CenterToStack(CenterTileBoard center, StackButtonGroup stack, CenterButtons centerbutton) {
+    public CenterToStack(CenterTileBoard center, StackButtonGroup stack, CenterButtons centerbutton, FloorButtons newFloor) {
         this.centerbutton = centerbutton;
         this.center = center;
         this.floorButtons = newFloor;

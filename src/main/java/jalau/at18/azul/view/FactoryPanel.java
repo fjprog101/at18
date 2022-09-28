@@ -24,6 +24,7 @@ public class FactoryPanel extends JPanel {
     private StackButtonGroup stackButtonGroup;
     private PlayerPanel player1;
     private PlayerPanel player2;
+    private FloorButtons floorbutton;
 
     public FactoryPanel(StackButtonGroup newStack, PlayerPanel newPlayer1, PlayerPanel newPlayer2) {
         stackButtonGroup = newStack;
@@ -32,7 +33,7 @@ public class FactoryPanel extends JPanel {
         centerBoard = new CenterTileBoard();
         BagSender bag = new BagSender();
         bag.saveBag();
-        centerTileButtonGroup = new CenterButtons(centerBoard, stackButtonGroup);
+        centerTileButtonGroup = new CenterButtons(centerBoard, stackButtonGroup, floorbutton);
         setLayout(new GridLayout(ROWS, COLS, HORIZONTAL_GAP, VERTIXCAL_GAP));
         setBounds(X_INITIAL_POSITION, Y_INITIAL_POSITION, WIDTH, HEIGHT);
         add(new BagButton(new TileController(this, bag, player1, player2, centerTileButtonGroup)));
