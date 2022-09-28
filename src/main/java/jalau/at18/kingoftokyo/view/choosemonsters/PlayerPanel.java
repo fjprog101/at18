@@ -15,11 +15,16 @@ public class PlayerPanel extends JPanel {
     private static final String NAME = "Serif";
     private static final int SIZE = 22;
 
+    private UsernameTextBox playerUsername;
+    private MonsterList monsterList;
+
     public PlayerPanel() {
         initialize();
         SpringLayout springLayout = new SpringLayout();
-        springLayout.putConstraint(SpringLayout.WEST, add(new UsernameLabel()), 0, SpringLayout.EAST, add(new UsernameTextBox()));
-        springLayout.putConstraint(SpringLayout.NORTH, add(new MonsterLabel()), 0, SpringLayout.NORTH, add(new MonsterList()));
+        this.playerUsername = new UsernameTextBox();
+        this.monsterList = new MonsterList();
+        springLayout.putConstraint(SpringLayout.WEST, add(new UsernameLabel()), 0, SpringLayout.EAST, add(playerUsername));
+        springLayout.putConstraint(SpringLayout.NORTH, add(new MonsterLabel()), 0, SpringLayout.NORTH, add(monsterList));
     }
 
     private void initialize() {
@@ -34,4 +39,13 @@ public class PlayerPanel extends JPanel {
     public void setPanelColor(Color color) {
         setBackground(color);
     }
+
+    public UsernameTextBox getPlayerUsername() {
+        return playerUsername;
+    }
+
+    public MonsterList getMonsterList() {
+        return monsterList;
+    }
+
 }

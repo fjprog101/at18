@@ -14,7 +14,7 @@ public class ChooseMonstersFrame extends JFrame {
 
     public ChooseMonstersFrame(Game game) {
         HeaderPanel headerPanel = new HeaderPanel();
-        CenterPanel centerPanel = new CenterPanel(this);
+        CenterPanel centerPanel = new CenterPanel(this, game);
         FooterPanel footerPanel = new FooterPanel();
         initialize();
         add(headerPanel, BorderLayout.NORTH);
