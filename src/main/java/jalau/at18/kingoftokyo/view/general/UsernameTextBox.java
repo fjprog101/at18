@@ -8,7 +8,7 @@ public class UsernameTextBox extends JTextField {
     private static final int FONT_SIZE = 18;
     private static final int TEN = 10;
     public UsernameTextBox() {
-        super(10);
+        super(TEN);
         setFont(new Font(FONT_NAME, Font.BOLD, FONT_SIZE));
     }
 }
