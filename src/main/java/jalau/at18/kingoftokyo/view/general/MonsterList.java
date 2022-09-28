@@ -1,6 +1,7 @@
 package jalau.at18.kingoftokyo.view.general;
 
-import jalau.at18.kingoftokyo.Monster;
+
+import jalau.at18.kingoftokyo.model.Monster;
 
 import javax.swing.*;
 import java.awt.*;

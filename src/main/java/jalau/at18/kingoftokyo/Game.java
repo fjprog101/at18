@@ -1,5 +1,7 @@
 package jalau.at18.kingoftokyo;
 
+import jalau.at18.kingoftokyo.model.Player;
+
 import java.util.ArrayList;
 
 public class Game {

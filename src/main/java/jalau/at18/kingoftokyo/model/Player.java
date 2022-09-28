@@ -4,6 +4,7 @@ import jalau.at18.kingoftokyo.view.playercards.PlayerCard;
 
 public class Player {
     private static final int TEN = 10;
+    private String userName;
     private Monster monster;
     private int energy;
     private int lifePoints;
@@ -46,5 +47,17 @@ public class Player {
     }
     public void addSubscriber(PlayerCard newSubscriber) {
         this.subscriber = newSubscriber;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String name) {
+        this.userName = name;
+    }
+
+    public void setMonster(Monster monsterObj) {
+        this.monster = monsterObj;
     }
 }
