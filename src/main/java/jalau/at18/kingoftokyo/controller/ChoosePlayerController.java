@@ -1,7 +1,7 @@
 package jalau.at18.kingoftokyo.controller;
 
 import jalau.at18.kingoftokyo.Game;
-import jalau.at18.kingoftokyo.view.choosefirstplayer.ChooseFirstPlayerFrame;
+import jalau.at18.kingoftokyo.view.choosemonsters.ChooseMonstersFrame;
 import jalau.at18.kingoftokyo.view.chooseplayer.ChoosePlayersFrame;
 import jalau.at18.kingoftokyo.view.chooseplayer.PlayersNumbersSpinner;
 
@@ -23,6 +23,6 @@ public class ChoosePlayerController implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         game.setPlayers((Integer) spinner.getValue());
         choosePlayersFrame.setVisible(false);
-        new ChooseFirstPlayerFrame(game);
+        new ChooseMonstersFrame(game);
     }
 }

@@ -1,6 +1,5 @@
 package jalau.at18.kingoftokyo.controller;
 
-import jalau.at18.kingoftokyo.*;
 import jalau.at18.kingoftokyo.model.Dice;
 import jalau.at18.kingoftokyo.model.DiceFace;
 import jalau.at18.kingoftokyo.model.DiceFaceIdentifier;
