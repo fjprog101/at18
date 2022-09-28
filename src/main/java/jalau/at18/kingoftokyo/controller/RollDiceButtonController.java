@@ -3,9 +3,9 @@ import jalau.at18.kingoftokyo.model.DiceFace;
 import jalau.at18.kingoftokyo.model.DiceRoller;
 import jalau.at18.kingoftokyo.view.rolldicesection.DiceFaceLabel;
 import jalau.at18.kingoftokyo.view.rolldicesection.RollDiceSectionUI;
-
 import java.util.ArrayList;
 import java.util.List;
+
 public class RollDiceButtonController {
     private static final int QUANTITY_DICES = 6;
     private RollDiceSectionUI rollDiceSectionUI;

@@ -1,7 +1,7 @@
 package jalau.at18.kingoftokyo.view.whoStartsTheGame;
 import javax.swing.*;
 import java.awt.*;
-public class PlayerTitleLabel extends JLabel { //title
+public class PlayerTitleLabel extends JLabel {
     private static final int DEFAULT_LABEL_POSX = 650;
     private static final int DEFAULT_LABEL_POSY = 50;
     private static final int DEFAULT_LABEL_WIDTH = 350;

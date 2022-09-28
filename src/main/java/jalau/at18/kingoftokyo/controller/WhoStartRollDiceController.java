@@ -14,7 +14,6 @@ import jalau.at18.kingoftokyo.view.rolldicesection.RollDiceSectionUI;
 import jalau.at18.kingoftokyo.view.whoStartsTheGame.ShowResultsPanel;
 import jalau.at18.kingoftokyo.view.whoStartsTheGame.StartGameButton;
 import jalau.at18.kingoftokyo.view.whoStartsTheGame.WhoStartFrame;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,27 +22,21 @@ public class WhoStartRollDiceController {
     private RollDiceSectionUI rollDiceSectionUI;
 
     private List<DiceFace> listRandomDiceFace;
-
-    //private  PlayerNameLabel playerNameLabel;
     private ShowResultsPanel  showResultsPanel;
     private int buttonCount;
-    //private int[] punchingList;
     private ArrayList<Integer> punchingList;
     private ArrayList<Player> arrangePlayers;
-    private WhoStartFrame whoStartFrame; //anadido
-    private StartGameButton startGameButton; //anadido
+    private WhoStartFrame whoStartFrame;
+    private StartGameButton startGameButton;
 
-    private int playermaxpunch;
-    //public WhoStartRollDiceController(RollDiceSectionUI rollDiceSectionUI, PlayerNameLabel playerNameLabel) {
     public WhoStartRollDiceController(WhoStartFrame whoStartFrame, RollDiceSectionUI rollDiceSectionUI, ShowResultsPanel
-        showResultsPanel, StartGameButton startGameButton) { //anadido
+        showResultsPanel, StartGameButton startGameButton) {
 
         this.whoStartFrame = whoStartFrame;
         this.rollDiceSectionUI = rollDiceSectionUI;
         this.showResultsPanel = showResultsPanel;
         this.startGameButton = startGameButton;
         buttonCount = 1;
-        playermaxpunch = 0;
         punchingList = new ArrayList<Integer>();
         arrangePlayers = new ArrayList<Player>();
 
@@ -60,38 +53,26 @@ public class WhoStartRollDiceController {
             diceFaceLabel.paintDiceFace(listRandomDiceFace.get(count));
             count++;
         }
-        //playerNameLabel.setPlayerName(getCountPounching());
-
         showResultsPanel.setTextComponent(buttonCount, getCountPounching());
-        //punchingList[buttonCount - 1] = getCountPounching();
-
-        //comparerPunching(getCountPounching());
-        //comparerPunching(punchingList);  //anadido
-
-        comparerPunchin(getCountPounching()); //28
-
-
+        comparerPunchin(getCountPounching());
         buttonCount++;
         if (buttonCount == showResultsPanel.getArrayPlayer().length + 1) {
             rollDiceSectionUI.getRollerDiceButton().setEnabled(false);
-            startGameButton.setEnabled(true); // no cambia de estado
+            startGameButton.setEnabled(true);
         }
     }
-    public void clickStartGameButton() { //anadido
+    public void clickStartGameButton() {
         whoStartFrame.setVisible(false);
-        //GameFrameController gameFrameController = new GameFrameController(arrangePlayers);
         Turn turn = new Turn(arrangePlayers);
         new GameFrame(turn);
     }
 
     public void comparerPunchin(int getCountPounching) {
-        //arrangePlayers
         if (arrangePlayers.size() == 0) {
             punchingList.add(getCountPounching);
             arrangePlayers.add(showResultsPanel.getArrayPlayer()[buttonCount - 1]);
 
         } else {
-            //for (int index = 0; index < punchingList.size(); index++) {
             for (int index = 0; index < buttonCount; index++) {
                 if (getCountPounching > punchingList.get(index)) {
                     punchingList.add(index, getCountPounching);
@@ -104,7 +85,6 @@ public class WhoStartRollDiceController {
                 }
             }
         }
-
     }
 
     public List<DiceFace> getListRandomDiceFace() {
@@ -112,7 +92,6 @@ public class WhoStartRollDiceController {
     }
 
     public int getCountPounching() {
-        //List<DiceFace> diceFacesPlayer1 = whoStartFrame.getPlayer1Panel().getWhoStartRollDiceController().getListRandomDiceFace();
         List<Dice> dicePlayer1 = new ArrayList<>();
         for (DiceFace diceFace : listRandomDiceFace) {
             dicePlayer1.add(new Dice(diceFace));
@@ -120,9 +99,7 @@ public class WhoStartRollDiceController {
         DiceHand diceHandPlayer1 = new DiceHand(dicePlayer1);
         DiceFaceSameCounter diceFaceSameCounterPlayer1 = new DiceFaceSameCounter(diceHandPlayer1);
         DiceFaceIdentifier diceFaceIdentifier1 = diceFaceSameCounterPlayer1.diceFaceCounter();
-
         int countPounchingPlayer1 = diceFaceIdentifier1.getCountDiceFace(DiceFace.PUNCHING);
-
         return countPounchingPlayer1;
     }
 

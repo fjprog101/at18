@@ -3,10 +3,8 @@ package jalau.at18.kingoftokyo.view;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-
 import jalau.at18.kingoftokyo.controller.EndTurnButtonController;
 import jalau.at18.kingoftokyo.model.Turn;
-
 import java.awt.BorderLayout;
 import java.awt.Font;
 
