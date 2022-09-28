@@ -18,4 +18,5 @@ public class PlaycardTest {
         assertEquals(1, playcard.getMilitarySection().getTemporalShield());
         assertEquals(3, playcard.getBluePoints().getPoints());
     }
+    
 }

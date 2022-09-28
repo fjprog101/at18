@@ -10,6 +10,7 @@ public enum Colors {
     private int numberIdentifier;
     private String color;
     Colors(int numberIdentifier, String color) {
+        this.numberIdentifier = numberIdentifier;
         this.color = color;
     }
 

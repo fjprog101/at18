@@ -1,9 +1,6 @@
 package jalau.at18.architects.model.cards;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-
 import org.junit.Test;
-
 public class GenerateARandomBluePointForBluePointsTest {
     @Test
     public void shouldHaveBluePointsWithCatIncludedOrNot(){
