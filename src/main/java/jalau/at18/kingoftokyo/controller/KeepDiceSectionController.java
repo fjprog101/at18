@@ -40,10 +40,15 @@ public class KeepDiceSectionController {
 
     public void calculateDiceResult() {
         diceFaceTurnResult = diceFaceKeeperResult.resultDiceFaceKeeper();
-        String result = String.valueOf(diceFaceTurnResult.getScorePoint())
-                + String.valueOf(diceFaceTurnResult.getEnergyPoint())
-                + String.valueOf(diceFaceTurnResult.getHealingPoint())
-                + String.valueOf(diceFaceTurnResult.getPunchingPoint());
+        int healing = diceFaceTurnResult.getHealingPoint();
+        int damage = diceFaceTurnResult.getPunchingPoint();
+        int score = diceFaceTurnResult.getScorePoint();
+        int energy = diceFaceTurnResult.getEnergyPoint();
+        int[] effect = {healing, damage, score, energy};
+        keepDiceSectionUI.sendResults(effect); //For chenge player atributes
+
+        String result = String.valueOf(healing) + String.valueOf(damage)
+                + String.valueOf(score) + String.valueOf(energy);
         keepDiceSectionUI.getDisplayResult().setText(result);
     }
 }
