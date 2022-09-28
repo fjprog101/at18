@@ -35,11 +35,11 @@ public class Player {
         return userName;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUserName(String name) {
+        this.userName = name;
     }
 
-    public void setMonster(Monster monster) {
-        this.monster = monster;
+    public void setMonster(Monster monsterObj) {
+        this.monster = monsterObj;
     }
 }

@@ -19,8 +19,8 @@ public class Game {
         return players;
     }
 
-    public void setPlayersList(ArrayList<Player> playersList) {
-        this.playersList = playersList;
+    public void setPlayersList(ArrayList<Player> list) {
+        this.playersList = list;
     }
 
 }
