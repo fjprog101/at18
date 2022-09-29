@@ -3,6 +3,8 @@ package jalau.at18.architects.view;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
+import jalau.at18.architects.model.RedCardForDeck;
+
 import java.awt.*;
 
 public class BarConflict extends JPanel {
@@ -16,6 +18,14 @@ public class BarConflict extends JPanel {
     public static final int COLOR3 = 230;
     private static final int FOUR = 4;
     private static final int SIX = 6;
+    private JLabel peacetoken = new ConflictTokenLabel();
+    private JLabel peacetoken2 = new ConflictTokenLabel();
+    private JLabel peacetoken3 = new ConflictTokenLabel();
+    private JLabel peacetoken4 = new ConflictTokenLabel();
+    private JLabel wartoken = new ConflictTokenLabelWar();
+    private JLabel wartoken2 = new ConflictTokenLabelWar();
+    private JLabel wartoken3 = new ConflictTokenLabelWar();
+    private JLabel wartoken4 = new ConflictTokenLabelWar();
 
     public BarConflict(int quantityOfPlayers) {
         initComponets();
@@ -30,10 +40,6 @@ public class BarConflict extends JPanel {
     private void loadTokens(int quantityOfPlayers) {
         setBorder(new EmptyBorder(SPACE_SIZE, 0, SPACE_SIZE, SPACE_SIZE));
         setBounds(POS_X, POS_Y, WIDTH, HEIGHT);
-        JLabel peacetoken = new ConflictTokenLabel();
-        JLabel peacetoken2 = new ConflictTokenLabel();
-        JLabel peacetoken3 = new ConflictTokenLabel();
-        JLabel peacetoken4 = new ConflictTokenLabel();
         switch (quantityOfPlayers) {
             case FOUR:
                 add(peacetoken);
@@ -46,5 +52,22 @@ public class BarConflict extends JPanel {
                 add(peacetoken3);
         }
         setVisible(true);
+    }
+
+    public void updateView(RedCardForDeck redCardForDeck) {
+        redCardForDeck.getCard();
+        if (redCardForDeck.updateWarToken() == 1) {
+            remove(peacetoken);
+            add(wartoken);
+            setVisible(true);
+        } else if (redCardForDeck.updateWarToken() == 2) {
+            remove(peacetoken);
+            remove(peacetoken2);
+            add(wartoken);
+            add(wartoken2);
+            setVisible(true);
+        } else {
+            setVisible(true);
+        }
     }
 }
