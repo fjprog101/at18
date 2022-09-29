@@ -3,18 +3,17 @@ package jalau.at18.war.model;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-import java.util.List;
 import org.junit.Test;
 
 public class GameTest {
 
     @Test
-    public void shouldRollADice() {
+    public void gameShouldAddPlayers() {
         Game game = new Game();
-        List<Die> diceRolled = game.rollDice();
-        assertEquals(3, diceRolled.size());
-        assertNotNull(diceRolled.get(0).getFace());
-        assertNotNull(diceRolled.get(1).getFace());
-        assertNotNull(diceRolled.get(2).getFace());
+        game.addPlayer(new Player(new DieRoller()));
+        game.addPlayer(new Player(new DieRoller()));
+        game.addPlayer(new Player(new DieRoller()));
+        assertNotNull(game.getPlayers());
+        assertEquals(3, game.getPlayers().size());
     }
 }

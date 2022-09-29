@@ -1,45 +1,38 @@
 package jalau.at18.war.view;
 
+import java.awt.BorderLayout;
+import java.awt.Color;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.border.LineBorder;
 
-import jalau.at18.war.controller.WarFrameController;
 import jalau.at18.war.model.Game;
 
 public class WarFrame extends JFrame {
 
-    private static final int DEFAULT_POS = 100;
-    private static final int DEFAULT_SIZE = 300;
-
-    // UI components
-    private RollerButton rollerButton;
-    private DiceLabelGroup diceLabelGroup;
-
-    // Controller
-    private WarFrameController gameController;
-
     public WarFrame() {
         // Initialize controller with reference to this ui frame
         // so that controller can update the frame components
-        gameController = new WarFrameController(this, new Game());
-        initialize();
+        Game theGame = new Game();
+        initialize(theGame);
     }
 
-    public DiceLabelGroup getDiceLabelGroup() {
-        return this.diceLabelGroup;
-    }
+    private void initialize(Game game) {
+        // Add 4 players
+        add(new PlayerPanel(game), BorderLayout.PAGE_START);
+        add(new PlayerPanel(game), BorderLayout.LINE_END);
+        add(new PlayerPanel(game), BorderLayout.PAGE_END);
+        add(new PlayerPanel(game), BorderLayout.LINE_START);
 
-    private void initialize() {
-        // Add components
-        rollerButton = new RollerButton(gameController);
-        diceLabelGroup = new DiceLabelGroup();
-
-        add(rollerButton);
-        add(diceLabelGroup);
+        // Add world map
+        JLabel worldMap = new JLabel(new ImageIcon("src/main/resources/war/world-map.png"));
+        worldMap.setBorder(new LineBorder(Color.BLUE));
+        add(worldMap, BorderLayout.CENTER);
 
         // Configure frame
-        setBounds(DEFAULT_POS, DEFAULT_POS, DEFAULT_SIZE, DEFAULT_SIZE);
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLayout(null);
         setVisible(true);
     }
 }
