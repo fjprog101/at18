@@ -7,9 +7,9 @@ import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
 public class PlayerCardName extends JLabel {
-    private static final int POSITION_X = 80;
-    private static final int POSITION_Y = 0;
-    private static final int WIDTH = 140;
+    private static final int POSITION_X = 0;
+    private static final int POSITION_Y = 5;
+    private static final int WIDTH = 300;
     private static final int HEIGHT = 20;
     private static final int FONT_SIZE = 17;
     private static final int FONT_STYLE = 1;
@@ -22,7 +22,7 @@ public class PlayerCardName extends JLabel {
         setVisible(true);
     }
 
-    public void setMonsterName(String name) {
-        setText(name);
+    public void setMonsterName(String userName, String monster) {
+        setText(userName + " - " + monster);
     }
 }

@@ -30,7 +30,7 @@ public class PlayerCard extends JPanel implements Observer {
     }
     public void setPlayer(Player newPlayer) {
         this.player = newPlayer;
-        ((PlayerCardName) getComponent(0)).setMonsterName(player.getMonster().getName());
+        ((PlayerCardName) getComponent(0)).setMonsterName(player.getUserName(), player.getMonster().getName());
         ((PlayerCardMonsterIcon) getComponent(ICON_INDEX)).setMonsterImage(player.getMonster().getIconPath());
     }
     @Override
