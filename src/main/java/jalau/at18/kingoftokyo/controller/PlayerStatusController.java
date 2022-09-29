@@ -6,6 +6,7 @@ import jalau.at18.kingoftokyo.model.Turn;
 public class PlayerStatusController {
     private static final int MAX_LIFE = 10;
     private static final int MIN_LIFE = 0;
+    private static final int MAX_VICOTRY = 20;
     private static final int HEAL = 0;
     private static final int DAMAGE = 1;
     private static final int SCORE = 2;
@@ -22,10 +23,9 @@ public class PlayerStatusController {
     }
 
     public void setPlayerWithTurn(int healing, int victoryPoints, int energy) {
-        int newVictoryPoints = turn.getPlayerWithTheTurn().getVictoryPoints() + victoryPoints;
         int newEnergy = turn.getPlayerWithTheTurn().getEnergy() + energy;
         turn.getPlayerWithTheTurn().setLifePoints(changeLifePoints(turn.getPlayerWithTheTurn(), healing, 1));
-        turn.getPlayerWithTheTurn().setVictoryPoints(newVictoryPoints);
+        turn.getPlayerWithTheTurn().setVictoryPoints(changeVictoryPoints(victoryPoints));
         turn.getPlayerWithTheTurn().setEnergy(newEnergy);
     }
 
@@ -44,6 +44,15 @@ public class PlayerStatusController {
             healing--;
         }
         return newLifePoints == MAX_LIFE + 1 ? newLifePoints - 1 : newLifePoints;
+    }
+
+    public int changeVictoryPoints(int victoryPoints) {
+        int newVictoryPoints = turn.getPlayerWithTheTurn().getVictoryPoints();
+        while (newVictoryPoints < MAX_VICOTRY  && victoryPoints > 0) {
+            newVictoryPoints++;
+            victoryPoints--;
+        }
+        return newVictoryPoints;
     }
 
     public Turn getTurn() {
