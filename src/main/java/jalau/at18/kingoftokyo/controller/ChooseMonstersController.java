@@ -12,25 +12,23 @@ public class ChooseMonstersController implements ActionListener {
     private ChooseMonstersFrame monstersFrame;
     private ArrayList<UsernameTextBox> playersUsernameList;
     private ArrayList<MonsterList> monstersList;
-    private Game game;
 
-    public ChooseMonstersController(ChooseMonstersFrame mFrame, Game game, ArrayList<UsernameTextBox>  pList, ArrayList<MonsterList> mList) {
+    public ChooseMonstersController(ChooseMonstersFrame mFrame, ArrayList<UsernameTextBox>  pList, ArrayList<MonsterList> mList) {
         this.monstersFrame = mFrame;
         this.playersUsernameList = pList;
         this.monstersList = mList;
-        this.game = game;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         makePlayersList();
         monstersFrame.setVisible(false);
-        new WhoStartFrame(game.getPlayersList());
+        new WhoStartFrame(Game.getInstance().getPlayersList());
     }
 
     private void makePlayersList() {
         ArrayList<Player> list = new ArrayList<>();
-        for (int index = 0; index < game.getPlayers(); index++) {
+        for (int index = 0; index < Game.getInstance().getPlayers(); index++) {
             Player player = new Player();
             player.setUserName(playersUsernameList.get(index).getText());
             player.setMonster(monstersList.get(index).getMonster());
@@ -38,6 +36,6 @@ public class ChooseMonstersController implements ActionListener {
             System.out.println(list.get(index).getUserName());
             System.out.println(list.get(index).getMonster());
         }
-        game.setPlayersList(list);
+        Game.getInstance().setPlayersList(list);
     }
 }

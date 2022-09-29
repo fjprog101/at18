@@ -20,7 +20,7 @@ public class FieldSetPanel extends JPanel {
     private PlayerPanel playerTwo;
     private PlayerPanel playerThree;
     private PlayerPanel playerFour;
-    public FieldSetPanel(Game game) {
+    public FieldSetPanel() {
         initialize();
         playerOne = new PlayerPanel();
         playerOne.setPanelBorder(PLAYER_ONE);
@@ -34,16 +34,16 @@ public class FieldSetPanel extends JPanel {
         playerFour = new PlayerPanel();
         playerFour.setPanelBorder(PLAYER_FOUR);
         playerFour.setPanelColor(Color.PINK);
-        if (game.getPlayers() >= 1) {
+        if (Game.getInstance().getPlayers() >= 1) {
             add(playerOne);
         }
-        if (game.getPlayers() >= 2) {
+        if (Game.getInstance().getPlayers() >= 2) {
             add(playerTwo);
         }
-        if (game.getPlayers() >= THREE) {
+        if (Game.getInstance().getPlayers() >= THREE) {
             add(playerThree);
         }
-        if (game.getPlayers() >= FOUR) {
+        if (Game.getInstance().getPlayers() >= FOUR) {
             add(playerFour);
         }
     }

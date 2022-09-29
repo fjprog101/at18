@@ -4,10 +4,11 @@ import jalau.at18.kingoftokyo.model.Player;
 import java.util.ArrayList;
 
 public class Game {
+    private static Game instance;
     private int players;
     private ArrayList<Player> playersList;
 
-    public Game() {
+    private Game() {
         this.players = -1;
         this.playersList = new ArrayList<>();
     }
@@ -26,6 +27,13 @@ public class Game {
 
     public ArrayList<Player> getPlayersList() {
         return playersList;
+    }
+
+    public  static Game getInstance() {
+        if (instance == null) {
+            instance = new Game();
+        }
+        return instance;
     }
 
 }
