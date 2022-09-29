@@ -13,6 +13,8 @@ public class FieldSetPanel extends JPanel {
     private static final String PLAYER_TWO = "Player 2";
     private static final String PLAYER_THREE = "Player 3";
     private static final String PLAYER_FOUR = "Player 4";
+    private static final int THREE = 3;
+    private static final int FOUR = 4;
 
     private PlayerPanel playerOne;
     private PlayerPanel playerTwo;
@@ -38,10 +40,10 @@ public class FieldSetPanel extends JPanel {
         if (game.getPlayers() >= 2) {
             add(playerTwo);
         }
-        if (game.getPlayers() >= 3) {
+        if (game.getPlayers() >= THREE) {
             add(playerThree);
         }
-        if (game.getPlayers() >= 4) {
+        if (game.getPlayers() >= FOUR) {
             add(playerFour);
         }
     }
