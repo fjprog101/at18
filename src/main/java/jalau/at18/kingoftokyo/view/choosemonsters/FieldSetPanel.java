@@ -1,5 +1,6 @@
 package jalau.at18.kingoftokyo.view.choosemonsters;
 
+import jalau.at18.kingoftokyo.Game;
 import jalau.at18.kingoftokyo.view.general.MonsterList;
 import jalau.at18.kingoftokyo.view.general.UsernameTextBox;
 
@@ -17,7 +18,7 @@ public class FieldSetPanel extends JPanel {
     private PlayerPanel playerTwo;
     private PlayerPanel playerThree;
     private PlayerPanel playerFour;
-    public FieldSetPanel() {
+    public FieldSetPanel(Game game) {
         initialize();
         playerOne = new PlayerPanel();
         playerOne.setPanelBorder(PLAYER_ONE);
@@ -31,10 +32,18 @@ public class FieldSetPanel extends JPanel {
         playerFour = new PlayerPanel();
         playerFour.setPanelBorder(PLAYER_FOUR);
         playerFour.setPanelColor(Color.PINK);
-        add(playerOne);
-        add(playerTwo);
-        add(playerThree);
-        add(playerFour);
+        if (game.getPlayers() >= 1) {
+            add(playerOne);
+        }
+        if (game.getPlayers() >= 2) {
+            add(playerTwo);
+        }
+        if (game.getPlayers() >= 3) {
+            add(playerThree);
+        }
+        if (game.getPlayers() >= 4) {
+            add(playerFour);
+        }
     }
 
     private void initialize() {

@@ -11,7 +11,7 @@ public class CenterPanel extends JPanel {
     private static final int DEFAULT_HEIGHT = 100;
 
     public CenterPanel(ChooseMonstersFrame frame, Game game) {
-        FieldSetPanel fieldSetPanel = new FieldSetPanel();
+        FieldSetPanel fieldSetPanel = new FieldSetPanel(game);
         ButtonsPanel buttonsPanel = new ButtonsPanel(frame, game, fieldSetPanel.getUserList(), fieldSetPanel.getMonsterList());
         initialize();
         add(fieldSetPanel, BorderLayout.CENTER);
