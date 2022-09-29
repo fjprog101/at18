@@ -41,37 +41,27 @@ public class StackSenderController implements ActionListener {
                 count = pyramidBoard.sendEmptyTiles(index);
                 for (int jindex = 0; jindex < stackButtonGroup.getStackColorList().size(); jindex++) {
                     if (pyramidBoard.countEmptyPyramidTiles(index) > 0) {
-                        if (pyramidBoard.getTileButton()[index][counter].getTileValue() == emptyTile.getColor()
-                                .getName()) {
+                        if ((pyramidBoard.getTileButton()[index][counter].getTileValue() == emptyTile.getColor()
+                                .getName())
+                                || (pyramidBoard.getTileButton()[index][counter].getTileValue() == stackButtonGroup
+                                        .getStackColorList().get(0).getColor().getName())) {
                             pyramidBoard.updateTiles(index, count, stackButtonGroup.getStackColorList().get(jindex));
                             count--;
                             pyramidplay = true;
                         } else {
-                            if (pyramidBoard.getTileButton()[index][counter].getTileValue() == stackButtonGroup
-                                    .getStackColorList().get(0).getColor().getName()) {
-                                pyramidBoard.updateTiles(index, count,
-                                        stackButtonGroup.getStackColorList().get(jindex));
-                                count--;
-                                pyramidplay = true;
-                            } else {
-                                colorPyramidTilesList.clear();
-                            }
+                            colorPyramidTilesList.clear();
                         }
                     } else {
-                        if (pyramidplay) {
-                            colorPyramidTilesList.add(stackButtonGroup.getStackColorList().get(jindex));
-
-                        }
-                        // pyramidplay = true;
+                        colorPyramidTilesList.add(stackButtonGroup.getStackColorList().get(jindex));
                     }
                 }
             }
-        }
-        floorButtons.updateButtonGroup(colorPyramidTilesList);
-        count = counter;
-        colorPyramidTilesList.clear();
-        if (pyramidplay) {
-            stackButtonGroup.clearStackList();
+            floorButtons.updateButtonGroup(colorPyramidTilesList);
+            count = counter;
+            colorPyramidTilesList.clear();
+            if (pyramidplay) {
+                stackButtonGroup.clearStackList();
+            }
         }
     }
 }
