@@ -22,7 +22,7 @@ public class RollDiceSectionUI extends JPanel {
     public void initializeDice() {
         JPanel jPanel = new JPanel();
         add(jPanel);
-        //first time to create the 6 labels to DiceFace
+        // first time to create the 6 labels to DiceFace
         for (int index = 1; index <= QUANTITY_DICES; index++) {
             DiceFaceLabel diceFaceLabel = new DiceFaceLabel();
             jPanel.add(diceFaceLabel);
