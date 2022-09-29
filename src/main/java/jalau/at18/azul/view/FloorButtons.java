@@ -41,4 +41,14 @@ public class FloorButtons extends JPanel {
         }
         return counter.pointsDeducted();
     }
+
+    public void clearFloorTiles() {
+        for (int index = 0; index < getComponentCount(); index++) {
+            TilesButton buttonSelected = (TilesButton) getComponent(index);
+            Tile empty = new Tile(TileColor.EMPTY);
+            buttonSelected.updateLabel(empty.getColor().getName());
+            buttonSelected.updateColor(empty.getColor().getColorPath());
+        }
+    }
+    
 }
