@@ -7,7 +7,7 @@ import jalau.at18.architects.controller.BluePointsViewController;
 import java.awt.Font;
 import java.awt.Color;
 
-public class BluePointsNumber extends JLabel{
+public class BluePointsNumber extends JLabel {
     private static final int POSITION_X = 15;
     private static final int POSITION_Y = 0;
     private static final int WIDTH = 50;
