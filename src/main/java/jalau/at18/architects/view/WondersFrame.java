@@ -1,6 +1,8 @@
 package jalau.at18.architects.view;
 import static jalau.at18.architects.view.Constants.WonderFrame.*;
 import javax.swing.JFrame;
+import javax.swing.WindowConstants;
+
 import jalau.at18.architects.controller.Controller;
 public class WondersFrame extends JFrame {
     private StartButton startButton;
@@ -36,5 +38,9 @@ public class WondersFrame extends JFrame {
     }
     public void addNewComponents() {
         add(new WonderStructure());
+    }
+    public void closeWindow() {
+        this.dispose();
+        new BoardFrame(this.getChoice().getSelectedItem().toString());
     }
 }
