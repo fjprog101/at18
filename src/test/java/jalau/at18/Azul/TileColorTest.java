@@ -1,6 +1,9 @@
 package jalau.at18.azul;
 
 import org.junit.Test;
+
+import jalau.at18.azul.model.TileColor;
+
 import static org.junit.Assert.assertThat;
 
 import static org.hamcrest.CoreMatchers.*;

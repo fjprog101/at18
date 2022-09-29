@@ -2,10 +2,10 @@ package jalau.at18.azul.controllerazul;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import jalau.at18.azul.CenterTileBoard;
-import jalau.at18.azul.Floor;
-import jalau.at18.azul.Tile;
-import jalau.at18.azul.TileColor;
+import jalau.at18.azul.model.CenterTileBoard;
+import jalau.at18.azul.model.Floor;
+import jalau.at18.azul.model.Tile;
+import jalau.at18.azul.model.TileColor;
 import jalau.at18.azul.view.CenterButtons;
 import jalau.at18.azul.view.CenterTileButton;
 import jalau.at18.azul.view.FloorButtons;

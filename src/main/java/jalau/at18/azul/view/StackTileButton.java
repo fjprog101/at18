@@ -12,6 +12,9 @@ public class StackTileButton extends JToggleButton {
         setSize(DEFAULT_POS, DEFAULT_POS);
         setLocation(CENTER, CENTER);
         setBackground(Color.GRAY);
+        tileLabel.setText("EMPTY");
+        ImageIcon newIcon = new ImageIcon("src/main/resources/azul/empty.png");
+        setIcon(newIcon);
         add(tileLabel);
 
     }

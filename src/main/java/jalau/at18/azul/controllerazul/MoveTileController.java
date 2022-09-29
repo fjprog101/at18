@@ -1,9 +1,9 @@
 package jalau.at18.azul.controllerazul;
 
-import jalau.at18.azul.CenterTileBoard;
-import jalau.at18.azul.Factory;
-import jalau.at18.azul.Tile;
-import jalau.at18.azul.TileColor;
+import jalau.at18.azul.model.CenterTileBoard;
+import jalau.at18.azul.model.Factory;
+import jalau.at18.azul.model.Tile;
+import jalau.at18.azul.model.TileColor;
 import jalau.at18.azul.view.CenterButtons;
 import jalau.at18.azul.view.FactoryButtonGroup;
 import jalau.at18.azul.view.StackButtonGroup;

@@ -3,10 +3,11 @@ import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JPanel;
-import jalau.at18.azul.CenterTileBoard;
-import jalau.at18.azul.Tile;
-import jalau.at18.azul.TileColor;
+
 import jalau.at18.azul.controllerazul.MoveTileController;
+import jalau.at18.azul.model.CenterTileBoard;
+import jalau.at18.azul.model.Tile;
+import jalau.at18.azul.model.TileColor;
 public class FactoryButtonGroup extends JPanel {
 
     private MoveTileController moveTiles;

@@ -1,4 +1,4 @@
-package jalau.at18.azul;
+package jalau.at18.azul.model;
 
 import java.util.List;
 

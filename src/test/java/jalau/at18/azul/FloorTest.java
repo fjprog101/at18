@@ -7,6 +7,10 @@ import java.util.List;
 
 import org.junit.Test;
 
+import jalau.at18.azul.model.Floor;
+import jalau.at18.azul.model.Tile;
+import jalau.at18.azul.model.TileColor;
+
 public class FloorTest {
 
     @Test

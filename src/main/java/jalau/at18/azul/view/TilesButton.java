@@ -1,9 +1,11 @@
 package jalau.at18.azul.view;
 
 import javax.swing.JButton;
+
+import jalau.at18.azul.model.TileColor;
+
 import javax.swing.ImageIcon;
 import java.awt.Color;
-import jalau.at18.azul.TileColor;
 import java.awt.event.ActionListener;
 
 public class TilesButton extends JButton {

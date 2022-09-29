@@ -2,11 +2,11 @@ package jalau.at18.azul.view;
 
 import javax.swing.JPanel;
 
-import jalau.at18.azul.CenterTileBoard;
-import jalau.at18.azul.Floor;
-import jalau.at18.azul.Tile;
-import jalau.at18.azul.TileColor;
 import jalau.at18.azul.controllerazul.CenterToStack;
+import jalau.at18.azul.model.CenterTileBoard;
+import jalau.at18.azul.model.Floor;
+import jalau.at18.azul.model.Tile;
+import jalau.at18.azul.model.TileColor;
 
 public class CenterButtons extends JPanel {
 

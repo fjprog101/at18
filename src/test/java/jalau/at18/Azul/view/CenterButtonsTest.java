@@ -2,9 +2,10 @@ package jalau.at18.azul.view;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
-import jalau.at18.azul.CenterTileBoard;
-import jalau.at18.azul.Tile;
-import jalau.at18.azul.TileColor;
+
+import jalau.at18.azul.model.CenterTileBoard;
+import jalau.at18.azul.model.Tile;
+import jalau.at18.azul.model.TileColor;
 public class CenterButtonsTest {
 
     @Test

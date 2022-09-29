@@ -4,9 +4,9 @@ import javax.swing.DefaultListModel;
 import javax.swing.JList;
 import javax.swing.JPanel;
 
-import jalau.at18.azul.StackTileBoard;
-import jalau.at18.azul.Tile;
-import jalau.at18.azul.TileColor;
+import jalau.at18.azul.model.StackTileBoard;
+import jalau.at18.azul.model.Tile;
+import jalau.at18.azul.model.TileColor;
 
 public class StackList extends JPanel {
     private JList<String> stack;

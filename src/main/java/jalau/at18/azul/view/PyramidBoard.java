@@ -2,13 +2,13 @@ package jalau.at18.azul.view;
 import java.awt.GridLayout;
 import javax.swing.JPanel;
 
-import jalau.at18.azul.Tile;
-import jalau.at18.azul.TileColor;
+import jalau.at18.azul.model.Tile;
+import jalau.at18.azul.model.TileColor;
 
 public class PyramidBoard extends JPanel {
 
     private static final int PYRAMID_MATRIZ_SIZE = 5;
-    private PyramidTileButton[][] tileButton = new PyramidTileButton[PYRAMID_MATRIZ_SIZE][PYRAMID_MATRIZ_SIZE];
+    protected PyramidTileButton[][] tileButton = new PyramidTileButton[PYRAMID_MATRIZ_SIZE][PYRAMID_MATRIZ_SIZE];
     private Tile emptyTile = new Tile(TileColor.EMPTY);
     private static final int DIVIDE_PYRAMID = 4;
     private int emptyColumn = 0;
@@ -39,37 +39,7 @@ public class PyramidBoard extends JPanel {
         tileButton[row][column].updateColor(newTile.getColor().getColorPath());
     }
 
-    public int sendEmptyTiles(int row) {
-        for (int index = DIVIDE_PYRAMID; index >= 0; index--) {
-            if (tileButton[row][index].getTileValue() == emptyTile.getColor().getName()) {
-                emptyColumn = index;
-                break;
-            }
-        }
-        return emptyColumn;
-    }
-
-    public int countEmptyPyramidTiles(int row) {
-        int emptyCount = 0;
-        for (int index = DIVIDE_PYRAMID; index >= 0; index--) {
-            if (tileButton[row][index].getTileValue() == emptyTile.getColor().getName()) {
-                emptyCount++;
-            }
-        }
-        return emptyCount;
-    }
-
-    public void cleanPyramid(int row) {
-        for (int index = DIVIDE_PYRAMID; index >= 0; index--) {
-            if (row + index >= DIVIDE_PYRAMID) {
-                tileButton[row][index].updateLabel(emptyTile.getColor().getName());
-                tileButton[row][index].updateColor(emptyTile.getColor().getColorPath());
-            }
-        }
-    }
     public PyramidTileButton[][] getTileButton() {
         return tileButton;
     }
-
-
 }
