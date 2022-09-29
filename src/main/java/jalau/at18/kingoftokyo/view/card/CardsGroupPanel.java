@@ -8,33 +8,36 @@ import java.awt.*;
 import jalau.at18.kingoftokyo.controller.PlayerStatusController;
 import jalau.at18.kingoftokyo.model.CompleteCard;
 import jalau.at18.kingoftokyo.model.DeckCards;
+import jalau.at18.kingoftokyo.model.Turn;
 
 public class CardsGroupPanel extends JPanel {
     private static final int[] CARD_SIZE = {470, 250};
     private static final int[] CARD_POS = {950, 185};
     private static final int CARDS_SEPARATION = 10;
     private DeckCards deck;
+    private Turn turn;
     private PlayerStatusController playerController;
 
-    public CardsGroupPanel(PlayerStatusController playerController) {
+    public CardsGroupPanel(Turn turn, PlayerStatusController playerController) {
+        this.turn = turn;
+        this.playerController = playerController;
         setBounds(CARD_POS[0], CARD_POS[1], CARD_SIZE[0], CARD_SIZE[1]);
         setLayout(new BoxLayout(this, BoxLayout.LINE_AXIS));
         deck = new DeckCards();
-        this.playerController = playerController;
         initialCards();
     }
 
     public void initialCards() {
         CompleteCard card1 = (CompleteCard) deck.getRandomCard();
-        add(new CardPanel(card1));
+        add(new CardPanel(turn, card1));
         deck.removeCard(card1);
         add(Box.createRigidArea(new Dimension(CARDS_SEPARATION, 0)));
         CompleteCard card2 = (CompleteCard) deck.getRandomCard();
-        add(new CardPanel(card2));
+        add(new CardPanel(turn, card2));
         deck.removeCard(card2);
         add(Box.createRigidArea(new Dimension(CARDS_SEPARATION, 0)));
         CompleteCard card3 = (CompleteCard) deck.getRandomCard();
-        add(new CardPanel(card3));
+        add(new CardPanel(turn, card3));
         deck.removeCard(card3);
     }
 

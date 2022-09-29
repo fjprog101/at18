@@ -38,9 +38,9 @@ public class PlayerCardsGroupPanel extends JPanel {
     public void initializePlayerCards() {
         for (int index = 0; index < playersArray.size(); index++) {
             getComponent(index * 2).setVisible(true);
-            playersArray.get(index).addSubscriber((PlayerCard) getComponent(index * 2));
+            playersArray.get(index).addObserver((PlayerCard) getComponent(index * 2));
             ((PlayerCard) getComponent(index * 2)).setPlayer(playersArray.get(index));
-            ((PlayerCard) getComponent(index * 2)).updatePlayerStatus();
+            ((PlayerCard) getComponent(index * 2)).update();
         }
     }
 }

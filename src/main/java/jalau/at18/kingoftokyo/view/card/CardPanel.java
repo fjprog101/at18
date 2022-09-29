@@ -10,6 +10,7 @@ import javax.swing.JPanel;
 import jalau.at18.kingoftokyo.controller.BuyCardButtomController;
 import jalau.at18.kingoftokyo.model.Card;
 import jalau.at18.kingoftokyo.model.CompleteCard;
+import jalau.at18.kingoftokyo.model.Turn;
 
 public class CardPanel extends JPanel {
     private static final int[] CARD_SIZE = {150, 250};
@@ -20,12 +21,12 @@ public class CardPanel extends JPanel {
     private Card card;
     private BuyCardButtomController buyButtomController;
 
-    public CardPanel(Card card) {
+    public CardPanel(Turn turn, Card card) {
         this.card = card;
         setSize(CARD_SIZE[0], CARD_SIZE[1]);
         setBackground(new Color(COLOR[0], COLOR[1], COLOR[2]));
         setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
-        buyButtomController = new BuyCardButtomController(this);
+        buyButtomController = new BuyCardButtomController(turn, this);
         initComponents(card);
     }
     public void initComponents(Card newCard) {
