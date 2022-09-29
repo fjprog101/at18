@@ -8,6 +8,7 @@ import jalau.at18.kingoftokyo.view.TurnPanel;
 public class EndTurnButtonController implements ActionListener {
     private Turn turn;
     private TurnPanel turnPanel;
+    private RollDiceSectionController rollDiceSectionController;
 
     public EndTurnButtonController(Turn turn, TurnPanel turnPanel) {
         this.turn = turn;
@@ -18,5 +19,11 @@ public class EndTurnButtonController implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         turn.changePlayerWithTheTurn();
         turnPanel.setPlayerWithTurnLabel();
+        turnPanel.getComponent(1).setEnabled(false);
+        rollDiceSectionController.resetUI();
+    }
+
+    public void addRollDiceSectionController(RollDiceSectionController newRollDiceSectionController) {
+        this.rollDiceSectionController = newRollDiceSectionController;
     }
 }

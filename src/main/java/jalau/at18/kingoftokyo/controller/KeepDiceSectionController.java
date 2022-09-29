@@ -1,17 +1,18 @@
 package jalau.at18.kingoftokyo.controller;
 
 import jalau.at18.kingoftokyo.model.*;
+import jalau.at18.kingoftokyo.view.TurnPanel;
 import jalau.at18.kingoftokyo.view.rolldicesection.DiceFaceLabel;
 import jalau.at18.kingoftokyo.view.rolldicesection.KeepDiceSectionUI;
 
 public class KeepDiceSectionController {
     private KeepDiceSectionUI keepDiceSectionUI;
-    private RollDiceSectionController rollDiceSectionController;
     private DiceFaceKeeper diceFaceKeeper;
     private DiceFaceKeeperProcess diceFaceKeeperProcess;
     private DiceFaceKeeperResult diceFaceKeeperResult;
     private DiceFaceTurnResult diceFaceTurnResult;
     private int countDiceFaceSet = 0;
+    private TurnPanel turnPanel;
 
     public KeepDiceSectionController(KeepDiceSectionUI keepDiceSectionUI) {
         this.keepDiceSectionUI = keepDiceSectionUI;
@@ -50,14 +51,16 @@ public class KeepDiceSectionController {
         countDiceFaceSet = 0;
         keepDiceSectionUI.sendResults(effect); // For change player atributes
         keepDiceSectionUI.resetUI();
-        rollDiceSectionController.resetUI();
+        //rollDiceSectionController.resetUI();
+        turnPanel.getComponent(1).setEnabled(true);
     }
 
     public KeepDiceSectionUI getKeepDiceSectionUI() {
         return keepDiceSectionUI;
     }
 
-    public void setRollDiceSectionController(RollDiceSectionController rollDiceSectionControllerr) {
-        this.rollDiceSectionController = rollDiceSectionControllerr;
+    public void addTurnPanel(TurnPanel newTurnPanel) {
+        this.turnPanel = newTurnPanel;
     }
+
 }

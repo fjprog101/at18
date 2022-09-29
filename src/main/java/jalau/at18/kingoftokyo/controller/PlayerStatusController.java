@@ -2,7 +2,6 @@ package jalau.at18.kingoftokyo.controller;
 
 import jalau.at18.kingoftokyo.model.Player;
 import jalau.at18.kingoftokyo.model.Turn;
-import jalau.at18.kingoftokyo.view.GameFrame;
 
 public class PlayerStatusController {
     private static final int HEAL = 0;
@@ -10,8 +9,8 @@ public class PlayerStatusController {
     private static final int SCORE = 2;
     private static final int ENERGY = 3;
     private Turn turn;
-    public PlayerStatusController(GameFrame gameFrame) {
-        this.turn = gameFrame.getTurns();
+    public PlayerStatusController(Turn turn) {
+        this.turn = turn;
     }
 
     public void setPlayersStatus(int[] effect) {
@@ -35,5 +34,8 @@ public class PlayerStatusController {
                 player.setLifePoints(newLifePoints);
             }
         }
+    }
+    public Turn getTurn() {
+        return turn;
     }
 }

@@ -1,8 +1,8 @@
 package jalau.at18.kingoftokyo.model;
 
-import jalau.at18.kingoftokyo.view.playercards.PlayerCard;
+import java.util.ArrayList;
 
-public class Player {
+public class Player implements Subject {
     private static final int TEN = 10;
     private String userName;
     private Monster monster;
@@ -10,13 +10,14 @@ public class Player {
     private int lifePoints;
     private int victoryPoints;
 
-    private PlayerCard subscriber;
+    private ArrayList<Observer> observers;
 
     public Player() {
         this.monster = null;
         this.energy = 0;
         this.lifePoints = TEN;
         this.victoryPoints = 0;
+        observers = new ArrayList<Observer>();
     }
     public void addMonster(Monster newMonster) {
         this.monster = newMonster;
@@ -35,18 +36,15 @@ public class Player {
     }
     public void setEnergy(int newEnergy) {
         this.energy = newEnergy;
-        subscriber.updatePlayerStatus();
+        notifyObservers();
     }
     public void setLifePoints(int newLifePoints) {
         this.lifePoints = newLifePoints;
-        subscriber.updatePlayerStatus();
+        notifyObservers();
     }
     public void setVictoryPoints(int newVictoryPoints) {
         this.victoryPoints = newVictoryPoints;
-        subscriber.updatePlayerStatus();
-    }
-    public void addSubscriber(PlayerCard newSubscriber) {
-        this.subscriber = newSubscriber;
+        notifyObservers();
     }
 
     public String getUserName() {
@@ -59,5 +57,15 @@ public class Player {
 
     public void setMonster(Monster monsterObj) {
         this.monster = monsterObj;
+    }
+    @Override
+    public void addObserver(Observer observer) {
+        observers.add(observer);
+    }
+    @Override
+    public void notifyObservers() {
+        for (Observer observer: observers) {
+            observer.update();
+        }
     }
 }

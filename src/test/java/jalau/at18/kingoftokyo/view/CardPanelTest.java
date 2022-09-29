@@ -10,8 +10,8 @@ import org.junit.Test;
 public class CardPanelTest {
     @Test
     public void shouldShowACard() {
-        DeckCards deck = new DeckCards();
-        CardPanel cardPanel1 = new CardPanel(new CompleteCard(DiscardCards.ENERGIZE));
+        Turn turn = new Turn(null);
+        CardPanel cardPanel1 = new CardPanel(turn, new CompleteCard(DiscardCards.ENERGIZE));
         assertEquals(7, cardPanel1.getComponentCount());
         assertEquals(150, cardPanel1.getBounds().getWidth(), 0);
         assertEquals(250, cardPanel1.getBounds().getHeight(), 0);

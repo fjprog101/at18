@@ -11,7 +11,7 @@ import jalau.at18.kingoftokyo.view.card.CardsGroupPanel;
 public class CardsGroupPanelTest {
     @Test
     public void shouldShowACard() {
-        CardsGroupPanel cardsGroup = new CardsGroupPanel(null);
+        CardsGroupPanel cardsGroup = new CardsGroupPanel(null, null);
         assertEquals(5, cardsGroup.getComponentCount());
         assertEquals(950, cardsGroup.getBounds().getX(), 0);
         assertEquals(185, cardsGroup.getBounds().getY(), 0);
@@ -39,7 +39,7 @@ public class CardsGroupPanelTest {
         GameFrame gameFrame = new GameFrame(turn);
         int[] effectsSetter = {2, 2, 1, 4};
         PlayerStatusController playerController = gameFrame.getPlayerController();
-        CardsGroupPanel cardsGroup = new CardsGroupPanel(playerController);
+        CardsGroupPanel cardsGroup = new CardsGroupPanel(null, playerController);
         cardsGroup.sendEffect(effectsSetter);
         assertEquals(12, player1.getLifePoints());
         assertEquals(8, player2.getLifePoints());

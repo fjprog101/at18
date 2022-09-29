@@ -8,7 +8,7 @@ import static org.junit.Assert.assertTrue;
 public class DiceSectionUITest {
     @Test
     public void shouldHaveComponents() {
-        DiceSectionUI diceSectionUI = new DiceSectionUI(null);
+        DiceSectionUI diceSectionUI = new DiceSectionUI(null, null);
         assertEquals(2, diceSectionUI.getComponentCount());
         assertTrue(diceSectionUI.isVisible());
     }

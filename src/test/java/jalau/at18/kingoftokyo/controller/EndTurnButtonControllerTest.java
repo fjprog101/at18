@@ -12,6 +12,7 @@ import jalau.at18.kingoftokyo.model.Monster;
 import jalau.at18.kingoftokyo.model.Player;
 import jalau.at18.kingoftokyo.model.Turn;
 import jalau.at18.kingoftokyo.view.TurnPanel;
+import jalau.at18.kingoftokyo.view.rolldicesection.RollDiceSectionUI;
 
 public class EndTurnButtonControllerTest {
     @Test
@@ -29,6 +30,9 @@ public class EndTurnButtonControllerTest {
         Turn turn = new Turn(playerList);
         TurnPanel turnPanel = new TurnPanel(turn);
         EndTurnButtonController button = new EndTurnButtonController(turn, turnPanel);
+        RollDiceSectionUI rollDiceSectionUI = new RollDiceSectionUI();
+        RollDiceSectionController rollDiceSectionController = new RollDiceSectionController(rollDiceSectionUI, null);
+        button.addRollDiceSectionController(rollDiceSectionController);
         assertEquals(player3, turn.getPlayerWithTheTurn());
         assertEquals("Turn of: Space Penguin", ((JLabel)turnPanel.getComponent(0)).getText());
         button.actionPerformed(null);

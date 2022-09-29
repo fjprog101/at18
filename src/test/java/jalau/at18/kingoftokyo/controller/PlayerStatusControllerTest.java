@@ -9,7 +9,6 @@ import org.junit.Test;
 import jalau.at18.kingoftokyo.model.Monster;
 import jalau.at18.kingoftokyo.model.Player;
 import jalau.at18.kingoftokyo.model.Turn;
-import jalau.at18.kingoftokyo.view.GameFrame;
 
 public class PlayerStatusControllerTest {
     @Test
@@ -24,8 +23,7 @@ public class PlayerStatusControllerTest {
         playerList.add(player1);
         playerList.add(player2);
         Turn turn = new Turn(playerList);
-        GameFrame gameFrame = new GameFrame(turn);
-        PlayerStatusController playerController = new PlayerStatusController(gameFrame);
+        PlayerStatusController playerController = new PlayerStatusController(turn);
         assertEquals(10, player1.getLifePoints());
         assertEquals(10, player2.getLifePoints());
         assertEquals(0, player1.getVictoryPoints());
