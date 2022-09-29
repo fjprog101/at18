@@ -1,6 +1,6 @@
 package jalau.at18.architects.model.cards;
 
-enum Resource {
+public enum Resource {
     WATER("Water"),
     WOOD("Wood"),
     STONE("Stone"),
