@@ -1,7 +1,6 @@
 package jalau.at18.kingoftokyo.view;
 
 import org.junit.Test;
-
 import static org.junit.Assert.assertEquals;
 
 public class RollerButtonTest {

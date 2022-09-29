@@ -2,7 +2,6 @@ package jalau.at18.kingoftokyo.controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import jalau.at18.kingoftokyo.model.Turn;
 import jalau.at18.kingoftokyo.view.TurnPanel;
 

@@ -1,24 +1,27 @@
 package jalau.at18.kingoftokyo.model;
 
-public class Turn {
-    private Player[] playersSequence;
-    private int turn;
+import java.util.ArrayList;
 
-    public Turn(Player[] playersSequence) {
+public class Turn {
+    //private Player[] playersSequence;
+    private int turn;
+    private ArrayList<Player> playersSequence;
+
+    public Turn(ArrayList<Player> playersSequence) {
         this.playersSequence = playersSequence;
         turn = 0;
     }
 
     public Player getPlayerWithTheTurn() {
-        return playersSequence[turn];
+        return playersSequence.get(turn);
     }
 
-    public Player[] getPlayersList() {
+    public ArrayList<Player> getPlayersList() {
         return playersSequence;
     }
 
     public void changePlayerWithTheTurn() {
-        if (turn == playersSequence.length - 1) {
+        if (turn == playersSequence.size() - 1) {
             turn = 0;
         } else {
             turn++;

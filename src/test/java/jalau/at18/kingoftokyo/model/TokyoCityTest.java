@@ -5,12 +5,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-
 import org.junit.Test;
-
-import jalau.at18.kingoftokyo.model.Monster;
-import jalau.at18.kingoftokyo.model.Player;
-import jalau.at18.kingoftokyo.model.TokyoCity;
 
 public class TokyoCityTest {
     @Test

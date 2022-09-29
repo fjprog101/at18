@@ -1,13 +1,8 @@
 package jalau.at18.kingoftokyo.model;
 
 import org.junit.Test;
-
-import jalau.at18.kingoftokyo.model.DiceFace;
-import jalau.at18.kingoftokyo.model.DiceFaceKeeper;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import static org.junit.Assert.assertEquals;
 
 public class DiceFaceKeeperTest {

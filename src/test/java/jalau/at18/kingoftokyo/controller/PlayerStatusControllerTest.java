@@ -2,6 +2,8 @@ package jalau.at18.kingoftokyo.controller;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.ArrayList;
+
 import org.junit.Test;
 
 import jalau.at18.kingoftokyo.model.Monster;
@@ -16,7 +18,11 @@ public class PlayerStatusControllerTest {
         player1.addMonster(Monster.ALIENOID);
         Player player2 = new Player();
         player2.addMonster(Monster.CYBER_KITTY);
-        Player[] playerList = {player1, player2};
+        //Player[] playerList = {player1, player2};
+
+        ArrayList<Player> playerList = new ArrayList<Player>();
+        playerList.add(player1);
+        playerList.add(player2);
         Turn turn = new Turn(playerList);
         GameFrame gameFrame = new GameFrame(turn);
         PlayerStatusController playerController = new PlayerStatusController(gameFrame);

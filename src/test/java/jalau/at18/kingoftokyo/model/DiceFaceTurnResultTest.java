@@ -1,9 +1,6 @@
 package jalau.at18.kingoftokyo.model;
 
 import org.junit.Test;
-
-import jalau.at18.kingoftokyo.model.DiceFaceTurnResult;
-
 import static org.junit.Assert.assertEquals;
 
 public class DiceFaceTurnResultTest {

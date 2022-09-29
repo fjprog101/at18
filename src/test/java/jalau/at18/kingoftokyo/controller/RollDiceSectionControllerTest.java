@@ -1,14 +1,10 @@
 package jalau.at18.kingoftokyo.controller;
 
-import jalau.at18.kingoftokyo.model.DiceFace;
-import jalau.at18.kingoftokyo.model.DiceRoller;
-import jalau.at18.kingoftokyo.view.rolldicesection.DiceFaceLabel;
-import jalau.at18.kingoftokyo.view.rolldicesection.RollDiceSectionUI;
+import jalau.at18.kingoftokyo.model.*;
+import jalau.at18.kingoftokyo.view.rolldicesection.*;
 import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;

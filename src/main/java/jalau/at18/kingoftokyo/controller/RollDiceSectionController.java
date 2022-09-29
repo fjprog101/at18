@@ -1,11 +1,7 @@
 package jalau.at18.kingoftokyo.controller;
 
-import jalau.at18.kingoftokyo.model.DiceFace;
-import jalau.at18.kingoftokyo.model.DiceRoller;
-import jalau.at18.kingoftokyo.view.rolldicesection.DiceFaceLabel;
-import jalau.at18.kingoftokyo.view.rolldicesection.DiceFaceLabelMouseListener;
-import jalau.at18.kingoftokyo.view.rolldicesection.RollDiceSectionUI;
-
+import jalau.at18.kingoftokyo.model.*;
+import jalau.at18.kingoftokyo.view.rolldicesection.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +13,7 @@ public class RollDiceSectionController {
     private List<DiceFace> listRandomDiceFace;
 
     public RollDiceSectionController(RollDiceSectionUI rollDiceSectionUI,
-                                     KeepDiceSectionController keepDiceSectionController) {
+                                        KeepDiceSectionController keepDiceSectionController) {
         this.rollDiceSectionUI = rollDiceSectionUI;
         this.keepDiceSectionController = keepDiceSectionController;
         rollDiceSectionUI.getRollerDiceButton().addActionListener(e -> rollDices());

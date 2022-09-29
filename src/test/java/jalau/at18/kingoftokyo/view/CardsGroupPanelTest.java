@@ -2,13 +2,10 @@ package jalau.at18.kingoftokyo.view;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-
+import java.util.ArrayList;
 import org.junit.Test;
-
 import jalau.at18.kingoftokyo.controller.PlayerStatusController;
-import jalau.at18.kingoftokyo.model.Monster;
-import jalau.at18.kingoftokyo.model.Player;
-import jalau.at18.kingoftokyo.model.Turn;
+import jalau.at18.kingoftokyo.model.*;
 import jalau.at18.kingoftokyo.view.card.CardsGroupPanel;
 
 public class CardsGroupPanelTest {
@@ -33,7 +30,11 @@ public class CardsGroupPanelTest {
         assertEquals(10, player2.getLifePoints());
         assertEquals(0, player1.getVictoryPoints());
         assertEquals(0, player1.getEnergy());
-        Player[] playerList = {player1, player2};
+        //Player[] playerList = {player1, player2};
+        ArrayList<Player> playerList = new ArrayList<Player>();
+
+        playerList.add(player1);
+        playerList.add(player2);
         Turn turn = new Turn(playerList);
         GameFrame gameFrame = new GameFrame(turn);
         int[] effectsSetter = {2, 2, 1, 4};

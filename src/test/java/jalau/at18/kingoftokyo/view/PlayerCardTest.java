@@ -2,8 +2,6 @@ package jalau.at18.kingoftokyo.view;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-
-import jalau.at18.kingoftokyo.*;
 import jalau.at18.kingoftokyo.model.Monster;
 import jalau.at18.kingoftokyo.model.Player;
 import jalau.at18.kingoftokyo.view.playercards.*;

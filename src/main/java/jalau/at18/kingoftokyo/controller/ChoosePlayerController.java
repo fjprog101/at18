@@ -4,7 +4,6 @@ import jalau.at18.kingoftokyo.Game;
 import jalau.at18.kingoftokyo.view.choosemonsters.ChooseMonstersFrame;
 import jalau.at18.kingoftokyo.view.chooseplayer.ChoosePlayersFrame;
 import jalau.at18.kingoftokyo.view.chooseplayer.PlayersNumbersSpinner;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 

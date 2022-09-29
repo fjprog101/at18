@@ -1,16 +1,9 @@
 package jalau.at18.kingoftokyo.model;
 
 import static org.junit.Assert.assertEquals;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import org.junit.Test;
-
-import jalau.at18.kingoftokyo.model.Dice;
-import jalau.at18.kingoftokyo.model.DiceFace;
-import jalau.at18.kingoftokyo.model.DiceHand;
-import jalau.at18.kingoftokyo.model.StartGame;
 
 public class StartGameTest {
     @Test

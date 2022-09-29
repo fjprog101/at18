@@ -2,10 +2,8 @@ package jalau.at18.kingoftokyo.view;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-
 import jalau.at18.kingoftokyo.view.chooseplayer.ChoosePlayersFrame;
 import org.junit.Test;
-
 import javax.swing.*;
 import java.awt.*;
 
