@@ -9,7 +9,7 @@ public class GameTest {
 
     @Test
     public void gameShouldAddPlayers() {
-        Game game = new Game();
+        Game game = Game.INSTANCE;
         game.addPlayer(new Player(new DieRoller()));
         game.addPlayer(new Player(new DieRoller()));
         game.addPlayer(new Player(new DieRoller()));

@@ -14,9 +14,9 @@ import jalau.at18.war.model.Player;
 
 public class PlayerPanel extends JPanel {
 
-    public PlayerPanel(Game game) {
+    public PlayerPanel() {
         Player player = new Player(new DieRoller());
-        game.addPlayer(player);
+        Game.INSTANCE.addPlayer(player);
         init(player);
     }
 
