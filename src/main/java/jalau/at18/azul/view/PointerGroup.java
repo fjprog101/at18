@@ -2,8 +2,8 @@ package jalau.at18.azul.view;
 
 import javax.swing.JPanel;
 
-import jalau.at18.azul.Floor;
 import jalau.at18.azul.controllerazul.StackSenderController;
+import jalau.at18.azul.model.Floor;
 
 import java.awt.GridLayout;
 

@@ -1,7 +1,11 @@
 package jalau.at18.azul;
 import static org.junit.Assert.assertArrayEquals;
 
-import org.junit.Test;;
+import org.junit.Test;
+
+import jalau.at18.azul.model.Pyramid;
+import jalau.at18.azul.model.Tile;
+import jalau.at18.azul.model.TileColor;;
 public class PyramidTest {
     @Test
     public void shouldInitializePyramide(){

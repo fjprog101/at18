@@ -4,8 +4,9 @@ import static org.junit.Assert.assertEquals;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.Test;
-import jalau.at18.azul.Tile;
-import jalau.at18.azul.TileColor;
+
+import jalau.at18.azul.model.Tile;
+import jalau.at18.azul.model.TileColor;
 public class StackButtonGroupTest {
     
     @Test

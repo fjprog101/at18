@@ -2,7 +2,6 @@ package jalau.at18.azul.view;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import java.awt.Color;
 import java.awt.event.ActionListener;
 
 
@@ -12,14 +11,14 @@ public class CenterTileButton extends JButton {
     private TileLabel tileLabel;
 
     public CenterTileButton(ActionListener listener) {
-
         tileLabel = new TileLabel();
         setSize(DEFAULT_POS1, DEFAULT_POS1);
         setLocation(CENTER, CENTER);
-        setBackground(Color.GRAY);
+        tileLabel.setText("EMPTY");
+        ImageIcon newIcon = new ImageIcon("src/main/resources/azul/empty.png");
+        setIcon(newIcon);
         add(tileLabel);
         addActionListener(listener);
-
     }
 
     public void updateLabel(String newText) {

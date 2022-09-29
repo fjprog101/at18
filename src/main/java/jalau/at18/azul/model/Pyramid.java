@@ -1,4 +1,7 @@
-package jalau.at18.azul;
+package jalau.at18.azul.model;
+
+
+
 public class Pyramid {
     private final int pyramidMatrixSize = 5;
     private final int dividePyramid = 4;

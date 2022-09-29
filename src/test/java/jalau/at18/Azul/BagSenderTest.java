@@ -8,6 +8,10 @@ import java.util.List;
 
 import org.junit.Test;
 
+import jalau.at18.azul.model.BagSender;
+import jalau.at18.azul.model.Tile;
+import jalau.at18.azul.model.TileColor;
+
 public class BagSenderTest {
 
     @Test

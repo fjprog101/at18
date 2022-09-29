@@ -4,6 +4,10 @@ import static org.junit.Assert.assertArrayEquals;
 
 import org.junit.Test;
 
+import jalau.at18.azul.model.Tile;
+import jalau.at18.azul.model.TileColor;
+import jalau.at18.azul.model.Wall;
+
 public class WallTest {
     @Test
     public void shouldInitializeWallBoard(){

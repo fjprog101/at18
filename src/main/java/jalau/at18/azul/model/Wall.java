@@ -1,4 +1,4 @@
-package jalau.at18.azul;
+package jalau.at18.azul.model;
 public class Wall {
     private final int wallMatrixSize = 5;
     private Tile[][] tiles = new Tile[wallMatrixSize][wallMatrixSize];
