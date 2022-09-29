@@ -24,6 +24,8 @@ public class TileController implements ActionListener {
     private PlayerPanel player2;
     private CenterButtons center;
     private CenterTileBoard firstplayer;
+    private int deductionP1 = 0;
+    private int deductionP2 = 0;
     private int scoreP1 = 0;
     private int scoreP2 = 0;
     //private WinnerLabel winner;
@@ -47,8 +49,9 @@ public class TileController implements ActionListener {
                     Tile tileSelected = new Tile(TileColor.valueOf(player1.getPyramidBoard().getTileButton()[index][PYRAMID_INDEX].getTileValue()));
                     player1.getWallBoard().verifyTileWall(index, tileSelected);
                     player1.getPyramidBoard().cleanPyramid(index);
+                    deductionP1 = (player1.getfloorButtonGroup()).pointsdeductedFloor();
                     scoreP1++;
-                    player1.getScore().updateLabel(scoreP1, 1);
+                    player1.getScore().updateLabel(scoreP1 - deductionP1, 1);
                     if (player1.getWallBoard().verifyRowWall(index)) {
                         System.out.println("winner is player1");
                     }
@@ -57,8 +60,9 @@ public class TileController implements ActionListener {
                     Tile tileSelected = new Tile(TileColor.valueOf(player2.getPyramidBoard().getTileButton()[index][PYRAMID_INDEX].getTileValue()));
                     player2.getWallBoard().verifyTileWall(index, tileSelected);
                     player2.getPyramidBoard().cleanPyramid(index);
+                    deductionP2 = (player2.getfloorButtonGroup()).pointsdeductedFloor();
                     scoreP2++;
-                    player2.getScore().updateLabel(scoreP2, 2);
+                    player2.getScore().updateLabel(scoreP2 - deductionP2, 2);
                     if (player2.getWallBoard().verifyRowWall(index)) {
                         System.out.println("winner is player2");
                     }

@@ -4,7 +4,9 @@ import java.util.List;
 
 import javax.swing.JPanel;
 
+import jalau.at18.azul.Floor;
 import jalau.at18.azul.Tile;
+import jalau.at18.azul.TileColor;
 
 public class FloorButtons extends JPanel {
 
@@ -27,5 +29,16 @@ public class FloorButtons extends JPanel {
                 floorLabel.updateColor(floorSource.getColor().getColorPath());
             }
         }
+    }
+
+    public int pointsdeductedFloor() {
+        Floor counter = new Floor();
+        for (int index = 0; index < getComponentCount(); index++) {
+            FloorTileButton floorLabel = (FloorTileButton) getComponent(index);
+            if (floorLabel.getLabel() != "EMPTY") {
+                counter.add(new Tile(TileColor.NULL));
+            }
+        }
+        return counter.pointsDeducted();
     }
 }

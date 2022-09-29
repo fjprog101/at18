@@ -24,7 +24,6 @@ public class FactoryPanel extends JPanel {
     private StackButtonGroup stackButtonGroup;
     private PlayerPanel player1;
     private PlayerPanel player2;
-    private FloorButtons floorbutton;
 
     public FactoryPanel(StackButtonGroup newStack, PlayerPanel newPlayer1, PlayerPanel newPlayer2) {
         stackButtonGroup = newStack;
