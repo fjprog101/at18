@@ -2,6 +2,7 @@ package jalau.at18.kingoftokyo.view;
 
 import javax.swing.*;
 import jalau.at18.kingoftokyo.controller.EndTurnButtonController;
+import jalau.at18.kingoftokyo.controller.RollDiceSectionController;
 import jalau.at18.kingoftokyo.model.Turn;
 import java.awt.BorderLayout;
 import java.awt.Font;
@@ -17,6 +18,8 @@ public class TurnPanel extends JPanel {
     private JLabel turnOfLabel;
     private JButton endTurnButton;
     private Turn turn;
+    //private RollDiceSectionController rollDiceSectionController;
+    private EndTurnButtonController endButtonController;
 
     public TurnPanel(Turn turn) {
         this.turn = turn;
@@ -28,10 +31,17 @@ public class TurnPanel extends JPanel {
         add(turnOfLabel, BorderLayout.LINE_START);
         endTurnButton = new JButton("End Turn");
         add(endTurnButton, BorderLayout.LINE_END);
-        endTurnButton.addActionListener(new EndTurnButtonController(turn, this));
+        endButtonController = new EndTurnButtonController(turn, this);
+        endTurnButton.addActionListener(endButtonController);
+        endTurnButton.setEnabled(false);
     }
 
     public void setPlayerWithTurnLabel() {
         turnOfLabel.setText("Turn of: " + turn.getPlayerWithTheTurn().getMonster().getName());
+    }
+
+    public void addRollDiceController(RollDiceSectionController rollDiceSectionController) {
+        //this.rollDiceSectionController = rollDiceSectionController;
+        endButtonController.addRollDiceSectionController(rollDiceSectionController);
     }
 }

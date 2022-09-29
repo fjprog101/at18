@@ -12,7 +12,7 @@ import javax.swing.SwingConstants;
 public class PlayerCardEnergyPoints extends JLabel {
     private static final int POSITION_X = 5;
     private static final int POSITION_Y = 80;
-    private static final int WIDTH = 70;
+    private static final int WIDTH = 90;
     private static final int HEIGHT = 20;
     private static final int FONT_SIZE = 20;
     private static final int FONT_STYLE = 1;

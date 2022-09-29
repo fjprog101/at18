@@ -23,10 +23,13 @@ public class GameFrame extends JFrame {
 
         add(new PlayerCardsGroupPanel(turn.getPlayersList()));
         add(new DeckImagePanel());
-        add(new DiceSectionUI((playerController)));
+        TurnPanel turnPanel = new TurnPanel(turn);
+        DiceSectionUI diceSectionUI = new DiceSectionUI(turnPanel, playerController);
+        add(diceSectionUI);
         add(new CardsGroupPanel(turn, playerController));
         add(new BoardPanel(Monster.ALIENOID));
-        add(new TurnPanel(turn));
+        turnPanel.addRollDiceController(diceSectionUI.getController());
+        add(turnPanel);
     }
 
     private void initialize() {
