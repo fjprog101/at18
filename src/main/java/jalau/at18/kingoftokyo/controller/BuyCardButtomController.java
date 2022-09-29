@@ -2,7 +2,6 @@ package jalau.at18.kingoftokyo.controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JOptionPane;
 import jalau.at18.kingoftokyo.model.CompleteCard;
 import jalau.at18.kingoftokyo.model.DeckCards;
 import jalau.at18.kingoftokyo.model.Player;
@@ -30,7 +29,7 @@ public class BuyCardButtomController implements ActionListener {
     }
     public void buyCard() {
         Player playerWithTurn = turn.getPlayerWithTheTurn();
-        if (dialog.confirmBuyDialogResult(((CardNameLabel) cardPanel.getComponent(1))) == JOptionPane.YES_OPTION) {
+        if (dialog.confirmBuyDialogResult(((CardNameLabel) cardPanel.getComponent(1)))) {
             playerWithTurn.setEnergy(playerWithTurn.getEnergy() - ((CompleteCard) cardPanel.getCard()).getCard().getCost());
             ((CardsGroupPanel) cardPanel.getParent()).sendEffect(((CompleteCard) cardPanel.getCard()).getCard().getEffect());
             setCardPanel();

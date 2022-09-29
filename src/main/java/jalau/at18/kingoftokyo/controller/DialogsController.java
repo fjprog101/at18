@@ -5,15 +5,20 @@ import javax.swing.JOptionPane;
 
 import jalau.at18.kingoftokyo.view.card.CardNameLabel;
 
-public class DialogsController {
-    public int confirmBuyDialogResult(CardNameLabel cardName) {
+public class DialogsController extends JOptionPane {
+    public boolean confirmBuyDialogResult(CardNameLabel cardName) {
+        boolean yesOption = false;
         JLabel label = new JLabel("Do you want to buy: " + cardName.getText() + " Card");
-        int result = JOptionPane.showConfirmDialog(null, label, "Buy Card",
-                JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
-        return result;
+        if (showConfirmDialog(label) == YES_OPTION) {
+            yesOption = true;
+        }
+        return yesOption;
     }
     public void showErrorMessage() {
-        JOptionPane.showMessageDialog(null, "Not enought Energy for buy the card",
+        showMessageDialog(null, "Not enought Energy for buy the card",
                 "Error", JOptionPane.WARNING_MESSAGE);
+    }
+    public int showConfirmDialog(JLabel message) {
+        return showConfirmDialog(null, message, "Buy Card", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
     }
 }
