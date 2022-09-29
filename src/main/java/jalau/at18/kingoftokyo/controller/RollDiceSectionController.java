@@ -16,13 +16,10 @@ public class RollDiceSectionController {
 
     public RollDiceSectionController(RollDiceSectionUI rollDiceSectionUI,
                                      KeepDiceSectionController keepDiceSectionController) {
-
-                                        KeepDiceSectionController keepDiceSectionController) {
         this.rollDiceSectionUI = rollDiceSectionUI;
         this.keepDiceSectionController = keepDiceSectionController;
         rollDiceSectionUI.getRollerDiceButton().addActionListener(e -> rollDices());
         settingMouseEvent();
-
         listRandomDiceFace = new ArrayList<>();
     }
 
