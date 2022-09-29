@@ -14,11 +14,11 @@ public class StackButtonGroup extends JPanel {
     private final int posX = 715;
     private final int posY = 90;
     private final int height = 300;
-    private final int counter = 4;
-    private int count;
+    //private final int counter = 4;
+    //private int count;
 
     public StackButtonGroup(int y) {
-        count = counter;
+      //  count = counter;
         add(new StackTileButton());
         add(new StackTileButton());
         add(new StackTileButton());
