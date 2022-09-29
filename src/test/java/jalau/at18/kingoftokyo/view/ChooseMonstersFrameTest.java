@@ -12,7 +12,7 @@ public class ChooseMonstersFrameTest {
 
     @Test
     public void shouldHaveComponents() {
-        ChooseMonstersFrame chooseMonstersFrame = new ChooseMonstersFrame(new Game());
+        ChooseMonstersFrame chooseMonstersFrame = new ChooseMonstersFrame();
         assertEquals(3, chooseMonstersFrame.getContentPane().getComponentCount());
         assertEquals(JFrame.EXIT_ON_CLOSE, chooseMonstersFrame.getDefaultCloseOperation());
         assertEquals(BorderLayout.class, chooseMonstersFrame.getContentPane().getLayout().getClass());

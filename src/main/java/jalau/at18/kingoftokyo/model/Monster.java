@@ -3,7 +3,8 @@ package jalau.at18.kingoftokyo.model;
 public enum Monster {
     ALIENOID("Alienoid", "src/main/resources/kingoftokyo/monsters/Alienoid.png"),
     SPACE_PENGUIN("Space Penguin", "src/main/resources/kingoftokyo/monsters/Space_Penguin.png"),
-    CYBER_KITTY("Cyber Kitty", "src/main/resources/kingoftokyo/monsters/Cyber_Kitty.png");
+    CYBER_KITTY("Cyber Kitty", "src/main/resources/kingoftokyo/monsters/Cyber_Kitty.png"),
+    KOOKIE("Kookie", "");
 
     private final String name;
     private final String iconPath;

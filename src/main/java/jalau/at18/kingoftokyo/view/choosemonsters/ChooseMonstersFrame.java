@@ -1,6 +1,5 @@
 package jalau.at18.kingoftokyo.view.choosemonsters;
 
-import jalau.at18.kingoftokyo.Game;
 import jalau.at18.kingoftokyo.view.general.FooterPanel;
 import jalau.at18.kingoftokyo.view.general.HeaderPanel;
 
@@ -12,9 +11,9 @@ public class ChooseMonstersFrame extends JFrame {
     private static final int DEFAULT_WIDTH = 700;
     private static final int DEFAULT_HEIGHT = 500;
 
-    public ChooseMonstersFrame(Game game) {
+    public ChooseMonstersFrame() {
         HeaderPanel headerPanel = new HeaderPanel();
-        CenterPanel centerPanel = new CenterPanel(this, game);
+        CenterPanel centerPanel = new CenterPanel(this);
         FooterPanel footerPanel = new FooterPanel();
         initialize();
         add(headerPanel, BorderLayout.NORTH);
