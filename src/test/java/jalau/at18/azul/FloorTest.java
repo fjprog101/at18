@@ -2,6 +2,8 @@ package jalau.at18.azul;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.Test;
 
@@ -12,7 +14,11 @@ public class FloorTest {
         Floor floor = new Floor();
         floor.add(new Tile(TileColor.RED));
         floor.add(new Tile(TileColor.RED));
-        floor.addTilestoFloor(new Tile(TileColor.DARK), 3);
+        List<Tile> newf = new ArrayList<>();
+        newf.add(new Tile(TileColor.DARK));
+        newf.add(new Tile(TileColor.DARK));
+        newf.add(new Tile(TileColor.DARK));
+        floor.addTilestoFloor(newf);
         Floor expected = new Floor();
         expected.add(new Tile(TileColor.RED));
         expected.add(new Tile(TileColor.RED));
@@ -30,7 +36,10 @@ public class FloorTest {
         floor.add(new Tile(TileColor.DARK));
         floor.add(new Tile(TileColor.YELLOW));
         floor.add(new Tile(TileColor.WHITE));
-        floor.addTilestoFloor(new Tile(TileColor.BLUE), 3);
+        List<Tile> newf = new ArrayList<>();
+        newf.add(new Tile(TileColor.BLUE));
+        newf.add(new Tile(TileColor.BLUE));
+        floor.addTilestoFloor(newf);
         Floor expected = new Floor();
         expected.add(new Tile(TileColor.RED));
         expected.add(new Tile(TileColor.BLUE));
