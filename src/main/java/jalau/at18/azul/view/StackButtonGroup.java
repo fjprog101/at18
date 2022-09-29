@@ -57,6 +57,6 @@ public class StackButtonGroup extends JPanel {
             stackLabel.updateLabel(emptyTile.getColor().getName());
             stackLabel.updateColor(emptyTile.getColor().getColorPath());
         }
-        stackColorList.clear();
+        //stackColorList.clear();
     }
 }

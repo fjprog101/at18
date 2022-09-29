@@ -40,7 +40,7 @@ public class PyramidBoard extends JPanel {
     }
 
     public int sendEmptyTiles(int row) {
-        for (int index = DIVIDE_PYRAMID; index > 0; index--) {
+        for (int index = DIVIDE_PYRAMID; index >= 0; index--) {
             if (tileButton[row][index].getTileValue() == emptyTile.getColor().getName()) {
                 emptyColumn = index;
                 break;
