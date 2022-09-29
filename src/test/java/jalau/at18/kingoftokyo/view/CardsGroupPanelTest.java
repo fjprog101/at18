@@ -30,7 +30,6 @@ public class CardsGroupPanelTest {
         assertEquals(10, player2.getLifePoints());
         assertEquals(0, player1.getVictoryPoints());
         assertEquals(0, player1.getEnergy());
-        //Player[] playerList = {player1, player2};
         ArrayList<Player> playerList = new ArrayList<Player>();
 
         playerList.add(player1);
@@ -41,7 +40,7 @@ public class CardsGroupPanelTest {
         PlayerStatusController playerController = gameFrame.getPlayerController();
         CardsGroupPanel cardsGroup = new CardsGroupPanel(null, playerController);
         cardsGroup.sendEffect(effectsSetter);
-        assertEquals(12, player1.getLifePoints());
+        assertEquals(10, player1.getLifePoints());
         assertEquals(8, player2.getLifePoints());
         assertEquals(1, player1.getVictoryPoints());
         assertEquals(4, player1.getEnergy());
