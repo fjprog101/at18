@@ -1,10 +1,9 @@
 package jalau.at18.azul.controllerazul;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.List;
 
 import jalau.at18.azul.CenterTileBoard;
+import jalau.at18.azul.Floor;
 import jalau.at18.azul.Tile;
 import jalau.at18.azul.TileColor;
 import jalau.at18.azul.view.CenterButtons;
@@ -20,14 +19,16 @@ public class CenterToStack implements ActionListener {
     private FloorButtons floorButtons;
     private FloorButtons floorButtons2;
     private Tile first = new Tile(TileColor.FIRST);
-    private List<Tile> firsttile = new ArrayList<Tile>();
+    private Floor firsttile;
 
-    public CenterToStack(CenterTileBoard center, StackButtonGroup stack, CenterButtons centerbutton, FloorButtons newFloor1, FloorButtons newfloor2) {
+    public CenterToStack(CenterTileBoard center, StackButtonGroup stack, CenterButtons centerbutton, FloorButtons newFloor1,
+        FloorButtons newfloor2, Floor floor) {
         this.centerbutton = centerbutton;
         this.center = center;
         this.floorButtons = newFloor1;
         this.floorButtons2 = newfloor2;
         this.stackButtonGroup = stack;
+        this.firsttile = floor;
     }
 
     @Override

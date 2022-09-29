@@ -3,6 +3,7 @@ package jalau.at18.azul.view;
 import javax.swing.JPanel;
 
 import jalau.at18.azul.CenterTileBoard;
+import jalau.at18.azul.Floor;
 import jalau.at18.azul.Tile;
 import jalau.at18.azul.TileColor;
 import jalau.at18.azul.controllerazul.CenterToStack;
@@ -11,8 +12,9 @@ public class CenterButtons extends JPanel {
 
     private CenterToStack moveCenterTiles;
 
-    public CenterButtons(CenterTileBoard center, StackButtonGroup stackButtonGroup, FloorButtons floorbuttons1, FloorButtons floorbuttons2) {
-        moveCenterTiles = new CenterToStack(center, stackButtonGroup, this, floorbuttons1, floorbuttons2);
+    public CenterButtons(CenterTileBoard center, StackButtonGroup stackButtonGroup, FloorButtons floorbuttons1,
+        FloorButtons floorbuttons2, Floor floor) {
+        moveCenterTiles = new CenterToStack(center, stackButtonGroup, this, floorbuttons1, floorbuttons2, floor);
         add(new CenterTileButton(moveCenterTiles));
         add(new CenterTileButton(moveCenterTiles));
         add(new CenterTileButton(moveCenterTiles));

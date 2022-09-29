@@ -1,10 +1,9 @@
 package jalau.at18.azul.controllerazul;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.List;
 
-import jalau.at18.azul.Tile;
+
+import jalau.at18.azul.Floor;
 import jalau.at18.azul.view.FloorButtons;
 import jalau.at18.azul.view.PointerGroup;
 import jalau.at18.azul.view.PyramidBoard;
@@ -17,14 +16,15 @@ public class StackSenderController implements ActionListener {
     private FloorButtons floorButtons;
     private final int counter = 4;
     private int count;
-    private List<Tile> colorPyramidTilesList = new ArrayList<Tile>();
+    private Floor colorPyramidTilesList;
 
-    public StackSenderController(StackButtonGroup newStack, PointerGroup newPointer, PyramidBoard newPyramid, FloorButtons newFloor) {
+    public StackSenderController(StackButtonGroup newStack, PointerGroup newPointer, PyramidBoard newPyramid, FloorButtons newFloor, Floor floort) {
         count = counter;
         this.stackButtonGroup = newStack;
         this.pointerGroup = newPointer;
         this.pyramidBoard = newPyramid;
         this.floorButtons = newFloor;
+        this.colorPyramidTilesList = floort;
     }
 
     @Override

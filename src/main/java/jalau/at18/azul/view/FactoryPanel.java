@@ -4,6 +4,7 @@ import javax.swing.JPanel;
 
 import jalau.at18.azul.BagSender;
 import jalau.at18.azul.CenterTileBoard;
+import jalau.at18.azul.Floor;
 import jalau.at18.azul.controllerazul.TileController;
 
 import java.awt.*;
@@ -21,10 +22,10 @@ public class FactoryPanel extends JPanel {
 
     private CenterButtons centerTileButtonGroup;
     private CenterTileBoard centerBoard;
+    private Floor floorBoard;
     private StackButtonGroup stackButtonGroup;
     private PlayerPanel player1;
     private PlayerPanel player2;
-    private FloorButtons floorbutton;
 
     public FactoryPanel(StackButtonGroup newStack, PlayerPanel newPlayer1, PlayerPanel newPlayer2) {
         stackButtonGroup = newStack;
@@ -33,10 +34,11 @@ public class FactoryPanel extends JPanel {
         centerBoard = new CenterTileBoard();
         BagSender bag = new BagSender();
         bag.saveBag();
-        centerTileButtonGroup = new CenterButtons(centerBoard, stackButtonGroup, player1.getfloorButtonGroup(), player2.getfloorButtonGroup());
+        centerTileButtonGroup = new CenterButtons(centerBoard, stackButtonGroup, player1.getfloorButtonGroup(),
+        player2.getfloorButtonGroup(), player1.getfloor());
         setLayout(new GridLayout(ROWS, COLS, HORIZONTAL_GAP, VERTIXCAL_GAP));
         setBounds(X_INITIAL_POSITION, Y_INITIAL_POSITION, WIDTH, HEIGHT);
-        add(new BagButton(new TileController(this, bag, player1, player2, centerTileButtonGroup, centerBoard)));
+        add(new BagButton(new TileController(this, bag, player1, player2, centerTileButtonGroup, centerBoard, floorBoard)));
 
         add(centerTileButtonGroup);
         addFactories();

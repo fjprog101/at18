@@ -20,6 +20,9 @@ public class FloorTileButton extends JButton {
     public void updateLabel(String newText) {
         tileLabel.setText(newText);
     }
+    public String getLabel() {
+        return tileLabel.getText();
+    }
 
     public void updateColor(String newText) {
         ImageIcon newIcon = new ImageIcon("src/main/resources/azul/" + newText);
