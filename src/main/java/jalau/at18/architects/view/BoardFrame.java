@@ -20,6 +20,7 @@ public class BoardFrame extends JFrame {
     private BarConflictController barConflictController;
     private WonderController wonderController;
     private WarWinnerPointsView warWinnerPointsView;
+    private BluePointsView bluePointsView;
     private WonderStructure wonderStructure;
     private AddStageButton addStage;
     //private BuildStage buildStage;
@@ -36,11 +37,13 @@ public class BoardFrame extends JFrame {
         wonderStructure = new WonderStructure();
         addStage = new AddStageButton(wonderController);
         warWinnerPointsView = new WarWinnerPointsView();
+        bluePointsView = new BluePointsView();
         add(addStage);
         add(middleDeck);
         add(checkTheConflictTokens);
         add(wonderStructure);
         add(warWinnerPointsView);
+        add(bluePointsView);
         setTitle(WINDOW_NAME);
         setSize(WIDTH, HEIGHT);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
