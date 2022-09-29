@@ -1,20 +1,20 @@
 package jalau.at18.kingoftokyo.controller;
 
 import jalau.at18.kingoftokyo.model.*;
-import jalau.at18.kingoftokyo.view.rolldicesection.*;
+import jalau.at18.kingoftokyo.view.rolldicesection.DiceFaceLabel;
+import jalau.at18.kingoftokyo.view.rolldicesection.KeepDiceSectionUI;
 
 public class KeepDiceSectionController {
     private KeepDiceSectionUI keepDiceSectionUI;
-    private RollDiceSectionUI rollDiceSectionUI;
+    private RollDiceSectionController rollDiceSectionController;
     private DiceFaceKeeper diceFaceKeeper;
     private DiceFaceKeeperProcess diceFaceKeeperProcess;
     private DiceFaceKeeperResult diceFaceKeeperResult;
     private DiceFaceTurnResult diceFaceTurnResult;
     private int countDiceFaceSet = 0;
 
-    public KeepDiceSectionController(KeepDiceSectionUI keepDiceSectionUI, RollDiceSectionUI rollDiceSectionUI) {
+    public KeepDiceSectionController(KeepDiceSectionUI keepDiceSectionUI) {
         this.keepDiceSectionUI = keepDiceSectionUI;
-        this.rollDiceSectionUI = rollDiceSectionUI;
         this.diceFaceKeeper = new DiceFaceKeeper();
         this.diceFaceKeeperProcess = new DiceFaceKeeperProcess(diceFaceKeeper);
         this.diceFaceKeeperResult = new DiceFaceKeeperResult(diceFaceKeeperProcess);
@@ -47,15 +47,17 @@ public class KeepDiceSectionController {
         int score = diceFaceTurnResult.getScorePoint();
         int energy = diceFaceTurnResult.getEnergyPoint();
         int[] effect = {healing, damage, score, energy};
-        keepDiceSectionUI.sendResults(effect); //For chenge player atributes
-        String result = String.valueOf(healing) + String.valueOf(damage)
-                + String.valueOf(score) + String.valueOf(energy);
-        keepDiceSectionUI.getDisplayResult().setText(result);
+        countDiceFaceSet = 0;
+        keepDiceSectionUI.sendResults(effect); // For change player atributes
         keepDiceSectionUI.resetUI();
-        rollDiceSectionUI.resetUI();
+        rollDiceSectionController.resetUI();
     }
 
     public KeepDiceSectionUI getKeepDiceSectionUI() {
         return keepDiceSectionUI;
+    }
+
+    public void setRollDiceSectionController(RollDiceSectionController rollDiceSectionControllerr) {
+        this.rollDiceSectionController = rollDiceSectionControllerr;
     }
 }
