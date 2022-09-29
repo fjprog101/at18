@@ -58,9 +58,9 @@ public class KeepDiceSectionController {
     public KeepDiceSectionUI getKeepDiceSectionUI() {
         return keepDiceSectionUI;
     }
-    
-    public void addTurnPanel(TurnPanel turnPanel) {
-        this.turnPanel = turnPanel;
+
+    public void addTurnPanel(TurnPanel newTurnPanel) {
+        this.turnPanel = newTurnPanel;
     }
 
 }

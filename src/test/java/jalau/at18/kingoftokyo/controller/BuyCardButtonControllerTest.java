@@ -24,7 +24,7 @@ public class BuyCardButtonControllerTest {
         player2.setEnergy(8);
         ArrayList<Player> playerList = new ArrayList<Player>();
         playerList.add(player1);
-        playerList.add(player1);
+        playerList.add(player2);
         Turn turn = new Turn(playerList);
 
         CardPanel cardPanel = new CardPanel(turn, new CompleteCard(DiscardCards.ENERGIZE));
@@ -36,21 +36,6 @@ public class BuyCardButtonControllerTest {
     }
     @Test
     public void shouldSetCardPanel() {
-        Player player1 = new Player();
-        player1.addMonster(Monster.ALIENOID);
-        Player player2 = new Player();
-        player2.addMonster(Monster.CYBER_KITTY);
-        player2.setEnergy(8);
-        ArrayList<Player> playerList = new ArrayList<Player>();
-        playerList.add(player1);
-        playerList.add(player1);
-        Turn turn = new Turn(playerList);
 
-        CardPanel cardPanel = new CardPanel(turn, new CompleteCard(DiscardCards.ENERGIZE));
-        BuyCardButtomController buyController = new BuyCardButtomController(turn, cardPanel);
-
-        assertFalse(buyController.enoughEnergy());
-        turn.changePlayerWithTheTurn();
-        assertTrue(buyController.enoughEnergy());
     }
 }

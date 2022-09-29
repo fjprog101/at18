@@ -23,7 +23,7 @@ public class EndTurnButtonController implements ActionListener {
         rollDiceSectionController.resetUI();
     }
 
-    public void addRollDiceSectionController(RollDiceSectionController rollDiceSectionController) {
-        this.rollDiceSectionController = rollDiceSectionController;
+    public void addRollDiceSectionController(RollDiceSectionController newRollDiceSectionController) {
+        this.rollDiceSectionController = newRollDiceSectionController;
     }
 }
