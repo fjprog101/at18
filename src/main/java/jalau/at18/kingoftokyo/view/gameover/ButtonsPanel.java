@@ -1,4 +1,4 @@
-package jalau.at18.kingoftokyo.view;
+package jalau.at18.kingoftokyo.view.gameover;
 
 import javax.swing.Box;
 import javax.swing.BoxLayout;
