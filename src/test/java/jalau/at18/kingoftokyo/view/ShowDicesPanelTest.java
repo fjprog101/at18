@@ -1,10 +1,7 @@
 package jalau.at18.kingoftokyo.view;
 
 import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
-
-import jalau.at18.kingoftokyo.view.rolldicesection.RollDiceSectionUI;
 import jalau.at18.kingoftokyo.view.whostart.ShowDicesPanel;
 
 public class ShowDicesPanelTest {

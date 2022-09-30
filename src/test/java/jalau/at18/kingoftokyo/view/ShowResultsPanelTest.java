@@ -8,6 +8,7 @@ import org.junit.Test;
 
 import jalau.at18.kingoftokyo.model.Monster;
 import jalau.at18.kingoftokyo.model.Player;
+import jalau.at18.kingoftokyo.view.whostart.PlayerNameLabel;
 import jalau.at18.kingoftokyo.view.whostart.ShowResultsPanel;
 
 public class ShowResultsPanelTest {
@@ -25,6 +26,16 @@ public class ShowResultsPanelTest {
 
         assertEquals(300, showResultsPanel.getBounds().getWidth(), 0);
         assertEquals(200, showResultsPanel.getBounds().getHeight(), 0);
+
+    }
+    @Test
+    public void TextToplayername() {
+        
+        String playername = "name";
+        PlayerNameLabel playerNameLabel = new PlayerNameLabel(playername);
+        int cantPunching = 3;
+        playerNameLabel.setPlayerName(cantPunching);
+        assertEquals(" * name punching amount  =  3", playerNameLabel.getText());
 
     }
 }
