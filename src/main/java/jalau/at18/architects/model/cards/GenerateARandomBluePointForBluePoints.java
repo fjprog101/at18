@@ -16,7 +16,10 @@ public class GenerateARandomBluePointForBluePoints {
                 return bluePoints;
             default:
                 System.out.println("Random number out of Range");
+                return bluePoints;
         }
-        return bluePoints;
+    }
+    public void setRandonNumber(int testNumber) {
+        randomNum = testNumber;
     }
 }

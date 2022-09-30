@@ -8,11 +8,11 @@ public class RandomColor {
 
     public RandomColor() {
         this.finalColor = "";
-        randomColor();
+        Random random = new Random();
+        numberIdentifier = random.nextInt(Colors.values().length) + 1;
     }
 
     public void randomColor() {
-        numberIdentifier = new Random().nextInt(Colors.values().length);
         for (Colors color:Colors.values()) {
             if (color.getNumberIdentifier() == numberIdentifier) {
                 finalColor = color.getColor();
@@ -20,6 +20,10 @@ public class RandomColor {
         }
     }
     public String getFinalColor() {
+        randomColor();
         return finalColor;
+    }
+    public void setRandomNumber(int numberTest) {
+        numberIdentifier = numberTest;
     }
 }

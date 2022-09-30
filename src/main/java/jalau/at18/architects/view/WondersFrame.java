@@ -37,4 +37,8 @@ public class WondersFrame extends JFrame {
     public void addNewComponents() {
         add(new WonderStructure());
     }
+    public void closeWindow() {
+        this.dispose();
+        new BoardFrame(this.getChoice().getSelectedItem().toString());
+    }
 }

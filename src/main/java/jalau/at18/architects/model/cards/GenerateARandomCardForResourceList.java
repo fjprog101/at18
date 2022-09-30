@@ -29,4 +29,7 @@ public class GenerateARandomCardForResourceList {
     public int getRandomNumber() {
         return randomNum;
     }
+    public void setRandomNumber(int testNumber) {
+        randomNum = testNumber;
+    }
 }

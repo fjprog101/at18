@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import jalau.at18.architects.model.cards.RedCard;
 import jalau.at18.architects.model.wonders.Wonders;
 
 public class PlayerTest {
@@ -30,4 +31,13 @@ public class PlayerTest {
         assertEquals(0, player.getPlaycard().getMilitarySection().getTemporalShield());
         assertEquals(0, player.getPlaycard().getMilitarySection().getPermanentShield());
     }
+    @Test
+    public void shouldAddCardToPlayCard() {
+        Player player = new Player("Jose", Wonders.FOUR);
+        RedCard card = new RedCard(2);
+        player.addNewCard(card);
+        Playcard playcard = player.getPlaycard();
+        assertEquals(1, playcard.getMilitarySection().getTemporalShield());
+    }
+
 }
