@@ -17,7 +17,6 @@ public class PlayerStatusControllerTest {
         player1.addMonster(Monster.ALIENOID);
         Player player2 = new Player();
         player2.addMonster(Monster.CYBER_KITTY);
-        //Player[] playerList = {player1, player2};
 
         ArrayList<Player> playerList = new ArrayList<Player>();
         playerList.add(player1);
@@ -47,5 +46,6 @@ public class PlayerStatusControllerTest {
         playerController.setPlayersStatus(effectsSetter2);
         assertEquals(8, player1.getLifePoints());
         assertEquals(0, player2.getLifePoints());
+        
     }
 }

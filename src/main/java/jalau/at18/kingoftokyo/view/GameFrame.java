@@ -51,4 +51,7 @@ public class GameFrame extends JFrame {
     public PlayerStatusController getPlayerController() {
         return playerController;
     }
+    public WinOrLoseController getWinLoseController() {
+        return winOrLoseController;
+    }
 }
