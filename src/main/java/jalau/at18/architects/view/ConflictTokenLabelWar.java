@@ -9,7 +9,7 @@ public class ConflictTokenLabelWar extends JLabel {
     public static final int DEFAULT_SIZE_2 = 50;
     public static final int DEFAULT_SIZE_1 = 50;
     public static final int SPACE_SIZE = 2;
-    private String direction = "src/main/resources/architects/images/WarToken.png";
+    private String direction = "src/main/resources/architects/icons/war.png";
 
     public ConflictTokenLabelWar() {
         super("");

@@ -18,6 +18,8 @@ public class MiddleDeck extends JPanel {
         loadCards();
     }
     private void initComponets() {
+        setOpaque(false);
+        // setBackground(Color.black);
         setBackground(Color.black);
         setLayout(new GridLayout(1, 1));
     }
