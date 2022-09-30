@@ -2,6 +2,9 @@ package jalau.at18.azul.view;
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import jalau.at18.azul.controllerazul.MoveTileController;
@@ -12,7 +15,8 @@ public class FactoryButtonGroup extends JPanel {
 
     private MoveTileController moveTiles;
     private CenterTileBoard centerBoard;
-    private List<Tile> colorListFactory = new ArrayList();
+    private List<Tile> colorListFactory = new ArrayList<Tile>();
+    private static int components = 5;
 
     public FactoryButtonGroup(CenterButtons tilesCenter, CenterTileBoard center, StackButtonGroup stackButtonGroup) {
         this.centerBoard = center;
@@ -21,11 +25,16 @@ public class FactoryButtonGroup extends JPanel {
         add(new TilesButton(moveTiles));
         add(new TilesButton(moveTiles));
         add(new TilesButton(moveTiles));
-        setBackground(Color.CYAN);
+        setBackground(Color.WHITE);
+        JLabel label = new JLabel();
+        ImageIcon newIcon = new ImageIcon("src/main/resources/azul/factorybackground.jpg");
+        label.setIcon(newIcon);
+        add(label);
+
     }
 
     public void updateButtonGroup(List<Tile> newValues) {
-        for (int index = 0; index < getComponentCount(); index++) {
+        for (int index = 0; index < 4; index++) {
             TilesButton dieLabel = (TilesButton) getComponent(index);
             Tile dieSource = newValues.get(index);
             dieLabel.updateLabel(dieSource.getColor().getName());
@@ -34,7 +43,7 @@ public class FactoryButtonGroup extends JPanel {
     }
 
     public List<Tile> fillArrayList() {
-        for (int index = 0; index < getComponentCount(); index++) {
+        for (int index = 0; index < 4; index++) {
             TilesButton buttonSelected = (TilesButton) getComponent(index);
             colorListFactory.add(new Tile(TileColor.valueOf(buttonSelected.getTileValue())));
         }
@@ -42,7 +51,7 @@ public class FactoryButtonGroup extends JPanel {
     }
 
     public void clearFactoryTiles() {
-        for (int index = 0; index < getComponentCount(); index++) {
+        for (int index = 0; index < 4; index++) {
             TilesButton buttonSelected = (TilesButton) getComponent(index);
             Tile empty = new Tile(TileColor.EMPTY);
             buttonSelected.updateLabel(empty.getColor().getName());
@@ -54,7 +63,7 @@ public class FactoryButtonGroup extends JPanel {
     public boolean isFactoryEmpty() {
         boolean isEmpty = false;
         Tile empty = new Tile(TileColor.EMPTY);
-        for (int index = 0; index < getComponentCount(); index++) {
+        for (int index = 0; index < 4; index++) {
             TilesButton buttonSelected = (TilesButton) getComponent(index);
             if (buttonSelected.getTileValue() == empty.getColor().getName()) {
                 isEmpty = true;
