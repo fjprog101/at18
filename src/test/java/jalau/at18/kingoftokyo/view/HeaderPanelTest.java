@@ -49,7 +49,7 @@ public class HeaderPanelTest {
     @Test
     public void shouldShowUsernameTextBox() {
         UsernameTextBox usernameTextBox = new UsernameTextBox();
-        assertEquals("Serif.bold", usernameTextBox.getFont().getFontName());
+        assertEquals("Serif.plain", usernameTextBox.getFont().getFontName());
         assertEquals(18, usernameTextBox.getFont().getSize());
         assertEquals(true, usernameTextBox.isFontSet());
 
