@@ -5,7 +5,7 @@ import jalau.at18.kingoftokyo.controller.PlayerStatusController;
 import jalau.at18.kingoftokyo.model.*;
 import jalau.at18.kingoftokyo.view.board.BoardPanel;
 import jalau.at18.kingoftokyo.view.card.CardsGroupPanel;
-import jalau.at18.kingoftokyo.view.playercards.PlayerCardsGroupPanel;
+import jalau.at18.kingoftokyo.view.playercard.PlayerCardsGroupPanel;
 import jalau.at18.kingoftokyo.view.rolldicesection.DiceSectionUI;
 
 public class GameFrame extends JFrame {

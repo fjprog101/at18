@@ -5,7 +5,7 @@ import static org.junit.Assert.assertFalse;
 
 import jalau.at18.kingoftokyo.model.Monster;
 import jalau.at18.kingoftokyo.model.Player;
-import jalau.at18.kingoftokyo.view.playercards.*;
+import jalau.at18.kingoftokyo.view.playercard.PlayerCard;
 
 import org.junit.Test;
 

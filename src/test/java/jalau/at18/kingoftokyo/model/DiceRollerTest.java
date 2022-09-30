@@ -2,18 +2,20 @@ package jalau.at18.kingoftokyo.model;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
+import static org.junit.Assert.assertTrue;
+import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-
 public class DiceRollerTest {
+
     @Test
-    public void shouldReturnListRandomDice() {
-        final int countDicesAvailables = 3;
+    public void diceRoller() {
+
+        int countDicesAvailables = 6;
         DiceRoller diceRoller = new DiceRoller();
-        List<DiceFace> listDiceFace = new ArrayList<>();
-        listDiceFace = diceRoller.randomDice(countDicesAvailables);
-        assertEquals(countDicesAvailables, listDiceFace.size());
+
+        List newList =  diceRoller.randomDice(countDicesAvailables);
+        List<DiceFace> ListDiceFace = Arrays.asList(DiceFace.values());
+        assertTrue(ListDiceFace.contains(newList.get(0)));
     }
 }

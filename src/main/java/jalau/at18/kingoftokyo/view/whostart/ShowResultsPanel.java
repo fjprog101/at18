@@ -25,6 +25,7 @@ public class ShowResultsPanel extends JPanel  {
             add(playerNameLabel);
         }
     }
+
     public void setTextComponent(int count, int cantPunching) {
         ((PlayerNameLabel) getComponent(count)).setPlayerName(cantPunching);
     }
@@ -32,6 +33,7 @@ public class ShowResultsPanel extends JPanel  {
     public PlayerNameLabel getPlayerNameLabel(int index) {
         return (PlayerNameLabel) getComponent(index);
     }
+
     public ArrayList<Player>  getArrayPlayer() {
         return playerList;
     }
