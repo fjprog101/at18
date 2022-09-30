@@ -81,6 +81,7 @@ public class TileController implements ActionListener {
         }
         center.updateCenterButtons(firstplayer.addFirstPlayer());
         player1.getfloor().clear();
+        player2.getfloor().clear();
         player1.getfloorButtonGroup().clearFloorTiles();
         player2.getfloorButtonGroup().clearFloorTiles();
     }
