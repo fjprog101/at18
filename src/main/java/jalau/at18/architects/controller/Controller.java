@@ -12,14 +12,14 @@ public class Controller implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == wondersFrame.getButton() && pressedCheckBox) {
-            wondersFrame.getContentPane().removeAll();
-            wondersFrame.repaint();
-            System.out.println("Pressed start");
+            wondersFrame.getTextField();
             wondersFrame.closeWindow();
 
         } else if (e.getSource() == wondersFrame.getChoice()) {
             wondersFrame.setLabels("Game players: " + wondersFrame.getChoice().getSelectedItem().toString());
             pressedCheckBox = true;
+            wondersFrame.addNewComponents(Integer.parseInt(wondersFrame.getChoice().getSelectedItem().toString()));
+
         }
     }
 }
