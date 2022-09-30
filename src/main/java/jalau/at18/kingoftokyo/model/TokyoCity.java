@@ -1,8 +1,15 @@
 package jalau.at18.kingoftokyo.model;
 
-public class TokyoCity extends Board {
+import java.util.ArrayList;
+
+public class TokyoCity extends Board implements Subject {
     private Monster monsterInsideTokyo;
     private boolean monsterInside;
+    private ArrayList<Observer> observers;
+
+    public TokyoCity() {
+        observers = new ArrayList<Observer>();
+    }
 
     @Override
     public boolean thereIsMonsterInside() {
@@ -15,6 +22,7 @@ public class TokyoCity extends Board {
             monsterInsideTokyo = player.getMonster();
             monsterInside = true;
         }
+        notifyObservers();
     }
 
     @Override
@@ -28,5 +36,17 @@ public class TokyoCity extends Board {
     @Override
     public Monster getMonster() {
         return monsterInsideTokyo;
+    }
+
+    @Override
+    public void addObserver(Observer observer) {
+        observers.add(observer);
+    }
+
+    @Override
+    public void notifyObservers() {
+        for (Observer observer : observers) {
+            observer.update();
+        }
     }
 }

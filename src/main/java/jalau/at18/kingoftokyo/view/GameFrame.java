@@ -31,7 +31,7 @@ public class GameFrame extends JFrame {
         DiceSectionUI diceSectionUI = new DiceSectionUI(turnPanel, playerController);
         add(diceSectionUI);
         add(new CardsGroupPanel(turn, playerController));
-        add(new BoardPanel(Monster.ALIENOID));
+        add(new BoardPanel());
         turnPanel.addRollDiceController(diceSectionUI.getController());
         add(turnPanel);
     }

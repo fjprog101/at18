@@ -13,7 +13,7 @@ public class BoardPanelTest {
     public void shouldShowTheBoard() {
         Player player = new Player();
         player.addMonster(Monster.ALIENOID);
-        BoardPanel boardpanel = new BoardPanel(Monster.ALIENOID);
+        BoardPanel boardpanel = new BoardPanel();
         assertEquals(1, boardpanel.getComponentCount());
         assertEquals(500, boardpanel.getWidth());
         assertEquals(500, boardpanel.getHeight());
