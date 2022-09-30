@@ -53,14 +53,5 @@ public class WhoStartRollDiceControllerTest {
 
         WhoStartRollDiceController whoStartRollDiceController = new WhoStartRollDiceController(whoStartFrame, rollDiceSectionUI, showResultsPanel, startGameButton);
 
-    } /*
-    @Test
-    public void shouldSetupAsButtonWithRollText() {
-        RollerButton roller = new RollerButton();
-        assertEquals("Roll Dice", roller.getText());
-        assertEquals(RollerButton.DEFAULT_POSX, roller.getBounds().getX(), 0);
-        assertEquals(RollerButton.DEFAULT_POSY, roller.getBounds().getY(), 0);
-        assertEquals(RollerButton.DEFAULT_WIDTH, roller.getBounds().getWidth(), 0);
-        assertEquals(RollerButton.DEFAULT_HEIGHT, roller.getBounds().getHeight(), 0);
-    }*/
+    }
 }
