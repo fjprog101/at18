@@ -1,6 +1,4 @@
 package jalau.at18.architects.view;
-
-import java.awt.Color;
 import javax.swing.JPanel;
 
 public class BluePointsView extends JPanel {

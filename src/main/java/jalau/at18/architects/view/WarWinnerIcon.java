@@ -15,8 +15,7 @@ public class WarWinnerIcon extends JLabel {
     public WarWinnerIcon() {
         setBounds(POSITION_X, POSITION_Y, WIDTH, HEIGHT);
         ImageIcon image = new ImageIcon("src/main/resources/architects/icons/fichapv.png");
-        Icon icon = new ImageIcon(image.getImage().getScaledInstance(WIDTH, HEIGHT,
-        WIDTH));
+        Icon icon = new ImageIcon(image.getImage().getScaledInstance(WIDTH, HEIGHT, WIDTH));
         setIcon(icon);
         setAlignmentX(Component.CENTER_ALIGNMENT);
         setVisible(true);
