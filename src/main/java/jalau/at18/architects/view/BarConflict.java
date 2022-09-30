@@ -8,8 +8,8 @@ import jalau.at18.architects.model.RedCardForDeck;
 import java.awt.*;
 
 public class BarConflict extends JPanel {
-    public static final int POS_X = 5;
-    public static final int POS_Y = 5;
+    public static final int POS_X = 60;
+    public static final int POS_Y = 30;
     public static final int WIDTH = 275;
     public static final int HEIGHT = 75;
     public static final int SPACE_SIZE = 2;
@@ -38,6 +38,7 @@ public class BarConflict extends JPanel {
     }
 
     private void loadTokens(int quantityOfPlayers) {
+        setOpaque(false);
         setBorder(new EmptyBorder(SPACE_SIZE, 0, SPACE_SIZE, SPACE_SIZE));
         setBounds(POS_X, POS_Y, WIDTH, HEIGHT);
         switch (quantityOfPlayers) {

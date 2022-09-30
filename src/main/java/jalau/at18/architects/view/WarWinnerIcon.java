@@ -9,14 +9,13 @@ import javax.swing.JLabel;
 public class WarWinnerIcon extends JLabel {
     private static final int POSITION_X = 0;
     private static final int POSITION_Y = 0;
-    private static final int WIDTH = 40;
-    private static final int HEIGHT = 40;
+    private static final int WIDTH = 80;
+    private static final int HEIGHT = 80;
 
     public WarWinnerIcon() {
         setBounds(POSITION_X, POSITION_Y, WIDTH, HEIGHT);
-        ImageIcon image = new ImageIcon("src/main/resources/architects/tokens/warwinnertokens.png");
-        Icon icon = new ImageIcon(image.getImage().getScaledInstance(WIDTH, HEIGHT,
-                WIDTH));
+        ImageIcon image = new ImageIcon("src/main/resources/architects/icons/fichapv.png");
+        Icon icon = new ImageIcon(image.getImage().getScaledInstance(WIDTH, HEIGHT, WIDTH));
         setIcon(icon);
         setAlignmentX(Component.CENTER_ALIGNMENT);
         setVisible(true);
