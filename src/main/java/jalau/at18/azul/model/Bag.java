@@ -5,7 +5,7 @@ import java.util.*;
 public class Bag {
 
     private ArrayList<Tile> bag;
-    private static final int NUMBER_ONE_COLOR = 20;
+    private static final int NUMBER_ONE_COLOR = 24;
     private static final int NUMBER_OF_COLORS = 5;
 
     public Bag() {

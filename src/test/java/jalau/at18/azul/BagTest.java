@@ -19,19 +19,19 @@ public class BagTest {
         ArrayList<Tile> aBag = new ArrayList<>();
         Bag myBag = new Bag();
 
-        for (int index = 0; index < 20; index++){
+        for (int index = 0; index < 24; index++){
             aBag.add(new Tile(TileColor.RED));
         }
-        for (int index = 0; index < 20; index++){
+        for (int index = 0; index < 24; index++){
             aBag.add(new Tile(TileColor.YELLOW));
         }
-        for (int index = 0; index < 20; index++){
+        for (int index = 0; index < 24; index++){
             aBag.add(new Tile(TileColor.DARK));
         }
-        for (int index = 0; index < 20; index++){
+        for (int index = 0; index < 24; index++){
             aBag.add(new Tile(TileColor.BLUE));
         }
-        for (int index = 0; index < 20; index++){
+        for (int index = 0; index < 24; index++){
             aBag.add(new Tile(TileColor.WHITE));
         }
 
