@@ -28,6 +28,7 @@ public class WinOrLoseController implements Observer {
     }
 
     public void playerWin(Player player) {
+        dialog.showMessageToWin(player);
     }
 
     public void playerLose(Player player) {
