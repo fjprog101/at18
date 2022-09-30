@@ -7,23 +7,18 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.border.LineBorder;
 
-import jalau.at18.war.model.Game;
-
 public class WarFrame extends JFrame {
 
     public WarFrame() {
-        // Initialize controller with reference to this ui frame
-        // so that controller can update the frame components
-        Game theGame = new Game();
-        initialize(theGame);
+        initialize();
     }
 
-    private void initialize(Game game) {
+    private void initialize() {
         // Add 4 players
-        add(new PlayerPanel(game), BorderLayout.PAGE_START);
-        add(new PlayerPanel(game), BorderLayout.LINE_END);
-        add(new PlayerPanel(game), BorderLayout.PAGE_END);
-        add(new PlayerPanel(game), BorderLayout.LINE_START);
+        add(new PlayerPanel(), BorderLayout.PAGE_START);
+        add(new PlayerPanel(), BorderLayout.LINE_END);
+        add(new PlayerPanel(), BorderLayout.PAGE_END);
+        add(new PlayerPanel(), BorderLayout.LINE_START);
 
         // Add world map
         JLabel worldMap = new JLabel(new ImageIcon("src/main/resources/war/world-map.png"));

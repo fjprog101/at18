@@ -5,9 +5,11 @@ import java.util.List;
 
 public class Game {
 
+    public static final Game INSTANCE = new Game();
+
     private List<Player> players;
 
-    public Game() {
+    private Game() {
         players = new ArrayList<Player>();
     }
 
