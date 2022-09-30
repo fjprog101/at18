@@ -1,4 +1,4 @@
-package jalau.at18.kingoftokyo.view;
+package jalau.at18.kingoftokyo.view.gameover;
 
 import javax.swing.BoxLayout;
 import javax.swing.JLabel;
@@ -7,7 +7,7 @@ import javax.swing.JPanel;
 import java.awt.Component;
 import java.awt.Font;
 
-public class LabelsPanel extends JPanel{
+public class LabelsPanel extends JPanel {
     private static final int DEFAULT_WIDTH = 500;
     private static final int DEFAULT_HEIGHT = 100;
     private static final String FONT_NAME = "Serif";
@@ -28,5 +28,4 @@ public class LabelsPanel extends JPanel{
         thanksLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         thanksLabel.setFont(new Font(FONT_NAME, Font.BOLD, FONT_SIZE_THANKS));
     }
-
 }

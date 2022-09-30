@@ -1,4 +1,4 @@
-package jalau.at18.kingoftokyo.view;
+package jalau.at18.kingoftokyo.view.gameover;
 
 import javax.swing.*;
 
@@ -22,5 +22,4 @@ public class GameOverFrame extends JFrame {
         setLayout(null);
         setVisible(true);
     }
-    
 }
