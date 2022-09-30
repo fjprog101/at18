@@ -18,7 +18,6 @@ public class Controller implements ActionListener {
             int numberOfPlayers = Integer.valueOf(wondersFrame.getChoice().getSelectedItem().toString());
             Game game = Game.getInstance();
             game.initGame(numberOfPlayers);
-
         } else if (e.getSource() == wondersFrame.getChoice()) {
             wondersFrame.setLabels("Game players: " + wondersFrame.getChoice().getSelectedItem().toString());
             pressedCheckBox = true;
