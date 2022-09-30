@@ -15,7 +15,7 @@ public class BoardPanel extends JPanel {
         setBounds(POSITION_X, POSITION_Y, SIZE,
                 SIZE);
         setLayout(null);
-        add(new BoardView());
+        add(new BoardView(monster));
     }
 
 }

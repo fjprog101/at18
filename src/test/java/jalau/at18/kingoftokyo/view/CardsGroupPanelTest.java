@@ -15,7 +15,7 @@ public class CardsGroupPanelTest {
         assertEquals(5, cardsGroup.getComponentCount());
         assertEquals(950, cardsGroup.getBounds().getX(), 0);
         assertEquals(185, cardsGroup.getBounds().getY(), 0);
-        assertEquals(470, cardsGroup.getBounds().getWidth(), 0);
+        assertEquals(550, cardsGroup.getBounds().getWidth(), 0);
         assertEquals(250, cardsGroup.getBounds().getHeight(), 0);
         assertTrue(cardsGroup.isVisible());
     }
@@ -36,7 +36,7 @@ public class CardsGroupPanelTest {
         playerList.add(player2);
         Turn turn = new Turn(playerList);
         GameFrame gameFrame = new GameFrame(turn);
-        int[] effectsSetter = {2, 2, 1, 4};
+        int[] effectsSetter = {2, 2, 1, 4 };
         PlayerStatusController playerController = gameFrame.getPlayerController();
         CardsGroupPanel cardsGroup = new CardsGroupPanel(null, playerController);
         cardsGroup.sendEffect(effectsSetter);

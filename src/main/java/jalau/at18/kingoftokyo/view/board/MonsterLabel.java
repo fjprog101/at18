@@ -8,19 +8,18 @@ import javax.swing.JLabel;
 
 import jalau.at18.kingoftokyo.model.Monster;
 
-public class BoardView extends JLabel {
-    private static final int POSITION_X = 0;
-    private static final int POSITION_Y = 0;
-    private static final int SIZE = 500;
+public class MonsterLabel extends JLabel {
+    private static final int POSITION_X = 60;
+    private static final int POSITION_Y = 130;
+    private static final int SIZE = 100;
 
-    public BoardView(Monster monster) {
+    public MonsterLabel(Monster monster) {
         setBounds(POSITION_X, POSITION_Y, SIZE, SIZE);
-        ImageIcon image = new ImageIcon("src/main/resources/kingoftokyo/board.png");
+        ImageIcon image = new ImageIcon(monster.getIconPath());
         Icon icon = new ImageIcon(image.getImage().getScaledInstance(SIZE, SIZE,
                 SIZE));
         setIcon(icon);
         setAlignmentX(Component.CENTER_ALIGNMENT);
         setVisible(true);
-        add(new MonsterLabel(monster));
     }
 }

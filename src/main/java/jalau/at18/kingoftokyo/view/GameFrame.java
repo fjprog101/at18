@@ -11,7 +11,7 @@ import jalau.at18.kingoftokyo.view.rolldicesection.DiceSectionUI;
 
 public class GameFrame extends JFrame {
     private static final int DEFAULT_POS = 30;
-    private static final int DEFAULT_WIDTH = 1500;
+    private static final int DEFAULT_WIDTH = 1600;
     private static final int DEFAULT_HEIGHT = 700;
 
     private Turn turn;
