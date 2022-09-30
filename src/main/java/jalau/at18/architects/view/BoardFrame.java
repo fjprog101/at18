@@ -14,6 +14,7 @@ public class BoardFrame extends JFrame {
     public static final int COLOR1 = 125;
     public static final int COLOR2 = 245;
     public static final int COLOR3 = 230;
+
     private String numbersOfPlayers;
     private MiddleDeck middleDeck;
     private CheckTheConflictTokens checkTheConflictTokens;
@@ -23,7 +24,48 @@ public class BoardFrame extends JFrame {
     private BluePointsView bluePointsView;
     private WonderStructure wonderStructure;
     private AddStageButton addStage;
-    //private BuildStage buildStage;
+
+    private static final int DECK_POSITION_X = 360;
+    private static final int DECK_POSITION_Y = 0;
+    private static final int DECK_WIDTH = 140;
+    private static final int DECK_HEIGHT = 200;
+
+    private static final int DECK1_POSITION_X = 60;
+    private static final int DECK1_POSITION_Y = 250;
+
+    private static final int DECK2_POSITION_X = 660;
+    private static final int DECK2_POSITION_Y = 250;
+
+    private static final int WONDER_POSITION_X = 270;
+    private static final int WONDER_POSITION_Y = 240;
+    private static final int WONDER_WIDTH = 300;
+    private static final int WONDER_HEIGHT = 240;
+
+    private static final int WAR_POINT_POSITION_X = 600;
+    private static final int WAR_POINT_POSITION_Y = 600;
+    private static final int POINT_WIDTH = 80;
+    private static final int POINT_HEIGHT = 80;
+
+    private static final int BLUE_POINT_POSITION_X = 500;
+    private static final int BLUE_POINT_POSITION_Y = 600;
+
+    private static final int MILITARY_T_POSITION_X = 600;
+    private static final int MILITARY_T_POSITION_Y = 500;
+
+    private static final int MILITARY_P_POSITION_X = 500;
+    private static final int MILITARY_P_POSITION_Y = 500;
+
+    private static final int SIENCE_POSITION_X = 80;
+    private static final int SIENCE_POSITION_Y = 600;
+    private static final int SIENCE_WIDTH = 400;
+    private static final int SIENCE_HEIGHT = 80;
+
+    private static final int RESOURCE_POSITION_X = 80;
+    private static final int RESOURCE_POSITION_Y = 500;
+    private static final int RESOURCE_WIDTH = 400;
+    private static final int RESOURCE_HEIGHT = 80;
+
+    // private BuildStage buildStage;
     public BoardFrame(String numberOfPlayers) {
         setResizable(false);
         barConflictController = new BarConflictController(this);
@@ -36,55 +78,54 @@ public class BoardFrame extends JFrame {
         middleDeck = new MiddleDeck();
         MiddleDeck middleDeck1 = new MiddleDeck();
         MiddleDeck middleDeck2 = new MiddleDeck();
-        BluePointsView bluePointsView1 = new BluePointsView();
-        
+
         setContentPane(new JLabel(new ImageIcon("src/main/resources/architects/images/backimage.jpg")));
-        
+
         checkTheConflictTokens = new CheckTheConflictTokens(barConflictController);
-        
+
         wonderStructure = new WonderStructure();
         addStage = new AddStageButton(wonderController);
 
         warWinnerPointsView = new WarWinnerPointsView();
-        WarWinnerPointsView warWinnerPointsView1 = new WarWinnerPointsView();
         bluePointsView = new BluePointsView();
 
-        add(addStage);//button
-        middleDeck.setBounds(360, 0, 140, 200);
+        add(addStage); // button
+        middleDeck.setBounds(DECK_POSITION_X, DECK_POSITION_Y, DECK_WIDTH, DECK_HEIGHT);
         add(middleDeck);
-        middleDeck1.setBounds(60, 250, 140, 200);
+        middleDeck1.setBounds(DECK1_POSITION_X, DECK1_POSITION_Y, DECK_WIDTH, DECK_HEIGHT);
         add(middleDeck1);
-        middleDeck2.setBounds(660, 250, 140, 200);
+        middleDeck2.setBounds(DECK2_POSITION_X, DECK2_POSITION_Y, DECK_WIDTH, DECK_HEIGHT);
         add(middleDeck2);
 
-        checkTheConflictTokens.setBounds(60, 80, 180, 60);
         add(checkTheConflictTokens);
 
-        wonderStructure.setBounds(270, 240, 300, 240);
+        wonderStructure.setBounds(WONDER_POSITION_X, WONDER_POSITION_Y, WONDER_WIDTH, WONDER_HEIGHT);
         add(wonderStructure);
 
-        warWinnerPointsView.setBounds(600, 600, 80, 80);
-        add(warWinnerPointsView);
-        // setBounds(800, 400, 800, 80);
-        warWinnerPointsView1.setBounds(600, 500, 80, 80);
-        add(warWinnerPointsView1);
+        JPanel militaryT = new JPanel();
+        JPanel militaryP = new JPanel();
 
-        bluePointsView.setBounds(500, 600, 80, 80);
+        militaryT.setBounds(MILITARY_T_POSITION_X, MILITARY_T_POSITION_Y, POINT_WIDTH, POINT_HEIGHT);
+        add(militaryT);
+
+        militaryP.setBounds(MILITARY_P_POSITION_X, MILITARY_P_POSITION_Y, POINT_WIDTH, POINT_HEIGHT);
+        add(militaryP);
+
+        warWinnerPointsView.setBounds(WAR_POINT_POSITION_X, WAR_POINT_POSITION_Y, POINT_WIDTH, POINT_HEIGHT);
+        add(warWinnerPointsView);
+
+        bluePointsView.setBounds(BLUE_POINT_POSITION_X, BLUE_POINT_POSITION_Y, POINT_WIDTH, POINT_HEIGHT);
         add(bluePointsView);
-        bluePointsView1.setBounds(500, 500, 80, 80);
-        add(bluePointsView1);
-        
+
         JPanel sience = new JPanel();
         JPanel resource = new JPanel();
 
-        sience.setBounds(80, 600, 400, 80);
+        sience.setBounds(SIENCE_POSITION_X, SIENCE_POSITION_Y, SIENCE_WIDTH, SIENCE_HEIGHT);
         sience.setBackground(Color.WHITE);
         add(sience);
-        resource.setBounds(80, 500, 400, 80);
+        resource.setBounds(RESOURCE_POSITION_X, RESOURCE_POSITION_Y, RESOURCE_WIDTH, RESOURCE_HEIGHT);
         resource.setBackground(Color.WHITE);
         add(resource);
-
-
 
         setTitle(WINDOW_NAME);
         setSize(WIDTH, HEIGHT);
@@ -99,6 +140,7 @@ public class BoardFrame extends JFrame {
         int players = Integer.valueOf(numbersOfPlayers);
         return players;
     }
+
     public void addStage(int stagesCompleted) {
         wonderStructure.buildStages(stagesCompleted);
         this.validate();

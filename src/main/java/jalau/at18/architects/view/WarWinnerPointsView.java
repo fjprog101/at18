@@ -1,6 +1,5 @@
 package jalau.at18.architects.view;
 
-import java.awt.Color;
 import javax.swing.JPanel;
 
 public class WarWinnerPointsView extends JPanel {
@@ -12,7 +11,6 @@ public class WarWinnerPointsView extends JPanel {
 
     public WarWinnerPointsView() {
         setOpaque(false);
-        // setBackground(Color.WHITE);
         setBounds(POSITION_X, POSITION_Y, WIDTH, HEIGHT);
         setLayout(null);
         add(new WarWinnerNumber());
