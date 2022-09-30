@@ -3,14 +3,17 @@ package jalau.at18.kingoftokyo.controller;
 import jalau.at18.kingoftokyo.model.Observer;
 import jalau.at18.kingoftokyo.model.Player;
 import jalau.at18.kingoftokyo.model.Turn;
+import jalau.at18.kingoftokyo.view.GameFrame;
 
 public class WinOrLoseController implements Observer {
     private static final int WIN_POINTS = 20;
     private Turn turn;
     private DialogsController dialog;
+    private GameFrame gameFrame;
 
-    public WinOrLoseController(Turn turn) {
+    public WinOrLoseController(Turn turn, GameFrame gameFrame) {
         this.turn = turn;
+        this.gameFrame = gameFrame;
         dialog = new DialogsController();
     }
 
@@ -19,8 +22,7 @@ public class WinOrLoseController implements Observer {
         for (Player player : turn.getPlayersList()) {
             if (player.getLifePoints() == 0) {
                 playerLose(player);
-                turn.removePlayer(player);
-            } else if (player.getLifePoints() == WIN_POINTS) {
+            } else if (player.getVictoryPoints() == WIN_POINTS) {
                 playerWin(player);
                 break;
             }
@@ -29,9 +31,12 @@ public class WinOrLoseController implements Observer {
 
     public void playerWin(Player player) {
         dialog.showMessageToWin(player);
+        gameFrame.dispose();
+        //new GameOverFrame();
     }
 
     public void playerLose(Player player) {
         dialog.showMessageToLose(player);
+        turn.removePlayer(player);
     }
 }
