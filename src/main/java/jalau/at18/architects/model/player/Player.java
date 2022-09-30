@@ -1,13 +1,13 @@
 package jalau.at18.architects.model.player;
 
 import jalau.at18.architects.model.cards.Card;
-import jalau.at18.architects.model.wonders.Wonders;
+import jalau.at18.architects.model.wonders.Wonder;
 
 public class Player {
     private String name;
-    private Wonders wonder;
+    private Wonder wonder;
     private Playcard playcard;
-    public Player(String name, Wonders wonder) {
+    public Player(String name, Wonder wonder) {
         this.name = name;
         this.wonder = wonder;
         playcard = new Playcard();
@@ -17,7 +17,7 @@ public class Player {
         return name;
     }
 
-    public Wonders getWonder() {
+    public Wonder getWonder() {
         return wonder;
     }
 
