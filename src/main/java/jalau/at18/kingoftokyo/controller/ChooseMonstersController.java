@@ -22,7 +22,7 @@ public class ChooseMonstersController implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         makePlayersList();
-        monstersFrame.setVisible(false);
+        monstersFrame.dispose();
         new WhoStartFrame(Game.getInstance().getPlayersList());
     }
 

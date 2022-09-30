@@ -19,7 +19,7 @@ public class ChoosePlayerController implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         Game.getInstance().setPlayers((Integer) spinner.getValue());
-        choosePlayersFrame.setVisible(false);
+        choosePlayersFrame.dispose();
         new ChooseMonstersFrame();
     }
 }
