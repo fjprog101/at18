@@ -9,9 +9,9 @@ public class HeaderLabel extends JLabel {
     private static final int HINTS = 100;
     private static final int ZERO = 0;
     public HeaderLabel() {
-        setBounds(ZERO, ZERO, 700, 125);
+        setBounds(ZERO, ZERO, WIDTH, HEIGHT);
         ImageIcon image = new ImageIcon("src/main/resources/kingoftokyo/header.png");
-        Icon icon = new ImageIcon(image.getImage().getScaledInstance( WIDTH, HEIGHT, HINTS));
+        Icon icon = new ImageIcon(image.getImage().getScaledInstance(WIDTH, HEIGHT, HINTS));
         setIcon(icon);
         setAlignmentX(Component.CENTER_ALIGNMENT);
         setVisible(true);
