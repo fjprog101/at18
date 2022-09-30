@@ -34,7 +34,7 @@ public class PlayerTest {
     }
     @Test
     public void shouldAddCardToPlayCard() {
-        Player player = new Player("Jose", Wonders.FOUR);
+        Player player = new Player("Jose", Wonders.FOUR.getWonder());
         RedCard card = new RedCard(2);
         player.addNewCard(card);
         Playcard playcard = player.getPlaycard();

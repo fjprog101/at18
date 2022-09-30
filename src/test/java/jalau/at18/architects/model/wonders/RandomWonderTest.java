@@ -1,6 +1,7 @@
 package jalau.at18.architects.model.wonders;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import java.util.List;
 
@@ -26,14 +27,15 @@ public class RandomWonderTest {
     @Test
     public void shouldReturnDifferentsWonders() {
         RandomWonder randomWonder = new RandomWonder();
-        Wonder wonder1 =  randomWonder.getRamdomWonder();
-        Wonder wonder2 =  randomWonder.getRamdomWonder();
-        Wonder wonder3 =  randomWonder.getRamdomWonder();
-        Wonder wonder4 =  randomWonder.getRamdomWonder();
-        Wonder wonder5 =  randomWonder.getRamdomWonder();
-        Wonder wonder6 =  randomWonder.getRamdomWonder();
-        Wonder wonder7 =  randomWonder.getRamdomWonder();
+        Wonder wonder =  randomWonder.getRamdomWonder();
+        wonder =  randomWonder.getRamdomWonder();
+        wonder =  randomWonder.getRamdomWonder();
+        wonder =  randomWonder.getRamdomWonder();
+        wonder =  randomWonder.getRamdomWonder();
+        wonder =  randomWonder.getRamdomWonder();
+        wonder =  randomWonder.getRamdomWonder();
         List<Integer> list= randomWonder.getUsedNumbers();
+        assertNotNull(wonder);
         assertEquals(7, randomWonder.getUsedNumbers().size());
         assertTrue(list.contains(0));
         assertTrue(list.contains(1));
