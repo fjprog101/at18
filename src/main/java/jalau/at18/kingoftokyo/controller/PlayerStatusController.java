@@ -9,6 +9,7 @@ public class PlayerStatusController {
     private static final int SCORE = 2;
     private static final int ENERGY = 3;
     private Turn turn;
+
     public PlayerStatusController(Turn turn) {
         this.turn = turn;
     }
@@ -21,10 +22,10 @@ public class PlayerStatusController {
     public void setPlayerWithTurn(int healing, int victoryPoints, int energy) {
         int newLifePoints = turn.getPlayerWithTheTurn().getLifePoints() + healing;
         int newVictoryPoints = turn.getPlayerWithTheTurn().getVictoryPoints() + victoryPoints;
-        int newEnery = turn.getPlayerWithTheTurn().getEnergy() + energy;
+        int newEnergy = turn.getPlayerWithTheTurn().getEnergy() + energy;
         turn.getPlayerWithTheTurn().setLifePoints(newLifePoints);
         turn.getPlayerWithTheTurn().setVictoryPoints(newVictoryPoints);
-        turn.getPlayerWithTheTurn().setEnergy(newEnery);
+        turn.getPlayerWithTheTurn().setEnergy(newEnergy);
     }
 
     public void giveDamage(int damage) {
@@ -35,6 +36,7 @@ public class PlayerStatusController {
             }
         }
     }
+
     public Turn getTurn() {
         return turn;
     }
