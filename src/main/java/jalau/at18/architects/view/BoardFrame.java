@@ -4,8 +4,10 @@ import java.awt.*;
 import javax.swing.JFrame;
 
 import jalau.at18.architects.controller.BarConflictController;
+import jalau.at18.architects.controller.ResourceController;
 import jalau.at18.architects.controller.WonderController;
 import jalau.at18.architects.model.BuildStage;
+import jalau.at18.architects.model.cards.GenerateARandomCardForResourceList;
 
 public class BoardFrame extends JFrame {
     public static final int WIDTH = 1000;
@@ -18,14 +20,18 @@ public class BoardFrame extends JFrame {
     private MiddleDeck middleDeck;
     private CheckTheConflictTokens checkTheConflictTokens;
     private BarConflictController barConflictController;
+    private ResourceController resourceController;
     private WonderController wonderController;
     private WarWinnerPointsView warWinnerPointsView;
     private BluePointsView bluePointsView;
     private WonderStructure wonderStructure;
     private AddStageButton addStage;
+    private TakeCardButton takeCardButton;
+    private GenerateARandomCardForResourceList generateARandomCardForResourceList = new GenerateARandomCardForResourceList();
     //private BuildStage buildStage;
     public BoardFrame(String numberOfPlayers) {
         barConflictController = new BarConflictController(this);
+        resourceController = new ResourceController(generateARandomCardForResourceList.randomResourceCard(), this);
         wonderController = new WonderController(this, new BuildStage());
         this.numbersOfPlayers = numberOfPlayers;
         initialize();
@@ -34,6 +40,7 @@ public class BoardFrame extends JFrame {
     private void initialize() {
         middleDeck = new MiddleDeck();
         checkTheConflictTokens = new CheckTheConflictTokens(barConflictController);
+        takeCardButton = new TakeCardButton(resourceController);
         wonderStructure = new WonderStructure();
         addStage = new AddStageButton(wonderController);
         warWinnerPointsView = new WarWinnerPointsView();
@@ -44,6 +51,7 @@ public class BoardFrame extends JFrame {
         add(wonderStructure);
         add(warWinnerPointsView);
         add(bluePointsView);
+        add(takeCardButton);
         setTitle(WINDOW_NAME);
         setSize(WIDTH, HEIGHT);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
