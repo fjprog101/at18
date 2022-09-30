@@ -2,6 +2,7 @@ package jalau.at18.kingoftokyo.view;
 
 import javax.swing.*;
 import jalau.at18.kingoftokyo.controller.PlayerStatusController;
+import jalau.at18.kingoftokyo.controller.WinOrLoseController;
 import jalau.at18.kingoftokyo.model.*;
 import jalau.at18.kingoftokyo.view.board.BoardPanel;
 import jalau.at18.kingoftokyo.view.card.CardsGroupPanel;
@@ -15,11 +16,14 @@ public class GameFrame extends JFrame {
 
     private Turn turn;
     private PlayerStatusController playerController;
+    private WinOrLoseController winOrLoseController;
 
     public GameFrame(Turn turn) {
         this.turn = turn;
         initialize();
         playerController = new PlayerStatusController(turn);
+        winOrLoseController = new WinOrLoseController(turn);
+        playerController.addObserver(winOrLoseController);
 
         add(new PlayerCardsGroupPanel(turn.getPlayersList()));
         add(new DeckImagePanel());

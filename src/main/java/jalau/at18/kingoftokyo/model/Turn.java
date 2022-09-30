@@ -27,4 +27,8 @@ public class Turn {
             turn++;
         }
     }
+
+    public void removePlayer(Player player) {
+        playersSequence.remove(player);
+    }
 }
