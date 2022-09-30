@@ -25,4 +25,7 @@ public class DialogsController extends JOptionPane {
     public void showMessageToLose(Player player) {
         showMessageDialog(null, "Sorry " + player.getUserName() + ", your monster was defeated", "You Lose", JOptionPane.ERROR_MESSAGE);
     }
+    public void showMessageToWin(Player player) {
+        showMessageDialog(null, "Congratulations " + player.getUserName() + ", you WIN!!!", "You Win", JOptionPane.DEFAULT_OPTION);
+    }
 }
