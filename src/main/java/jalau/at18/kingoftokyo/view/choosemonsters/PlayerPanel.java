@@ -10,6 +10,10 @@ import javax.swing.border.TitledBorder;
 import java.awt.*;
 
 public class PlayerPanel extends JPanel {
+    private static final int THREE = 3;
+    private static final int RED = 176;
+    private static final int GREEN = 82;
+    private static final int BLUE = 122;
 
     private static final String TITLE = "Number of Players";
     private static final String NAME = "Serif";
@@ -36,8 +40,10 @@ public class PlayerPanel extends JPanel {
         setBorder(BorderFactory.createTitledBorder(str));
     }
 
-    public void setPanelColor(Color color) {
-        setBackground(color);
+    public void setPanelColor() {
+        float[] hsb = new float[THREE];
+        hsb = Color.RGBtoHSB(RED, GREEN, BLUE, hsb);
+        setBackground(Color.getHSBColor(hsb[0], hsb[1], hsb[2]));
     }
 
     public UsernameTextBox getPlayerUsername() {
