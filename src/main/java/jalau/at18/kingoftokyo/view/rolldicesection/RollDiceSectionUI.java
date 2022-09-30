@@ -10,7 +10,6 @@ import java.util.List;
 public class RollDiceSectionUI extends JPanel {
     private static final int QUANTITY_DICES = 6;
     private JButton rollerDiceButton = new JButton("Roll Dice");
-
     private List<DiceFaceLabel> listDiceFaceLabel = new ArrayList<>();
 
     public RollDiceSectionUI() {

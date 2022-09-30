@@ -7,9 +7,8 @@ import jalau.at18.kingoftokyo.view.rolldicesection.KeepDiceSectionUI;
 
 public class KeepDiceSectionController {
     private KeepDiceSectionUI keepDiceSectionUI;
+    private RollDiceSectionController rollDiceSectionController;
     private DiceFaceKeeper diceFaceKeeper;
-    private DiceFaceKeeperProcess diceFaceKeeperProcess;
-    private DiceFaceKeeperResult diceFaceKeeperResult;
     private DiceFaceTurnResult diceFaceTurnResult;
     private int countDiceFaceSet = 0;
     private TurnPanel turnPanel;
@@ -17,8 +16,7 @@ public class KeepDiceSectionController {
     public KeepDiceSectionController(KeepDiceSectionUI keepDiceSectionUI) {
         this.keepDiceSectionUI = keepDiceSectionUI;
         this.diceFaceKeeper = new DiceFaceKeeper();
-        this.diceFaceKeeperProcess = new DiceFaceKeeperProcess(diceFaceKeeper);
-        this.diceFaceKeeperResult = new DiceFaceKeeperResult(diceFaceKeeperProcess);
+
         keepDiceSectionUI.getKeepButton().addActionListener(e -> calculateDiceResult());
     }
 
@@ -42,6 +40,8 @@ public class KeepDiceSectionController {
     }
 
     public void calculateDiceResult() {
+        DiceFaceKeeperProcess diceFaceKeeperProcess = new DiceFaceKeeperProcess(diceFaceKeeper);
+        DiceFaceKeeperResult diceFaceKeeperResult = new DiceFaceKeeperResult(diceFaceKeeperProcess);
         diceFaceTurnResult = diceFaceKeeperResult.resultDiceFaceKeeper();
         int healing = diceFaceTurnResult.getHealingPoint();
         int damage = diceFaceTurnResult.getPunchingPoint();
@@ -51,7 +51,8 @@ public class KeepDiceSectionController {
         countDiceFaceSet = 0;
         keepDiceSectionUI.sendResults(effect); // For change player atributes
         keepDiceSectionUI.resetUI();
-        //rollDiceSectionController.resetUI();
+        rollDiceSectionController.resetUI();
+        diceFaceKeeper = new DiceFaceKeeper();
         turnPanel.getComponent(1).setEnabled(true);
     }
 
@@ -59,8 +60,10 @@ public class KeepDiceSectionController {
         return keepDiceSectionUI;
     }
 
+    public void setRollDiceSectionController(RollDiceSectionController rollDiceSectionControllerr) {
+        this.rollDiceSectionController = rollDiceSectionControllerr;
+    }
     public void addTurnPanel(TurnPanel newTurnPanel) {
         this.turnPanel = newTurnPanel;
     }
-
 }

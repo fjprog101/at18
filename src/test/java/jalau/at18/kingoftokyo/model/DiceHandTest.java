@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import static org.junit.Assert.*;
 
-public class HandDiceTest {
+public class DiceHandTest {
     @Test
     public void shouldGetListDice() {
         List<Dice> listDice = new ArrayList<>();
@@ -21,8 +21,8 @@ public class HandDiceTest {
         listDice.add(dice4);
         listDice.add(dice5);
         listDice.add(dice6);
-        DiceHand handDice = new DiceHand(listDice);
-        assertNotNull(handDice.getListDices());
-        assertEquals(6, handDice.getListDices().size());
+        DiceHand diceHand = new DiceHand(listDice);
+        assertNotNull(diceHand.getListDices());
+        assertEquals(6, diceHand.getListDices().size());
     }
 }

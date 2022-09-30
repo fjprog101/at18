@@ -25,6 +25,7 @@ public class DiceSectionUI extends JPanel {
         keepDiceSectionController = new KeepDiceSectionController(keepDiceSectionUI);
         keepDiceSectionController.addTurnPanel(turnPanel);
         rollDiceSectionController = new RollDiceSectionController(rollDiceSectionUI, keepDiceSectionController);
+        keepDiceSectionController.setRollDiceSectionController(rollDiceSectionController);
         //Position of this Panel DiceSectionUI
         setBounds(DEFAULT_POSX, DEFAULT_POSY, DEFAULT_WIDTH, DEFAULT_HEIGHT);
         setBorder(new LineBorder(Color.BLACK, 1));

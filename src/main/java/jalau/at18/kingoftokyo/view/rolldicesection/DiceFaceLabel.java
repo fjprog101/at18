@@ -13,16 +13,11 @@ import java.net.URL;
 public class DiceFaceLabel extends JLabel {
     private static final int SIZE_ICON_WIDTH = 50;
     private static final int SIZE_ICON_HIGHT = 50;
-    private boolean selected; // when user click a label
     private boolean initialize; // when the dice has DiceFace
     private DiceFace diceFace;
 
     public DiceFaceLabel() {
         setDiceFaceImage("question.png");
-    }
-
-    public boolean isSelected() {
-        return selected;
     }
 
     public boolean isInitialize() {
