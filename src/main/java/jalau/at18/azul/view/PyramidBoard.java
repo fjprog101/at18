@@ -11,7 +11,7 @@ public class PyramidBoard extends JPanel {
     protected PyramidTileButton[][] tileButton = new PyramidTileButton[PYRAMID_MATRIZ_SIZE][PYRAMID_MATRIZ_SIZE];
     private Tile emptyTile = new Tile(TileColor.EMPTY);
     private static final int DIVIDE_PYRAMID = 4;
-    private int emptyColumn = 0;
+    //private int emptyColumn = 0;
 
     public PyramidBoard() {
         setLayout(new GridLayout(PYRAMID_MATRIZ_SIZE, PYRAMID_MATRIZ_SIZE, PYRAMID_MATRIZ_SIZE, PYRAMID_MATRIZ_SIZE));
