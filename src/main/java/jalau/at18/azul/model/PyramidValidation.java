@@ -14,7 +14,7 @@ public class PyramidValidation {
     private static final int COUNTER = 4;
     private int count;
 
-    public PyramidValidation(PyramidBoard newPyramidBoard, StackButtonGroup newStack, PointerGroup pointer,Floor floort) {
+    public PyramidValidation(PyramidBoard newPyramidBoard, StackButtonGroup newStack, PointerGroup pointer, Floor floort) {
         count = COUNTER;
         this.stackButtonGroup = newStack;
         this.pointerGroup = pointer;
