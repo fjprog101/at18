@@ -51,7 +51,7 @@ public class WhoStartRollDiceController {
         }
     }
     public void clickStartGameButton() {
-        whoStartFrame.setVisible(false);
+        whoStartFrame.dispose();
         Turn turn = new Turn(arrangePlayers);
         new GameFrame(turn);
     }

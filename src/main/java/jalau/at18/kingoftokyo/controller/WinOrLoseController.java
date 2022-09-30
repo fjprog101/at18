@@ -4,6 +4,7 @@ import jalau.at18.kingoftokyo.model.Observer;
 import jalau.at18.kingoftokyo.model.Player;
 import jalau.at18.kingoftokyo.model.Turn;
 import jalau.at18.kingoftokyo.view.GameFrame;
+import jalau.at18.kingoftokyo.view.GameOverFrame;
 
 public class WinOrLoseController implements Observer {
     private static final int WIN_POINTS = 20;
@@ -31,8 +32,8 @@ public class WinOrLoseController implements Observer {
 
     public void playerWin(Player player) {
         dialog.showMessageToWin(player);
+        new GameOverFrame();
         gameFrame.dispose();
-        //new GameOverFrame();
     }
 
     public void playerLose(Player player) {
