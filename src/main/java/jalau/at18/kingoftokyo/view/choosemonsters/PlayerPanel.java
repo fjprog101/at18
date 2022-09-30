@@ -14,16 +14,13 @@ public class PlayerPanel extends JPanel {
     private static final int RED = 176;
     private static final int GREEN = 82;
     private static final int BLUE = 122;
-
-    private static final String TITLE = "Number of Players";
     private static final String NAME = "Serif";
-    private static final int SIZE = 22;
+    private static final int SIZE = 20;
 
     private UsernameTextBox playerUsername;
     private MonsterList monsterList;
 
     public PlayerPanel() {
-        initialize();
         SpringLayout springLayout = new SpringLayout();
         this.playerUsername = new UsernameTextBox();
         this.monsterList = new MonsterList();
@@ -31,13 +28,9 @@ public class PlayerPanel extends JPanel {
         springLayout.putConstraint(SpringLayout.NORTH, add(new MonsterLabel()), 0, SpringLayout.NORTH, add(monsterList));
     }
 
-    private void initialize() {
-        Font font = new Font(NAME, Font.BOLD, SIZE);
-        setBorder(BorderFactory.createTitledBorder(null, TITLE, TitledBorder.LEFT, 0, font));
-    }
-
     public void setPanelBorder(String str) {
-        setBorder(BorderFactory.createTitledBorder(str));
+        Font font = new Font(NAME, Font.BOLD, SIZE);
+        setBorder(BorderFactory.createTitledBorder(null, str, TitledBorder.LEFT, 0, font));
     }
 
     public void setPanelColor() {
