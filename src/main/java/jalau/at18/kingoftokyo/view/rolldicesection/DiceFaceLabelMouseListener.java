@@ -27,7 +27,6 @@ public class DiceFaceLabelMouseListener extends MouseAdapter {
         keepDiceSectionController.putDiceFaceLabel(source);
         int countRamdomDiceGenerated = rollDiceSectionController.reduceCountRamdomDiceGenerated();
         source.setVisible(false);
-        System.out.println("countRamdomDiceGenerated:" + countRamdomDiceGenerated);
 
         if (countRamdomDiceGenerated == 1) {
             rollDiceSectionController.getRollDiceSectionUI().getRollerDiceButton().setEnabled(false);

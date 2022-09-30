@@ -11,7 +11,6 @@ import java.util.List;
 
 public class KeepDiceSectionUI extends JPanel {
     private static final int QUANTITY_DICES = 6;
-    private JLabel displayResult = new JLabel();
     private JButton keepButton = new JButton("Keep Dice");
 
     private List<DiceFaceLabel> listKeepDiceFaceLabel = new ArrayList<>();
@@ -36,7 +35,6 @@ public class KeepDiceSectionUI extends JPanel {
             panelKeepDice.add(diceFaceLabel);
             listKeepDiceFaceLabel.add(diceFaceLabel);
         }
-        add(displayResult);
     }
 
     public void resetUI() {
@@ -52,10 +50,6 @@ public class KeepDiceSectionUI extends JPanel {
 
     public List<DiceFaceLabel> getListKeepDiceFaceLabel() {
         return listKeepDiceFaceLabel;
-    }
-
-    public JLabel getDisplayResult() {
-        return displayResult;
     }
 
     public void sendResults(int[] effect) {

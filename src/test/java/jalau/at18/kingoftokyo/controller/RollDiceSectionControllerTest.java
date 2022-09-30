@@ -1,6 +1,7 @@
 package jalau.at18.kingoftokyo.controller;
 
 import jalau.at18.kingoftokyo.model.*;
+import jalau.at18.kingoftokyo.view.GameFrame;
 import jalau.at18.kingoftokyo.view.rolldicesection.*;
 import org.junit.Test;
 import java.util.ArrayList;
@@ -35,4 +36,26 @@ public class RollDiceSectionControllerTest {
         assertNotNull(listDiceFaceLabel.get(4));
         assertNotNull(listDiceFaceLabel.get(5));
     }
+    /*
+    @Test
+    public void shouldReduceCountRamdomDiceGenerated(){
+        final int QUANTITY_DICE_FACE_LABEL = 6;
+        Player player1 = new Player();
+        Player player2 = new Player();
+        ArrayList<Player> listPlayer = new ArrayList<>();
+        listPlayer.add(player1);
+        listPlayer.add(player2);
+        Turn turn = new Turn(listPlayer);
+        GameFrame gameFrame = new GameFrame(turn);
+        PlayerStatusController playerStatusController = new PlayerStatusController(gameFrame);
+        RollDiceSectionUI rollDiceSectionUI = new RollDiceSectionUI();
+        KeepDiceSectionUI keepDiceSectionUI = new KeepDiceSectionUI(playerStatusController);
+        KeepDiceSectionController keepDiceSectionController = new KeepDiceSectionController(keepDiceSectionUI);
+        RollDiceSectionController rollDiceSectionController = new RollDiceSectionController(rollDiceSectionUI, keepDiceSectionController);
+        assertEquals(QUANTITY_DICE_FACE_LABEL, rollDiceSectionController.reduceCountRamdomDiceGenerated());
+    }
+    */
+
+
+
 }
