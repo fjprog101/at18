@@ -54,7 +54,6 @@ public class KeepDiceSectionController {
         rollDiceSectionController.resetUI();
         diceFaceKeeper = new DiceFaceKeeper();
         turnPanel.getComponent(1).setEnabled(true);
-
     }
 
     public KeepDiceSectionUI getKeepDiceSectionUI() {
