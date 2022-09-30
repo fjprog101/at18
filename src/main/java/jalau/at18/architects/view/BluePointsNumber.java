@@ -8,11 +8,11 @@ import java.awt.Font;
 import java.awt.Color;
 
 public class BluePointsNumber extends JLabel {
-    private static final int POSITION_X = 15;
-    private static final int POSITION_Y = 0;
+    private static final int POSITION_X = 35;
+    private static final int POSITION_Y = 18;
     private static final int WIDTH = 50;
     private static final int HEIGHT = 40;
-    private static final int FONT_SIZE = 15;
+    private static final int FONT_SIZE = 20;
     private static final int FONT_STYLE = 10;
 
     public BluePointsNumber() {

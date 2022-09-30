@@ -11,6 +11,7 @@ public class CheckTheConflictTokens extends JCheckBox {
 
     public CheckTheConflictTokens(ActionListener listener) {
         super("Check the Quantity of Tokens");
+        setOpaque(false);
         setBounds(DEFAULT_POSX, DEFAULT_POSY, DEFAULT_WIDTH, DEFAULT_HEIGHT);
         addActionListener(listener);
     }

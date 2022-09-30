@@ -10,7 +10,8 @@ public class BluePointsView extends JPanel {
     private static final int POSITION_Y = 450;
 
     public BluePointsView() {
-        setBackground(Color.WHITE);
+        setOpaque(false);
+        // setBackground(Color.WHITE);
         setBounds(POSITION_X, POSITION_Y, WIDTH, HEIGHT);
         setLayout(null);
         add(new BluePointsNumber());

@@ -38,8 +38,10 @@ public class BarConflict extends JPanel {
     }
 
     private void loadTokens(int quantityOfPlayers) {
+        setOpaque(false);
         setBorder(new EmptyBorder(SPACE_SIZE, 0, SPACE_SIZE, SPACE_SIZE));
-        setBounds(POS_X, POS_Y, WIDTH, HEIGHT);
+        setBounds(60, 30, WIDTH, HEIGHT);
+        // setBounds(POS_X, POS_Y, WIDTH, HEIGHT);
         switch (quantityOfPlayers) {
             case FOUR:
                 add(peacetoken);
