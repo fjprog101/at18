@@ -1,6 +1,8 @@
 package jalau.at18.architects.controller;
 import jalau.at18.architects.model.Game;
 import jalau.at18.architects.view.WondersFrame;
+
+import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -21,7 +23,12 @@ public class Controller implements ActionListener {
         } else if (e.getSource() == wondersFrame.getChoice()) {
             wondersFrame.setLabels("Game players: " + wondersFrame.getChoice().getSelectedItem().toString());
             pressedCheckBox = true;
+            if (wondersFrame.getContentPane().getComponentCount() == 4) {
+                wondersFrame.getContentPane().remove(3);
+            }
             wondersFrame.addNewComponents(Integer.parseInt(wondersFrame.getChoice().getSelectedItem().toString()));
+            wondersFrame.repaint();
+            wondersFrame.revalidate();
 
         }
     }
