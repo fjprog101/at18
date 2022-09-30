@@ -1,4 +1,4 @@
-package jalau.at18.kingoftokyo.view.playercards;
+package jalau.at18.kingoftokyo.view.playercard;
 
 import java.awt.Dimension;
 import java.util.ArrayList;
