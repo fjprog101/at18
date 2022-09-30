@@ -22,7 +22,7 @@ public class GameFrame extends JFrame {
         this.turn = turn;
         initialize();
         playerController = new PlayerStatusController(turn);
-        winOrLoseController = new WinOrLoseController(turn);
+        winOrLoseController = new WinOrLoseController(turn, this);
         playerController.addObserver(winOrLoseController);
 
         add(new PlayerCardsGroupPanel(turn.getPlayersList()));

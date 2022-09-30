@@ -40,7 +40,7 @@ public class PlayerCard extends JPanel implements Observer {
         ((PlayerCardVictoryPoints) getComponent(VICTORY_INDEX)).setVictoryPoints(player.getVictoryPoints());
         if (player.getLifePoints() == 0) {
             setEnabled(false);
-            setVisible(false);
+            setBackground(Color.RED);
         }
     }
 }
