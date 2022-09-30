@@ -4,6 +4,9 @@ import jalau.at18.kingoftokyo.model.Player;
 import jalau.at18.kingoftokyo.model.Turn;
 
 public class PlayerStatusController {
+    private static final int MAX_LIFE = 10;
+    private static final int MIN_LIFE = 0;
+    private static final int MAX_VICTORY = 20;
     private static final int HEAL = 0;
     private static final int DAMAGE = 1;
     private static final int SCORE = 2;
@@ -20,21 +23,36 @@ public class PlayerStatusController {
     }
 
     public void setPlayerWithTurn(int healing, int victoryPoints, int energy) {
-        int newLifePoints = turn.getPlayerWithTheTurn().getLifePoints() + healing;
-        int newVictoryPoints = turn.getPlayerWithTheTurn().getVictoryPoints() + victoryPoints;
         int newEnergy = turn.getPlayerWithTheTurn().getEnergy() + energy;
-        turn.getPlayerWithTheTurn().setLifePoints(newLifePoints);
-        turn.getPlayerWithTheTurn().setVictoryPoints(newVictoryPoints);
+        turn.getPlayerWithTheTurn().setLifePoints(changeLifePoints(turn.getPlayerWithTheTurn(), healing, 1));
+        turn.getPlayerWithTheTurn().setVictoryPoints(changeVictoryPoints(victoryPoints));
         turn.getPlayerWithTheTurn().setEnergy(newEnergy);
     }
 
     public void giveDamage(int damage) {
         for (Player player : turn.getPlayersList()) {
             if (player != turn.getPlayerWithTheTurn()) {
-                int newLifePoints = player.getLifePoints() - damage;
-                player.setLifePoints(newLifePoints);
+                player.setLifePoints(changeLifePoints(player, damage, -1));
             }
         }
+    }
+
+    public int changeLifePoints(Player player, int healing, int operator) {
+        int newLifePoints = player.getLifePoints();
+        while (newLifePoints <= MAX_LIFE && newLifePoints > MIN_LIFE && healing > 0) {
+            newLifePoints += operator;
+            healing--;
+        }
+        return newLifePoints == MAX_LIFE + 1 ? newLifePoints - 1 : newLifePoints;
+    }
+
+    public int changeVictoryPoints(int victoryPoints) {
+        int newVictoryPoints = turn.getPlayerWithTheTurn().getVictoryPoints();
+        while (newVictoryPoints < MAX_VICTORY  && victoryPoints > 0) {
+            newVictoryPoints++;
+            victoryPoints--;
+        }
+        return newVictoryPoints;
     }
 
     public Turn getTurn() {

@@ -30,9 +30,22 @@ public class PlayerStatusControllerTest {
         assertEquals(0, player1.getEnergy());
         int[] effectsSetter = {3, 2, 1, 4};
         playerController.setPlayersStatus(effectsSetter);
-        assertEquals(13, player1.getLifePoints());
+        assertEquals(10, player1.getLifePoints());
         assertEquals(8, player2.getLifePoints());
         assertEquals(1, player1.getVictoryPoints());
         assertEquals(4, player1.getEnergy());
+
+        turn.changePlayerWithTheTurn();
+        int[] effectsSetter1 = {1, 3, 23, 4};
+        playerController.setPlayersStatus(effectsSetter1);
+        assertEquals(7, player1.getLifePoints());
+        assertEquals(9, player2.getLifePoints());
+        assertEquals(20, player2.getVictoryPoints());
+        turn.changePlayerWithTheTurn();
+
+        int[] effectsSetter2 = {1, 10, 1, 4};
+        playerController.setPlayersStatus(effectsSetter2);
+        assertEquals(8, player1.getLifePoints());
+        assertEquals(0, player2.getLifePoints());
     }
 }
