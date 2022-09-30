@@ -7,8 +7,8 @@ import javax.swing.JTextField;
 public class InputNames extends JPanel {
     private int quantity;
     private JLabel message;
-    public static final int POSX = 300;
-    public static final int POSY = 400;
+    public static final int POSX = 250;
+    public static final int POSY = 300;
     public static final int WIDTH = 200;
     public static final int HEIGHT = 100;
     public InputNames(int quantity) {
