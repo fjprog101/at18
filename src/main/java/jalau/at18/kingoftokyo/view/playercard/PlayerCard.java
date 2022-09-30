@@ -38,5 +38,9 @@ public class PlayerCard extends JPanel implements Observer {
         ((PlayerCardLifePoints) getComponent(1)).setLifePoints(player.getLifePoints());
         ((PlayerCardEnergyPoints) getComponent(2)).setEnergyPoints(player.getEnergy());
         ((PlayerCardVictoryPoints) getComponent(VICTORY_INDEX)).setVictoryPoints(player.getVictoryPoints());
+        if (player.getLifePoints() == 0) {
+            setEnabled(false);
+            setVisible(false);
+        }
     }
 }

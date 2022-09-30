@@ -1,9 +1,13 @@
 package jalau.at18.kingoftokyo.controller;
 
+import java.util.ArrayList;
+
+import jalau.at18.kingoftokyo.model.Observer;
 import jalau.at18.kingoftokyo.model.Player;
+import jalau.at18.kingoftokyo.model.Subject;
 import jalau.at18.kingoftokyo.model.Turn;
 
-public class PlayerStatusController {
+public class PlayerStatusController implements Subject {
     private static final int MAX_LIFE = 10;
     private static final int MIN_LIFE = 0;
     private static final int MAX_VICTORY = 20;
@@ -12,14 +16,16 @@ public class PlayerStatusController {
     private static final int SCORE = 2;
     private static final int ENERGY = 3;
     private Turn turn;
-
+    private ArrayList<Observer> observers;
     public PlayerStatusController(Turn turn) {
         this.turn = turn;
+        observers = new ArrayList<Observer>();
     }
 
     public void setPlayersStatus(int[] effect) {
         setPlayerWithTurn(effect[HEAL], effect[SCORE], effect[ENERGY]);
         giveDamage(effect[DAMAGE]);
+        notifyObservers();
     }
 
     public void setPlayerWithTurn(int healing, int victoryPoints, int energy) {
@@ -57,5 +63,17 @@ public class PlayerStatusController {
 
     public Turn getTurn() {
         return turn;
+    }
+
+    @Override
+    public void addObserver(Observer observer) {
+        observers.add(observer);
+    }
+
+    @Override
+    public void notifyObservers() {
+        for (Observer observer: observers) {
+            observer.update();
+        }
     }
 }
