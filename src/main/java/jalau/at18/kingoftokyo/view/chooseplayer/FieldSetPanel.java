@@ -9,6 +9,10 @@ public class FieldSetPanel extends JPanel {
     private static final String TITLE = "Number of Players";
     private static final String NAME = "Serif";
     private static final int SIZE = 22;
+    private static final int THREE = 3;
+    private static final int RED = 176;
+    private static final int GREEN = 82;
+    private static final int BLUE = 122;
     private PlayersNumbersSpinner spinner;
 
     public FieldSetPanel() {
@@ -17,7 +21,9 @@ public class FieldSetPanel extends JPanel {
         add(new PlayersLabel());
         spinner = new PlayersNumbersSpinner();
         add(spinner);
-        setBackground(Color.RED);
+        float[] hsb = new float[THREE];
+        hsb = Color.RGBtoHSB(RED, GREEN, BLUE, hsb);
+        setBackground(Color.getHSBColor(hsb[0], hsb[1], hsb[2]));
     }
 
     private void initialize() {

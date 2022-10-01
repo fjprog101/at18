@@ -22,18 +22,19 @@ public class FieldSetPanel extends JPanel {
     private PlayerPanel playerFour;
     public FieldSetPanel() {
         initialize();
+        setBackground(Color.BLACK);
         playerOne = new PlayerPanel();
         playerOne.setPanelBorder(PLAYER_ONE);
-        playerOne.setPanelColor(Color.GRAY);
+        playerOne.setPanelColor();
         playerTwo = new PlayerPanel();
         playerTwo.setPanelBorder(PLAYER_TWO);
-        playerTwo.setPanelColor(Color.CYAN);
+        playerTwo.setPanelColor();
         playerThree = new PlayerPanel();
         playerThree.setPanelBorder(PLAYER_THREE);
-        playerThree.setPanelColor(Color.MAGENTA);
+        playerThree.setPanelColor();
         playerFour = new PlayerPanel();
         playerFour.setPanelBorder(PLAYER_FOUR);
-        playerFour.setPanelColor(Color.PINK);
+        playerFour.setPanelColor();
         if (Game.getInstance().getPlayers() >= 1) {
             add(playerOne);
         }

@@ -7,7 +7,7 @@ import java.awt.*;
 
 public class MonsterList extends JComboBox<Monster> {
     private static final String FONT_NAME = "Serif";
-    private static final int FONT_SIZE = 18;
+    private static final int FONT_SIZE = 15;
     private Monster[] allMonsters = new Monster[]{Monster.ALIENOID, Monster.CYBER_KITTY, Monster.SPACE_PENGUIN,
         Monster.GIGAZAUR, Monster.MEKA_DRAGON, Monster.THE_KING };
 
@@ -18,7 +18,7 @@ public class MonsterList extends JComboBox<Monster> {
         for (Monster monster : allMonsters) {
             addItem(monster);
         }
-        setFont(new Font(FONT_NAME, Font.BOLD, FONT_SIZE));
+        setFont(new Font(FONT_NAME, Font.PLAIN, FONT_SIZE));
     }
 
     public Monster getMonster() {
