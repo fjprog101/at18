@@ -2,6 +2,9 @@ package jalau.at18.azul.view;
 
 import jalau.at18.azul.model.Tile;
 import jalau.at18.azul.model.TileColor;
+
+import javax.swing.JOptionPane;
+
 import jalau.at18.azul.model.PyramidMovements;
 
 public class GameP2 {
@@ -24,7 +27,7 @@ public class GameP2 {
             scoreP2++;
             playertwo.getScore().updateLabel(scoreP2 - deductionP1, 2);
             if (playertwo.getWallBoard().verifyRowWall(index)) {
-                System.out.println("winner is player1");
+                JOptionPane.showMessageDialog(null, "WINNER : PLAYER2 !!");
             }
         }
     }

@@ -1,8 +1,9 @@
 package jalau.at18.azul.view;
 
-import java.awt.Color;
+
 import java.awt.event.ActionListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 public class BagButton extends JButton {
@@ -12,7 +13,8 @@ public class BagButton extends JButton {
     public BagButton(ActionListener listener) {
         setSize(DEFAULT_SIZE, DEFAULT_SIZE);
         setLocation(DEFAULT_POS1, DEFAULT_POS2);
-        setBackground(Color.PINK);
+        ImageIcon newIcon = new ImageIcon("src/main/resources/azul/Azulgamebutton.jpg");
+        setIcon(newIcon);
         addActionListener(listener);
     }
 }
