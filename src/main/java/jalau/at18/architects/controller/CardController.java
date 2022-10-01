@@ -21,6 +21,7 @@ public class CardController implements MouseInputListener {
         String newImage = cardFace.getNameOfFile();
         card.setImage(newImage);
         System.out.println("Mouse just used");
+        System.out.println(cardFace.name());
     }
     @Override
     public void mousePressed(MouseEvent e) {
