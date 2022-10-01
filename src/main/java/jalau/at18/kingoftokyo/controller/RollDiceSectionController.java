@@ -49,10 +49,6 @@ public class RollDiceSectionController {
         }
     }
 
-    public List<DiceFace> getListRandomDiceFace() {
-        return listRandomDiceFace;
-    }
-
     public int reduceCountRamdomDiceGenerated() {
         return countRamdomDiceGenerated--;
     }
