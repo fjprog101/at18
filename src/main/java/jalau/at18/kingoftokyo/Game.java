@@ -36,4 +36,7 @@ public class Game {
         return instance;
     }
 
+    public void addHornsToConflictBar(int size) {
+    }
+
 }
