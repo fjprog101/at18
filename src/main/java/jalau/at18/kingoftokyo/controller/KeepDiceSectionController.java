@@ -7,7 +7,6 @@ import jalau.at18.kingoftokyo.view.rolldicesection.KeepDiceSectionUI;
 
 public class KeepDiceSectionController {
     private KeepDiceSectionUI keepDiceSectionUI;
-    //private RollDiceSectionController rollDiceSectionController;
     private DiceFaceKeeper diceFaceKeeper;
     private DiceFaceTurnResult diceFaceTurnResult;
     private int countDiceFaceSet = 0;
@@ -60,9 +59,6 @@ public class KeepDiceSectionController {
         return keepDiceSectionUI;
     }
 
-    /*public void setRollDiceSectionController(RollDiceSectionController rollDiceSectionControllerr) {
-        this.rollDiceSectionController = rollDiceSectionControllerr;
-    }*/
     public void addTurnPanel(TurnPanel newTurnPanel) {
         this.turnPanel = newTurnPanel;
     }
