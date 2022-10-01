@@ -3,6 +3,7 @@ import jalau.at18.architects.model.Game;
 import jalau.at18.architects.view.WondersFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 
 public class Controller implements ActionListener {
     private WondersFrame wondersFrame;
@@ -15,10 +16,11 @@ public class Controller implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == wondersFrame.getButton() && pressedCheckBox) {
             wondersFrame.getTextField();
-            wondersFrame.closeWindow();
             int numberOfPlayers = Integer.valueOf(wondersFrame.getChoice().getSelectedItem().toString());
             Game game = Game.getInstance();
-            game.initGame(numberOfPlayers);
+            List<String> names = wondersFrame.getPlayersNames();
+            game.initGame(numberOfPlayers, names);
+            wondersFrame.closeWindow(game);
         } else if (e.getSource() == wondersFrame.getChoice()) {
             wondersFrame.setLabels("Game players: " + wondersFrame.getChoice().getSelectedItem().toString());
             pressedCheckBox = true;

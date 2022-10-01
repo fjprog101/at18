@@ -5,6 +5,7 @@ import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 import jalau.at18.architects.controller.Controller;
+import jalau.at18.architects.model.Game;
 
 public class WondersFrame extends JFrame {
     private StartButton startButton;
@@ -45,9 +46,9 @@ public class WondersFrame extends JFrame {
         playersNames = new ArrayList<>();
         add(inputNames);
     }
-    public void closeWindow() {
+    public void closeWindow(Game game) {
         this.dispose();
-        new BoardFrame(this.getChoice().getSelectedItem().toString());
+        new BoardFrame(game);
     }
 
     public void getTextField() {
@@ -58,5 +59,9 @@ public class WondersFrame extends JFrame {
             }
         }
         System.out.println(playersNames);
+    }
+
+    public List<String> getPlayersNames() {
+        return playersNames;
     }
 }
