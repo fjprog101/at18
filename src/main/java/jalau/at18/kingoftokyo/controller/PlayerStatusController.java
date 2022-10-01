@@ -1,10 +1,12 @@
 package jalau.at18.kingoftokyo.controller;
 
 import java.util.ArrayList;
-
 import jalau.at18.kingoftokyo.model.Observer;
 import jalau.at18.kingoftokyo.model.Player;
 import jalau.at18.kingoftokyo.model.Subject;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import jalau.at18.kingoftokyo.model.TokyoCity;
 import jalau.at18.kingoftokyo.model.Turn;
 
 public class PlayerStatusController implements Subject {
@@ -17,8 +19,11 @@ public class PlayerStatusController implements Subject {
     private static final int ENERGY = 3;
     private Turn turn;
     private ArrayList<Observer> observers;
-    public PlayerStatusController(Turn turn) {
+    private TokyoCity tokyoCity;
+
+    public PlayerStatusController(Turn turn, TokyoCity tokyoCity) {
         this.turn = turn;
+        this.tokyoCity = tokyoCity;
         observers = new ArrayList<Observer>();
     }
 
@@ -36,9 +41,26 @@ public class PlayerStatusController implements Subject {
     }
 
     public void giveDamage(int damage) {
-        for (Player player : turn.getPlayersList()) {
-            if (player != turn.getPlayerWithTheTurn()) {
-                player.setLifePoints(changeLifePoints(player, damage, -1));
+        if (turn.getPlayerWithTheTurn().getMonster() == tokyoCity.getMonster()) {
+            for (Player player : turn.getPlayersList()) {
+                if (player != turn.getPlayerWithTheTurn()) {
+                    player.setLifePoints(changeLifePoints(player, damage, -1));
+                }
+            }
+        } else {
+            for (Player player : turn.getPlayersList()) {
+                if (player.getMonster() == tokyoCity.getMonster() && damage != 0
+                        && turn.getPlayerWithTheTurn() != player) {
+                    player.setLifePoints(changeLifePoints(player, damage, -1));
+                    JLabel label = new JLabel(
+                            player.getUserName() + " Your monster was injured, do you want to leave TokyoCity?");
+                    int result = JOptionPane.showConfirmDialog(null, label, "You were attacked",
+                            JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+                    if (result == JOptionPane.YES_OPTION) {
+                        tokyoCity.removeMonster();
+                        tokyoCity.addMonster(turn.getPlayerWithTheTurn());
+                    }
+                }
             }
         }
     }
@@ -54,7 +76,7 @@ public class PlayerStatusController implements Subject {
 
     public int changeVictoryPoints(int victoryPoints) {
         int newVictoryPoints = turn.getPlayerWithTheTurn().getVictoryPoints();
-        while (newVictoryPoints < MAX_VICTORY  && victoryPoints > 0) {
+        while (newVictoryPoints < MAX_VICTORY && victoryPoints > 0) {
             newVictoryPoints++;
             victoryPoints--;
         }
@@ -72,7 +94,7 @@ public class PlayerStatusController implements Subject {
 
     @Override
     public void notifyObservers() {
-        for (Observer observer: observers) {
+        for (Observer observer : observers) {
             observer.update();
         }
     }

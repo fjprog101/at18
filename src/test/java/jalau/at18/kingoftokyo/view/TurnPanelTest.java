@@ -10,6 +10,7 @@ import jalau.at18.kingoftokyo.model.*;
 public class TurnPanelTest {
     @Test
     public void shouldShowAElements() {
+        TokyoCity tokyoCity = new TokyoCity();
         Player player1 = new Player();
         player1.addMonster(Monster.ALIENOID);
         Player player2 = new Player();
@@ -22,7 +23,7 @@ public class TurnPanelTest {
         playerList.add(player1);
         playerList.add(player2);
         Turn turn = new Turn(playerList);
-        TurnPanel turnPanel = new TurnPanel(turn);
+        TurnPanel turnPanel = new TurnPanel(turn, tokyoCity);
         assertEquals(2, turnPanel.getComponentCount());
         assertEquals(310, turnPanel.getBounds().getX(), 0);
         assertEquals(600, turnPanel.getBounds().getY(), 0);
@@ -33,6 +34,7 @@ public class TurnPanelTest {
 
     @Test
     public void shouldSetPlayerWithTurnLabel() {
+        TokyoCity tokyoCity = new TokyoCity();
         Player player1 = new Player();
         player1.addMonster(Monster.ALIENOID);
         Player player2 = new Player();
@@ -45,13 +47,13 @@ public class TurnPanelTest {
         playerList.add(player1);
         playerList.add(player2);
         Turn turn = new Turn(playerList);
-        TurnPanel turnPanel = new TurnPanel(turn);
-        assertEquals("Turn of: Space Penguin", ((JLabel)turnPanel.getComponent(0)).getText());
+        TurnPanel turnPanel = new TurnPanel(turn, tokyoCity);
+        assertEquals("Turn of: Space Penguin", ((JLabel) turnPanel.getComponent(0)).getText());
         turn.changePlayerWithTheTurn();
         turnPanel.setPlayerWithTurnLabel();
-        assertEquals("Turn of: Alienoid", ((JLabel)turnPanel.getComponent(0)).getText());
+        assertEquals("Turn of: Alienoid", ((JLabel) turnPanel.getComponent(0)).getText());
         turn.changePlayerWithTheTurn();
         turnPanel.setPlayerWithTurnLabel();
-        assertEquals("Turn of: Cyber Kitty", ((JLabel)turnPanel.getComponent(0)).getText());
+        assertEquals("Turn of: Cyber Kitty", ((JLabel) turnPanel.getComponent(0)).getText());
     }
 }

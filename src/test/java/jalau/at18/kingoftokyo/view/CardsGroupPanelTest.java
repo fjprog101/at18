@@ -41,7 +41,7 @@ public class CardsGroupPanelTest {
         CardsGroupPanel cardsGroup = new CardsGroupPanel(null, playerController);
         cardsGroup.sendEffect(effectsSetter);
         assertEquals(10, player1.getLifePoints());
-        assertEquals(8, player2.getLifePoints());
+        assertEquals(10, player2.getLifePoints());
         assertEquals(1, player1.getVictoryPoints());
         assertEquals(4, player1.getEnergy());
     }

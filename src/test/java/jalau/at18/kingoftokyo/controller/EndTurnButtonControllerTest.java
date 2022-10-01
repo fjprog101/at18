@@ -10,6 +10,7 @@ import org.junit.Test;
 
 import jalau.at18.kingoftokyo.model.Monster;
 import jalau.at18.kingoftokyo.model.Player;
+import jalau.at18.kingoftokyo.model.TokyoCity;
 import jalau.at18.kingoftokyo.model.Turn;
 import jalau.at18.kingoftokyo.view.TurnPanel;
 import jalau.at18.kingoftokyo.view.rolldicesection.RollDiceSectionUI;
@@ -17,6 +18,7 @@ import jalau.at18.kingoftokyo.view.rolldicesection.RollDiceSectionUI;
 public class EndTurnButtonControllerTest {
     @Test
     public void shouldChangeThePlayerWithTurn() {
+        TokyoCity tokyoCity = new TokyoCity();
         Player player1 = new Player();
         player1.addMonster(Monster.ALIENOID);
         Player player2 = new Player();
@@ -28,18 +30,18 @@ public class EndTurnButtonControllerTest {
         playerList.add(player1);
         playerList.add(player2);
         Turn turn = new Turn(playerList);
-        TurnPanel turnPanel = new TurnPanel(turn);
-        EndTurnButtonController button = new EndTurnButtonController(turn, turnPanel);
+        TurnPanel turnPanel = new TurnPanel(turn, tokyoCity);
+        EndTurnButtonController button = new EndTurnButtonController(turn, turnPanel, tokyoCity);
         RollDiceSectionUI rollDiceSectionUI = new RollDiceSectionUI();
         RollDiceSectionController rollDiceSectionController = new RollDiceSectionController(rollDiceSectionUI, null);
         button.addRollDiceSectionController(rollDiceSectionController);
         assertEquals(player3, turn.getPlayerWithTheTurn());
-        assertEquals("Turn of: Space Penguin", ((JLabel)turnPanel.getComponent(0)).getText());
+        assertEquals("Turn of: Space Penguin", ((JLabel) turnPanel.getComponent(0)).getText());
         button.actionPerformed(null);
         assertEquals(player1, turn.getPlayerWithTheTurn());
-        assertEquals("Turn of: Alienoid", ((JLabel)turnPanel.getComponent(0)).getText());
+        assertEquals("Turn of: Alienoid", ((JLabel) turnPanel.getComponent(0)).getText());
         button.actionPerformed(null);
         assertEquals(player2, turn.getPlayerWithTheTurn());
-        assertEquals("Turn of: Cyber Kitty", ((JLabel)turnPanel.getComponent(0)).getText());
+        assertEquals("Turn of: Cyber Kitty", ((JLabel) turnPanel.getComponent(0)).getText());
     }
 }

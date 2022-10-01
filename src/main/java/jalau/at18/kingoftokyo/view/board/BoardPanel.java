@@ -9,10 +9,8 @@ public class BoardPanel extends JPanel {
     private static final int SIZE = 500;
     private static final int POSITION_X = 390;
     private static final int POSITION_Y = 10;
-    private TokyoCity tokyoCity;
 
-    public BoardPanel() {
-        tokyoCity = new TokyoCity();
+    public BoardPanel(TokyoCity tokyoCity) {
         setBackground(Color.LIGHT_GRAY);
         setBounds(POSITION_X, POSITION_Y, SIZE,
                 SIZE);

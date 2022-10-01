@@ -25,7 +25,7 @@ public class MonsterLabel extends JLabel implements Observer {
                 SIZE));
         setIcon(icon);
         setAlignmentX(Component.CENTER_ALIGNMENT);
-        setVisible(false);
+        setVisible(true);
     }
 
     @Override
