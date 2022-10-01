@@ -20,6 +20,6 @@ public class BoardFrameTest {
         game.initGame(2,names);
         BoardFrame boardFrame = new BoardFrame(game);
         assertEquals(840, boardFrame.getWidth());
-        assertEquals(737, boardFrame.getHeight());
+        assertEquals(780, boardFrame.getHeight());
     }
 }
