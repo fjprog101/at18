@@ -9,7 +9,6 @@ import org.junit.Test;
 
 import jalau.at18.azul.controllerazul.StackSenderController;
 import jalau.at18.azul.model.Floor;
-import jalau.at18.azul.model.PyramidValidation;
 import jalau.at18.azul.view.FloorButtons;
 import jalau.at18.azul.view.PointerGroup;
 import jalau.at18.azul.view.PyramidBoard;
