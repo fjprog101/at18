@@ -29,8 +29,13 @@ public class DialogsController extends JOptionPane {
         showMessageDialog(null, "Sorry " + player.getUserName() + ", your monster was defeated", "You Lose", JOptionPane.ERROR_MESSAGE);
     }
     public void showMessageToWin(Player player) {
-        //UIManager um=new UIManager();
         UIManager.put("OptionPane.messageForeground", Color.BLUE);
         showMessageDialog(null, "Congratulations " + player.getUserName() + ", you WIN!!!", "You Win", JOptionPane.DEFAULT_OPTION);
+    }
+    public boolean showMessageForLeaveTokyo(Player player) {
+        JLabel label = new JLabel(player.getUserName() + " Your monster was injured, do you want to leave TokyoCity?");
+        int result = JOptionPane.showConfirmDialog(null, label, "You were attacked",
+                JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        return result == JOptionPane.YES_OPTION;
     }
 }

@@ -3,7 +3,7 @@ package jalau.at18.kingoftokyo.model;
 import java.util.ArrayList;
 
 public class TokyoCity extends Board implements Subject {
-    private Monster monsterInsideTokyo;
+    private Player playerInsideTokyo;
     private boolean monsterInside;
     private ArrayList<Observer> observers;
 
@@ -19,7 +19,7 @@ public class TokyoCity extends Board implements Subject {
     @Override
     public void addMonster(Player player) {
         if (!monsterInside) {
-            monsterInsideTokyo = player.getMonster();
+            playerInsideTokyo = player;
             monsterInside = true;
         }
         notifyObservers();
@@ -28,14 +28,14 @@ public class TokyoCity extends Board implements Subject {
     @Override
     public void removeMonster() {
         if (monsterInside) {
-            monsterInsideTokyo = null;
+            playerInsideTokyo = null;
             monsterInside = false;
         }
     }
 
     @Override
-    public Monster getMonster() {
-        return monsterInsideTokyo;
+    public Player getPlayer() {
+        return playerInsideTokyo;
     }
 
     @Override

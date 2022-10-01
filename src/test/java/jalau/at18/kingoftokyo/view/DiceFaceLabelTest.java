@@ -18,7 +18,6 @@ public class DiceFaceLabelTest {
     public void shouldPaintDiceFaceLabel() {
         DiceFaceLabel diceFaceLabel = new DiceFaceLabel();
         diceFaceLabel.paintDiceFace(DiceFace.PUNCHING);
-        DiceFace diceFace = diceFaceLabel.getPaintDiceFace();
         assertTrue(diceFaceLabel.isInitialize());
         assertTrue(diceFaceLabel.isVisible());
     }

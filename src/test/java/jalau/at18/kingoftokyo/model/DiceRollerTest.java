@@ -14,7 +14,7 @@ public class DiceRollerTest {
         int countDicesAvailables = 6;
         DiceRoller diceRoller = new DiceRoller();
 
-        List newList =  diceRoller.randomDice(countDicesAvailables);
+        List<DiceFace> newList =  diceRoller.randomDice(countDicesAvailables);
         List<DiceFace> ListDiceFace = Arrays.asList(DiceFace.values());
         assertTrue(ListDiceFace.contains(newList.get(0)));
     }

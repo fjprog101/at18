@@ -30,7 +30,7 @@ public class MonsterLabel extends JLabel implements Observer {
 
     @Override
     public void update() {
-        ImageIcon image = new ImageIcon(tokyoCity.getMonster().getIconPath());
+        ImageIcon image = new ImageIcon(tokyoCity.getPlayer().getMonster().getIconPath());
         Icon icon = new ImageIcon(image.getImage().getScaledInstance(SIZE, SIZE,
                 SIZE));
         setIcon(icon);

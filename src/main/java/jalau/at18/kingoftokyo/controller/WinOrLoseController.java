@@ -46,7 +46,7 @@ public class WinOrLoseController implements Observer {
     }
 
     public void playerLose(Player player) {
-        dialog.showMessageToLose(player);
         turn.removePlayer(player);
+        dialog.showMessageToLose(player);
     }
 }
