@@ -1,10 +1,7 @@
 package jalau.at18.architects.view;
 
 import javax.swing.JLabel;
-
-import jalau.at18.architects.controller.BluePointsViewController;
 import jalau.at18.architects.model.cards.BluePoints;
-
 import java.awt.Font;
 import java.awt.Color;
 
@@ -19,7 +16,7 @@ public class BluePointsNumber extends JLabel {
     public BluePointsNumber(BluePoints bluePoints) {
         //BluePointsViewController bluePointsController = new BluePointsViewController();
         //setText(bluePointsController.getBluePoints()+ "");
-        setText(bluePoints.getPoints()+ "");
+        setText(bluePoints.getPoints() + "");
         setBounds(POSITION_X, POSITION_Y, WIDTH, HEIGHT);
         setFont(new Font("Arial Black", FONT_STYLE, FONT_SIZE));
         setForeground(Color.BLACK);

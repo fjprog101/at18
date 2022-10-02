@@ -1,10 +1,7 @@
 package jalau.at18.architects.view;
 
 import javax.swing.JLabel;
-
-import jalau.at18.architects.controller.WarWinnerPointsController;
 import jalau.at18.architects.model.cards.WarWinnerPoints;
-
 import java.awt.Font;
 import java.awt.Color;
 
