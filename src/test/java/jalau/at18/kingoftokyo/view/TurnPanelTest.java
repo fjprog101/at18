@@ -25,9 +25,9 @@ public class TurnPanelTest {
         Turn turn = new Turn(playerList);
         TurnPanel turnPanel = new TurnPanel(turn, tokyoCity);
         assertEquals(2, turnPanel.getComponentCount());
-        assertEquals(310, turnPanel.getBounds().getX(), 0);
+        assertEquals(330, turnPanel.getBounds().getX(), 0);
         assertEquals(600, turnPanel.getBounds().getY(), 0);
-        assertEquals(1000, turnPanel.getBounds().getWidth(), 0);
+        assertEquals(980, turnPanel.getBounds().getWidth(), 0);
         assertEquals(40, turnPanel.getBounds().getHeight(), 0);
         assertTrue(turnPanel.isVisible());
     }

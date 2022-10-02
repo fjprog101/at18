@@ -1,6 +1,6 @@
 package jalau.at18.kingoftokyo.view.playercard;
 
-import java.awt.Dimension;
+import java.awt.*;
 import java.util.ArrayList;
 
 import javax.swing.Box;
@@ -11,6 +11,10 @@ import jalau.at18.kingoftokyo.model.Monster;
 import jalau.at18.kingoftokyo.model.Player;
 
 public class PlayerCardsGroupPanel extends JPanel {
+    private static final int THREE = 3;
+    private static final int RED = 176;
+    private static final int GREEN = 82;
+    private static final int BLUE = 122;
     private static final int[] SIZE = {300, 650};
     private static final int[] POS = {0, 0};
     private static final int CARDS_SEPARATION = 5;
@@ -22,6 +26,9 @@ public class PlayerCardsGroupPanel extends JPanel {
         setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
         addComponents();
         initializePlayerCards();
+        float[] hsb = new float[THREE];
+        hsb = Color.RGBtoHSB(RED, GREEN, BLUE, hsb);
+        setBackground(Color.getHSBColor(hsb[0], hsb[1], hsb[2]));
     }
 
     private void addComponents() {

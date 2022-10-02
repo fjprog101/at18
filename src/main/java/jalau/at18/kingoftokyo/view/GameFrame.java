@@ -1,6 +1,7 @@
 package jalau.at18.kingoftokyo.view;
 
 import javax.swing.*;
+import java.awt.*;
 import jalau.at18.kingoftokyo.controller.PlayerStatusController;
 import jalau.at18.kingoftokyo.controller.WinOrLoseController;
 import jalau.at18.kingoftokyo.model.*;
@@ -10,6 +11,10 @@ import jalau.at18.kingoftokyo.view.playercard.PlayerCardsGroupPanel;
 import jalau.at18.kingoftokyo.view.rolldicesection.DiceSectionUI;
 
 public class GameFrame extends JFrame {
+    private static final int THREE = 3;
+    private static final int RED = 176;
+    private static final int GREEN = 82;
+    private static final int BLUE = 122;
     private static final int DEFAULT_POS = 30;
     private static final int DEFAULT_WIDTH = 1600;
     private static final int DEFAULT_HEIGHT = 700;
@@ -35,6 +40,9 @@ public class GameFrame extends JFrame {
         add(new BoardPanel(tokyoCity));
         turnPanel.addRollDiceController(diceSectionUI.getController());
         add(turnPanel);
+        float[] hsb = new float[THREE];
+        hsb = Color.RGBtoHSB(RED, GREEN, BLUE, hsb);
+        getContentPane().setBackground(Color.getHSBColor(hsb[0], hsb[1], hsb[2]));
     }
 
     private void initialize() {
