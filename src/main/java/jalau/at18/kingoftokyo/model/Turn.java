@@ -3,7 +3,6 @@ package jalau.at18.kingoftokyo.model;
 import java.util.ArrayList;
 
 public class Turn {
-    //private Player[] playersSequence;
     private int turn;
     private ArrayList<Player> playersSequence;
 
@@ -30,5 +29,10 @@ public class Turn {
 
     public void removePlayer(Player player) {
         playersSequence.remove(player);
+        if (turn == playersSequence.size()) {
+            turn = -1;
+        } else {
+            turn--;
+        }
     }
 }

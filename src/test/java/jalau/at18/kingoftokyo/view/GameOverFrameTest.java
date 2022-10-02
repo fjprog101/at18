@@ -13,8 +13,8 @@ public class GameOverFrameTest {
         GameOverFrame gameOverFrame = new GameOverFrame();
         assertEquals(200, gameOverFrame.getBounds().getX(), 0);
         assertEquals(200, gameOverFrame.getBounds().getY(), 0);
-        assertEquals(500, gameOverFrame.getBounds().getWidth(), 0);
-        assertEquals(300, gameOverFrame.getBounds().getHeight(), 0);
+        assertEquals(600, gameOverFrame.getBounds().getWidth(), 0);
+        assertEquals(400, gameOverFrame.getBounds().getHeight(), 0);
         assertTrue(gameOverFrame.isVisible());
     }
 }
