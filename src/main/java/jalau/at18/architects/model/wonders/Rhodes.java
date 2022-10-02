@@ -18,4 +18,7 @@ public class Rhodes extends Wonder {
         stageRhodes[INDEX] = new Stage(StagesRhodes.FOUR.getCountOfResources(), StagesRhodes.FOUR.getEquals(), StagesRhodes.FOUR.getPoints());
         stageRhodes[INDEX + 1] = new Stage(StagesRhodes.FIVE.getCountOfResources(), StagesRhodes.FIVE.getEquals(), StagesRhodes.FIVE.getPoints());
     }
+    public String getName() {
+        return "Rhodes";
+    }
 }

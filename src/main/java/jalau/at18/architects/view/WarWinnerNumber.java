@@ -8,7 +8,7 @@ import java.awt.Font;
 import java.awt.Color;
 
 public class WarWinnerNumber extends JLabel {
-    private static final int POSITION_X = 35;
+    private static final int POSITION_X = 25;
     private static final int POSITION_Y = 18;
     private static final int WIDTH = 50;
     private static final int HEIGHT = 40;

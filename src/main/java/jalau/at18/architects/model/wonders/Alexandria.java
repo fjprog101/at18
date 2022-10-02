@@ -18,4 +18,7 @@ public class Alexandria extends Wonder {
         stageAlexandria[INDEX] = new Stage(StagesAlex.FOUR.getCountOfResources(), StagesAlex.FOUR.getEquals(), StagesAlex.FOUR.getPoints());
         stageAlexandria[INDEX + 1] = new Stage(StagesAlex.FIVE.getCountOfResources(), StagesAlex.FIVE.getEquals(), StagesAlex.FIVE.getPoints());
     }
+    public String getName() {
+        return "Alexandria";
+    }
 }

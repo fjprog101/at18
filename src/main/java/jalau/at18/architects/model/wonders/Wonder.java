@@ -3,6 +3,7 @@ package jalau.at18.architects.model.wonders;
 public abstract class Wonder {
     private final int maxOfStages = 5;
     private Stage[] stages;
+    private String name;
     public Wonder() {
         stages = new Stage[maxOfStages];
     }
@@ -10,4 +11,8 @@ public abstract class Wonder {
         return stages;
     }
     abstract void fillStages();
+
+    public String getName() {
+        return name;
+    }
 }

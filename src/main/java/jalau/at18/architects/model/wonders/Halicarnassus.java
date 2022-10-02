@@ -18,4 +18,7 @@ public class Halicarnassus extends Wonder {
         stageHalicarnassus[INDEX] = new Stage(StagesHal.FOUR.getCountOfResources(), StagesHal.FOUR.getEquals(), StagesHal.FOUR.getPoints());
         stageHalicarnassus[INDEX + 1] = new Stage(StagesHal.FIVE.getCountOfResources(), StagesHal.FIVE.getEquals(), StagesHal.FIVE.getPoints());
     }
+    public String getName() {
+        return "Halicarnassus";
+    }
 }

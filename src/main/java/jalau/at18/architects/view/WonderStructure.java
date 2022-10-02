@@ -49,4 +49,8 @@ class WonderStructure extends JPanel {
         // }
         index = QUANTITY_STAGES;
     }
+    public void showWonder() {
+        stage = stages.get(0);
+        add(stage);
+    }
 }

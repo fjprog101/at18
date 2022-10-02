@@ -18,4 +18,7 @@ public class Ephesus extends Wonder {
         stageEphesus[INDEX] = new Stage(StagesEphesus.FOUR.getCountOfResources(), StagesEphesus.FOUR.getEquals(), StagesEphesus.FOUR.getPoints());
         stageEphesus[INDEX + 1] = new Stage(StagesEphesus.FIVE.getCountOfResources(), StagesEphesus.FIVE.getEquals(), StagesEphesus.FIVE.getPoints());
     }
+    public String getName() {
+        return "Ephesus";
+    }
 }
