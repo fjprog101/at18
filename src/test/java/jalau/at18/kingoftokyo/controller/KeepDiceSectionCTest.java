@@ -5,16 +5,14 @@ import jalau.at18.kingoftokyo.view.TurnPanel;
 import jalau.at18.kingoftokyo.view.rolldicesection.DiceFaceLabel;
 import jalau.at18.kingoftokyo.view.rolldicesection.KeepDiceSectionUI;
 import org.junit.Test;
-
 import javax.swing.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
-public class KeepDiceSectionControllerTest {
+public class KeepDiceSectionCTest {
     @Test
     public void shouldCalculateDiceRollerPlayerTurn() {
         PlayerStatusController mockPlayerStatusController = mock(PlayerStatusController.class);
@@ -65,5 +63,4 @@ public class KeepDiceSectionControllerTest {
         assertEquals(DiceFace.ENERGY, keepDiceSectionController.getKeepDiceSectionUI()
                 .getListKeepDiceFaceLabel().get(0).getPaintDiceFace());
     }
-
 }
