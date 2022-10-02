@@ -26,12 +26,7 @@ public class PanelSouthTest {
         
         WhoStartRollDiceController whoStartRollDiceController = new WhoStartRollDiceController(whoStartFrame, rollDiceSectionUI, showResultsPanel, startGameButton);
         PanelSouth panelSouth = new PanelSouth(whoStartRollDiceController);
-        assertEquals(300, panelSouth.getBounds().getX(), 0);
-        assertEquals(400, panelSouth.getBounds().getY(), 0);
         
-        assertEquals(600, panelSouth.getBounds().getWidth(), 0);
-        assertEquals(200, panelSouth.getBounds().getHeight(), 0);
-
-
+        assertEquals(1, panelSouth.getComponentCount());
     }
 }

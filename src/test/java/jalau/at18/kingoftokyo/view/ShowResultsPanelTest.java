@@ -21,21 +21,30 @@ public class ShowResultsPanelTest {
         playerList.add(player1);
 
         ShowResultsPanel showResultsPanel = new ShowResultsPanel(playerList);
-        assertEquals(650, showResultsPanel.getBounds().getX(), 0);
-        assertEquals(50, showResultsPanel.getBounds().getY(), 0);
 
-        assertEquals(300, showResultsPanel.getBounds().getWidth(), 0);
-        assertEquals(200, showResultsPanel.getBounds().getHeight(), 0);
+        assertEquals(2, showResultsPanel.getComponentCount());
 
     }
     @Test
     public void TextToplayername() {
-        
-        String playername = "name";
-        PlayerNameLabel playerNameLabel = new PlayerNameLabel(playername);
+        Player player1 = new Player();
+        player1.setMonster(Monster.ALIENOID);
+        ArrayList<Player> playerList = new ArrayList<Player>();
+        playerList.add(player1);
+        ShowResultsPanel showResultsPanel = new ShowResultsPanel(playerList);
         int cantPunching = 3;
-        playerNameLabel.setPlayerName(cantPunching);
-        assertEquals(" * name punching amount  =  3", playerNameLabel.getText());
+        assertEquals("Alienoid", ((PlayerNameLabel)showResultsPanel.getComponent(1)).getText());
+        showResultsPanel.setTextComponent(1, cantPunching);
+        assertEquals(" * Alienoid punching amount  =  3", ((PlayerNameLabel)showResultsPanel.getComponent(1)).getText());
+    }
 
+    @Test
+    public void shouldGivePlayersArrayList() {
+        Player player1 = new Player();
+        player1.setMonster(Monster.ALIENOID);
+        ArrayList<Player> playerList = new ArrayList<Player>();
+        playerList.add(player1);
+        ShowResultsPanel showResultsPanel = new ShowResultsPanel(playerList);
+        assertEquals(playerList, showResultsPanel.getArrayPlayer());
     }
 }
