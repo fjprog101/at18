@@ -1,12 +1,13 @@
 package jalau.at18.architects.view;
 
-import java.awt.*;
 import javax.swing.*;
-
+import java.util.List;
 import jalau.at18.architects.controller.BarConflictController;
 import jalau.at18.architects.controller.WonderController;
 import jalau.at18.architects.model.BuildStage;
 import jalau.at18.architects.model.Game;
+import jalau.at18.architects.model.player.Player;
+import jalau.at18.architects.model.wonders.RandomWonder;
 
 public class BoardFrame extends JFrame {
     public static final int WIDTH = 840;
@@ -17,6 +18,8 @@ public class BoardFrame extends JFrame {
     public static final int COLOR3 = 230;
 
     private Game game;
+    private List<Player> players;
+    private int numbersOfPlayers;
     private MiddleDeck middleDeck;
     private CheckTheConflictTokens checkTheConflictTokens;
     private BarConflictController barConflictController;
@@ -66,44 +69,63 @@ public class BoardFrame extends JFrame {
     private static final int RESOURCE_WIDTH = 400;
     private static final int RESOURCE_HEIGHT = 80;
 
+    private static final int POS_X_BAR_CONFLICT = 50;
+    private static final int POS_Y_BAR_CONFLICT = 25;
+    private static final int WIDTH_BAR_CONFLICT = 275;
+    private static final int HEIGHT_Y_BAR_CONFLICT = 75;
+
+    private static final int QUANTITY_ELEMENTS_ON_BOARD = 4;
+
+    private PlayerStatus playerStatus;
+    private RandomWonder randomWonder;
+    private int numberPlayer;
     // private BuildStage buildStage;
     public BoardFrame(Game game) {
+        System.out.println(game.getPlayers().size());
         setResizable(false);
         this.game = game;
         barConflictController = new BarConflictController(this, game);
-        wonderController = new WonderController(this, new BuildStage());
+        wonderController = new WonderController(new BuildStage(), playerStatus);
+        barConflictController = new BarConflictController(this, game);
+        players = game.getPlayers();
+        //wonderController = new WonderController(this, new BuildStage());
+        this.numbersOfPlayers = game.getPlayers().size();
+        //players = new ArrayList<Player>();
+        numberPlayer = 0;
         initialize();
     }
 
     private void initialize() {
         middleDeck = new MiddleDeck();
-        MiddleDeck middleDeck1 = new MiddleDeck();
-        MiddleDeck middleDeck2 = new MiddleDeck();
+        //MiddleDeck middleDeck1 = new MiddleDeck();
+        //MiddleDeck middleDeck2 = new MiddleDeck();
+
 
         setContentPane(new JLabel(new ImageIcon("src/main/resources/architects/images/backimage.jpg")));
 
         checkTheConflictTokens = new CheckTheConflictTokens(barConflictController);
+        BarConflict barconflict = new BarConflict(game.getPlayers().size());
+        barconflict.setBounds(POS_X_BAR_CONFLICT, POS_Y_BAR_CONFLICT, WIDTH_BAR_CONFLICT, HEIGHT_Y_BAR_CONFLICT);
+        //wonderStructure = new WonderStructure();
+        //addStage = new AddStageButton(wonderController);
+        add(barconflict);
+        //warWinnerPointsView = new WarWinnerPointsView();
+        //bluePointsView = new BluePointsView();
 
-        wonderStructure = new WonderStructure();
-        addStage = new AddStageButton(wonderController);
-
-        warWinnerPointsView = new WarWinnerPointsView();
-        bluePointsView = new BluePointsView();
-
-        add(addStage); // button
+        //add(addStage); // button
         middleDeck.setBounds(DECK_POSITION_X, DECK_POSITION_Y, DECK_WIDTH, DECK_HEIGHT);
         add(middleDeck);
-        middleDeck1.setBounds(DECK1_POSITION_X, DECK1_POSITION_Y, DECK_WIDTH, DECK_HEIGHT);
+        /*middleDeck1.setBounds(DECK1_POSITION_X, DECK1_POSITION_Y, DECK_WIDTH, DECK_HEIGHT);
         add(middleDeck1);
         middleDeck2.setBounds(DECK2_POSITION_X, DECK2_POSITION_Y, DECK_WIDTH, DECK_HEIGHT);
-        add(middleDeck2);
+        add(middleDeck2);*/
 
         add(checkTheConflictTokens);
 
-        wonderStructure.setBounds(WONDER_POSITION_X, WONDER_POSITION_Y, WONDER_WIDTH, WONDER_HEIGHT);
-        add(wonderStructure);
+        //wonderStructure.setBounds(WONDER_POSITION_X, WONDER_POSITION_Y, WONDER_WIDTH, WONDER_HEIGHT);
+        //add(wonderStructure);
 
-        JPanel militaryT = new JPanel();
+        /*JPanel militaryT = new JPanel();
         JPanel militaryP = new JPanel();
 
         militaryT.setBounds(MILITARY_T_POSITION_X, MILITARY_T_POSITION_Y, POINT_WIDTH, POINT_HEIGHT);
@@ -116,9 +138,9 @@ public class BoardFrame extends JFrame {
         add(warWinnerPointsView);
 
         bluePointsView.setBounds(BLUE_POINT_POSITION_X, BLUE_POINT_POSITION_Y, POINT_WIDTH, POINT_HEIGHT);
-        add(bluePointsView);
+        add(bluePointsView);*/
 
-        JPanel sience = new JPanel();
+        /*JPanel sience = new JPanel();
         JPanel resource = new JPanel();
 
         sience.setBounds(SIENCE_POSITION_X, SIENCE_POSITION_Y, SIENCE_WIDTH, SIENCE_HEIGHT);
@@ -126,7 +148,27 @@ public class BoardFrame extends JFrame {
         add(sience);
         resource.setBounds(RESOURCE_POSITION_X, RESOURCE_POSITION_Y, RESOURCE_WIDTH, RESOURCE_HEIGHT);
         resource.setBackground(Color.WHITE);
-        add(resource);
+        add(resource);*/
+
+        /*randomWonder = new RandomWonder();
+        Player player = new Player("Libertad",randomWonder.getRamdomWonder() );
+        Player player2 = new Player("Alvaro", randomWonder.getRamdomWonder());
+        Player player3 = new Player("Mauricio", randomWonder.getRamdomWonder());
+        Player player4 = new Player("Jose", randomWonder.getRamdomWonder());
+        Player player5 = new Player("Carlos", randomWonder.getRamdomWonder());
+        players.add(player);
+        players.add(player2);
+        players.add(player3);
+        players.add(player4);
+        players.add(player5);*/
+        addNextPlayer();
+
+
+        /*
+        playerStatus = new PlayerStatus(player);
+        playerStatus = new PlayerStatus(player2);
+        playerStatus = new PlayerStatus(player3);
+        add(playerStatus);*/
 
         setTitle(WINDOW_NAME);
         setSize(WIDTH, HEIGHT);
@@ -141,4 +183,30 @@ public class BoardFrame extends JFrame {
         wonderStructure.buildStages(stagesCompleted);
         this.validate();
     }
+    public void addNextPlayer() {
+        if (this.getContentPane().getComponentCount() == QUANTITY_ELEMENTS_ON_BOARD) {
+            this.getContentPane().remove(QUANTITY_ELEMENTS_ON_BOARD - 1);
+        }
+
+        playerStatus = new PlayerStatus(players.get(numberPlayer));
+        numberPlayer++;
+        add(playerStatus);
+        this.repaint();
+        this.revalidate();
+        if (numberPlayer == players.size()) {
+            numberPlayer = 0;
+        }
+
+        /*if(this.getContentPane().getComponentCount() == 4) {
+            this.getContentPane().remove(3 - 1);
+            System.out.println("rmoved");
+        }
+        System.out.println(game.getPlayer().getName());
+        playerStatus = new PlayerStatus(game.getPlayer());
+        add(playerStatus);
+        this.repaint();
+        this.revalidate();
+        */
+    }
+
 }

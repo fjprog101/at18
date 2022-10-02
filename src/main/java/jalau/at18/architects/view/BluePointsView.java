@@ -1,18 +1,20 @@
 package jalau.at18.architects.view;
 import javax.swing.JPanel;
 
+import jalau.at18.architects.model.cards.BluePoints;
+
 public class BluePointsView extends JPanel {
     private static final int WIDTH = 40;
     private static final int HEIGHT = 40;
     private static final int POSITION_X = 800;
     private static final int POSITION_Y = 450;
 
-    public BluePointsView() {
+    public BluePointsView(BluePoints bluePoints) {
         setOpaque(false);
         // setBackground(Color.WHITE);
         setBounds(POSITION_X, POSITION_Y, WIDTH, HEIGHT);
         setLayout(null);
-        add(new BluePointsNumber());
+        add(new BluePointsNumber(bluePoints));
         add(new BluePointsIcon());
     }
 }

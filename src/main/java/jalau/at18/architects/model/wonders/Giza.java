@@ -18,4 +18,7 @@ public class Giza extends Wonder {
         stageGiza[INDEX] = new Stage(StagesGiza.FOUR.getCountOfResources(), StagesGiza.FOUR.getEquals(), StagesGiza.FOUR.getPoints());
         stageGiza[INDEX + 1] = new Stage(StagesGiza.FIVE.getCountOfResources(), StagesGiza.FIVE.getEquals(), StagesGiza.FIVE.getPoints());
     }
+    public String getName() {
+        return "Giza";
+    }
 }

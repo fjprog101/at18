@@ -18,4 +18,7 @@ public class Olympia extends Wonder {
         stageOlympia[INDEX] = new Stage(StagesOlympia.FOUR.getCountOfResources(), StagesOlympia.FOUR.getEquals(), StagesOlympia.FOUR.getPoints());
         stageOlympia[INDEX + 1] = new Stage(StagesOlympia.FIVE.getCountOfResources(), StagesOlympia.FIVE.getEquals(), StagesOlympia.FIVE.getPoints());
     }
+    public String getName() {
+        return "Olympia";
+    }
 }

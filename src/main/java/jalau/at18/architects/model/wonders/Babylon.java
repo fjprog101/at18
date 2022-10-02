@@ -18,4 +18,7 @@ public class Babylon extends Wonder {
         stageBabylon[INDEX] = new Stage(StagesBabylon.FOUR.getCountOfResources(), StagesBabylon.FOUR.getEquals(), StagesBabylon.FOUR.getPoints());
         stageBabylon[INDEX + 1] = new Stage(StagesBabylon.FIVE.getCountOfResources(), StagesBabylon.FIVE.getEquals(), StagesBabylon.FIVE.getPoints());
     }
+    public String getName() {
+        return "Babylon";
+    }
 }
