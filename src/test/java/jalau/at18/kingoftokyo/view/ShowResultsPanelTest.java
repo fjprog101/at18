@@ -1,6 +1,7 @@
 package jalau.at18.kingoftokyo.view;
-
+import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 import java.util.ArrayList;
 
@@ -27,6 +28,9 @@ public class ShowResultsPanelTest {
         assertEquals(300, showResultsPanel.getBounds().getWidth(), 0);
         assertEquals(200, showResultsPanel.getBounds().getHeight(), 0);
 
+        int index = 1;
+        assertNotNull(showResultsPanel.getPlayerNameLabel(index));
+        assertNotNull(showResultsPanel.getArrayPlayer());
     }
     @Test
     public void TextToplayername() {
