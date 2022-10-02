@@ -44,11 +44,11 @@ public class BagSenderTest {
         bag.saveBag();
 
         bag.removeTiles();
-        assertEquals(96, bag.saveRemainingBag().size());
-        assertNotEquals(100, bag.saveRemainingBag().size());
+        assertEquals(116, bag.saveRemainingBag().size());
+        assertNotEquals(120, bag.saveRemainingBag().size());
 
         bag.removeTiles();
-        assertEquals(92, bag.saveRemainingBag().size());
-        assertNotEquals(96, bag.saveRemainingBag().size());
+        assertEquals(112, bag.saveRemainingBag().size());
+        assertNotEquals(116, bag.saveRemainingBag().size());
     }
 }

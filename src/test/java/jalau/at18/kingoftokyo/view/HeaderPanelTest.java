@@ -2,8 +2,6 @@ package jalau.at18.kingoftokyo.view;
 
 import static org.junit.Assert.assertEquals;
 
-import java.awt.BorderLayout;
-
 import jalau.at18.kingoftokyo.view.general.FooterPanel;
 import jalau.at18.kingoftokyo.view.general.HeaderPanel;
 import jalau.at18.kingoftokyo.view.general.MonsterLabel;
@@ -49,7 +47,7 @@ public class HeaderPanelTest {
     @Test
     public void shouldShowUsernameTextBox() {
         UsernameTextBox usernameTextBox = new UsernameTextBox();
-        assertEquals("Serif.bold", usernameTextBox.getFont().getFontName());
+        assertEquals("Serif.plain", usernameTextBox.getFont().getFontName());
         assertEquals(18, usernameTextBox.getFont().getSize());
         assertEquals(true, usernameTextBox.isFontSet());
 

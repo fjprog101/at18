@@ -6,6 +6,7 @@ import javax.swing.*;
 import jalau.at18.architects.controller.BarConflictController;
 import jalau.at18.architects.controller.WonderController;
 import jalau.at18.architects.model.BuildStage;
+import jalau.at18.architects.model.Game;
 
 public class BoardFrame extends JFrame {
     public static final int WIDTH = 840;
@@ -15,7 +16,7 @@ public class BoardFrame extends JFrame {
     public static final int COLOR2 = 245;
     public static final int COLOR3 = 230;
 
-    private String numbersOfPlayers;
+    private Game game;
     private MiddleDeck middleDeck;
     private CheckTheConflictTokens checkTheConflictTokens;
     private BarConflictController barConflictController;
@@ -66,11 +67,11 @@ public class BoardFrame extends JFrame {
     private static final int RESOURCE_HEIGHT = 80;
 
     // private BuildStage buildStage;
-    public BoardFrame(String numberOfPlayers) {
+    public BoardFrame(Game game) {
         setResizable(false);
-        barConflictController = new BarConflictController(this);
+        this.game = game;
+        barConflictController = new BarConflictController(this, game);
         wonderController = new WonderController(this, new BuildStage());
-        this.numbersOfPlayers = numberOfPlayers;
         initialize();
     }
 
@@ -134,11 +135,6 @@ public class BoardFrame extends JFrame {
         setLocationRelativeTo(null);
         setLayout(null);
         setVisible(true);
-    }
-
-    public int getNumberOfPlayers() {
-        int players = Integer.valueOf(numbersOfPlayers);
-        return players;
     }
 
     public void addStage(int stagesCompleted) {

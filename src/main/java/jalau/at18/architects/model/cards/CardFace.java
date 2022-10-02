@@ -1,12 +1,20 @@
 package jalau.at18.architects.model.cards;
 
 public enum CardFace {
-    PAPER_GRAY("grayPaper.png", new GrayCard(Resource.PAPER)),
-    RED_1_HORN("red1horn.png", new RedCard(1)),
-    RED_2_HORN("red2horn.jgp", new RedCard(2)),
-    ARC_GREEN("greenArc.png", new GreenCard(ScientificSymbol.COMPASS)),
-    CAT_WITH_BLUE("blueCat.png", new BlueCard(true, 2)),
-    YELLOW("yellow.png", new YellowCard());
+    WATER_GRAY("cwater.png", new GrayCard(Resource.WATER)),
+    WOOD_GRAY("cwood.png", new GrayCard(Resource.WOOD)),
+    STONE_GRAY("cstone.png", new GrayCard(Resource.STONE)),
+    PAPER_GRAY("cpaper.png", new GrayCard(Resource.PAPER)),
+    BRICK_GRAY("cbrick.png", new GrayCard(Resource.BRICK)),
+    CAT_WITH_BLUE("cbluecat.png", new BlueCard(true, 2)),
+    CAT_WITHOUT_BLUE("cblue.png", new BlueCard(false, 3)),
+    RED_SHIELD("cwar1.png", new RedCard(0)),
+    RED_1_HORN("cwar2.png", new RedCard(1)),
+    RED_2_HORN("cwar3.png", new RedCard(2)),
+    COMPASS_GREEN("ccompass.png", new GreenCard(ScientificSymbol.COMPASS)),
+    SCREW_GREEN("cscrew.png", new GreenCard(ScientificSymbol.SCREW)),
+    OLDTABLE_GREEN("ctable.png", new GreenCard(ScientificSymbol.OLDTABLE)),
+    YELLOW("cgold.png", new YellowCard());
 
     private String nameOfFile;
     private Card card;

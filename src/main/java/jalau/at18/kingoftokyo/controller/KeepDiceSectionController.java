@@ -7,7 +7,6 @@ import jalau.at18.kingoftokyo.view.rolldicesection.KeepDiceSectionUI;
 
 public class KeepDiceSectionController {
     private KeepDiceSectionUI keepDiceSectionUI;
-    //private RollDiceSectionController rollDiceSectionController;
     private DiceFaceKeeper diceFaceKeeper;
     private DiceFaceTurnResult diceFaceTurnResult;
     private int countDiceFaceSet = 0;
@@ -40,6 +39,8 @@ public class KeepDiceSectionController {
     }
 
     public void calculateDiceResult() {
+        turnPanel.getComponent(1).setEnabled(true);
+        keepDiceSectionUI.resetUI();
         DiceFaceKeeperProcess diceFaceKeeperProcess = new DiceFaceKeeperProcess(diceFaceKeeper);
         DiceFaceKeeperResult diceFaceKeeperResult = new DiceFaceKeeperResult(diceFaceKeeperProcess);
         diceFaceTurnResult = diceFaceKeeperResult.resultDiceFaceKeeper();
@@ -50,19 +51,13 @@ public class KeepDiceSectionController {
         int[] effect = {healing, damage, score, energy};
         countDiceFaceSet = 0;
         keepDiceSectionUI.sendResults(effect); // For change player atributes
-        keepDiceSectionUI.resetUI();
-        //rollDiceSectionController.resetUI();
         diceFaceKeeper = new DiceFaceKeeper();
-        turnPanel.getComponent(1).setEnabled(true);
     }
 
     public KeepDiceSectionUI getKeepDiceSectionUI() {
         return keepDiceSectionUI;
     }
 
-    /*public void setRollDiceSectionController(RollDiceSectionController rollDiceSectionControllerr) {
-        this.rollDiceSectionController = rollDiceSectionControllerr;
-    }*/
     public void addTurnPanel(TurnPanel newTurnPanel) {
         this.turnPanel = newTurnPanel;
     }

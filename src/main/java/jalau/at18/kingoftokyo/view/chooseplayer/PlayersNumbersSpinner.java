@@ -5,8 +5,8 @@ import java.awt.*;
 
 public class PlayersNumbersSpinner extends JSpinner {
     private static final String FONT_NAME = "Serif";
-    private static final int FONT_SIZE = 20;
-    private static final int SIZE = 40;
+    private static final int FONT_SIZE = 18;
+    private static final int SIZE = 35;
     private static final int MINIMUM = 2;
     private static final int MAXIMUM = 4;
     private static final int ONE = 1;

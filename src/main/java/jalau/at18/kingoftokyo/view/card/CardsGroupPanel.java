@@ -11,8 +11,8 @@ import jalau.at18.kingoftokyo.model.DeckCards;
 import jalau.at18.kingoftokyo.model.Turn;
 
 public class CardsGroupPanel extends JPanel {
-    private static final int[] CARD_SIZE = {470, 250};
-    private static final int[] CARD_POS = {950, 185};
+    private static final int[] CARD_SIZE = {550, 250 };
+    private static final int[] CARD_POS = {950, 185 };
     private static final int CARDS_SEPARATION = 10;
     private DeckCards deck;
     private Turn turn;

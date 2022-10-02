@@ -6,9 +6,9 @@ import java.awt.*;
 public class UsernameTextBox extends JTextField {
     private static final String FONT_NAME = "Serif";
     private static final int FONT_SIZE = 18;
-    private static final int TEN = 10;
+    private static final int TEN = 12;
     public UsernameTextBox() {
         super(TEN);
-        setFont(new Font(FONT_NAME, Font.BOLD, FONT_SIZE));
+        setFont(new Font(FONT_NAME, Font.PLAIN, FONT_SIZE));
     }
 }

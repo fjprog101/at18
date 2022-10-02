@@ -3,22 +3,19 @@ package jalau.at18.architects.view;
 import java.awt.*;
 
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 
 public class CardLabel extends JLabel {
-    public static final int DEFAULT_SIZE_2 = 150;
-    public static final int DEFAULT_SIZE_1 = 100;
-    public static final int SPACE_SIZE = 10;
-    private String direction = "src/main/resources/architects/images/";
+    public static final int WIDTH = 130;
+    public static final int HEIGHT = 180;
+
+    private String direction = "src/main/resources/architects/cards/";
+
     CardLabel() {
-        super("");
-        setBorder(new EmptyBorder(0, SPACE_SIZE, 0, 0));
-        setSize(DEFAULT_SIZE_1, DEFAULT_SIZE_2);
-        ImageIcon image = new ImageIcon(direction + "reverse.jpg");
-        Icon icon = new ImageIcon(image.getImage().getScaledInstance(getWidth(), getHeight(), Image.SCALE_DEFAULT));
+        ImageIcon image = new ImageIcon(direction + "deck.png");
+        Icon icon = new ImageIcon(image.getImage().getScaledInstance(WIDTH, HEIGHT, WIDTH));
         setIcon(icon);
-        setBackground(Color.CYAN);
     }
+
     public void setImage(String file) {
         ImageIcon image = new ImageIcon(direction + file);
         Icon icon = new ImageIcon(image.getImage().getScaledInstance(getWidth(), getHeight(), Image.SCALE_DEFAULT));
