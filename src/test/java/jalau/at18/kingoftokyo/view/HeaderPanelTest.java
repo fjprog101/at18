@@ -2,8 +2,6 @@ package jalau.at18.kingoftokyo.view;
 
 import static org.junit.Assert.assertEquals;
 
-import java.awt.BorderLayout;
-
 import jalau.at18.kingoftokyo.view.general.FooterPanel;
 import jalau.at18.kingoftokyo.view.general.HeaderPanel;
 import jalau.at18.kingoftokyo.view.general.MonsterLabel;

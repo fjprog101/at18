@@ -3,6 +3,7 @@ package jalau.at18.kingoftokyo.view;
 import javax.swing.*;
 import jalau.at18.kingoftokyo.controller.EndTurnButtonController;
 import jalau.at18.kingoftokyo.controller.RollDiceSectionController;
+import jalau.at18.kingoftokyo.model.TokyoCity;
 import jalau.at18.kingoftokyo.model.Turn;
 import java.awt.BorderLayout;
 import java.awt.Font;
@@ -18,10 +19,10 @@ public class TurnPanel extends JPanel {
     private JLabel turnOfLabel;
     private JButton endTurnButton;
     private Turn turn;
-    //private RollDiceSectionController rollDiceSectionController;
+    // private RollDiceSectionController rollDiceSectionController;
     private EndTurnButtonController endButtonController;
 
-    public TurnPanel(Turn turn) {
+    public TurnPanel(Turn turn, TokyoCity tokyoCity) {
         this.turn = turn;
         setLayout(new BorderLayout());
         setBounds(POS_X, POS_Y, WIDTH, HEIGHT);
@@ -31,7 +32,7 @@ public class TurnPanel extends JPanel {
         add(turnOfLabel, BorderLayout.LINE_START);
         endTurnButton = new JButton("End Turn");
         add(endTurnButton, BorderLayout.LINE_END);
-        endButtonController = new EndTurnButtonController(turn, this);
+        endButtonController = new EndTurnButtonController(turn, this, tokyoCity);
         endTurnButton.addActionListener(endButtonController);
         endTurnButton.setEnabled(false);
     }
@@ -41,7 +42,7 @@ public class TurnPanel extends JPanel {
     }
 
     public void addRollDiceController(RollDiceSectionController rollDiceSectionController) {
-        //this.rollDiceSectionController = rollDiceSectionController;
+        // this.rollDiceSectionController = rollDiceSectionController;
         endButtonController.addRollDiceSectionController(rollDiceSectionController);
     }
 }

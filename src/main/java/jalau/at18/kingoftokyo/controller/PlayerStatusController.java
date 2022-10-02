@@ -1,10 +1,10 @@
 package jalau.at18.kingoftokyo.controller;
 
 import java.util.ArrayList;
-
 import jalau.at18.kingoftokyo.model.Observer;
 import jalau.at18.kingoftokyo.model.Player;
 import jalau.at18.kingoftokyo.model.Subject;
+import jalau.at18.kingoftokyo.model.TokyoCity;
 import jalau.at18.kingoftokyo.model.Turn;
 
 public class PlayerStatusController implements Subject {
@@ -17,9 +17,14 @@ public class PlayerStatusController implements Subject {
     private static final int ENERGY = 3;
     private Turn turn;
     private ArrayList<Observer> observers;
-    public PlayerStatusController(Turn turn) {
+    private TokyoCity tokyoCity;
+    private DialogsController dialog;
+
+    public PlayerStatusController(Turn turn, TokyoCity tokyoCity) {
         this.turn = turn;
+        this.tokyoCity = tokyoCity;
         observers = new ArrayList<Observer>();
+        dialog = new DialogsController();
     }
 
     public void setPlayersStatus(int[] effect) {
@@ -36,33 +41,39 @@ public class PlayerStatusController implements Subject {
     }
 
     public void giveDamage(int damage) {
-        for (Player player : turn.getPlayersList()) {
-            if (player != turn.getPlayerWithTheTurn()) {
-                player.setLifePoints(changeLifePoints(player, damage, -1));
+        if (turn.getPlayerWithTheTurn() == tokyoCity.getPlayer()) {
+            for (Player player : turn.getPlayersList()) {
+                if (player != turn.getPlayerWithTheTurn()) {
+                    player.setLifePoints(changeLifePoints(player, damage, -1));
+                }
+            }
+        } else if (tokyoCity.getPlayer() != null && damage != 0) {
+            tokyoCity.getPlayer().setLifePoints(changeLifePoints(tokyoCity.getPlayer(), damage, -1));
+            if (tokyoCity.getPlayer().getLifePoints() == 0 || dialog.showMessageForLeaveTokyo(tokyoCity.getPlayer())) {
+                tokyoCity.removeMonster();
+                tokyoCity.addMonster(turn.getPlayerWithTheTurn());
             }
         }
     }
 
     public int changeLifePoints(Player player, int healing, int operator) {
         int newLifePoints = player.getLifePoints();
-        while (newLifePoints <= MAX_LIFE && newLifePoints > MIN_LIFE && healing > 0) {
-            newLifePoints += operator;
-            healing--;
+        if (player != tokyoCity.getPlayer() || operator <= 0) {
+            while (newLifePoints <= MAX_LIFE && newLifePoints > MIN_LIFE && healing > 0) {
+                newLifePoints += operator;
+                healing--;
+            }
         }
         return newLifePoints == MAX_LIFE + 1 ? newLifePoints - 1 : newLifePoints;
     }
 
     public int changeVictoryPoints(int victoryPoints) {
         int newVictoryPoints = turn.getPlayerWithTheTurn().getVictoryPoints();
-        while (newVictoryPoints < MAX_VICTORY  && victoryPoints > 0) {
+        while (newVictoryPoints < MAX_VICTORY && victoryPoints > 0) {
             newVictoryPoints++;
             victoryPoints--;
         }
         return newVictoryPoints;
-    }
-
-    public Turn getTurn() {
-        return turn;
     }
 
     @Override
@@ -72,7 +83,7 @@ public class PlayerStatusController implements Subject {
 
     @Override
     public void notifyObservers() {
-        for (Observer observer: observers) {
+        for (Observer observer : observers) {
             observer.update();
         }
     }

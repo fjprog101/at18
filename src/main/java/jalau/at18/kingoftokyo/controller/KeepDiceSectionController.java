@@ -39,6 +39,8 @@ public class KeepDiceSectionController {
     }
 
     public void calculateDiceResult() {
+        turnPanel.getComponent(1).setEnabled(true);
+        keepDiceSectionUI.resetUI();
         DiceFaceKeeperProcess diceFaceKeeperProcess = new DiceFaceKeeperProcess(diceFaceKeeper);
         DiceFaceKeeperResult diceFaceKeeperResult = new DiceFaceKeeperResult(diceFaceKeeperProcess);
         diceFaceTurnResult = diceFaceKeeperResult.resultDiceFaceKeeper();
@@ -49,10 +51,7 @@ public class KeepDiceSectionController {
         int[] effect = {healing, damage, score, energy};
         countDiceFaceSet = 0;
         keepDiceSectionUI.sendResults(effect); // For change player atributes
-        keepDiceSectionUI.resetUI();
-        //rollDiceSectionController.resetUI();
         diceFaceKeeper = new DiceFaceKeeper();
-        turnPanel.getComponent(1).setEnabled(true);
     }
 
     public KeepDiceSectionUI getKeepDiceSectionUI() {

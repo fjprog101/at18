@@ -26,19 +26,19 @@ public class TokyoCityTest {
     public void shouldGiveTheMonsterInside() {
         TokyoCity tokyoCity = new TokyoCity();
         tokyoCity.removeMonster();
-        assertNull(tokyoCity.getMonster());
+        assertNull(tokyoCity.getPlayer());
 
         Player player1 = new Player();
         player1.addMonster(Monster.ALIENOID);
         Player player2 = new Player();
         player2.addMonster(Monster.SPACE_PENGUIN);
         tokyoCity.addMonster(player1);
-        assertEquals("Alienoid", tokyoCity.getMonster().getName());
+        assertEquals("Alienoid", tokyoCity.getPlayer().getMonster().getName());
         tokyoCity.removeMonster();
-        assertNull(tokyoCity.getMonster());
+        assertNull(tokyoCity.getPlayer());
         tokyoCity.addMonster(player2);
-        assertEquals("Space Penguin", tokyoCity.getMonster().getName());
+        assertEquals("Space Penguin", tokyoCity.getPlayer().getMonster().getName());
         tokyoCity.addMonster(player1);
-        assertNotEquals("Alienoid", tokyoCity.getMonster().getName());
+        assertNotEquals("Alienoid", tokyoCity.getPlayer().getMonster().getName());
     }
 }
