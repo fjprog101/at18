@@ -5,6 +5,10 @@ import javax.swing.JPanel;
 import java.awt.Font;
 import jalau.at18.architects.controller.WonderController;
 import jalau.at18.architects.model.BuildStage;
+import jalau.at18.architects.model.cards.BluePoints;
+import jalau.at18.architects.model.cards.MilitaryStrengthCounter;
+import jalau.at18.architects.model.cards.WarWinnerPoints;
+import jalau.at18.architects.model.player.Playcard;
 import jalau.at18.architects.model.player.Player;
 
 public class PlayerStatus extends JPanel{
@@ -57,8 +61,16 @@ public class PlayerStatus extends JPanel{
     private Player player;
     private JLabel name;
     private BoardFrame frame;
+    private Playcard playcard;
+    private MilitaryStrengthCounter militarySection;
+    private BluePoints bluePoints;
+    private WarWinnerPoints warWinnerPoints;
     public PlayerStatus(Player player) {
         this.player = player;
+        playcard = player.getPlaycard();
+        warWinnerPoints = playcard.getWarWinnerPoints();
+        bluePoints = playcard.getBluePoints();
+        militarySection = playcard.getMilitarySection();
         setLayout(null);
         setBounds(0, 0, 840, 800);
         wonderController = new WonderController(new BuildStage(), this);
@@ -93,23 +105,27 @@ public class PlayerStatus extends JPanel{
         add(middleDeck1);
         middleDeck2.setBounds(DECK2_POSITION_X, DECK2_POSITION_Y, DECK_WIDTH, DECK_HEIGHT);
         add(middleDeck2);
-        warWinnerPointsView = new WarWinnerPointsView();
-        bluePointsView = new BluePointsView();
 
-        bluePointsView.setBounds(BLUE_POINT_POSITION_X, BLUE_POINT_POSITION_Y, POINT_WIDTH, POINT_HEIGHT);
-        add(bluePointsView);
+        warWinnerPointsView = new WarWinnerPointsView(warWinnerPoints);
         warWinnerPointsView.setBounds(WAR_POINT_POSITION_X, WAR_POINT_POSITION_Y, POINT_WIDTH, POINT_HEIGHT);
         add(warWinnerPointsView);
+
+        bluePointsView = new BluePointsView(bluePoints);
+        bluePointsView.setBounds(BLUE_POINT_POSITION_X, BLUE_POINT_POSITION_Y, POINT_WIDTH, POINT_HEIGHT);
+        add(bluePointsView);
+
+
     }
     public void addStage(int stagesCompleted) {
         wonderStructure.buildStages(stagesCompleted);
         this.validate();
     }
-    public void setName(String namePlayer) {
+    /*public void setName(String namePlayer) {
         name.setText(namePlayer);
         name.setBounds(400,470,250,50);
         name.setFont(new Font("Serif", Font.PLAIN, 30));
         add(name);
         this.validate();
-    }
+    }*/
+
 }

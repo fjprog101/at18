@@ -8,12 +8,9 @@ import java.util.List;
 import jalau.at18.architects.controller.BarConflictController;
 import jalau.at18.architects.controller.WonderController;
 import jalau.at18.architects.model.BuildStage;
-<<<<<<< HEAD
 import jalau.at18.architects.model.Game;
-=======
 import jalau.at18.architects.model.player.Player;
 import jalau.at18.architects.model.wonders.RandomWonder;
->>>>>>> 5fe890cf (added functionality to change the frame content with another player's data)
 
 public class BoardFrame extends JFrame {
     public static final int WIDTH = 840;
@@ -22,13 +19,10 @@ public class BoardFrame extends JFrame {
     public static final int COLOR1 = 125;
     public static final int COLOR2 = 245;
     public static final int COLOR3 = 230;
-<<<<<<< HEAD
 
     private Game game;
-=======
     private List<Player> players;
-    private String numbersOfPlayers;
->>>>>>> 5fe890cf (added functionality to change the frame content with another player's data)
+    private int numbersOfPlayers;
     private MiddleDeck middleDeck;
     private CheckTheConflictTokens checkTheConflictTokens;
     private BarConflictController barConflictController;
@@ -83,17 +77,14 @@ public class BoardFrame extends JFrame {
     // private BuildStage buildStage;
     public BoardFrame(Game game) {
         setResizable(false);
-<<<<<<< HEAD
         this.game = game;
         barConflictController = new BarConflictController(this, game);
-        wonderController = new WonderController(this, new BuildStage());
-=======
-        barConflictController = new BarConflictController(this);
+        wonderController = new WonderController(new BuildStage(), playerStatus);
+        barConflictController = new BarConflictController(this, game);
         //wonderController = new WonderController(this, new BuildStage());
-        this.numbersOfPlayers = numberOfPlayers;
+        this.numbersOfPlayers = game.getPlayers().size();
         players = new ArrayList<Player>();
         numberPlayer = 0;
->>>>>>> 5fe890cf (added functionality to change the frame content with another player's data)
         initialize();
     }
 
