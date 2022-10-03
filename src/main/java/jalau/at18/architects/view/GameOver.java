@@ -18,11 +18,9 @@ public class GameOver extends JFrame {
     private static final int FONT_SIZE = 30;
     private static final int FONT_STYLE = 10;
 
-    // public BoardFrame(Game game)
     public GameOver(Game game) {
         setContentPane(new JLabel(new ImageIcon("src/main/resources/architects/images/backimage.jpg")));
         add(new IcoColumn());
-
         int posY = 0;
         int maxPoints = 0;
         String winner = "";
@@ -34,8 +32,6 @@ public class GameOver extends JFrame {
                     0,
                     posY,
                     (posY++ * SIENCE_HEIGHT)));
-            // add(new ResultColumn(1, 2, 3, 0, 5, (posY++ * 80)));
-            // if(player.getPointsPlayer()> maxPoints){
             if (posY > maxPoints) {
                 winner = player.getName();
             }

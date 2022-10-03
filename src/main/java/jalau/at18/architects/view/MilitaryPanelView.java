@@ -11,8 +11,6 @@ public class MilitaryPanelView extends JPanel {
     private static final int MILITARY_P_HEIGHT = 100;
     private MilitaryNumberPermanent militaryPermanent;
     private MilitaryNumberTemporal militaryTemporal;
-    //private MilitaryNumberPermanent militaryPermanent;
-    //private MilitaryNumberTemporal militaryTemporal;
     public MilitaryPanelView(MilitaryStrengthCounter militarySection) {
         setOpaque(false);
         setBounds(MILITARY_P_POSITION_X, MILITARY_P_POSITION_Y, MILITARY_P_WIDTH, MILITARY_P_HEIGHT);
