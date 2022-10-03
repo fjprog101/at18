@@ -50,6 +50,7 @@ public class GameFrame extends JFrame {
         setBounds(DEFAULT_POS, DEFAULT_POS, DEFAULT_WIDTH, DEFAULT_HEIGHT);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
+        setTitle("King of Tokyo");
         setVisible(true);
     }
 
