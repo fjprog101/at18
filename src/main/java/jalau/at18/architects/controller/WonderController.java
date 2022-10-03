@@ -40,6 +40,7 @@ public class WonderController implements ActionListener {
                     playerStatus.add(resourcePanel);
                     buildStage.buildStage();
                     playerStatus.addStage(buildStage.getStagesCompleted());
+                    playerStatus.unableAddStagesButton();
                 } else {
                     System.out.println("Keep the elements");
                 }
@@ -62,6 +63,7 @@ public class WonderController implements ActionListener {
                     playerStatus.add(resourcePanel);
                     buildStage.buildStage();
                     playerStatus.addStage(buildStage.getStagesCompleted());
+                    playerStatus.unableAddStagesButton();
                 } else {
                     System.out.println("Keep the elements");
                 }
@@ -84,6 +86,7 @@ public class WonderController implements ActionListener {
                     playerStatus.add(resourcePanel);
                     buildStage.buildStage();
                     playerStatus.addStage(buildStage.getStagesCompleted());
+                    playerStatus.unableAddStagesButton();
                 } else {
                     System.out.println("Keep the elements");
                 }

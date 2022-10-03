@@ -30,7 +30,7 @@ public class GameOver extends JFrame {
             add(new ResultColumn(
                     player.getPlaycard().getBluePoints().getPoints(),
                     player.getPlaycard().getWarWinnerPoints().getPoints(),
-                    0,
+                    player.getPlaycard().getResourceSection().checkPoints(),
                     0,
                     posY,
                     (posY++ * SIENCE_HEIGHT)));

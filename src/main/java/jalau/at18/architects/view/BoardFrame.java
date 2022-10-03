@@ -138,6 +138,8 @@ public class BoardFrame extends JFrame {
         } else if (numberPlayer == 0 && !initialConfiguration) {
             System.out.println("Two Players, First Player");
             numberPlayer++;
+            playerStatus1.enableTakeACardButton();
+            playerStatus1.enableAddStagesButton();
             add(playerStatus1);
             this.repaint();
             this.revalidate();
@@ -157,6 +159,8 @@ public class BoardFrame extends JFrame {
         } else if (numberPlayer == 1 && !initialConfiguration) {
             System.out.println("Two Players, Second Player");
             numberPlayer++;
+            playerStatus2.enableTakeACardButton();
+            playerStatus2.enableAddStagesButton();
             add(playerStatus2);
             this.repaint();
             this.revalidate();
@@ -179,26 +183,30 @@ public class BoardFrame extends JFrame {
             this.revalidate();
         } else if (numberPlayer == 0 && !initialConfiguration) {
             numberPlayer++;
+            playerStatus1.enableTakeACardButton();
+            playerStatus1.enableAddStagesButton();
             add(playerStatus1);
             this.repaint();
             this.revalidate();
         } else if (numberPlayer == 1 && initialConfiguration) {
             playerStatus2 = new PlayerStatus(players.get(numberPlayer));
             playerStatus2.setPanels(resourcePanel2, sciencePanel2);
-            playerStatus2.setStagesForWonders(buildStage2, resourcePanel1);
+            playerStatus2.setStagesForWonders(buildStage2, resourcePanel2);
             numberPlayer++;
             add(playerStatus2);
             this.repaint();
             this.revalidate();
         } else if (numberPlayer == 1 && !initialConfiguration) {
             numberPlayer++;
+            playerStatus2.enableTakeACardButton();
+            playerStatus2.enableAddStagesButton();
             add(playerStatus2);
             this.repaint();
             this.revalidate();
         } else if (numberPlayer == 2 && initialConfiguration) {
             playerStatus3 = new PlayerStatus(players.get(numberPlayer));
             playerStatus3.setPanels(resourcePanel3, sciencePanel3);
-            playerStatus3.setStagesForWonders(buildStage3, resourcePanel1);
+            playerStatus3.setStagesForWonders(buildStage3, resourcePanel3);
             numberPlayer++;
             initialConfiguration = false;
             add(playerStatus3);
@@ -209,6 +217,8 @@ public class BoardFrame extends JFrame {
             }
         } else if (numberPlayer == 2 && !initialConfiguration) {
             numberPlayer++;
+            playerStatus3.enableTakeACardButton();
+            playerStatus3.enableAddStagesButton();
             add(playerStatus3);
             this.repaint();
             this.revalidate();
