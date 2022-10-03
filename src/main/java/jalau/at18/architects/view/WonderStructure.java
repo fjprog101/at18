@@ -2,11 +2,8 @@ package jalau.at18.architects.view;
 
 import java.util.ArrayList;
 import javax.swing.*;
-import static jalau.at18.architects.view.Constants.WonderStructure.*;
-
 class WonderStructure extends JPanel {
     public static final int QUANTITY_STAGES = 4;
-    private int index = QUANTITY_STAGES;
     private ArrayList<JLabel> stages;
     private JLabel stage;
 
@@ -47,7 +44,6 @@ class WonderStructure extends JPanel {
         // setBounds(DEFAULT_POSX, DEFAULT_POSY, DEFAULT_WIDTH, 500);
         // repaint();
         // }
-        index = QUANTITY_STAGES;
     }
     public void showWonder() {
         stage = stages.get(0);

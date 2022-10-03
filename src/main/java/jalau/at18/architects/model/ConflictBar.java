@@ -7,14 +7,14 @@ public class ConflictBar {
     public ConflictBar(int numberOfPlayers) {
         this.numberOfPlayers = numberOfPlayers;
         warCalls = 0;
-        conflict = false;
     }
     public void addWarCalls(int horn) {
         if (warCalls + horn < numberOfPlayers) {
             warCalls += horn;
+            conflict = false;
         } else {
-            conflict = true;
             warCalls = 0;
+            conflict = true;
         }
     }
 

@@ -55,6 +55,11 @@ public class Playcard {
         return scienceSection;
     }
 
+    
+    public void setMilitarySection(MilitaryStrengthCounter militarySection) {
+        this.militarySection = militarySection;
+    }
+
     public MilitaryStrengthCounter getMilitarySection() {
         return militarySection;
     }
@@ -67,6 +72,9 @@ public class Playcard {
         return bluePoints;
     }
 
+    public void addPointToWarWinner(int points) {
+        warWinnerPoints.setQuantityToken(points);
+    }
     public WarWinnerPoints getWarWinnerPoints() {
         return warWinnerPoints;
     }

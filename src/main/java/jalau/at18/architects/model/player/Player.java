@@ -27,6 +27,10 @@ public class Player {
         return wonder;
     }
 
+    public void setPlaycard(Playcard playcard) {
+        this.playcard = playcard;
+    }
+
     public Playcard getPlaycard() {
         return playcard;
     }

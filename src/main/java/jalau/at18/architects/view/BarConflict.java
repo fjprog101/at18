@@ -24,8 +24,6 @@ public class BarConflict extends JPanel {
     private JLabel peacetoken4 = new ConflictTokenLabel();
     private JLabel wartoken = new ConflictTokenLabelWar();
     private JLabel wartoken2 = new ConflictTokenLabelWar();
-    private JLabel wartoken3 = new ConflictTokenLabelWar();
-    private JLabel wartoken4 = new ConflictTokenLabelWar();
 
     public BarConflict(int quantityOfPlayers) {
         initComponets();

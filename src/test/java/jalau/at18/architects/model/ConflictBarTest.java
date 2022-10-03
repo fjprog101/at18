@@ -32,4 +32,23 @@ public class ConflictBarTest {
         assertEquals(true, conflictBar2.getConflict());
         assertEquals(0, conflictBar2.getWarCalls());
     }
+    @Test
+    public void addTheTopHornsConflictBar() {
+        ConflictBar conflictBar1 = new ConflictBar(3);
+        conflictBar1.addWarCalls(2);
+        conflictBar1.addWarCalls(1);
+        conflictBar1.addWarCalls(2);
+        assertEquals(false, conflictBar1.getConflict());
+        assertEquals(2, conflictBar1.getWarCalls());
+    }
+    @Test
+    public void callConflicttoWar() {
+        ConflictBar conflictBar1 = new ConflictBar(3);
+        conflictBar1.addWarCalls(2);
+        conflictBar1.addWarCalls(1);
+        conflictBar1.addWarCalls(2);
+        conflictBar1.addWarCalls(2);
+        assertEquals(true, conflictBar1.getConflict());
+        assertEquals(0, conflictBar1.getWarCalls());
+    }
 }
