@@ -1,12 +1,15 @@
 package jalau.at18.architects.controller;
 
 import static jalau.at18.architects.view.Constants.PlayStatusConstants.*;
+
+import jalau.at18.architects.model.Game;
 import jalau.at18.architects.model.cards.Card;
 import jalau.at18.architects.model.cards.GrayCard;
 import jalau.at18.architects.model.cards.RedCard;
 import jalau.at18.architects.model.cards.Resource;
 import jalau.at18.architects.model.cards.ShowTheElement;
 import jalau.at18.architects.model.player.Player;
+import jalau.at18.architects.view.BarConflict;
 import jalau.at18.architects.view.BluePointsView;
 import jalau.at18.architects.view.ElementLabel;
 import jalau.at18.architects.view.MilitaryPanelView;
@@ -27,7 +30,6 @@ public class ElementsController implements ActionListener {
     private BluePointsView bluePointsView;
     private WarWinnerPointsView warWinnerPointsView;
     private MilitaryPanelView militaryPanel;
-
     public ElementsController(PlayerStatus playerStatus, ResourcePanel resourcePanel, SciencePanel sciencePanel,
             Player player) {
         this.playerStatus = playerStatus;

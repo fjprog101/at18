@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.junit.Test;
 
+import jalau.at18.architects.model.cards.MilitarySymbol;
 import jalau.at18.architects.model.cards.RedCard;
 import jalau.at18.architects.model.player.Player;
 
@@ -79,10 +80,10 @@ public class GameTest {
         assertEquals(3, game.getPlayers().size());
         Player turn = game.getPlayer();
         assertEquals("Alvaro", turn.getName());
-        game.addCardtoPlayer(new RedCard(2), turn);
+        game.addCardtoPlayer(new RedCard(2, MilitarySymbol.TWO_HORN), turn);
         turn = game.getPlayer();
         assertEquals("Mauri", turn.getName());
-        game.addCardtoPlayer(new RedCard(0), turn);
+        game.addCardtoPlayer(new RedCard(0, MilitarySymbol.PERMANENT), turn);
         assertEquals("Andy", game.getPlayers().get(0).getName());
         assertEquals(0, game.getPlayers().get(0).getPlaycard().getMilitarySection().getPermanentShield());
         assertEquals(0, game.getPlayers().get(0).getPlaycard().getMilitarySection().getTemporalShield());
@@ -95,7 +96,7 @@ public class GameTest {
         assertEquals(3, game.getPlayers().size());
         turn = game.getPlayer();
         assertEquals("Andy", turn.getName());
-        game.addCardtoPlayer(new RedCard(2), turn);
+        game.addCardtoPlayer(new RedCard(2, MilitarySymbol.TWO_HORN), turn);
         assertEquals("Alvaro", game.getPlayers().get(0).getName());
         assertEquals(0, game.getPlayers().get(0).getPlaycard().getMilitarySection().getPermanentShield());
         assertEquals(0, game.getPlayers().get(0).getPlaycard().getMilitarySection().getTemporalShield());

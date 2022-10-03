@@ -51,13 +51,12 @@ public class BarConflict extends JPanel {
         setVisible(true);
     }
 
-    /*public void updateView(RedCardForDeck redCardForDeck) {
-        redCardForDeck.getCard();
-        if (redCardForDeck.updateWarToken() == 1) {
+    public void updateView(int horns) {
+        if (horns == 1) {
             remove(peacetoken);
             add(wartoken);
             setVisible(true);
-        } else if (redCardForDeck.updateWarToken() == 2) {
+        } else if (horns == 2) {
             remove(peacetoken);
             remove(peacetoken2);
             add(wartoken);
@@ -66,5 +65,5 @@ public class BarConflict extends JPanel {
         } else {
             setVisible(true);
         }
-    }*/
+    }
 }

@@ -5,6 +5,7 @@ import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
 
+import jalau.at18.architects.model.cards.MilitarySymbol;
 import jalau.at18.architects.model.cards.RedCard;
 import jalau.at18.architects.model.wonders.Wonders;
 
@@ -35,7 +36,7 @@ public class PlayerTest {
     @Test
     public void shouldAddCardToPlayCard() {
         Player player = new Player("Jose", Wonders.FOUR.getWonder());
-        RedCard card = new RedCard(2);
+        RedCard card = new RedCard(2, MilitarySymbol.TWO_HORN);
         player.addNewCard(card);
         Playcard playcard = player.getPlaycard();
         assertEquals(1, playcard.getMilitarySection().getTemporalShield());

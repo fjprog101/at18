@@ -7,6 +7,7 @@ import jalau.at18.architects.model.cards.Resource;
 import jalau.at18.architects.model.cards.BlueCard;
 import jalau.at18.architects.model.cards.GrayCard;
 import jalau.at18.architects.model.cards.GreenCard;
+import jalau.at18.architects.model.cards.MilitarySymbol;
 import jalau.at18.architects.model.cards.RedCard;
 import jalau.at18.architects.model.cards.ScientificSymbol;
 
@@ -15,7 +16,7 @@ public class PlaycardTest {
     public void addCardsToPlayCards() {
         Playcard playcard = new Playcard();
         BlueCard blueCard = new BlueCard(false, 3);
-        RedCard redCard = new RedCard(1);
+        RedCard redCard = new RedCard(1, MilitarySymbol.ONE_HORN);
         playcard.addNewCard(blueCard);
         playcard.addNewCard(redCard);
         assertEquals(1, playcard.getMilitarySection().getTemporalShield());
