@@ -9,6 +9,7 @@ public class Controller implements ActionListener {
     private WondersFrame wondersFrame;
     private static final int QUANTITY_COMPONENTS = 4;
     private boolean pressedCheckBox = false;
+    private boolean startButtonActived = false;
     public Controller(WondersFrame frame) {
         this.wondersFrame = frame;
     }
@@ -21,6 +22,7 @@ public class Controller implements ActionListener {
             List<String> names = wondersFrame.getPlayersNames();
             game.initGame(numberOfPlayers, names);
             wondersFrame.closeWindow(game);
+            startButtonActived = true;
         } else if (e.getSource() == wondersFrame.getChoice()) {
             wondersFrame.setLabels("Game players: " + wondersFrame.getChoice().getSelectedItem().toString());
             pressedCheckBox = true;
@@ -32,6 +34,12 @@ public class Controller implements ActionListener {
             wondersFrame.revalidate();
 
         }
+    }
+    public boolean startButtonIsActivated() {
+        return startButtonActived;
+    }
+    public boolean checkBoxIsActived() {
+        return pressedCheckBox;
     }
 }
 
