@@ -8,8 +8,8 @@ public final class Dimensions {
         public static final int PLAYER1_Y_POSITION_AZUL_FRAME = 0;
         public static final int PLAYER2_Y_POSITION_AZUL_FRAME = 370;
         public static final int INITIAL_POSITION_AZUL_FRAME = 10;
-        public static final int WIDTH_AZUL_FRAME = 1400;
-        public static final int HEIGHT_AZUL_FRAME = 800;
+        public static final int WIDTH_AZUL_FRAME = 1380;
+        public static final int HEIGHT_AZUL_FRAME = 780;
     }
 
     public final class PlayerPanel {
