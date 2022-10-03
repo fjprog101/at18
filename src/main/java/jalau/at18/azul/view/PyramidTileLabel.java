@@ -5,5 +5,6 @@ import javax.swing.JLabel;
 public class PyramidTileLabel extends JLabel {
     public PyramidTileLabel() {
         super("");
+        setVisible(false);
     }
 }
