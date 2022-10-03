@@ -57,7 +57,8 @@ public class ElementsController implements ActionListener {
                 MILITARY_PANEL_HEIGHT);
         playerStatus.add(militaryPanel);
         card = ShowTheElement.cardToPlayer;
-        if ((card.getColor() == "Yellow" || card.getColor() == "Gray") && (player.getPlaycard().getResourceSection().sizeOfUpdateList() == resourcePanel.getComponentCount())) {
+        if ((card.getColor() == "Yellow" || card.getColor() == "Gray") && (player.getPlaycard().getResourceSection()
+                .sizeOfUpdateList() == resourcePanel.getComponentCount())) {
             // System.out.println("Resource bar");
             System.out.println("Resource bar");
             elementLabel.setImage(ShowTheElement.directory);
@@ -93,7 +94,7 @@ public class ElementsController implements ActionListener {
         } else if (card.getColor() == "Blue") {
             player.addNewCard(card);
             bluePointsView.setNumber(player.getPlaycard().getBluePoints().getPoints());
-        } else if (card.getColor() == "Green"){
+        } else if (card.getColor() == "Green") {
             elementLabel.setImage(ShowTheElement.directory);
             System.out.println("Symbol bar");
             sciencePanel.loadCards(elementLabel);

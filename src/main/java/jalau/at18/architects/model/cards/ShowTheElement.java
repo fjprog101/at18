@@ -4,6 +4,7 @@ public class ShowTheElement {
     public static String directory;
     public static String element;
     public static Card cardToPlayer;
+
     public ShowTheElement(Card card) {
         if (card.getColor() == "Gray") {
             directory = ((GrayCard) card).getImage();
@@ -11,10 +12,10 @@ public class ShowTheElement {
         } else if (card.getColor() == "Green") {
             directory = ((GreenCard) card).getImage();
             element = ((GreenCard) card).getSymbol();
-        } else if (card.getColor() == "Yellow"){
+        } else if (card.getColor() == "Yellow") {
             directory = Resource.GOLD.getImage();
             element = Resource.GOLD.getResource();
-        } 
+        }
         cardToPlayer = card;
     }
 }
