@@ -8,7 +8,6 @@ import java.awt.Font;
 import jalau.at18.architects.controller.ElementsController;
 import jalau.at18.architects.controller.WonderController;
 import jalau.at18.architects.model.BuildStage;
-import jalau.at18.architects.model.Game;
 import jalau.at18.architects.model.cards.BluePoints;
 import jalau.at18.architects.model.cards.MilitaryStrengthCounter;
 import jalau.at18.architects.model.cards.WarWinnerPoints;

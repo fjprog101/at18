@@ -1,12 +1,10 @@
 package jalau.at18.architects.controller;
 import static jalau.at18.architects.view.Constants.PlayStatusConstants.*;
-import jalau.at18.architects.model.Game;
 import jalau.at18.architects.model.cards.Card;
 import jalau.at18.architects.model.cards.GrayCard;
 import jalau.at18.architects.model.cards.RedCard;
 import jalau.at18.architects.model.cards.Resource;
 import jalau.at18.architects.model.cards.ShowTheElement;
-import jalau.at18.architects.model.cards.WarWinnerPoints;
 import jalau.at18.architects.model.player.Player;
 import jalau.at18.architects.view.BluePointsView;
 import jalau.at18.architects.view.ElementLabel;
@@ -92,7 +90,7 @@ public class ElementsController implements ActionListener {
                 militaryPanel.setNumberTemporal(player.getPlaycard().getMilitarySection().getTemporalShield());
             }
 
-        } else if(card.getColor() == "Blue") {;
+        } else if (card.getColor() == "Blue") {
             player.addNewCard(card);
             bluePointsView.setNumber(player.getPlaycard().getBluePoints().getPoints());
         }
