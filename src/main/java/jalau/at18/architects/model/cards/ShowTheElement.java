@@ -15,6 +15,8 @@ public class ShowTheElement {
         } else if (card.getColor() == "Yellow") {
             directory = Resource.GOLD.getImage();
             element = Resource.GOLD.getResource();
+        } else if (card.getColor() == "Red") {
+            directory = ((RedCard) card).getImage();
         }
         cardToPlayer = card;
     }

@@ -9,11 +9,8 @@ public class BluePointsView extends JPanel {
     private static final int POSITION_X = 800;
     private static final int POSITION_Y = 450;
     private BluePointsNumber bluePointsNumber;
-    private BluePoints bluePoints;
     public BluePointsView(BluePoints bluePoints) {
-        this.bluePoints =  bluePoints;
         setOpaque(false);
-        // setBackground(Color.WHITE);
         setBounds(POSITION_X, POSITION_Y, WIDTH, HEIGHT);
         setLayout(null);
         bluePointsNumber =  new BluePointsNumber(bluePoints);

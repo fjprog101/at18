@@ -6,8 +6,6 @@ import java.awt.Color;
 import jalau.at18.architects.model.cards.MilitaryStrengthCounter;
 
 public class MilitaryNumberPermanent extends JLabel {
-    private static final int MILITARY_T_POSITION_X = 600;
-    private static final int MILITARY_T_POSITION_Y = 500;
     private static final int WIDTH = 50;
     private static final int HEIGHT = 40;
     private static final int MILITARY_P_POSITION_X = 28;

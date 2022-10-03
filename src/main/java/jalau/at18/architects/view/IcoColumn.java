@@ -16,13 +16,10 @@ public class IcoColumn extends JPanel {
     private static final int POSITION_Y = 0;
     private static final int WIDTH = 80;
     private static final int HEIGHT = 80;
-    private static final int FONT_SIZE_L = 20;
-    private static final int FONT_STYLE_L = 10;
 
     public IcoColumn() {
         int pos = 0;
         setOpaque(false);
-        // setForeground(Color.BLACK);
         setBounds(SIENCE_POSITION_X, SIENCE_POSITION_Y, SIENCE_WIDTH, SIENCE_HEIGHT);
         setLayout(null);
         add(elementLabel("a.png", pos++));

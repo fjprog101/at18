@@ -3,8 +3,6 @@ package jalau.at18.architects.view;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
-import jalau.at18.architects.model.RedCardForDeck;
-
 import java.awt.*;
 
 public class BarConflict extends JPanel {
@@ -24,8 +22,6 @@ public class BarConflict extends JPanel {
     private JLabel peacetoken4 = new ConflictTokenLabel();
     private JLabel wartoken = new ConflictTokenLabelWar();
     private JLabel wartoken2 = new ConflictTokenLabelWar();
-    private JLabel wartoken3 = new ConflictTokenLabelWar();
-    private JLabel wartoken4 = new ConflictTokenLabelWar();
 
     public BarConflict(int quantityOfPlayers) {
         initComponets();
@@ -55,13 +51,12 @@ public class BarConflict extends JPanel {
         setVisible(true);
     }
 
-    public void updateView(RedCardForDeck redCardForDeck) {
-        redCardForDeck.getCard();
-        if (redCardForDeck.updateWarToken() == 1) {
+    public void updateView(int horns) {
+        if (horns == 1) {
             remove(peacetoken);
             add(wartoken);
             setVisible(true);
-        } else if (redCardForDeck.updateWarToken() == 2) {
+        } else if (horns == 2) {
             remove(peacetoken);
             remove(peacetoken2);
             add(wartoken);

@@ -18,20 +18,16 @@ public class PlayerStatus extends JPanel {
     private WonderStructure wonderStructure;
     private AddStageButton addStage;
     private WonderController wonderController;
-    private WarWinnerPointsView warWinnerPointsView;
-    private BluePointsView bluePointsView;
     private JLabel message;
     private JLabel nameWonder;
     private Player player;
     private JLabel name;
-    private BoardFrame frame;
     private Playcard playcard;
     private MilitaryStrengthCounter militarySection;
-    private BluePoints bluePoints;
-    private WarWinnerPoints warWinnerPoints;
-    private MilitaryPanelView militaryPanel;
     private ElementsController elementsController;
     private TakeACardButton takeACardButton;
+    private WarWinnerPoints warWinnerPoints;
+    private BluePoints bluePoints;
 
     public PlayerStatus(Player player) {
         setOpaque(false);
@@ -50,10 +46,9 @@ public class PlayerStatus extends JPanel {
     }
 
     public void initialize() {
-
         MiddleDeck middleDeck1 = new MiddleDeck();
         MiddleDeck middleDeck2 = new MiddleDeck();
-        militaryPanel = new MilitaryPanelView(militarySection);
+        MilitaryPanelView militaryPanel = new MilitaryPanelView(militarySection);
         message = new JLabel("Your turn to play:");
 
         message.setBounds(MESSAGE_TURN_X, MESSAGE_TURN_Y, MESSAGE_TURN_WIDTH, MESSAGE_TURN_HEIGHT);
@@ -69,25 +64,10 @@ public class PlayerStatus extends JPanel {
         wonderStructure.setBounds(WONDER_POSITION_X, WONDER_POSITION_Y, WONDER_WIDTH, WONDER_HEIGHT);
         add(wonderStructure);
 
-        // militaryPanel.setBounds(MILITARY_PANEL_POS_X, MILITARY_PANEL_POS_Y,
-        // MILITARY_PANEL_WIDTH,
-        // MILITARY_PANEL_HEIGHT);
-        // add(militaryPanel);
-
         middleDeck1.setBounds(DECK1_POSITION_X, DECK1_POSITION_Y, DECK_WIDTH, DECK_HEIGHT);
         add(middleDeck1);
         middleDeck2.setBounds(DECK2_POSITION_X, DECK2_POSITION_Y, DECK_WIDTH, DECK_HEIGHT);
         add(middleDeck2);
-
-        // warWinnerPointsView = new WarWinnerPointsView(warWinnerPoints);
-        // warWinnerPointsView.setBounds(WAR_POINT_POSITION_X, WAR_POINT_POSITION_Y,
-        // POINT_WIDTH, POINT_HEIGHT);
-        // add(warWinnerPointsView);
-
-        // bluePointsView = new BluePointsView(bluePoints);
-        // bluePointsView.setBounds(BLUE_POINT_POSITION_X, BLUE_POINT_POSITION_Y,
-        // POINT_WIDTH, POINT_HEIGHT);
-        // add(bluePointsView);
     }
 
     public void addStage(int stagesCompleted) {

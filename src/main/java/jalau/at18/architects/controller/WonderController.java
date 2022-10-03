@@ -15,17 +15,14 @@ public class WonderController implements ActionListener {
     private ResourcePanel resourcePanel;
     private static final int THREE = 3;
     private static final int FOUR = 4;
-    private static final int FIVE = 5;
 
     public WonderController(BuildStage buildStage, PlayerStatus playerStatus, Player player,
             ResourcePanel resourcePanel) {
-        // this.boardFrame = frame;
         this.buildStage = buildStage;
         this.playerStatus = playerStatus;
         this.player = player;
         this.resourcePanel = resourcePanel;
     }
-
     @Override
     public void actionPerformed(ActionEvent e) {
         System.out.println("Size of List: " + player.getPlaycard().getResourceSection().sizeOfUpdateList());

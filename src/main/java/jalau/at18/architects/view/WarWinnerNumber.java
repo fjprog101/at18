@@ -14,8 +14,6 @@ public class WarWinnerNumber extends JLabel {
     private static final int FONT_STYLE = 10;
 
     public WarWinnerNumber(WarWinnerPoints warWinnerPoints) {
-        //WarWinnerPointsController warWinnerPointsController = new WarWinnerPointsController();
-        //setText(warWinnerPointsController.getWinnerPoints() + "");
         setText(warWinnerPoints.getPoints() + "");
         setBounds(POSITION_X, POSITION_Y, WIDTH, HEIGHT);
         setFont(new Font("Arial Black", FONT_STYLE, FONT_SIZE));

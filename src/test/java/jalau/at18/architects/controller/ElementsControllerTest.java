@@ -1,7 +1,7 @@
 package jalau.at18.architects.controller;
 
 import org.junit.Test;
-import jalau.at18.architects.view.BoardFrame;;
+import jalau.at18.architects.view.BoardFrame;
 import jalau.at18.architects.view.PlayerStatus;
 import jalau.at18.architects.view.ResourcePanel;
 import jalau.at18.architects.view.SciencePanel;
@@ -9,7 +9,6 @@ import jalau.at18.architects.model.Game;
 import jalau.at18.architects.model.player.Player;
 import jalau.at18.architects.model.wonders.RandomWonder;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 import java.awt.Component;
 import java.awt.event.ActionEvent;

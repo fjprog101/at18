@@ -1,6 +1,7 @@
 package jalau.at18.architects.controller;
 
 import static jalau.at18.architects.view.Constants.PlayStatusConstants.*;
+
 import jalau.at18.architects.model.cards.Card;
 import jalau.at18.architects.model.cards.GrayCard;
 import jalau.at18.architects.model.cards.RedCard;
@@ -12,7 +13,6 @@ import jalau.at18.architects.view.ElementLabel;
 import jalau.at18.architects.view.MilitaryPanelView;
 import jalau.at18.architects.view.ResourcePanel;
 import jalau.at18.architects.view.SciencePanel;
-import jalau.at18.architects.view.WarWinnerPointsView;
 import jalau.at18.architects.view.PlayerStatus;
 
 import java.awt.event.ActionEvent;
@@ -25,16 +25,13 @@ public class ElementsController implements ActionListener {
     private Player player;
     private Card card;
     private BluePointsView bluePointsView;
-    private WarWinnerPointsView warWinnerPointsView;
     private MilitaryPanelView militaryPanel;
-
     public ElementsController(PlayerStatus playerStatus, ResourcePanel resourcePanel, SciencePanel sciencePanel,
             Player player) {
         this.playerStatus = playerStatus;
         this.resourcePanel = resourcePanel;
         this.sciencePanel = sciencePanel;
         this.player = player;
-        warWinnerPointsView = new WarWinnerPointsView(player.getPlaycard().getWarWinnerPoints());
         player.getWonder().fillStages();
         bluePointsView = new BluePointsView(player.getPlaycard().getBluePoints());
         militaryPanel = new MilitaryPanelView(player.getPlaycard().getMilitarySection());
@@ -43,14 +40,8 @@ public class ElementsController implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        // bluePointsView.removeAll();
-        // System.out.println("blue" +
-        // player.getPlaycard().getBluePoints().getPoints());
         ElementLabel elementLabel = new ElementLabel();
         elementLabel.setImage(ShowTheElement.directory);
-        // warWinnerPointsView.setBounds(WAR_POINT_POSITION_X, WAR_POINT_POSITION_Y,
-        // POINT_WIDTH, POINT_HEIGHT);
-        // playerStatus.add(warWinnerPointsView);
         bluePointsView.setBounds(BLUE_POINT_POSITION_X, BLUE_POINT_POSITION_Y, POINT_WIDTH, POINT_HEIGHT);
         playerStatus.add(bluePointsView);
         militaryPanel.setBounds(MILITARY_PANEL_POS_X, MILITARY_PANEL_POS_Y, MILITARY_PANEL_WIDTH,
@@ -63,7 +54,6 @@ public class ElementsController implements ActionListener {
             System.out.println("Resource bar");
             elementLabel.setImage(ShowTheElement.directory);
             if (ShowTheElement.element == Resource.BRICK.getResource()) {
-                // System.out.println("Brick Choose");
                 player.addNewCard(new GrayCard(Resource.BRICK));
             } else if (ShowTheElement.element == Resource.PAPER.getResource()) {
                 player.addNewCard(new GrayCard(Resource.PAPER));

@@ -3,8 +3,6 @@ package jalau.at18.architects.view;
 import javax.swing.*;
 import java.util.List;
 import jalau.at18.architects.controller.BarConflictController;
-import jalau.at18.architects.controller.ElementsController;
-import jalau.at18.architects.controller.WonderController;
 import jalau.at18.architects.model.BuildStage;
 import jalau.at18.architects.model.Game;
 import jalau.at18.architects.model.player.Player;
@@ -23,13 +21,7 @@ public class BoardFrame extends JFrame {
     private MiddleDeck middleDeck;
     private CheckTheConflictTokens checkTheConflictTokens;
     private BarConflictController barConflictController;
-    private WonderController wonderController;
-    private WarWinnerPointsView warWinnerPointsView;
-    private BluePointsView bluePointsView;
     private WonderStructure wonderStructure;
-    private AddStageButton addStage;
-    private ElementsController elementsController;
-    private TakeACardButton takeACardButton;
     private ResourcePanel resourcePanel = new ResourcePanel();
     private SciencePanel sciencePanel = new SciencePanel();
     private static boolean gameOver = false;
@@ -64,7 +56,7 @@ public class BoardFrame extends JFrame {
     private BuildStage buildStage1 = new BuildStage();
     private BuildStage buildStage2 = new BuildStage();
     private BuildStage buildStage3 = new BuildStage();
-
+    public static BarConflict barconflict;
     private int numberPlayer;
 
     public BoardFrame(Game game) {
@@ -73,6 +65,7 @@ public class BoardFrame extends JFrame {
         this.game = game;
         barConflictController = new BarConflictController(this, game);
         players = game.getPlayers();
+        barconflict = new BarConflict(game.getPlayers().size());
         this.numbersOfPlayers = game.getPlayers().size();
         numberPlayer = 0;
         initialize();
@@ -80,19 +73,13 @@ public class BoardFrame extends JFrame {
 
     private void initialize() {
         middleDeck = new MiddleDeck();
-
         setContentPane(new JLabel(new ImageIcon("src/main/resources/architects/images/backimage.jpg")));
-
         checkTheConflictTokens = new CheckTheConflictTokens(barConflictController);
-        BarConflict barconflict = new BarConflict(game.getPlayers().size());
         barconflict.setBounds(POS_X_BAR_CONFLICT, POS_Y_BAR_CONFLICT, WIDTH_BAR_CONFLICT, HEIGHT_Y_BAR_CONFLICT);
         add(barconflict);
-
         middleDeck.setBounds(DECK_POSITION_X, DECK_POSITION_Y, DECK_WIDTH, DECK_HEIGHT);
         add(middleDeck);
-
         add(checkTheConflictTokens);
-
         setTitle(WINDOW_NAME);
         setSize(WIDTH, HEIGHT);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

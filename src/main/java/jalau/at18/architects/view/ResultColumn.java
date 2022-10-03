@@ -23,7 +23,6 @@ public class ResultColumn extends JPanel {
     public ResultColumn(int glory, int victory, int wonder, int cat, int sum, int posY) {
         int pos = 0;
         setOpaque(false);
-        // setForeground(Color.BLACK);
         setBounds(SIENCE_POSITION_X, (SIENCE_POSITION_Y + posY), SIENCE_WIDTH, SIENCE_HEIGHT);
         setLayout(null);
         add(elementLabel(glory, pos++));
@@ -31,8 +30,6 @@ public class ResultColumn extends JPanel {
         add(elementLabel(wonder, pos++));
         add(elementLabel(cat, pos++));
         add(elementLabel(sum, pos++));
-
-        // add(new WarWinnerIcon());
     }
 
     public JLabel elementLabel(int text, int size) {

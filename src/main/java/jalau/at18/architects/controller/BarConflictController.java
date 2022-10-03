@@ -1,7 +1,6 @@
 package jalau.at18.architects.controller;
 
 import jalau.at18.architects.model.Game;
-import jalau.at18.architects.view.BarConflict;
 import jalau.at18.architects.view.BoardFrame;
 
 import java.awt.event.ActionEvent;
@@ -17,14 +16,7 @@ public class BarConflictController implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        System.out.println(game.getPlayers());
-        BarConflict barconflict = new BarConflict(game.getPlayers().size());
-        System.out.println(game.getPlayers().size());
-        //RedCardForDeck redCardForDeck = new RedCardForDeck(boardFrame.getNumberOfPlayers());
-        //barconflict.updateView(redCardForDeck);
-        //boardFrame.add(barconflict);
         boardFrame.addNextPlayer();
-        // boardFrame.add(barconflict);
         boardFrame.repaint();
         boardFrame.revalidate();
     }

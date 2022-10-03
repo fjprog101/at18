@@ -8,12 +8,12 @@ public class MilitaryStrengthCounterTest {
     @Test
     public void shouldReturnPermanentShield() {
         MilitaryStrengthCounter militaryStrength = new MilitaryStrengthCounter();
-        RedCard redCard = new RedCard(2);
+        RedCard redCard = new RedCard(2, MilitarySymbol.TWO_HORN);
         militaryStrength.setMilitaryStrength(redCard);
         assertEquals(0, militaryStrength.getPermanentShield());
         assertEquals(1, militaryStrength.getTemporalShield());
 
-        RedCard redCard1 = new RedCard(0);
+        RedCard redCard1 = new RedCard(0, MilitarySymbol.PERMANENT);
         militaryStrength.setMilitaryStrength(redCard1);
         militaryStrength.setMilitaryStrength(redCard1);
         assertEquals(2, militaryStrength.getPermanentShield());
@@ -21,12 +21,12 @@ public class MilitaryStrengthCounterTest {
     @Test
     public void shouldReturnTemporalShield() {
         MilitaryStrengthCounter militaryStrength = new MilitaryStrengthCounter();
-        RedCard redCard = new RedCard(2);
+        RedCard redCard = new RedCard(2, MilitarySymbol.TWO_HORN);
         militaryStrength.setMilitaryStrength(redCard);
         assertEquals(1, militaryStrength.getTemporalShield());
         militaryStrength.resetTemporalShields();
 
-        RedCard redCard1 = new RedCard(0);
+        RedCard redCard1 = new RedCard(0, MilitarySymbol.PERMANENT);
         militaryStrength.setMilitaryStrength(redCard1);
         militaryStrength.setMilitaryStrength(redCard1);
         assertEquals(0, militaryStrength.getTemporalShield());
@@ -34,8 +34,8 @@ public class MilitaryStrengthCounterTest {
     @Test
     public void shouldReturnTheMilitaryStrength() {
         MilitaryStrengthCounter militaryStrength = new MilitaryStrengthCounter();
-        RedCard redCard = new RedCard(2);
-        RedCard redCard1 = new RedCard(0);
+        RedCard redCard = new RedCard(2, MilitarySymbol.TWO_HORN);
+        RedCard redCard1 = new RedCard(0, MilitarySymbol.PERMANENT);
         militaryStrength.setMilitaryStrength(redCard);
         militaryStrength.setMilitaryStrength(redCard1);
         assertEquals(2, militaryStrength.getMilitaryStrength());
