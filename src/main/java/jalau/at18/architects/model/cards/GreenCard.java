@@ -16,4 +16,8 @@ public class GreenCard extends Card {
     public String getSymbol() {
         return scientificSymbol.getSymbol();
     }
+
+    public String getImage() {
+        return scientificSymbol.getImage();
+    }
 }

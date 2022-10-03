@@ -11,5 +11,5 @@ public abstract class Card {
         return color;
     }
 
-    abstract String getColor();
+    public abstract String getColor();
 }
