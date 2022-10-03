@@ -11,8 +11,10 @@ public class ShowTheElement {
         } else if (card.getColor() == "Green") {
             directory = ((GreenCard) card).getImage();
             element = ((GreenCard) card).getSymbol();
-        }
+        } else if (card.getColor() == "Yellow"){
+            directory = Resource.GOLD.getImage();
+            element = Resource.GOLD.getResource();
+        } 
         cardToPlayer = card;
     }
-
 }

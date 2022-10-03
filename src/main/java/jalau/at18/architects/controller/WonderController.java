@@ -14,8 +14,8 @@ public class WonderController implements ActionListener {
     private Player player;
     private ResourcePanel resourcePanel;
     private static final int THREE = 3;
-    private static final int FOUR = 3;
-    private static final int FIVE = 3;
+    private static final int FOUR = 4;
+    private static final int FIVE = 5;
 
     public WonderController(BuildStage buildStage, PlayerStatus playerStatus, Player player,
             ResourcePanel resourcePanel) {
@@ -30,46 +30,74 @@ public class WonderController implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         System.out.println("Size of List: " + player.getPlaycard().getResourceSection().sizeOfUpdateList());
         System.out.println("Components number: " + resourcePanel.getComponentCount());
-        if (player.getPlaycard().getResourceSection().compareCards(player.getWonder())) {
+        if (buildStage.getStagesCompleted() < 2) {
             System.out.println("Number of Stage: " + buildStage.getStagesCompleted());
-            if ((buildStage.getStagesCompleted() < 2)
-                    && resourcePanel.getComponentCount() == 2) {
-                System.out.println("Take two elements out");
-                resourcePanel.remove(0);
-                resourcePanel.remove(0);
-                playerStatus.add(resourcePanel);
-                buildStage.buildStage();
-                playerStatus.addStage(buildStage.getStagesCompleted());
-            } else if ((buildStage.getStagesCompleted() > 2 && buildStage.getStagesCompleted() <= FOUR)
-                    && resourcePanel.getComponentCount() == THREE) {
-                System.out.println("Take three elements out");
-                resourcePanel.remove(0);
-                resourcePanel.remove(0);
-                resourcePanel.remove(0);
-                playerStatus.add(resourcePanel);
-                buildStage.buildStage();
-                playerStatus.addStage(buildStage.getStagesCompleted());
-            } else if ((buildStage.getStagesCompleted() == FIVE)
-                    && resourcePanel.getComponentCount() == FOUR) {
-                System.out.println("Take four elements out");
-                resourcePanel.remove(0);
-                resourcePanel.remove(0);
-                resourcePanel.remove(0);
-                resourcePanel.remove(0);
-                playerStatus.add(resourcePanel);
-                buildStage.buildStage();
-                playerStatus.addStage(buildStage.getStagesCompleted());
+            if (resourcePanel.getComponentCount() == 2) {
+                if ((player.getPlaycard().getResourceSection().compareCards(player.getWonder()))) {
+                    System.out.println("Take two elements out");
+                    resourcePanel.remove(0);
+                    resourcePanel.remove(0);
+                    playerStatus.add(resourcePanel);
+                    buildStage.buildStage();
+                    playerStatus.addStage(buildStage.getStagesCompleted());
+                } else {
+                    System.out.println("Keep the elements");
+                }
+                playerStatus.repaint();
+                playerStatus.revalidate();
             } else {
-                System.out.println("Keep the elements");
+                System.out.println("It is not exist 2 elements");
+                playerStatus.repaint();
+                playerStatus.revalidate();
             }
-            playerStatus.repaint();
-            playerStatus.revalidate();
+
+        } else if ((buildStage.getStagesCompleted() >= 2 && buildStage.getStagesCompleted() < FOUR)) {
+            System.out.println("Number of Stage: " + buildStage.getStagesCompleted());
+            if (resourcePanel.getComponentCount() == THREE) {
+                if ((player.getPlaycard().getResourceSection().compareCards(player.getWonder()))) {
+                    System.out.println("Take three elements out");
+                    resourcePanel.remove(0);
+                    resourcePanel.remove(0);
+                    resourcePanel.remove(0);
+                    playerStatus.add(resourcePanel);
+                    buildStage.buildStage();
+                    playerStatus.addStage(buildStage.getStagesCompleted());
+                } else {
+                    System.out.println("Keep the elements");
+                }
+                playerStatus.repaint();
+                playerStatus.revalidate();
+            } else {
+                System.out.println("It is not exist 3 elements");
+                playerStatus.repaint();
+                playerStatus.revalidate();
+            }
+        } else if ((buildStage.getStagesCompleted() == FOUR)) {
+            System.out.println("Number of Stage: " + buildStage.getStagesCompleted());
+            if (resourcePanel.getComponentCount() == FOUR) {
+                if ((player.getPlaycard().getResourceSection().compareCards(player.getWonder()))) {
+                    System.out.println("Take four elements out");
+                    resourcePanel.remove(0);
+                    resourcePanel.remove(0);
+                    resourcePanel.remove(0);
+                    resourcePanel.remove(0);
+                    playerStatus.add(resourcePanel);
+                    buildStage.buildStage();
+                    playerStatus.addStage(buildStage.getStagesCompleted());
+                } else {
+                    System.out.println("Keep the elements");
+                }
+                playerStatus.repaint();
+                playerStatus.revalidate();
+            } else {
+                System.out.println("It is not exist 4 elements");
+                playerStatus.repaint();
+                playerStatus.revalidate();
+            }
         } else {
             System.out.println("ListEmpty");
             playerStatus.repaint();
             playerStatus.revalidate();
         }
     }
-    // player.setName("Alvaro");
-    // player.nextPLayer();
 }

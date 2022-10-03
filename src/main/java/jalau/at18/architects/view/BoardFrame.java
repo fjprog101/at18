@@ -176,7 +176,6 @@ public class BoardFrame extends JFrame {
             playerStatus1.setStagesForWonders(buildStage1, resourcePanel1);
             numberPlayer++;
             add(playerStatus1);
-            initialConfiguration = false;
             this.repaint();
             this.revalidate();
         } else if (numberPlayer == 0 && !initialConfiguration) {
@@ -190,7 +189,6 @@ public class BoardFrame extends JFrame {
             playerStatus2.setStagesForWonders(buildStage2, resourcePanel1);
             numberPlayer++;
             add(playerStatus2);
-            initialConfiguration = false;
             this.repaint();
             this.revalidate();
         } else if (numberPlayer == 1 && !initialConfiguration) {
@@ -205,7 +203,6 @@ public class BoardFrame extends JFrame {
             numberPlayer++;
             initialConfiguration = false;
             add(playerStatus3);
-            initialConfiguration = false;
             this.repaint();
             this.revalidate();
             if (numberPlayer == players.size()) {
