@@ -19,7 +19,7 @@ public class BarConflictController implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         BarConflict barconflict = new BarConflict(game.getPlayers().size());
         //RedCardForDeck redCardForDeck = new RedCardForDeck(boardFrame.getNumberOfPlayers());
-        //barconflict.updateView(redCardForDeck);
+        //barconflict.updateView(game.addCardtoPlayer(null, null););
         //boardFrame.add(barconflict);
         boardFrame.addNextPlayer();
         // boardFrame.add(barconflict);
