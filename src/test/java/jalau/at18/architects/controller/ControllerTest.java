@@ -1,4 +1,5 @@
 package jalau.at18.architects.controller;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -38,7 +39,7 @@ public class ControllerTest {
         assertFalse(controller.checkBoxIsActived());
     }
     @Test
-     public void shoulPressStartCheckBox() {
+     public void shoulPressCheckBox() {
         WondersFrame frame = new WondersFrame();
         Controller controller = new Controller(frame);
         JComboBox<Integer> comboBox = frame.getChoice();
@@ -46,5 +47,8 @@ public class ControllerTest {
         controller.actionPerformed(eventCombo);
         assertFalse(controller.startButtonIsActivated());
         assertTrue(controller.checkBoxIsActived());
+        assertEquals(4, frame.getContentPane().getComponentCount());
+        controller.actionPerformed(eventCombo);
+        assertEquals(4, frame.getContentPane().getComponentCount());
     }
 }
