@@ -21,4 +21,7 @@ public class MilitaryNumberTemporal extends JLabel {
         setForeground(Color.BLACK);
         setVisible(true);
     }
+    public void setNumber(int number) {
+        setText(number + "");
+    }
 }

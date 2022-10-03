@@ -8,13 +8,22 @@ public class BluePointsView extends JPanel {
     private static final int HEIGHT = 40;
     private static final int POSITION_X = 800;
     private static final int POSITION_Y = 450;
-
+    private BluePointsNumber bluePointsNumber;
+    private BluePoints bluePoints;
     public BluePointsView(BluePoints bluePoints) {
+        this.bluePoints =  bluePoints;
         setOpaque(false);
         // setBackground(Color.WHITE);
         setBounds(POSITION_X, POSITION_Y, WIDTH, HEIGHT);
         setLayout(null);
-        add(new BluePointsNumber(bluePoints));
+        bluePointsNumber =  new BluePointsNumber(bluePoints);
+        initialize();
+    }
+    public void setNumber(int number) {
+        bluePointsNumber.setNumber(number);
+    }
+    public void initialize() {
+        add(bluePointsNumber);
         add(new BluePointsIcon());
     }
 }
