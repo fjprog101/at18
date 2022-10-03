@@ -81,6 +81,7 @@ public class ElementsController implements ActionListener {
             playerStatus.repaint();
             playerStatus.revalidate();
             ShowTheElement.directory = null;
+            playerStatus.unableTakeCardButton();
 
         } else if (card.getColor() == "Red") {
             RedCard redCard = (RedCard) card;
@@ -90,10 +91,12 @@ public class ElementsController implements ActionListener {
             } else {
                 militaryPanel.setNumberTemporal(player.getPlaycard().getMilitarySection().getTemporalShield());
             }
+            playerStatus.unableTakeCardButton();
 
         } else if (card.getColor() == "Blue") {
             player.addNewCard(card);
             bluePointsView.setNumber(player.getPlaycard().getBluePoints().getPoints());
+            playerStatus.unableTakeCardButton();
         } else if (card.getColor() == "Green") {
             elementLabel.setImage(ShowTheElement.directory);
             System.out.println("Symbol bar");
@@ -102,6 +105,7 @@ public class ElementsController implements ActionListener {
             playerStatus.repaint();
             playerStatus.revalidate();
             ShowTheElement.directory = null;
+            playerStatus.unableTakeCardButton();
         } else {
             System.out.println("No card color");
         }

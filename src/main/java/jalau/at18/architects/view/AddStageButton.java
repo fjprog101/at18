@@ -12,6 +12,5 @@ public class AddStageButton extends JButton {
         super("Add stage");
         setBounds(POSX, POSY, WIDTH, HEIGHT);
         addActionListener(listener);
-
     }
 }

@@ -32,6 +32,7 @@ public class PlayerStatus extends JPanel {
     private MilitaryPanelView militaryPanel;
     private ElementsController elementsController;
     private TakeACardButton takeACardButton;
+
     public PlayerStatus(Player player) {
         setOpaque(false);
         this.player = player;
@@ -68,22 +69,25 @@ public class PlayerStatus extends JPanel {
         wonderStructure.setBounds(WONDER_POSITION_X, WONDER_POSITION_Y, WONDER_WIDTH, WONDER_HEIGHT);
         add(wonderStructure);
 
-        //militaryPanel.setBounds(MILITARY_PANEL_POS_X, MILITARY_PANEL_POS_Y, MILITARY_PANEL_WIDTH,
-                //MILITARY_PANEL_HEIGHT);
-        //add(militaryPanel);
+        // militaryPanel.setBounds(MILITARY_PANEL_POS_X, MILITARY_PANEL_POS_Y,
+        // MILITARY_PANEL_WIDTH,
+        // MILITARY_PANEL_HEIGHT);
+        // add(militaryPanel);
 
         middleDeck1.setBounds(DECK1_POSITION_X, DECK1_POSITION_Y, DECK_WIDTH, DECK_HEIGHT);
         add(middleDeck1);
         middleDeck2.setBounds(DECK2_POSITION_X, DECK2_POSITION_Y, DECK_WIDTH, DECK_HEIGHT);
         add(middleDeck2);
 
-        //warWinnerPointsView = new WarWinnerPointsView(warWinnerPoints);
-        //warWinnerPointsView.setBounds(WAR_POINT_POSITION_X, WAR_POINT_POSITION_Y, POINT_WIDTH, POINT_HEIGHT);
-        //add(warWinnerPointsView);
+        // warWinnerPointsView = new WarWinnerPointsView(warWinnerPoints);
+        // warWinnerPointsView.setBounds(WAR_POINT_POSITION_X, WAR_POINT_POSITION_Y,
+        // POINT_WIDTH, POINT_HEIGHT);
+        // add(warWinnerPointsView);
 
-        //bluePointsView = new BluePointsView(bluePoints);
-        //bluePointsView.setBounds(BLUE_POINT_POSITION_X, BLUE_POINT_POSITION_Y, POINT_WIDTH, POINT_HEIGHT);
-        //add(bluePointsView);
+        // bluePointsView = new BluePointsView(bluePoints);
+        // bluePointsView.setBounds(BLUE_POINT_POSITION_X, BLUE_POINT_POSITION_Y,
+        // POINT_WIDTH, POINT_HEIGHT);
+        // add(bluePointsView);
     }
 
     public void addStage(int stagesCompleted) {
@@ -109,6 +113,22 @@ public class PlayerStatus extends JPanel {
         wonderController = new WonderController(buildStage, this, player, resourcePanel);
         addStage = new AddStageButton(wonderController);
         add(addStage);
+    }
+
+    public void enableTakeACardButton() {
+        takeACardButton.setEnabled(true);
+    }
+
+    public void unableTakeCardButton() {
+        takeACardButton.setEnabled(false);
+    }
+
+    public void enableAddStagesButton() {
+        addStage.setEnabled(true);
+    }
+
+    public void unableAddStagesButton() {
+        addStage.setEnabled(false);
     }
 
 }
