@@ -112,9 +112,8 @@ public class BoardFrame extends JFrame {
 
     public void addNextPlayer() {
         if (gameOver) {
-            this.setVisible(false);
-            add(new GameOver(this.game));
-            setVisible(true);
+            this.dispose();
+            new GameOver(this.game);
         }
         if (this.getContentPane().getComponentCount() == QUANTITY_ELEMENTS_ON_BOARD) {
             this.getContentPane().remove(QUANTITY_ELEMENTS_ON_BOARD - 1);
