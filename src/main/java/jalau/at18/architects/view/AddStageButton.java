@@ -3,8 +3,8 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 
 public class AddStageButton extends JButton {
-    private static final int POSX = 200;
-    private static final int POSY = 200;
+    private static final int POSX = 182;
+    private static final int POSY = 145;
     private static final int WIDTH = 100;
     private static final int HEIGHT = 20;
 
