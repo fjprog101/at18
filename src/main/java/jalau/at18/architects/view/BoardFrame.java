@@ -3,11 +3,11 @@ package jalau.at18.architects.view;
 import javax.swing.*;
 import java.util.List;
 import jalau.at18.architects.controller.BarConflictController;
+import jalau.at18.architects.controller.ElementsController;
 import jalau.at18.architects.controller.WonderController;
 import jalau.at18.architects.model.BuildStage;
 import jalau.at18.architects.model.Game;
 import jalau.at18.architects.model.player.Player;
-import jalau.at18.architects.model.wonders.RandomWonder;
 
 public class BoardFrame extends JFrame {
     public static final int WIDTH = 840;
@@ -28,46 +28,15 @@ public class BoardFrame extends JFrame {
     private BluePointsView bluePointsView;
     private WonderStructure wonderStructure;
     private AddStageButton addStage;
+    private ElementsController elementsController;
+    private TakeACardButton takeACardButton;
+    private ResourcePanel resourcePanel = new ResourcePanel();
+    private SciencePanel sciencePanel = new SciencePanel();
 
     private static final int DECK_POSITION_X = 360;
     private static final int DECK_POSITION_Y = 0;
     private static final int DECK_WIDTH = 140;
     private static final int DECK_HEIGHT = 200;
-
-    private static final int DECK1_POSITION_X = 60;
-    private static final int DECK1_POSITION_Y = 250;
-
-    private static final int DECK2_POSITION_X = 660;
-    private static final int DECK2_POSITION_Y = 250;
-
-    private static final int WONDER_POSITION_X = 270;
-    private static final int WONDER_POSITION_Y = 240;
-    private static final int WONDER_WIDTH = 300;
-    private static final int WONDER_HEIGHT = 240;
-
-    private static final int WAR_POINT_POSITION_X = 600;
-    private static final int WAR_POINT_POSITION_Y = 600;
-    private static final int POINT_WIDTH = 80;
-    private static final int POINT_HEIGHT = 80;
-
-    private static final int BLUE_POINT_POSITION_X = 500;
-    private static final int BLUE_POINT_POSITION_Y = 600;
-
-    private static final int MILITARY_T_POSITION_X = 600;
-    private static final int MILITARY_T_POSITION_Y = 500;
-
-    private static final int MILITARY_P_POSITION_X = 500;
-    private static final int MILITARY_P_POSITION_Y = 500;
-
-    private static final int SIENCE_POSITION_X = 80;
-    private static final int SIENCE_POSITION_Y = 600;
-    private static final int SIENCE_WIDTH = 400;
-    private static final int SIENCE_HEIGHT = 80;
-
-    private static final int RESOURCE_POSITION_X = 80;
-    private static final int RESOURCE_POSITION_Y = 500;
-    private static final int RESOURCE_WIDTH = 400;
-    private static final int RESOURCE_HEIGHT = 80;
 
     private static final int POS_X_BAR_CONFLICT = 50;
     private static final int POS_Y_BAR_CONFLICT = 25;
@@ -76,104 +45,56 @@ public class BoardFrame extends JFrame {
 
     private static final int QUANTITY_ELEMENTS_ON_BOARD = 4;
 
-    private PlayerStatus playerStatus;
-    private RandomWonder randomWonder;
+    private PlayerStatus playerStatus1;
+    private PlayerStatus playerStatus2;
+    private PlayerStatus playerStatus3;
+    private PlayerStatus playerStatus4;
+    private Boolean initialConfiguration = true;
+
+    private ResourcePanel resourcePanel1 = new ResourcePanel();
+    private SciencePanel sciencePanel1 = new SciencePanel();
+    private ResourcePanel resourcePanel2 = new ResourcePanel();
+    private SciencePanel sciencePanel2 = new SciencePanel();
+    private ResourcePanel resourcePanel3 = new ResourcePanel();
+    private SciencePanel sciencePanel3 = new SciencePanel();
+    private ResourcePanel resourcePanel4 = new ResourcePanel();
+    private SciencePanel sciencePanel4 = new SciencePanel();
+
+    private BuildStage buildStage1 = new BuildStage();
+    private BuildStage buildStage2 = new BuildStage();
+    private BuildStage buildStage3 = new BuildStage();
+
     private int numberPlayer;
-    // private BuildStage buildStage;
+
     public BoardFrame(Game game) {
         System.out.println(game.getPlayers().size());
         setResizable(false);
         this.game = game;
         barConflictController = new BarConflictController(this, game);
-        wonderController = new WonderController(new BuildStage(), playerStatus);
-        barConflictController = new BarConflictController(this, game);
         players = game.getPlayers();
-        //wonderController = new WonderController(this, new BuildStage());
         this.numbersOfPlayers = game.getPlayers().size();
-        //players = new ArrayList<Player>();
         numberPlayer = 0;
         initialize();
     }
 
     private void initialize() {
         middleDeck = new MiddleDeck();
-        //MiddleDeck middleDeck1 = new MiddleDeck();
-        //MiddleDeck middleDeck2 = new MiddleDeck();
-
 
         setContentPane(new JLabel(new ImageIcon("src/main/resources/architects/images/backimage.jpg")));
 
         checkTheConflictTokens = new CheckTheConflictTokens(barConflictController);
         BarConflict barconflict = new BarConflict(game.getPlayers().size());
         barconflict.setBounds(POS_X_BAR_CONFLICT, POS_Y_BAR_CONFLICT, WIDTH_BAR_CONFLICT, HEIGHT_Y_BAR_CONFLICT);
-        //wonderStructure = new WonderStructure();
-        //addStage = new AddStageButton(wonderController);
         add(barconflict);
-        //warWinnerPointsView = new WarWinnerPointsView();
-        //bluePointsView = new BluePointsView();
 
-        //add(addStage); // button
         middleDeck.setBounds(DECK_POSITION_X, DECK_POSITION_Y, DECK_WIDTH, DECK_HEIGHT);
         add(middleDeck);
-        /*middleDeck1.setBounds(DECK1_POSITION_X, DECK1_POSITION_Y, DECK_WIDTH, DECK_HEIGHT);
-        add(middleDeck1);
-        middleDeck2.setBounds(DECK2_POSITION_X, DECK2_POSITION_Y, DECK_WIDTH, DECK_HEIGHT);
-        add(middleDeck2);*/
 
         add(checkTheConflictTokens);
-
-        //wonderStructure.setBounds(WONDER_POSITION_X, WONDER_POSITION_Y, WONDER_WIDTH, WONDER_HEIGHT);
-        //add(wonderStructure);
-
-        /*JPanel militaryT = new JPanel();
-        JPanel militaryP = new JPanel();
-
-        militaryT.setBounds(MILITARY_T_POSITION_X, MILITARY_T_POSITION_Y, POINT_WIDTH, POINT_HEIGHT);
-        add(militaryT);
-
-        militaryP.setBounds(MILITARY_P_POSITION_X, MILITARY_P_POSITION_Y, POINT_WIDTH, POINT_HEIGHT);
-        add(militaryP);
-
-        warWinnerPointsView.setBounds(WAR_POINT_POSITION_X, WAR_POINT_POSITION_Y, POINT_WIDTH, POINT_HEIGHT);
-        add(warWinnerPointsView);
-
-        bluePointsView.setBounds(BLUE_POINT_POSITION_X, BLUE_POINT_POSITION_Y, POINT_WIDTH, POINT_HEIGHT);
-        add(bluePointsView);*/
-
-        /*JPanel sience = new JPanel();
-        JPanel resource = new JPanel();
-
-        sience.setBounds(SIENCE_POSITION_X, SIENCE_POSITION_Y, SIENCE_WIDTH, SIENCE_HEIGHT);
-        sience.setBackground(Color.WHITE);
-        add(sience);
-        resource.setBounds(RESOURCE_POSITION_X, RESOURCE_POSITION_Y, RESOURCE_WIDTH, RESOURCE_HEIGHT);
-        resource.setBackground(Color.WHITE);
-        add(resource);*/
-
-        /*randomWonder = new RandomWonder();
-        Player player = new Player("Libertad",randomWonder.getRamdomWonder() );
-        Player player2 = new Player("Alvaro", randomWonder.getRamdomWonder());
-        Player player3 = new Player("Mauricio", randomWonder.getRamdomWonder());
-        Player player4 = new Player("Jose", randomWonder.getRamdomWonder());
-        Player player5 = new Player("Carlos", randomWonder.getRamdomWonder());
-        players.add(player);
-        players.add(player2);
-        players.add(player3);
-        players.add(player4);
-        players.add(player5);*/
-        addNextPlayer();
-
-
-        /*
-        playerStatus = new PlayerStatus(player);
-        playerStatus = new PlayerStatus(player2);
-        playerStatus = new PlayerStatus(player3);
-        add(playerStatus);*/
 
         setTitle(WINDOW_NAME);
         setSize(WIDTH, HEIGHT);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        // getContentPane().setBackground(new Color(COLOR1, COLOR2, COLOR3));
         setLocationRelativeTo(null);
         setLayout(null);
         setVisible(true);
@@ -183,30 +104,113 @@ public class BoardFrame extends JFrame {
         wonderStructure.buildStages(stagesCompleted);
         this.validate();
     }
+
     public void addNextPlayer() {
         if (this.getContentPane().getComponentCount() == QUANTITY_ELEMENTS_ON_BOARD) {
             this.getContentPane().remove(QUANTITY_ELEMENTS_ON_BOARD - 1);
         }
-
-        playerStatus = new PlayerStatus(players.get(numberPlayer));
-        numberPlayer++;
-        add(playerStatus);
-        this.repaint();
-        this.revalidate();
-        if (numberPlayer == players.size()) {
-            numberPlayer = 0;
+        if (players.size() == 2) {
+            twoPlayers();
+        } else {
+            threePlayers();
         }
-
-        /*if(this.getContentPane().getComponentCount() == 4) {
-            this.getContentPane().remove(3 - 1);
-            System.out.println("rmoved");
-        }
-        System.out.println(game.getPlayer().getName());
-        playerStatus = new PlayerStatus(game.getPlayer());
-        add(playerStatus);
-        this.repaint();
-        this.revalidate();
-        */
     }
 
+    public void twoPlayers() {
+        if (numberPlayer == 0 && initialConfiguration) {
+            System.out.println("Two Players Initial, First Player");
+            playerStatus1 = new PlayerStatus(players.get(numberPlayer));
+            playerStatus1.setPanels(resourcePanel1, sciencePanel1);
+            playerStatus1.setStagesForWonders(buildStage1, resourcePanel1);
+            numberPlayer++;
+            add(playerStatus1);
+            this.repaint();
+            this.revalidate();
+        } else if (numberPlayer == 0 && !initialConfiguration) {
+            System.out.println("Two Players, First Player");
+            numberPlayer++;
+            add(playerStatus1);
+            this.repaint();
+            this.revalidate();
+        } else if (numberPlayer == 1 && initialConfiguration) {
+            System.out.println("Two Players Initial, Second Player");
+            playerStatus2 = new PlayerStatus(players.get(numberPlayer));
+            playerStatus2.setPanels(resourcePanel2, sciencePanel2);
+            playerStatus2.setStagesForWonders(buildStage2, resourcePanel2);
+            numberPlayer++;
+            initialConfiguration = false;
+            add(playerStatus2);
+            this.repaint();
+            this.revalidate();
+            if (numberPlayer == players.size()) {
+                numberPlayer = 0;
+            }
+        } else if (numberPlayer == 1 && !initialConfiguration) {
+            System.out.println("Two Players, Second Player");
+            numberPlayer++;
+            add(playerStatus2);
+            this.repaint();
+            this.revalidate();
+            if (numberPlayer == players.size()) {
+                numberPlayer = 0;
+            }
+        } else {
+            System.out.println("No players or a configuration");
+        }
+    }
+
+    public void threePlayers() {
+        if (numberPlayer == 0 && initialConfiguration) {
+            playerStatus1 = new PlayerStatus(players.get(numberPlayer));
+            playerStatus1.setPanels(resourcePanel1, sciencePanel1);
+            playerStatus1.setStagesForWonders(buildStage1, resourcePanel1);
+            numberPlayer++;
+            add(playerStatus1);
+            initialConfiguration = false;
+            this.repaint();
+            this.revalidate();
+        } else if (numberPlayer == 0 && !initialConfiguration) {
+            numberPlayer++;
+            add(playerStatus1);
+            this.repaint();
+            this.revalidate();
+        } else if (numberPlayer == 1 && initialConfiguration) {
+            playerStatus2 = new PlayerStatus(players.get(numberPlayer));
+            playerStatus2.setPanels(resourcePanel2, sciencePanel2);
+            playerStatus2.setStagesForWonders(buildStage2, resourcePanel1);
+            numberPlayer++;
+            add(playerStatus2);
+            initialConfiguration = false;
+            this.repaint();
+            this.revalidate();
+        } else if (numberPlayer == 1 && !initialConfiguration) {
+            numberPlayer++;
+            add(playerStatus2);
+            this.repaint();
+            this.revalidate();
+        } else if (numberPlayer == 2 && initialConfiguration) {
+            playerStatus3 = new PlayerStatus(players.get(numberPlayer));
+            playerStatus3.setPanels(resourcePanel3, sciencePanel3);
+            playerStatus3.setStagesForWonders(buildStage3, resourcePanel1);
+            numberPlayer++;
+            initialConfiguration = false;
+            add(playerStatus3);
+            initialConfiguration = false;
+            this.repaint();
+            this.revalidate();
+            if (numberPlayer == players.size()) {
+                numberPlayer = 0;
+            }
+        } else if (numberPlayer == 2 && !initialConfiguration) {
+            numberPlayer++;
+            add(playerStatus3);
+            this.repaint();
+            this.revalidate();
+            if (numberPlayer == players.size()) {
+                numberPlayer = 0;
+            }
+        } else {
+            System.out.println("No players or a configuration");
+        }
+    }
 }

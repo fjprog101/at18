@@ -42,4 +42,8 @@ public class UpdateResourceList {
     public int checkPoints() {
         return accumulatedCounter;
     }
+
+    public int sizeOfUpdateList() {
+        return resourceList.sizeOfResourceList();
+    }
 }

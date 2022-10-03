@@ -10,7 +10,7 @@ public abstract class Wonder {
     public Stage[] getStages() {
         return stages;
     }
-    abstract void fillStages();
+    public abstract void fillStages();
 
     public String getName() {
         return name;

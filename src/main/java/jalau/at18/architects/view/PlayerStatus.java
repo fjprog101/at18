@@ -1,8 +1,11 @@
 package jalau.at18.architects.view;
+
 import static jalau.at18.architects.view.Constants.PlayStatusConstants.*;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import java.awt.Font;
+
+import jalau.at18.architects.controller.ElementsController;
 import jalau.at18.architects.controller.WonderController;
 import jalau.at18.architects.model.BuildStage;
 import jalau.at18.architects.model.cards.BluePoints;
@@ -10,7 +13,6 @@ import jalau.at18.architects.model.cards.MilitaryStrengthCounter;
 import jalau.at18.architects.model.cards.WarWinnerPoints;
 import jalau.at18.architects.model.player.Playcard;
 import jalau.at18.architects.model.player.Player;
-
 
 public class PlayerStatus extends JPanel {
     private WonderStructure wonderStructure;
@@ -28,6 +30,9 @@ public class PlayerStatus extends JPanel {
     private BluePoints bluePoints;
     private WarWinnerPoints warWinnerPoints;
     private MilitaryPanelView militaryPanel;
+    private ElementsController elementsController;
+    private TakeACardButton takeACardButton;
+
     public PlayerStatus(Player player) {
         setOpaque(false);
         this.player = player;
@@ -35,15 +40,15 @@ public class PlayerStatus extends JPanel {
         warWinnerPoints = playcard.getWarWinnerPoints();
         bluePoints = playcard.getBluePoints();
         militarySection = playcard.getMilitarySection();
-        wonderController = new WonderController(new BuildStage(), this);
         name = new JLabel("");
-        nameWonder =  new JLabel(player.getWonder().getName());
+        nameWonder = new JLabel(player.getWonder().getName());
         setLayout(null);
         setBounds(PLAYER_STATUS_POSITION_X, PLAYER_STATUS_POSITION_Y, PLAYER_STATUS_WIDTH, PLAYER_STATUS_HEIGHT);
         initialize();
         setName(player.getName());
 
     }
+
     public void initialize() {
 
         MiddleDeck middleDeck1 = new MiddleDeck();
@@ -64,11 +69,9 @@ public class PlayerStatus extends JPanel {
         wonderStructure.setBounds(WONDER_POSITION_X, WONDER_POSITION_Y, WONDER_WIDTH, WONDER_HEIGHT);
         add(wonderStructure);
 
-        militaryPanel.setBounds(MILITARY_PANEL_POS_X, MILITARY_PANEL_POS_Y, MILITARY_PANEL_WIDTH, MILITARY_PANEL_HEIGHT);
+        militaryPanel.setBounds(MILITARY_PANEL_POS_X, MILITARY_PANEL_POS_Y, MILITARY_PANEL_WIDTH,
+                MILITARY_PANEL_HEIGHT);
         add(militaryPanel);
-
-        addStage = new AddStageButton(wonderController);
-        add(addStage);
 
         middleDeck1.setBounds(DECK1_POSITION_X, DECK1_POSITION_Y, DECK_WIDTH, DECK_HEIGHT);
         add(middleDeck1);
@@ -83,16 +86,30 @@ public class PlayerStatus extends JPanel {
         bluePointsView.setBounds(BLUE_POINT_POSITION_X, BLUE_POINT_POSITION_Y, POINT_WIDTH, POINT_HEIGHT);
         add(bluePointsView);
     }
+
     public void addStage(int stagesCompleted) {
         wonderStructure.buildStages(stagesCompleted);
         this.validate();
     }
+
     public void setName(String namePlayer) {
         name.setText(namePlayer);
         name.setBounds(PLAYER_NAME_X, PLAYER_NAME_Y, PLAYER_NAME_WIDTH, PLAYER_NAME_HEIGHT);
         name.setFont(new Font("Serif", Font.PLAIN, SIZE_LABELS));
         add(name);
         this.validate();
+    }
+
+    public void setPanels(ResourcePanel resourcePanel, SciencePanel sciencePanel) {
+        elementsController = new ElementsController(this, resourcePanel, sciencePanel, player);
+        takeACardButton = new TakeACardButton(elementsController);
+        add(takeACardButton);
+    }
+
+    public void setStagesForWonders(BuildStage buildStage, ResourcePanel resourcePanel) {
+        wonderController = new WonderController(buildStage, this, player, resourcePanel);
+        addStage = new AddStageButton(wonderController);
+        add(addStage);
     }
 
 }

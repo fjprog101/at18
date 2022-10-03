@@ -4,8 +4,10 @@ import java.awt.event.MouseEvent;
 
 import javax.swing.event.MouseInputListener;
 
+import jalau.at18.architects.model.cards.Card;
 import jalau.at18.architects.model.cards.CardFace;
 import jalau.at18.architects.model.cards.Deck;
+import jalau.at18.architects.model.cards.ShowTheElement;
 import jalau.at18.architects.view.CardLabel;
 
 public class CardController implements MouseInputListener {
@@ -20,6 +22,8 @@ public class CardController implements MouseInputListener {
         CardFace cardFace = deck.getRamdomCard();
         String newImage = cardFace.getNameOfFile();
         card.setImage(newImage);
+        Card cardReceived = cardFace.getCard();
+        new ShowTheElement(cardReceived);
         System.out.println("Mouse just used");
         System.out.println(cardFace.name());
     }
