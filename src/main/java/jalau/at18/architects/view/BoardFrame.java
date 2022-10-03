@@ -32,6 +32,7 @@ public class BoardFrame extends JFrame {
     private TakeACardButton takeACardButton;
     private ResourcePanel resourcePanel = new ResourcePanel();
     private SciencePanel sciencePanel = new SciencePanel();
+    private static boolean gameOver = false;
 
     private static final int DECK_POSITION_X = 360;
     private static final int DECK_POSITION_Y = 0;
@@ -105,7 +106,16 @@ public class BoardFrame extends JFrame {
         this.validate();
     }
 
+    public static void isCompleted(boolean stat) {
+        gameOver = stat;
+    }
+
     public void addNextPlayer() {
+        if (gameOver) {
+            this.setVisible(false);
+            add(new GameOver(this.game));
+            setVisible(true);
+        }
         if (this.getContentPane().getComponentCount() == QUANTITY_ELEMENTS_ON_BOARD) {
             this.getContentPane().remove(QUANTITY_ELEMENTS_ON_BOARD - 1);
         }
