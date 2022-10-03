@@ -14,7 +14,7 @@ public abstract class Wonder {
         return stages;
     }
 
-    abstract void fillStages();
+    public abstract void fillStages();
 
     public int getPointsWonder() {
         // Wrong here
