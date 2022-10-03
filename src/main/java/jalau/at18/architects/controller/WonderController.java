@@ -23,7 +23,6 @@ public class WonderController implements ActionListener {
         this.player = player;
         this.resourcePanel = resourcePanel;
     }
-
     @Override
     public void actionPerformed(ActionEvent e) {
         System.out.println("Size of List: " + player.getPlaycard().getResourceSection().sizeOfUpdateList());

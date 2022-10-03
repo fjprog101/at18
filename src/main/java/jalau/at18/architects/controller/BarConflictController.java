@@ -1,7 +1,6 @@
 package jalau.at18.architects.controller;
 
 import jalau.at18.architects.model.Game;
-import jalau.at18.architects.view.BarConflict;
 import jalau.at18.architects.view.BoardFrame;
 
 import java.awt.event.ActionEvent;

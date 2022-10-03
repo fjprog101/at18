@@ -20,7 +20,6 @@ public class IcoColumn extends JPanel {
     public IcoColumn() {
         int pos = 0;
         setOpaque(false);
-        // setForeground(Color.BLACK);
         setBounds(SIENCE_POSITION_X, SIENCE_POSITION_Y, SIENCE_WIDTH, SIENCE_HEIGHT);
         setLayout(null);
         add(elementLabel("a.png", pos++));

@@ -4,7 +4,7 @@ public class RandomRedCard {
 
     public RedCard getRedCard() {
         int rand = (int) (Math.random() * (2 - 0 + 1) + 0);
-        return new RedCard(getSymbol(rand).getHorns(),getSymbol(rand));
+        return new RedCard(getSymbol(rand).getHorns(), getSymbol(rand));
     }
 
     public MilitarySymbol getSymbol(int rand) {

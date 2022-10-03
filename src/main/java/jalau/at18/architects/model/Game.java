@@ -63,15 +63,17 @@ public class Game {
     }
     private void addHornsToConflictBar(int horns) {
         conflictBar.addWarCalls(horns);
-        if(conflictBar.getConflict()) {
+        if (conflictBar.getConflict()) {
             callWar();
         }
     }
     private void callWar() {
-        int position = 0, max = 0, ite = 0;
+        int position = 0;
+        int max = 0;
+        int ite = 0;
         for (Player player : players) {
             MilitaryStrengthCounter military = player.getPlaycard().getMilitarySection();
-            if(military.getMilitaryStrength() > max) {
+            if (military.getMilitaryStrength() > max) {
                 max = military.getMilitaryStrength();
                 position = ite;
             }

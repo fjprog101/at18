@@ -73,18 +73,13 @@ public class BoardFrame extends JFrame {
 
     private void initialize() {
         middleDeck = new MiddleDeck();
-
         setContentPane(new JLabel(new ImageIcon("src/main/resources/architects/images/backimage.jpg")));
-
         checkTheConflictTokens = new CheckTheConflictTokens(barConflictController);
         barconflict.setBounds(POS_X_BAR_CONFLICT, POS_Y_BAR_CONFLICT, WIDTH_BAR_CONFLICT, HEIGHT_Y_BAR_CONFLICT);
         add(barconflict);
-
         middleDeck.setBounds(DECK_POSITION_X, DECK_POSITION_Y, DECK_WIDTH, DECK_HEIGHT);
         add(middleDeck);
-
         add(checkTheConflictTokens);
-
         setTitle(WINDOW_NAME);
         setSize(WIDTH, HEIGHT);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

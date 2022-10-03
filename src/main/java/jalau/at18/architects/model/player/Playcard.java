@@ -55,9 +55,8 @@ public class Playcard {
         return scienceSection;
     }
 
-    
-    public void setMilitarySection(MilitaryStrengthCounter militarySection) {
-        this.militarySection = militarySection;
+    public void setMilitarySection(MilitaryStrengthCounter militaryCounter) {
+        this.militarySection = militaryCounter;
     }
 
     public MilitaryStrengthCounter getMilitarySection() {
