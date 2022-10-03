@@ -16,6 +16,14 @@ public class Playcard {
     private UpdateResourceList resourceSection;
     private BluePoints bluePoints;
     private WarWinnerPoints warWinnerPoints;
+    private int totalPoints = 0;
+
+    public int getPointsPlaycard() {
+        totalPoints += bluePoints.getPoints();
+        totalPoints += warWinnerPoints.getPoints();
+        return totalPoints;
+    }
+
     public Playcard() {
         scienceSection = new ScienceList();
         militarySection = new MilitaryStrengthCounter();
@@ -62,4 +70,5 @@ public class Playcard {
     public WarWinnerPoints getWarWinnerPoints() {
         return warWinnerPoints;
     }
+
 }
