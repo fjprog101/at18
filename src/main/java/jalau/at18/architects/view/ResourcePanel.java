@@ -18,11 +18,11 @@ public class ResourcePanel extends JPanel {
     private void initComponets() {
         setOpaque(false);
         setBounds(RESOURCE_POSITION_X, RESOURCE_POSITION_Y, RESOURCE_WIDTH, RESOURCE_HEIGHT);
-        setBackground(Color.WHITE);
         setLayout(new GridLayout(1, SIX));
     }
 
     public void loadCards(ElementLabel elementLabel) {
+        setBackground(Color.WHITE);
         add(elementLabel);
         setVisible(true);
     }

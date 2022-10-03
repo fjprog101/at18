@@ -17,11 +17,11 @@ public class SciencePanel extends JPanel {
     private void initComponets() {
         setOpaque(false);
         setBounds(SIENCE_POSITION_X, SIENCE_POSITION_Y, SIENCE_WIDTH, SIENCE_HEIGHT);
-        setBackground(Color.WHITE);
         setLayout(new GridLayout(1, SIX));
     }
 
     public void loadCards(ElementLabel elementLabel) {
+        setBackground(Color.WHITE);
         add(elementLabel);
         setVisible(true);
     }

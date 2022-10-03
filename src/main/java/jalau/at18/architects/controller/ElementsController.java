@@ -1,4 +1,5 @@
 package jalau.at18.architects.controller;
+
 import static jalau.at18.architects.view.Constants.PlayStatusConstants.*;
 import jalau.at18.architects.model.cards.Card;
 import jalau.at18.architects.model.cards.GrayCard;
@@ -26,6 +27,7 @@ public class ElementsController implements ActionListener {
     private BluePointsView bluePointsView;
     private WarWinnerPointsView warWinnerPointsView;
     private MilitaryPanelView militaryPanel;
+
     public ElementsController(PlayerStatus playerStatus, ResourcePanel resourcePanel, SciencePanel sciencePanel,
             Player player) {
         this.playerStatus = playerStatus;
@@ -41,23 +43,27 @@ public class ElementsController implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        //bluePointsView.removeAll();
-        //System.out.println("blue" + player.getPlaycard().getBluePoints().getPoints());
+        // bluePointsView.removeAll();
+        // System.out.println("blue" +
+        // player.getPlaycard().getBluePoints().getPoints());
         ElementLabel elementLabel = new ElementLabel();
         elementLabel.setImage(ShowTheElement.directory);
-        //warWinnerPointsView.setBounds(WAR_POINT_POSITION_X, WAR_POINT_POSITION_Y, POINT_WIDTH, POINT_HEIGHT);
-        //playerStatus.add(warWinnerPointsView);
+        // warWinnerPointsView.setBounds(WAR_POINT_POSITION_X, WAR_POINT_POSITION_Y,
+        // POINT_WIDTH, POINT_HEIGHT);
+        // playerStatus.add(warWinnerPointsView);
         bluePointsView.setBounds(BLUE_POINT_POSITION_X, BLUE_POINT_POSITION_Y, POINT_WIDTH, POINT_HEIGHT);
         playerStatus.add(bluePointsView);
         militaryPanel.setBounds(MILITARY_PANEL_POS_X, MILITARY_PANEL_POS_Y, MILITARY_PANEL_WIDTH,
                 MILITARY_PANEL_HEIGHT);
         playerStatus.add(militaryPanel);
         card = ShowTheElement.cardToPlayer;
-        if (ShowTheElement.directory != "table.png" && ShowTheElement.directory != "compas.png"
-                && ShowTheElement.directory != "rueda.png") {
-            //System.out.println("Resource bar");
+        if ((card.getColor() == "Yellow" || card.getColor() == "Gray") && (player.getPlaycard().getResourceSection()
+                .sizeOfUpdateList() == resourcePanel.getComponentCount())) {
+            // System.out.println("Resource bar");
+            System.out.println("Resource bar");
+            elementLabel.setImage(ShowTheElement.directory);
             if (ShowTheElement.element == Resource.BRICK.getResource()) {
-               // System.out.println("Brick Choose");
+                // System.out.println("Brick Choose");
                 player.addNewCard(new GrayCard(Resource.BRICK));
             } else if (ShowTheElement.element == Resource.PAPER.getResource()) {
                 player.addNewCard(new GrayCard(Resource.PAPER));
@@ -74,14 +80,9 @@ public class ElementsController implements ActionListener {
             playerStatus.add(resourcePanel);
             playerStatus.repaint();
             playerStatus.revalidate();
+            ShowTheElement.directory = null;
 
-        } else {
-            sciencePanel.loadCards(elementLabel);
-            playerStatus.add(sciencePanel);
-            playerStatus.repaint();
-            playerStatus.revalidate();
-        }
-        if (card.getColor() == "Red") {
+        } else if (card.getColor() == "Red") {
             RedCard redCard = (RedCard) card;
             player.addNewCard(card);
             if (redCard.getHorns() == 0) {
@@ -93,36 +94,16 @@ public class ElementsController implements ActionListener {
         } else if (card.getColor() == "Blue") {
             player.addNewCard(card);
             bluePointsView.setNumber(player.getPlaycard().getBluePoints().getPoints());
+        } else if (card.getColor() == "Green") {
+            elementLabel.setImage(ShowTheElement.directory);
+            System.out.println("Symbol bar");
+            sciencePanel.loadCards(elementLabel);
+            playerStatus.add(sciencePanel);
+            playerStatus.repaint();
+            playerStatus.revalidate();
+            ShowTheElement.directory = null;
+        } else {
+            System.out.println("No card color");
         }
     }
-
-    // public void compareList(){
-    // if(player.getPlaycard().getResourceSection().compareCards(player.getWonder())){
-    // System.out.println("Take elements out");
-    // if(resourcePanel.getComponentCount() == 2){
-    // System.out.println("Take two elements out");
-    // resourcePanel.remove(0);
-    // resourcePanel.remove(0);
-    // // resourcePanel.remove(1);
-    // playerStatus.add(resourcePanel);
-    // } else if (resourcePanel.getComponentCount() == 3){
-    // System.out.println("Take three elements out");
-    // resourcePanel.remove(0);
-    // resourcePanel.remove(0);
-    // resourcePanel.remove(0);
-    // playerStatus.add(resourcePanel);
-    // } else if (resourcePanel.getComponentCount() == 4){
-    // System.out.println("Take four elements out");
-    // resourcePanel.remove(0);
-    // resourcePanel.remove(0);
-    // resourcePanel.remove(0);
-    // resourcePanel.remove(0);
-    // playerStatus.add(resourcePanel);
-    // } else {
-    // System.out.println("Keep the elements");
-    // }
-    // playerStatus.repaint();
-    // playerStatus.revalidate();
-    // }
-    // }
 }
