@@ -13,6 +13,7 @@ import jalau.at18.kingoftokyo.model.CompleteCard;
 import jalau.at18.kingoftokyo.model.Turn;
 
 public class CardPanel extends JPanel {
+
     private static final int[] CARD_SIZE = {150, 250};
     private static final int[] COLOR = {2, 11, 43};
     private static final int EDGE_SPACE = 5;

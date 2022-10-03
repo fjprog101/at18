@@ -6,10 +6,15 @@ import jalau.at18.kingoftokyo.controller.RollDiceSectionController;
 import jalau.at18.kingoftokyo.view.TurnPanel;
 
 import javax.swing.*;
-import javax.swing.border.LineBorder;
+import javax.swing.border.TitledBorder;
+
 import java.awt.*;
 
 public class DiceSectionUI extends JPanel {
+    private static final int THREE = 3;
+    private static final int RED = 176;
+    private static final int GREEN = 82;
+    private static final int BLUE = 122;
     private static final int DEFAULT_POSX = 310;
     private static final int DEFAULT_POSY = 450;
     private static final int DEFAULT_WIDTH = 1000;
@@ -25,10 +30,11 @@ public class DiceSectionUI extends JPanel {
         keepDiceSectionController = new KeepDiceSectionController(keepDiceSectionUI);
         keepDiceSectionController.addTurnPanel(turnPanel);
         rollDiceSectionController = new RollDiceSectionController(rollDiceSectionUI, keepDiceSectionController);
-        //keepDiceSectionController.setRollDiceSectionController(rollDiceSectionController);
-        //Position of this Panel DiceSectionUI
+        float[] hsb = new float[THREE];
+        hsb = Color.RGBtoHSB(RED, GREEN, BLUE, hsb);
+        setBackground(Color.getHSBColor(hsb[0], hsb[1], hsb[2]));
         setBounds(DEFAULT_POSX, DEFAULT_POSY, DEFAULT_WIDTH, DEFAULT_HEIGHT);
-        setBorder(new LineBorder(Color.BLACK, 1));
+        setBorder(BorderFactory.createTitledBorder(null, "", TitledBorder.LEFT, 0, null));
     }
 
     public RollDiceSectionController getController() {

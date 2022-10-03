@@ -11,6 +11,10 @@ import jalau.at18.kingoftokyo.model.DeckCards;
 import jalau.at18.kingoftokyo.model.Turn;
 
 public class CardsGroupPanel extends JPanel {
+    private static final int THREE = 3;
+    private static final int RED = 176;
+    private static final int GREEN = 82;
+    private static final int BLUE = 122;
     private static final int[] CARD_SIZE = {550, 250 };
     private static final int[] CARD_POS = {950, 185 };
     private static final int CARDS_SEPARATION = 10;
@@ -25,6 +29,9 @@ public class CardsGroupPanel extends JPanel {
         setLayout(new BoxLayout(this, BoxLayout.LINE_AXIS));
         deck = new DeckCards();
         initialCards();
+        float[] hsb = new float[THREE];
+        hsb = Color.RGBtoHSB(RED, GREEN, BLUE, hsb);
+        setBackground(Color.getHSBColor(hsb[0], hsb[1], hsb[2]));
     }
 
     public void initialCards() {

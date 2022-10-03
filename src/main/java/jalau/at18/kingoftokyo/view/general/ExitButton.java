@@ -17,5 +17,9 @@ public class ExitButton extends JButton {
         float[] hsb = new float[THREE];
         hsb = Color.RGBtoHSB(RED, GREEN, BLUE, hsb);
         setBackground(Color.getHSBColor(hsb[0], hsb[1], hsb[2]));
+        addActionListener(e -> exitGame());
+    }
+    private void exitGame() {
+        System.exit(0);
     }
 }

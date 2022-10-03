@@ -7,6 +7,10 @@ import jalau.at18.kingoftokyo.model.Observer;
 import jalau.at18.kingoftokyo.model.Player;
 
 public class PlayerCard extends JPanel implements Observer {
+    private static final int THREE = 3;
+    private static final int RED = 104;
+    private static final int GREEN = 2;
+    private static final int BLUE = 155;
     private static final int WIDTH = 300;
     private static final int HEIGHT = 150;
     private static final int VICTORY_INDEX = 3;
@@ -16,7 +20,9 @@ public class PlayerCard extends JPanel implements Observer {
 
     public PlayerCard(Player player) {
         this.player = player;
-        setBackground(Color.BLUE);
+        float[] hsb = new float[THREE];
+        hsb = Color.RGBtoHSB(RED, GREEN, BLUE, hsb);
+        setBackground(Color.getHSBColor(hsb[0], hsb[1], hsb[2]));
         setAlignmentX(Component.CENTER_ALIGNMENT);
         setSize(WIDTH, HEIGHT);
         setLayout(null);
