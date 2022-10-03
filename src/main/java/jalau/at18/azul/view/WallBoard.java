@@ -55,7 +55,7 @@ public class WallBoard extends JPanel {
                 count++;
             }
         }
-        if (count == 2) {
+        if (count == WALL_MATRIX_SIZE) {
             return true;
         }
         return false;
